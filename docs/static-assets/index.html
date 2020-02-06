@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Hosting Static Assets in Dark · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Dark supports hosting your static assets."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Hosting Static Assets in Dark · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Dark supports hosting your static assets."/><meta property="og:image" content="https://darklang.github.io/docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://darklang.github.io/docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Using Your Dark Account</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Hosting Static Assets in Dark</h1></header><article><div><span><p>Dark supports hosting your static assets.</p>
+<p>Our static assets service is designed to be simple, easy to understand, as well as composable and configurable. As such, a static assets deploy uploads your assets to our cloud CDN, and we provide powerful tools in Dark to serve and configure them.</p>
+<p>A <a href="https://github.com/marketplace/actions/upload-static-assets-to-dark-canvas">Github Action</a> to automate this process is now available thanks to one of our fantastic community members, Greg Brimble!</p>
+<h2><a class="anchor" aria-hidden="true" id="simple-use-case"></a><a href="#simple-use-case" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple Use Case</h2>
+<p><em>Note: You can see the finished product at <a href="https://darklang.com/a/sample-static-assets">https://darklang.com/a/sample-static-assets</a></em></p>
+<p>We have a single page app, written in react. It talks to our API, written in Dark. Now we’d like to deploy that app so that customers can use it too. This also works in a similar way for Vue applications, with a few caveats called out in line.</p>
+<p>Here’s how we want our app to work:</p>
+<ul>
+<li>we have an API, served from /api/</li>
+<li>/ serves our index.html page from our assets</li>
+<li>index.html should point to our static assets host to fetch other assets</li>
+</ul>
+<p><strong>We’ll focus on the last two things we want our app to do in this document.</strong></p>
+<p>At a high level, here are the steps:</p>
+<ol>
+<li>deploy the assets using our app</li>
+<li>load the index page</li>
+<li>configure your react app</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="deploying-assets"></a><a href="#deploying-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploying Assets</h2>
+<p>We have a command-line app to allow you to deploy your assets.</p>
+<h3><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h3>
+<ol>
+<li><p>Go to <a href="https://dark-cli.storage.googleapis.com/index.html">https://dark-cli.storage.googleapis.com/index.html</a>, and download the appropriate binary for OSX, Windows, or Linux.</p></li>
+<li><p>On OSX or Linux,</p>
+<pre><code class="hljs"> chmod +x dark-cli-apple
+</code></pre>
+<p>or</p>
+<pre><code class="hljs"> chmod +x dark-cli-linux
+</code></pre>
+<p>to make it executable.</p></li>
+<li><p>To confirm it works, run it with —help:</p>
+<pre><code class="hljs"> ./dark-cli-apple --help
+</code></pre></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="configure-your-client"></a><a href="#configure-your-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure your client</h3>
+<p>At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at &quot;/static/myimage.png&quot;, that file will not load. You need to use relative URLs instead, in this case “./myimage.png”.</p>
+<p>Your &quot;index.html&quot; likely loads other assets, such as “app.css” or “app.js”. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.</p>
+<p>During the deployment of the assets, our backend replaces the string “DARK_STATIC_ASSETS_BASE_URL” in all of your assets with the actual URL of this deployment.</p>
+<p>In React, when compiling your react application, you can use PUBLIC_URL:</p>
+<pre><code class="hljs">PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
+</code></pre>
+<p>If using Vue, you likely want to set PUBLIC_PATH instead:</p>
+<pre><code class="hljs">PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
+</code></pre>
+<p>Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:</p>
+<p><a href="https://github.com/vuejs/vue-cli/tree/dev/docs/config#publicpath">vuejs/vue-cli</a></p>
+<h3><a class="anchor" aria-hidden="true" id="deploy"></a><a href="#deploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy</h3>
+<ol>
+<li><p>To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.</p></li>
+<li><p>Run:</p>
+<pre><code class="hljs"> ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
+</code></pre>
+<p>On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:</p></li>
+</ol>
+<p><img src="/docs/docs/assets/staticassets/image1.png" alt="assets/staticassets/image1.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="set-up-your-app-to-load-your-assets"></a><a href="#set-up-your-app-to-load-your-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set up your App to Load your Assets</h2>
+<p>If your SPA framework generates an &quot;index.html&quot;, or you write one yourself, you can load that for the / route in Dark.</p>
+<ul>
+<li>Add a handler for / to load your &quot;index.html&quot; page using <strong>StaticAssets::serveLatest “index.html”.</strong></li>
+<li>If you’re using client-side routing, you can also add a handler serving index.html for /:rest which will be a catch-all handler for any URL (besides /) that doesn’t have another handler defined for it. This will allow your users to load your assets from any of your app’s URLs.</li>
+</ul>
+<p>You can copy and paste this example from <a href="https://darklang.com/a/sample-static-assets">https://darklang.com/a/sample-static-assets</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="implementing-a-fallback-in-the-case-of-a-404"></a><a href="#implementing-a-fallback-in-the-case-of-a-404" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementing a Fallback in the Case of a 404</h2>
+<p>If you’re looking to serve a fallback asset, you can use a match statement:</p>
+<p><img src="/docs/docs/assets/staticassets/image2.png" alt="assets/staticassets/image2.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="advanced-feature-flags-and-continuous-delivery"></a><a href="#advanced-feature-flags-and-continuous-delivery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced: Feature Flags and Continuous Delivery</h2>
+<p>We’ve shown you how to deploy new assets that appear immediately. However, you often want to control the rollout of those assets, perhaps seeing them yourself, or only showing them to users who have opted into beta features. As a result, it is easy to use Dark Static Assets with feature flags.</p>
+<p>Instead of calling serveLatest, you can call serve, and use the deploy hash from your command line.</p>
+<h4><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h4>
+<p><strong>Functions:</strong></p>
+<ul>
+<li>urlFor <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns a url to a file for the current canvas and the given deployHash:</li>
+<li>StaticAssets::urlFor “o6vs1aqcbx” “foo.html” -&gt; “<a href="https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html">https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html</a>”</li>
+</ul></li>
+<li>urlForLatest <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns a url to a file for the current canvas and the latest deploy:</li>
+<li>StaticAssets::urlForLatest “foo.html” -&gt; “<a href="https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html">https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html</a>”</li>
+</ul></li>
+<li>fetch <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns the contents of a file for the current canvas and the given deployHash:</li>
+<li>StaticAssets::fetch “o6vs1aqcbx” “foo.html” -&gt; “<html><body>Hello, world!</body></html>”</li>
+</ul></li>
+<li>fetchLatest <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns a url to a file for the current canvas and the latest deploy:</li>
+<li>StaticAssets::fetchLatest “foo.html” -&gt; “<html><body>Hello, world!</body></html>”</li>
+</ul></li>
+<li>serve <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns the contents of a file for the current canvas and the given deployHash:</li>
+<li>StaticAssets::serve “o6vs1aqcbx” “foo.html” -&gt; responds with the file foo.html and the headers that the static assets CDN provided</li>
+</ul></li>
+<li>serveLatest <deployHash : String> <file : String> -&gt; String
+<ul>
+<li>Returns a url to a file for the current canvas and the latest deploy:</li>
+<li>StaticAssets::fetchLatest “foo.html” -&gt; responds with the file foo.html and the headers that the static assets CDN provided</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="command-line-reference"></a><a href="#command-line-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Command line reference</h4>
+<pre><code class="hljs">./latest/dark-cli-apple
+error: The following required arguments were not provided:
+    &lt;paths&gt;
+    --canvas &lt;canvas&gt;
+    --password &lt;password&gt;
+    --user &lt;user&gt;
+
+USAGE:
+dark-cli-apple [FLAGS] &lt;paths&gt; --canvas &lt;canvas&gt; --password &lt;password&gt; --user &lt;user&gt;</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/functional-aspects"><span class="arrow-prev">← </span><span>Functional Aspects of Dark</span></a><a class="docs-next button" href="/docs/docs/keyboard-mapping"><span>Keyboard Mapping</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#simple-use-case">Simple Use Case</a></li><li><a href="#deploying-assets">Deploying Assets</a><ul class="toc-headings"><li><a href="#installation">Installation</a></li><li><a href="#configure-your-client">Configure your client</a></li><li><a href="#deploy">Deploy</a></li></ul></li><li><a href="#set-up-your-app-to-load-your-assets">Set up your App to Load your Assets</a></li><li><a href="#implementing-a-fallback-in-the-case-of-a-404">Implementing a Fallback in the Case of a 404</a></li><li><a href="#advanced-feature-flags-and-continuous-delivery">Advanced: Feature Flags and Continuous Delivery</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>

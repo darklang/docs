@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Changelog · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Changelog · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates."/><meta property="og:image" content="https://darklang.github.io/docs/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://darklang.github.io/docs/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reference Materials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Changelog</h1></header><article><div><span><p>We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.</p>
+<h2><a class="anchor" aria-hidden="true" id="week-of-1312020"></a><a href="#week-of-1312020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 1/31/2020</h2>
+<ul>
+<li><p>You can now see a list of all of your canvases by mousing over your avatar.</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a8fe406-4294-4be8-a1f0-dbc48dbfcb10/Screen_Shot_2020-01-31_at_12.18.35_PM.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a8fe406-4294-4be8-a1f0-dbc48dbfcb10/Screen_Shot_2020-01-31_at_12.18.35_PM.png"></p></li>
+<li><p>Typing when text is highlighted now causes text to be replaced instead of inserted</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e584132-c651-4e78-a3d2-32c29f2272eb/2020-01-31_12.23.30.gif" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e584132-c651-4e78-a3d2-32c29f2272eb/2020-01-31_12.23.30.gif"></p></li>
+<li><p>Many function improvements, including:</p>
+<ul>
+<li>We now create functions without a default parameter. Apparently that was annoying.</li>
+<li>Functions now have a menu, and you can delete functions from there if they are unused)</li>
+<li>Sometimes the Add New Parameter action didn't work - fixed it.</li>
+</ul>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/843271d7-64a1-4db2-9f96-b942d8b95ccd/2020-01-31_12.30.30.gif" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/843271d7-64a1-4db2-9f96-b942d8b95ccd/2020-01-31_12.30.30.gif"></p></li>
+<li><p>User-created functions now show parameters in blanks</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dce6114-8796-4054-90f4-a738ae817387/Screen_Shot_2020-01-31_at_12.33.38_PM.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0dce6114-8796-4054-90f4-a738ae817387/Screen_Shot_2020-01-31_at_12.33.38_PM.png"></p></li>
+<li><p>Improved load time of canvases with many traces</p></li>
+<li><p>The cursor now stays in the right place when we reflow/reformat code dynamically, in almost every case.</p></li>
+<li><p>Prevented you from creating two datastores with identical names</p></li>
+<li><p>Added <code>HTTP::setCookie_v1</code> - v0 incorrectly URL encoded some fields and is now deprecated</p></li>
+<li><p>Fixed an issue where text was sometimes not being properly displayed in the sidebar</p></li>
+<li><p>Added a warning when trying to access Dark from a non-desktop or non-Chrome browser</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="documentation"></a><a href="#documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<ul>
+<li>Created a <a href="https://www.notion.so/darklang/Sharing-your-Dark-Projects-26d5b14d6b41457daad6bc44ac849b1a">Sharing Dark Projects</a> guide</li>
+<li>Improved the steps at the beginning of the <a href="https://www.notion.so/darklang/A-Guide-to-Building-a-Backend-for-a-React-SPA-in-Dark-29ccf25d75bd48daa32b92e4bd555669">Guide to Building a Backend for a React SPA in Dark</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="week-of-1242020"></a><a href="#week-of-1242020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 1/24/2020</h2>
+<h3><a class="anchor" aria-hidden="true" id="major-changes"></a><a href="#major-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Major changes</h3>
+<ul>
+<li><p>Errors/Incompletes now point to the cause of the error</p>
+<p><img src="https://user-images.githubusercontent.com/244152/73011963-2ca63680-3dca-11ea-86c0-7a40fcf12fe7.png" alt="https://user-images.githubusercontent.com/244152/73011963-2ca63680-3dca-11ea-86c0-7a40fcf12fe7.png"></p></li>
+<li><p>We substantially improved keyboard entry:</p>
+<ul>
+<li>Special characters on international keyboards now appear correctly</li>
+<li>Infix functions as parameters to other functions work</li>
+<li>We believe backspace should now always work perfectly</li>
+<li>We've greatly improved how often the cursor appears in the right place</li>
+</ul></li>
+<li><p>Performance and loading improvements for all programs</p>
+<ul>
+<li>The editor loads program data from the server much faster</li>
+<li>Workers run with much less overhead (and so higher throughput)</li>
+<li>CRONs should be running more reliably</li>
+<li>HTTP requests are much much faster</li>
+<li>Programs with lots of functions or traces are especially improved</li>
+<li>Several issues with deleted functions and databases are now resolved</li>
+</ul></li>
+<li><p>Copy/paste is way improved</p>
+<ul>
+<li>you can paste code from Dark into other programs</li>
+<li>you can paste code into many parts of Dark (varnames, strings, records, etc)</li>
+<li>most copy-paste issues should be solved</li>
+</ul>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07011133-13f6-4f5b-9393-831427205d39/2020-01-24_15.16.12.gif" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07011133-13f6-4f5b-9393-831427205d39/2020-01-24_15.16.12.gif"></p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="library-changes"></a><a href="#library-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Library changes</h3>
+<ul>
+<li><p>Added <code>JSON::parse_v1</code> which uses a Result in case of error (deprecated JSON::parse_v0)</p></li>
+<li><p>Added <code>Float::sum</code></p>
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9463e25b-73e4-4970-b99a-8dcd3c0b68ca/Screen_Shot_2020-01-24_at_3.19.59_PM.png" alt="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9463e25b-73e4-4970-b99a-8dcd3c0b68ca/Screen_Shot_2020-01-24_at_3.19.59_PM.png"></p></li>
+<li><p>More improvements to <code>DB::query</code> and friends</p>
+<ul>
+<li>previews now work for all <code>DB::query</code> functions (<code>DB::queryOne</code>, <code>DB::queryOneWithKeys</code>, <code>DB::queryWithKeys</code>)</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="bug-fixes"></a><a href="#bug-fixes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bug fixes</h3>
+<ul>
+<li>Fixed up/down arrow on fields</li>
+<li>Single entry autocompletes now work</li>
+<li>Cmd-arrow with shift now maintains selection</li>
+<li>Fixed renaming function parameters</li>
+<li>Fixed deleted text persisting when pressing delete</li>
+<li>Large traces are now properly displayed</li>
+<li>Commands (Alt-x/Option-x) now work more reliably when selecting code</li>
+<li>We now allow you to use arbitrary field names
+<ul>
+<li>You can now use a field even if you don't have a trace or the field does not exist in that trace</li>
+</ul></li>
+<li>We've automatically disabled Grammarly, as it was messing with our DOM</li>
+<li>The dark-cli now prints errors on failure</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="documentation-1"></a><a href="#documentation-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<ul>
+<li>A <a href="https://www.notion.so/darklang/Sample-Canvases-a5fa5479ffbb442d9f180d83e4bf3588">list of sample canvases</a> and descriptions has been added</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="week-of-1172020"></a><a href="#week-of-1172020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 1/17/2020</h2>
+<ul>
+<li>We added DB::query_v4, which allows you use arbitrary queries on your Dark datastores
+<ul>
+<li>We also published a <a href="https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd">related blog post</a>!</li>
+</ul></li>
+<li>You can now remove a <code>let</code> with the backspace/delete key</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/181762/72211098-fdaecd00-3479-11ea-9988-8aba1d80894f.gif" alt="https://user-images.githubusercontent.com/181762/72211098-fdaecd00-3479-11ea-9988-8aba1d80894f.gif"></p>
+<ul>
+<li>Improved <a href="https://www.notion.so/darklang/Error-Handling-in-Dark-255f7989a63b4dd49da63cca17ee107e">documentation around the Error Rail</a></li>
+<li>GitHub API! See our <a href="https://darklang.com/a/sample-github">sample canvas</a> demonstrating how to call the Github API</li>
+<li>Fixed an issue where deleted from the middle of a concatenated string would cause text to the right of the deletion point to be removed.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/32043360/72109340-93b3ed80-32ea-11ea-9df7-a9c6031b6665.gif" alt="https://user-images.githubusercontent.com/32043360/72109340-93b3ed80-32ea-11ea-9df7-a9c6031b6665.gif"></p>
+<ul>
+<li>We asked y'all to not make HTTPClient calls to your Dark canvas from REPLs. We've made some infrastructural changes that fix the issue on our end, so you should feel free to do that now. This is useful if you want to create a HTTP trace without leaving Dark. (Note: please don't make HTTPClient calls <strong><em>to Dark</em></strong> from HTTP handlers)</li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="week-of-1102020"></a><a href="#week-of-1102020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 1/10/2020</h1>
+<ul>
+<li>Fixed a bunch of issues around entering non ASCII characters, especially from non-US keyboards:
+<ul>
+<li>accented 'o' and 'a' characters were not being recognized from Swedish keyboard layouts.</li>
+<li>€ or £ weren't working</li>
+<li>shift + 2 was not being recognized.</li>
+</ul></li>
+<li>Fixed an issue where pressing delete in a match expression was causing the cursor to be placed incorrectly.</li>
+<li>Stopped errorring when functions are being renamed.</li>
+<li>Fixed an issue where the Omnibox was not clickable.</li>
+<li>Fixed an issue where the minimap was hiding the Dismiss Error button.</li>
+<li>Fixed a short regression where lambda parameters were not shadowing variables of the same name.</li>
+<li>Deprecated the <code>Date::sub</code> function and replaced it with <code>Date::subtract</code>.</li>
+<li>Changed the behavior of new handler placement - they no longer appear directly on top of one another.</li>
+<li>Changed the behavior of partials - they are now abandoned when clicking away from a handler.</li>
+<li>Added the <code>copy-request-as-curl</code> command for <code>HttpClient::</code> functions - use Alt-x/Option-x to activate</li>
+<li>Add <code>Twitter::urlencode</code> and <code>Crypto::sha1mac</code> to support talking to the Twitter API</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docs/sample-canvases"><span class="arrow-prev">← </span><span>Sample Canvases</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#week-of-1312020">Week of 1/31/2020</a><ul class="toc-headings"><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#week-of-1242020">Week of 1/24/2020</a><ul class="toc-headings"><li><a href="#major-changes">Major changes</a></li><li><a href="#library-changes">Library changes</a></li><li><a href="#bug-fixes">Bug fixes</a></li><li><a href="#documentation-1">Documentation</a></li></ul></li><li><a href="#week-of-1172020">Week of 1/17/2020</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>
