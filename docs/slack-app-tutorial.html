@@ -88,7 +88,7 @@
 <p>Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).</p>
 <p>If you receive an oauth_authorization_url_mismatch error, modify the URL to <a href="https://slack.com/api/oauth.v2.access">https://slack.com/api/oauth.v2.access</a></p>
 <p>This is the end result, but you’ll see your client_id and client_secret instead of placeholders:</p>
-<p><img src="/docs/docs/assets/slack/image9.png/image9.png" alt="assets/slack/image9.png"></p>
+<p><img src="/docs/docs/assets/slack/image9.png" alt="assets/slack/image9.png"></p>
 <p>This calls part of Slack’s API (<a href="https://api.slack.com/methods/oauth.access">oauth.access</a>), which will give you access to the Slack app that requested it.</p>
 <p>When you’ve done this correctly and hit “play” to make the call (<a href="/docs/docs/trace-driven-development#live-values--play-buttons">more on play buttons)</a>, you’ll get a response that has the right fields. This will include team_id and an access_token. (This may also have a bot_access_token if you add a bot to your Slack functionality).</p>
 <p>If you get an error in a response, you won’t be able to keep going. If the code expired, you’ll need to re-open the shareable link from Slack in the browser to re-authenticate.</p>
