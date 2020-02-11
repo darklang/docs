@@ -12,20 +12,15 @@
 
 const siteConfig = {
   // customDocsPath: path.basename(__dirname) + '/docs',
-  title: 'Dark Documentation', // Title for your website.
+  title: 'Dark Documentation', // Title for the website.
   tagline: 'Dark Documentation',
-  url: 'https://darklang.github.io', // Your website URL
-  baseUrl: '/docs/',
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  docsUrl: '',
 
   // Used for publishing and more
-  projectName: 'docs',
   organizationName: 'darklang',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
+  projectName: 'docs',
+  url: 'https://darklang.github.io', // Website URL
+  baseUrl: '/docs/', // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [],
@@ -64,8 +59,6 @@ const siteConfig = {
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
-
-  
   },
 
 
@@ -76,6 +69,10 @@ const siteConfig = {
   onPageNav: 'separate',
   // No .html extensions for paths.
   cleanUrl: true,
+
+  // Open Graph and Twitter card images for the site when shared.
+  // ogImage: 'img/undraw_online.svg',
+  // twitterImage: 'img/undraw_tweetstorm.svg',
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
