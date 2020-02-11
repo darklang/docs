@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Error Handling in Dark · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Dark code you write in your handlers is available as soon as you type (deployless). We have a number of built-in features to support this style of writing, as well as dealing with errors."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Error Handling in Dark · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="The Dark code you write in your handlers is available as soon as you type (deployless). We have a number of built-in features to support this style of writing, as well as dealing with errors."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Using Your Dark Account</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started-tutorial">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Error Handling in Dark</h1></header><article><div><span><p>The Dark code you write in your handlers is available as soon as you type (deployless). We have a number of built-in features to support this style of writing, as well as dealing with errors.</p>
+<h2><a class="anchor" aria-hidden="true" id="incomplete-code"></a><a href="#incomplete-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incomplete Code</h2>
+<p>Dark is expression based. When you see &quot;incomplete code&quot;, it means that your program isn't complete - that is, an expression hasn't been filled in. Once you've filled in every expression in the associated code block, the problem will be resolved.</p>
+<p><strong>Example:</strong> Here we've bound a string to the new variable <code>msg</code> within an empty block, using a <code>let</code>. Since the body of the <code>let</code> is empty, the expression as a whole is incomplete. To resolve the problem, fill in the body of the <code>let</code> (for example, with <code>msg</code>).</p>
+<p><img src="/docs/assets/error/image11.png" alt="assets/error/image11.png"></p>
+<p><strong>Example:</strong> Here we left the query parameter blank in a call to <code>HttpClient::get</code>:</p>
+<p><img src="/docs/assets/error/image13.png" alt="assets/error/image13.png"></p>
+<p>We need to fill in all parameters, here we can use <code>{}</code>.</p>
+<p>When something is incomplete, it will be shown with a red underline. An expression may be incomplete even if it seems fine: this is because something it depends on is incomplete. For example, in the case below we are returning <code>var</code> but never defined it:</p>
+<p><img src="/docs/assets/error/image10.png" alt="assets/error/image10.png"></p>
+<p>In these cases, we provide a link to the source of the incomplete. Click on &quot;click to locate source&quot; and it will take you to the first blank that has propagated until the result you are looking for.</p>
+<h2><a class="anchor" aria-hidden="true" id="type-errors"></a><a href="#type-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type errors:</h2>
+<p>When you see &quot;invalid code&quot;, it means that your program is complete but has issues (which are almost always type error). The error message should have enough . Carefully read the message to see what's wrong.</p>
+<p><strong>Example:</strong></p>
+<p>Here we tried to use <strong>DB::set</strong> with an Int for the <code>key</code> parameter, even though <code>key</code> needs to be a string.</p>
+<p><img src="/docs/assets/error/image14.png" alt="assets/error/image14.png"></p>
+<p>To resolve this problem, we can use a string instead. &quot;123&quot; or 123 |&gt; <strong>toString</strong> will both work.</p>
+<h2><a class="anchor" aria-hidden="true" id="error-rail"></a><a href="#error-rail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Rail</h2>
+<p>The error rail allows you to keep writing code along the “happy path,” without stopping to handle errors. This is based on <a href="https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a">Railway Oriented Programming</a>.</p>
+<p>The idea is that when you call a function which might not succeed, you can keep going. For example, if you try to look up a value in a dictionary or database, we don't make you immediately handle the error case, instead we &quot;put the value on the error rail&quot;.</p>
+<p>There are two types that go to the error rail: Result and Option (more below). You can tell if an expression returns a result or option from looking at the docstring. Result and Option types both have a &quot;good&quot; value, indicating that the function succeeded, and a &quot;bad&quot; value that indicates that the function failed. In the case of a &quot;good&quot; value, you can just ignore the result and option type - we unwrap them automatically. In the case of a &quot;bad&quot; value, the execution will end (similar to throwing an exception that isn't caught).</p>
+<p>Here's a success case: Dark automatically unwraps the Option returned by <code>Dict::get</code>, so the result is just &quot;cat&quot;.</p>
+<p><img src="/docs/assets/error/Screen_Shot_2020-01-17_at_2.54.17_PM.png" alt="assets/error/Screen_Shot_2020-01-17_at_2.54.17_PM.png"></p>
+<p>In an error case, you will see <code>Nothing</code> appear on the rail (<code>Nothing</code> is the error value of an Option):</p>
+<p><img src="/docs/assets/error/Screen_Shot_2020-01-17_at_2.56.36_PM.png" alt="assets/error/Screen_Shot_2020-01-17_at_2.56.36_PM.png"></p>
+<p><strong>When you are ready to handle error cases,</strong> you remove them from the rail by using the editor command <code>take-function-off-rail</code> (open the Command palette by hitting Option-x or Alt-x).</p>
+<p><img src="/docs/assets/error/Screen_Shot_2020-01-17_at_2.54.51_PM.png" alt="assets/error/Screen_Shot_2020-01-17_at_2.54.51_PM.png"></p>
+<p><img src="/docs/assets/error/Screen_Shot_2020-01-17_at_2.56.44_PM.png" alt="assets/error/Screen_Shot_2020-01-17_at_2.56.44_PM.png"></p>
+<p>You can see this sample <a href="https://darklang.com/a/sample-match">here</a>.</p>
+<p>The following types will have their values unwrapped in the happy case, and wrapped inside the error rail in the error case.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Happy Case</th><th>Error Case</th></tr>
+</thead>
+<tbody>
+<tr><td>Result type</td><td>OK val</td><td>Error message</td></tr>
+<tr><td>Option type</td><td>Just val</td><td>Nothing</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="handling-errors"></a><a href="#handling-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling errors</h3>
+<p>Using the error rail, we'll automatically handle errors, returning a 500 error for bad results and a 404 for bad Options. This allows you to have nice clean code:</p>
+<p><img src="/docs/assets/error/image9.png" alt="assets/error/mage9.png"></p>
+<p>Of course, while that's nice at the start, as you start to expand your Dark application, you will probably want to handle the errors directly. Here's how you would write error handling code:</p>
+<p><img src="/docs/assets/error/image12.png" alt="assets/error/image12.png"></p>
+<p>The command <strong>:take-function-off-rail</strong> will stop the value being sent to the rail, and you get the unwrapped result.</p>
+<p>If you accidentally take a function off the error rail, you can add it back by selecting the same function, and using option-x (or alt-x) to select the command <strong>:put-function-on-rail</strong>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/trace-driven-development"><span class="arrow-prev">← </span><span>Trace Driven Development</span></a><a class="docs-next button" href="/docs/refactoring-and-editing"><span>Refactoring Code in Dark</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#incomplete-code">Incomplete Code</a></li><li><a href="#type-errors">Type errors:</a></li><li><a href="#error-rail">Error Rail</a><ul class="toc-headings"><li><a href="#handling-errors">Handling errors</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>

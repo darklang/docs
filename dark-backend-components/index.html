@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Dark Backend Components · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="When building in Dark, you are able to create five major backend components, called handlers:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Dark Backend Components · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="When building in Dark, you are able to create five major backend components, called handlers:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Using Your Dark Account</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started-tutorial">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Dark Backend Components</h1></header><article><div><span><p>When building in Dark, you are able to create five major backend components, called handlers:</p>
+<ul>
+<li>API Endpoints (REST)</li>
+<li>Background workers (with built in event/queue system)</li>
+<li>Scheduled jobs/cron</li>
+<li>Persistent Datastores (key-value/hashmap)</li>
+<li>REPLs (internal tools)</li>
+</ul>
+<p>These components live on your canvas. They are created from the sidebar, or by hitting cmd-k to bring up the omnibox.</p>
+<p><img src="/docs/assets/backend/image2.png" alt="assests/backend/image2.png"></p>
+<p>Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using alt-x, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.</p>
+<p>These components <strong>do not</strong> require you to set up any additional infrastructure or deployment processes. As soon as you create them, they’re available and update as you write code (deployless). Each handler is of one of these types, and has a name as well as additional information. You can see examples of each component <a href="https://darklang.com/a/sample-helloworld">here</a>.</p>
+<p>All of these components support core Dark functionality:</p>
+<ul>
+<li>Trace data &amp; live values (see: <a href="/docs/trace-driven-development">Trace Driven Development</a>).</li>
+<li>Implicit returns &amp; pipelines (see: <a href="/docs/functional-aspects">Functional Aspects of Dark</a>).</li>
+<li>Autocomplete (i.e. typing <strong>DB::</strong>) will return all the datastore functions. This also works by type.</li>
+</ul>
+<p>More on each type is below, but we recommend continuing to <a href="/docs/trace-driven-development">Trace Driven Development</a> and coming back when you are creating an endpoint.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="canvas"></a><a href="#canvas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Canvas</h2>
+<p>In Dark, your backend components appear in the browser, on a canvas. These are at: <a href="https://darklang.com/a/username">https://darklang.com/a/username</a> or <a href="https://darklang.com/a/username-canvasname">https://darklang.com/a/username-canvasname</a>. We intend for you to only have one canvas per company or entirely separate project. You can create any canvas by navigating to it.</p>
+<p>Your endpoints would appear at: <a href="https://username-canvasname.builtwithdark.com/route">https://username-canvasname.builtwithdark.com/route</a> (we can help you set up DNS if you want another domain to point at your canvas).</p>
+<p>You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using cmd/ctrl-k).</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="rest-api-endpoints"></a><a href="#rest-api-endpoints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REST API Endpoints</h2>
+<ul>
+<li>If you hit an endpoint that does not exist (see: <a href="/docs/trace-driven-development">Trace Driven Development</a>), the endpoint will appear in the 404 section.</li>
+<li>Support the standard REST protocols (GET, POST, PATCH, DELETE, PUT).</li>
+<li>Accept url parameters (ex: /profile/:username) and appear as variables within the handler.</li>
+<li>Have implicit returns (see: <a href="/docs/functional-aspects">Functional Aspects of Dark</a>), and return JSON by default.</li>
+<li>All traces are available as dots on the LHS. If you do not have a trace selected, you will see a spinner for all live values.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="background-workers"></a><a href="#background-workers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Background Workers</h2>
+<ul>
+<li>Workers receive events via the <strong>emit</strong> expression, and will appear in the 404 section if you emit to a non-existent worker.</li>
+<li>Run asynchronously and retry in case of failure.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="cron"></a><a href="#cron" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CRON</h2>
+<ul>
+<li>Runs on a given schedule, selected by developer (every minute, hour, week, etc).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="repl"></a><a href="#repl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REPL</h2>
+<ul>
+<li>Is triggered only by the developer and frequently relies on play buttons (see <a href="/docs/trace-driven-development">Trace Driven Development</a>).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="persistent-datastores"></a><a href="#persistent-datastores" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Persistent Datastores</h2>
+<p>In Dark, all datastores are a key-value store - a persistent hashmap/dictionary (not a relational database). When looking at a Datastore you’ll see the schema, all handlers that call the datastore, how many entries are in it, and a sample entry.</p>
+<p><img src="/docs/assets/backend/image3.png" alt="assets/backend/image3.png"></p>
+<p>The best way to get a list of all DB functions is to open a REPL and type DB::, or check the <a href="https://ops-documentation.builtwithdark.com/?pretty=1">language docs</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="keys"></a><a href="#keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keys</h3>
+<p>Items are inserted and found using the key (which is string), and items in the datastore are unique by key. DB::Set prompts you for the key.</p>
+<p><img src="/docs/assets/backend/image1.png" alt="assets/backend/image1.png"></p>
+<p>You can use an existing field as the key, i.e. in this example:</p>
+<p><img src="/docs/assets/backend/image4.png" alt="assets/backend/image4.png"></p>
+<p>(<a href="https://darklang.com/a/sample-database">https://darklang.com/a/sample-datastore</a>)</p>
+<p>Both keys are set to be the name. (This would not be a great for a larger team as names would often be duplicated, but works for this example - email, fullname, or username would be a better key).</p>
+<p>If you do not have a field that would be suitable as the key, you can use DB::generateKey.</p>
+<h3><a class="anchor" aria-hidden="true" id="inserting--updating-into-the-db"></a><a href="#inserting--updating-into-the-db" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inserting &amp; Updating into the DB</h3>
+<ul>
+<li>Use DB::set to put something in the DB. It takes a key, such as a user’s email: “DB::set user user.email Users”
+<ul>
+<li>if you don’t have a natural unique key, use DB::generateKey to generate a random one.</li>
+</ul></li>
+<li>Using DB::set with the existing key will overwrite the existing item.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="using-your-data-from-another-datastore"></a><a href="#using-your-data-from-another-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using your Data from Another Datastore</h3>
+<h4><a class="anchor" aria-hidden="true" id="if-your-datastore-has-an-http-api"></a><a href="#if-your-datastore-has-an-http-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>If your datastore has an HTTP API</strong></h4>
+<p>If your datastore has the ability to serve its data over an HTTP API, enable that and talk to it directly over HTTP.</p>
+<p>Some datastores like Mongo have an admin panel that will allow you to do this (we can walk you through it).</p>
+<h4><a class="anchor" aria-hidden="true" id="if-your-datastore-doesnt-have-an-http-api"></a><a href="#if-your-datastore-doesnt-have-an-http-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>If your datastore doesn’t have an HTTP API</strong></h4>
+<p>Send us a message on our Community Slack and we’ll help you figure out the best thing to do based on what you want to do.</p>
+<h3><a class="anchor" aria-hidden="true" id="fetching--querying-from-the-db"></a><a href="#fetching--querying-from-the-db" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetching &amp; Querying from the DB</h3>
+<ul>
+<li>Use DB::get to get a single item by its key.</li>
+<li>Use DB::getMany to get many items by key</li>
+<li>Use DB::getAll to get all items in the DB.
+<ul>
+<li>You can then use list::Take to get the first n items.</li>
+</ul></li>
+<li>Use DB::query, DB::queryWithKey, DB::queryOne and DB::queryOneWithKey to search the DB for items by the value of their fields.</li>
+</ul>
+<p><code>getMany_v1</code>, <code>getAll_v1</code>, <code>queryWithKey_v1</code> all return a list of [Key, Item] lists. Ie. a list of lists where the inner list is a two-item list where the first item is the key of the item and the second item is the item itself. This is to allow you to <code>set_v1</code> the item back into the datastore if you update it and the key is not derivative of the item itself. (eg. key is a UUID)</p>
+<p>If you are doing a one-off query you can inspect your datastore using a REPL.</p>
+<h3><a class="anchor" aria-hidden="true" id="creating-references-between-dbs"></a><a href="#creating-references-between-dbs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating References Between DBs</h3>
+<p>This canvas shows the way to create a reference between two datastores: in this case between Dark employees and their pets: <a href="https://darklang.com/a/sample-database">https://darklang.com/a/sample-datastore</a></p>
+<p>Users have a pets field, which is a list of strings. The keys for the pets are added to that list.</p>
+<h3><a class="anchor" aria-hidden="true" id="locking-unlocking--migration"></a><a href="#locking-unlocking--migration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Locking, Unlocking, &amp; Migration</h3>
+<ul>
+<li>You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”</li>
+<li>If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll). This is probably easiest.</li>
+<li>You can also copy and make a new, differently-named version of the datastore (i.e. Visits2) to make changes. You can ask in the Slack for best practices here.</li>
+<li>Setting DBs by type and DB Migrations are coming - requests or inputs please let us know.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="deleted"></a><a href="#deleted" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleted</h2>
+<p>If you delete a handler, we save that code for you in the Deleted section of your canvas. Everything you delete is sorted by type, and will remain in that section until you remove it.</p>
+<p><img src="/docs/assets/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png" alt="assets/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/getting-started"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/docs/trace-driven-development"><span>Trace Driven Development</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#canvas">Canvas</a></li><li><a href="#rest-api-endpoints">REST API Endpoints</a></li><li><a href="#background-workers">Background Workers</a></li><li><a href="#cron">CRON</a></li><li><a href="#repl">REPL</a></li><li><a href="#persistent-datastores">Persistent Datastores</a><ul class="toc-headings"><li><a href="#keys">Keys</a></li><li><a href="#inserting--updating-into-the-db">Inserting &amp; Updating into the DB</a></li><li><a href="#using-your-data-from-another-datastore">Using your Data from Another Datastore</a></li><li><a href="#fetching--querying-from-the-db">Fetching &amp; Querying from the DB</a></li><li><a href="#creating-references-between-dbs">Creating References Between DBs</a></li><li><a href="#locking-unlocking--migration">Locking, Unlocking, &amp; Migration</a></li></ul></li><li><a href="#deleted">Deleted</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>

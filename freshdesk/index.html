@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>freshdesk · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This guide will walk you through how you can use Freshdesk’s API to access ticket information in Dark. You can find a sample canvas [here](https://darklang.com/a/sample-freshdesk)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="freshdesk · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="This guide will walk you through how you can use Freshdesk’s API to access ticket information in Dark. You can find a sample canvas [here](https://darklang.com/a/sample-freshdesk)."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reference Materials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started-tutorial">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">freshdesk</h1></header><article><div><span><p>This guide will walk you through how you can use Freshdesk’s API to access ticket information in Dark. You can find a sample canvas <a href="https://darklang.com/a/sample-freshdesk">here</a>.</p>
+<h1><a class="anchor" aria-hidden="true" id="what-you-need"></a><a href="#what-you-need" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What You Need</h1>
+<ul>
+<li>A Freshdesk account</li>
+<li>Access to the <a href="https://developers.freshdesk.com/">Freshdesk API documentation</a></li>
+<li>Access to your Freshdesk API key or username and password.</li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="authenticating-with-freshdesk"></a><a href="#authenticating-with-freshdesk" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authenticating with Freshdesk</h1>
+<p><img src="/docs/assets/freshdesk/image2.png" alt="assets/freshdesk/image2.png"></p>
+<p>Freshdesk uses basic authentication - in this example, we’ve chosen to use our API key and insert random text for the password, but you can replace those with your username and password when using HttpClient::basicAuth.</p>
+<h1><a class="anchor" aria-hidden="true" id="getting-all-of-your-tickets"></a><a href="#getting-all-of-your-tickets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting All of Your Tickets</h1>
+<p><img src="/docs/assets/freshdesk/Image4.png" alt="assets/freshdesk/image4.png"></p>
+<p>Freshdesk makes it pretty easy to return a simple list of all of your tickets. However, you may find that the information in this list is not quite what you are looking for - if you want details about a set of tickets, check the Adding Ticket Information to a Datastore section.</p>
+<h1><a class="anchor" aria-hidden="true" id="filtering-your-tickets"></a><a href="#filtering-your-tickets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filtering Your Tickets</h1>
+<p><img src="/docs/assets/freshdesk/image5.png" alt="assets/freshdesk/image5.png"></p>
+<p>Freshdesk also makes it pretty easy to get a filtered list of your tickets - <a href="https://developers.freshdesk.com/api/#filter_tickets">check their documentation</a> for the query options. In this example, we are returning a list of all tickets with a status of 3, which means Pending.</p>
+<h1><a class="anchor" aria-hidden="true" id="adding-ticket-information-to-a-datastore-in-dark"></a><a href="#adding-ticket-information-to-a-datastore-in-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding Ticket Information to a Datastore in Dark</h1>
+<p>In the following example, we are going to add a set of information from all of our tickets into a Dark datastore.</p>
+<p><img src="/docs/assets/freshdesk/Image3.png" alt="assets/freshdesk/image3.png"></p>
+<p>Create a datastore to keep track of all of your ids. Because our primary use for this datastore is to append the ids to our request URL, it’s helpful to store ticket_id as a string - you can also cast them to strings later if you’d prefer.</p>
+<p><img src="/docs/assets/freshdesk/image8.png" alt="assets/freshdesk/image8.png"></p>
+<p>Create a worker to populate that table with all of your ticket ids.</p>
+<p><img src="/docs/assets/freshdesk/image6.png" alt="assets/freshdesk/image6.png"></p>
+<p>Create a datastore that contains all of the fields you want to save from your tickets - you can see all of your options in <a href="https://developers.freshdesk.com/api/#view_a_ticket">Freshdesk’s API documentation</a>.</p>
+<p><img src="/docs/assets/freshdesk/image9.png" alt="assets/freshdesk/image9.png"></p>
+<p>Create a function to add the information about your tickets to your new datastore. Note that, because we want information about the requester, we need to add the include parameter to our URL. For more information about this URL parameter, refer to the <a href="https://developers.freshdesk.com/api/#view_a_ticket">View a Ticket</a> section of the Freshdesk API.</p>
+<p><img src="/docs/assets/freshdesk/image1.png" alt="assets/freshdesk/mage1.png"></p>
+<p>Create a worker that performs a List::Map on your list of ticket ids, and uses the addTicketstoDB function to populate your datastore.</p>
+<p><img src="/docs/assets/freshdesk//image7.png" alt="assets/freshdesk/image7.png"></p>
+<p>Once your run your worker, your datastore will be updated!</p>
+<h1><a class="anchor" aria-hidden="true" id="updating-ticket-information-with-dark"></a><a href="#updating-ticket-information-with-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating Ticket Information With Dark</h1>
+<p><img src="/docs/assets/freshdesk/image10.png" alt="assets/freshdesk/image10.png"></p>
+<p>Updating ticket information using Dark can be fairly straightforward - the above example shows us updating the priority of the ticket with id 1 to 4, which means Urgent Priority. For a full list of what can and can’t be updated, refer to the <a href="https://developers.freshdesk.com/api/#update_ticket">Freshdesk API Documentation</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/airtable"><span class="arrow-prev">← </span><span>Airtable</span></a><a class="docs-next button" href="/docs/sample-canvases"><span>Sample Canvases</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Building a Twilio App in Dark · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Building a Twilio App in Dark · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started-tutorial">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Building a Twilio App in Dark</h1></header><article><div><span><p>Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces.</p>
+<p>You can access you canvas at <a href="http://darklang.com/a/USERNAME">darklang.com/a/USERNAME</a> (or USERNAME-CANVASNAME). For this project we recommend <a href="https://darklang.com/a/USERNAME-twilioreminder">https://darklang.com/a/USERNAME-twilioreminder</a>.</p>
+<p>We recommend building a hello world API endpoint to get a feel for Dark, as follows:</p>
+<p><img src="/docs/assets/twilio/image2.gif" alt="assets/twilio/image2.gif"></p>
+<p>All the major handlers work the same way, but the key for many requests is working directly with incoming data.</p>
+<h2><a class="anchor" aria-hidden="true" id="daily-text-reminder-app"></a><a href="#daily-text-reminder-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Daily Text Reminder App</h2>
+<p>We’re building this app: <a href="https://sample-textreminder.builtwithdark.com/">https://sample-textreminder.builtwithdark.com</a>
+It’s an app that will send a text message once per day at a given time to an end user. In this case, we’ll ask the user “did you drink enough water today?” and track their response.</p>
+<p>To try out the app and see your traces in the sample canvas text “start” to &quot;+12482653257.”</p>
+<h3><a class="anchor" aria-hidden="true" id="twilio-credentials"></a><a href="#twilio-credentials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Twilio Credentials</h3>
+<p>To build your own, you’ll need to set up a Twilio account. Your Twilio SID &amp; Token are on the Dashboard.</p>
+<p><img src="/docs/assets/twilio/image16.png" alt="assets/twilio/mage16.png"></p>
+<p>You’ll also need to add a phone number from the “more” menu on the lefthand side, then to the phone number section.</p>
+<p><img src="/docs/assets/twilio/image15.png" alt="assets/twilio/image15.png"></p>
+<p>Once you’ve added a phone number, you can configure a webhook:</p>
+<p><img src="/docs/assets/twilio/image17.png" alt="assets/twilio/image17.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="sending-a-message"></a><a href="#sending-a-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending a Message</h3>
+<p>Dark has a built in Twilio::sendText function. We can call it in a REPL with our own number to verify our webhook.</p>
+<p><img src="/docs/assets/twilio/image4.png" alt="assets/twilio/mage4.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1108947374">https://darklang.com/a/sample-textreminder#handler=1108947374</a></p>
+<h3><a class="anchor" aria-hidden="true" id="receiving-responses"></a><a href="#receiving-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receiving Responses</h3>
+<p>After we receive a response, we’ll see a 404 in the side bar section for our webook, which we can create by hitting the “+” button.</p>
+<p><img src="/docs/assets/twilio/image3.png" alt="assets/twilio/mage3.png"></p>
+<p>Once the handler is created, we’re able to see the full incoming trace.</p>
+<p><img src="/docs/assets/twilio/image19.png" alt="assets/twilio/image19.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<h3><a class="anchor" aria-hidden="true" id="processing--storing-responses"></a><a href="#processing--storing-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Processing &amp; Storing Responses</h3>
+<p>In Dark, you can work directly with incoming traces. More on this in <a href="/docs/trace-driven-development">Trace Driven Development</a>. For this handler, we can parse out the things we care about: a user deciding to start/stop using our service, or telling us if they drank enough water or not.</p>
+<p><img src="/docs/assets/twilio/image7.png" alt="assets/twilio/image7.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<p>At each expression, we can see what the expression evaluates to for a given trace. Here, we see the From number. In this case we also do some cleaning on the response in case the user had a capital letter or an extraneous space.</p>
+<p>For processing the various responses, we’ll use a match statement. More on <a href="/docs/functional-aspects#match">Match</a> is available, but the tutorial example has enough context to understand how it works for this case.</p>
+<h3><a class="anchor" aria-hidden="true" id="signup--quit"></a><a href="#signup--quit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signup &amp; Quit</h3>
+<p>Now, let’s do the “start” case. This allows us to give the user our Twilio number, and have them text “start” to begin receiving a daily reminder. We’ll need a data store to keep track of our users, which can be created from the omnibox (cmd/ctrl-k) or the side bar.</p>
+<p><img src="/docs/assets/twilio/image1.png" alt="assets/twilio/image1.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#db=973891964">https://darklang.com/a/sample-textreminder#db=973891964</a></p>
+<p>Then, we can write the logic to add users to the datastore when they text “start.” In this case we use the user’s phone number as the unique key.</p>
+<p><img src="/docs/assets/twilio/image9.png" alt="assets/twilio/image9.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<p>The stop case is very similar, but removes the user from the datastore.</p>
+<p><img src="/docs/assets/twilio/image13.png" alt="assets/twilio/image13.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<p>To test, you can always send a new reply to the text message (or just message your number) and walk through the trace to see the live values at each step.</p>
+<p><img src="/docs/assets/twilio/image11.png" alt="assets/twilio/image11.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<h3><a class="anchor" aria-hidden="true" id="water-tracking"></a><a href="#water-tracking" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Water Tracking</h3>
+<p>Now we’ll want the cases for when the user responds to the daily question of “did you drink enough water today?”</p>
+<p>We’ll want another data store so we can track the daily response by user (side bar or cmd-k).</p>
+<p><img src="/docs/assets/twilio/image12.png" alt="assets/twilio/image12.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#db=1164294845">https://darklang.com/a/sample-textreminder#db=1164294845</a></p>
+<p>In this case since we do not want to use the phone number as the unique key, we generate a unique key when storing using the built in DB::generateKey function:</p>
+<p><img src="/docs/assets/twilio/image18.png" alt="assets/twilio/image18.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1004312353">https://darklang.com/a/sample-textreminder#handler=1004312353</a></p>
+<h3><a class="anchor" aria-hidden="true" id="catch-all-case"></a><a href="#catch-all-case" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Catch-all Case</h3>
+<p>Finally, we need a case for when we don’t match on one of our earlier responses. We’ll want to send a text back to tell the user about the error. To prevent this from blocking other actions, we’ll emit to a background worker.</p>
+<p>Here, we emit the user’s number (user) to a background worker named Misunderstood (and see the event as a trace). Once you’ve hit “play” on the emit expression, you should have a 404 for the worker in the side bar that you can hit the + to add. If it does not appear in the sidebar, wait ~ 30s or refresh the browser.</p>
+<p><img src="/docs/assets/twilio/image14.png" alt="assets/twilio/image14.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=331438030">https://darklang.com/a/sample-textreminder#handler=331438030</a></p>
+<p>Then we can write the code similar to our earlier REPL to send a message asking for a more clear response:</p>
+<p><img src="/docs/assets/twilio/image8.png" alt="assets/twilio/image8.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=331438030">https://darklang.com/a/sample-textreminder#handler=331438030</a></p>
+<h3><a class="anchor" aria-hidden="true" id="sending-reminder-messages-once-a-day"></a><a href="#sending-reminder-messages-once-a-day" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending Reminder Messages Once A Day</h3>
+<p>To send each user a reminder once per day, we’ll want to have a cron set to run daily. In this case we’ll get all the users, then emit to a background worker to send the messages.</p>
+<p><img src="/docs/assets/twilio/image6.png" alt="assets/twilio/image6.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=1621731316">https://darklang.com/a/sample-textreminder#handler=1621731316</a></p>
+<p>Much like before, this will add the worker to the 404 section where you can add it, with the traces.</p>
+<p><img src="/docs/assets/twilio/image5.png" alt="assets/twilio/image5.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=337743491">https://darklang.com/a/sample-textreminder#handler=337743491</a></p>
+<p>The code is identical to the code in our REPL:</p>
+<p><img src="/docs/assets/twilio/image10.png" alt="assets/twilio/image10.png"></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=337743491">https://darklang.com/a/sample-textreminder#handler=337743491</a></p>
+<p>This is now a fully functioning application.</p>
+<p>You could do similar ones for:</p>
+<ul>
+<li>A reminder to stand up once per hour</li>
+<li>A daily reminder to do a task (fill in a personal CRM, floss)</li>
+<li>A weekly reminder to take out the trash</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="additional-topics-for-fun"></a><a href="#additional-topics-for-fun" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Topics (for Fun!)</h3>
+<h4><a class="anchor" aria-hidden="true" id="cron-at-time-of-day"></a><a href="#cron-at-time-of-day" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cron at Time of Day</h4>
+<p>If you’d like to set the reminder to occur at a specific time of day, you can set this using a datastore. There’s a sample canvas <a href="https://darklang.com/a/sample-setcrontorunatspecifictime">here</a>. For this application, add the “reminder time” in the Users table, and add a case to allow users to specify a time (that you would then convert to a Date object).</p>
+<h4><a class="anchor" aria-hidden="true" id="seeingdisplaying-responses"></a><a href="#seeingdisplaying-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Seeing/Displaying Responses</h4>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=911581692">This API handler shows all checkins for a given user.</a></p>
+<p><a href="https://darklang.com/a/sample-textreminder#handler=400638438">This API handler shows the percentage of “yes” responses for a given user.</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/slack-app-tutorial"><span class="arrow-prev">← </span><span>Building Slack Apps</span></a><a class="docs-next button" href="/docs/airtable"><span>Airtable</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#daily-text-reminder-app">Daily Text Reminder App</a><ul class="toc-headings"><li><a href="#twilio-credentials">Twilio Credentials</a></li><li><a href="#sending-a-message">Sending a Message</a></li><li><a href="#receiving-responses">Receiving Responses</a></li><li><a href="#processing--storing-responses">Processing &amp; Storing Responses</a></li><li><a href="#signup--quit">Signup &amp; Quit</a></li><li><a href="#water-tracking">Water Tracking</a></li><li><a href="#catch-all-case">Catch-all Case</a></li><li><a href="#sending-reminder-messages-once-a-day">Sending Reminder Messages Once A Day</a></li><li><a href="#additional-topics-for-fun">Additional Topics (for Fun!)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>
