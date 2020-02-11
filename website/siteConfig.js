@@ -14,7 +14,7 @@ const siteConfig = {
   // customDocsPath: path.basename(__dirname) + '/docs',
   title: 'Dark Documentation', // Title for the website.
   tagline: 'Dark Documentation',
-  docsUrl: '',
+  docsUrl: 'docs',
 
   // Used for publishing and more
   organizationName: 'darklang',
