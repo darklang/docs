@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Getting Started · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="If you need support, the [Dark Community Slack](https://darklang.com/slack-invite) is the best place for front-line support. We’re very responsive during the day, and often responsive at all hours. Depending on the issue, we may need you to use a workaround. If you have an urgent issue you can call Ellen (248-202-7698) or Paul (415-341-2432)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Getting Started · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="If you need support, the [Dark Community Slack](https://darklang.com/slack-invite) is the best place for front-line support. We’re very responsive during the day, and often responsive at all hours. Depending on the issue, we may need you to use a workaround. If you have an urgent issue you can call Ellen (248-202-7698) or Paul (415-341-2432)."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Using Your Dark Account</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Using Your Dark Account</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/dark-backend-components">Dark Backend Components</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/error-handling">Error Handling in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/refactoring-and-editing">Refactoring Code in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/functional-aspects">Functional Aspects of Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/static-assets">Hosting Static Assets in Dark</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/custom-domains">Custom Domains</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/getting-started-tutorial">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/react-spa-tutorial">Building a Backend for a React SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/slack-app-tutorial">Building Slack Apps</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/twilio-app-tutorial">Building a Twilio App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference Materials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/docs/airtable">Airtable</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/freshdesk">Freshdesk</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Getting Started</h1></header><article><div><span><p>If you need support, the <a href="https://darklang.com/slack-invite">Dark Community Slack</a> is the best place for front-line support. We’re very responsive during the day, and often responsive at all hours. Depending on the issue, we may need you to use a workaround. If you have an urgent issue you can call Ellen (248-202-7698) or Paul (415-341-2432).</p>
+<h2><a class="anchor" aria-hidden="true" id="readme"></a><a href="#readme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>README</strong></h2>
+<p>Dark is a radically different approach to software development. You can access your account at <a href="https://darklang.com/a/USERNAME">https://darklang.com/a/USERNAME</a>.</p>
+<ol>
+<li>Dark uses a set of structural backend components (API, Workers, Scheduled Jobs/Cron, internal tools, datastores). <a href="/docs/docs/dark-backend-components">Read this first</a>.</li>
+<li>Dark requires you to develop from incoming requests/traces (using your traces, live values, play buttons, and return values). <a href="trade-driven-development">Read this second.</a></li>
+<li>Working safely in Dark relies on feature flags (Coming soon).</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="hello-world"></a><a href="#hello-world" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hello World:</h2>
+<p><img src="/docs/docs/assets/helloworld.gif" alt="Hello World"></p>
+<h2><a class="anchor" aria-hidden="true" id="language"></a><a href="#language" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language</h2>
+<ul>
+<li><a href="https://ops-documentation.builtwithdark.com/?pretty=1">All language functions</a>.</li>
+<li>The editor supports the language, so <strong>DB::</strong> will bring up all datastore functions, <strong>List::</strong> all list functions, etc. You’ll also see the doc strings in line. That said, a list of all expressions is <a href="https://ops-documentation.builtwithdark.com/?pretty=1">available here.</a></li>
+<li>Each expression in the language is versioned independently (<strong>DB::getAll_v3</strong>, for instance). You’ll always have access to the version you are using, and the latest version.</li>
+<li>If you have not used a functional language before, <a href="/docs/docs/functional-aspects">Functional Aspects of Dark</a> has an overview of the functional features in Dark (implicit returns, pipelines, pattern matching, and map instead of foreach).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="editor"></a><a href="#editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editor</h2>
+<ul>
+<li>The editor is <em>only supported</em> for Chrome <em>without</em> browser extensions. (Other browsers do not yet have all of the features we need. Browser extensions often interfere).</li>
+<li>If you are struggling with the editor and haven’t read them yet, we strongly recommend the overview of <a href="/docs/docs/dark-backend-components">backend components</a> &amp; <a href="/docs/docs/trace-driven-development">trace driven development</a>. The best place to start is writing line-by-line and checking the live value at each step.</li>
+<li>Write primarily in handlers, not functions.</li>
+<li>The editor is expression based, and it will help to think of it that way vs. as text or lines. Cursor placement is important. If you want to look at the result of an expression, or use a command on it, the :: is a good option for where to put your cursor.</li>
+<li>Enter completes a field and leaves the cursor at the end of that field, tab completes and moves to the next blank (even if the blank is not nearby), and space moves one space forward (as you would expect in text).</li>
+<li>The editor still has some quirks (we’re sorry!) please tell us about places where you feel like you can’t type, or are fighting with the editor. The best place to report bugs or feedback is the <a href="https://darklang.com/slack-invite">Dark Community Slack</a>.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="additional-informationadvanced-topics"></a><a href="#additional-informationadvanced-topics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Information/Advanced Topics</h2>
+<ul>
+<li>Collaboration: Works like Google docs. If you need to share a project with another user, please request an organizational canvas via Slack.</li>
+<li>CORS: if you’re interested in setting CORS, we have internal tools do that! We're happy to do it in real-time with you to make sure it works. Drop us a note in Slack and we can get you set up. If you'd prefer to try it yourself, here is an example:
+<img src="/docs/docs/assets/cors.png" alt="CORS example"></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="known-issues"></a><a href="#known-issues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Known Issues</h2>
+<ul>
+<li>Large handlers cause performance problems.</li>
+<li>Recursion does not work well yet.</li>
+<li>Some quirks exist around international keyboards. Please report all instances of this in the Community Slack. In the short-term, you may need to switch to an English keyboard.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/docs/dark-backend-components"><span>Dark Backend Components</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#readme"><strong>README</strong></a></li><li><a href="#hello-world">Hello World:</a></li><li><a href="#language">Language</a></li><li><a href="#editor">Editor</a></li><li><a href="#additional-informationadvanced-topics">Additional Information/Advanced Topics</a></li><li><a href="#known-issues">Known Issues</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div></body></html>
