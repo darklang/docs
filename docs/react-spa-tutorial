@@ -1,0 +1,247 @@
+---
+id: react-spa-tutorial
+title: Building a Backend for a React SPA in Dark
+sidebar_label: Building a Backend for a React SPA in Dark
+---
+
+Watch a demo video of this project: [https://vimeo.com/360007420/01c205fe0f](https://vimeo.com/360007420/01c205fe0f)
+
+#### Getting started
+
+Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces.
+
+You can access you canvas at darklang.com/a/USERNAME-CANVASNAME (we recommend USERNAME-signin for this project).
+
+First, on that canvas build a hello world API endpoint to get a feel for Dark:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45f33420-cb9a-4f92-8cf1-6300bdd54772/image15.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45f33420-cb9a-4f92-8cf1-6300bdd54772/image15.gif)
+
+All the major handlers work the same way, but the key for many requests is working directly with incoming data.
+
+#### This Guide - Office Sign-in
+
+We’re building this app: [https://sample-signin.builtwithdark.com](https://sample-signin.builtwithdark.com/). It’s an [Office Sign-in SPA](https://github.com/darklang/dark-signin), built in React. From the webform, you pick a host, announce your name as the visitor).
+
+The application backend will have an API, data storage, and asynchronous background workers to talk to external APIs (Twilio & Slack). You will need Twilio & Slack tokens, which we explain how to get below during that portion of the tutorial.
+
+Yours will live at [https://USERNAME-signin.builtwithdark.com](https://username-signin.builtwithdark.com/); to work on it go to [https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin).
+
+### Quick start:
+
+We’ll need some setup on your machine to upload the react app. Run these commands on OSX to install. To read a longer version explaining what each of these commands do, go here: 
+
+[Hosting Static Assets in Dark](https://www.notion.so/Hosting-Static-Assets-in-Dark-0843ecd8bdbf4420ad2c73d70f16a33b)
+
+Note, replace anywhere that says USERNAME and PASSWORD with your Dark username and password.
+
+    git clone https://github.com/darklang/dark-signin.git
+    cd dark-signin
+    npm install
+    npm run build-for USERNAME-signin
+    npm run get-dark-cli
+    ./dark-cli-apple --canvas USERNAME-signin --user USERNAME --password PASSWORD build
+
+If you get “Not found” on the last step, you’ll need to visit [https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin) first in your browser.
+
+#### Serving Hosted Assets
+
+When you go back to Dark, your assets will be available (in this case, our compiled Javascript application).
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4903428a-4252-4910-8c41-de73591f6f43/image24.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4903428a-4252-4910-8c41-de73591f6f43/image24.png)
+
+Now, let’s put the assets at the base of our API by creating a new route named “/” from the omnibox, or the side bar:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77e6ebf0-2a8b-4f32-ad29-6ea0dbc93191/image22.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77e6ebf0-2a8b-4f32-ad29-6ea0dbc93191/image22.png)
+
+Once the route is created, we can specify it’s a “GET” method, and start writing code.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d03944b9-8c32-4670-ac71-9912d39be787/image2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d03944b9-8c32-4670-ac71-9912d39be787/image2.png)
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/575fd334-663e-4a3f-8cf7-ea74276b1573/image21.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/575fd334-663e-4a3f-8cf7-ea74276b1573/image21.png)
+
+The finished API will look like this, and you can open it from the hamburger on the right (the tutorial copy is at [https://sample-signin.builtwithdark.com/](https://sample-signin.builtwithdark.com/), and your copy is at https://username-signin.builtwithdark.com/).
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ba09b79-5b2e-4911-b9d6-ce0e6315a3a7/image4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ba09b79-5b2e-4911-b9d6-ce0e6315a3a7/image4.png)
+
+When you open the page it looks like this:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d3b1bc8-35d9-4128-9575-26338361f465/image29.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d3b1bc8-35d9-4128-9575-26338361f465/image29.png)
+
+#### Building the API - Trace Driven Development
+
+Now, we can build a backend based on the frontend we have. The react app has two requirements:
+
+- GET Hosts - Providing the list of available hosts.
+- POST Visit - Checking in and triggering what needs to happen when a visitor arrives.
+
+#### Setting Up the /hosts Endpoint (API, Datastore, REPL)
+
+From Dark, we can see the failed request.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8059d172-578b-45e8-ac20-d93efa8c165f/image3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8059d172-578b-45e8-ac20-d93efa8c165f/image3.png)
+
+If you do not see a failed request, verify that your host URL in your frontend matches where you’ve hosted the application.
+
+Hit the + Button to create the route. The route will have the trace from when we opened the page.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ec34656-8bd4-4d41-a9ed-7c8ee74a427b/image32.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ec34656-8bd4-4d41-a9ed-7c8ee74a427b/image32.png)
+
+Now we have our endpoint (you can try it out by making a list ["name1", "name2"] and refreshing the React application:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3cb53a6a-b991-4896-b9fd-56302b02b177/image1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3cb53a6a-b991-4896-b9fd-56302b02b177/image1.png)
+
+But for the longer term, we’ll need other backend components (in particular a datastore) to support the endpoint.
+
+Create a datastore which lists all hosts. We can create it from the omnibox or the left side bar, and rename it. We can also choose other parameters. In this case, I’ve chosen phone numbers & SlackIDs to send texts and DMs.
+
+Datastores in Dark are key-value based, not relational. This tutorial will include step by step instructions, but more information on datastores is available [here](https://docs.google.com/document/d/1yuRcG9XD3jl6CvwXEbSdAtV-_ALf0FithSIMMZuBnYs/edit#heading=h.c4sr1g6ypepq).
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbd926cb-4294-4245-9d68-8657984f4f9a/image7.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbd926cb-4294-4245-9d68-8657984f4f9a/image7.png)
+
+We can add data to the datastore by using a REPL, an internal tool for the application.
+
+We can name the REPL (or it will have a default adjective-animal name) and then
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b087fff-ae4b-4004-a937-af783bc36b7a/image6.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b087fff-ae4b-4004-a937-af783bc36b7a/image6.png)
+
+When we write DB::set into the handler, we’re given three parameters for the expression. The value, the unique identifier for the record, and the table.
+
+Here’s the finished REPL:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0ddbf03-d974-4c98-a454-fc7ffd343d69/image14.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0ddbf03-d974-4c98-a454-fc7ffd343d69/image14.png)
+
+In this case, I chose to define slackid as a variable so I could reuse it as a unique key. You can do this after the fact using option/alt-X on the value to extract a variable, or just rewrite starting from the top.
+
+**Please do not use Ellen’s phone number + SlackID for this, because then you won’t get the interactivity!** Use your own name, phone number, and Slackid. Your slackid is found in your profile in the … menu. You will need permission to install Slack apps on a Slack to do this.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0495eb9-4bc9-479e-b08a-95ffc6e2d37c/image34.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0495eb9-4bc9-479e-b08a-95ffc6e2d37c/image34.png)
+
+Press the “play” button to insert the value into the datastore ([more on interactivity with play buttons](https://docs.google.com/document/d/15u_iXi5FZXPX-hn71NqMH8vMLfNQMw3NMD8EOui3m2g/edit?folder=0AJNj3YlxhMcIUk9PVA#heading=h.582o5mgjxu9a)).
+
+After this, when I select my datastore, I will see that it has locked and has a connection to the REPL, and the number of items/most recent item (if you do not see the DB stats on the left, refreshing the tab should work).
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/32c75b36-bcea-4bdb-9b90-07467adfe1d4/image19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/32c75b36-bcea-4bdb-9b90-07467adfe1d4/image19.png)
+
+Then, you can update the hosts API to use our data storage.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/450344d1-3afc-4917-ac85-93329bd8e308/image5.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/450344d1-3afc-4917-ac85-93329bd8e308/image5.png)
+
+In this case we did a DB::getAll hosts (and played the request). Then, we took that result (a list of objects) and passed it as a parameter into list::map, then took the name for each host.
+
+To see how this works, click first on DB::getAll to see the list of objects, then click on \val to see an example object, and then val.name will show you the name field. [Functional aspects of Dark](https://docs.google.com/document/d/1Z8kw6YXb_olmTG8IGflzb9witUrwfYxCkSaZc3skj90/edit) has more information on pipelines and maps, but for the tutorial copying this code will work.
+
+If you are stuck:
+
+1. Make sure to hit the play button for DB::getAll so you’ll have real data.
+2. Shift-enter or |> will open the pipeline.
+3. Typing \ in the “block” field will open the \val operator.
+
+#### Setting up the /visits Endpoint (API, Datastore, Workers)
+
+First, we do the same thing and go back to our React application, select a host, then type in a visitor name and hit the “sign in” button. This will result in another 404 that we can create, and see the trace for.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/683c9525-65cc-499c-af2d-f1da6891b855/image26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/683c9525-65cc-499c-af2d-f1da6891b855/image26.png)
+
+First, we’ll store the visit in a datastore as we did from the REPL when creating hosts. Like before, we can create a new datastore, and then use the DB::set expression.
+
+If we match the datastore schema to our incoming request body, we can do it like this:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3d6995f5-fe58-4c02-aec8-3a3c36dd2abd/image17.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3d6995f5-fe58-4c02-aec8-3a3c36dd2abd/image17.png)
+
+If our schema does not match exactly, we can still use our incoming request. Here’s a version that also stores the time of the visit:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a39f67e0-d9e1-40f6-b646-5080cd23c3c5/image28.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a39f67e0-d9e1-40f6-b646-5080cd23c3c5/image28.png)
+
+In either case, taking advantage of live values and traces is very helpful. When our cursor is in host, we can see what the trace evaluates to for that value on the lefthand side:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87bf7fdd-7ddb-404e-8512-889009bbeb62/image9.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87bf7fdd-7ddb-404e-8512-889009bbeb62/image9.png)
+
+Then, as before, we can run the outstanding functions and insert this trace into our datastore (in this case, we’re building from this specific trace. In the future, when a new sign in happened, this handler would run at that time).
+
+If you’re having trouble, make sure you’ve hit the play buttons and do not have red underlines. The finished handler & datastore once you’ve run and inserted the visit will look like this:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed8b2723-51a1-43dd-b26e-84b712dd0e9c/image23.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ed8b2723-51a1-43dd-b26e-84b712dd0e9c/image23.png)
+
+#### Background Workers & External API connections
+
+For this section you will need a Twilio SID & Token and/or a Slack Token, depending on if you want to send Texts, DMs, or both.
+
+#### Twilio
+
+To create a new [Twilio account](https://twilio.com/), the SID & Token are in your console on the right hand side.
+
+#### 
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc55598d-20a2-4d85-9cd1-335d05722c73/image11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dc55598d-20a2-4d85-9cd1-335d05722c73/image11.png)
+
+Once you have an account, you’ll need a number that can send texts, [https://www.twilio.com/console/phone-numbers/incoming](https://www.twilio.com/console/phone-numbers/incoming).
+
+#### Slack
+
+To create a Slack token, go to [https://slack.com/api](https://slack.com/api), create a new application, add a bot from the “basic information” add features & functionality section, and install the app in your workspace. After doing so, you’ll get two tokens back, one of which is the format xoxb-.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/639585bc-5e18-489e-a5ab-10f4dc6ef85c/image33.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/639585bc-5e18-489e-a5ab-10f4dc6ef85c/image33.png)
+
+#### Twilio Text Message Integration
+
+Back in our post visits handler, hit enter at the end of the line to write more code (This converts our DB::set action into a statement. Not necessary reading now, but more on implicit returns is in the [functional aspects of Dark](https://docs.google.com/document/d/1Z8kw6YXb_olmTG8IGflzb9witUrwfYxCkSaZc3skj90/edit#heading=h.w9khi92n3fb4)).
+
+To send information to be used asynchronously (like for API calls) we can use the keyword emit to emit to an async background worker with a queue.
+
+Here, we emit the request.body (seen in a live value on the left) to a worker named “sendText”. Hitting play will create a 404 for that worker, much like how we created our visit and host endpoints.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3dd23af-60ea-4e08-bb2f-5ad62ee3ed07/image30.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3dd23af-60ea-4e08-bb2f-5ad62ee3ed07/image30.png)
+
+When created, the worker will have the event information as a trace:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52d438b9-ab20-4aa5-86e8-ded2159f9265/image10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52d438b9-ab20-4aa5-86e8-ded2159f9265/image10.png)
+
+For this worker, we need to get the host’s phone number and then send them a text. This is very similar to the code we wrote before to get the host’s name.
+
+In this case we use DB::queryOne to get only one response, and look by hostname. Then we can play the query, and make a variable for the field.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0507626-e96c-43d1-9d20-3e155608c38f/image12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0507626-e96c-43d1-9d20-3e155608c38f/image12.png)
+
+The last step is adding the Twilio::sendText function, which takes five parameters. The SID, Token, and number you got from Twilio, the hostphone above, and the message you’d like to send.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c12bde5-24ce-4e08-9323-436ee9239f34/image20.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1c12bde5-24ce-4e08-9323-436ee9239f34/image20.png)
+
+When you’ve added yours, it will look like this (but with your tokens).
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b10339ea-f92e-4856-a5cd-e90b2b147bff/image18.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b10339ea-f92e-4856-a5cd-e90b2b147bff/image18.png)
+
+When you hit “play” on sendText, you will be able to see the API response as a live value, and should receive a text message.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6284a7b8-ab70-40c6-8e5a-9a0549ec0dc9/image27.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6284a7b8-ab70-40c6-8e5a-9a0549ec0dc9/image27.png)
+
+#### Slack DM Integration
+
+We go back to our /visit endpoint to add the Slack worker. We can even copy most of the code from the beginning of the Twilio handler to get our slackid.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1edfa51-f7f3-4bfd-99ee-f3ed511115d5/image8.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1edfa51-f7f3-4bfd-99ee-f3ed511115d5/image8.png)
+
+For this, we’ll be using Slack’s [chat.postMessage API method](https://api.slack.com/methods/chat.postMessage), which requires the method URL: [https://slack.com/api/chat.postMessage](https://slack.com/api/chat.postMessage) and pass a header with a content type and a token.
+
+There are built in methods for formatting headers in the HTTPClient library.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccd1fdc3-5b54-4892-ab73-934ea18cb158/image31.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccd1fdc3-5b54-4892-ab73-934ea18cb158/image31.png)
+
+Finally, we have to make the post request, which takes four parameters, including a body.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/350c51fb-2339-4efc-9945-0898b76565e9/image25.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/350c51fb-2339-4efc-9945-0898b76565e9/image25.png)
+
+You can fill them in as follows from the above code:
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/edc0e94a-cdfc-433a-b039-39683313ad52/image13.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/edc0e94a-cdfc-433a-b039-39683313ad52/image13.png)
+
+When you hit play, you should receive a DM from your Slackbot, as well as an inline API response.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8cf1d83e-fa0c-454a-9fd9-cae25a36c0c8/image16.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8cf1d83e-fa0c-454a-9fd9-cae25a36c0c8/image16.png)
+
+If it isn’t working, check that all parameters (including {} in the query field) are correct, and read the API response message to debug.
+
+#### That’s it!
+
+Now you should have a working React application with an API, persistent datastorage, and asynchronous background workers, hosted at [https://username-signin.builtwithdark.com](https://username-signin.builtwithdark.com/). When you go back to your React app and submit a new visit, you should receive both a Slack and a Text.
+
+(Interested in more Slack apps? We have [a guide](https://www.notion.so/darklang/A-Guide-to-Building-Slack-Apps-with-Dark-42532aa48fdc4967a4f13f3dd562ee08) for that!)
