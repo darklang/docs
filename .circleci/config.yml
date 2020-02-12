@@ -21,7 +21,7 @@ jobs:
           command: |
             git config --global user.email "ops@darklang.com"
             git config --global user.name "Dark Ops"
-            cd website && yarn install USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" yarn run publish-gh-pages
+            cd website && yarn install && USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" yarn run publish-gh-pages
 
 workflows:
   version: 2
