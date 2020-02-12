@@ -16,12 +16,12 @@ If you're trying to do something beyond the scope of this README, check out thei
 
 ```sh
 # Install dependencies
+$ cd website
 $ yarn
 ```
 2. Run your dev server:
 
 ```sh
-$ cd website
 # Start watching the site for changes
 $ yarn start
 ```
