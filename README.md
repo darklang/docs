@@ -181,4 +181,4 @@ $ cd website
 $ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=master yarn publish-gh-pages
 ```
 
-If you're using ssh instead of https, also add the prefix `USE_SSH=true`.
+If you're using ssh instead of https, replace `GIT_USER=<YOUR USERNAME>` with `USE_SSH=true`.
