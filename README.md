@@ -1,12 +1,13 @@
-This website was created with [Docusaurus](https://docusaurus.io/).
+The Dark docs are built using Docusaurus.
+If you're trying to do something beyond the scope of this README, check out their [docs](https://docusaurus.io/).
 
 # What's In This Document
 
 * [Get Started in 5 Minutes](#get-started-in-5-minutes)
-* [Directory Structure](#directory-structure)
+* [Project Structure](#project-structure)
 * [Editing Content](#editing-content)
 * [Adding Content](#adding-content)
-* [Full Documentation](#full-documentation)
+* [Publishing Changes](#publishing-changes)
 
 # Get Started in 5 Minutes
 
@@ -19,33 +20,48 @@ $ yarn
 2. Run your dev server:
 
 ```sh
-# Start the site
+$ cd website
+# Start watching the site for changes
 $ yarn start
 ```
 
-## Directory Structure
+## Project Structure
 
-Your project file structure should look something like this
+There are two branches:
+
+* src
+* gh-pages
+
+The website is hosted from `gh-pages`, but everything there is auto-generated from `src`.
+We write and edit documentation on the `src` branch and run a script to generate `gh-pages` from that source content.
+
+### Directory Structure
+
+The project file structure in `src` is
 
 ```
-my-docusaurus/
-  docs/
-    doc-1.md
-    doc-2.md
-    doc-3.md
+docs/
+  README.md -- this file
+  docs/ -- individual markdown documentation pages
+    changelog.md
+    getting-started.md
+    assets/ -- images that can be referenced in the doc pages
+    ...
   website/
-    blog/
-      2016-3-11-oldest-post.md
-      2017-10-24-newest-post.md
+    package.json -- helper scripts
+    siteConfig.js -- core site configuration
+    sidebars.json -- sidebar sections and pages
+    blog/ -- we don't use this yet but might want to for the changelog. See [this](https://docusaurus.io/docs/en/adding-blog).
     core/
-    node_modules/
-    pages/
+      Footer.js -- a customizable footer for the website. Required by docusaurus
+    pages/ -- additional docs pages not currently linked from anywhere
+      en/
+        help.js -- help page
+        users.js -- users of this project page
     static/
       css/
       img/
-    package.json
-    sidebar.json
-    siteConfig.js
+    node_modules/
 ```
 
 # Editing Content
@@ -66,22 +82,6 @@ Edit me...
 ```
 
 For more information about docs, click [here](https://docusaurus.io/docs/en/navigation)
-
-## Editing an existing blog post
-
-Edit blog posts by navigating to `website/blog` and editing the corresponding post:
-
-`website/blog/post-to-be-edited.md`
-```markdown
----
-id: post-needs-edit
-title: This Blog Post Needs To Be Edited
----
-
-Edit me...
-```
-
-For more information about blog posts, click [here](https://docusaurus.io/docs/en/adding-blog)
 
 # Adding Content
 
@@ -115,36 +115,6 @@ My new content here..
 ```
 
 For more information about adding new docs, click [here](https://docusaurus.io/docs/en/navigation)
-
-## Adding a new blog post
-
-1. Make sure there is a header link to your blog in `website/siteConfig.js`:
-
-`website/siteConfig.js`
-```javascript
-headerLinks: [
-    ...
-    { blog: true, label: 'Blog' },
-    ...
-]
-```
-
-2. Create the blog post with the format `YYYY-MM-DD-My-Blog-Post-Title.md` in `website/blog`:
-
-`website/blog/2018-05-21-New-Blog-Post.md`
-
-```markdown
----
-author: Frank Li
-authorURL: https://twitter.com/foobarbaz
-authorFBID: 503283835
-title: New Blog Post
----
-
-Lorem Ipsum...
-```
-
-For more information about blog posts, click [here](https://docusaurus.io/docs/en/adding-blog)
 
 ## Adding items to your site's top navigation bar
 
@@ -188,6 +158,13 @@ For more information about the navigation bar, click [here](https://docusaurus.i
 
 For more information about custom pages, click [here](https://docusaurus.io/docs/en/custom-pages).
 
-# Full Documentation
+## Publishing Changes
 
-Full documentation can be found on the [website](https://docusaurus.io/).
+On the commandline (remember to replace `[YOUR USERNAME]` with your github username):
+
+```sh
+$ cd website
+$ GIT_USER=[YOUR USERNAME] CURRENT_BRANCH=src yarn publish-gh-pages
+```
+
+If you're using ssh instead of https, also add the prefix `USE_SSH=true`.
