@@ -1,7 +1,27 @@
 {
   "docs": {
-    "Using Your Dark Account": ["getting-started","dark-backend-components","trace-driven-development","error-handling","refactoring-and-editing","functional-aspects","static-assets","keyboard-mapping","custom-domains"],
-    "Tutorials": ["getting-started-tutorial","react-spa-tutorial","slack-app-tutorial","twilio-app-tutorial"],
-    "Reference Materials": ["airtable","freshdesk","sample-canvases","changelog"]
+    "Using Your Dark Account": [
+      "getting-started",
+      "dark-backend-components",
+      "trace-driven-development",
+      "error-handling",
+      "refactoring-and-editing",
+      "functional-aspects",
+      "static-assets",
+      "keyboard-mapping",
+      "custom-domains"
+    ],
+    "Tutorials": [
+      "getting-started-tutorial",
+      "react-spa-tutorial",
+      "slack-app-tutorial",
+      "twilio-app-tutorial"
+    ],
+    "Reference Materials": [
+      "airtable",
+      "freshdesk",
+      "sample-canvases",
+      "changelog"
+    ]
   }
 }

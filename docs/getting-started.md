@@ -11,7 +11,7 @@ If you need support, the [Dark Community Slack](https://darklang.com/slack-invit
 Dark is a radically different approach to software development. You can access your account at https://darklang.com/a/USERNAME.
 
 1. Dark uses a set of structural backend components (API, Workers, Scheduled Jobs/Cron, internal tools, datastores). [Read this first](dark-backend-components.md).
-2. Dark requires you to develop from incoming requests/traces (using your traces, live values, play buttons, and return values). [Read this second.](trade-driven-development)
+2. Dark requires you to develop from incoming requests/traces (using your traces, live values, play buttons, and return values). [Read this second.](trace-driven-development)
 3. Working safely in Dark relies on feature flags (Coming soon).
 
 ## Hello World:
