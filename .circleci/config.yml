@@ -20,7 +20,7 @@ jobs:
           command: |
             git config --global user.email "jceipek@users.noreply.github.com"
             git config --global user.name "Julian Ceipek"
-            cd website && yarn install && GIT_USER=jceipek USE_SSH=true yarn run publish-gh-pages
+            cd website && yarn install && GIT_USER=jceipek USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy via CircleCI" yarn run publish-gh-pages
 
 workflows:
   version: 2
