@@ -1,8 +1,8 @@
 aliases:
- - &filter-only-src
+ - &filter-only-master
    branches:
      only:
-       - src
+       - master
 
 version: 2
 jobs:
@@ -13,19 +13,20 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
+            # repo-specific deploy key
             - "3a:4a:09:a1:7e:64:aa:13:cc:31:3e:c9:51:46:c7:ed"
       - checkout
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git config --global user.email "jceipek@users.noreply.github.com"
-            git config --global user.name "Julian Ceipek"
-            cd website && yarn install && GIT_USER=jceipek USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy via CircleCI" yarn run publish-gh-pages
+            git config --global user.email "ops@darklang.com"
+            git config --global user.name "Dark Ops"
+            cd website && yarn install USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" yarn run publish-gh-pages
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - deploy-website:
-         # Only run on direct commits to src
-         filters: *filter-only-src
+         # Only run on direct commits to master
+         filters: *filter-only-master
