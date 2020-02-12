@@ -30,17 +30,17 @@ $ yarn start
 
 There are two main branches:
 
-* src
+* master
 * gh-pages
 
-The website is hosted from `gh-pages`, but everything there is auto-generated from `src`.
-When we want to make changes, we create a new branch off `src` with the format `username/my-change` and make as many commits as we need to.
-Then, we create a new pull request from that branch with `src` as the base. When the pull request is merged, CircleCI will automatically
-deploy the changes from `src` to the website (it runs a script against the source files on `src` and deploys the generated website to `gh-pages`).
+The website is hosted from `gh-pages`, but everything there is auto-generated from `master`.
+When we want to make changes, we create a new branch off `master` with the format `username/my-change` and make as many commits as we need to.
+Then, we create a new pull request from that branch with `master` as the base. When the pull request is merged, CircleCI will automatically
+deploy the changes from `master` to the website (it runs a script against the source files on `master` and deploys the generated website to `gh-pages`).
 
 ### Directory Structure
 
-The project file structure in `src` is
+The project file structure in `master` is
 
 ```
 docs/
@@ -167,8 +167,8 @@ For more information about custom pages, click [here](https://docusaurus.io/docs
 # How CI Auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration.
-It watches for commits/merges into the `src` branch, runs a script to generate the contents of
-`gh-pages`, and uses an SSH deploy key to push `gh-pages` changes to github.
+It watches for commits/merges into the `master` branch, runs a script to generate the contents of
+`gh-pages`, and pushes `gh-pages` to github.
 
 # Publishing Changes Manually
 
@@ -178,7 +178,7 @@ On the commandline (remember to replace `<YOUR USERNAME>` with your github usern
 
 ```sh
 $ cd website
-$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=src yarn publish-gh-pages
+$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=master yarn publish-gh-pages
 ```
 
 If you're using ssh instead of https, also add the prefix `USE_SSH=true`.
