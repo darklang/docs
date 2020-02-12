@@ -16,7 +16,7 @@ When you open Dark, you'll be able to access any canvas in your username by open
 
 The canvas allows you to create each major component in Dark from the sidebar, or from the omnibox (click anywhere on the screen or hit cmd-k).
 
-# You first API Endpoint (HTTP GET)
+# Your first API Endpoint (HTTP GET)
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
