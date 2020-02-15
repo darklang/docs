@@ -70,7 +70,7 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 The expression automatically creates blanks for the four parameters that HttpClient::post takes, and when those are complete has a play button (grey triangle) that will allow you to run the expression from within the editor.
 
-5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the get, our endpoints live at https://username-gettingstarted.builtwithdark.com, enter a string like "https://username-gettingstarted.builtwithdark.com/test".
+5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like "https://USERNAME-gettingstarted.builtwithdark.com/test".
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
