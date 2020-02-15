@@ -70,11 +70,11 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 The expression automatically creates blanks for the four parameters that HttpClient::post takes, and when those are complete has a play button (grey triangle) that will allow you to run the expression from within the editor.
 
-5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like "https://USERNAME-gettingstarted.builtwithdark.com/test".
+5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`wwwwwwwwww.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
-6. Now we need to add the body, query, and headers. Add a {test:"test1"} for the body, empty object for the query, and json content type for the header. The editor will support you:
+6. Now we need to add the body, query, and headers. Add `{test:"test1"}` for the body, empty object for the query, and json content type for the header. The editor will support you:ww
 
 - For the body type {, hit enter, then add the key and the value.
 - For the query type {
