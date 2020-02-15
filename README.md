@@ -164,6 +164,12 @@ For more information about the navigation bar, click [here](https://docusaurus.i
 
 For more information about custom pages, click [here](https://docusaurus.io/docs/en/custom-pages).
 
+## Checking formatting
+
+We run some tools to ensure that the docs are consistently formatted and to
+find common errors. `markdownlint` is run automatically in CI - you can run it
+locally as `yarn run lint`.
+
 # How CI Auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration.
