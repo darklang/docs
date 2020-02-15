@@ -20,7 +20,7 @@ The canvas allows you to create each major component in Dark from the sidebar, o
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
-1. Create a new HTTP endpoint from the omnibox or side bar.
+1. Create a new HTTP endpoint from the omnibox or sidebar.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
 
@@ -32,7 +32,7 @@ The canvas allows you to create each major component in Dark from the sidebar, o
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png)
 
-This results in an API that has the return value of 4. Click the hamburger in the upper right and select "open in new tab). Then, you see your API running in production.
+This results in an API that has the return value of 4. Click the hamburger in the upper right and select "open in new tab". Then, you see your API running in production.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
 
@@ -41,7 +41,7 @@ This results in an API that has the return value of 4. Click the hamburger in th
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
 
 - The "9" at the bottom shows you the return value for the handler (what your API will now return if you open it in the browser).
-- The "5" on the left is showing the result of the expression where the cursor currently is (in this case, 5). This isn't very useful when it's an integer, but if it's a variable it will show yout he result of the variable.
+- The "5" on the left is showing the result of the expression where the cursor currently is (in this case, 5). This isn't very useful when it's an integer, but if it's a variable it will show you the result of the variable.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
 
@@ -70,7 +70,7 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 The expression automatically creates blanks for the four parameters that HttpClient::post takes, and when those are complete has a play button (grey triangle) that will allow you to run the expression from within the editor.
 
-5. Let's call a new endpoint for the application we're developing. As we saw from the get, our endpoints live at https://username-gettingstarted.builtwithdark.com. 
+5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the get, our endpoints live at https://username-gettingstarted.builtwithdark.com, enter a string like "https://username-gettingstarted.builtwithdark.com/test". 
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
@@ -90,7 +90,7 @@ The expression automatically creates blanks for the four parameters that HttpCli
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
 
-9. Since we called it, the endpoint also appears in the 404 section on the side bar.
+9. Since we called it, the endpoint also appears in the 404 section on the sidebar.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
@@ -98,7 +98,7 @@ Congratulations! You've used your first REPL and written an HTTPClient expressio
 
 # Your second API endpoint & first Data Store
 
-Concepts: traces, live values, datastores
+We can use the trace of that HTTP request to build the endpoint. This is Trace Driven Development.
 
 1. Hit the + button in the side bar to create the HTTP endpoint. The verb (POST) and route (/test) will be set for you.
 
@@ -108,7 +108,7 @@ Concepts: traces, live values, datastores
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
 
-3. Let's work with the request directly and save the incoming body to a record by typing "let data = request.body," again, the autocomplete will assist with the fieldnames.
+3. Let's work with the request directly and save the incoming body to a record by typing `let data = request.body` again. The autocomplete will assist with the fieldnames.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
@@ -120,7 +120,7 @@ In this case, we want db::set, which takes three parameters.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png)
 
-5. Now let's make our datastore. From the side bar or the omnibox, create a new datastore called "requests" and give it two field names.
+5. Now let's make our datastore. From the sidebar or the omnibox, create a new datastore called "requests" and give it two field names.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png)
 
