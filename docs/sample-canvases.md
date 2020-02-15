@@ -52,7 +52,7 @@ For a full Slackbot tutorial, click [here](https://www.notion.so/darklang/A-Guid
 
 [textreminder](https://darklang.com/a/sample-textreminder) - get texted reminders
 
-For a full Twilio tutorial, click [here](https://www.notion.so/darklang/A-Guide-For-Building-a-Twilio-App-in-Dark-ab766f97925c4cc2861a7f93c4903e1d). 
+For a full Twilio tutorial, click [here](https://www.notion.so/darklang/A-Guide-For-Building-a-Twilio-App-in-Dark-ab766f97925c4cc2861a7f93c4903e1d).
 
 ## Misc. Integrations
 
@@ -70,7 +70,7 @@ For a full Twilio tutorial, click [here](https://www.notion.so/darklang/A-Guide-
 
 [sendgrid](https://darklang.com/a/sample-sendgrid) - sending emails with the Sendgrid API
 
-[oauth](https://darklang.com/a/sample-oauth) - using Gmail's OAuth flow 
+[oauth](https://darklang.com/a/sample-oauth) - using Gmail's OAuth flow
 
 ## Full Sample Projects
 

@@ -26,9 +26,9 @@ The application backend will have an API, data storage, and asynchronous backgro
 
 Yours will live at [https://USERNAME-signin.builtwithdark.com](https://username-signin.builtwithdark.com/); to work on it go to [https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin).
 
-### Quick start:
+### Quick start
 
-We’ll need some setup on your machine to upload the react app. Run these commands on OSX to install. To read a longer version explaining what each of these commands do, go here: 
+We’ll need some setup on your machine to upload the react app. Run these commands on OSX to install. To read a longer version explaining what each of these commands do, go here:
 
 [Hosting Static Assets in Dark](static-assets.md)
 
@@ -59,7 +59,7 @@ Once the route is created, we can specify it’s a “GET” method, and start w
 
 ![assets/reactspa/image21.png](assets/reactspa/image21.png)
 
-The finished API will look like this, and you can open it from the hamburger on the right (the tutorial copy is at [https://sample-signin.builtwithdark.com/](https://sample-signin.builtwithdark.com/), and your copy is at https://username-signin.builtwithdark.com/).
+The finished API will look like this, and you can open it from the hamburger on the right (the tutorial copy is at [https://sample-signin.builtwithdark.com/](https://sample-signin.builtwithdark.com/), and your copy is at USERNAME-signin.builtwithdark.com/).
 
 ![assets/reactspa/image4.png](assets/reactspa/image4.png)
 
@@ -169,8 +169,6 @@ For this section you will need a Twilio SID & Token and/or a Slack Token, depend
 #### Twilio
 
 To create a new [Twilio account](https://twilio.com/), the SID & Token are in your console on the right hand side.
-
-#### 
 
 ![assets/reactspa/image11.png](assets/reactspa/image11.png)
 

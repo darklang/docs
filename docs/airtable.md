@@ -50,7 +50,7 @@ This guide will walk you through how you can use Airtable’s API to add or upda
 
 ![assets/airtable/image7.png](assets/airtable/image7.png)
 
-# Troubleshooting
+## Troubleshooting
 
 - Field/column names in Airtable are case sensitive, so make sure your cases match everywhere.
 - Airtable will send over completely empty entries, so if it looks like you’re getting too much data, verify that you don’t have an extra row in your table, like this one:

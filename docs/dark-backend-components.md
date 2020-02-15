@@ -130,6 +130,6 @@ Users have a pets field, which is a list of strings. The keys for the pets are a
 
 ## Deleted
 
-If you delete a handler, we save that code for you in the Deleted section of your canvas. Everything you delete is sorted by type, and will remain in that section until you remove it. 
+If you delete a handler, we save that code for you in the Deleted section of your canvas. Everything you delete is sorted by type, and will remain in that section until you remove it.
 
 ![assets/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png](assets/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png)

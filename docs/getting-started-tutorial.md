@@ -4,19 +4,19 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-# Tutorial: Getting Started
+## Tutorial: Getting Started
 
 Hello!
 
 Welcome to Dark. We highly recommend trying this getting started project to setup an API + data storage first - it will get you through all the key concepts including Trace Driven Development, Live Values, and the Interactive Editor.
 
-# Canvas
+## Canvas
 
-When you open Dark, you'll be able to access any canvas in your username by opening it in the browser (https://darklang.com/a/username-canvasname). In this case, use https://darklang.com/a/username-gettingstarted. Each handler we'll build is replicated in [https://darklang.com/a/sample-gettingstarted](https://darklang.com/a/sample-gettingstarted), though we recommend writing the code yourself instead of copy pasting.
+When you open Dark, you'll be able to access any canvas in your username by opening it in the browser (darklang.com/a/USERNAME-CANVASNAME). In this case, use darklang.com/a/USERNAME-gettingstarted. Each handler we'll build is replicated in [https://darklang.com/a/sample-gettingstarted](https://darklang.com/a/sample-gettingstarted), though we recommend writing the code yourself instead of copy pasting.
 
 The canvas allows you to create each major component in Dark from the sidebar, or from the omnibox (click anywhere on the screen or hit cmd-k).
 
-# Your first API Endpoint (HTTP GET)
+## Your first API Endpoint (HTTP GET)
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
@@ -49,12 +49,12 @@ This results in an API that has the return value of 4. Click the hamburger in th
 
 Congratulations! You've shipped your first Dark API endpoint.
 
-# Your first REPL
+## Your first REPL
 
 Concepts: REPLs, HttpClient Library, Play Buttons
 
 1. Create a new REPL from the sidebar or the omnibox. This lets you write any code that you'd like to use for development.
-2. Type "httpclient" in the REPL. 
+2. Type "httpclient" in the REPL.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
@@ -70,11 +70,11 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 The expression automatically creates blanks for the four parameters that HttpClient::post takes, and when those are complete has a play button (grey triangle) that will allow you to run the expression from within the editor.
 
-5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the get, our endpoints live at https://username-gettingstarted.builtwithdark.com, enter a string like "https://username-gettingstarted.builtwithdark.com/test". 
+5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`wwwwwwwwww.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
-6. Now we need to add the body, query, and headers. Add a {test:"test1"} for the body, empty object for the query, and json content type for the header. The editor will support you: 
+6. Now we need to add the body, query, and headers. Add `{test:"test1"}` for the body, empty object for the query, and json content type for the header. The editor will support you:ww
 
 - For the body type {, hit enter, then add the key and the value.
 - For the query type {
@@ -96,7 +96,7 @@ The expression automatically creates blanks for the four parameters that HttpCli
 
 Congratulations! You've used your first REPL and written an HTTPClient expression.
 
-# Your second API endpoint & first Data Store
+## Your second API endpoint & first Data Store
 
 We can use the trace of that HTTP request to build the endpoint. This is Trace Driven Development.
 
@@ -124,21 +124,21 @@ In this case, we want db::set, which takes three parameters.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png)
 
-All datastores in Dark are key-value based and use keys as unique identifiers for the record. For instance, a possible set of records with keys in the above datastore would look like this: 
+All datastores in Dark are key-value based and use keys as unique identifiers for the record. For instance, a possible set of records with keys in the above datastore would look like this:
 
     {
-    key1: {
-    				data: {
-    							test: "test2"
-    							},
-    				time: <Date: 2020-02-11T18:54:39Z>
-    			},
-    key2: {
-    				data: {
-    							test: "test1"
-    							},
-    				time: <Date: 2020-02-11T18:54:43Z>
-    			}
+      key1: {
+              data: {
+                      test: "test2"
+                    },
+              time: <Date: 2020-02-11T18:54:39Z>
+            },
+      key2: {
+              data: {
+                      test: "test1"
+                    },
+              time: <Date: 2020-02-11T18:54:43Z>
+            }
     }
 
 6. Now that we have a datastore, let's finish our post endpoint.
@@ -147,7 +147,7 @@ The first parameter is the record we're inserting. This will match our schema of
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png)
 
-7. We'll need a unique key for each object. In this case, by typing db, we get the built in db::GenerateKey function. 
+7. We'll need a unique key for each object. In this case, by typing db, we get the built in db::GenerateKey function.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png)
 

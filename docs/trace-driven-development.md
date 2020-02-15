@@ -18,7 +18,7 @@ Send requests to Dark *before writing code*. There are several ways to do this:
 
 #### GET Requests
 
-- Open your canvas (https://darklang.com/a/username-canvasname).
+- Open your canvas (darklang.com/a/USERNAME-CANVASNAME).
 - In another tab, visit username-canvasname.builtwithdark.com/test (ex: [https://sample-introtodark.builtwithdark.com/test](https://sample-introtodark.builtwithdark.com/test)).
 - Go back to Dark and check in the 404 section.
 
@@ -36,7 +36,7 @@ One current limitation is that you can only write code for existing traces (tryi
 
 #### POST Requests
 
-Open terminal and curl: 
+Open terminal and curl:
 
     curl -X POST -H 'Content-Type: application/json' https://username-canvasname.builtwithdark.com/test2 -d '{"test":"test data","info":"test info"}'
 
@@ -80,7 +80,7 @@ When you play **DB::set**, you can see the record that was inserted:
 
 ![assets/trace/image6.png](assets/trace/image6.png)
 
-#### Replay Entire Trace Button
+### Replay Entire Trace Button
 
 If you wish to replay the entire trace, you can use the “replay” button next to the hamburger menu in the upper right of the handler.
 
