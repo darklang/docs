@@ -17,17 +17,16 @@ Dark uses “implicit returns” (somewhat similar to Ruby, Coffeescript, Haskel
 Because of the implicit returns model, you write code differently. In JS you might write:
 
     if (myCondition) {
-    	s = 42;
+      s = 42;
     } else {
-    	s = 56;
+      s = 56;
     }
 
 In Dark, you’ll instead write:
 
     let s = if myCondition
-    				then 42
-    				else
-    					56
+            then 42
+            else 56
 
 You can see some examples are shown here: [https://darklang.com/a/sample-returns](https://darklang.com/a/sample-returns)
 

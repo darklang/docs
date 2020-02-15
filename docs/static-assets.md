@@ -130,10 +130,10 @@ Instead of calling serveLatest, you can call serve, and use the deploy hash from
 
     ./latest/dark-cli-apple
     error: The following required arguments were not provided:
-    	<paths>
-    	--canvas <canvas>
-    	--password <password>
-    	--user <user>
-    
+      <paths>
+      --canvas <canvas>
+      --password <password>
+      --user <user>
+
     USAGE:
     dark-cli-apple [FLAGS] <paths> --canvas <canvas> --password <password> --user <user>

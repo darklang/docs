@@ -127,18 +127,18 @@ In this case, we want db::set, which takes three parameters.
 All datastores in Dark are key-value based and use keys as unique identifiers for the record. For instance, a possible set of records with keys in the above datastore would look like this:
 
     {
-    key1: {
-    				data: {
-    							test: "test2"
-    							},
-    				time: <Date: 2020-02-11T18:54:39Z>
-    			},
-    key2: {
-    				data: {
-    							test: "test1"
-    							},
-    				time: <Date: 2020-02-11T18:54:43Z>
-    			}
+      key1: {
+              data: {
+                      test: "test2"
+                    },
+              time: <Date: 2020-02-11T18:54:39Z>
+            },
+      key2: {
+              data: {
+                      test: "test1"
+                    },
+              time: <Date: 2020-02-11T18:54:43Z>
+            }
     }
 
 6. Now that we have a datastore, let's finish our post endpoint.
