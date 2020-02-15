@@ -103,30 +103,30 @@ We’ve shown you how to deploy new assets that appear immediately. However, you
 
 Instead of calling serveLatest, you can call serve, and use the deploy hash from your command line.
 
-#### Reference
+## Reference
 
-**Functions:**
+### Functions
 
-- urlFor <deployHash : String> <file : String> -> String
+- `urlFor <deployHash : String> <file : String> -> String`
     - Returns a url to a file for the current canvas and the given deployHash:
-    - StaticAssets::urlFor “o6vs1aqcbx” “foo.html” -> “https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html”
-- urlForLatest <deployHash : String> <file : String> -> String
+    - `StaticAssets::urlFor "o6vs1aqcbx" "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
+- `urlForLatest <deployHash : String> <file : String> -> String`
     - Returns a url to a file for the current canvas and the latest deploy:
-    - StaticAssets::urlForLatest “foo.html” -> “[https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html](https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html)”
-- fetch <deployHash : String> <file : String> -> String
+    - `StaticAssets::urlForLatest "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
+- `fetch <deployHash : String> <file : String> -> String`
     - Returns the contents of a file for the current canvas and the given deployHash:
-    - StaticAssets::fetch “o6vs1aqcbx” “foo.html” -> “<html><body>Hello, world!</body></html>”
-- fetchLatest <deployHash : String> <file : String> -> String
+    - `StaticAssets::fetch "o6vs1aqcbx" "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
+- `fetchLatest <deployHash : String> <file : String> -> String`
     - Returns a url to a file for the current canvas and the latest deploy:
-    - StaticAssets::fetchLatest “foo.html” -> “<html><body>Hello, world!</body></html>”
-- serve <deployHash : String> <file : String> -> String
+    - `StaticAssets::fetchLatest "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
+- `serve <deployHash : String> <file : String> -> String`
     - Returns the contents of a file for the current canvas and the given deployHash:
-    - StaticAssets::serve “o6vs1aqcbx” “foo.html” -> responds with the file foo.html and the headers that the static assets CDN provided
-- serveLatest <deployHash : String> <file : String> -> String
+    - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
+- `serveLatest <deployHash : String> <file : String> -> String`
     - Returns a url to a file for the current canvas and the latest deploy:
-    - StaticAssets::fetchLatest “foo.html” -> responds with the file foo.html and the headers that the static assets CDN provided
+    - `StaticAssets::fetchLatest "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
 
-#### Command line reference
+### Command line reference
 
     ./latest/dark-cli-apple
     error: The following required arguments were not provided:

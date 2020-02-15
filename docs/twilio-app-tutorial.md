@@ -6,7 +6,7 @@ sidebar_label: Building a Twilio App
 
 Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces.
 
-You can access you canvas at darklang.com/a/USERNAME (or USERNAME-CANVASNAME). For this project we recommend https://darklang.com/a/USERNAME-twilioreminder.
+You can access you canvas at darklang.com/a/USERNAME (or USERNAME-CANVASNAME). For this project we recommend darklang.com/a/USERNAME-twilioreminder.
 
 We recommend building a hello world API endpoint to get a feel for Dark, as follows:
 

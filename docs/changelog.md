@@ -166,7 +166,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
 
 - We asked y'all to not make HTTPClient calls to your Dark canvas from REPLs. We've made some infrastructural changes that fix the issue on our end, so you should feel free to do that now. This is useful if you want to create a HTTP trace without leaving Dark. (Note: please don't make HTTPClient calls ***to Dark*** from HTTP handlers)
 
-# Week of 1/10/2020
+## Week of 1/10/2020
 
 - Fixed a bunch of issues around entering non ASCII characters, especially from non-US keyboards:
     - accented 'o' and 'a' characters were not being recognized from Swedish keyboard layouts.

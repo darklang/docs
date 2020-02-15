@@ -8,7 +8,7 @@ Watch a demo video of a Slack app: [https://vimeo.com/380770154](https://vimeo.c
 
 #### Getting started
 
-Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces. You can access your accuont from https://darklang.com/a/USERNAME-CANVASNAME. For this project we recommend https://darklang.com/a/USERNAME-slackapp.
+Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces. You can access your accuont from darklang.com/a/USERNAME-CANVASNAME. For this project we recommend darklang.com/a/USERNAME-slackapp.
 
 We recommend building a hello world API endpoint to get a feel for Dark, as follows:
 
@@ -26,7 +26,7 @@ In order to install the app to your workspace, you’ll need to have the proper 
 
 In order to install your app to your workspace, or distribute it elsewhere, your app will need to support at least one feature or functionality.
 
-Add a /test slash command to start, and point the request URL at https://username-canvasname.builtwithdark.com/test:
+Add a /test slash command to start, and point the request URL at USERNAME-CANVASNAME.builtwithdark.com/test:
 
 ![assets/slack/mage17.png](assets/slack/image17.png)
 
@@ -68,7 +68,7 @@ Before we send it, you’ll need your client_id and client_secret, which you can
 
 Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).
 
-If you receive an oauth_authorization_url_mismatch error, modify the URL to https://slack.com/api/oauth.v2.access
+If you receive an `oauth_authorization_url_mismatch` error, modify the URL to `https://slack.com/api/oauth.v2.access`.
 
 This is the end result, but you’ll see your client_id and client_secret instead of placeholders:
 

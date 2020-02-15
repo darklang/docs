@@ -6,15 +6,15 @@ sidebar_label: Getting Started
 
 If you need support, the [Dark Community Slack](https://darklang.com/slack-invite) is the best place for front-line support. We’re very responsive during the day, and often responsive at all hours. Depending on the issue, we may need you to use a workaround. If you have an urgent issue you can call Ellen (248-202-7698) or Paul (415-341-2432).
 
-## **README**
+## README
 
-Dark is a radically different approach to software development. You can access your account at https://darklang.com/a/USERNAME.
+Dark is a radically different approach to software development. You can access your account at darklang.com/a/USERNAME.
 
 1. Dark uses a set of structural backend components (API, Workers, Scheduled Jobs/Cron, internal tools, datastores). [Read this first](dark-backend-components.md).
 2. Dark requires you to develop from incoming requests/traces (using your traces, live values, play buttons, and return values). [Read this second.](trace-driven-development)
 3. Working safely in Dark relies on feature flags (Coming soon).
 
-## Hello World:
+## Hello World
 
 ![Hello World](assets/helloworld.gif)
 
