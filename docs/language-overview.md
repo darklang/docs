@@ -37,17 +37,19 @@ Dark has some standard basic types: `int`, `string`, `boolean`, `float`, `list`,
 We support typical functional types: `Option` and `Result`.
 
 Currently, Dark has a `null` type to support JSON values directly. In the
-future, we intend to deprecate `null` and replace it with `Options`. 
+future, we intend to deprecate `null` and replace it with `Options`.
 
 ## Built-in types
 
 ### Integers
-Integers are signed 63-bit integer. 
+
+Integers are signed 63-bit integer.
 
 In the future, Dark will use infinite-precision integers. We also intend to add
 unsigned 8-bit integers and bit-manipulation functions.
 
 ### Floats
+
 Floats are double-precision 64-bit floating-point values (IEEE 754).
 
 We intend for numberic operations to return Results, to handle situations which
@@ -56,8 +58,8 @@ are undefined on the datatype. For example, integer division would return
 instead would return a NaN return `Result Error Float`. See
 [Error Handling in Dark](error-handling) for more.
 
-
 ### Booleans
+
 Booleans are true or false.
 
 ### Strings
@@ -87,27 +89,25 @@ and performance for whatever you use them for.
 Lists should be used for all “I want a sequence of things” situations,
 including iterating across them, random access, push/pop, etc.
 
-```
+```elm
 let x = [8]
 let y = x ++ [6]
 y
 ```
 
-```
+```elm
 [8, 6]
 ```
 
-
-
-
 ### Binary
-Non-unicode sequences of bytes are supported as the `Binary` type. 
+
+Non-unicode sequences of bytes are supported as the `Binary` type.
 
 ### Options
 
 Instead of allowing all values to potentially be null, as in most imperative languages, Dark uses an Option type:
 
-```
+```elm
 Option a = Just a | Nothing
 ```
 
@@ -117,9 +117,10 @@ have enough type-system support for that yet.
 Functions which return `Option` trigger the [Errorrail](error-handling).
 
 ### Results
+
 Any functions which can have an error should use Results. We use results for Int division, Float operations, HTTP operations, etc.
 
-```
+```elm
 Result a = Ok a | Err Error
 ```
 
@@ -151,7 +152,7 @@ output.
 
 Dark currently has limited support for user-defined types. Currently, we
 support inline definition of records, but do not support defining record types
-explicitly. 
+explicitly.
 
 Record types are actually implemented under the hood, and we intend to use them
 to support typed Datastores, API contracts, and static types.
@@ -167,14 +168,13 @@ All types in Dark will be versioned.
 
 In the future, we intend to support typeclasses or traits to allow ad-hoc polymorphism.
 
-
 ### Records
 
 Records are a set of keys and values. Each key name and type are defined, and
 the types do not have to be the same.
 
-```
-let x = { name: "Robin" 
+```elm
+let x = { name: "Robin"
           age: 32
           gender: "Other"
         }
@@ -189,7 +189,6 @@ Note that at the moment, Dicts and Records share the same implementation and
 can be accessed and modified in the same way. We intend to break these apart in
 the future.
 
-
 ### Enums
 
 Enums are a set of “constructors”, each of which has a set of typed arguments.
@@ -197,7 +196,7 @@ Enums are a set of “constructors”, each of which has a set of typed argument
 Currently, Dark only supports `Option` and `Result` built-in enums. In the
 future, we will support user-defined enums.
 
-```
+```elm
 type Person = Human {age: Int, name: String, itin: String }
             | Corporation {age: Int, name: String, ein: String }
             | Puppers Int String
@@ -206,7 +205,6 @@ type Person = Human {age: Int, name: String, itin: String }
 Enums can be made by building on existing types, especially records and other enums.
 
 Enums are nominally typed. (Two enums with the same fieldnames and types are not equivalent).
-
 
 ## Types unique to Dark
 
@@ -241,17 +239,16 @@ In the future, Dark will allow you to specify types of sensitive values,
 preventing them from being stored in logs, and allowing a team to limit who has
 access to these values in the Dark editor.
 
-
-## Expressions 
+## Expressions
 
 All Dark language constructs are expressions. That means that they evaluate to
 a value, rather than being used to set state.
 
-
 ### Let
+
 Lets creates a name with an immutable value, and a scope in which that is defined.
 
-``` 
+```elm
 let name = "Stella"
 name
 ```
@@ -261,7 +258,7 @@ vary: once they are defined, they never have any other value.
 
 #### Variable Scope
 
-```
+```elm
 if age > 18
 then
   let height = 170
@@ -287,12 +284,11 @@ We support `&&` and `||` - they do not currently short-circuit but we intend the
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
 
-
 ### Match expressions
 
 Dark supports pattern matching, in particular, matching on `Enum`s.
 
-```
+```elm
 let introduction =
   match name with
   | Nothing -> "Hi!"
@@ -302,13 +298,11 @@ let introduction =
 We expect to allow guards in the future. We also hope to add an `if-let`
 construct to support `if` statements that destructure from Enums.
 
-
-
 ### Functions
 
 Functions must have type declarations for inputs. We intend to support types on return values soon.
 
-```
+```elm
 fetch url name =
   { url: url
   , name: name
@@ -324,17 +318,16 @@ Functions do not live in the “Canvas”, but rather are a little bit ethereal.
 In the future, we intend to support partial application/currying, and
 default/optional parameters.
 
-
 ### Lambdas
 
 Lambdas are anonymous functions. They are used to pass to functions which take
 `Block`s, typically used for iteration.
 
-```
-List::map [5, 10, 11] \var -> var + 2 
+```elm
+List::map [5, 10, 11] \var -> var + 2
 ```
 
-```
+```elm
 [7, 12, 13]
 ```
 
@@ -348,16 +341,15 @@ There is a syntax for shorthands for creating lambda’s to call constructors:
 `ConstructorName`. This can be included in a pipe or used as a first class
 function.
 
-
 ### Pipelining
 
 Dark programs are intended to be written, as much as possible, as pipelines of data:
 
-```
+```elm
 user
-|> getFriends 
-|> List.map (\f -> (f, getFriends f)) 
-|> List.filter (\f -> f.name == "Kevin Bacon") 
+|> getFriends
+|> List.map (\f -> (f, getFriends f))
+|> List.filter (\f -> f.name == "Kevin Bacon")
 |> (=) []
 ```
 
@@ -365,7 +357,7 @@ user
 
 Feature flags are similar to `if`s:
 
-```
+```elm
 flag myCondition
 then 5
 else 6
@@ -377,24 +369,25 @@ around `incomplete`s, allowing you to take working code and edit the feature fla
 without disturbing existing users. In an `if` statement, neither branch would
 execute.
 
-
 ## Planned language features
 
 ### Tuples
+
 Dark intends to support tuples: lists of defined length supporting heterogeneous types.
 
-```
+```elm
 x = (1, "string", { name: "Sam" })
 ```
 
 ### Sets
+
 We intend for Dark to support Sets: unordered collections of a single type.
 
-
 ### Unit
+
 We intend to support the unit type, which indicates something that have no type, such as an imperative function that doesn't return anything.
 
-```
+```elm
 x = ()
 ```
 
@@ -404,5 +397,3 @@ It is intended that you write the program as you think it, not to shoehorn your
 program into a functional style. As such, Dark is planning to add a number of
 imperative concepts to allow you to easily write imperative algorithms,
 including statements, refs, and mutable data structures.
-
-
