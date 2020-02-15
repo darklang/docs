@@ -112,7 +112,7 @@ Option a = Just a | Nothing
 ```
 
 This is intended to convert effortlessly to null in JSON, but we don't quite
-have enough type-system support for that yet.
+have enough of the type system to remove it.
 
 Functions which return `Option` trigger the [Errorrail](error-handling).
 
@@ -141,7 +141,8 @@ Dark supports UUIDs directly.
 ### Null
 
 As a temporary hack, Dark also supports `null`. This allows us handle JSON
-while we build out enough type-system support to make get rid of `null`.
+while we build out enough type-system support to allow them to be replaced by
+`Option`.
 
 Null is mostly useful for comparing against incoming JSON and results of
 HTTPClient calls. When returning JSON or making HTTPClient calls, you can use
@@ -224,7 +225,7 @@ also incomplete.
 Incompletes are never returned to end users, and cannot be stored in a
 datastore. Returning an incomplete via a HTTP handler causes a 500 error.
 
-### ErrorRail
+### Error rail
 
 You might occasionally see a value marked `<ErrorRail>`, this is used to indicate that a value is on the Error Rail. See [railway oriented programming for more details]
 
@@ -274,7 +275,7 @@ below the `if` expression.
 
 See doc on `coding in an expression-based language`.
 
-### Conditionals
+### If
 
 Dark supports if/else statement. The argument to an `if` is a boolean. We
 currently support `truthy` types but intend to remove that ability.
@@ -284,7 +285,7 @@ We support `&&` and `||` - they do not currently short-circuit but we intend the
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
 
-### Match expressions
+### Match
 
 Dark supports pattern matching, in particular, matching on `Enum`s.
 
@@ -318,7 +319,7 @@ Functions do not live in the “Canvas”, but rather are a little bit ethereal.
 In the future, we intend to support partial application/currying, and
 default/optional parameters.
 
-### Lambdas
+### Lambda
 
 Lambdas are anonymous functions. They are used to pass to functions which take
 `Block`s, typically used for iteration.
