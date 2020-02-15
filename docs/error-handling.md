@@ -26,7 +26,7 @@ When something is incomplete, it will be shown with a red underline. An expressi
 
 In these cases, we provide a link to the source of the incomplete. Click on "click to locate source" and it will take you to the first blank that has propagated until the result you are looking for.
 
-## Type errors:
+## Type errors
 
 When you see "invalid code", it means that your program is complete but has issues (which are almost always type error). The error message should have enough . Carefully read the message to see what's wrong.
 
