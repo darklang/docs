@@ -7,6 +7,35 @@ sidebar_label: Changelog
 
 We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.
 
+## Week of 2/14/2020
+
+- Added a Welcome to Dark modal for new users
+
+    ![assets/changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png](assets/changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png)
+
+- You can now click on the Command Palette
+- Function arguments can now be reordered
+
+![Changelog%20Draft/2020-02-14_13.04.03.gif](assets/changelog/Feb14/2020-02-14_13.04.03.gif)
+
+- You can now delete recursive functions
+- We now show you when a value was not executed in this trace
+
+![Changelog%20Draft/Screen_Shot_2020-02-14_at_1.06.20_PM.png](assets/changelog/Feb14/Screen_Shot_2020-02-14_at_1.06.20_PM.png)
+
+- Live values are now shown in unexecuted `match` branches
+- Fixed a bunch of redirection bugs after log-in
+- Support pasting more JS objects into records
+- Fixed the documentation for `Date::parse` (it returns a `Result`)
+- Fixed a few bugs around autocomplete appearing too little or too much
+- Fixed a carat placement bug in pipes
+- Loaded our font (FiraMono) even if you don't have it installed locally
+- Fixed some issues causing the editor to freeze:
+    - Dragging up to select text
+    - Repeated clicking in a variable
+- Fixed some issues around copying `match`es
+- Added a [Getting Started](getting-started-tutorial.md) tutorial to the documentation
+
 ## Week of 2/07/2020
 
 - You can now reset your password (thanks to a switch to Auth0)
