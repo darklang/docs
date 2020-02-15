@@ -215,7 +215,7 @@ Pipelines are described in much more detail [here](functional-aspects#pipelines)
 
 ## Lambdas for Manipulating Lists and Datastores
 
-Dark doesn't use `while` or `for` loops to transform lists and query datastores. Instead, you use lambdas in conjunction with functions like `List::map` and `DB::query`. Lambdas are anonymous functions of type `Block`. Lambdas start with forward slashes `/` and have a series of comma-delimited named parameters that are scoped to a *body* expression.
+Dark doesn't use `while` or `for` loops to transform lists and query datastores. Instead, you use lambdas in conjunction with functions like `List::map` and `DB::query`. Lambdas are anonymous functions of type `Block`. Lambdas start with backward slashes `\` and have a series of comma-delimited named parameters that are scoped to a *body* expression.
 
 ![Example of a List Map with a Lambda](assets/buildingblocks/lambda/lambda_list_map_example.png)
 
