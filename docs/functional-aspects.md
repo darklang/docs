@@ -16,16 +16,16 @@ Dark uses “implicit returns” (somewhat similar to Ruby, Coffeescript, Haskel
 
 Because of the implicit returns model, you write code differently. In JS you might write:
 
-    if (myCondition) { 
+    if (myCondition) {
     	s = 42;
     } else {
-    	s = 56; 
-    } 
+    	s = 56;
+    }
 
-In Dark, you’ll instead write: 
+In Dark, you’ll instead write:
 
-    let s = if myCondition 
-    				then 42 
+    let s = if myCondition
+    				then 42
     				else
     					56
 
@@ -67,7 +67,7 @@ To start a pipeline, place the caret inside the expression you want to transform
 
 ![assets/functional/image11.png](assets/functional/image11.png)
 
-Then press “shift+enter”: 
+Then press “shift+enter”:
 
 ![assets/functional/mage15.png](assets/functional/image15.png)
 

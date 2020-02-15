@@ -45,4 +45,3 @@ Dark is a radically different approach to software development. You can access y
 - Large handlers cause performance problems.
 - Recursion does not work well yet.
 - Some quirks exist around international keyboards. Please report all instances of this in the Community Slack. In the short-term, you may need to switch to an English keyboard.
-

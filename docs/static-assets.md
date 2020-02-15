@@ -37,11 +37,11 @@ We have a command-line app to allow you to deploy your assets.
 ### Installation
 
 1. Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for OSX, Windows, or Linux.
-2. On OSX or Linux, 
+2. On OSX or Linux,
 
         chmod +x dark-cli-apple
 
-    or 
+    or
 
         chmod +x dark-cli-linux
 
@@ -67,7 +67,7 @@ If using Vue, you likely want to set PUBLIC_PATH instead:
 
     PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 
-Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here: 
+Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:
 
 [vuejs/vue-cli](https://github.com/vuejs/vue-cli/tree/dev/docs/config#publicpath)
 

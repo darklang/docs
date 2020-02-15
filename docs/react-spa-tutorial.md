@@ -28,7 +28,7 @@ Yours will live at [https://USERNAME-signin.builtwithdark.com](https://username-
 
 ### Quick start
 
-We’ll need some setup on your machine to upload the react app. Run these commands on OSX to install. To read a longer version explaining what each of these commands do, go here: 
+We’ll need some setup on your machine to upload the react app. Run these commands on OSX to install. To read a longer version explaining what each of these commands do, go here:
 
 [Hosting Static Assets in Dark](static-assets.md)
 

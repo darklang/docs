@@ -12,7 +12,7 @@ Dark supports unlimited undo/redo in a single element. Undo with `Ctrl-Z`/`Cmd-Z
 
 ### Command Palette
 
-If you’re looking to do something that is not immediately available, chances are it’s in the command palette (accessed by hitting `Alt-X`/`Option-X`). 
+If you’re looking to do something that is not immediately available, chances are it’s in the command palette (accessed by hitting `Alt-X`/`Option-X`).
 
 ![assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 
@@ -24,17 +24,17 @@ This includes the common refactoring tools:
 - Insert a let-expression above this one
 - Wrap an expression in an if, if-then, or if-else
 
-## More Refactoring Tools 
+## More Refactoring Tools
 
 ### Copy/paste
 
-You can copy/paste selections, which is often used for refactoring. 
+You can copy/paste selections, which is often used for refactoring.
 
 It may be helpful to note that copy/paste only works in Dark between handlers
 at this time. Copying JSON from an external source will paste into your
 handlers in Dark, but if you write code in the Dark language in your text
 editor of choice, that code will not paste. We hope to improve this experience
-in the future. 
+in the future.
 
 ### Pipelines
 
