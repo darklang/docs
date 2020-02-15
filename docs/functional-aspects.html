@@ -60,17 +60,16 @@
 <p>Most languages, especially Javascript, are imperative: you tell it to do one thing, then do another thing. So whenever you have code, you can add more code below it to do more stuff.</p>
 <p>Dark uses “implicit returns” (somewhat similar to Ruby, Coffeescript, Haskell and Rust). The value of an expression is that last value in that expression. So in the “hello world” example, you don’t write ‘return “hello world”’, just ‘“hello world”’ is enough.</p>
 <p>Because of the implicit returns model, you write code differently. In JS you might write:</p>
-<pre><code class="hljs">if (myCondition) { 
-    s = 42;
+<pre><code class="hljs">if (myCondition) {
+  s = 42;
 } else {
-    s = 56; 
-} 
+  s = 56;
+}
 </code></pre>
 <p>In Dark, you’ll instead write:</p>
-<pre><code class="hljs">let s = if myCondition 
-                then 42 
-                else
-                    56
+<pre><code class="hljs">let s = if myCondition
+        then 42
+        else 56
 </code></pre>
 <p>You can see some examples are shown here: <a href="https://darklang.com/a/sample-returns">https://darklang.com/a/sample-returns</a></p>
 <p>A handler or function will return the result of the last expression within it. If the last expression is blank, Dark will return a 500 error.</p>
