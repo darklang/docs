@@ -71,6 +71,9 @@ implement unicode characters, a grapheme is some codepoints forming a unicode
 entity, such as an emoji; an EGC is some graphemes, used to handle things like
 emojis which combine to form a single emoji).
 
+Dark doesn't currently support string interpolation, but we plan to in the
+future.
+
 ### Characters
 
 In the future, Dark will support individual characters.
