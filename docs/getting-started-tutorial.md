@@ -122,7 +122,7 @@ In this case, we want db::set, which takes three parameters.
 
 5. Now let's make our datastore. From the sidebar or the omnibox, create a new datastore called "requests" and give it two field names.
 
-![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.49.55_AM.png)
+![assets/gettingstarted/datastore.png](assets/gettingstarted/datastore.png)
 
 All datastores in Dark are key-value based and use keys as unique identifiers for the record. For instance, a possible set of records with keys in the above datastore would look like this:
 
