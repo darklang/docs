@@ -2,7 +2,12 @@
   "docs": {
     "Getting Started": [
       "introduction",
-      "getting-started-tutorial"
+      "getting-started-tutorial",
+      "first-api-endpoint",
+      "first-repl",
+      "first-datastore",
+      "finishing-touches"
+
     ],
     "Concepts": [
       "dark-backend-components",
