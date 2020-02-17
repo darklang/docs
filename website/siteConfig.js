@@ -53,6 +53,12 @@ const siteConfig = {
   },
   */
 
+ algolia: {
+  apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+  indexName: 'darklang',
+  algoliaOptions: {} // Optional, if provided by Algolia
+},
+
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Dark`,
 
@@ -87,6 +93,8 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+  
 };
 
 module.exports = siteConfig;
