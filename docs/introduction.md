@@ -1,7 +1,6 @@
 ---
-id: getting-started
-title: Getting Started
-sidebar_label: Getting Started
+id: introduction
+title: Introduction
 ---
 
 If you need support, the [Dark Community Slack](https://darklang.com/slack-invite) is the best place for front-line support. We’re very responsive during the day, and often responsive at all hours. Depending on the issue, we may need you to use a workaround. If you have an urgent issue you can call Ellen (248-202-7698) or Paul (415-341-2432).

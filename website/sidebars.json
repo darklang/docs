@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started": [
-      "getting-started",
+      "introduction",
       "dark-backend-components",
       "trace-driven-development",
       "error-handling",
