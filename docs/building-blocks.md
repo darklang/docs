@@ -105,9 +105,7 @@ Dark supports:
 - Bools (`true` and `false`)
 - `null`
 
-Each of these expressions evaluates to its contents as you might expect. `42` evaluates to the Int value `42`. Note that numbers in Dark don't have infinite precision. The expression `9999999999999999` evaluates to the Int value `10000000000000000`, as it does in Javascript.
-
-**TODO: Change this because `9999999999999999` behaves differently on frontend and backend!**
+Each of these expressions evaluates to its contents as you might expect. For example, `42` evaluates to the Int value `42`.
 
 ### Lists
 A List expression in Dark is a comma-separated list of sub-expressions within square brackets `[]`.
