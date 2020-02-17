@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Introduction
+title: Hello World!
 ---
 
 Dark is a language and framework for building web backends: REST API endpoints,
