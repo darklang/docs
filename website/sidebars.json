@@ -8,26 +8,30 @@
       "dark-backend-components",
       "trace-driven-development",
       "structured-editing",
-      "error-handling",
-      "refactoring-and-editing",
-      "static-assets",
-      "keyboard-mapping",
-      "custom-domains"
+      "error-handling"
     ],
     "Language": [
       "language",
       "functional-aspects"
     ],
-    "Tutorials": [
+    "How to": [
+      "static-assets",
+      "custom-domains",
+      "teamwork"
+
+    ],
+    "Tutorials & Samples": [
       "react-spa-tutorial",
       "slack-app-tutorial",
-      "twilio-app-tutorial"
-    ],
-    "Reference Materials": [
-
-      "airtable",
-      "freshdesk",
+      "twilio-app-tutorial",
       "sample-canvases",
+      "airtable",
+      "freshdesk"
+    ],
+    "Reference": [
+      "keyboard-mapping",
+      "support",
+      "known-issues",
       "sharing-dark",
       "changelog"
     ]

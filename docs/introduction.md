@@ -30,14 +30,4 @@ If you need support, the [Dark Community Slack](https://darklang.com/slack-invit
 - Go through "your first dark application", a guided tutorial to build your first backend app.
 - Read through the concepts that make up Dark, discussiong the components of an app, Trace-Driven development, and more.
 
-## Additional Information/Advanced Topics
 
-- Collaboration: Works like Google docs. If you need to share a project with another user, please request an organizational canvas via Slack.
-- CORS: if you’re interested in setting CORS, we have internal tools do that! We're happy to do it in real-time with you to make sure it works. Drop us a note in Slack and we can get you set up. If you'd prefer to try it yourself, here is an example:
-![CORS example](assets/cors.png)
-
-## Known Issues
-
-- Large handlers cause performance problems.
-- Recursion does not work well yet.
-- Some quirks exist around international keyboards. Please report all instances of this in the Community Slack. In the short-term, you may need to switch to an English keyboard.

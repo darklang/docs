@@ -1,7 +1,7 @@
 ---
 id: freshdesk
-title: freshdesk
-sidebar_label: Freshdesk
+title: Freshdesk Sample
+sidebar_label: Freshdesk Sample
 ---
 
 This guide will walk you through how you can use Freshdesk’s API to access ticket information in Dark. You can find a sample canvas [here](https://darklang.com/a/sample-freshdesk).
