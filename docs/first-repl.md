@@ -3,8 +3,6 @@ id: first-repl
 title: Your first REPL
 ---
 
-## Your first REPL
-
 Concepts: REPLs, HttpClient Library, Play Buttons
 
 1. Create a new REPL from the sidebar or the omnibox. This lets you write any code that you'd like to use for development.

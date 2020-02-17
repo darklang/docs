@@ -3,8 +3,6 @@ id: first-api-endpoint
 title: Your first API endpoint
 ---
 
-## Your first API Endpoint (HTTP GET)
-
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
 1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP`  on the sidebar.

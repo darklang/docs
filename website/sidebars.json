@@ -2,7 +2,7 @@
   "docs": {
     "Getting Started": [
       "introduction",
-      "getting-started-tutorial",
+      "first-app",
       "first-api-endpoint",
       "first-repl",
       "first-datastore",
