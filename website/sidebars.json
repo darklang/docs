@@ -7,12 +7,16 @@
     "Concepts": [
       "dark-backend-components",
       "trace-driven-development",
+      "structured-editing",
       "error-handling",
       "refactoring-and-editing",
-      "functional-aspects",
       "static-assets",
       "keyboard-mapping",
       "custom-domains"
+    ],
+    "Language": [
+      "language",
+      "functional-aspects"
     ],
     "Tutorials": [
       "react-spa-tutorial",
@@ -20,6 +24,7 @@
       "twilio-app-tutorial"
     ],
     "Reference Materials": [
+
       "airtable",
       "freshdesk",
       "sample-canvases",
