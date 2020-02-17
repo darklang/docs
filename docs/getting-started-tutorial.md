@@ -1,7 +1,6 @@
 ---
 id: getting-started-tutorial
-title: Getting Started
-sidebar_label: Getting Started
+title: Your first Dark app
 ---
 
 ## Tutorial: Getting Started

@@ -2,6 +2,9 @@
   "docs": {
     "Getting Started": [
       "introduction",
+      "getting-started-tutorial"
+    ],
+    "Concepts": [
       "dark-backend-components",
       "trace-driven-development",
       "error-handling",
@@ -12,7 +15,6 @@
       "custom-domains"
     ],
     "Tutorials": [
-      "getting-started-tutorial",
       "react-spa-tutorial",
       "slack-app-tutorial",
       "twilio-app-tutorial"
