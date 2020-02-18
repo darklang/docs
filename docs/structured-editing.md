@@ -5,12 +5,12 @@ title: Structured Editing
 
 *Note: for now, Dark is only supported for Chrome with browser extensions disabled.*
 
-
 At heart, Dark is an expression-oriented programming language. This aspect of Dark enables powerful features like live values and trace-driven development. This section introduces a simple way to think about the structure of Dark programs within the editor.
 
 When writing code in Dark, you are building up expressions, relying heavily on autocomplete.
 
 ## Blanks
+
 A blank expressions acts as a placeholder where you can type to create a different expression. The value of a blank expression is `Incomplete`, because it needs to be completed in order to be useful.
 
 ![Blank Example](assets/structuredediting/blank_example.png)
@@ -26,13 +26,15 @@ Once a blank is filled in, it won't be a blank anymore:
 In addition to blanks, there are also many other types of expressions.
 
 Atomic Expressions include:
+
 - Integers (whole numbers like `42`)
 - Floats (numbers like `1.5`)
 - Strings (text in double quotes)
 - Bools (true and false)
 - null
 
-There are also more complex expressions: 
+There are also more complex expressions:
+
 - Lists
 - Dicts
 - Records
@@ -42,15 +44,13 @@ There are also more complex expressions:
 
 For more on the language features of each type of expression, visit the [Language Overview](../language). Examples of how these expressions are used in the editor are below.
 
-
 ## Nesting Expressions
-
 
 Expressions in Dark are nested. For example, a multiplication expression is a compound expression with two sub-expressions as operands:
 
 ![Multiplication Diagram](assets/structuredediting/mul_diagram.png)
 
-Filling a blank with an expression with sub-parts introduces a new blank for each of them. 
+Filling a blank with an expression with sub-parts introduces a new blank for each of them.
 
 ![Multiplication Diagram](assets/structuredediting/multiplication.png)
 
@@ -58,11 +58,11 @@ In the expression 2 * 3, these sub-expressions are filled with the expressions 2
 
 ![Multiplication Expression](assets/structuredediting/mul_expression.png)
 
-The value of the expression 2 * 3 is 6. This is equivalent to saying 2 * 3 evaluates to 6.
+The value of the expression `2 * 3` is `6`. This is equivalent to saying `2 * 3` evaluates to `6`.
 
 ![Multiplication Result](assets/structuredediting/mul_result.png)
 
-Since 2 * 3 is an expression, it can itself be a subexpression of a compound expression. Consider the expression 1 + 2 * 3, which has the value 7. It is a compound expression with a binary operator + and two subexpressions as operands: 1 and 2 * 3.
+Since `2 * 3` is an expression, it can itself be a subexpression of a compound expression. Consider the expression `1 + 2 * 3`, which has the value `7`. It is a compound expression with a binary operator `+` and two subexpressions as operands: `1` and `2 * 3`.
 
 ### Let Expressions
 
@@ -99,10 +99,10 @@ that has the result that you want to pipe, and hit `shift-enter` or type `|>`.
 ![assets/refactoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](assets/structuredediting/pipeline_example.png)
 
 ## Partials (Partially Completed Expressions)
+
 While you are typing or deleting, you'll often see partially completed expressions like this:
 
 ![Partial](assets/structuredediting/partial_example.png)
-
 
 The text in red is the partial, and the grey text behind it indicates what was there before. Note that partials evaluate to whatever was there before:
 
