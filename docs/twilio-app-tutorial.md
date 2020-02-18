@@ -1,7 +1,7 @@
 ---
 id: twilio-app-tutorial
-title: Building a Twilio App in Dark
-sidebar_label: Building a Twilio App
+title: Twilio tutorial
+sidebar_label: Twilio tutorial
 ---
 
 Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces.

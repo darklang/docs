@@ -1,7 +1,7 @@
 ---
 id: error-handling
-title: Error Handling in Dark
-sidebar_label: Error Handling in Dark
+title: Error Handling
+sidebar_label: Error Handling
 ---
 
 The Dark code you write in your handlers is available as soon as you type (deployless). We have a number of built-in features to support this style of writing, as well as dealing with errors.

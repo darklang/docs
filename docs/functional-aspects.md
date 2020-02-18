@@ -1,7 +1,7 @@
 ---
 id: functional-aspects
-title: Functional Aspects of Dark
-sidebar_label: Functional Aspects of Dark
+title: Functional Aspects
+sidebar_label: Functional Aspects
 ---
 
 ## Implicit Returns

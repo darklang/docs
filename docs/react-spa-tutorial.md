@@ -1,7 +1,7 @@
 ---
 id: react-spa-tutorial
-title: Building a Backend for a React SPA in Dark
-sidebar_label: Building a Backend for a React SPA 
+title: React SPA tutorial
+sidebar_label: React SPA tutorial
 ---
 
 Watch a demo video of this project: [https://vimeo.com/360007420/01c205fe0f](https://vimeo.com/360007420/01c205fe0f)

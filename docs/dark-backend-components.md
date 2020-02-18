@@ -1,7 +1,7 @@
 ---
 id: dark-backend-components
-title: Dark Backend Components
-sidebar_label: Dark Backend Components
+title: Components
+sidebar_label: Components
 ---
 
 When building in Dark, you are able to create five major backend components, called handlers:

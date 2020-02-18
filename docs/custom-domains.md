@@ -1,7 +1,7 @@
 ---
 id: custom-domains
-title: Custom Domains
-sidebar_label: Custom Domains
+title: Set a Custom Domain
+sidebar_label: Set a Custom Domain
 ---
 
 If you'd like to use a custom domain instead of `<canvas>.builtwithdark.com`, you can!

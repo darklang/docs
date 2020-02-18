@@ -1,7 +1,7 @@
 ---
 id: airtable
-title: Airtable
-sidebar_label: Airtable
+title: Airtable Sample
+sidebar_label: Airtable Sample 
 ---
 
 This guide will walk you through how you can use Airtable’s API to add or update information in Airtable. An Airtable sample canvas is available [here](https://darklang.com/a/sample-airtable).

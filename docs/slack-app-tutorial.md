@@ -1,7 +1,7 @@
 ---
 id: slack-app-tutorial
-title: Building Slack Apps with Dark
-sidebar_label: Building Slack Apps
+title: Slack tutorial
+sidebar_label: Slack tutorial
 ---
 
 Watch a demo video of a Slack app: [https://vimeo.com/380770154](https://vimeo.com/380770154)
