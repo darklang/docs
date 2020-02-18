@@ -32,6 +32,7 @@
       "freshdesk"
     ],
     "Reference": [
+      "function-reference",
       "keyboard-mapping",
       "support",
       "known-issues",
