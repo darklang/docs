@@ -67,5 +67,3 @@ The first parameter is the record we're inserting. This will match our schema of
 10. Finally, hitting the play button for DB::set will insert the record into the datastore, and lock the schema.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png)
-
-

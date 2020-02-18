@@ -10,7 +10,6 @@ title: Structured Editing
 - Enter completes a field and leaves the cursor at the end of that field, tab completes and moves to the next blank (even if the blank is not nearby), and space moves one space forward (as you would expect in text).
 - The editor still has some quirks (we’re sorry!) please tell us about places where you feel like you can’t type, or are fighting with the editor. The best place to report bugs or feedback is the [Dark Community Slack](https://darklang.com/slack-invite).
 
-
 ## Refactoring and editing code
 
 ### Undo/redo
@@ -57,5 +56,3 @@ argument allowed is an anonymous function (also called a block), which is
 created by typing `lambda` or hitting `\`.
 
 ![assets/refactoring/Screen_Shot_2020-01-07_at_2.17.43_PM.png](assets/refactoring/Screen_Shot_2020-01-07_at_2.17.43_PM.png)
-
-

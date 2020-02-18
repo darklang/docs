@@ -34,4 +34,3 @@ Click the hamburger in the upper right and select "open in new tab", to see your
 5. Mouse over the white dots on the left. Each dot is a "trace" of  a single request to your handler.
 
 Congratulations! You've shipped your first Dark API endpoint.
-

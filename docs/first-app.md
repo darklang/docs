@@ -14,15 +14,9 @@ To see a completed version of this tutorial, go to
 Note that you should **not** copy/paste this &ndash; we want to teach you to
 use the Dark editor.
 
-
 ### Support
 
 If you'd like some help, come to the [Dark Community
 Slack](https://darklang.com/slack-invite). Dark engineers answer questions,
 talk you through issues, and fix bugs, often within minutes. Lots of
 experienced community members are also around to offer helpful suggestions.
-
-
-
-
-

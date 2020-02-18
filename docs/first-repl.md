@@ -47,5 +47,3 @@ The expression automatically creates blanks for the four parameters that HttpCli
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
 Congratulations! You've used your first REPL and written an HTTPClient expression.
-
-
