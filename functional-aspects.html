@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Functional Aspects · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Implicit Returns"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Functional Aspects · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="## Implicit Returns"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Language</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">Hello World!</a></li><li class="navListItem"><a class="navItem" href="/docs/first-app">Your first app</a></li><li class="navListItem"><a class="navItem" href="/docs/first-api-endpoint">Your first API endpoint</a></li><li class="navListItem"><a class="navItem" href="/docs/first-repl">Your first REPL</a></li><li class="navListItem"><a class="navItem" href="/docs/first-datastore">Your first Datastore</a></li><li class="navListItem"><a class="navItem" href="/docs/finishing-touches">Finishing touches</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/structured-editing">Structured Editing</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Language</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/language">Language Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/functional-aspects">Functional Aspects</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How to</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/static-assets">Host Static Assets</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Set a Custom Domain</a></li><li class="navListItem"><a class="navItem" href="/docs/teamwork">Work with your team</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials &amp; Samples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">React SPA tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Slack tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/twilio-app-tutorial">Twilio tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/freshdesk">Freshdesk Sample</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/function-reference">Built-in Function reference</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/support">Support</a></li><li class="navListItem"><a class="navItem" href="/docs/known-issues">Known issues</a></li><li class="navListItem"><a class="navItem" href="/docs/sharing-dark">Sharing Your Dark Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Functional Aspects</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="implicit-returns"></a><a href="#implicit-returns" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implicit Returns</h2>
+<p><img src="/docs/assets/functional/image1.png" alt="assets/functional/image1.png"></p>
+<p>We often get asked how to add more code to a handler. In the “hello world” above, there’s nowhere to enter code! This is mostly intentional - Dark works a little differently here than most languages.</p>
+<p>Most languages, especially Javascript, are imperative: you tell it to do one thing, then do another thing. So whenever you have code, you can add more code below it to do more stuff.</p>
+<p>Dark uses “implicit returns” (somewhat similar to Ruby, Coffeescript, Haskell and Rust). The value of an expression is that last value in that expression. So in the “hello world” example, you don’t write ‘return “hello world”’, just ‘“hello world”’ is enough.</p>
+<p>Because of the implicit returns model, you write code differently. In JS you might write:</p>
+<pre><code class="hljs">if (myCondition) {
+  s = 42;
+} else {
+  s = 56;
+}
+</code></pre>
+<p>In Dark, you’ll instead write:</p>
+<pre><code class="hljs">let s = if myCondition
+        then 42
+        else 56
+</code></pre>
+<p>You can see some examples are shown here: <a href="https://darklang.com/a/sample-returns">https://darklang.com/a/sample-returns</a></p>
+<p>A handler or function will return the result of the last expression within it. If the last expression is blank, Dark will return a 500 error.</p>
+<p>If you have a statement where you only care about the side-effect (eg a <strong>DB::set</strong> or <strong>emit</strong> function) then you can put it on the right hand side of a <strong>let _</strong>:</p>
+<p>When you hit “enter” at the end of such a line, it will automatically add the let for you.</p>
+<h3><a class="anchor" aria-hidden="true" id="httprespondwith"></a><a href="#httprespondwith" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTPRespondWith</h3>
+<p>There's a set of functions that help form a response of a given type, ex <a href="https://darklang.com/a/sample-returns#handler=1835918421">this handler</a> responds with text.</p>
+<h2><a class="anchor" aria-hidden="true" id="pipelines"></a><a href="#pipelines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pipelines</h2>
+<h3><a class="anchor" aria-hidden="true" id="pipelinesthreads"></a><a href="#pipelinesthreads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pipelines/Threads</h3>
+<p>In Dark, we like to use pipelines to make code more readable. Pipelines are similar to method chaining in OO languages, and pipes in Bash.</p>
+<p>Pipelines always pipe the previous value into the first parameter of the next expression.</p>
+<p>Traditionally, you call functions with their arguments as parameters. However, that is often confusing and can be hard to read:</p>
+<p><img src="/docs/assets/functional/image6.png" alt="assets/functional/Image6.png"></p>
+<p>Using pipelines, you can perform a series of transformations on a value in order. Here, we start with the string &quot;live&quot; and pipe it to String::reverse to produce &quot;evil&quot;. Then we pipe the result to String::toUppercase, producing the string &quot;EVIL&quot;:</p>
+<p><img src="/docs/assets/functional/image9.png" alt="assets/functional/image9.png"></p>
+<p>We find this simpler to reason about, though it can often take a few tries to understand it. This might help:</p>
+<p><img src="/docs/assets/functional/image2.gif" alt="assets/functional/image2.gif"></p>
+<h3><a class="anchor" aria-hidden="true" id="how-to-pipe"></a><a href="#how-to-pipe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Pipe</h3>
+<p>To start a pipeline, place the caret inside the expression you want to transform:</p>
+<p><img src="/docs/assets/functional/image11.png" alt="assets/functional/image11.png"></p>
+<p>Then press “shift+enter”:</p>
+<p><img src="/docs/assets/functional/image15.png" alt="assets/functional/mage15.png"></p>
+<p>And you can keep typing:</p>
+<p><img src="/docs/assets/functional/image5.png" alt="assets/functional/image5.png"></p>
+<p>You can also place the caret at the end of the line, and press enter.</p>
+<p>We currently default to piping larger expressions for convenience, but if you want to transform at a more local level, you can do that too, by selecting the expression you want to transform:</p>
+<p><img src="/docs/assets/functional/image10.png" alt="assets/functional/image10.png"></p>
+<p>Then press &quot;shift+enter&quot;:</p>
+<p><img src="/docs/assets/functional/image3.png" alt="assets/functional/image3.png"></p>
+<p>And then you can keep typing:</p>
+<p><img src="/docs/assets/functional/image8.png" alt="assets/functional/image8.png"></p>
+<p>You can also extend the pipe by pressing Enter at the end of the line with a pipe on it.</p>
+<h3><a class="anchor" aria-hidden="true" id="tip"></a><a href="#tip" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h3>
+<p>Look at the indentation to see what is being piped at a glance. A common mistake with pipelines is introducing them at an unintended &quot;level&quot;. For example, here the piped value is the let expression as a whole, but the author intended to pipe the expression bound to the variable s:</p>
+<p><img src="/docs/assets/functional/image13.png" alt="assets/functional/image13.png"></p>
+<p><em>To view the live code provided in the examples above, visit <a href="https://darklang.com/a/sample-pipeline">https://darklang.com/a/sample-pipeline</a>.</em></p>
+<h2><a class="anchor" aria-hidden="true" id="listmap--lambda"></a><a href="#listmap--lambda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List::Map &amp; Lambda</h2>
+<p>Dark does not have a for-loop, instead it has “List::map.” This allows you to do something to a collection of objects in a list.</p>
+<p>List::map takes two parameters. In this case we are passing in a list of integers, and then there’s a block where we can choose what to do to each of them.</p>
+<p><img src="/docs/assets/functional/image4.png" alt="assets/functional/image4.png"></p>
+<p>In this case, we multiply each value by two:</p>
+<p><img src="/docs/assets/functional/image17.png" alt="assets/functional/image17.png"></p>
+<p>If we wanted to do something involving subsequent list items, we can use a List fold (in this case we pipe the output of our previous list into list::fold), resulting in a return value of 10,100:</p>
+<p><img src="/docs/assets/functional/image14.png" alt="assets/functional/image14.png"></p>
+<p><strong>Known bug:</strong></p>
+<p>Right now, if you use a map with a function that has a side effect (like Int::Rand) the analysis will show you the impact of the <em>last</em> version of the side effect as though it was used for all of them. This is an analysis bug (you are actually getting a random int each time).</p>
+<p>List map with no side effect:</p>
+<p><img src="/docs/assets/functional/listmap1.png" alt="assets/functional/listmap1.png"></p>
+<p>List map with a side effect, appears to use the same Int::random each time:</p>
+<p><img src="/docs/assets/functional/listmap2.png" alt="assets/functional/listmap2.png"></p>
+<p>List map with side effect, discrepancy between analysis and values stored in DB:</p>
+<p><img src="/docs/assets/functional/listmap3.png" alt="assets/functional/listmap3.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="match"></a><a href="#match" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Match</h2>
+<p>The match expression is used to destructure complex types (it can be used similarly to switch statements in other languages). At the moment, it only supports the Option type (Just and Nothing), but we will soon be adding a Result type for error handling, as well as user-defined types.</p>
+<p>Here’s an example of using a match expression with a dictionary lookup.</p>
+<p><img src="/docs/assets/functional/image16.png" alt="assets/functional/image16.png"></p>
+<p>Note that you will need to take the value off the error rail first, or you will get this (<a href="error-handling">more docs on the error rail</a>:</p>
+<p><img src="/docs/assets/functional/image18.png" alt="assets/functional/image18.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="language-versioning"></a><a href="#language-versioning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language Versioning</h2>
+<p>You can see that many standard library items are labeled “3” or “1” in the editor. These refer to the version of the function. When you start a new canvas, you will always have the latest versions. If we upgrade, you’ll have the choice to do so, but can continue to use the old ones.</p>
+<h2><a class="anchor" aria-hidden="true" id="dictionaries-and-objects"></a><a href="#dictionaries-and-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dictionaries and Objects</h2>
+<p>To initiate a dictionary, call Dict::empty. You may add keys with Dict::set.</p>
+<p><img src="/docs/assets/functional/image12.png" alt="assets/functional/image12.png"></p>
+<p>To get values from a dictionary, use Dict:get.</p>
+<p><img src="/docs/assets/functional/image7.png" alt="assets/functional/image7.png"></p>
+<p>We will soon be deprecating our objects ( { } ), and splitting them into two concepts: record types and dictionaries. For now, you should consider curly braces to mean records, and use Dict:: functions for supporting things like allowing non alphanumeric characters keys.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/language"><span class="arrow-prev">← </span><span>Language Overview</span></a><a class="docs-next button" href="/docs/static-assets"><span>Host Static Assets</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#implicit-returns">Implicit Returns</a><ul class="toc-headings"><li><a href="#httprespondwith">HTTPRespondWith</a></li></ul></li><li><a href="#pipelines">Pipelines</a><ul class="toc-headings"><li><a href="#pipelinesthreads">Pipelines/Threads</a></li><li><a href="#how-to-pipe">How to Pipe</a></li><li><a href="#tip">Tip</a></li></ul></li><li><a href="#listmap--lambda">List::Map &amp; Lambda</a></li><li><a href="#match">Match</a></li><li><a href="#language-versioning">Language Versioning</a></li><li><a href="#dictionaries-and-objects">Dictionaries and Objects</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
