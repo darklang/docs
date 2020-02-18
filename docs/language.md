@@ -1,9 +1,7 @@
 ---
-id: language-overview
-title: Dark Language Overview
+id: language
+title: Language Overview
 ---
-
-## Introduction
 
 This doc describes the Dark language. Dark is really a system - a
 combination of the language, editor, framework and infrastructure. In this
