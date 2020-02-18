@@ -314,6 +314,11 @@ defining functions in using points-free style.
 
 Functions do not live in the “Canvas”, but rather are a little bit ethereal.
 
+Built-in functions are all versioned: we frequently deprecate old functions and
+add updates. When we deprecate old versions, your code does *not* change, and
+you keep using the old ones. We intend to support automated refactoring and
+updating in the future.
+
 In the future, we intend to support partial application/currying, and
 default/optional parameters.
 
