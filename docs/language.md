@@ -287,7 +287,7 @@ this after we introduce statements.
 
 Dark supports pattern matching, in particular, matching on `Enum`s.
 
-```elm
+```ocaml
 let introduction =
   match name with
   | Nothing -> "Hi!"
