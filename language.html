@@ -112,7 +112,7 @@ and performance for whatever you use them for.</p>
 <p>Lists should be used for all “I want a sequence of things” situations,
 including iterating across them, random access, push/pop, etc.</p>
 <pre><code class="hljs css language-elm"><span class="hljs-title">let</span> x = [<span class="hljs-number">8</span>]
-<span class="hljs-title">let</span> y = x ++ [<span class="hljs-number">6</span>]
+<span class="hljs-title">let</span> y = <span class="hljs-type">List</span>::append x [<span class="hljs-number">6</span>]
 <span class="hljs-title">y</span>
 </code></pre>
 <pre><code class="hljs css language-elm">[<span class="hljs-number">8</span>, <span class="hljs-number">6</span>]
