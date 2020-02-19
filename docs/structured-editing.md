@@ -42,7 +42,7 @@ There are also more complex expressions:
 - Conditionals
 - Matches
 
-For more on the language features of each type of expression, visit the [Language Overview](../language). Examples of how these expressions are used in the editor are below.
+For more on the language features of each type of expression, visit the [Language Overview](language). Examples of how these expressions are used in the editor are below.
 
 ## Nesting Expressions
 
