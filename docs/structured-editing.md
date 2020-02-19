@@ -11,7 +11,7 @@ When writing code in Dark, you are building up expressions, relying heavily on a
 
 ## Blanks
 
-A blank expressions acts as a placeholder where you can type to create a different expression. The value of a blank expression is `Incomplete`, because it needs to be completed in order to be useful.
+A blank expression acts as a placeholder where you can type to create a different expression. The value of a blank expression is `Incomplete`, because it needs to be completed in order to be useful.
 
 ![Blank Example](assets/structuredediting/blank_example.png)
 
