@@ -89,7 +89,7 @@ including iterating across them, random access, push/pop, etc.
 
 ```elm
 let x = [8]
-let y = x ++ [6]
+let y = List::append x [6]
 y
 ```
 
