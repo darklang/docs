@@ -7,6 +7,24 @@ sidebar_label: Changelog
 
 We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.
 
+## Week of 2/21/2020
+
+- The Canvas list has been moved into a Settings modal, accessed by mousing over your avatar.
+
+    ![assets/changelog/Feb21/settings.png](assets/changelog/Feb21/settings.png)
+
+- A variety of issues were fixed around autocomplete:
+    - New variables now correctly display their type instead of Incomplete.
+    - Autocomplete now appears correctly for single-character variables.
+    - It was possible to get into a state where your variable was not added to autocomplete - this is no longer possible.
+- Added improved error messaging for missing return values on HTTP handlers and user functions.
+
+![assets/changelog/Feb21/error.png](assets/changelog/Feb21/error.png)
+
+- Having the experimental web platform flag turns on in Chrome should no longer cause broken functionality.
+- The Delete Handler menu option has been changed to Delete, for clarity.
+- A complete [documentation](https://darklang.github.io/docs/introduction) restructure, including URL changes - old bookmarks may no longer work.
+
 ## Week of 2/14/2020
 
 - Added a Welcome to Dark modal for new users
