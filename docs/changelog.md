@@ -9,7 +9,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
 
 ## Week of 2/21/2020
 
-- The Canvas list has been moved into a Settings modal, accessed by mousing over your avatar.
+- The canvas list has been moved into a Settings modal, accessed by mousing over your avatar and clicking Account.
 
     ![assets/changelog/Feb21/settings.png](assets/changelog/Feb21/settings.png)
 
@@ -21,7 +21,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
 
 ![assets/changelog/Feb21/error.png](assets/changelog/Feb21/error.png)
 
-- Having the experimental web platform flag turns on in Chrome should no longer cause broken functionality.
+- Having the experimental web platform flag turned on in Chrome should no longer cause broken functionality.
 - The Delete Handler menu option has been changed to Delete, for clarity.
 - A complete [documentation](https://darklang.github.io/docs/introduction) restructure, including URL changes - old bookmarks may no longer work.
 
