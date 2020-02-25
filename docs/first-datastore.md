@@ -5,7 +5,7 @@ title: Your first Datastore
 
 We can use the trace of that HTTP request to build the endpoint. This is Trace Driven Development.
 
-1. Hit the + button in the side bar to create the HTTP endpoint. The verb (POST) and route (/test) will be set for you.
+1. Hit the + button in the 404 section of the side bar to create the HTTP endpoint. The verb (POST) and route (/test) will be set for you.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
 
