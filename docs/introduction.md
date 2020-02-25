@@ -15,5 +15,5 @@ code you're able to develop from real incoming requests/traces.
 ![Hello World](assets/helloworld.gif)
 
 Above, you can see the simplest app in Dark: the hello world app. It
-shows starting with an empty canvas, creating a HTTP endpooint (`GET
+shows starting with an empty canvas, creating a HTTP endpoint (`GET
 /hello`), running code (`"Hello world"`) and opening that page.
