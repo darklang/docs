@@ -117,12 +117,14 @@ including iterating across them, random access, push/pop, etc.</p>
 </code></pre>
 <pre><code class="hljs css language-elm">[<span class="hljs-number">8</span>, <span class="hljs-number">6</span>]
 </code></pre>
+<p><img src="/docs/assets/language/list_example.png" alt="List Example"></p>
 <h3><a class="anchor" aria-hidden="true" id="binary"></a><a href="#binary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary</h3>
 <p>Non-unicode sequences of bytes are supported as the <code>Binary</code> type.</p>
 <h3><a class="anchor" aria-hidden="true" id="options"></a><a href="#options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Options</h3>
 <p>Instead of allowing all values to potentially be null, as in most imperative languages, Dark uses an Option type:</p>
 <pre><code class="hljs css language-elm"><span class="hljs-type">Option</span> a = <span class="hljs-type">Just</span> a | <span class="hljs-type">Nothing</span>
 </code></pre>
+<p><img src="/docs/assets/language/option_example.png" alt="Option Example"></p>
 <p>This is intended to convert effortlessly to null in JSON, but we don't quite
 have enough of the type system to remove it.</p>
 <p>Functions which return <code>Option</code> trigger the <a href="error-handling">Errorrail</a>.</p>
@@ -131,6 +133,7 @@ have enough of the type system to remove it.</p>
 <pre><code class="hljs css language-elm"><span class="hljs-type">Result</span> a = <span class="hljs-type">Ok</span> a | <span class="hljs-type">Err</span> <span class="hljs-type">Error</span>
 </code></pre>
 <p>Dark has no exceptions - all errors go through Results. See <a href="error-handling">error handling</a> for more details.</p>
+<p><img src="/docs/assets/language/result_example.png" alt="Result Example"></p>
 <h3><a class="anchor" aria-hidden="true" id="dicts"></a><a href="#dicts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dicts</h3>
 <p>Dicts are maps from a certain key type to a certain value type. The key must
 currently be a string.  The value can be any type but all elements of the Dict
@@ -233,6 +236,7 @@ currently support <code>truthy</code> types but intend to remove that ability.</
 <p>We support <code>&amp;&amp;</code> and <code>||</code> - they do not currently short-circuit but we intend them to in the future.</p>
 <p>An <code>if</code> is not currently allowed without a corresponding <code>else</code> - we will relax
 this after we introduce statements.</p>
+<p><img src="/docs/assets/language/if_example.png" alt="If Example"></p>
 <h3><a class="anchor" aria-hidden="true" id="match"></a><a href="#match" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Match</h3>
 <p>Dark supports pattern matching, in particular, matching on <code>Enum</code>s.</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> introduction =
