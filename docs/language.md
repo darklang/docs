@@ -97,6 +97,8 @@ y
 [8, 6]
 ```
 
+![List Example](assets/language/list_example.png)
+
 ### Binary
 
 Non-unicode sequences of bytes are supported as the `Binary` type.
@@ -108,6 +110,8 @@ Instead of allowing all values to potentially be null, as in most imperative lan
 ```elm
 Option a = Just a | Nothing
 ```
+
+![Option Example](assets/language/option_example.png)
 
 This is intended to convert effortlessly to null in JSON, but we don't quite
 have enough of the type system to remove it.
@@ -123,6 +127,8 @@ Result a = Ok a | Err Error
 ```
 
 Dark has no exceptions - all errors go through Results. See [error handling](error-handling) for more details.
+
+![Result Example](assets/language/result_example.png)
 
 ### Dicts
 
@@ -282,6 +288,8 @@ We support `&&` and `||` - they do not currently short-circuit but we intend the
 
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
+
+![If Example](assets/language/if_example.png)
 
 ### Match
 
