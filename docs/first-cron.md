@@ -9,8 +9,7 @@ Now that we're storing requests, we can use a scheduled job (CRON) to create a r
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 
-2. To know if something was today, we'll have to compare to the current time. Create a variable `timeSeconds` and set it equal to `Date::now`. Run the `Date::now` function to see the current time and so a value will be available. 
-For comparison, we'll need the time in seconds, and you can pipe to the `Date::toSeconds` function. (Note: to open the pipeline type `|>` after the `Date::now` Function).
+2. To know if something was today, we'll have to compare to the current time. Create a variable `timeSeconds` and set it equal to `Date::now`. Run the `Date::now` function to see the current time and so a value will be available. For comparison, we'll need the time in seconds, and you can pipe to the `Date::toSeconds` function. (Note: to open the pipeline type `|>` after the `Date::now` Function).
 
 ![assets/gettingstarted/cron_timeseconds.png](assets/gettingstarted/cron_timeseconds.png)
 
