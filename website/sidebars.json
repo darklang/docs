@@ -6,6 +6,8 @@
       "first-api-endpoint",
       "first-repl",
       "first-datastore",
+      "first-cron",
+      "first-worker",
       "finishing-touches"
     ],
     "Concepts": [
