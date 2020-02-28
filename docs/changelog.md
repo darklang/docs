@@ -7,6 +7,20 @@ sidebar_label: Changelog
 
 We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.
 
+## Week of 2/28/2020
+
+- Backspacing a comma in a list no longer deletes text to the right of the comma
+- Fixed an issue where CRONs occasionally continued to run after they were deleted
+- Lists now wrap when they pass 120 characters
+- A few fixes to traces that caused people to get really stuck:
+    - Fixed an issue where traces could occasionally vanish
+    - Fixed an issue where clicking a Play button on a function in a REPL would not cause a trace to appear
+
+### Documentation
+
+- Docs can now be accessed at [https://darklang.com/docs](https://darklang.com/docs)
+- [Your first CRON](https://darklang.github.io/docs/first-cron) and [Your first Worker](https://darklang.github.io/docs/first-worker) sections have been added to the Getting Started guide
+
 ## Week of 2/21/2020
 
 - The canvas list has been moved into a Settings modal, accessed by mousing over your avatar and clicking Account.
