@@ -20,4 +20,6 @@ If you'd like to use a custom domain instead of `<canvas>.builtwithdark.com`, yo
 redirect to your main subdomain (usually `www`). If your DNS provider supports
 ALIAS records (like CNAME, but permitted on an apex), that also works - though
 again, for redirects, not SSL certs.
-- Once DNS resolves, let us know and we'll get it deployed.
+
+- Once DNS resolves, contact us with your domain and canvas, and we'll set
+  things up on our end.
