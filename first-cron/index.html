@@ -88,10 +88,6 @@
 <li>To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the <code>HTTPClient::Post</code> function from the REPL. Then, when you place your cursor in <code>todayRequests</code> or <code>List::filter</code> you should see the list of requests from the last 24 hours.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/todayrequest.png" alt="assets/gettingstarted/todayrequest.png"></p>
-<ol start="7">
-<li>We'll need a unique key for each object. In this case, by typing db, we get the built in db::GenerateKey function.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png"></p>
 <ol start="8">
 <li>Finally, we'll emit today's requests to a background worker, using the emit keyword. Emit takes two parameters, and in this case we're sending <code>todayRequests</code> to a not yet created worker named <code>StoreReport</code>.</li>
 </ol>
