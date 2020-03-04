@@ -33,10 +33,6 @@ Now that we're storing requests, we can use a scheduled job (CRON) to create a r
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 
-7. We'll need a unique key for each object. In this case, by typing db, we get the built in db::GenerateKey function.
-
-![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png)
-
 8. Finally, we'll emit today's requests to a background worker, using the emit keyword. Emit takes two parameters, and in this case we're sending `todayRequests` to a not yet created worker named `StoreReport`.
 
 ![assets/gettingstarted/emit.png](assets/gettingstarted/emit.png)
