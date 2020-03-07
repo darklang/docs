@@ -97,7 +97,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
     - Dragging up to select text
     - Repeated clicking in a variable
 - Fixed some issues around copying `match`es
-- Added a [Getting Started](helloworld.md) tutorial to the documentation
+- Added a [Getting Started](introduction.md) tutorial to the documentation
 
 ## Week of 2/07/2020
 
