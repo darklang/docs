@@ -60,6 +60,40 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Changelog</h1></header><article><div><span><p>We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.</p>
+<h2><a class="anchor" aria-hidden="true" id="week-of-362020"></a><a href="#week-of-362020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 3/6/2020</h2>
+<ul>
+<li><p>Invites! You can now invite people to Dark from within the app. (If you want your invitees to collaborate in your canvases, you still need to ask us though — coming soon). Click &quot;Share Dark&quot; to invite people!</p>
+<p><img src="/docs/assets/changelog/mar6/account.png" alt="Profile menu showing link to &quot;Share Dark&quot; and &quot;Documentation&quot;"></p></li>
+<li><p>There is now a link to documentation in the profile menu</p></li>
+<li><p>You can now move around the canvas using your mouse. Just click and drag!</p></li>
+<li><p>Added a bunch of functions:</p>
+<ul>
+<li><code>Int::max</code></li>
+<li><code>Int::min</code></li>
+<li><code>String::startsWith</code></li>
+<li><code>String::endsWith</code></li>
+</ul></li>
+<li><p>Fixed a bunch of bugs:</p>
+<ul>
+<li>you couldn't type a comma in a list within a <code>match</code> statement.</li>
+<li>you couldn't type <code>|&gt;</code> to pipe at the end of functions with no arguments</li>
+<li>scrolling in the sidebar works again</li>
+<li>When calling <code>StaticAssets::serveLatest</code> with JSON files, we now return the JSON properly</li>
+<li>If you press enter at the end of a line in an <code>if</code> statement, we no longer take you to the next line (this simplifies code like <code>if i &lt; 10</code>)</li>
+<li>Show when traces were not executed in <code>match</code>es (we already do this elsewhere)</li>
+</ul></li>
+<li><p>The command palette's documentation appears properly (press <code>Alt-x</code> to show the command palette)</p></li>
+<li><p>You can now use <code>Date::&lt;</code> and <code>Date::&gt;</code> and <code>Float::lessThanOrEqualTo</code> in <code>DB::query</code> (and also in <code>DB::queryOne</code>, <code>DB::queryWithKey</code>, etc)</p></li>
+</ul>
+<p><img src="/docs/assets/changelog/mar6/dbquery.png" alt="DB::query call using Date::&lt;"></p>
+<ul>
+<li>We now give better error messages when you try to use <code>Int</code> functions (like <code>+</code> and <code>-</code>) on <code>Floats</code> or <code>Strings</code></li>
+</ul>
+<p><img src="/docs/assets/changelog/mar6/floaterror.png" alt="Float addition showing error message"></p>
+<ul>
+<li>When you try to use invalid canvas names (eg, with capital letters), we now error much better</li>
+<li>When backspacing function names, we now delete the version automatically, which makes it clearer what's being deleted.</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="week-of-2282020"></a><a href="#week-of-2282020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 2/28/2020</h2>
 <ul>
 <li>Backspacing a comma in a list no longer deletes text to the right of the comma</li>
@@ -121,7 +155,7 @@
 <li>Repeated clicking in a variable</li>
 </ul></li>
 <li>Fixed some issues around copying <code>match</code>es</li>
-<li>Added a <a href="getting-started-tutorial.md">Getting Started</a> tutorial to the documentation</li>
+<li>Added a <a href="helloworld.md">Getting Started</a> tutorial to the documentation</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="week-of-2072020"></a><a href="#week-of-2072020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 2/07/2020</h2>
 <ul>
@@ -272,7 +306,7 @@
 <li>Added the <code>copy-request-as-curl</code> command for <code>HttpClient::</code> functions - use Alt-x/Option-x to activate</li>
 <li>Add <code>Twitter::urlencode</code> and <code>Crypto::sha1mac</code> to support talking to the Twitter API</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sharing-dark"><span class="arrow-prev">← </span><span>Sharing Your Dark Projects</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#week-of-2282020">Week of 2/28/2020</a><ul class="toc-headings"><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#week-of-2212020">Week of 2/21/2020</a></li><li><a href="#week-of-2142020">Week of 2/14/2020</a></li><li><a href="#week-of-2072020">Week of 2/07/2020</a></li><li><a href="#week-of-1312020">Week of 1/31/2020</a><ul class="toc-headings"><li><a href="#documentation-1">Documentation</a></li></ul></li><li><a href="#week-of-1242020">Week of 1/24/2020</a><ul class="toc-headings"><li><a href="#major-changes">Major changes</a></li><li><a href="#library-changes">Library changes</a></li><li><a href="#bug-fixes">Bug fixes</a></li><li><a href="#documentation-2">Documentation</a></li></ul></li><li><a href="#week-of-1172020">Week of 1/17/2020</a></li><li><a href="#week-of-1102020">Week of 1/10/2020</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sharing-dark"><span class="arrow-prev">← </span><span>Sharing Your Dark Projects</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#week-of-362020">Week of 3/6/2020</a></li><li><a href="#week-of-2282020">Week of 2/28/2020</a><ul class="toc-headings"><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#week-of-2212020">Week of 2/21/2020</a></li><li><a href="#week-of-2142020">Week of 2/14/2020</a></li><li><a href="#week-of-2072020">Week of 2/07/2020</a></li><li><a href="#week-of-1312020">Week of 1/31/2020</a><ul class="toc-headings"><li><a href="#documentation-1">Documentation</a></li></ul></li><li><a href="#week-of-1242020">Week of 1/24/2020</a><ul class="toc-headings"><li><a href="#major-changes">Major changes</a></li><li><a href="#library-changes">Library changes</a></li><li><a href="#bug-fixes">Bug fixes</a></li><li><a href="#documentation-2">Documentation</a></li></ul></li><li><a href="#week-of-1172020">Week of 1/17/2020</a></li><li><a href="#week-of-1102020">Week of 1/10/2020</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
