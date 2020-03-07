@@ -4,8 +4,39 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-
 We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.
+
+## Week of 3/6/2020
+
+- Invites! You can now invite people to Dark from within the app. (If you want your invitees to collaborate in your canvases, you still need to ask us though — coming soon). Click "Share Dark" to invite people!
+
+    ![Profile menu showing link to "Share Dark" and "Documentation"](assets/changelog/mar6/account.png)
+
+- There is now a link to documentation in the profile menu
+- You can now move around the canvas using your mouse. Just click and drag!
+- Added a bunch of functions:
+    - `Int::max`
+    - `Int::min`
+    - `String::startsWith`
+    - `String::endsWith`
+- Fixed a bunch of bugs:
+    - you couldn't type a comma in a list within a `match` statement.
+    - you couldn't type `|>` to pipe at the end of functions with no arguments
+    - scrolling in the sidebar works again
+    - When calling `StaticAssets::serveLatest` with JSON files, we now return the JSON properly
+    - If you press enter at the end of a line in an `if` statement, we no longer take you to the next line (this simplifies code like `if i < 10`)
+    - Show when traces were not executed in `match`es (we already do this elsewhere)
+- The command palette's documentation appears properly (press `Alt-x` to show the command palette)
+- You can now use `Date::<` and `Date::>` and `Float::lessThanOrEqualTo` in `DB::query` (and also in `DB::queryOne`, `DB::queryWithKey`, etc)
+
+![DB::query call using Date::\<](assets/changelog/mar6/dbquery.png)
+
+- We now give better error messages when you try to use `Int` functions (like `+` and `-`) on `Floats` or `Strings`
+
+![Float addition showing error message](assets/changelog/mar6/floaterror.png)
+
+- When you try to use invalid canvas names (eg, with capital letters), we now error much better
+- When backspacing function names, we now delete the version automatically, which makes it clearer what's being deleted.
 
 ## Week of 2/28/2020
 
@@ -66,7 +97,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
     - Dragging up to select text
     - Repeated clicking in a variable
 - Fixed some issues around copying `match`es
-- Added a [Getting Started](getting-started-tutorial.md) tutorial to the documentation
+- Added a [Getting Started](helloworld.md) tutorial to the documentation
 
 ## Week of 2/07/2020
 
