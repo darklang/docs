@@ -10,7 +10,7 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
 
 - Invites! You can now invite people to Dark from within the app. (If you want your invitees to collaborate in your canvases, you still need to ask us though — coming soon). Click "Share Dark" to invite people!
 
-    ![Profile menu showing link to "Share Dark" and "Documentation"](assets/changelog/mar6/account.png)
+    ![Profile menu showing link to "Share Dark" and "Documentation"](assets/changelog/Mar6/account.png)
 
 - There is now a link to documentation in the profile menu
 - You can now move around the canvas using your mouse. Just click and drag!
@@ -29,11 +29,11 @@ We fix lots of bugs at Dark each week! Here is a brief list of the fixes and upd
 - The command palette's documentation appears properly (press `Alt-x` to show the command palette)
 - You can now use `Date::<` and `Date::>` and `Float::lessThanOrEqualTo` in `DB::query` (and also in `DB::queryOne`, `DB::queryWithKey`, etc)
 
-![DB::query call using Date::\<](assets/changelog/mar6/dbquery.png)
+![DB::query call using Date::\<](assets/changelog/Mar6/dbquery.png)
 
 - We now give better error messages when you try to use `Int` functions (like `+` and `-`) on `Floats` or `Strings`
 
-![Float addition showing error message](assets/changelog/mar6/floaterror.png)
+![Float addition showing error message](assets/changelog/Mar6/floaterror.png)
 
 - When you try to use invalid canvas names (eg, with capital letters), we now error much better
 - When backspacing function names, we now delete the version automatically, which makes it clearer what's being deleted.
