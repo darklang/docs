@@ -12,5 +12,8 @@
   "devDependencies": {
     "docusaurus": "^1.14.3",
     "markdownlint-cli": "^0.22.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.1"
   }
 }

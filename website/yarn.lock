@@ -6629,6 +6629,11 @@ yargs@^2.3.0:
   dependencies:
     wordwrap "0.0.2"
 
+yarn@^1.22.1:
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.1.tgz#888d8b01ac8547669b3bda5fe4b5b8b88c909e8c"
+  integrity sha512-hL7Fd2Psv4fOiE/JjVULDg+LckG0Ql7IPUh5wWC/4UEr6W+eF+VVEWfRu6Q7qbOnqk7+qY7CXYSSLBfJIyElXA==
+
 yauzl@^2.4.2:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
