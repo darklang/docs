@@ -19,6 +19,7 @@
     "Language": [
       "language",
       "datastores",
+      "packages",
       "functional-aspects"
     ],
     "How to": [
