@@ -118,7 +118,7 @@ These include:
 - `DB::schemaFields`
 - `DB::schema`
 
-### Querying by Key, DB::get
+### Querying by key, DB::get
 
 The key is a good way to be able to find information in the datastore. DB::get finds records by key (reminder: withKeys returns nested dictionaries including keys, so DB::get does not return the key). Datastore functions that allow action based on key are:
 
@@ -127,7 +127,7 @@ The key is a good way to be able to find information in the datastore. DB::get f
 - `DB::getMany`
 - `DB::getManywithKeys`
 
-### Querying by Specific Field in the Record, DB::queryExactField
+### Querying by record field, DB::queryExactField
 
 Using DB::queryExactField checks for a specific field within the record. `queryOnewithExactField` finds one response, whereas `queryExactFields` will return as many as exist. (reminder: withKeys returns nested dictionaries including keys).
 
@@ -136,22 +136,14 @@ Using DB::queryExactField checks for a specific field within the record. `queryO
 - `DB::queryOnewithExactField`
 - `DB::queryOneWithExactFieldWithKey`
 
-### Experimental SQL Compiler, DB::query
+### Querying by criteria, DB::query (experimental SQL Compiler)
 
 For being able to run more effective datastore queries, we also have a query compiler. More about this feature is in this [blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd).
 
-DB::query allows taking a datastore and a block filter.
+This allows you to write a function that can be evaluated for the datastore.
 
-newquerycompiler
+![DBset](assets/datastores/dbquery.png)
 
-DB::queryOneWithKey_v3(Datastore table, Block filter) -> Option
-Fetch exactly one value fromtablefor which filter returns true. Note that this does not check every value intable but rather is optimized to find data with indexes. If there is exactly one key/value pair, it returns Just {key: value} and if there is none or more than 1 found, it returns Nothing. Errors at compile-time if Dark's compiler does not support the code in question.
+DB::query allows taking a datastore and a block filter. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not yet support the code in question (please let us know when you hit this, and which function you wanted to use!)
 
-DB::queryOne_v3(Datastore table, Block filter) -> List
-Fetch exactly one value fromtablefor which filter returns true. Note that this does not check every value intable but rather is optimized to find data with indexes. If there is exactly one value, it returns Just value and if there is none or more than 1 found, it returns Nothing. Errors at compile-time if Dark's compiler does not support the code in question.
-
-DB::queryWithKey_v3(Datastore table, Block filter) -> Dict
-Fetch all the values fromtablefor which filter returns true, returning {key : value} as an object. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not support the code in question.
-
-DB::query_v4(Datastore table, Block filter) -> List
-Fetch all the values fromtablefor which filter returns true. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not support the code in question.
+You can also use DB::querywithKey to get both the key and record, DB::queryOne to get only one response, and DB::queryOnewithKey to get only one response, with the key and record.
