@@ -6,7 +6,7 @@ sidebar_label: Datastores
 
 ## Overview
 
-Datastores in Dark are all key-value based (persistent hashmaps). When you create a new datastore, you specify the schema for the record.
+Datastores in Dark are key-value based (persistent hashmaps). When you create a new datastore, you specify the schema for the record.
 
 ![Empty Datastore](assets/datastores/empty.png)
 
@@ -19,19 +19,28 @@ The key is the unique identifier for each record, and is always of type `string`
         key1: value3,
         key2: value4}]`
 
-In the preview of the most recently added record, the key and record are both available.
+The key and record are both available in the preview of the most recently added item.
 
 ![Datastore Schema](assets/datastores/id_as_key.png)
 
+You query datastores in four ways:
+- By key (`DB::get` family)
+- By specific field (`DB::queryExactField` family)
+- By criteria for a specific field (`DB::query` family)
+- By gathering information about the entire datastore
+
+Datastores return one or many results, with or without keys.
+
 ### Keys
 
-For all of the following example keys the schema of the Datastore would be the same, but the preview would show the value of the key of the latest entry:
+The schema is the same for all of these key examples:
 
 ![Datastore Schema](assets/datastores/schema.png)
 
+
 Some common key choices: 
 
-- A field that you plan to store that is unique (like userId). You may need to use `toString` if it is not already a string. The key is shown in the preview data.
+- A unique field (like userId). If the field is not already a string use `toString`. The key is shown in the preview data.
 
 `[{"1": {
         userId: 1,
@@ -42,7 +51,7 @@ Some common key choices:
         name: "Paul",
         pets: []}]`
 
-- A a derivative of a field you plan to store that will be unique (such as generating a slug from two fields).
+- A unique derivative of a field (like name and UserId, or a slug).
 
 `[{"ellen1": {
         userId: 1,
@@ -53,7 +62,7 @@ Some common key choices:
         name: "Paul",
         pets: []}]`
 
-- A generated unique identifier (`DB::generateKey`).
+- A unique identifier generated programmatically (`DB::generateKey`).
 
 `[{"dee09c7e-6ede-402d-9ea4-4ee8fe843688": {
         id: 1,
@@ -66,11 +75,11 @@ Some common key choices:
 
 ### Values
 
-The value in the datastore is a record. In the future, we'd like datastores to be defined by type, but for now you can manually create the schema. Available types are: String, Int, Bool, Float, Password, Date, UUID, Dict (or lists of those).
+The datastore holds records. In the future, datastores will be defined by type, but for now you manually create the schema. Available types are: String, Int, Bool, Float, Password, Date, UUID, Dict (and lists of those).
 
 ## DB Functions
 
-Many datastore operators are built into the language of Dark. All functions are independently versioned. In your canvas you will see the latest version, as well as any versions you are currently using. 
+Datastore operators are built into the language. All functions are independently versioned. In your canvas you will see the latest version, as well as any versions you are currently using. 
 
 A list of all datastore functions is available [in the language reference](https://ops-documentation.builtwithdark.com/?pretty=1).
 
