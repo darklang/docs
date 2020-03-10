@@ -24,6 +24,7 @@ The key and record are both available in the preview of the most recently added 
 ![Datastore Schema](assets/datastores/id_as_key.png)
 
 You query datastores in four ways:
+
 - By key (`DB::get` family)
 - By specific field (`DB::queryExactField` family)
 - By criteria for a specific field (`DB::query` family)
@@ -37,8 +38,7 @@ The schema is the same for all of these key examples:
 
 ![Datastore Schema](assets/datastores/schema.png)
 
-
-Some common key choices: 
+Some common key choices:
 
 - A unique field (like userId). If the field is not already a string use `toString`. The key is shown in the preview data.
 
@@ -79,12 +79,12 @@ The datastore holds records. In the future, datastores will be defined by type, 
 
 ## DB Functions
 
-Datastore operators are built into the language. All functions are independently versioned. In your canvas you will see the latest version, as well as any versions you are currently using. 
+Datastore operators are built into the language. All functions are independently versioned. In your canvas you will see the latest version, as well as any versions you are currently using.
 
 A list of all datastore functions is available [in the language reference](https://ops-documentation.builtwithdark.com/?pretty=1).
 
-
 ### Adding a record to a Datastore
+
 To add items into a datastore, use `DB::set`. `DB::set` takes three parameters (the record to be added, its unique key, and the datastore).
 
 ![DBset](assets/datastores/dbset_empty.png)
@@ -99,7 +99,7 @@ Using the a generated key with `DB::generateKey` would look like this instead:
 
 ### Datastore meta-actions
 
-Some datastore functions provide ability to do something to the entire datastore, and only require the datastore as the parameter. 
+Some datastore functions provide ability to do something to the entire datastore, and only require the datastore as the parameter.
 
 Any datastore function that includes 'with keys' returns both the key and the value, a list of nested dictionaries `[{"1": {
         userId: 1,
@@ -119,6 +119,7 @@ Functions that do not include 'with keys' return just the values, a list of dict
         pets: []}]`
 
 These include:
+
 - `DB::count`
 - `DB::deleteAll`
 - `DB::getAll`
