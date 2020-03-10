@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Datastores · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Overview"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Datastores · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="## Overview"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher singleRowMobileNav"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Language</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">Hello World!</a></li><li class="navListItem"><a class="navItem" href="/docs/first-app">Your first app</a></li><li class="navListItem"><a class="navItem" href="/docs/first-api-endpoint">Your first API endpoint</a></li><li class="navListItem"><a class="navItem" href="/docs/first-repl">Your first REPL</a></li><li class="navListItem"><a class="navItem" href="/docs/first-datastore">Your first Datastore</a></li><li class="navListItem"><a class="navItem" href="/docs/first-cron">Your first CRON</a></li><li class="navListItem"><a class="navItem" href="/docs/first-worker">Your first Worker</a></li><li class="navListItem"><a class="navItem" href="/docs/finishing-touches">Finishing touches</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/structured-editing">Structured Editing</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Language</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/language">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/datastores">Datastores</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How to</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/static-assets">Host Static Assets</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Set a Custom Domain</a></li><li class="navListItem"><a class="navItem" href="/docs/teamwork">Work with your team</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials &amp; Samples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/react-spa-tutorial">React SPA tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Slack tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/twilio-app-tutorial">Twilio tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/sample-canvases">Sample Canvases</a></li><li class="navListItem"><a class="navItem" href="/docs/airtable">Airtable Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/freshdesk">Freshdesk Sample</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/function-reference">Built-in Function reference</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/support">Support</a></li><li class="navListItem"><a class="navItem" href="/docs/known-issues">Known issues</a></li><li class="navListItem"><a class="navItem" href="/docs/sharing-dark">Sharing Your Dark Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Datastores</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>Datastores in Dark are key-value based (persistent hashmaps). When you create a new datastore, you specify the schema for the record.</p>
+<p><img src="/docs/assets/datastores/empty.png" alt="Empty Datastore"></p>
+<p>The key is the unique identifier for each record, and is always of type <code>string</code>. <strong>The key is not visible when looking at the Datastore's schema on the canvas.</strong>  You cannot mark a record field as the key, but you can use the same value for the field and the key when using <code>Db::set</code>. An expected response when retrieving a set of records, with keys, is as following:</p>
+<p><code>[{key: { key1: value1, key2: value2} }, {key: { key1: value3, key2: value4}]</code></p>
+<p>The key and record are both available in the preview of the most recently added item.</p>
+<p><img src="/docs/assets/datastores/id_as_key.png" alt="Datastore Schema"></p>
+<p>You query datastores in four ways:</p>
+<ul>
+<li>By key (<code>DB::get</code> family)</li>
+<li>By specific field (<code>DB::queryExactField</code> family)</li>
+<li>By criteria for a specific field (<code>DB::query</code> family)</li>
+<li>By gathering information about the entire datastore</li>
+</ul>
+<p>Datastores return one or many results, with or without keys.</p>
+<h3><a class="anchor" aria-hidden="true" id="keys"></a><a href="#keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Keys</h3>
+<p>The schema is the same for all of these key examples:</p>
+<p><img src="/docs/assets/datastores/schema.png" alt="Datastore Schema"></p>
+<p>Some common key choices:</p>
+<ul>
+<li>A unique field (like userId). If the field is not already a string use <code>toString</code>. The key is shown in the preview data.</li>
+</ul>
+<p><code>[{&quot;1&quot;: { userId: 1, name: &quot;Ellen&quot;, pets: [&quot;Gutenberg&quot;]} }, {&quot;2&quot;: { userId: 2, name: &quot;Paul&quot;, pets: []}]</code></p>
+<ul>
+<li>A unique derivative of a field (like name and UserId, or a slug).</li>
+</ul>
+<p><code>[{&quot;ellen1&quot;: { userId: 1, name: &quot;Ellen&quot;, pets: [&quot;Gutenberg&quot;]} }, {&quot;paul2&quot;: { userId: 2, name: &quot;Paul&quot;, pets: []}]</code></p>
+<ul>
+<li>A unique identifier generated programmatically (<code>DB::generateKey</code>).</li>
+</ul>
+<p><code>[{&quot;dee09c7e-6ede-402d-9ea4-4ee8fe843688&quot;: { id: 1, name: &quot;Ellen&quot;, pets: [&quot;Gutenberg&quot;]} }, {&quot;ac7d4f1f-a164-4450-96f3-728b087bb9f4&quot;: { id: 2, name: &quot;Paul&quot;, pets: []}]</code></p>
+<h3><a class="anchor" aria-hidden="true" id="values"></a><a href="#values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Values</h3>
+<p>The datastore holds records. In the future, datastores will be defined by type, but for now you manually create the schema. Available types are: String, Int, Bool, Float, Password, Date, UUID, Dict (and lists of those).</p>
+<h2><a class="anchor" aria-hidden="true" id="db-functions"></a><a href="#db-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DB Functions</h2>
+<p>Datastore operators are built into the language. All functions are independently versioned. In your canvas you will see the latest version, as well as any versions you are currently using.</p>
+<p>A list of all datastore functions is available <a href="https://ops-documentation.builtwithdark.com/?pretty=1">in the language reference</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="adding-a-record-to-a-datastore"></a><a href="#adding-a-record-to-a-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a record to a Datastore</h3>
+<p>To add items into a datastore, use <code>DB::set</code>. <code>DB::set</code> takes three parameters (the record to be added, its unique key, and the datastore).</p>
+<p><img src="/docs/assets/datastores/dbset_empty.png" alt="DBset"></p>
+<p>For the earlier example datastore, using this with userID as the key would look as follows:</p>
+<p><img src="/docs/assets/datastores/dbset.png" alt="DBset"></p>
+<p>Using the a generated key with <code>DB::generateKey</code> would look like this instead:</p>
+<p><img src="/docs/assets/datastores/dbset_genkey.png" alt="DBset"></p>
+<h3><a class="anchor" aria-hidden="true" id="datastore-meta-actions"></a><a href="#datastore-meta-actions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datastore meta-actions</h3>
+<p>Some datastore functions provide ability to do something to the entire datastore, and only require the datastore as the parameter.</p>
+<p>Any datastore function that includes 'with keys' returns both the key and the value, a list of nested dictionaries <code>[{&quot;1&quot;: { userId: 1, name: &quot;Ellen&quot;, pets: [&quot;Gutenberg&quot;]} }, {&quot;2&quot;: { userId: 2, name: &quot;Paul&quot;, pets: []}]</code></p>
+<p>Functions that do not include 'with keys' return just the values, a list of dictionaries <code>[{ userId: 1, name: &quot;Ellen&quot;, pets: [&quot;Gutenberg&quot;]} , {userId: 2, name: &quot;Paul&quot;, pets: []}]</code></p>
+<p>These include:</p>
+<ul>
+<li><code>DB::count</code></li>
+<li><code>DB::deleteAll</code></li>
+<li><code>DB::getAll</code></li>
+<li><code>DB::getAllwithKeys</code></li>
+<li><code>DB::keys</code></li>
+<li><code>DB::schemaFields</code></li>
+<li><code>DB::schema</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="querying-by-key-dbget"></a><a href="#querying-by-key-dbget" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Querying by key, DB::get</h3>
+<p>The key is a good way to be able to find information in the datastore. DB::get finds records by key (reminder: withKeys returns nested dictionaries including keys, so DB::get does not return the key). Datastore functions that allow action based on key are:</p>
+<ul>
+<li><code>DB::delete</code></li>
+<li><code>DB::get</code></li>
+<li><code>DB::getMany</code></li>
+<li><code>DB::getManywithKeys</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="querying-by-record-field-dbqueryexactfield"></a><a href="#querying-by-record-field-dbqueryexactfield" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Querying by record field, DB::queryExactField</h3>
+<p>Using DB::queryExactField checks for a specific field within the record. <code>queryOnewithExactField</code> finds one response, whereas <code>queryExactFields</code> will return as many as exist. (reminder: withKeys returns nested dictionaries including keys).</p>
+<ul>
+<li><code>DB::queryExactFields</code></li>
+<li><code>DB::queryExactFieldswithKey</code></li>
+<li><code>DB::queryOnewithExactField</code></li>
+<li><code>DB::queryOneWithExactFieldWithKey</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="querying-by-criteria-dbquery-experimental-sql-compiler"></a><a href="#querying-by-criteria-dbquery-experimental-sql-compiler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Querying by criteria, DB::query (experimental SQL Compiler)</h3>
+<p>For being able to run more effective datastore queries, we also have a query compiler. More about this feature is in this <a href="https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd">blog post</a>.</p>
+<p>This allows you to write a function that can be evaluated for the datastore.</p>
+<p><img src="/docs/assets/datastores/dbquery.png" alt="DBset"></p>
+<p>DB::query allows taking a datastore and a block filter. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not yet support the code in question (please let us know when you hit this, and which function you wanted to use!)</p>
+<p>You can also use DB::querywithKey to get both the key and record, DB::queryOne to get only one response, and DB::queryOnewithKey to get only one response, with the key and record.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/language"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/functional-aspects"><span>Functional Aspects</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a><ul class="toc-headings"><li><a href="#keys">Keys</a></li><li><a href="#values">Values</a></li></ul></li><li><a href="#db-functions">DB Functions</a><ul class="toc-headings"><li><a href="#adding-a-record-to-a-datastore">Adding a record to a Datastore</a></li><li><a href="#datastore-meta-actions">Datastore meta-actions</a></li><li><a href="#querying-by-key-dbget">Querying by key, DB::get</a></li><li><a href="#querying-by-record-field-dbqueryexactfield">Querying by record field, DB::queryExactField</a></li><li><a href="#querying-by-criteria-dbquery-experimental-sql-compiler">Querying by criteria, DB::query (experimental SQL Compiler)</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
