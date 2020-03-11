@@ -5,7 +5,7 @@ title: Your first API endpoint
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
-1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP`  on the sidebar.
+1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP` on the sidebar.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
 
@@ -31,6 +31,6 @@ Click the hamburger in the upper right and select "open in new tab", to see your
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
 
-5. Mouse over the white dots on the left. Each dot is a "trace" of  a single request to your handler.
+5. Mouse over the white dots on the left. Each dot is a "trace" of a single request to your handler.
 
 Congratulations! You've shipped your first Dark API endpoint.

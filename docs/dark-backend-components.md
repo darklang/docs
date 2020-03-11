@@ -88,7 +88,7 @@ If you do not have a field that would be suitable as the key, you can use DB::ge
 ### Inserting & Updating into the DB
 
 - Use DB::set to put something in the DB. It takes a key, such as a user’s email: “DB::set user user.email Users”
-    - if you don’t have a natural unique key, use DB::generateKey to generate a random one.
+  - if you don’t have a natural unique key, use DB::generateKey to generate a random one.
 - Using DB::set with the existing key will overwrite the existing item.
 
 ### Using your Data from Another Datastore
@@ -108,7 +108,7 @@ Send us a message on our Community Slack and we’ll help you figure out the bes
 - Use DB::get to get a single item by its key.
 - Use DB::getMany to get many items by key
 - Use DB::getAll to get all items in the DB.
-    - You can then use list::Take to get the first n items.
+  - You can then use list::Take to get the first n items.
 - Use DB::query, DB::queryWithKey, DB::queryOne and DB::queryOneWithKey to search the DB for items by the value of their fields.
 
 `getMany_v1`, `getAll_v1`, `queryWithKey_v1` all return a list of [Key, Item] lists. Ie. a list of lists where the inner list is a two-item list where the first item is the key of the item and the second item is the item itself. This is to allow you to `set_v1` the item back into the datastore if you update it and the key is not derivative of the item itself. (eg. key is a UUID)

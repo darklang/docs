@@ -65,7 +65,7 @@ You can see this sample [here](https://darklang.com/a/sample-match).
 The following types will have their values unwrapped in the happy case, and wrapped inside the error rail in the error case.
 
 | Type        | Happy Case | Error Case    |
-|-------------|------------|---------------|
+| ----------- | ---------- | ------------- |
 | Result type | OK val     | Error message |
 | Option type | Just val   | Nothing       |
 

@@ -46,7 +46,7 @@ Make sure you click on the option to Save URLs, then navigate to **Settings > Ma
 
 --
 
-***Before continuing, please visit the Shareable URL to install the application.*** By visiting this URL, you’re making sure you have a real trace to work from in Dark. If you’re new to Dark, [Trace driven development](trace-driven-development.md) is a good overview of why.
+**_Before continuing, please visit the Shareable URL to install the application._** By visiting this URL, you’re making sure you have a real trace to work from in Dark. If you’re new to Dark, [Trace driven development](trace-driven-development.md) is a good overview of why.
 
 --
 

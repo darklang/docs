@@ -12,7 +12,7 @@ A [Github Action](https://github.com/marketplace/actions/upload-static-assets-to
 
 ## Simple Use Case
 
-*Note: You can see the finished product at [https://darklang.com/a/sample-static-assets](https://darklang.com/a/sample-static-assets)*
+_Note: You can see the finished product at [https://darklang.com/a/sample-static-assets](https://darklang.com/a/sample-static-assets)_
 
 We have a single page app, written in react. It talks to our API, written in Dark. Now we’d like to deploy that app so that customers can use it too. This also works in a similar way for Vue applications, with a few caveats called out in line.
 
@@ -36,8 +36,8 @@ We have a command-line app to allow you to deploy your assets.
 
 ### Installation
 
-1. Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for OSX, Windows, or Linux.
-2. On OSX or Linux,
+1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for OSX, Windows, or Linux.
+2.  On OSX or Linux,
 
         chmod +x dark-cli-apple
 
@@ -47,7 +47,7 @@ We have a command-line app to allow you to deploy your assets.
 
     to make it executable.
 
-3. To confirm it works, run it with —help:
+3.  To confirm it works, run it with —help:
 
         ./dark-cli-apple --help
 
@@ -73,8 +73,8 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
 
 ### Deploy
 
-1. To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
-2. Run:
+1.  To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
+2.  Run:
 
         ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
 
@@ -108,23 +108,23 @@ Instead of calling serveLatest, you can call serve, and use the deploy hash from
 ### Functions
 
 - `urlFor <deployHash : String> <file : String> -> String`
-    - Returns a url to a file for the current canvas and the given deployHash:
-    - `StaticAssets::urlFor "o6vs1aqcbx" "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
+  - Returns a url to a file for the current canvas and the given deployHash:
+  - `StaticAssets::urlFor "o6vs1aqcbx" "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
 - `urlForLatest <deployHash : String> <file : String> -> String`
-    - Returns a url to a file for the current canvas and the latest deploy:
-    - `StaticAssets::urlForLatest "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
+  - Returns a url to a file for the current canvas and the latest deploy:
+  - `StaticAssets::urlForLatest "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
 - `fetch <deployHash : String> <file : String> -> String`
-    - Returns the contents of a file for the current canvas and the given deployHash:
-    - `StaticAssets::fetch "o6vs1aqcbx" "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
+  - Returns the contents of a file for the current canvas and the given deployHash:
+  - `StaticAssets::fetch "o6vs1aqcbx" "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
 - `fetchLatest <deployHash : String> <file : String> -> String`
-    - Returns a url to a file for the current canvas and the latest deploy:
-    - `StaticAssets::fetchLatest "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
+  - Returns a url to a file for the current canvas and the latest deploy:
+  - `StaticAssets::fetchLatest "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
 - `serve <deployHash : String> <file : String> -> String`
-    - Returns the contents of a file for the current canvas and the given deployHash:
-    - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
+  - Returns the contents of a file for the current canvas and the given deployHash:
+  - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
 - `serveLatest <deployHash : String> <file : String> -> String`
-    - Returns a url to a file for the current canvas and the latest deploy:
-    - `StaticAssets::fetchLatest "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
+  - Returns a url to a file for the current canvas and the latest deploy:
+  - `StaticAssets::fetchLatest "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
 
 ### Command line reference
 
