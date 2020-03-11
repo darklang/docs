@@ -134,7 +134,7 @@ Dark has no exceptions - all errors go through Results. See [error handling](err
 ### Dicts
 
 Dicts are maps from a certain key type to a certain value type. The key must
-currently be a string.  The value can be any type but all elements of the Dict
+currently be a string. The value can be any type but all elements of the Dict
 are the same type (not currently enforced).
 
 Dicts are different than records: dicts can have arbitrary keys.
@@ -324,7 +324,7 @@ defining functions in using points-free style.
 Functions do not live in the “Canvas”, but rather are a little bit ethereal.
 
 Built-in functions are all versioned: we frequently deprecate old functions and
-add updates. When we deprecate old versions, your code does *not* change, and
+add updates. When we deprecate old versions, your code does _not_ change, and
 you keep using the old ones. We intend to support automated refactoring and
 updating in the future.
 

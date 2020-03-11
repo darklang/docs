@@ -10,14 +10,9 @@ Datastores in Dark are key-value based (persistent hashmaps). When you create a 
 
 ![Empty Datastore](assets/datastores/empty.png)
 
-The key is the unique identifier for each record, and is always of type `string`. **The key is not visible when looking at the Datastore's schema on the canvas.**  You cannot mark a record field as the key, but you can use the same value for the field and the key when using `Db::set`. An expected response when retrieving a set of records, with keys, is as following:
+The key is the unique identifier for each record, and is always of type `string`. **The key is not visible when looking at the Datastore's schema on the canvas.** You cannot mark a record field as the key, but you can use the same value for the field and the key when using `Db::set`. An expected response when retrieving a set of records, with keys, is as following:
 
-`[{key: {
-        key1: value1,
-        key2: value2}
-}, {key: {
-        key1: value3,
-        key2: value4}]`
+`[{key: { key1: value1, key2: value2} }, {key: { key1: value3, key2: value4}]`
 
 The key and record are both available in the preview of the most recently added item.
 
@@ -42,36 +37,15 @@ Some common key choices:
 
 - A unique field (like userId). If the field is not already a string use `toString`. The key is shown in the preview data.
 
-`[{"1": {
-        userId: 1,
-        name: "Ellen",
-        pets: ["Gutenberg"]}
-}, {"2": {
-        userId: 2,
-        name: "Paul",
-        pets: []}]`
+`[{"1": { userId: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"2": { userId: 2, name: "Paul", pets: []}]`
 
 - A unique derivative of a field (like name and UserId, or a slug).
 
-`[{"ellen1": {
-        userId: 1,
-        name: "Ellen",
-        pets: ["Gutenberg"]}
-}, {"paul2": {
-        userId: 2,
-        name: "Paul",
-        pets: []}]`
+`[{"ellen1": { userId: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"paul2": { userId: 2, name: "Paul", pets: []}]`
 
 - A unique identifier generated programmatically (`DB::generateKey`).
 
-`[{"dee09c7e-6ede-402d-9ea4-4ee8fe843688": {
-        id: 1,
-        name: "Ellen",
-        pets: ["Gutenberg"]}
-}, {"ac7d4f1f-a164-4450-96f3-728b087bb9f4": {
-        id: 2,
-        name: "Paul",
-        pets: []}]`
+`[{"dee09c7e-6ede-402d-9ea4-4ee8fe843688": { id: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"ac7d4f1f-a164-4450-96f3-728b087bb9f4": { id: 2, name: "Paul", pets: []}]`
 
 ### Values
 
@@ -101,22 +75,9 @@ Using the a generated key with `DB::generateKey` would look like this instead:
 
 Some datastore functions provide ability to do something to the entire datastore, and only require the datastore as the parameter.
 
-Any datastore function that includes 'with keys' returns both the key and the value, a list of nested dictionaries `[{"1": {
-        userId: 1,
-        name: "Ellen",
-        pets: ["Gutenberg"]}
-}, {"2": {
-        userId: 2,
-        name: "Paul",
-        pets: []}]`
+Any datastore function that includes 'with keys' returns both the key and the value, a list of nested dictionaries `[{"1": { userId: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"2": { userId: 2, name: "Paul", pets: []}]`
 
-Functions that do not include 'with keys' return just the values, a list of dictionaries `[{
-        userId: 1,
-        name: "Ellen",
-        pets: ["Gutenberg"]}
-, {userId: 2,
-        name: "Paul",
-        pets: []}]`
+Functions that do not include 'with keys' return just the values, a list of dictionaries `[{ userId: 1, name: "Ellen", pets: ["Gutenberg"]} , {userId: 2, name: "Paul", pets: []}]`
 
 These include:
 

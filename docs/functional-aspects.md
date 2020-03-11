@@ -32,7 +32,7 @@ You can see some examples are shown here: [https://darklang.com/a/sample-returns
 
 A handler or function will return the result of the last expression within it. If the last expression is blank, Dark will return a 500 error.
 
-If you have a statement where you only care about the side-effect (eg a **DB::set** or **emit** function) then you can put it on the right hand side of a **let _**:
+If you have a statement where you only care about the side-effect (eg a **DB::set** or **emit** function) then you can put it on the right hand side of a **let \_**:
 
 When you hit “enter” at the end of such a line, it will automatically add the let for you.
 
@@ -96,7 +96,7 @@ Look at the indentation to see what is being piped at a glance. A common mistake
 
 ![assets/functional/image13.png](assets/functional/image13.png)
 
-*To view the live code provided in the examples above, visit [https://darklang.com/a/sample-pipeline](https://darklang.com/a/sample-pipeline).*
+_To view the live code provided in the examples above, visit [https://darklang.com/a/sample-pipeline](https://darklang.com/a/sample-pipeline)._
 
 ## List::Map & Lambda
 
@@ -116,7 +116,7 @@ If we wanted to do something involving subsequent list items, we can use a List 
 
 **Known bug:**
 
-Right now, if you use a map with a function that has a side effect (like Int::Rand) the analysis will show you the impact of the *last* version of the side effect as though it was used for all of them. This is an analysis bug (you are actually getting a random int each time).
+Right now, if you use a map with a function that has a side effect (like Int::Rand) the analysis will show you the impact of the _last_ version of the side effect as though it was used for all of them. This is an analysis bug (you are actually getting a random int each time).
 
 List map with no side effect:
 

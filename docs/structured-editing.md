@@ -3,7 +3,7 @@ id: structured-editing
 title: Structured Editing
 ---
 
-*Note: for now, Dark is only supported for Chrome with browser extensions disabled.*
+_Note: for now, Dark is only supported for Chrome with browser extensions disabled._
 
 At heart, Dark is an expression-oriented programming language. This aspect of Dark enables powerful features like live values and trace-driven development. This section introduces a simple way to think about the structure of Dark programs within the editor.
 
@@ -54,7 +54,7 @@ Filling a blank with an expression with sub-parts introduces a new blank for eac
 
 ![Multiplication Diagram](assets/structuredediting/multiplication.png)
 
-In the expression 2 * 3, these sub-expressions are filled with the expressions 2 and 3:
+In the expression 2 \* 3, these sub-expressions are filled with the expressions 2 and 3:
 
 ![Multiplication Expression](assets/structuredediting/mul_expression.png)
 

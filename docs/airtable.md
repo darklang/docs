@@ -1,7 +1,7 @@
 ---
 id: airtable
 title: Airtable Sample
-sidebar_label: Airtable Sample 
+sidebar_label: Airtable Sample
 ---
 
 This guide will walk you through how you can use Airtable’s API to add or update information in Airtable. An Airtable sample canvas is available [here](https://darklang.com/a/sample-airtable).
@@ -17,8 +17,8 @@ This guide will walk you through how you can use Airtable’s API to add or upda
 - Create a background worker to send data to Airtable.
 - Add your API key, the Airtable API, and the Airtable table you’re going to use. An Airtable table looks something like this: appYPi96qgCwabzfE/Airtable%20Sample
 - We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using HttpClient::get.
-    - Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.
-    - To test out the API call, press the Play button.
+  - Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.
+  - To test out the API call, press the Play button.
 - If you only want one field, like the Name field, you will want to add “Record Type” to your table. To get the exact string for this, reference the Retrieve a Record section of your [Airtable API documentation](https://airtable.com/api).
 
 ![assets/airtable/image5.png](assets/airtable/image5.png)
@@ -42,8 +42,8 @@ This guide will walk you through how you can use Airtable’s API to add or upda
 - Create a background worker to send data to Airtable.
 - Add your API key, the Airtable API, and the Airtable table you’re going to use. An Airtable table looks something like this: appYPi96qgCwabzfE/Airtable%20Sample
 - We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using HttpClient::get.
-    - Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.
-    - To test out the API call, press the Play button.
+  - Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.
+  - To test out the API call, press the Play button.
 - Create your HttpClient::post call. Note that to add a new entry, you will need to format your data using “records” and “fields.” You can click the Play button next to post to manually populate your Airtable to check if its working. Here, I’ve added one entry, but you can replace the strings with variables to add data however you would like.
 
 ![assets/airtable/image6.png](assets/airtable/image6.png)

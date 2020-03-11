@@ -8,7 +8,7 @@ Dark flows from end user experience through to the backend components. If you wo
 
 ## Sending Requests to Dark
 
-Send requests to Dark *before writing code*. There are several ways to do this:
+Send requests to Dark _before writing code_. There are several ways to do this:
 
 1. Build your frontend or mobile app first and point your API endpoints at Dark (you can host your frontend on Dark by [uploading your static assets](static-assets.md) via CLI).
 2. Use another platform that makes requests via REST (Slack, Twilio, Shopify) and use Dark with existing webhooks or calls.
@@ -66,7 +66,7 @@ As seen above with “testinfo,” expressions will automatically show you their
 
 ![assets/trace/image4.png](assets/trace/image4.png)
 
-When an expression does have side effects (like changing a value in a datastore or calling an external API) it will have a green “play” or “replay” button that allows the developer to *choose* to run it for the current traces.
+When an expression does have side effects (like changing a value in a datastore or calling an external API) it will have a green “play” or “replay” button that allows the developer to _choose_ to run it for the current traces.
 
 In our earlier request, if we saved "request.body.info" to the variable "request_info," we could then choose to insert it into a datastore. In this case, there’s a play button to generate a new key, and a second one to insert the information:
 

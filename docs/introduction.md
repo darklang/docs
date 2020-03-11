@@ -8,12 +8,11 @@ asynchronous background workers, scheduled jobs, and persistent storage.
 Dark's framework is tightly coupled to the infrastructure, and as you write
 code you're able to develop from real incoming requests/traces.
 
-*Note: for now, Dark is only supported for Chrome with browser extensions disabled.*
+_Note: for now, Dark is only supported for Chrome with browser extensions disabled._
 
 ## Hello World
 
 ![Hello World](assets/helloworld.gif)
 
 Above, you can see the simplest app in Dark: the hello world app. It
-shows starting with an empty canvas, creating a HTTP endpoint (`GET
-/hello`), running code (`"Hello world"`) and opening that page.
+shows starting with an empty canvas, creating a HTTP endpoint (`GET /hello`), running code (`"Hello world"`) and opening that page.

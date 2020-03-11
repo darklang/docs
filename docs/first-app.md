@@ -2,12 +2,13 @@
 id: first-app
 title: Your first app
 ---
+
 We're going to take you through a tutorial to build an entire application that
 uses Dark's basic functionality. This should take between 10m and 45m,
 depending on how thorough you are.
 
-To start, open *darklang.com/a/USERNAME-gettingstarted* in another
-window. This will open the Dark editor on your first *canvas*.
+To start, open _darklang.com/a/USERNAME-gettingstarted_ in another
+window. This will open the Dark editor on your first _canvas_.
 
 To see a completed version of this tutorial, go to
 [https://darklang.com/a/sample-gettingstarted](https://darklang.com/a/sample-gettingstarted).

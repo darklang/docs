@@ -7,11 +7,13 @@
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "lint": "markdownlint --config markdownlint.json ../docs/*.md"
+    "lint": "markdownlint --config markdownlint.json ../docs/*.md",
+    "format": "prettier --write ../docs/*.md"
   },
   "devDependencies": {
     "docusaurus": "^1.14.3",
-    "markdownlint-cli": "^0.22.0"
+    "markdownlint-cli": "^0.22.0",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
     "yarn": "^1.22.1"
