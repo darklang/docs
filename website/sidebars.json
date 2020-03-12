@@ -19,6 +19,8 @@
     "Language": [
       "language",
       "datastores",
+      "httpclient",
+      "http",
       "packages",
       "functional-aspects"
     ],

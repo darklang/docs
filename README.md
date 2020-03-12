@@ -167,7 +167,9 @@ For more information about custom pages, click [here](https://docusaurus.io/docs
 ## Checking formatting
 
 We run some tools to ensure that the docs are consistently formatted and to
-find common errors. `markdownlint` is run automatically in CI - you can run it
+find common errors. If you run `yarn format` you should pass the linter.
+
+`markdownlint` is run automatically in CI - you can run it
 locally as `yarn run lint`.
 
 # How CI Auto-deploys
