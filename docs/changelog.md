@@ -6,9 +6,9 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-# Week of 3/13/2020
+## Week of 3/13/2020
 
-### Features:
+### Features
 
 - We now tell you how to deal with the ErrorRail in the docstrings for functions that returns `Options` and `Results`
 
@@ -21,7 +21,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - `DB::query` (and other `DB::query` functions) now support `Date` operations
 - Performance: We've improved the load speed of your code on our servers by about 3x over the last few weeks, with the final change landing this week. This has the largest impact when loading the editor as all of your code loads then (though it is also less noticeable there as the JS overhead is higher than the DB overhead so 🤷🏽‍♀️)
 
-### Bug fixes:
+### Bug fixes
 
 - Entering  `+` no longer causes extraneous characters to be placed
 - Uploading static assets on Windows no longer fails for nested directories
