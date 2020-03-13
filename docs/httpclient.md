@@ -26,5 +26,3 @@ to combine two headers, use `Dict::merge`.
 To add a header with a "-" in its name, use `Dict::set`.
 
 ![HTTPClientGet](assets/httpclient/hyphen.png)
-
-
