@@ -4,7 +4,38 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-We fix lots of bugs at Dark each week! Here is a brief list of the fixes and updates.
+Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
+
+## Week of 3/13/2020
+
+### Features
+
+- We now tell you how to deal with the ErrorRail in the docstrings for functions that returns `Options` and `Results`
+
+![assets/changelog/Mar13/errorrail.png](assets/changelog/Mar13/errorrail.png)
+
+- We've started narrowing down the types in the autocomplete using types, and we now have some nice error messages for options which don't match the types
+
+![assets/changelog/Mar13/autocomplete.png](assets/changelog/Mar13/autocomplete.png)
+
+- `DB::query` (and other `DB::query` functions) now support `Date` operations
+- Performance: We've improved the load speed of your code on our servers by about 3x over the last few weeks, with the final change landing this week. This has the largest impact when loading the editor as all of your code loads then (though it is also less noticeable there as the JS overhead is higher than the DB overhead so 🤷🏽‍♀️)
+
+### Bug fixes
+
+- Entering  `+` no longer causes extraneous characters to be placed
+- Uploading static assets on Windows no longer fails for nested directories
+- Adding a `let` above a pipe no longer results in unexpected behavior
+
+### Documentation
+
+We added a bunch of improved documentation, including:
+
+- better docs for hosting [static assets](https://darklang.github.io/docs/static-assets)
+- a new doc describing [Datastores](https://darklang.github.io/docs/datastores) in more detail
+- a new doc describing our (very limited) support for [packages](https://darklang.github.io/docs/packages)
+- [a new doc describing the HTTP client library](https://darklang.github.io/docs/httpclient)
+- a new doc describing how to [respond to HTTP requests](https://darklang.github.io/docs/http)
 
 ## Week of 3/6/2020
 
