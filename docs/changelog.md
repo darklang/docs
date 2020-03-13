@@ -20,6 +20,9 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - `DB::query` (and other `DB::query` functions) now support `Date` operations
 - Performance: We've improved the load speed of your code on our servers by about 3x over the last few weeks, with the final change landing this week. This has the largest impact when loading the editor as all of your code loads then (though it is also less noticeable there as the JS overhead is higher than the DB overhead so 🤷🏽‍♀️)
+- We have launched an alpha [package manager](https://darklang.github.io/docs/packages), which allows re-using Dark functions from other users or canvases. Today, only Dark employees can add functions to the package manager. We've started with some commonly used Slack functions, but let us know via Slack or email if you have other requests - or your own functions you'd like to share.
+
+![assets/changelog/Mar13/slackfunctions.png](assets/changelog/Mar13/slackfunctions.png)
 
 ### Bug fixes
 
