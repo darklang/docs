@@ -1,7 +1,7 @@
 ---
 id: http
-title: HTTP responses
-sidebar_label: HTTP responses
+title: HTTP Responses
+sidebar_label: HTTP Responses
 ---
 
 ### HTTP
