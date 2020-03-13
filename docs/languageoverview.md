@@ -15,5 +15,5 @@ Dark also includes HTTP libraries for interacting with external APIs, a package 
 Dark is a statically-typed functional/imperative hybrid, based loosely on ML. Dark has implicit returns, and makes heavy use of pipelines and functions like `List::map`
 
 ### More Details
-Dark is somewhat similar to OCaml or Elm. It has many similarities to Rust and Haskell, and is also influenced by Clojure, Ruby, Python, Coffeescript, as well as our experience with (alphabetically) Bash, C, Clojure, Coffeescript, C++, Elm, Javascript, Java, Haskell, OCaml, Perl, PHP, Python, ReasonML, Ruby/Rails, React, and Rust.
 
+Dark is somewhat similar to OCaml or Elm. It has many similarities to Rust and Haskell, and is also influenced by Clojure, Ruby, Python, Coffeescript, as well as our experience with (alphabetically) Bash, C, Clojure, Coffeescript, C++, Elm, Javascript, Java, Haskell, OCaml, Perl, PHP, Python, ReasonML, Ruby/Rails, React, and Rust.
