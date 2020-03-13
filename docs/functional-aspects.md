@@ -6,107 +6,64 @@ sidebar_label: Functional Aspects
 
 ## Implicit Returns
 
-![assets/functional/image1.png](assets/functional/image1.png)
-
-We often get asked how to add more code to a handler. In the “hello world” above, there’s nowhere to enter code! This is mostly intentional - Dark works a little differently here than most languages.
-
 Most languages, especially Javascript, are imperative: you tell it to do one thing, then do another thing. So whenever you have code, you can add more code below it to do more stuff.
 
-Dark uses “implicit returns” (somewhat similar to Ruby, Coffeescript, Haskell and Rust). The value of an expression is that last value in that expression. So in the “hello world” example, you don’t write ‘return “hello world”’, just ‘“hello world”’ is enough.
+Dark uses "implicit returns" (somewhat similar to Ruby, Coffeescript, Haskell and Rust). The value of an expression is that last value in that expression. So in the "hello world" example, you don't write `return "hello world"`, just `"hello world"` is enough. 
 
-Because of the implicit returns model, you write code differently. In JS you might write:
-
-```js
-if (myCondition) {
-  s = 42;
-} else {
-  s = 56;
-}
-```
-
-In Dark, you’ll instead write:
-
-```elm
-let s = if myCondition
-        then 42
-        else 56
-```
+A handler or function will return the result of the last expression within it. The return value of an expression is shown below the handler. If the last expression is blank, Dark will return a 500 error. 
 
 You can see some examples are shown here: [https://darklang.com/a/sample-returns](https://darklang.com/a/sample-returns)
 
-A handler or function will return the result of the last expression within it. If the last expression is blank, Dark will return a 500 error.
+Other computation (side effects) can be done using a statement.
 
-If you have a statement where you only care about the side-effect (eg a **DB::set** or **emit** function) then you can put it on the right hand side of a **let \_**:
+## Statements
 
-When you hit “enter” at the end of such a line, it will automatically add the let for you.
+If you wish to use a function for side-effect (like `DB::set` or `emit`) then you can put it on the right hand side of a `let`.  
 
-### HTTPRespondWith
-
-There's a set of functions that help form a response of a given type, ex [this handler](https://darklang.com/a/sample-returns#handler=1835918421) responds with text.
+Dark does not yet support statements without the extra `let`. When you hit “enter” at the end of a line that has a return value, we assume you want to make a new expression. Since that would be the last expression (and returned), we will automatically add the `let _ =` to the expression for you. 
 
 ## Pipelines
 
-### Pipelines/Threads
+### Overview
 
-In Dark, we like to use pipelines to make code more readable. Pipelines are similar to method chaining in OO languages, and pipes in Bash.
+In Dark, pipelines make code more readable. Pipelines are similar to method chaining in OO languages, and pipes in Bash. Rather than calling functions with their parameters, you pass the previous value into the **first** parameter of an expression:
 
-Pipelines always pipe the previous value into the first parameter of the next expression.
+![assets/functional/image2.gif](assets/functional/image2.gif)
 
 Traditionally, you call functions with their arguments as parameters. However, that is often confusing and can be hard to read:
 
 ![assets/functional/Image6.png](assets/functional/image6.png)
 
-Using pipelines, you can perform a series of transformations on a value in order. Here, we start with the string "live" and pipe it to String::reverse to produce "evil". Then we pipe the result to String::toUppercase, producing the string "EVIL":
+Pipelines perform a series of transformations on a value in order. Here, we start with the string "live" and pipe it to String::reverse to produce "evil". Then we pipe the result to String::toUppercase, producing the string "EVIL":
 
 ![assets/functional/image9.png](assets/functional/image9.png)
 
-We find this simpler to reason about, though it can often take a few tries to understand it. This might help:
-
-![assets/functional/image2.gif](assets/functional/image2.gif)
-
 ### How to Pipe
 
-To start a pipeline, place the caret inside the expression you want to transform:
+To start a pipeline, use `|>` at the end of the expression you are piping.
 
-![assets/functional/image11.png](assets/functional/image11.png)
+![assets/functional/openpipe.png](assets/functional/openpipe.png)
 
-Then press “shift+enter”:
+Once you are in a pipeline, hitting `return` at the end of the expression will continue the pipe.
 
-![assets/functional/mage15.png](assets/functional/image15.png)
+If you need to pipe a specific subset of an expression, you can select it and then hit `shift+return`. For example, selecting UUID::generate to pipe it into toString.
 
-And you can keep typing:
+![assets/functional/openpipe.png](assets/functional/selectpipe.png)
+![assets/functional/openpipe.png](assets/functional/successfulpipe.png)
 
-![assets/functional/image5.png](assets/functional/image5.png)
+### Indentation Tip
 
-You can also place the caret at the end of the line, and press enter.
-
-We currently default to piping larger expressions for convenience, but if you want to transform at a more local level, you can do that too, by selecting the expression you want to transform:
-
-![assets/functional/image10.png](assets/functional/image10.png)
-
-Then press "shift+enter":
-
-![assets/functional/image3.png](assets/functional/image3.png)
-
-And then you can keep typing:
-
-![assets/functional/image8.png](assets/functional/image8.png)
-
-You can also extend the pipe by pressing Enter at the end of the line with a pipe on it.
-
-### Tip
-
-Look at the indentation to see what is being piped at a glance. A common mistake with pipelines is introducing them at an unintended "level". For example, here the piped value is the let expression as a whole, but the author intended to pipe the expression bound to the variable s:
+Look at the indentation to see what is being piped. A common mistake with pipelines is introducing them at an unintended "level". For example, here the piped value is the let expression as a whole, but the author intended to pipe the expression bound to the variable s:
 
 ![assets/functional/image13.png](assets/functional/image13.png)
 
-_To view the live code provided in the examples above, visit [https://darklang.com/a/sample-pipeline](https://darklang.com/a/sample-pipeline)._
+_To view the live code provided in the examples above, visit [https://darklang.com/a/sample-pipeline](https://darklang.com/a/sample-pipeline).
 
-## List::Map & Lambda
+## List::Map 
 
-Dark does not have a for-loop, instead it has “List::map.” This allows you to do something to a collection of objects in a list.
+Dark does not have a for-loop, it has `List::map.` This allows you to do something to a collection of objects in a list.
 
-List::map takes two parameters. In this case we are passing in a list of integers, and then there’s a block where we can choose what to do to each of them.
+`List::map` takes two parameters. In this case we are passing in a list of integers, and a block. 
 
 ![assets/functional/image4.png](assets/functional/image4.png)
 
@@ -118,9 +75,10 @@ If we wanted to do something involving subsequent list items, we can use a List 
 
 ![assets/functional/image14.png](assets/functional/image14.png)
 
-**Known bug:**
+### Tips
 
-Right now, if you use a map with a function that has a side effect (like Int::Rand) the analysis will show you the impact of the _last_ version of the side effect as though it was used for all of them. This is an analysis bug (you are actually getting a random int each time).
+- The live values within a block on `List::map` will show you the last item in the list. The live value for `List::map` shows the full outcome.
+- **Known bug:** Right now, if you use a map with a function that has a side effect (like Int::Rand) the analysis will show you the impact of the _last_ version of the side effect as though it was used for all of them. This is an analysis bug (you are actually getting a random int each time).
 
 List map with no side effect:
 
@@ -134,30 +92,22 @@ List map with side effect, discrepancy between analysis and values stored in DB:
 
 ![assets/functional/listmap3.png](assets/functional/listmap3.png)
 
+## Blocks (lambdas, anonymous functions)
+
+Blocks are anonymous functions that operate on a set of values. Expressions like `List::map` and `DB::query` take them as parameters.
+
+![assets/functional/block.png](assets/functional/block.png)
+
+To open the block type `\`. It autopopulates  the parameters it is expecting (like `value` for `Db::query` or `accum, curr` for `List::fold`). 
+
+![assets/functional/block.png](assets/functional/blockfilter.png)
+
 ## Match
 
-The match expression is used to destructure complex types (it can be used similarly to switch statements in other languages). At the moment, it only supports the Option type (Just and Nothing), but we will soon be adding a Result type for error handling, as well as user-defined types.
+The match expression is used to destructure complex types. It can be used similarly to switch statements in other languages. At the moment, it only supports the Option type (Just and Nothing) and Result type (Ok and Error). 
+
+By default, functions that return Option or Result go to the [Error Rail](https://darklang.github.io/docs/unique-aspects#functions-that-use-error-rail). Once you remove the function from the Error Rail, use match for destructuring.
 
 Here’s an example of using a match expression with a dictionary lookup.
 
 ![assets/functional/image16.png](assets/functional/image16.png)
-
-Note that you will need to take the value off the error rail first, or you will get this ([more docs on the error rail](error-handling):
-
-![assets/functional/image18.png](assets/functional/image18.png)
-
-## Language Versioning
-
-You can see that many standard library items are labeled “3” or “1” in the editor. These refer to the version of the function. When you start a new canvas, you will always have the latest versions. If we upgrade, you’ll have the choice to do so, but can continue to use the old ones.
-
-## Dictionaries and Objects
-
-To initiate a dictionary, call Dict::empty. You may add keys with Dict::set.
-
-![assets/functional/image12.png](assets/functional/image12.png)
-
-To get values from a dictionary, use Dict:get.
-
-![assets/functional/image7.png](assets/functional/image7.png)
-
-We will soon be deprecating our objects ( { } ), and splitting them into two concepts: record types and dictionaries. For now, you should consider curly braces to mean records, and use Dict:: functions for supporting things like allowing non alphanumeric characters keys.
