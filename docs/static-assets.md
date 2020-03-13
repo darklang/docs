@@ -36,20 +36,52 @@ We have a command-line app to allow you to deploy your assets.
 
 ### Installation
 
-1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for OSX, Windows, or Linux.
-2.  On OSX or Linux,
+1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for macOS, Windows, or Linux.
+2.  On macOS or Linux,
 
-        chmod +x dark-cli-apple
+    ```shell
+    chmod +x dark-cli-apple
+    ```
 
     or
 
-        chmod +x dark-cli-linux
+    ```shell
+    chmod +x dark-cli-linux
+    ```
 
     to make it executable.
 
-3.  To confirm it works, run it with —help:
+3.  To confirm it works, run it with `-—help`:
 
-        ./dark-cli-apple --help
+    macOS:
+
+    ```shell
+    ./dark-cli-apple --help
+    ```
+
+    Linux:
+
+    ```shell
+    ./dark-cli-linux --help
+    ```
+
+    Windows:
+
+    ```shell
+    ./dark-cli.exe --help
+    ```
+
+4.  On some versions of macOS, you may get one of the the following popups:
+
+    ![Not downloaded from the app store popup](assets/staticassets/macos-popup1.png)
+
+    ![Developer cannot be verified popup](assets/staticassets/macos-popup2.png)
+
+    to resolve this, press `Ok` or `Cancel` and open `System Preferences -> Security & Privacy -> General`.
+
+    ![System Preferences -> Security & Privacy -> General -> Allow Anyway](assets/staticassets/macos-allow.png)
+
+    Press `Allow Anyway` and repeat step 3.
 
 ### Configure your client
 
