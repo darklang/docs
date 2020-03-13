@@ -36,20 +36,52 @@ We have a command-line app to allow you to deploy your assets.
 
 ### Installation
 
-1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for OSX, Windows, or Linux.
-2.  On OSX or Linux,
+1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for macOS, Windows, or Linux.
+2.  On macOS or Linux,
 
-        chmod +x dark-cli-apple
+    ```shell
+    chmod +x dark-cli-apple
+    ```
 
     or
 
-        chmod +x dark-cli-linux
+    ```shell
+    chmod +x dark-cli-linux
+    ```
 
     to make it executable.
 
-3.  To confirm it works, run it with —help:
+3.  To confirm it works, run it with `-—help`:
 
-        ./dark-cli-apple --help
+    macOS:
+
+    ```shell
+    ./dark-cli-apple --help
+    ```
+
+    Linux:
+
+    ```shell
+    ./dark-cli-linux --help
+    ```
+
+    Windows:
+
+    ```shell
+    ./dark-cli.exe --help
+    ```
+
+4.  On some versions of macOS, you may get one of the the following popups:
+
+    ![Not downloaded from the app store popup](assets/staticassets/macos-popup1.png)
+
+    ![Developer cannot be verified popup](assets/staticassets/macos-popup2.png)
+
+    to resolve this, press `Ok` or `Cancel` and open `System Preferences -> Security & Privacy -> General`.
+
+    ![System Preferences -> Security & Privacy -> General -> Allow Anyway](assets/staticassets/macos-allow.png)
+
+    Press `Allow Anyway` and repeat step 3.
 
 ### Configure your client
 
@@ -61,11 +93,15 @@ During the deployment of the assets, our backend replaces the string “DARK_STA
 
 In React, when compiling your react application, you can use PUBLIC_URL:
 
-    PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
+```bash
+PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
+```
 
 If using Vue, you likely want to set PUBLIC_PATH instead:
 
-    PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
+```bash
+PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
+```
 
 Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:
 
@@ -76,7 +112,9 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
 1.  To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
 2.  Run:
 
-        ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
+    ```bash
+    ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
+    ```
 
     On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
 
@@ -128,12 +166,14 @@ Instead of calling serveLatest, you can call serve, and use the deploy hash from
 
 ### Command line reference
 
-    ./latest/dark-cli-apple
-    error: The following required arguments were not provided:
-      <paths>
-      --canvas <canvas>
-      --password <password>
-      --user <user>
+```shell
+./dark-cli-apple
+error: The following required arguments were not provided:
+  <paths>
+  --canvas <canvas>
+  --password <password>
+  --user <user>
 
-    USAGE:
-    dark-cli-apple [FLAGS] <paths> --canvas <canvas> --password <password> --user <user>
+USAGE:
+dark-cli-apple [FLAGS] <paths> --canvas <canvas> --password <password> --user <user>
+```
