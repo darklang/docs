@@ -34,12 +34,14 @@ We’ll need some setup on your machine to upload the react app. Run these comma
 
 Note, replace anywhere that says USERNAME and PASSWORD with your Dark username and password.
 
-    git clone https://github.com/darklang/dark-signin.git
-    cd dark-signin
-    npm install
-    npm run build-for USERNAME-signin
-    npm run get-dark-cli
-    ./dark-cli-apple --canvas USERNAME-signin --user USERNAME --password PASSWORD build
+```shell
+git clone https://github.com/darklang/dark-signin.git
+cd dark-signin
+npm install
+npm run build-for USERNAME-signin
+npm run get-dark-cli
+./dark-cli-apple --canvas USERNAME-signin --user USERNAME --password PASSWORD build
+```
 
 If you get “Not found” on the last step, you’ll need to visit [https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin) first in your browser.
 

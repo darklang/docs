@@ -38,7 +38,9 @@ One current limitation is that you can only write code for existing traces (tryi
 
 Open terminal and curl:
 
-    curl -X POST -H 'Content-Type: application/json' https://username-canvasname.builtwithdark.com/test2 -d '{"test":"test data","info":"test info"}'
+```shell
+curl -X POST -H 'Content-Type: application/json' https://username-canvasname.builtwithdark.com/test2 -d '{"test":"test data","info":"test info"}'
+```
 
 ![assets/trace/image11.png](assets/trace/image11.png)
 
