@@ -165,7 +165,7 @@ to support typed Datastores, API contracts, and static types.
 
 Dark does not currently support user-defined enums.
 
-User-defined types will be either recrods or enums, or combinations of other type expressions.
+User-defined types will be either records or enums, or combinations of other type expressions.
 
 Types in Dark are out-of-line, meaning that they are not defined “on the
 canvas”, in a similar way to functions.
