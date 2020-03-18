@@ -67,66 +67,7 @@ In Dark, all datastores are a key-value store - a persistent hashmap/dictionary 
 
 ![assets/backend/image3.png](assets/backend/image3.png)
 
-The best way to get a list of all DB functions is to open a REPL and type DB::, or check the [language docs](https://ops-documentation.builtwithdark.com/?pretty=1).
-
-### Keys
-
-Items are inserted and found using the key (which is string), and items in the datastore are unique by key. DB::Set prompts you for the key.
-
-![assets/backend/image1.png](assets/backend/image1.png)
-
-You can use an existing field as the key, i.e. in this example:
-
-![assets/backend/image4.png](assets/backend/image4.png)
-
-([https://darklang.com/a/sample-datastore](https://darklang.com/a/sample-database))
-
-Both keys are set to be the name. (This would not be a great for a larger team as names would often be duplicated, but works for this example - email, fullname, or username would be a better key).
-
-If you do not have a field that would be suitable as the key, you can use DB::generateKey.
-
-### Inserting & Updating into the DB
-
-- Use DB::set to put something in the DB. It takes a key, such as a user’s email: “DB::set user user.email Users”
-  - if you don’t have a natural unique key, use DB::generateKey to generate a random one.
-- Using DB::set with the existing key will overwrite the existing item.
-
-### Using your Data from Another Datastore
-
-#### **If your datastore has an HTTP API**
-
-If your datastore has the ability to serve its data over an HTTP API, enable that and talk to it directly over HTTP.
-
-Some datastores like Mongo have an admin panel that will allow you to do this (we can walk you through it).
-
-#### **If your datastore doesn’t have an HTTP API**
-
-Send us a message on our Community Slack and we’ll help you figure out the best thing to do based on what you want to do.
-
-### Fetching & Querying from the DB
-
-- Use DB::get to get a single item by its key.
-- Use DB::getMany to get many items by key
-- Use DB::getAll to get all items in the DB.
-  - You can then use list::Take to get the first n items.
-- Use DB::query, DB::queryWithKey, DB::queryOne and DB::queryOneWithKey to search the DB for items by the value of their fields.
-
-`getMany_v1`, `getAll_v1`, `queryWithKey_v1` all return a list of [Key, Item] lists. Ie. a list of lists where the inner list is a two-item list where the first item is the key of the item and the second item is the item itself. This is to allow you to `set_v1` the item back into the datastore if you update it and the key is not derivative of the item itself. (eg. key is a UUID)
-
-If you are doing a one-off query you can inspect your datastore using a REPL.
-
-### Creating References Between DBs
-
-This canvas shows the way to create a reference between two datastores: in this case between Dark employees and their pets: [https://darklang.com/a/sample-datastore](https://darklang.com/a/sample-database)
-
-Users have a pets field, which is a list of strings. The keys for the pets are added to that list.
-
-### Locking, Unlocking, & Migration
-
-- You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”
-- If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll). This is probably easiest.
-- You can also copy and make a new, differently-named version of the datastore (i.e. Visits2) to make changes. You can ask in the Slack for best practices here.
-- Setting DBs by type and DB Migrations are coming - requests or inputs please let us know.
+[Detailed datastore information](datastores.md).
 
 ## Deleted
 

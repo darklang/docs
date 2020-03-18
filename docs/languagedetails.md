@@ -1,7 +1,7 @@
 ---
-id: language
-title: Language Overview
-sidebar_label: Overview
+id: languagedetails
+title: Language Details
+sidebar_label: Details
 ---
 
 This doc describes the Dark language. Dark is really a system - a
@@ -175,6 +175,8 @@ All types in Dark will be versioned.
 In the future, we intend to support typeclasses or traits to allow ad-hoc polymorphism.
 
 ### Records
+
+Records are most akin to Classes in an imperative language.
 
 Records are a set of keys and values. Each key name and type are defined, and
 the types do not have to be the same.

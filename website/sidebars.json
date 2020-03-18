@@ -17,12 +17,14 @@
       "error-handling"
     ],
     "Language": [
-      "language",
+      "languageoverview",
+      "unique-aspects",
+      "functional-aspects",
+      "languagedetails",
       "datastores",
-      "httpclient",
-      "http",
       "packages",
-      "functional-aspects"
+      "httpclient",
+      "http"
     ],
     "How to": [
       "static-assets",
