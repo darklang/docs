@@ -40,45 +40,6 @@ To resolve this problem, we can use a string instead. "123" or 123 |> **toString
 
 ## Error Rail
 
-The error rail allows you to keep writing code along the “happy path,” without stopping to handle errors. This is based on [Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a).
+The error rail allows you to keep writing code along the “happy path,” without stopping to handle errors. This is based on [Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a) and the UI elements are unique to Dark.
 
-The idea is that when you call a function which might not succeed, you can keep going. For example, if you try to look up a value in a dictionary or database, we don't make you immediately handle the error case, instead we "put the value on the error rail".
-
-There are two types that go to the error rail: Result and Option (more below). You can tell if an expression returns a result or option from looking at the docstring. Result and Option types both have a "good" value, indicating that the function succeeded, and a "bad" value that indicates that the function failed. In the case of a "good" value, you can just ignore the result and option type - we unwrap them automatically. In the case of a "bad" value, the execution will end (similar to throwing an exception that isn't caught).
-
-Here's a success case: Dark automatically unwraps the Option returned by `Dict::get`, so the result is just "cat".
-
-![assets/error/Screen_Shot_2020-01-17_at_2.54.17_PM.png](assets/error/Screen_Shot_2020-01-17_at_2.54.17_PM.png)
-
-In an error case, you will see `Nothing` appear on the rail (`Nothing` is the error value of an Option):
-
-![assets/error/Screen_Shot_2020-01-17_at_2.56.36_PM.png](assets/error/Screen_Shot_2020-01-17_at_2.56.36_PM.png)
-
-**When you are ready to handle error cases,** you remove them from the rail by using the editor command `take-function-off-rail` (open the Command palette by hitting Option-x or Alt-x).
-
-![assets/error/Screen_Shot_2020-01-17_at_2.54.51_PM.png](assets/error/Screen_Shot_2020-01-17_at_2.54.51_PM.png)
-
-![assets/error/Screen_Shot_2020-01-17_at_2.56.44_PM.png](assets/error/Screen_Shot_2020-01-17_at_2.56.44_PM.png)
-
-You can see this sample [here](https://darklang.com/a/sample-match).
-
-The following types will have their values unwrapped in the happy case, and wrapped inside the error rail in the error case.
-
-| Type        | Happy Case | Error Case    |
-| ----------- | ---------- | ------------- |
-| Result type | OK val     | Error message |
-| Option type | Just val   | Nothing       |
-
-### Handling errors
-
-Using the error rail, we'll automatically handle errors, returning a 500 error for bad results and a 404 for bad Options. This allows you to have nice clean code:
-
-![assets/error/mage9.png](assets/error/image9.png)
-
-Of course, while that's nice at the start, as you start to expand your Dark application, you will probably want to handle the errors directly. Here's how you would write error handling code:
-
-![assets/error/image12.png](assets/error/image12.png)
-
-The command **:take-function-off-rail** will stop the value being sent to the rail, and you get the unwrapped result.
-
-If you accidentally take a function off the error rail, you can add it back by selecting the same function, and using option-x (or alt-x) to select the command **:put-function-on-rail**.
+You can learn more about [which functions go to the error rail and how it works](https://darklang.github.io/docs/unique-aspects#functions-that-use-error-rail).

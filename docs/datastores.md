@@ -118,3 +118,16 @@ This allows you to write a function that can be evaluated for the datastore.
 DB::query allows taking a datastore and a block filter. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not yet support the code in question (please let us know when you hit this, and which function you wanted to use!)
 
 You can also use DB::querywithKey to get both the key and record, DB::queryOne to get only one response, and DB::queryOnewithKey to get only one response, with the key and record.
+
+### Creating References Between DBs
+
+This canvas shows the way to create a reference between two datastores: in this case between Dark employees and their pets: [https://darklang.com/a/sample-datastore](https://darklang.com/a/sample-database)
+
+Users have a pets field, which is a list of strings. The keys for the pets are added to that list.
+
+### Locking, Unlocking, & Migration
+
+- You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”
+- If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll). This is probably easiest.
+- You can also copy and make a new, differently-named version of the datastore (i.e. Visits2) to make changes. You can ask in the Slack for best practices here.
+- Setting DBs by type and DB Migrations are coming - requests or inputs please let us know.
