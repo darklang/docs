@@ -1,5 +1,9 @@
-The Dark docs are built using Docusaurus.
-If you're trying to do something beyond the scope of this README, check out their [docs](https://docusaurus.io/).
+Welcome to the source for the Dark documentation. Contribute your improvements as a pull request, or report problems in an issue.
+
+View the live docs here: https://darklang.github.io/docs
+
+The Dark docs are built using [Docusaurus](https://docusaurus.io/).
+If you're trying to do something beyond the scope of this README, check out their docs.
 
 # What's In This Document
 
@@ -11,6 +15,8 @@ If you're trying to do something beyond the scope of this README, check out thei
 * [Publishing Changes Manually](#publishing-changes-manually)
 
 # Get Started in 5 Minutes
+
+To change these docs and test the results locally:
 
 1. Make sure all the dependencies for the website are installed:
 
