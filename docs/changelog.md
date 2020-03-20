@@ -6,6 +6,30 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 3/20/2020
+
+- Now you can give us more information about your Dark projects, and let us know if they're live. This helps us understand how we can make Dark better for you!
+
+![assets/changelog/Mar20/about.png](assets/changelog/Mar20/about.png)
+
+- Significantly faster HTTP requests and canvas loading. We "fixed" this a few weeks ago, but only saw modest improvements. Yeah, there was a bug. So now it's fixed fixed: some HTTP requests have dropped from 3s to 70ms.
+- We've added lots of standard library functions:
+  - `Float::absoluteValue`
+  - `Float::negate`
+  - `Float::power`
+  - `Float::min`
+  - `Float::max`
+  - `Float::truncate`
+
+    ![assets/changelog/Mar20/float.png](assets/changelog/Mar20/float.png)
+
+  - `Int::negate`
+  - `Int::absoluteValue`
+  - `Dict::isEmpty`
+  - `String::isEmpty`
+  - `Date::weekday`
+  - `Bool::xor`
+
 ## Week of 3/13/2020
 
 ### Features
