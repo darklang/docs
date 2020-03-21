@@ -14,6 +14,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - Significantly faster HTTP requests and canvas loading. We "fixed" this a few weeks ago, but only saw modest improvements. Yeah, there was a bug. So now it's fixed fixed: some HTTP requests have dropped from 3s to 70ms.
 - We've added lots of standard library functions:
+
   - `Float::absoluteValue`
   - `Float::negate`
   - `Float::power`
@@ -50,7 +51,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 ### Bug fixes
 
-- Entering  `+` no longer causes extraneous characters to be placed
+- Entering `+` no longer causes extraneous characters to be placed
 - Uploading static assets on Windows no longer fails for nested directories
 - Adding a `let` above a pipe no longer results in unexpected behavior
 
