@@ -3,9 +3,9 @@ id: first-function
 title: Your first Function
 ---
 
-1. In Dark, the best way to create a function is by starting in a handler, and then extracting the working code to a function. This also means functions will always have a trace. Create a new REPL.
+1.  In Dark, the best way to create a function is by starting in a handler, and then extracting the working code to a function. This also means functions will always have a trace. Create a new REPL.
 
-2. In the REPL, write `DB:getAll` to get the Daily Reports. Run the function using the play button. This gives us all the data, but it's a bit hard to read. We'll create a function that makes a human readable summary of the number of reports for each day.
+2.  In the REPL, write `DB:getAll` to get the Daily Reports. Run the function using the play button. This gives us all the data, but it's a bit hard to read. We'll create a function that makes a human readable summary of the number of reports for each day.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/dbgetalldaily.png)
 
