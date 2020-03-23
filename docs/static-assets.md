@@ -36,52 +36,52 @@ We have a command-line app to allow you to deploy your assets.
 
 ### Installation
 
-1.  Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for macOS, Windows, or Linux.
-2.  On macOS or Linux,
+1. Go to [https://dark-cli.storage.googleapis.com/index.html](https://dark-cli.storage.googleapis.com/index.html), and download the appropriate binary for macOS, Windows, or Linux.
+2. On macOS or Linux,
 
-    ```shell
-    chmod +x dark-cli-apple
-    ```
+   ```shell
+   chmod +x dark-cli-apple
+   ```
 
-    or
+   or
 
-    ```shell
-    chmod +x dark-cli-linux
-    ```
+   ```shell
+   chmod +x dark-cli-linux
+   ```
 
-    to make it executable.
+   to make it executable.
 
-3.  To confirm it works, run it with `-—help`:
+3. To confirm it works, run it with `-—help`:
 
-    macOS:
+   macOS:
 
-    ```shell
-    ./dark-cli-apple --help
-    ```
+   ```shell
+   ./dark-cli-apple --help
+   ```
 
-    Linux:
+   Linux:
 
-    ```shell
-    ./dark-cli-linux --help
-    ```
+   ```shell
+   ./dark-cli-linux --help
+   ```
 
-    Windows:
+   Windows:
 
-    ```shell
-    ./dark-cli.exe --help
-    ```
+   ```shell
+   ./dark-cli.exe --help
+   ```
 
-4.  On some versions of macOS, you may get one of the the following popups:
+4. On some versions of macOS, you may get one of the the following popups:
 
-    ![Not downloaded from the app store popup](assets/staticassets/macos-popup1.png)
+   ![Not downloaded from the app store popup](assets/staticassets/macos-popup1.png)
 
-    ![Developer cannot be verified popup](assets/staticassets/macos-popup2.png)
+   ![Developer cannot be verified popup](assets/staticassets/macos-popup2.png)
 
-    to resolve this, press `Ok` or `Cancel` and open `System Preferences -> Security & Privacy -> General`.
+   to resolve this, press `Ok` or `Cancel` and open `System Preferences -> Security & Privacy -> General`.
 
-    ![System Preferences -> Security & Privacy -> General -> Allow Anyway](assets/staticassets/macos-allow.png)
+   ![System Preferences -> Security & Privacy -> General -> Allow Anyway](assets/staticassets/macos-allow.png)
 
-    Press `Allow Anyway` and repeat step 3.
+   Press `Allow Anyway` and repeat step 3.
 
 ### Configure your client
 
@@ -109,14 +109,14 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
 
 ### Deploy
 
-1.  To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
-2.  Run:
+1. To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
+2. Run:
 
-    ```bash
-    ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
-    ```
+   ```bash
+   ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
+   ```
 
-    On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
+   On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
 
 ![assets/staticassets/image1.png](assets/staticassets/image1.png)
 
