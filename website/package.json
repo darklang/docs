@@ -8,7 +8,8 @@
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "lint": "markdownlint --config markdownlint.json ../docs/*.md",
-    "format": "prettier --write ../docs/*.md"
+    "format": "prettier --write ../docs/*.md",
+    "check-format": "prettier --check ../docs/*.md"
   },
   "devDependencies": {
     "docusaurus": "^1.14.3",
