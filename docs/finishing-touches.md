@@ -9,14 +9,10 @@ Try it out:
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
 
-- A new trace dot will appear on the HTTP Post `/test` handler. It shows "test3" in the body of the request.
+- A new trace dot will appear on the HTTP Post `/test` handler. It shows "test6" in the body of the request.
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
 
-- Click on the datastore you will see the record added to the database.
+- The new request will be in the Datastore, and if you open your reports endpoint tomorrow, you'll see a log of all the new requests, as well as updates to your Airtable base.
 
-  ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.12_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.12_AM.png)
-
-- If you open your reports endpoint tomorrow, you'll see a log of all the new requests.
-
-Congratulations! You now have your first Dark application: an API that stores requests into a datastore, and creates a daily report of those requests.
+Congratulations! You now have your first Dark application: an API that stores requests into a datastore, creates a daily report of those requests, and sends the report to Airtable.

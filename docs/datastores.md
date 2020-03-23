@@ -14,10 +14,6 @@ The key is the unique identifier for each record, and is always of type `string`
 
 `[{key: { key1: value1, key2: value2} }, {key: { key1: value3, key2: value4}]`
 
-The key and record are both available in the preview of the most recently added item.
-
-![Datastore Schema](assets/datastores/id_as_key.png)
-
 You query datastores in four ways:
 
 - By key (`DB::get` family)
@@ -88,6 +84,8 @@ These include:
 - `DB::keys`
 - `DB::schemaFields`
 - `DB::schema`
+
+To easily see is in your Datastore, create a REPL and running `DB::getAll`.
 
 ### Querying by key, DB::get
 
