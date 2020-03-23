@@ -15,6 +15,7 @@ jobs:
           cd website
           yarn install
           yarn lint
+          yarn check-format
           yarn docusaurus-build
 
   deploy-website:
