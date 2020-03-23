@@ -31,6 +31,8 @@ title: Your first API endpoint
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
 
-6. Mouse over the white dots on the left. Each dot is a "trace" of a single request to your handler.
+6. Mouse over the white dots on the left. Each dot is a "trace", representing a
+   single request to your handler. Traces are fundamental to coding in Dark,
+   and we'll come back to them later.
 
 Congratulations! You've shipped your first Dark API endpoint.
