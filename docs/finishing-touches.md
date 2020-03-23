@@ -17,8 +17,6 @@ Try it out:
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.12_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.12_AM.png)
 
-- Create a REPL to do `db::getAll` for DailyReports. You'll be able to see the Daily Reports so far (probably just one). If you re-run your CRON by hitting "replay" and if it's the same day it should overwrite your report with a new one including your new request! You will need to re-run the REPL to see the update.
+- If you open your reports endpoint tomorrow, you'll see a log of all the new requests.
 
-![assets/gettingstarted/reportREPL.png](assets/gettingstarted/reportREPL.png)
-
-Congratulations! You now have your first Dark application: an API that stores requests into a datastore, and create a daily report of those requests.
+Congratulations! You now have your first Dark application: an API that stores requests into a datastore, and creates a daily report of those requests.
