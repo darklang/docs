@@ -3,20 +3,18 @@ id: first-function
 title: Your first Function
 ---
 
-The best way to create a function is by write the code you want as part of your
-handler, and then extracting the working code to a function. This ensures that
-functions always have traces.
-
 Let's look at creating a function to return a human readable summary of the number of reports for each day.
+
+The best way to create a function is by writing the code you want as part of your
+handler, and then extracting the working code to a function. This ensures that whatever code you write has traces and live data.
 
 1. Start by creating a new REPL.
 
-2. In the REPL, write `DB:getAll` to get the reports from the Datastore. Run the function using the play button.
+2. In the REPL, call `DB::getAll` to get the reports from the datastore. Run the function using the play button (▶️).
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/dbgetalldaily.png)
 
-3. Open a pipeline `|>` and pipe into `List::map`. We'll get the date and count
-   for each item, using `let date = val.date` and `let count = val.count`.
+3. Open a pipeline by typing `|>`, and pipe into a `List::map`, and create variables `date` and `count`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functionmapvariable.png)
 
@@ -34,11 +32,11 @@ Let's look at creating a function to return a human readable summary of the numb
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/selectall.png)
 
-7. Type `alt-X` (`Option-x` on Mac) to open the command palette, then select `extract-function`.
+7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select `extract-function`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/extractfunction.png)
 
-8. The function will be created and replace the code.
+8. This creates the function, and replaces the existing code with a call to the new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/extractedfunction.png)
 
@@ -49,9 +47,10 @@ Let's look at creating a function to return a human readable summary of the numb
 Functions do not live on the main canvas. They are reusable and can be
 called from any handler.
 
-This function does not have any parameters. When you add parameters, the
-editor will automatically create blanks for the arguments in all the
-call-sites.
+This function does not have any parameters. When you add parameters, the editor
+will automatically create blanks for the arguments everywhere the function is
+called.
+
 
 10. Go back to the primary canvas via the sidebar, the mini-map, or a reference
     on the right-hand-side of the function. Once back, create a new HTTP GET
