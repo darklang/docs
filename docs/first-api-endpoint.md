@@ -9,7 +9,7 @@ title: Your first API endpoint
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
 
-2. Enter the HTTP verb as `GET` and  `/math` for the route.
+2. Enter the HTTP verb as `GET` and `/math` for the route.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png)
 
