@@ -3,13 +3,20 @@ id: first-function
 title: Your first Function
 ---
 
-1.  In Dark, the best way to create a function is by starting in a handler, and then extracting the working code to a function. This also means functions will always have a trace. Create a new REPL.
+The best way to create a function is by write the code you want as part of your
+handler, and then extracting the working code to a function. This ensures that
+functions always have traces.
 
-2.  In the REPL, write `DB:getAll` to get the Daily Reports. Run the function using the play button. This gives us all the data, but it's a bit hard to read. We'll create a function that makes a human readable summary of the number of reports for each day.
+Let's look at creating a function to return a human readable summary of the number of reports for each day.
+
+1. Start by creating a new REPL.
+
+2. In the REPL, write `DB:getAll` to get the reports from the Datastore. Run the function using the play button.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/dbgetalldaily.png)
 
-3. Open a pipeline `|>` and pipe into `List::map`. We'll get the date and count for each item, using `let date = val.date` and `let count = val.count`.
+3. Open a pipeline `|>` and pipe into `List::map`. We'll get the date and count
+   for each item, using `let date = val.date` and `let count = val.count`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functionmapvariable.png)
 
@@ -21,11 +28,13 @@ title: Your first Function
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/blockend.png)
 
-6. To be re-use our formatted report, we can move it to a function. Select all the code within the REPL.
+6. We now have the code to generate our formatted report.
+
+   Let's extract that code into a function. Select all the code within the REPL.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/selectall.png)
 
-7. Type `opt-X` to open the command palette, then select `extract-function`.
+7. Type `alt-X` (`Option-x` on Mac) to open the command palette, then select `extract-function`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/extractfunction.png)
 
@@ -37,8 +46,16 @@ title: Your first Function
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functionspace.png)
 
-Functions are re-usable and do not sit on the main canvas. It can be called from any handler. This function does not have any parameters. If the function did have parameters, when called, it would have blanks for the parameters & their types.
+Functions do not live on the main canvas. They are reusable and can be
+called from any handler.
 
-10. Go back to the primary canvas via the sidebar, the mini-map, or a reference (like the yappingSheep REPL). Once back, create a new HTTP GET handler and call the function. This creates an endpoint that contains our daily reports.
+This function does not have any parameters. When you add parameters, the
+editor will automatically create blanks for the arguments in all the
+call-sites.
+
+10. Go back to the primary canvas via the sidebar, the mini-map, or a reference
+    on the right-hand-side of the function. Once back, create a new HTTP GET
+    handler and call the function. This creates an API endpoint which returns
+    the daily reports.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functioncall.png)
