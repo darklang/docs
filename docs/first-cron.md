@@ -38,8 +38,8 @@ Now that we're storing requests, we can use a scheduled job (a "Cron", named aft
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 
-8. Finally, let's emit today's requests to a background worker, using the `emit` keyword. `emit` takes two arguments, and in this case we're sending `todayRequests` to a not-yet-created worker named `StoreReport`.
+8. Finally, let's emit today's requests to a background worker, using the `emit` keyword. `emit` takes two arguments, and in this case we're sending `todayRequests` to a not-yet-created worker named `storeReport`.
 
 ![assets/gettingstarted/emit.png](assets/gettingstarted/emit.png)
 
-9. To have our first report run, hit the "replay" button in the upper right of the Cron. This creates a 404 in the sidebar for the Worker `StoreReport`.
+9. To have our first report run, hit the "replay" button in the upper right of the Cron. This creates a 404 in the sidebar for the Worker `storeReport`.
