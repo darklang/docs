@@ -10,14 +10,14 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 1. Set up Airtable (~10 minutes).
 
 - Go to [Airtable](https://airtable.com) and create a new base.
-- In the base, create two columns, one for date (field type is date) and one for requests (field type is number).
+- In the base, create two columns, one for date (field type is date) and one for requests (field type is number). You can see our sample [here](https://airtable.com/invite/l?inviteId=invOadxgcpBKaCQiv&inviteToken=e7492a049bf7e4cd1c475b43efac35d296578f66198bff549ca99af6ee5821b4).
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_base.png)
 - Generate an API key on the [Account page](https://airtable.com/account). Put the API key in a function in your Dark canvas.
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_key.png)
 - Airtable's full API documentation for your base will be available on the [API page](https://airtable.com/api). Within this page, go to Create Records in the left hand navigation to copy the URI from the right hand side.
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_url.png)
 
-2. We'll add our HTTP POST call to our storeReport worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
+2. Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
 
