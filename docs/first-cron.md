@@ -9,7 +9,7 @@ Now that we're storing requests, we can use a scheduled job (a "Cron", named aft
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 
-2. To know if a report ran today, we'll compare it to the current time. Let's
+2. To know if a request was executed today, we compare it to the current time. Let's
    assign the current time in seconds to a variable `timeSeconds`. The current
    time in seconds is `Date::now`, piped into `Date::toSeconds`. (Note: to
    create a pipe, type `|>` after the `Date::now` function).
