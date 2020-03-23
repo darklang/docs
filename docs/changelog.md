@@ -156,7 +156,7 @@ We added a bunch of improved documentation, including:
   - Dragging up to select text
   - Repeated clicking in a variable
 - Fixed some issues around copying `match`es
-- Added a [Getting Started](helloworld.md) tutorial to the documentation
+- Added a [Getting Started](introduction.md) tutorial to the documentation
 
 ## Week of 2/07/2020
 
