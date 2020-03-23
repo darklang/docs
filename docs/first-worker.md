@@ -4,7 +4,7 @@ title: Your first Worker
 ---
 
 Workers process jobs in the background, idea for daily reports. They're also
-commonly used for sending notifications and other asyncronous tasks that we
+commonly used for sending notifications and other asynchronous tasks that we
 don't want to handle in HTTP requests.
 
 If we were doing this for real, we might send the data to a 3rdparty API over HTTP. But for the sake of simplicity, let's just store the data into the `DailyReport` datastore.
