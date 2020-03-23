@@ -22,7 +22,3 @@ content types for plain text, JSON, HTML, and forms. Headers are dictionaries;
 to combine two headers, use `Dict::merge`.
 
 ![HTTPClientPost](assets/httpclient/header.png)
-
-To add a header with a "-" in its name, use `Dict::set`.
-
-![HTTPClientGet](assets/httpclient/hyphen.png)
