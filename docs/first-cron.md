@@ -1,40 +1,45 @@
 ---
 id: first-cron
-title: Your first CRON
+title: Your first Cron
 ---
 
-Now that we're storing requests, we can use a scheduled job (CRON) to create a report of all requests per day.
+Now that we're storing requests, we can use a scheduled job (a "Cron", named after the Unix cron utility) to create a report of all requests per day.
 
-1. Hit the + button (or use the omnibox) to create a new CRON. Set it to run daily, and with the name DailyReport.
+1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 
-2. To know if something was today, we'll have to compare to the current time. Create a variable `timeSeconds` and set it equal to `Date::now`. Run the `Date::now` function to see the current time and so a value will be available. For comparison, we'll need the time in seconds, and you can pipe to the `Date::toSeconds` function. (Note: to open the pipeline type `|>` after the `Date::now` Function).
+2. To know if a request was executed today, we compare it to the current time. Let's
+   assign the current time in seconds to a variable `timeSeconds`. The current
+   time in seconds is `Date::now`, piped into `Date::toSeconds`. (Note: to
+   create a pipe, type `|>` after the `Date::now` function).
+
+   Run the `Date::now` function to see a live value for your code.
 
 ![assets/gettingstarted/cron_timeseconds.png](assets/gettingstarted/cron_timeseconds.png)
 
-3. Now, we'll need to get all of the requests so we can filter to today's. Set `allRequests` to `Db::getAll Requests`. Running the function will show you the existing requests.
+3. Next, we'll need to filter the reports to just today's reports. Set `allRequests` to `DB::getAll Requests`. Run the function to the live value for `allRequests`.
 
 ![assets/gettingstarted/allrequests.png](assets/gettingstarted/allrequests.png)
 
-4. To see only today's requests, we'll use `List::filter`. `List::filter` takes two parameters - the list to filter (in this case `allRequests`) and the anonymous function that determines if it should be returned or not. `List::filter` is similar to `List::map` and the concept is explained in more detail [here](https://darklang.github.io/docs/functional-aspects).
+4. To see only today's requests, use `List::filter`. `List::filter` takes two arguments - the list to filter (in this case `allRequests`) and an anonymous function that determines if each element of the list element should be includes in the new list. `List::filter` is similar to `List::map` and the concept is explained in more detail [here](https://darklang.github.io/docs/functional-aspects).
 
 ![assets/gettingstarted/listefilter.png](assets/gettingstarted/listfilter.png)
 
-5. For our anonymous function, we want to see if a request occurred today. First, we should convert the time of the request into seconds. This is similar to the first line of the CRON.
+5. We want to keep only reports that occurred today, meaning we want to compare the report's time to `timeSeconds` that we created earlier. Let's convert the time of the request into seconds so that both times have the same units.
 
 ![assets/gettingstarted/requestseconds.png](assets/gettingstarted/requestseconds.png)
 
-6. Then, we'll want to calculate the difference to the current time. Once we know the difference we can decide to compare based on if it happened today (in the last 86,400 seconds).
+6. Next, we calculate the difference from the current time; this tells us if it happened today (in the last 86,400 seconds).
 
 ![assets/gettingstarted/comparison.png](assets/gettingstarted/comparison.png)
 
-7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HTTPClient::Post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you should see the list of requests from the last 24 hours.
+7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HTTPClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 
-8. Finally, we'll emit today's requests to a background worker, using the emit keyword. Emit takes two parameters, and in this case we're sending `todayRequests` to a not yet created worker named `StoreReport`.
+8. Finally, let's emit today's requests to a background worker, using the `emit` keyword. `emit` takes two arguments, and in this case we're sending `todayRequests` to a not-yet-created worker named `storeReport`.
 
 ![assets/gettingstarted/emit.png](assets/gettingstarted/emit.png)
 
-9. To have our first report run, hit the "replay" button in the upper right of the CRON. This will create a 404 in the lefthand side bar for the Worker `StoreReport`.
+9. To have our first report run, hit the "replay" button in the upper right of the Cron. This creates a 404 in the sidebar for the Worker `storeReport`.

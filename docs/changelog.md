@@ -109,7 +109,7 @@ We added a bunch of improved documentation, including:
 ### Documentation
 
 - Docs can now be accessed at [https://darklang.com/docs](https://darklang.com/docs)
-- [Your first CRON](https://darklang.github.io/docs/first-cron) and [Your first Worker](https://darklang.github.io/docs/first-worker) sections have been added to the Getting Started guide
+- [Your first Cron](https://darklang.github.io/docs/first-cron) and [Your first Worker](https://darklang.github.io/docs/first-worker) sections have been added to the Getting Started guide
 
 ## Week of 2/21/2020
 
