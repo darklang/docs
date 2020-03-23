@@ -51,7 +51,6 @@ This function does not have any parameters. When you add parameters, the editor
 will automatically create blanks for the arguments everywhere the function is
 called.
 
-
 10. Go back to the primary canvas via the sidebar, the mini-map, or a reference
     on the right-hand-side of the function. Once back, create a new HTTP GET
     handler and call the function. This creates an API endpoint which returns
