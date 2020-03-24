@@ -98,7 +98,7 @@
 <p>When you’ve done this correctly and hit “play” to make the call (<a href="/docs/trace-driven-development#live-values--play-buttons">more on play buttons)</a>, you’ll get a response that has the right fields. This will include team_id and an access_token. (This may also have a bot_access_token if you add a bot to your Slack functionality).</p>
 <p>If you get an error in a response, you won’t be able to keep going. If the code expired, you’ll need to re-open the shareable link from Slack in the browser to re-authenticate.</p>
 <p><img src="/docs/assets/slack/image12.png" alt="assets/slack/image12.png"></p>
-<p>You can save the response to a variable by inserting a let (option-x -&gt; wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:</p>
+<p>You can save the response to a variable by inserting a let (ctrl-\ -&gt; wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:</p>
 <p><img src="/docs/assets/slack/image4.gif" alt="assets/slack/image4.gif"></p>
 <p>Now save the tokens you receive to a Datastore.</p>
 <p>Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id, access_token, and bot_token - depending on your feature set you might not have a bot_token).</p>
