@@ -16,7 +16,7 @@ These components live on your canvas. They are created from the sidebar, or by h
 
 ![assests/backend/image2.png](assets/backend/image2.png)
 
-Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using alt-x, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.
+Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using ctrl-\, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.
 
 These components **do not** require you to set up any additional infrastructure or deployment processes. As soon as you create them, they’re available and update as you write code (deployless). Each handler is of one of these types, and has a name as well as additional information. You can see examples of each component [here](https://darklang.com/a/sample-helloworld).
 

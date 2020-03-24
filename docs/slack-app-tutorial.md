@@ -82,7 +82,7 @@ If you get an error in a response, you won’t be able to keep going. If the cod
 
 ![assets/slack/image12.png](assets/slack/image12.png)
 
-You can save the response to a variable by inserting a let (option-x -> wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:
+You can save the response to a variable by inserting a let (ctrl-\ -> wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:
 
 ![assets/slack/image4.gif](assets/slack/image4.gif)
 

@@ -57,7 +57,7 @@ In the case above, when the function is on the rail, the value is as follows.
 
 ## Taking Functions off the Error Rail
 
-When you are ready to handle error cases, you remove them from the rail by using the editor command `take-function-off-rail` (open the Command palette by hitting Option-x or Alt-x **on the function name**). This will unwrap the values.
+When you are ready to handle error cases, you remove them from the rail by using the editor command `take-function-off-rail` (open the Command palette by hitting ctrl-\ **on the function name**). This will unwrap the values.
 
 In this case it unwraps to `Just val` and the behavior would be the same for functions that would return `Ok val`.
 
