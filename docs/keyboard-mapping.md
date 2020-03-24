@@ -14,7 +14,7 @@ sidebar_label: Keyboard Mapping
 | PgDn           | Canvas       | pan page down                        |
 | Ctrl-K         | Canvas       | Open omnibox                         |
 | Enter          | Canvas       | Open omnibox                         |
-| Alt-X          | Code editing | launch command palette               |
+| ctrl-\         | Code editing | launch command palette               |
 | Ctrl-Z         | Code editing | undo (windows/linux)                 |
 | Shift-Ctrl-Z   | Code editing | redo (windows/linux)                 |
 | Meta-Z         | Code editing | undo (mac)                           |

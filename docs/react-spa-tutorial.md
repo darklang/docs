@@ -112,7 +112,7 @@ Here’s the finished REPL:
 
 ![assets/reactspa/image14.png](assets/reactspa/image14.png)
 
-In this case, I chose to define slackid as a variable so I could reuse it as a unique key. You can do this after the fact using option/alt-X on the value to extract a variable, or just rewrite starting from the top.
+In this case, I chose to define slackid as a variable so I could reuse it as a unique key. You can do this after the fact using option/ctrl-\ on the value to extract a variable, or just rewrite starting from the top.
 
 **Please do not use Ellen’s phone number + SlackID for this, because then you won’t get the interactivity!** Use your own name, phone number, and Slackid. Your slackid is found in your profile in the … menu. You will need permission to install Slack apps on a Slack to do this.
 

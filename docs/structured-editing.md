@@ -130,7 +130,7 @@ in the future.
 
 ### Command Palette
 
-If you’re looking to do something that is not immediately available, chances are it’s in the command palette (accessed by hitting `Alt-X`/`Option-X`).
+If you’re looking to do something that is not immediately available, chances are it’s in the command palette (accessed by hitting `ctrl-\`).
 
 ![assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 

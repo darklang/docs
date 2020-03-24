@@ -85,7 +85,7 @@ We added a bunch of improved documentation, including:
   - When calling `StaticAssets::serveLatest` with JSON files, we now return the JSON properly
   - If you press enter at the end of a line in an `if` statement, we no longer take you to the next line (this simplifies code like `if i < 10`)
   - Show when traces were not executed in `match`es (we already do this elsewhere)
-- The command palette's documentation appears properly (press `Alt-x` to show the command palette)
+- The command palette's documentation appears properly (press `ctrl-\` to show the command palette)
 - You can now use `Date::<` and `Date::>` and `Float::lessThanOrEqualTo` in `DB::query` (and also in `DB::queryOne`, `DB::queryWithKey`, etc)
 
 ![DB::query call using Date::<](assets/changelog/Mar6/dbquery.png)
@@ -265,7 +265,7 @@ We added a bunch of improved documentation, including:
 - Fixed renaming function parameters
 - Fixed deleted text persisting when pressing delete
 - Large traces are now properly displayed
-- Commands (Alt-x/Option-x) now work more reliably when selecting code
+- Commands (ctrl-\) now work more reliably when selecting code
 - We now allow you to use arbitrary field names
   - You can now use a field even if you don't have a trace or the field does not exist in that trace
 - We've automatically disabled Grammarly, as it was messing with our DOM
@@ -305,5 +305,5 @@ We added a bunch of improved documentation, including:
 - Deprecated the `Date::sub` function and replaced it with `Date::subtract`.
 - Changed the behavior of new handler placement - they no longer appear directly on top of one another.
 - Changed the behavior of partials - they are now abandoned when clicking away from a handler.
-- Added the `copy-request-as-curl` command for `HttpClient::` functions - use Alt-x/Option-x to activate
+- Added the `copy-request-as-curl` command for `HttpClient::` functions - use ctrl-\ to activate
 - Add `Twitter::urlencode` and `Crypto::sha1mac` to support talking to the Twitter API
