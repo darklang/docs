@@ -384,6 +384,12 @@ around `incomplete`s, allowing you to take working code and edit the feature fla
 without disturbing existing users. In an `if` statement, neither branch would
 execute.
 
+## Comments
+
+To add comments to your Dark code, start a line with `let _ =` and add a string containing the comment you'd like to include.
+
+![Option Example](assets/language/comment.png)
+
 ## Planned language features
 
 ### Tuples
