@@ -112,6 +112,12 @@ The text in red is the partial, and the grey text behind it indicates what was t
 
 ![Partial](assets/structuredediting/partial_completed_example.png)
 
+## Comments
+
+To add comments to your Dark code, start a line with `let _ =` and add a string containing the comment you'd like to include.
+
+![Option Example](assets/language/comment.png)
+
 ## Refactoring and editing code
 
 ### Undo/redo
