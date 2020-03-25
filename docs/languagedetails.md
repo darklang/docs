@@ -1,7 +1,7 @@
 ---
 id: languagedetails
 title: Language Details
-sidebar_label: Details
+sidebar_label: Language Details
 ---
 
 This doc describes the Dark language. Dark is really a system - a
