@@ -53,9 +53,9 @@ Floats are double-precision 64-bit floating-point values (IEEE 754).
 
 We intend for numberic operations to return Results, to handle situations which
 are undefined on the datatype. For example, integer division would return
-`Result Error Int`. Similarly, floating point values would never be NaaN, and
-instead would return a NaN return `Result Error Float`. See
-[Error Handling in Dark](error-handling) for more.
+`Result Error Int`. Similarly, floating point values would never be `NaN`, and
+instead would return `Result Error Float`. See [Error Handling in
+Dark](error-handling) for more.
 
 ### Booleans
 
@@ -115,7 +115,7 @@ Option a = Just a | Nothing
 ![Option Example](assets/language/option_example.png)
 
 This is intended to convert effortlessly to null in JSON, but we don't quite
-have enough of the type system to remove it.
+have enough of the type system to remove null, so they both exist right now.
 
 Functions which return `Option` trigger the [Errorrail](error-handling).
 
