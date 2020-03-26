@@ -68,11 +68,9 @@ Before we send it, you’ll need your client_id and client_secret, which you can
 
 Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).
 
-If you receive an `oauth_authorization_url_mismatch` error, modify the URL to `https://slack.com/api/oauth.v2.access`.
-
 This is the end result, but you’ll see your client_id and client_secret instead of placeholders:
 
-![assets/slack/image9.png](assets/slack/image9.png)
+![assets/slack/image9.png](assets/slack/oauthv2.png)
 
 This calls part of Slack’s API ([oauth.access](https://api.slack.com/methods/oauth.access)), which will give you access to the Slack app that requested it.
 
@@ -88,13 +86,13 @@ You can save the response to a variable by inserting a let (ctrl-\ -> wrap-in-le
 
 Now save the tokens you receive to a Datastore.
 
-Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id, access_token, and bot_token - depending on your feature set you might not have a bot_token).
+Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id and access_token - depending on your feature set you might not have a bot_token).
 
-![assets/slack/image5.png](assets/slack/image5.png)
+![assets/slack/image5.png](assets/slack/tokensdb.png)
 
 Then, write the following logic to put values in the datastore (this requires a successful exchange of code for token).
 
-![assets/slack/image20.png](assets/slack/image20.png)
+![assets/slack/image20.png](assets/slack/oauth-redirect.png)
 
 Our sample canvas showing this OAuth for Slack can be found [here](https://darklang.com/a/sample-slackoauth).
 
@@ -136,9 +134,9 @@ Once you’ve set up your request URL or event subscription, you’ll be able to
 
 As before, use the trace to extract the values you’ll need to post your response.
 
-So far, we’ve typically posted a message to Slack directly from an HTTP handler. However, it’s better practice to do this using background workers when posting to external API endpoints. Workers respond to events asynchronously, and queue events if they fail. You can use **emit** to trigger a worker, and when you hit play, you’ll see the worker appear in your 404s:
+So far, we’ve typically posted a message to Slack directly from an HTTP handler. However, it’s better practice to do this using background workers when posting to external API endpoints. Workers respond to events asynchronously, and queue events if they fail. You can use **emit** to trigger a worker, and when you hit play, you’ll see the worker appear in your 404s. Here is the full events handler:
 
-![assets/slack/image1.png](assets/slack/image1.png)
+![assets/slack/image1.png](assets/slack/fulleventshandler.png)
 
 We’ll use Slack’s [postMessage](https://api.slack.com/methods/chat.postMessage) method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:
 
