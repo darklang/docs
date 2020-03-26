@@ -91,9 +91,8 @@
 <p>Before we send it, you’ll need your client_id and client_secret, which you can get from Slack’s <strong>Basic Information</strong> page.</p>
 <p><img src="/docs/assets/slack/image18.png" alt="assets/slack/image18.png"></p>
 <p>Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).</p>
-<p>If you receive an <code>oauth_authorization_url_mismatch</code> error, modify the URL to <code>https://slack.com/api/oauth.v2.access</code>.</p>
 <p>This is the end result, but you’ll see your client_id and client_secret instead of placeholders:</p>
-<p><img src="/docs/assets/slack/image9.png" alt="assets/slack/image9.png"></p>
+<p><img src="/docs/assets/slack/oauthv2.png" alt="assets/slack/image9.png"></p>
 <p>This calls part of Slack’s API (<a href="https://api.slack.com/methods/oauth.access">oauth.access</a>), which will give you access to the Slack app that requested it.</p>
 <p>When you’ve done this correctly and hit “play” to make the call (<a href="/docs/trace-driven-development#live-values--play-buttons">more on play buttons)</a>, you’ll get a response that has the right fields. This will include team_id and an access_token. (This may also have a bot_access_token if you add a bot to your Slack functionality).</p>
 <p>If you get an error in a response, you won’t be able to keep going. If the code expired, you’ll need to re-open the shareable link from Slack in the browser to re-authenticate.</p>
@@ -101,10 +100,10 @@
 <p>You can save the response to a variable by inserting a let (ctrl-\ -&gt; wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:</p>
 <p><img src="/docs/assets/slack/image4.gif" alt="assets/slack/image4.gif"></p>
 <p>Now save the tokens you receive to a Datastore.</p>
-<p>Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id, access_token, and bot_token - depending on your feature set you might not have a bot_token).</p>
-<p><img src="/docs/assets/slack/image5.png" alt="assets/slack/image5.png"></p>
+<p>Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id and access_token - depending on your feature set you might not have a bot_token).</p>
+<p><img src="/docs/assets/slack/tokensdb.png" alt="assets/slack/image5.png"></p>
 <p>Then, write the following logic to put values in the datastore (this requires a successful exchange of code for token).</p>
-<p><img src="/docs/assets/slack/image20.png" alt="assets/slack/image20.png"></p>
+<p><img src="/docs/assets/slack/oauth-redirect.png" alt="assets/slack/image20.png"></p>
 <p>Our sample canvas showing this OAuth for Slack can be found <a href="https://darklang.com/a/sample-slackoauth">here</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="step-two-building-application-functionality--working-with-slacks-payload"></a><a href="#step-two-building-application-functionality--working-with-slacks-payload" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step Two: Building Application Functionality &amp; Working with Slack’s Payload</h4>
 <p>Now that you’ve installed the app to your workspace, you can build app functionality. We’re not going to go through everything you can do, but rather give you an overview.</p>
@@ -125,8 +124,8 @@
 <p>Once you’ve set up your request URL or event subscription, you’ll be able to receive and work with incoming requests.</p>
 <p><img src="/docs/assets/slack/image2.png" alt="assets/slack/image2.png"></p>
 <p>As before, use the trace to extract the values you’ll need to post your response.</p>
-<p>So far, we’ve typically posted a message to Slack directly from an HTTP handler. However, it’s better practice to do this using background workers when posting to external API endpoints. Workers respond to events asynchronously, and queue events if they fail. You can use <strong>emit</strong> to trigger a worker, and when you hit play, you’ll see the worker appear in your 404s:</p>
-<p><img src="/docs/assets/slack/image1.png" alt="assets/slack/image1.png"></p>
+<p>So far, we’ve typically posted a message to Slack directly from an HTTP handler. However, it’s better practice to do this using background workers when posting to external API endpoints. Workers respond to events asynchronously, and queue events if they fail. You can use <strong>emit</strong> to trigger a worker, and when you hit play, you’ll see the worker appear in your 404s. Here is the full events handler:</p>
+<p><img src="/docs/assets/slack/fulleventshandler.png" alt="assets/slack/image1.png"></p>
 <p>We’ll use Slack’s <a href="https://api.slack.com/methods/chat.postMessage">postMessage</a> method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:</p>
 <p><img src="/docs/assets/slack/image3.png" alt="assets/slack/image3.png"></p>
 <p><img src="/docs/assets/slack/image6.png" alt="assets/slack/image6.png"></p>
