@@ -51,8 +51,8 @@ We released a lot this week, hope you enjoy!
 - A bunch of edge cases around calling functions were fixed, especially for functions which currently return `<Incomplete>`
 - Tab now moves you to the next editable space
 - Disabled a few features while we re-work them:
-    - Create new function option in the autocomplete
-    - Mouse over database stats
+  - Create new function option in the autocomplete
+  - Mouse over database stats
 
 ### Documentation
 
