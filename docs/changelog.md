@@ -6,6 +6,59 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 3/27/2020
+
+We released a lot this week, hope you enjoy!
+
+- We have re-released feature flags! Feature flags allow you change live code safely: write the new code that you want, choose the condition to use that code instead (just for your user? just if a header is passed? Just if a particular query string is provided?). Then switch to the new code or discard it, safely, without breaking anything.
+- Feature flags can be created from the command palette.
+
+![assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png](assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png)
+
+- The keyboard shortcut for the command palette has changed to `Ctrl-\`
+
+![assets/changelog/Mar27/2020-03-27_12.27.23.gif](assets/changelog/Mar27/2020-03-27_12.27.23.gif)
+
+- We've added a ton of standard library functions:
+    - `Float::clamp`
+    - `Int::clamp`
+    - `Int::modBy`
+    - `Int::remainderBy`
+    - `Date::weekday`
+    - `Dict::toList`
+    - `Dict::fromList`
+    - `Dict::filterMap`
+    - `Dict::size`
+    - `Dict::singleton`
+    - `List::filterMap`
+    - `List::map2`
+    - `List::map2shortest`
+    - `List::tail`
+    - `List::singleton`
+    - `List::unzip`
+    - `List::zip`
+    - `List::zipShortest`
+    - `Option::map2`
+    - `Result::map2`
+    - `String::slice`
+    - `String::padStart`
+    - `String::padEnd`
+- Hyphens are now allowed in records/dicts, to make it easier to set HTTP headers
+
+![assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png](assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png)
+
+- `HTTP::respond` was renamed to `HTTP::response`, to make it clearer that it creates a value.
+- A bunch of edge cases around calling functions were fixed, especially for functions which currently return `<Incomplete>`
+- Tab now moves you to the next editable space
+- Disabled a few features while we re-work them:
+    - Create new function option in the autocomplete
+    - Mouse over database stats
+
+### Documentation
+
+- Added [Your First Function](https://darklang.github.io/docs/first-function) and [Your First External API Call](https://darklang.github.io/docs/first-api)
+- Updated the [Slack tutorial](https://darklang.github.io/docs/slack-app-tutorial) to discuss OAuth v2
+
 ## Week of 3/20/2020
 
 - Now you can give us more information about your Dark projects, and let us know if they're live. This helps us understand how we can make Dark better for you!
