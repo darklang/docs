@@ -20,10 +20,6 @@ We released a lot this week, hope you enjoy!
 ![assets/changelog/Mar27/2020-03-27_12.27.23.gif](assets/changelog/Mar27/2020-03-27_12.27.23.gif)
 
 - We've added a ton of standard library functions:
-  - `Float::clamp`
-  - `Int::clamp`
-  - `Int::modBy`
-  - `Int::remainderBy`
   - `Date::weekday`
   - `Dict::toList`
   - `Dict::fromList`
