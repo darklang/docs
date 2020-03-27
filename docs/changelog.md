@@ -20,29 +20,29 @@ We released a lot this week, hope you enjoy!
 ![assets/changelog/Mar27/2020-03-27_12.27.23.gif](assets/changelog/Mar27/2020-03-27_12.27.23.gif)
 
 - We've added a ton of standard library functions:
-    - `Float::clamp`
-    - `Int::clamp`
-    - `Int::modBy`
-    - `Int::remainderBy`
-    - `Date::weekday`
-    - `Dict::toList`
-    - `Dict::fromList`
-    - `Dict::filterMap`
-    - `Dict::size`
-    - `Dict::singleton`
-    - `List::filterMap`
-    - `List::map2`
-    - `List::map2shortest`
-    - `List::tail`
-    - `List::singleton`
-    - `List::unzip`
-    - `List::zip`
-    - `List::zipShortest`
-    - `Option::map2`
-    - `Result::map2`
-    - `String::slice`
-    - `String::padStart`
-    - `String::padEnd`
+  - `Float::clamp`
+  - `Int::clamp`
+  - `Int::modBy`
+  - `Int::remainderBy`
+  - `Date::weekday`
+  - `Dict::toList`
+  - `Dict::fromList`
+  - `Dict::filterMap`
+  - `Dict::size`
+  - `Dict::singleton`
+  - `List::filterMap`
+  - `List::map2`
+  - `List::map2shortest`
+  - `List::tail`
+  - `List::singleton`
+  - `List::unzip`
+  - `List::zip`
+  - `List::zipShortest`
+  - `Option::map2`
+  - `Result::map2`
+  - `String::slice`
+  - `String::padStart`
+  - `String::padEnd`
 - Hyphens are now allowed in records/dicts, to make it easier to set HTTP headers
 
 ![assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png](assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png)
