@@ -25,7 +25,7 @@ If we were doing this for real, we might send the data to a 3rdparty API over HT
 
 ![assets/gettingstarted/seconddatastore.png](assets/gettingstarted/seconddatastore.png)
 
-5. To get the count, use `List::count`. Then we store it in the DB, using `humanDate` as the key.
+5. To get the count, use `List::length`. Then we store it in the DB, using `humanDate` as the key.
 
 ![assets/gettingstarted/dbsetworker.png](assets/gettingstarted/dbsetworker.png)
 
