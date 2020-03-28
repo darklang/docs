@@ -3,11 +3,11 @@ id: first-worker
 title: Your first Worker
 ---
 
-Workers process jobs in the background, idea for daily reports. They're also
+Workers process jobs in the background, ideal for daily reports. They're also
 commonly used for sending notifications and other asynchronous tasks that we
 don't want to handle in HTTP requests.
 
-If we were doing this for real, we might send the data to a 3rdparty API over HTTP. But for the sake of simplicity, let's just store the data into the `DailyReport` datastore.
+If we were doing this for real, we might send the data to a 3rd party API over HTTP. But for the sake of simplicity, let's just store the data into the `DailyReport` datastore.
 
 1. From the 404 section of the sidebar, hit the plus (+) button to create the `storeReport` Worker. The Worker will already be named, and hovering over the white dot will show you the event triggered by your cron.
 
