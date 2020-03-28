@@ -8,7 +8,7 @@ By default, browsers don't allow Javascript to make certain kinds of API calls t
 
 To support intentional uses of APIs from different domains, browsers have all implemented CORS: "cross origin resource sharing". More general information on CORS is available in [the Fetch standard](https://fetch.spec.whatwg.org/#http-cors-protocol), and in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
-This document addresses the common needs developers run into with respect to CORS when writing an application in Dark. For more The three primary pieces of CORS this document addresses are:
+This document addresses the common needs developers run into with respect to CORS when writing an application in Dark. The three primary pieces of CORS this document addresses are:
 
 - Access-Control-Allow-Origin — what domains requests are coming from.
 - Access-Control-Allow-Credentials — using tokens (BearerAuth) or cookies within your application.
@@ -61,13 +61,13 @@ To allow credentials, add the `{Access-Control-Allow-Credentials: "true"}` heade
 
 ![assets/cors/cors_auth.png](assets/cors/cors_auth.png)
 
-### CORS with Custom Headers & Methods (Allow-Header, Allow-Method)
+### CORS with Custom Headers & Methods (Allow-Headers, Allow-Methods)
 
-To allow a custom header, add the: `{Access-Control-Allow-Header: "headerName"}`` header to your response.
+To allow a custom header, add the: `{Access-Control-Allow-Headers: "headerName"}`` header to your response.
 
 ![assets/cors/cors_customheader.png](assets/cors/cors_customheader.png)
 
-To allow a specific method, add the `{Access-Control-Allow-Method: "method"}` header to your response.
+To allow a specific method, add the `{Access-Control-Allow-Methods: "method"}` header to your response.
 
 ## Application Wide CORS
 
@@ -78,6 +78,8 @@ Dark does not yet have middleware, and preflighting must be added per endpoint. 
 ![assets/cors/cors_canvaswide.png](assets/cors/cors_canvaswide.png)
 
 ![assets/cors/cors_callingcanvaswide.png](assets/cors/cors_callingcanvaswide.png)
+
+If you are using the same CORS settings for th entire canvas, you could make one `OPTIONS` handler for `/:url`.
 
 ## Example Common Errors
 
