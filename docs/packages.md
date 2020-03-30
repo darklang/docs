@@ -36,7 +36,7 @@ Takes your Slack token as a String and returns a list of Dicts containing your p
 
 ### oauth
 
-Takes your Slack clientID (String), clientSecret (String), token datastore (Any - but should be the name of your datastore), and oauth code (String) and returns a Result. 
+Takes your Slack clientID (String), clientSecret (String), token datastore (Any - but should be the name of your datastore), and oauth code (String) and returns a Result.
 
 ![Slack](assets/packages/oauth.png)
 
