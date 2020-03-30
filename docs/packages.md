@@ -16,6 +16,28 @@ The first package in the Dark package ecosystem is for the Slack API. Use these 
 
 ![Slack](assets/packages/slackpackage.png)
 
+### getAllConversations
+
+??
+
+### getConversations
+
+Takes your Slack token as a string and returns a list of dicts containing your public Slack channel names and ids.
+
+### getPrivateConversations
+
+Takes your Slack token as a string and returns a list of dicts containing your private Slack channel names and ids.
+
+### oauth
+
+Takes your Slack clientID (string), clientSecret (string), token datastore (Any), and oauth code (string) and returns a result. 
+
+![Slack](assets/packages/oauthexample.png)
+
+### postMessage
+
+Takes your Slack token, channel id and text as strings and posts the text to the Slack channel.
+
 ## Upcoming Packages
 
 We have some ideas of packages we intend to implement, but would love to hear what would be most useful.
