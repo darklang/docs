@@ -48,6 +48,12 @@ Takes your Slack token, channel id and text as Strings and posts the text to the
 
 ![Slack](assets/packages/postMessage.png)
 
+### scheduleMessage
+
+Takes an Epoch time (Int), Slack token (String), channel id (String) and text (String) and schedules a message to be posted at the time specified.
+
+![Slack](assets/packages/scheduleMessage.png)
+
 ## Upcoming Packages
 
 We have some ideas of packages we intend to implement, but would love to hear what would be most useful.
