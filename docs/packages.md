@@ -50,7 +50,7 @@ Takes your Slack token, channel id and text as Strings and posts the text to the
 
 ### scheduleMessage
 
-Takes an Epoch time (Int), Slack token (String), channel id (String) and text (String) and schedules a message to be posted at the time specified. 
+Takes an Epoch time (Int), Slack token (String), channel id (String) and text (String) and schedules a message to be posted at the time specified.
 
 ![Slack](assets/packages/scheduleMessage.png)
 
