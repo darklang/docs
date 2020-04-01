@@ -6,7 +6,7 @@ sidebar_label: Slack tutorial
 
 Watch a demo video of a Slack app: [https://vimeo.com/380770154](https://vimeo.com/380770154)
 
-# Getting started
+## Getting started
 
 Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces. You can access your account from darklang.com/a/USERNAME-CANVASNAME. For this project we recommend darklang.com/a/USERNAME-slackapp.
 
