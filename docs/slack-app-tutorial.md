@@ -6,7 +6,7 @@ sidebar_label: Slack tutorial
 
 Watch a demo video of a Slack app: [https://vimeo.com/380770154](https://vimeo.com/380770154)
 
-#### Getting started
+# Getting started
 
 Dark allows you to build backends (API endpoints, workers, cron, and data storage) by writing only your business logic, using production traces. You can access your account from darklang.com/a/USERNAME-CANVASNAME. For this project we recommend darklang.com/a/USERNAME-slackapp.
 
@@ -18,7 +18,7 @@ All the major handlers work the same way, but the key for many requests is worki
 
 This guide will walk you through how to set up a Slack application, trigger events from it, and write the corresponding backend logic. Our app is called Lou Dog to the Rescue and sends photos of Lou, (one of) our office dogs.
 
-#### Creating a Slack App
+## Creating a Slack App
 
 Create a new Slack App from [https://api.slack.com/](https://api.slack.com/)
 
@@ -32,7 +32,7 @@ Add a /test slash command to start, and point the request URL at USERNAME-CANVAS
 
 (If you’d like, you can add other features & functionality here, like a bot, but this is enough to build the base of the application and get started).
 
-#### Step One: Setting up OAuth (Relatively Painless!)
+### Step One: Setting up OAuth (Relatively Painless!)
 
 In order to allow your app to be distributed, let’s quickly set up OAuth ([Slack’s OAuth Documentation](https://api.slack.com/docs/oauth)).
 
@@ -96,11 +96,11 @@ Then, write the following logic to put values in the datastore (this requires a 
 
 Our sample canvas showing this OAuth for Slack can be found [here](https://darklang.com/a/sample-slackoauth).
 
-#### Step Two: Building Application Functionality & Working with Slack’s Payload
+### Step Two: Building Application Functionality & Working with Slack’s Payload
 
 Now that you’ve installed the app to your workspace, you can build app functionality. We’re not going to go through everything you can do, but rather give you an overview.
 
-#### Supporting Slack Commands
+## Supporting Slack Commands
 
 Slack’s **Basic Information** page lets you create slash commands, event subscriptions, and interactive components. All three of these options require a Request URL, which is just a url pointing to your Dark app, in the same format as before:
 
@@ -118,7 +118,7 @@ When you create the endpoint from the 404 section, you’ll be able to work with
 
 ![assets/slack/image16.png](assets/slack/image16.png)
 
-#### Supporting Bots & Event Subscriptions
+## Supporting Bots & Event Subscriptions
 
 You can set up a bot that listens for its name by adding [app_mention](https://api.slack.com/events/app_mention) under Subscribe to bot events in **Features > Event Subscriptions**.
 
@@ -126,7 +126,7 @@ The command will be sent to the URL you specify and, like OAuth, the route will 
 
 ![assets/slack/image21.png](assets/slack/image21.png)
 
-#### Handling Incoming Data
+## Handling Incoming Data
 
 Once you’ve set up your request URL or event subscription, you’ll be able to receive and work with incoming requests.
 
