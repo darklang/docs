@@ -40,7 +40,6 @@ Takes your Slack token as a String and checkFromSeconds as an int, and returns a
 
 ![Slack](assets/packages/getNewConversations.png)
 
-
 ### getPrivateConversations
 
 Takes your Slack token as a String and returns a list of Dicts containing your private Slack channel names and ids.
