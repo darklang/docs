@@ -28,6 +28,18 @@ Takes your Slack token as a String and returns a list of Dicts containing your p
 
 ![Slack](assets/packages/getConversations.png)
 
+### getConversationsWithDetails
+
+Takes your Slack token as a string and returns a list of Dicts containing the channel name, id, created at date (in Epoch seconds), creator, count of members, purpose and current topic. Does not include archived channels.
+
+![Slack](assets/packages/getConversationsWithDetails.png)
+
+### getNewConversations
+
+Takes your Slack token as a String and checkFromSeconds as an int, and returns a list of conversations (as Dicts) where the created at date is greater than the current time minus the checkFromSeconds time. Each entry contains the channel name, id, created at date (in Epoch seconds), creator, count of members, purpose and current tppic.
+
+![Slack](assets/packages/getNewConversations.png)
+
 ### getPrivateConversations
 
 Takes your Slack token as a String and returns a list of Dicts containing your private Slack channel names and ids.
@@ -41,6 +53,12 @@ Takes your Slack clientID (String), clientSecret (String), token datastore (Any 
 ![Slack](assets/packages/oauth.png)
 
 ![Slack](assets/packages/oauthexample.png)
+
+### postMarkdownMessage
+
+Takes your Slack token, channel id and text as Strings and posts the text to the Slack channel as a markdown message.
+
+![Slack](assets/packages/postMarkdownMessage.png)
 
 ### postMessage
 
