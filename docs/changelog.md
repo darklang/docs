@@ -6,6 +6,52 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 4/3/2020
+
+- New Dark accounts are now auto-populated with a username-gettingstarted canvas that demonstrates basic Dark functionality.
+- Even more functions have been added to the standard library:
+  - `List::indexedMap`
+  - `Math::pi`
+  - `Math::tau`
+  - `Math::degrees`
+  - `Math::turns`
+  - `Math::radians`
+  - `Math::cos`
+  - `Math::sin`
+  - `Math::tan`
+  - `Math::acos`
+  - `Math::asin`
+  - `Math::atan`
+  - `Math::atan2`
+  - `Math::cosh`
+  - `Math::sinh`
+  - `Math::tanh`
+- We've done a redesign of the sidebar to be more consistent and prettier!
+
+![assets/changelog/sidebar.png](assets/changelog/Apr3/sidebar.png)
+
+- The `add-feature-flag` option in the command palette is now context aware
+- The feature flag panel is now auto-focused when adding a new feature flag
+- Added an autocomplete option for OPTIONS in HTTP. This is especially useful for people doing pre-flight requests as part of CORS
+
+![assets/changelog/option.png](assets/changelog/Apr3/option.png)
+
+- Made it clearer that return values apply specifically to a trace
+
+![assets/changelog/returntext.png](assets/changelog/Apr3/returntext.png)
+
+- Adding a function at the start of a pipe now works properly (before this, we lost the first argument)
+- Text selection has been reworked and should work a lot better and have fewer bugs. In particular, doubleclicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)
+- Typing "." to make a field now always works, even if the autocomplete isn't ready
+- Bug fix: doubleclicking in text boxes now keeps your cursor there
+- Bug fix: in a `match` with a `Just` pattern, the variable now has the right type in autocomplete
+- `Error:toString` has been deprecated (you can't call functions on type errors)
+
+### Documentation
+
+- Added a doc about how to use [CORS in Dark](https://darklang.github.io/docs/cors)
+- Added and documented many [Slack package manager functions](https://darklang.github.io/docs/packages#slack-package)
+
 ## Week of 3/27/2020
 
 We released a lot this week, hope you enjoy!
