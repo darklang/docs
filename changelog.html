@@ -60,6 +60,54 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Changelog</h1></header><article><div><span><p>Dark gets better each week! Here is a brief list of the fixes, new features, and updates.</p>
+<h2><a class="anchor" aria-hidden="true" id="week-of-432020"></a><a href="#week-of-432020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 4/3/2020</h2>
+<ul>
+<li>New Dark accounts are now auto-populated with a username-gettingstarted canvas that demonstrates basic Dark functionality.</li>
+<li>Even more functions have been added to the standard library:
+<ul>
+<li><code>List::indexedMap</code></li>
+<li><code>Math::pi</code></li>
+<li><code>Math::tau</code></li>
+<li><code>Math::degrees</code></li>
+<li><code>Math::turns</code></li>
+<li><code>Math::radians</code></li>
+<li><code>Math::cos</code></li>
+<li><code>Math::sin</code></li>
+<li><code>Math::tan</code></li>
+<li><code>Math::acos</code></li>
+<li><code>Math::asin</code></li>
+<li><code>Math::atan</code></li>
+<li><code>Math::atan2</code></li>
+<li><code>Math::cosh</code></li>
+<li><code>Math::sinh</code></li>
+<li><code>Math::tanh</code></li>
+</ul></li>
+<li>We've done a redesign of the sidebar to be more consistent and prettier!</li>
+</ul>
+<p><img src="/docs/assets/changelog/Apr3/sidebar.png" alt="assets/changelog/sidebar.png"></p>
+<ul>
+<li>The <code>add-feature-flag</code> option in the command palette is now context aware</li>
+<li>The feature flag panel is now auto-focused when adding a new feature flag</li>
+<li>Added an autocomplete option for OPTIONS in HTTP. This is especially useful for people doing pre-flight requests as part of CORS</li>
+</ul>
+<p><img src="/docs/assets/changelog/Apr3/option.png" alt="assets/changelog/option.png"></p>
+<ul>
+<li>Made it clearer that return values apply specifically to a trace</li>
+</ul>
+<p><img src="/docs/assets/changelog/Apr3/returntext.png" alt="assets/changelog/returntext.png"></p>
+<ul>
+<li>Adding a function at the start of a pipe now works properly (before this, we lost the first argument)</li>
+<li>Text selection has been reworked and should work a lot better and have fewer bugs. In particular, doubleclicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)</li>
+<li>Typing &quot;.&quot; to make a field now always works, even if the autocomplete isn't ready</li>
+<li>Bug fix: doubleclicking in text boxes now keeps your cursor there</li>
+<li>Bug fix: in a <code>match</code> with a <code>Just</code> pattern, the variable now has the right type in autocomplete</li>
+<li><code>Error:toString</code> has been deprecated (you can't call functions on type errors)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="documentation"></a><a href="#documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<ul>
+<li>Added a doc about how to use <a href="https://darklang.github.io/docs/cors">CORS in Dark</a></li>
+<li>Added and documented many <a href="https://darklang.github.io/docs/packages#slack-package">Slack package manager functions</a></li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="week-of-3272020"></a><a href="#week-of-3272020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 3/27/2020</h2>
 <p>We released a lot this week, hope you enjoy!</p>
 <ul>
@@ -107,7 +155,7 @@
 <li>Mouse over database stats</li>
 </ul></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="documentation"></a><a href="#documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<h3><a class="anchor" aria-hidden="true" id="documentation-1"></a><a href="#documentation-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
 <ul>
 <li>Added <a href="https://darklang.github.io/docs/first-function">Your First Function</a> and <a href="https://darklang.github.io/docs/first-api">Your First External API Call</a></li>
 <li>Updated the <a href="https://darklang.github.io/docs/slack-app-tutorial">Slack tutorial</a> to discuss OAuth v2</li>
@@ -158,7 +206,7 @@
 <li>Uploading static assets on Windows no longer fails for nested directories</li>
 <li>Adding a <code>let</code> above a pipe no longer results in unexpected behavior</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="documentation-1"></a><a href="#documentation-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<h3><a class="anchor" aria-hidden="true" id="documentation-2"></a><a href="#documentation-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
 <p>We added a bunch of improved documentation, including:</p>
 <ul>
 <li>better docs for hosting <a href="https://darklang.github.io/docs/static-assets">static assets</a></li>
@@ -212,7 +260,7 @@
 <li>Fixed an issue where clicking a Play button on a function in a REPL would not cause a trace to appear</li>
 </ul></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="documentation-2"></a><a href="#documentation-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<h3><a class="anchor" aria-hidden="true" id="documentation-3"></a><a href="#documentation-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
 <ul>
 <li>Docs can now be accessed at <a href="https://darklang.com/docs">https://darklang.com/docs</a></li>
 <li><a href="https://darklang.github.io/docs/first-cron">Your first Cron</a> and <a href="https://darklang.github.io/docs/first-worker">Your first Worker</a> sections have been added to the Getting Started guide</li>
@@ -312,7 +360,7 @@
 <li><p>Fixed an issue where text was sometimes not being properly displayed in the sidebar</p></li>
 <li><p>Added a warning when trying to access Dark from a non-desktop or non-Chrome browser</p></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="documentation-3"></a><a href="#documentation-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<h3><a class="anchor" aria-hidden="true" id="documentation-4"></a><a href="#documentation-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
 <ul>
 <li>Created a <a href="https://www.notion.so/darklang/Sharing-your-Dark-Projects-26d5b14d6b41457daad6bc44ac849b1a">Sharing Dark Projects</a> guide</li>
 <li>Improved the steps at the beginning of the <a href="https://www.notion.so/darklang/A-Guide-to-Building-a-Backend-for-a-React-SPA-in-Dark-29ccf25d75bd48daa32b92e4bd555669">Guide to Building a Backend for a React SPA in Dark</a></li>
@@ -372,7 +420,7 @@
 <li>We've automatically disabled Grammarly, as it was messing with our DOM</li>
 <li>The dark-cli now prints errors on failure</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="documentation-4"></a><a href="#documentation-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
+<h3><a class="anchor" aria-hidden="true" id="documentation-5"></a><a href="#documentation-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Documentation</h3>
 <ul>
 <li>A <a href="https://www.notion.so/darklang/Sample-Canvases-a5fa5479ffbb442d9f180d83e4bf3588">list of sample canvases</a> and descriptions has been added</li>
 </ul>
@@ -413,7 +461,7 @@
 <li>Added the <code>copy-request-as-curl</code> command for <code>HttpClient::</code> functions - use ctrl-\ to activate</li>
 <li>Add <code>Twitter::urlencode</code> and <code>Crypto::sha1mac</code> to support talking to the Twitter API</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sharing-dark"><span class="arrow-prev">← </span><span>Sharing Your Dark Projects</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#week-of-3272020">Week of 3/27/2020</a><ul class="toc-headings"><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#week-of-3202020">Week of 3/20/2020</a></li><li><a href="#week-of-3132020">Week of 3/13/2020</a><ul class="toc-headings"><li><a href="#features">Features</a></li><li><a href="#bug-fixes">Bug fixes</a></li><li><a href="#documentation-1">Documentation</a></li></ul></li><li><a href="#week-of-362020">Week of 3/6/2020</a></li><li><a href="#week-of-2282020">Week of 2/28/2020</a><ul class="toc-headings"><li><a href="#documentation-2">Documentation</a></li></ul></li><li><a href="#week-of-2212020">Week of 2/21/2020</a></li><li><a href="#week-of-2142020">Week of 2/14/2020</a></li><li><a href="#week-of-2072020">Week of 2/07/2020</a></li><li><a href="#week-of-1312020">Week of 1/31/2020</a><ul class="toc-headings"><li><a href="#documentation-3">Documentation</a></li></ul></li><li><a href="#week-of-1242020">Week of 1/24/2020</a><ul class="toc-headings"><li><a href="#major-changes">Major changes</a></li><li><a href="#library-changes">Library changes</a></li><li><a href="#bug-fixes-1">Bug fixes</a></li><li><a href="#documentation-4">Documentation</a></li></ul></li><li><a href="#week-of-1172020">Week of 1/17/2020</a></li><li><a href="#week-of-1102020">Week of 1/10/2020</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/sharing-dark"><span class="arrow-prev">← </span><span>Sharing Your Dark Projects</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#week-of-432020">Week of 4/3/2020</a><ul class="toc-headings"><li><a href="#documentation">Documentation</a></li></ul></li><li><a href="#week-of-3272020">Week of 3/27/2020</a><ul class="toc-headings"><li><a href="#documentation-1">Documentation</a></li></ul></li><li><a href="#week-of-3202020">Week of 3/20/2020</a></li><li><a href="#week-of-3132020">Week of 3/13/2020</a><ul class="toc-headings"><li><a href="#features">Features</a></li><li><a href="#bug-fixes">Bug fixes</a></li><li><a href="#documentation-2">Documentation</a></li></ul></li><li><a href="#week-of-362020">Week of 3/6/2020</a></li><li><a href="#week-of-2282020">Week of 2/28/2020</a><ul class="toc-headings"><li><a href="#documentation-3">Documentation</a></li></ul></li><li><a href="#week-of-2212020">Week of 2/21/2020</a></li><li><a href="#week-of-2142020">Week of 2/14/2020</a></li><li><a href="#week-of-2072020">Week of 2/07/2020</a></li><li><a href="#week-of-1312020">Week of 1/31/2020</a><ul class="toc-headings"><li><a href="#documentation-4">Documentation</a></li></ul></li><li><a href="#week-of-1242020">Week of 1/24/2020</a><ul class="toc-headings"><li><a href="#major-changes">Major changes</a></li><li><a href="#library-changes">Library changes</a></li><li><a href="#bug-fixes-1">Bug fixes</a></li><li><a href="#documentation-5">Documentation</a></li></ul></li><li><a href="#week-of-1172020">Week of 1/17/2020</a></li><li><a href="#week-of-1102020">Week of 1/10/2020</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
