@@ -47,7 +47,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - Bug fix: in a `match` with a `Just` pattern, the variable now has the right type in autocomplete
 - `Error:toString` has been deprecated (you can't call functions on type errors)
 
-## Documentation
+### Documentation
 
 - Added a doc about how to use [CORS in Dark](https://darklang.github.io/docs/cors)
 - Added and documented many [Slack package manager functions](https://darklang.github.io/docs/packages#slack-package)
