@@ -23,7 +23,10 @@ const siteConfig = {
   baseUrl: '/docs/', // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [],
+  headerLinks: [
+    {doc: 'introduction', label: 'Documentation'},
+    {doc: 'slack-intro', label: 'Slack Apps'},
+  ],
 
   // If you have users set above, you add it here:
   // users,

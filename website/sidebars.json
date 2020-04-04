@@ -50,5 +50,16 @@
       "sharing-dark",
       "changelog"
     ]
+  },
+  "Slack": {
+    "Slack Apps": [
+      "slack-intro",
+      "slack-packages"
+    ],
+    "Tutorials": [
+      "break-time",
+      "channel-check",
+      "new-card-trello"
+    ]
   }
 }
