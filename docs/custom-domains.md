@@ -7,7 +7,7 @@ sidebar_label: Set a Custom Domain
 If you'd like to use a custom domain instead of `<your_canvas>.builtwithdark.com`, you can!
 
 - We'll manage SSL for you - no need to buy your own cert.
-- You need to set up a CNAME from your desired domain to `<your_canvas>.builtwithdark.com`.
+- You need to set up a CNAME from your desired domain to `<your_canvas>.darkcustomdomain.com`.
 
   - Note: this cannot be an apex (`foo.com`); using `www.foo.com` is the usual
     way, though you could use `app` or `api` or another subdomain instead of
