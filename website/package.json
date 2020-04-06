@@ -17,6 +17,7 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "yarn": "^1.22.1"
+    "yarn": "^1.22.1",
+    "minimist": ">=1.2.3"
   }
 }
