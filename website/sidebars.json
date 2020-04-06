@@ -50,5 +50,14 @@
       "sharing-dark",
       "changelog"
     ]
+  },
+  "Slack": {
+    "Slack Apps": [
+      "slack-apps/slack-intro",
+      "slack-apps/slack-packages"
+    ],
+    "Tutorials": [
+      "slack-app-tutorial"
+    ]
   }
 }
