@@ -53,13 +53,11 @@
   },
   "Slack": {
     "Slack Apps": [
-      "slack-intro",
-      "slack-packages"
+      "slack-apps/slack-intro",
+      "slack-apps/slack-packages"
     ],
     "Tutorials": [
-      "break-time",
-      "channel-check",
-      "new-card-trello"
+      "slack-app-tutorial"
     ]
   }
 }
