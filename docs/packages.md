@@ -20,13 +20,13 @@ For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
 Takes a list of boards and a boardDatastore. Adds the name and id of each of the boards to the datastore.
 
-![addBoardstoDB](assets/packages/trello/addBoardstoDB.png)
+![addBoardstoDB](assets/packages/trello/addBoardsToDB.png)
 
 ### addListstoDB
 
 Takes a list of Trello lists and a listDatastore. Adds the name and id of each of the lists to the datastore.
 
-![addListstoDB](assets/packages/trello/addListstoDB.png)
+![addListstoDB](assets/packages/trello/addListsToDB.png)
 
 ### createNewCard
 
