@@ -57,6 +57,7 @@
       "slack-apps/slack-packages"
     ],
     "Tutorials": [
+      "slack-apps/tutorials/channel-check",
       "slack-app-tutorial"
     ]
   }
