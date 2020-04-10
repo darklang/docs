@@ -10,16 +10,16 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - We've done a lot of work to improve how quickly we can set up custom domains - if you want a custom domain to point to your Dark app, [read the documentation](https://darklang.github.io/docs/custom-domains) to see how to do it.
 - More standard library functions! We're ramping down our concentrated effort to add more all at once, so if you have any requests post in the [Community Slack](https://darklang.com/slack-invite) or email feedback@darklang.com
-    - `Float::clamp`
-    - `Int::clamp`
-    - `Int::mod`
-    - `Int::remainder`
-    - `String::dropFirst`
-    - `String::dropLast`
-    - `String::first`
-    - `String::last`
-    - `String::trimStart`
-    - `String::trimEnd`
+  - `Float::clamp`
+  - `Int::clamp`
+  - `Int::mod`
+  - `Int::remainder`
+  - `String::dropFirst`
+  - `String::dropLast`
+  - `String::first`
+  - `String::last`
+  - `String::trimStart`
+  - `String::trimEnd`
 - We've realized that people had difficulty knowing that they need traces when they're editing functions, so we've added some in-editor pointers to it (call the function from elsewhere!)
 
     ![assets/changelog/functions.png](assets/changelog/Apr10/functions.png)
