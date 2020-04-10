@@ -113,8 +113,13 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
 2. Run:
 
    ```bash
-   ./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
+    # The single quotes - around mypass help protect against shell escaping and interpolation.
+    # If your password contains a single quote or a backslash don't forget to escape it with a \
+   ./dark-cli-apple --canvas myusername-mycanvas --password 'mypass' --user myusername build
    ```
+
+  (If you want to avoid shell escaping issues entirely, we also support putting
+your creds in `~/.netrc`; the format for that is documented at [https://ec.haxx.se/usingcurl/usingcurl-netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc).)
 
    On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
 
