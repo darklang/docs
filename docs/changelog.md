@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-# Week of 4/10/2020
+## Week of 4/10/2020
 
 - We've done a lot of work to improve how quickly we can set up custom domains - if you want a custom domain to point to your Dark app, [read the documentation](https://darklang.github.io/docs/custom-domains) to see how to do it.
 - More standard library functions! We're ramping down our concentrated effort to add more all at once, so if you have any requests post in the [Community Slack](https://darklang.com/slack-invite) or email feedback@darklang.com
@@ -31,7 +31,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - Worker names no longer allow quotes - we noticed this causing ambiguity between sending and receiving of messages
 - Updated the return type for `db::queryOne`
 
-## Documentation
+### Documentation
 
 - Added a separate section to the documentation for [Building Slack Apps](https://darklang.github.io/docs/slack-apps/slack-intro)
 - Added a tutorial for [building a slack app that checks for new channels and posts them](https://darklang.github.io/docs/slack-apps/tutorials/channel-check)
