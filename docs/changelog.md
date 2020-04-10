@@ -6,6 +6,37 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 4/10/2020
+
+- We've done a lot of work to improve how quickly we can set up custom domains - if you want a custom domain to point to your Dark app, [read the documentation](https://darklang.github.io/docs/custom-domains) to see how to do it.
+- More standard library functions! We're ramping down our concentrated effort to add more all at once, so if you have any requests post in the [Community Slack](https://darklang.com/slack-invite) or email feedback@darklang.com
+  - `Float::clamp`
+  - `Int::clamp`
+  - `Int::mod`
+  - `Int::remainder`
+  - `String::dropFirst`
+  - `String::dropLast`
+  - `String::first`
+  - `String::last`
+  - `String::trimStart`
+  - `String::trimEnd`
+- We've realized that people had difficulty knowing that they need traces when they're editing functions, so we've added some in-editor pointers to it (call the function from elsewhere!)
+
+    ![assets/changelog/functions.png](assets/changelog/Apr10/functions.png)
+
+- We're working a lot on performance of the editor, especially when typing. We've optimized a lot of different parts of the app, mostly related to typing and changing code, some of which are 3x faster. We'll continue working on this.
+- The Dark CLI now suggests some common problems and solutions when auth fails, in response to a few instances of shell string handling surprising users
+- Bug fix: typing an infix operator will now always open autocomplete.
+- Bug fix: `extract-variable` now works correctly with right to left selection.
+- Worker names no longer allow quotes - we noticed this causing ambiguity between sending and receiving of messages
+- Updated the return type for `db::queryOne`
+
+### Documentation
+
+- Added a separate section to the documentation for [Building Slack Apps](https://darklang.github.io/docs/slack-apps/slack-intro)
+- Added a tutorial for [building a slack app that checks for new channels and posts them](https://darklang.github.io/docs/slack-apps/tutorials/channel-check)
+- Added and documented many [Trello package manager functions](https://darklang.github.io/docs/packages#trello-package)
+
 ## Week of 4/3/2020
 
 - New Dark accounts are now auto-populated with a username-gettingstarted canvas that demonstrates basic Dark functionality.
