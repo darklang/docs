@@ -63,7 +63,7 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox (acces
 
 ## Persistent Datastores
 
-In Dark, all datastores are a key-value store - a persistent hashmap/dictionary (not a relational database). When looking at a Datastore you’ll see all handlers that call the datastore. 
+In Dark, all datastores are a key-value store - a persistent hashmap/dictionary (not a relational database). When looking at a Datastore you’ll see all handlers that call the datastore.
 
 ![assets/backend/image3.png](assets/backend/image3.png)
 
