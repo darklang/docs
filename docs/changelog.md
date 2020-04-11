@@ -22,7 +22,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - `String::trimEnd`
 - We've realized that people had difficulty knowing that they need traces when they're editing functions, so we've added some in-editor pointers to it (call the function from elsewhere!)
 
-    ![assets/changelog/functions.png](assets/changelog/Apr10/functions.png)
+  ![assets/changelog/functions.png](assets/changelog/Apr10/functions.png)
 
 - We're working a lot on performance of the editor, especially when typing. We've optimized a lot of different parts of the app, mostly related to typing and changing code, some of which are 3x faster. We'll continue working on this.
 - The Dark CLI now suggests some common problems and solutions when auth fails, in response to a few instances of shell string handling surprising users
