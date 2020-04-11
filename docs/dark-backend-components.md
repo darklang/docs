@@ -46,7 +46,7 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox (acces
 - Support the standard REST protocols (GET, POST, PATCH, DELETE, PUT).
 - Accept url parameters (ex: /profile/:username) and appear as variables within the handler.
 - Have implicit returns (see: [Functional Aspects of Dark](functional-aspects.md)), and return JSON by default.
-- All traces are available as dots on the LHS. If you do not have a trace selected, you will see a spinner for all live values.
+- All traces are available as dots on the left hand side. If you do not have a trace selected, you will see a spinner for all live values.
 
 ## Background Workers
 
@@ -63,7 +63,7 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox (acces
 
 ## Persistent Datastores
 
-In Dark, all datastores are a key-value store - a persistent hashmap/dictionary (not a relational database). When looking at a Datastore you’ll see the schema, all handlers that call the datastore, how many entries are in it, and a sample entry.
+In Dark, all datastores are a key-value store - a persistent hashmap/dictionary (not a relational database). When looking at a Datastore you’ll see all handlers that call the datastore.
 
 ![assets/backend/image3.png](assets/backend/image3.png)
 
