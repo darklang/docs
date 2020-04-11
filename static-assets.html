@@ -123,10 +123,14 @@
 <ol>
 <li><p>To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.</p></li>
 <li><p>Run:</p>
-<pre><code class="hljs css language-bash">./dark-cli-apple --canvas myusername-mycanvas --password mypass --user myusername build
-</code></pre>
-<p>On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:</p></li>
+<pre><code class="hljs css language-bash"> <span class="hljs-comment"># The single quotes - around mypass help protect against shell escaping and interpolation.</span>
+ <span class="hljs-comment"># If your password contains a single quote or a backslash don't forget to escape it with a \</span>
+./dark-cli-apple --canvas myusername-mycanvas --password <span class="hljs-string">'mypass'</span> --user myusername build
+</code></pre></li>
 </ol>
+<p>(If you want to avoid shell escaping issues entirely, we also support putting
+your creds in <code>~/.netrc</code>; the format for that is documented at <a href="https://ec.haxx.se/usingcurl/usingcurl-netrc">https://ec.haxx.se/usingcurl/usingcurl-netrc</a>.)</p>
+<p>On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:</p>
 <p><img src="/docs/assets/staticassets/image1.png" alt="assets/staticassets/image1.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="set-up-your-app-to-load-your-assets"></a><a href="#set-up-your-app-to-load-your-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set up your App to Load your Assets</h2>
 <p>If your SPA framework generates an &quot;index.html&quot;, or you write one yourself, you can load that for the / route in Dark.</p>
