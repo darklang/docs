@@ -6,6 +6,8 @@ sidebar_label: Create a New Trello Card
 
 Connecting your Trello account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Trello list when you want to capture the excellent idea that just came up. In this tutorial, we'll show you a few ways to enable your team to create new Trello cards directly from Slack.
 
+A [sample canvas](https://darklang.com/a/sample-createnewtrellocard) for this tutorial is available.
+
 ## Trello Configuration
 
 For this tutorial, you're going to need to grab a few different things from Trello and store each of them as separate functions in Dark:
