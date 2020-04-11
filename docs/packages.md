@@ -14,6 +14,14 @@ In the future, packages will be imported vs. being continually accessible, and c
 
 For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
+## Mailchimp Package
+
+### subscribe
+
+Takes an audience ID (String), email (String), first name (String), last name (String), Mailchimp username(String), Mailchimp API key (String), and Mailchimp datacenter (String) and posts to the [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
+
+![subscribe](assets/packages/subscribe.png)
+
 ## Trello Package
 
 ### addBoardstoDB
