@@ -10,9 +10,38 @@ Dark's alpha package manager allows re-using Dark functions from other users or 
 
 In the future, packages will be imported vs. being continually accessible, and community members will be able to contribute directly. If you would like to request or contribute a package today, please reach out via Slack.
 
-## Slack Package
+## Asana Package
 
-For a full list of Slack functions, click [here](slack-apps/slack-packages).
+### createProject
+
+Takes a name (String), notes (String), workspace (String) and Asana token (string) and creates a new project in the specified workspace.
+
+![createProject](assets/packages/asana/createProject.png)
+
+### createTask
+
+Takes a name (String), assignee (String), project (String), notes (String) and Asana token (string) and creates a new task in the specified workspace. The assignee can be a user gid, email or null.
+
+![createTask](assets/packages/asana/createTask.png)
+
+### createTaskWithDueDate
+
+Takes a name (String), assignee (String), due date (String - 'YYYY-MM-DD' format) project (String), notes (String) and Asana token (string) and creates a new task in the specified workspace. The assignee can be a user gid, email or null.
+
+![createTaskWithDueDate](assets/packages/asana/createTaskWithDueDate.png)
+
+### getAllProjects
+
+Takes an Asana token as a string and returns details of all projects that token has access to.
+
+![getAllProjects](assets/packages/asana/getAllProjects.png)
+
+### getAllWorkspaces
+
+Takes an Asana token as a string and returns details of all workspaces that token has access to.
+
+![getAllWorkspaces](assets/packages/asana/getAllWorkspaces.png)
+
 
 ## Mailchimp Package
 
@@ -21,6 +50,10 @@ For a full list of Slack functions, click [here](slack-apps/slack-packages).
 Takes an audience ID (String), email (String), first name (String), last name (String), Mailchimp username(String), Mailchimp API key (String), and Mailchimp datacenter (String) and posts to the [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
 
 ![subscribe](assets/packages/subscribe.png)
+
+## Slack Package
+
+For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
 ## Trello Package
 
