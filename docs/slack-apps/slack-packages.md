@@ -8,6 +8,8 @@ We've built in a variety of functions to make it easier to build Dark apps with 
 
 ![Slack](assets/packages/slackpackage.png)
 
+## Package List
+
 ### getAllConversations
 
 Takes your Slack token as a String and returns a list of Dicts containing both your public and private Slack channel names and ids.
