@@ -42,7 +42,6 @@ Takes an Asana token as a string and returns details of all workspaces that toke
 
 ![getAllWorkspaces](assets/packages/asana/getAllWorkspaces.png)
 
-
 ## Mailchimp Package
 
 ### subscribe
