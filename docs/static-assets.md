@@ -103,6 +103,12 @@ If using Vue, you likely want to set PUBLIC_PATH instead:
 PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 ```
 
+If using Node, you can run the following command:
+
+```bash
+ng build --prod --deploy-url DARK_STATIC_ASSETS_BASE_URL/
+```
+
 Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:
 
 [vuejs/vue-cli](https://github.com/vuejs/vue-cli/tree/dev/docs/config#publicpath)
