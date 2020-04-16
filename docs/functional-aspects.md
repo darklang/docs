@@ -112,4 +112,4 @@ Here’s an example of using a match expression with a dictionary lookup.
 
 ![assets/functional/image16.png](assets/functional/image16.png)
 
-Using any variable name as one of the branches will catch all matches. The variable can be used on the right side of the branch.
+Using a variable name as one of the branches will catch all matches. The variable can be used on the right side of the branch.
