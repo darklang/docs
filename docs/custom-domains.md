@@ -4,7 +4,6 @@ title: Use a Custom Domain
 sidebar_label: Use a Custom Domain
 ---
 
-
 Your backend endpoints are always available at `<your_canvas_name>.builtwithdark.com/*`.
 
 If you'd like, you can additionally use a custom domain like `www.myawesomedarkservice.com` or `api.myawesomedarkservice.com` to serve your endpoints!
@@ -50,16 +49,16 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
 
 ### I've set up a CNAME but I still don't see `<your_canvas_name>.darkcustomdomain.com` in the results from `dig`!
 
-  We've seen this happen for devs using proxies like Cloudflare in front of their domains. For example, you might see:
+We've seen this happen for devs using proxies like Cloudflare in front of their domains. For example, you might see:
 
-  ```shell
-  $ dig api.myawesomedarkservice.com
-  # ...
-  ;; ANSWER SECTION:
-  api.myawesomedarkservice.com.    300    IN    A    104.24.118.127
-  api.myawesomedarkservice.com.    300    IN    A    104.24.119.127
-  # ...
-  ```
+```shell
+$ dig api.myawesomedarkservice.com
+# ...
+;; ANSWER SECTION:
+api.myawesomedarkservice.com.    300    IN    A    104.24.118.127
+api.myawesomedarkservice.com.    300    IN    A    104.24.119.127
+# ...
+```
 
-  To resolve this, turn off the proxy. On Cloudflare, you can press this button to switch from "Proxied" to "DNS only" mode:
-  ![Turning off the Cloudflare proxy in favor of "DNS only"](assets/customdomain/cloudflare-proxy.png)
+To resolve this, turn off the proxy. On Cloudflare, you can press this button to switch from "Proxied" to "DNS only" mode:
+![Turning off the Cloudflare proxy in favor of "DNS only"](assets/customdomain/cloudflare-proxy.png)
