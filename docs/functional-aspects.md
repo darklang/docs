@@ -104,7 +104,7 @@ To open the block type `\`. It autopopulates the parameters it is expecting (lik
 
 ## Match
 
-The match expression is used to destructure complex types, such as the `Option` type (`Just` and `Nothing`) and the `Result` type (`Ok` and `Error`). It can also be used similarly to switch statements in other languages. 
+The match expression is used to destructure complex types, such as the `Option` type (`Just` and `Nothing`) and the `Result` type (`Ok` and `Error`). It can also be used similarly to switch statements in other languages.
 
 By default, functions that return Option or Result go to the [Error Rail](https://darklang.github.io/docs/unique-aspects#functions-that-use-error-rail). Once you remove the function from the Error Rail, use match for destructuring.
 
