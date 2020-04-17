@@ -15,7 +15,7 @@ The language being connection to the editor and infrastructure allows interactiv
 
 ![assets/unique/playbutton.png](assets/unique/playbutton.png)
 
-The replay icon indicates the function has been executed already. Pressing it executes the code for the trace again again.
+The replay icon indicates the function has been executed already. Pressing it executes the code for the trace again.
 
 ![assets/unique/replaybutton.png](assets/unique/replaybutton.png)
 
