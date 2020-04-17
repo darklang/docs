@@ -8,7 +8,7 @@ Dark being connected to the editor and infrastructure allows for unique language
 
 ## Play & Replay Buttons
 
-The language being connection to the editor and infrastructure allows interactive functions.
+The language being connected to the editor and infrastructure allows interactive functions.
 
 - Functions that do not have side effects (like `Int::add`) run automatically.
 - Functions with side effects have play buttons. Press the play button to execute the function for the selected trace.
