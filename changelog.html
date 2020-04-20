@@ -64,9 +64,9 @@
 <ul>
 <li>Traces can now be linked to directly.</li>
 <li>Pasting JSON into Dark now works in more cases</li>
-<li>The command palette keyboard shortcut has changed: you should now use  <code>ctrl+s</code> (we also support <code>alt+x</code>, and <code>ctrl+\</code>, should it be helpful for folks with non-US keyboard)</li>
+<li>The command palette keyboard shortcut has changed: you should now use <code>ctrl+s</code> (we also support <code>alt+x</code>, and <code>ctrl+\</code>, should it be helpful for folks with non-US keyboard)</li>
 <li>Updated <code>String::slugify_v1</code> to slugify correctly in all cases.</li>
-<li>The SQL compiler now supports <code>String::contains</code>.</li>
+<li><code>DB::query</code> functions now support <code>String::contains</code> in their query block.</li>
 <li>The docstrings for <code>List::sortBy</code> and <code>List::sortByComparator</code> were updated to improve clarity.</li>
 <li>Fixed the return type for <code>DB::queryOne</code> - it now correctly returns an <code>Option</code>, and works properly with the error rail</li>
 <li>Fixed a bug with selecting dicts in feature flags</li>
