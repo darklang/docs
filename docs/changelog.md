@@ -10,9 +10,9 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - Traces can now be linked to directly.
 - Pasting JSON into Dark now works in more cases
-- The command palette keyboard shortcut has changed: you should now use  `ctrl+s` (we also support `alt+x`, and `ctrl+\`, should it be helpful for folks with non-US keyboard)
+- The command palette keyboard shortcut has changed: you should now use `ctrl+s` (we also support `alt+x`, and `ctrl+\`, should it be helpful for folks with non-US keyboard)
 - Updated `String::slugify_v1` to slugify correctly in all cases.
-- The SQL compiler now supports `String::contains`.
+- `DB::query` functions now support `String::contains` in their query block.
 - The docstrings for `List::sortBy` and `List::sortByComparator` were updated to improve clarity.
 - Fixed the return type for `DB::queryOne` - it now correctly returns an `Option`, and works properly with the error rail
 - Fixed a bug with selecting dicts in feature flags
