@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create a New Trello Card from Slack · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Connecting your Trello account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Trello list when you want to capture the excellent idea that just came up. In this tutorial, we&#x27;ll show you a few ways to enable your team to create new Trello cards directly from Slack."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create a New Trello Card from Slack · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Connecting your Trello account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Trello list when you want to capture the excellent idea that just came up. In this tutorial, we&#x27;ll show you a few ways to enable your team to create new Trello cards directly from Slack."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class="siteNavGroupActive"><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Slack Apps</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-intro">Your First Slack App</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-packages">Slack Packages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/channel-check">Check for New Channels</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/slack-apps/tutorials/new-trello-card">Create a New Trello Card</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Slack tutorial</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Create a New Trello Card from Slack</h1></header><article><div><span><p>Connecting your Trello account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Trello list when you want to capture the excellent idea that just came up. In this tutorial, we'll show you a few ways to enable your team to create new Trello cards directly from Slack.</p>
+<h2><a class="anchor" aria-hidden="true" id="trello-configuration"></a><a href="#trello-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trello Configuration</h2>
+<p>For this tutorial, you're going to need to grab a few different things from Trello and store each of them as separate functions in Dark:</p>
+<ul>
+<li>Your Trello API Key and Token, <a href="https://trello.com/app-key/">available on this page</a></li>
+<li>Your Trello org id, the id for one of your boards, and the id for one of your lists, which we will refer to as our <code>defaultListID</code> throughout the tutorial. The best way to get all of these at once is to add <code>.json</code> to the end of the URL on one of your boards, and search through the resulting JSON for the <code>id</code> that matches with the name of your board, the <code>id</code> that matches with the name of the list you'd like to use and <code>idOrganization</code>. Don't worry - we'll cover an easier way to handle this later in the tutorial.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="slack-configuration"></a><a href="#slack-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slack Configuration</h2>
+<ol>
+<li><p><a href="https://api.slack.com/apps">Create a new app in Slack</a>.</p></li>
+<li><p>Set a Slash command (the option should appear under <strong>Add features &amp; functionality</strong> on your app's main page). Your <code>Request URL</code> should look something like <code>https://yourusername-yourcanvasname.builtwithdark.com/new-trello-card</code>. This is the URL that Slack will call when you use your slash command - don't add anything to your Dark canvas just yet. Also note our usage hint - a card name and card description, separated by a <code>|</code> symbol.</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/slashcommand.png" alt="assets/slack-apps/tutorials/new-trello-card/slashcommand.png"></p>
+<ol start="3">
+<li>Add the following scopes to your app: <code>chat:write</code>, <code>chat:write.public</code>, <code>commands</code>.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/scopes.png" alt="assets/slack-apps/tutorials/new-trello-card/scopes.png"></p>
+<ol start="3">
+<li><p>Install your app to the workspace (either via <strong>Settings -&gt; Basic Information</strong> or <strong>Settings -&gt; Install App</strong>). Since this app is being built for your workspace specifically, we will not need to set up full OAuth, like we would if we wanted to distribute this more publicly.</p></li>
+<li><p>Copy your bot user access token, which will now be available under <strong>Settings -&gt; Install</strong> app and save it as a function in your Dark canvas. Use this function wherever you see <code>slackToken</code> in the code examples.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="building-in-dark"></a><a href="#building-in-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building in Dark</h2>
+<ol>
+<li>Attempt to use your slash command. Make sure to include some text after your slash command, separated by a | symbol.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/fullslashcommand.png" alt="assets/slack-apps/tutorials/new-trello-card/fullslashcommand.png"></p>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/httperror.png" alt="assets/slack-apps/tutorials/new-trello-card/httperror.png"></p>
+<ol start="2">
+<li>Navigate to your Dark canvas and check the 404s section in the sidebar - you should see an HTTP POST created called <code>/new-trello-card</code> (or whatever you used when setting up your slash command). Click the plus sign to add it to your canvas.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/404.png" alt="assets/slack-apps/tutorials/new-trello-card/404.png"></p>
+<ol start="3">
+<li>Once it's on your canvas, you can place your carat over the trace on the left (the white dot) to see the incoming data Slack attempted to send.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/trace.png" alt="assets/slack-apps/tutorials/new-trello-card/trace.png"></p>
+<ol start="4">
+<li>In the body of your trace data, you will see a text field in the body. This is what we want to parse to get the name and description of the card we're going to create. In order to parse this information, we're going to use <code>String::split</code> and parse on the special character <code>|</code>.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/stringsplit.png" alt="assets/slack-apps/tutorials/new-trello-card/stringsplit.png"></p>
+<ol start="5">
+<li>Now that we have a list of <code>messageContent</code>, we can use <code>List::getAt</code> to set the name and description of the card.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/listgetat.png" alt="assets/slack-apps/tutorials/new-trello-card/listgetat.png"></p>
+<ol start="6">
+<li>Once we have all of the information we need, we can use the Dark package manager <a href="/docs/packages#createNewCard"><code>Trello::createNewCard</code> function</a> to create the new card. For simplicity's sake, we're going to use the <code>defaultListID</code> we set earlier, as well as the <code>trelloKey</code> and <code>trelloToken</code>.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/trellonewcard.png" alt="assets/slack-apps/tutorials/new-trello-card/trellonewcard.png"></p>
+<ol start="7">
+<li>Re-run your HTTP handler, or call the slash command again and then check Trello - your new card will have been created in the list you specified.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/newcard.png" alt="assets/slack-apps/tutorials/new-trello-card/newcard.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="handling-lists"></a><a href="#handling-lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling Lists</h3>
+<p>In the future, you probably won't want to worry about hunting around for your list ids. We've made it easy for you to create your own lookup table to match list names and ids.</p>
+<ol>
+<li>Create a <code>Lists</code> db.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/listdb.png" alt="assets/slack-apps/tutorials/new-trello-card/listdb.png"></p>
+<ol start="2">
+<li>Now, we can use built in Dark package manager functions to get a list of all of our Trello lists and add them to our DB. Create a REPL called <code>addListsToDB</code>, add the following lines of code, and run it:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/addliststodb.png" alt="assets/slack-apps/tutorials/new-trello-card/addliststodb.png"></p>
+<ol start="3">
+<li>Let's try another slash command, this time with more information - specifying the name of a list to add the card to.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/slashcommandlist.png" alt="assets/slack-apps/tutorials/new-trello-card/slashcommandlist.png"></p>
+<ol start="15">
+<li>Now <code>messageContent</code> will have a third entry in the list.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png" alt="assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png"></p>
+<ol start="16">
+<li>Using the built in <a href="/docs/packages#lookuplistid"><code>Trello:lookUpListID</code> function</a>, we can grab the name of that list and use it in our createNewCard function.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/lookuplistid.png" alt="assets/slack-apps/tutorials/new-trello-card/lookuplistid.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="making-input-easier-with-modals"></a><a href="#making-input-easier-with-modals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making input easier with modals</h3>
+<p>Okay, this is all great, but still has some problems. What if someone forgets to add the right special character? Let's make it a little easier, by creating a modal to handle their input.</p>
+<ol>
+<li><p>Create a new slash command, just as we did at the beginning but with a different name and Request URL. This allows us to build different functionality around this command without losing anything we did previously. I used <code>/new-trello-card-modal</code>.</p></li>
+<li><p>Turn Interactivity on via <strong>Features -&gt; Interactvitity and Shortcuts</strong> and specify a URL for the interaction to be sent to:</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/interactivity.png" alt="assets/slack-apps/tutorials/new-trello-card/interactivity.png"></p>
+<ol start="3">
+<li><p>Slack uses JSON to generate modals via a framework called Block Kit, even providing a <a href="https://api.slack.com/tools/block-kit-builder">handy Block Kit builder</a>. At this point, it may make sense to pause and create your modal - we'll need the JSON soon. The modal we're going to use has 3 fields: a singleline for the card name, a multiline for the card description and a select for a list of lists.</p></li>
+<li><p>Now, just like before, we're going to call the Slash command and grab the 404.</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/newslashcommand.png" alt="assets/slack-apps/tutorials/new-trello-card/newslashcommand.png"></p>
+<ol start="5">
+<li>Grab your <code>trigger_id</code> from the request.body:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/triggerid.png" alt="assets/slack-apps/tutorials/new-trello-card/triggerid.png"></p>
+<ol start="6">
+<li>Create an <code>HttpClient::post</code> request and add your <code>trigger_id</code> and <code>JSON</code>. These are truncated screenshots with a lot of the JSON cut out:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/json1.png" alt="assets/slack-apps/tutorials/new-trello-card/json1.png"></p>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/json2.png" alt="assets/slack-apps/tutorials/new-trello-card/json2.png"></p>
+<ol start="7">
+<li>Try your Slash command - a modal should open. Input text and try to send. You will get an error message:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/troubleconnecting.png" alt="assets/slack-apps/tutorials/new-trello-card/troubleconnecting.png"></p>
+<ol start="8">
+<li>We need to work with our <code>/interaction</code> handler, which should be available in your 404s. We're going to start with parsing the payload Slack sent through:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/payload.png" alt="assets/slack-apps/tutorials/new-trello-card/payload.png"></p>
+<ol start="9">
+<li>We can use that payload to grab the information that you submitted in your modal:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/submittedinfo.png" alt="assets/slack-apps/tutorials/new-trello-card/submittedinfo.png"></p>
+<ol start="10">
+<li>And, just like before, we'll use the <code>Trello::lookUpListID</code> to find the correct Trello list:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/lookuplistid2.png" alt="assets/slack-apps/tutorials/new-trello-card/lookuplistid2.png"></p>
+<ol start="11">
+<li>All that's left is creating the new card and sending a 200 response back to Slack:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/newcard200.png" alt="assets/slack-apps/tutorials/new-trello-card/newcard200.png"></p>
+<ol start="12">
+<li>Try to create a ticket again with your Slash command:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/lasttry.png" alt="assets/slack-apps/tutorials/new-trello-card/lasttry.png"></p>
+<ol start="13">
+<li>Once you hit submit, your ticket will appear in Trello!</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/new-trello-card/trelloticket.png" alt="assets/slack-apps/tutorials/new-trello-card/trelloticket.png"></p>
+<p>Congratulations, you now have a Slack app that can create Trello cards in multiple ways!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/slack-apps/tutorials/channel-check"><span class="arrow-prev">← </span><span>Check for New Channels</span></a><a class="docs-next button" href="/docs/slack-app-tutorial"><span>Slack tutorial</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#trello-configuration">Trello Configuration</a></li><li><a href="#slack-configuration">Slack Configuration</a></li><li><a href="#building-in-dark">Building in Dark</a><ul class="toc-headings"><li><a href="#handling-lists">Handling Lists</a></li><li><a href="#making-input-easier-with-modals">Making input easier with modals</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
