@@ -6,6 +6,29 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 4/17/2020
+
+- Traces can now be linked to directly.
+- Pasting JSON into Dark now works in more cases
+- The command palette keyboard shortcut has changed: you should now use  `ctrl+s` (we also support `alt+x`, and `ctrl+\`, should it be helpful for folks with non-US keyboard)
+- Updated `String::slugify_v1` to slugify correctly in all cases.
+- The SQL compiler now supports `String::contains`.
+- The docstrings for `List::sortBy` and `List::sortByComparator` were updated to improve clarity.
+- Fixed the return type for `DB::queryOne` - it now correctly returns an `Option`, and works properly with the error rail
+- Fixed a bug with selecting dicts in feature flags
+- [darklang.com](http://darklang.com) now displays properly on Safari
+
+### Package Manager
+
+- Added and documented many [Asana package manager functions](https://darklang.github.io/docs/packages#asana-package).
+- Added and documented a [Mailchimp subscribe function](https://darklang.github.io/docs/packages#mailchimp-package)
+
+### Documentation
+
+- Lots of small typos and corrections were made - thank you to everyone who reported them!
+- Improved the documentation around `match`, thanks to Nathan Lloyd Smith!
+- Added a tutorial around [creating new Trello cards via Slack](https://darklang.github.io/docs/slack-apps/tutorials/new-trello-card)
+
 ## Week of 4/10/2020
 
 - We've done a lot of work to improve how quickly we can set up custom domains - if you want a custom domain to point to your Dark app, [read the documentation](https://darklang.github.io/docs/custom-domains) to see how to do it.
