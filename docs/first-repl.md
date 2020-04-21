@@ -34,7 +34,7 @@ Dark automatically creates blanks for the four arguments that `HttpClient::post`
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
-6. Next let's add the arguments. The structured editor simplifies creation the arguments we want:
+6. Next let's add the arguments. The structured editor simplifies creation of the arguments we want:
 
 - For the body, we want to pass `{test:"test1"}`: type `{`, hit enter, then add the key and the value.
 - For the query, we want an empty dictionary. Type `{`.
