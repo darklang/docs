@@ -58,6 +58,7 @@
     ],
     "Tutorials": [
       "slack-apps/tutorials/channel-check",
+      "slack-apps/tutorials/asana-tutorial",
       "slack-apps/tutorials/new-trello-card",
       "slack-app-tutorial"
     ]
