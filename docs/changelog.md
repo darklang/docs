@@ -11,8 +11,8 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - We've added `Http::setCookie_v2` which handles the `expires` parameter properly. It also also has much better error messages
 - Added `Dict::member`, `Date::<=` and `Date::>=` to the standard library
 - Updated a few standard library functions:
-    - `String::isSubstring` is now `String::contains`
-    - `List::contains` is now `List::member`
+  - `String::isSubstring` is now `String::contains`
+  - `List::contains` is now `List::member`
 - `String::contains` is now supported in `DB::query*` functions
 - It is now no longer possible to create multiple datastores with the same name.
 - Fixed an issue that causes Dark to crash when selecting while the autocomplete was available.
