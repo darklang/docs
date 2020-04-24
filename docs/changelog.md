@@ -6,6 +6,26 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 4/24/2020
+
+- We've added `Http::setCookie_v2` which handles the `expires` parameter properly. It also also has much better error messages
+- Added `Dict::member`, `Date::<=` and `Date::>=` to the standard library
+- Updated a few standard library functions:
+  - `String::isSubstring` is now `String::contains`
+  - `List::contains` is now `List::member`
+- `String::contains` is now supported in `DB::query*` functions
+- It is now no longer possible to create multiple datastores with the same name.
+- Fixed an issue that causes Dark to crash when selecting while the autocomplete was available.
+- We now support recursion! While it's been supported for a long time on the backend, you were unable to get live values for recursive functions in the editor. Now you can!
+- When new traces are created while your editor is open, we'll now replace old traces with the new one (before we added all traces, which caused large canvases to crash).
+- We've improved the loading time of the editor for apps with lots of 404s
+- Some function docstrings now link to relevant documentation - more to come!
+
+### Documentation
+
+- Improved the documentation around [setting up a custom domain](https://darklang.github.io/docs/custom-domains)
+- Added a tutorial around [creating new Asana projects and tasks via Slack](https://darklang.github.io/docs/slack-apps/tutorials/asana-tutorial)
+
 ## Week of 4/17/2020
 
 - Traces can now be linked to directly.
