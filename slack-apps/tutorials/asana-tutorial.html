@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create Asana Projects &amp; Tasks · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Connecting your Asana account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Asana project when you want to capture the excellent idea that just came up. In this tutorial, we&#x27;ll show you a few ways to enable your team to create new Asana tasks directly from Slack."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create Asana Projects &amp; Tasks · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Connecting your Asana account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Asana project when you want to capture the excellent idea that just came up. In this tutorial, we&#x27;ll show you a few ways to enable your team to create new Asana tasks directly from Slack."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class="siteNavGroupActive"><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Slack Apps</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-intro">Your First Slack App</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-packages">Slack Packages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/channel-check">Check for New Channels</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/slack-apps/tutorials/asana-tutorial">Create Asana Projects &amp; Tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/new-trello-card">Create a New Trello Card</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Slack tutorial</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Create Asana Projects &amp; Tasks</h1></header><article><div><span><p>Connecting your Asana account with your Slack account can make for a powerful tool - no more switching tabs and hunting for the right Asana project when you want to capture the excellent idea that just came up. In this tutorial, we'll show you a few ways to enable your team to create new Asana tasks directly from Slack.</p>
+<h2><a class="anchor" aria-hidden="true" id="asana-configuration"></a><a href="#asana-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asana Configuration</h2>
+<p>For this tutorial, you'll want to grab a couple different things from Asana and store each of them as separate functions in Dark:</p>
+<ul>
+<li>Your <a href="https://app.asana.com/0/developer-console">personal access token</a></li>
+<li>The id of one of your workspaces. The easiest way to access this is via the admin panel - it will be the long number in the URL.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="slack-configuration"></a><a href="#slack-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slack Configuration</h2>
+<ol>
+<li><a href="https://api.slack.com/apps">Create a new app in Slack.</a></li>
+<li>Set a Slash command (the option should appear under <strong>Add features &amp; functionality</strong> on your app's main page). Your Request URL should look something like <code>https://yourusername-yourcanvasname.builtwithdark.com/new-project</code>. This is the URL that Slack will call when you use your slash command - don't add anything to your Dark canvas just yet.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/slashcommand.png" alt="assets/slack-apps/tutorials/asana-tutorial/slashcommand.png"></p>
+<ol start="3">
+<li>Go to <strong>Features -&gt; OAuth &amp; Permissions</strong> and add the following scopes to your app: <code>chat:write</code>, <code>chat:write.public</code>, <code>commands.</code></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/permissions.png" alt="assets/slack-apps/tutorials/asana-tutorial/permissions.png"></p>
+<ol start="4">
+<li><p>Install your app to the workspace (either via <strong>Settings -&gt; Basic Information</strong> or <strong>Settings -&gt; Install App</strong>). Since this app is being built for your workspace specifically, we will not need to set up full OAuth, like we would if we wanted to distribute this more publicly.</p></li>
+<li><p>Copy your bot user access token, which will now be available under <strong>Settings -&gt; Install</strong> app and save it as a function in your Dark canvas. Use this function wherever you see <code>slackToken</code> in the code examples.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="building-in-dark"></a><a href="#building-in-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building In Dark</h2>
+<p>First, we're going to learn how to create new Asana projects using slash commands.</p>
+<ol>
+<li>Go to Slack and try to use your new slash command. Make sure to include some text after entering your command. You will see an error message appear.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/newprojecterror.png" alt="assets/slack-apps/tutorials/asana-tutorial/newprojecterror.png"></p>
+<ol start="2">
+<li>Navigate to your Dark canvas and check the 404s section in the sidebar - you should see an HTTP POST created called <code>/new-project</code> (or whatever you used when setting up your slash command). Click the plus sign to add it to your canvas.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/newproject404.png" alt="assets/slack-apps/tutorials/asana-tutorial/newproject404.png"></p>
+<ol start="3">
+<li>Once your handler is on your canvas, you can click on the trace (the white dot to the left) to see the incoming data Slack attempted to send.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/trace.png" alt="assets/slack-apps/tutorials/asana-tutorial/trace.png"></p>
+<ol start="4">
+<li>You will see a text field in the body of the trace data. Use <code>request.body.text</code> to set your project name.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/projectname.png" alt="assets/slack-apps/tutorials/asana-tutorial/projectname.png"></p>
+<ol start="5">
+<li>Using the <a href="/docs/packages#createproject"><code>Asana::createProject function</code></a> and the data we grabbed from the trace, we can now create a new project. You will need to use the workspace id and personal access token you saved in the set-up process.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/createProject.png" alt="assets/slack-apps/tutorials/asana-tutorial/createProject.png"></p>
+<ol start="6">
+<li>Try your Slash command again and then check Asana - your new project will be there!</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/asanaproject.png" alt="assets/slack-apps/tutorials/asana-tutorial/asanaproject.png"></p>
+<ol start="7">
+<li>Now, let's try sending over a slash command with different data. Return to Slack and use your slash command again, but this time, write a project name, <code>\</code> sign and a description and send it over (something like <code>\asana-new-project Another New Project/Notes on the project</code>). Return to Dark and check the traces - you should see a text field formatted like this:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/textexample.png" alt="assets/slack-apps/tutorials/asana-tutorial/textexample.png"></p>
+<ol start="8">
+<li>Now, we can use the <code>String::split</code> function to separate out our two pieces of information, and add them separately to the <a href="/docs/packages#createProject"><code>Asana::createProject function</code></a> function.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/notes.png" alt="assets/slack-apps/tutorials/asana-tutorial/notes.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="looking-up-project--workspace-ids"></a><a href="#looking-up-project--workspace-ids" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Looking Up Project &amp; Workspace IDs</h3>
+<p>You're not always going to want to pre-define your workspace or projects via Dark functions. This section will show you how to take a project name as a <code>String</code> and get the corresponding id. We'll be using projects for this example, but it works the same way for workspaces.</p>
+<ol>
+<li>Create a Projects datastore.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/projectsdatastore.png" alt="assets/slack-apps/tutorials/asana-tutorial/projectsdatastore.png"></p>
+<ol start="2">
+<li>Create a new REPL. First, use the <a href="/docs/packages#getAllProjects"><code>Asana::getAllProjects</code></a> function to grab information about all projects you have access to. Then, use a <code>List::map</code> to add their names and gids to the DB.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/populatedb.png" alt="assets/slack-apps/tutorials/asana-tutorial/populatedb.png"></p>
+<ol start="3">
+<li><p>To see this in action, create a fresh slash command and call it, using the task name/project name formatting. To make it easier on yourself, make sure to use a project name that already exists.</p></li>
+<li><p>Split out the information as you did before.</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/taskandproject.png" alt="assets/slack-apps/tutorials/asana-tutorial/taskandproject.png"></p>
+<ol start="5">
+<li>Create a new function called <code>lookUpProjectID</code> and then use <code>DB::queryOne</code> to grab the id based on the projectName.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png" alt="assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png"></p>
+<ol start="6">
+<li>Use a match statement to handle both the success and failure (couldn't find the project name in the db) case.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/match.png" alt="assets/slack-apps/tutorials/asana-tutorial/match.png"></p>
+<ol start="7">
+<li>Use your new function your HTTP POST handler.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/lookupid.png" alt="assets/slack-apps/tutorials/asana-tutorial/lookupid.png"></p>
+<ol start="8">
+<li>Call the slash command again and check Asana - a new task should be there.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/newesttask.png" alt="assets/slack-apps/tutorials/asana-tutorial/newesttask.png"></p>
+<h3><a class="anchor" aria-hidden="true" id="making-input-easier-with-modals"></a><a href="#making-input-easier-with-modals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making input easier with modals</h3>
+<p>Okay, this is all great, but still has some problems. What if someone forgets to add the right special character? Let's make it a little easier, by creating a modal to handle their input.</p>
+<ol>
+<li>Create a new slash command.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/newmodal.png" alt="assets/slack-apps/tutorials/asana-tutorial/newmodal.png"></p>
+<ol start="2">
+<li>Turn Interactivity on via <strong>Features -&gt; Interactivity and Shortcuts</strong> and specify a URL for the interaction to be sent to:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/interactivity.png" alt="assets/slack-apps/tutorials/asana-tutorial/interactivity.png"></p>
+<ol start="3">
+<li><p>Slack uses <code>JSON</code> to generate modals via a framework called Block Kit, even providing a <a href="https://api.slack.com/tools/block-kit-builder">handy Block Kit builder</a>. At this point, it may make sense to pause and create your modal - we'll need the <code>JSON</code> soon. The modal we're going to use has 3 fields: a singleline for the task name, a multiline for the task description and a select for a list of projects.</p></li>
+<li><p>Call your new slash command and grab the 404, as you did in previous steps.</p></li>
+<li><p>Start by setting your <code>triggerId</code> using  <code>request.body.trigger_id</code>:</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/triggerid.png" alt="assets/slack-apps/tutorials/asana-tutorial/triggerid.png"></p>
+<ol start="6">
+<li>Format your header - you will need the Slack token you grabbed earlier in the set-up process.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/header.png" alt="assets/slack-apps/tutorials/asana-tutorial/header.png"></p>
+<ol start="7">
+<li>Create an <code>HttpClient::post</code> request and add your <code>triggerID</code> and <code>JSON</code>. These are truncated screenshots with a lot of the JSON cut out:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/json1.png" alt="assets/slack-apps/tutorials/asana-tutorial/json1.png"></p>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/json2.png" alt="assets/slack-apps/tutorials/asana-tutorial/json2.png"></p>
+<ol start="8">
+<li>Try your new Slash command. A modal should appear. Fill in the modal and hit submit to get a new error message:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/asanaerror.png" alt="assets/slack-apps/tutorials/asana-tutorial/asanaerror.png"></p>
+<ol start="8">
+<li>Check your 404s and add your new handler. This is the handler where the behind-the-scenes logic will happen. Start by formatting the payload into <code>JSON</code>.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/payload.png" alt="assets/slack-apps/tutorials/asana-tutorial/payload.png"></p>
+<ol start="9">
+<li>Now grab all of your important values from your modal fields:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/payloaddata.png" alt="assets/slack-apps/tutorials/asana-tutorial/payloaddata.png"></p>
+<ol start="10">
+<li>Use the <a href="/docs/packages#createTask"><code>Asana::createTask</code></a> and the <code>lookUpProjectID</code> functions to create your new task.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/createtask.png" alt="assets/slack-apps/tutorials/asana-tutorial/createtask.png"></p>
+<ol start="11">
+<li>Respond with a <code>200</code>.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/200.png" alt="assets/slack-apps/tutorials/asana-tutorial/200.png"></p>
+<ol start="12">
+<li>Check Asana - your new task should be visible in the project your specified project.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/mytask.png" alt="assets/slack-apps/tutorials/asana-tutorial/mytask.png"></p>
+<p>Congratulations, you now have a Slack app that can create Asana projects and tasks in multiple ways!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/slack-apps/tutorials/channel-check"><span class="arrow-prev">← </span><span>Check for New Channels</span></a><a class="docs-next button" href="/docs/slack-apps/tutorials/new-trello-card"><span>Create a New Trello Card</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#asana-configuration">Asana Configuration</a></li><li><a href="#slack-configuration">Slack Configuration</a></li><li><a href="#building-in-dark">Building In Dark</a><ul class="toc-headings"><li><a href="#looking-up-project--workspace-ids">Looking Up Project &amp; Workspace IDs</a></li><li><a href="#making-input-easier-with-modals">Making input easier with modals</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
