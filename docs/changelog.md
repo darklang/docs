@@ -8,7 +8,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 ## Week of 4/24/2020
 
-- We've added `Http::setCookie_v2` which handles the `expires` parameter properly. It also also has much better error messages
+- We've added `Http::setCookie_v2` which handles the `expires` parameter properly. It also has much better error messages
 - Added `Dict::member`, `Date::<=` and `Date::>=` to the standard library
 - Updated a few standard library functions:
   - `String::isSubstring` is now `String::contains`
