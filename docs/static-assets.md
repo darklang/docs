@@ -26,7 +26,7 @@ Here’s how we want our app to work:
 
 At a high level, here are the steps:
 
-1. deploy the assets using our app
+1. deploy the assets using the dark-cli app
 2. load the index page
 3. configure your react app
 
