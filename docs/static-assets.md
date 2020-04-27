@@ -97,6 +97,12 @@ In React, when compiling your react application, you can use PUBLIC_URL:
 PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
 ```
 
+If using Angular, you can run the following command:
+
+```bash
+ng build --prod --deploy-url DARK_STATIC_ASSETS_BASE_URL/
+```
+
 If using Vue, you likely want to set PUBLIC_PATH instead:
 
 ```bash
