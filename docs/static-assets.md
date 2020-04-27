@@ -97,16 +97,16 @@ In React, when compiling your react application, you can use PUBLIC_URL:
 PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
 ```
 
-If using Vue, you likely want to set PUBLIC_PATH instead:
-
-```bash
-PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
-```
-
 If using Angular, you can run the following command:
 
 ```bash
 ng build --prod --deploy-url DARK_STATIC_ASSETS_BASE_URL/
+```
+
+If using Vue, you likely want to set PUBLIC_PATH instead:
+
+```bash
+PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 ```
 
 Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:
