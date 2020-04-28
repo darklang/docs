@@ -64,7 +64,7 @@ Takes a Stripe key (`String`), the amount for the charge (`String`), the currenc
 
 ### createCustomer
 
-Takes a Stripe key (`String`), a description (`String`), an email address (`String`), a name (`String`) and a phone number (`String`) and creates a customer in Stripe. 
+Takes a Stripe key (`String`), a description (`String`), an email address (`String`), a name (`String`) and a phone number (`String`) and creates a customer in Stripe.
 
 ![createCustomer](assets/packages/stripe/createCustomer.png)
 
