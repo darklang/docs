@@ -54,6 +54,68 @@ Takes an audience ID (`String`), email (`String`), first name (`String`), last n
 
 For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
+## Stripe Package
+
+### createCharge
+
+Takes a Stripe key (`String`), the amount for the charge (`String`), the currency (`String`), a customer id (`String`) and a card id (`String`) and creates a charge on that customer's card.
+
+![createCharge](assets/packages/stripe/createCharge.png)
+
+### createCustomer
+
+Takes a Stripe key (`String`), a description (`String`), an email address (`String`), a name (`String`) and a phone number (`String`) and creates a customer in Stripe. 
+
+![createCustomer](assets/packages/stripe/createCustomer.png)
+
+### createFullRefund
+
+Takes a Stripe key (`String`) and charge id (`String`) and issues a full refund for that charge.
+
+![createFullRefund](assets/packages/stripe/createFullRefund.png)
+
+### createPartialRefund
+
+Takes a Stripe key (`String`), charge id (`String`) and amount (`String`) and issues a refund of that amnount to the charge.
+
+![createPartialRefund](assets/packages/stripe/createPartialRefund.png)
+
+### getAllCharges
+
+Takes a Stripe key (`String`) and returns all charges for that account.
+
+![getAllCharges](assets/packages/stripe/getAllCharges.png)
+
+### getAllCustomers
+
+Takes a Stripe key (`String`) and returns all customers for that account.
+
+![getAllCustomers](assets/packages/stripe/getAllCustomers.png)
+
+### getAllTransactions
+
+Takes a Stripe key (`String`) and returns all transactions for that account.
+
+![getAllTransactions](assets/packages/stripe/getAllTransactions.png)
+
+### getAvailableBalance
+
+Takes a Stripe key (`String`) and returns the available balance for that account.
+
+![getAvailableBalance](assets/packages/stripe/getAvailableBalance.png)
+
+### getCustomer
+
+Takes a Stripe key (`String`) and a customer id (`String`) and returns information about that customer.
+
+![getCustomer](assets/packages/stripe/getCustomer.png)
+
+### getPendingBalance
+
+Takes a Stripe key (`String`) and returns the pending balance for that account.
+
+![getPendingBalance](assets/packages/stripe/getPendingBalance.png)
+
 ## Trello Package
 
 ### addBoardstoDB
