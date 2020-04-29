@@ -43,7 +43,7 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
 
    Another way to check is with a service like [https://dnschecker.org/](https://dnschecker.org/).
 
-3. Once DNS resolves, [contact us](support) with your domain and canvas, and we'll set things up on our end.
+3. Once DNS resolves, [contact us](support) with your domain and canvas, and we'll set up an SSL cert and the appropriate redirects from `http` to `https` on our end.
 
 ## Troubleshooting
 
@@ -62,3 +62,7 @@ api.myawesomedarkservice.com.    300    IN    A    104.24.119.127
 
 To resolve this, turn off the proxy. On Cloudflare, you can press this button to switch from "Proxied" to "DNS only" mode:
 ![Turning off the Cloudflare proxy in favor of "DNS only"](assets/customdomain/cloudflare-proxy.png)
+
+### My DNS is set up correctly, but I'm getting an invalid certificate warning when trying to visit my custom domain via `https`
+
+If this happens we likely haven't set up an SSL certificate for you yet (see step 3 above). In any case, please [contact us](support) with your domain and canvas.
