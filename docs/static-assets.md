@@ -125,7 +125,7 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
    ```
 
 (If you want to avoid shell escaping issues entirely, we also support putting
-your creds in `~/.netrc`; the format for that is documented at [https://ec.haxx.se/usingcurl/usingcurl-netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc).)
+your creds in `~/.netrc`; the format for that is documented at [https://ec.haxx.se/usingcurl/usingcurl-netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc) for machine darklang.com.)
 
 On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
 
