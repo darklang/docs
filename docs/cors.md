@@ -47,7 +47,7 @@ Options is not a default method on HTTP handlers, but can be entered.
 
 ### CORS with Custom Domains (Allow-Origin)
 
-As in the simple request above, allowing multiple origins (domains) can be done in an Options header. You can choose to accept all origins (`*`) but this will not allow cookies or auth headers. allow passing of credentials.
+As in the simple request above, allowing multiple origins (domains) can be done in an Options header. You can choose to accept all origins (`*`) but this will not allow cookies or auth headers (passing of credentials).
 
 The origin should be passed in the format that it arrives in from the client, in most cases `https://url.com`or `http://localhost` with it's port if you aren't using 3000, 8000, or 5000, ex `http://localhost:8000`.
 
