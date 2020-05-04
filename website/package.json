@@ -9,6 +9,8 @@
     "rename-version": "docusaurus-rename-version",
     "lint": "markdownlint --config markdownlint.json ../docs/*.md",
     "format": "prettier --write ../docs/*.md",
+    "format-js": "prettier --write pages/**/*.js",
+    "format-css": "prettier --write static/css/*.css",
     "check-format": "prettier --check ../docs/*.md"
   },
   "devDependencies": {

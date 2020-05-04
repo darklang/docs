@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
- 
+
 /* your custom css */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
@@ -23,5 +23,39 @@
 }
 
 a {
-    color:#6d74c5;
-  }
+  color: #6d74c5;
+}
+
+.badges {
+  margin-bottom: 5em;
+}
+
+.badges .medium .blockImage img {
+  width: 250px;
+  height: 100px;
+}
+
+.badges .small .blockImage img {
+  width: 126px;
+  height: 24px;
+}
+
+.badges.darkBackground {
+  background: #424242;
+}
+
+.badges.lightBackground {
+  background: #fafafa;
+}
+
+.badges.darkBackground a {
+  color: #acb0e3;
+}
+
+.badges.darkBackground a:hover {
+  color: #f8f8f8;
+}
+
+.badges h2 {
+  padding-top: 1em;
+}
