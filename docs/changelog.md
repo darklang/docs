@@ -6,6 +6,16 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 5/1/2020
+
+- We now show you the exact execution path of a trace, making it easy to understand what happened in that trace. See which code paths are executed, whether `if`s return `true` or `false`, and which patterns are matched. This should make it much easier to understand code at a glance.
+
+![assets/changelog/codeexecution.gif](assets/changelog/codeexecution.gif)
+
+- Fixed a bug that caused text to sometimes be selected in multiple handlers.
+- It is now possible to drag both the return value and docstring fields on a handler.
+- We have disabled the visual identifier for error traces, due to them turning all trace dots red. We plan to fix and re-enable in the future.
+
 ## Week of 4/24/2020
 
 - We've added `Http::setCookie_v2` which handles the `expires` parameter properly. It also has much better error messages
