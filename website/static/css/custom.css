@@ -27,7 +27,7 @@ a {
 }
 
 .badges {
-  margin-bottom: 5em;
+  margin: 2em 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
