@@ -33,7 +33,7 @@ Did your project launch? Give it a "Made with Dark" badge.
     <img class="medium" src="assets/branding/md-mono-light@2x.png">
     <p>Files:
       <a href="assets/branding/md-mono-light.svg" target="_blank">svg</a> |
-      <a href="assets/branding/md-mono-light@1x.png" target="_blank">png</a> | 
+      <a href="assets/branding/md-mono-light@1x.png" target="_blank">png</a> |
       <a href="assets/branding/md-mono-light@2x.png" target="_blank">png 2x</a> |
       <a href="assets/branding/md-mono-light@3x.png" target="_blank">png 3x</a>
     </p>
@@ -75,7 +75,7 @@ Did your project launch? Give it a "Made with Dark" badge.
     <img class="medium" src="assets/branding/md-mono-dark@2x.png">
     <p>Files:
       <a href="assets/branding/md-mono-dark.svg" target="_blank">svg</a> |
-      <a href="assets/branding/md-mono-dark@1x.png" target="_blank">png</a> | 
+      <a href="assets/branding/md-mono-dark@1x.png" target="_blank">png</a> |
       <a href="assets/branding/md-mono-dark@2x.png" target="_blank">png 2x</a> |
       <a href="assets/branding/md-mono-dark@3x.png" target="_blank">png 3x</a>
     </p>
