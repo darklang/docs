@@ -28,14 +28,23 @@ a {
 
 .badges {
   margin-bottom: 5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.badges .medium .blockImage img {
+.badge {
+  display: inline-block;
+  margin: 2em;
+}
+
+.badge img.medium {
   width: 250px;
   height: 100px;
 }
 
-.badges .small .blockImage img {
+.badge img.small {
   width: 126px;
   height: 24px;
 }
@@ -54,8 +63,4 @@ a {
 
 .badges.darkBackground a:hover {
   color: #f8f8f8;
-}
-
-.badges h2 {
-  padding-top: 1em;
 }
