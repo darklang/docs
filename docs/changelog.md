@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-# Week of 5/8/2020
+## Week of 5/8/2020
 
 - We now have Dark badges for your sites! Add a [Made With Dark badge](https://darklang.github.io/docs/sharing-dark) to your apps to establish your early Dark expertise 🎉
 
