@@ -6,6 +6,22 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+# Week of 5/8/2020
+
+- We now have Dark badges for your sites! Add a [Made With Dark badge](https://darklang.github.io/docs/sharing-dark) to your apps to establish your early Dark expertise 🎉
+
+![assets/changelog/badge.png](assets/changelog/badge.png)
+
+- Clicking on a link in the sidebar will now always jump you to the correct place on the canvas. This was a super annoying bug that we internally referred to as "the dreaded positioning bug", and it is finally fixed. A blog post will be out describing the horror show behind this next week.
+- Copying & pasting now works properly for pipes! We'll no longer lose arguments when copying between piped and non-piped expressions.
+- Re-ordering function parameters works again. You can drag a function parameter to change its order (and we'll reorder the callers too).
+- When you invite people (go to Settings), we'll error properly if the invite failed.
+- When you try to access Dark in Firefox or other browsers, we'll tell you it won't work instead of crashing.
+- You can now drag much more of a handler to move it (now including the docstring and return value boxes)
+- When clicking on traces with errors, we'll no longer incorrectly color the trace dots.
+- `Result::map2` and 5 other `Result` functions now goes to the error rail.
+- When you press `,` to add another entry to a list, we'll now support it on both sides of an existing `,`.
+
 ## Week of 5/1/2020
 
 - We now show you the exact execution path of a trace, making it easy to understand what happened in that trace. See which code paths are executed, whether `if`s return `true` or `false`, and which patterns are matched. This should make it much easier to understand code at a glance.
