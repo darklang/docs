@@ -54,6 +54,7 @@
   "Slack": {
     "Slack Apps": [
       "slack-apps/slack-intro",
+      "slack-apps/slack-oauth",
       "slack-apps/slack-packages"
     ],
     "Tutorials": [
