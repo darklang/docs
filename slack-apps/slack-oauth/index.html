@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setting Up OAuth · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In order to install your app across multiple Slack workspaces, you will need to set up OAuth. If you&#x27;re not familiar with OAuth, the basic explanation is that your app needs to go through a few steps to verify that it is allowed to access a workspace. The three steps are:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setting Up OAuth · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="In order to install your app across multiple Slack workspaces, you will need to set up OAuth. If you&#x27;re not familiar with OAuth, the basic explanation is that your app needs to go through a few steps to verify that it is allowed to access a workspace. The three steps are:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class="siteNavGroupActive"><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Slack Apps</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Slack Apps</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-intro">Your First Slack App</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/slack-apps/slack-oauth">Setting Up OAuth</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/slack-packages">Slack Packages</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/channel-check">Check for New Channels</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/asana-tutorial">Create Asana Projects &amp; Tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-apps/tutorials/new-trello-card">Create a New Trello Card</a></li><li class="navListItem"><a class="navItem" href="/docs/slack-app-tutorial">Slack tutorial</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Setting Up OAuth</h1></header><article><div><span><p>In order to install your app across multiple Slack workspaces, you will need to set up OAuth. If you're not familiar with OAuth, the basic explanation is that your app needs to go through a few steps to verify that it is allowed to access a workspace. The three steps are:</p>
+<ol>
+<li>Asking for scopes</li>
+<li>Waiting for a user to approve your requested scopes</li>
+<li>Exchanging a temporary authorization code for an access token</li>
+</ol>
+<p>You may be familiar with this workflow without even knowing it - it's likely what occurs anytime you see a screen this like when trying to install something:</p>
+<p><img src="/docs/assets/slack-apps/permissions.png" alt="assets/slack-apps/permissions.png"></p>
+<p>In order to set up OAuth on your Slack app, you will need to take a few steps:</p>
+<ol>
+<li>Go to your Slack app's <strong>Manage Distribution</strong> page and add an OAuth redirect URL:</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/oauthredirect.png" alt="assets/slack-apps/oauthredirect.png"></p>
+<p>This URL should be in the following format: The URL you provide will need to be in the following format: <a href="https://USERNAME-CANVASNAME.builtwithdark.com/oauth-redirect">https://USERNAME-CANVASNAME.builtwithdark.com/oauth-redirect</a></p>
+<ol start="2">
+<li><p>Return to the main <strong>Manage Distribution</strong> page, copy the Sharable URL and then navigate to it. Follow the steps, making sure to finish with clicking Allow.</p></li>
+<li><p>Go to your Dark canvas and look in your 404s list to find your oauth-redirect handler, complete with trace. Click the + to add it to your canvas.</p></li>
+<li><p>Create a new <code>Datastore</code> called tokenStore, and add two <code>String</code> fields: <code>team_id</code> and <code>access_token</code>.</p></li>
+<li><p>Return to your oauth-redirect handler and call the <a href="./slack-packages#oauth"><code>Slack::oauth</code> function</a>. You will need your client ID and client secret, as well as the token store you created in the previous step. The final parameter is pulling the temporary code out of the request using <code>request.queryParams.code</code>.</p></li>
+</ol>
+<p><img src="/docs/assets/slack-apps/oauth.png" alt="assets/slack-apps/oauth.png"></p>
+<ol start="6">
+<li>Hit the play button for the function. If you get an error, repeat step 2. If everything goes as expected, an entry will be added to your datastore, and it will look locked.</li>
+</ol>
+<p><img src="/docs/assets/slack-apps/lockedtoken.png" alt="assets/slack-apps/lockedtoken.png"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/slack-apps/slack-intro"><span class="arrow-prev">← </span><span>Your First Slack App</span></a><a class="docs-next button" href="/docs/slack-apps/slack-packages"><span>Slack Packages</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
