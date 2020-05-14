@@ -4,7 +4,9 @@ title: From Python
 sidebar_label: From Python
 ---
 
-This guide will help you learn Dark if you're familiar with Python. Have a tip to add to the guide? [Submit a PR](https://github.com/darklang/docs/pulls)!
+This guide will help you learn Dark if you're familiar with Python.
+
+Have a tip to add to the guide? [Submit a PR](https://github.com/darklang/docs/pulls)!
 
 ## Comments
 
@@ -80,7 +82,7 @@ elif a == b:
    print("a and b are equal")
 else
     print("a is greater than b")
- ```  
+```
 
 In Dark, the same statement would look this this:
 
