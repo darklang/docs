@@ -25,7 +25,8 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'introduction', label: 'Documentation'},
-    {doc: 'slack-apps/slack-intro', label: 'Building Slack Apps'},
+    {doc: 'tutorials/tutorial-intro', label: 'Tutorials & Samples'},
+    {doc: 'slack-apps/slack-intro', label: 'Building Slack Apps'}
   ],
 
   // If you have users set above, you add it here:

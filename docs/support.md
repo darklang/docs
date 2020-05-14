@@ -1,7 +1,7 @@
 ---
 id: support
-title: Support
-sidebar_label: Support
+title: Support & Feedback
+sidebar_label: Support & Feedback
 ---
 
 ### Support
@@ -12,4 +12,4 @@ often within minutes. Lots of experienced community members are also around to
 offer helpful suggestions.
 
 You can also send us feedback or ask questions via
-[email](mailto:beta@darklang.com). We answer every email we are sent.
+[email](mailto:feedback@darklang.com). We answer every email we are sent.

@@ -2,15 +2,7 @@
   "docs": {
     "Getting Started": [
       "introduction",
-      "first-app",
-      "first-api-endpoint",
-      "first-repl",
-      "first-datastore",
-      "first-cron",
-      "first-worker",
-      "first-function",
-      "first-api",
-      "finishing-touches"
+      "your-first"
     ],
     "Concepts": [
       "dark-backend-components",
@@ -34,14 +26,6 @@
       "cors",
       "teamwork"
     ],
-    "Tutorials & Samples": [
-      "react-spa-tutorial",
-      "slack-app-tutorial",
-      "twilio-app-tutorial",
-      "sample-canvases",
-      "airtable",
-      "freshdesk"
-    ],
     "Reference": [
       "function-reference",
       "keyboard-mapping",
@@ -62,6 +46,16 @@
       "slack-apps/tutorials/asana-tutorial",
       "slack-apps/tutorials/new-trello-card",
       "slack-app-tutorial"
+    ]
+  },
+  "Tutorials": {
+    "Tutorial & Samples":[
+      "tutorials/tutorial-intro",
+      "tutorials/react-spa-tutorial",
+      "tutorials/twilio-app-tutorial",
+      "tutorials/airtable",
+      "tutorials/freshdesk",
+      "tutorials/sample-canvases"
     ]
   }
 }
