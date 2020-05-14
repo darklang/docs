@@ -16,9 +16,7 @@ In Python, you use a `#` to start a comment:
 
 In Dark, you use a `let _ =` to start a comment, and you write the comment as a String:
 
-```
-let _ = "This is a comment"
-```
+![assets/from-python/comment.png](assets/from-python/comment.png)
 
 ## Strings
 
@@ -30,9 +28,7 @@ In Python, you can write a String in multiple ways:
 ```
 
 In Dark, you always use double quotes:
-```
-"This is a string"
-```
+![assets/from-python/string.png](assets/from-python/string.png)
 
 ## Functions
 
@@ -85,6 +81,7 @@ elif a == b:
 else
     print("a is greater than b")
  ```  
+
 In Dark, the same statement would look this this:
 
 ![assets/from-python/ifs.png](assets/from-python/ifs.png)
@@ -92,4 +89,3 @@ In Dark, the same statement would look this this:
 Note that we highlight the path your code takes - so if we were to change the values, a different piece of the `If` statement would be highlighted:
 
 ![assets/from-python/ifs2.png](assets/from-python/ifs2.png)
-
