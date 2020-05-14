@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Your First App · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Your First App"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Your First App · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="## Your First App"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">Documentation</a></li><li class=""><a href="/docs/tutorials/tutorial-intro" target="_self">Tutorials &amp; Samples</a></li><li class=""><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">Hello World!</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/your-first">Your First App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/dark-backend-components">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/trace-driven-development">Trace Driven Development</a></li><li class="navListItem"><a class="navItem" href="/docs/structured-editing">Structured Editing</a></li><li class="navListItem"><a class="navItem" href="/docs/error-handling">Error Handling</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Language</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/languageoverview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/unique-aspects">Unique Aspects</a></li><li class="navListItem"><a class="navItem" href="/docs/functional-aspects">Functional Aspects</a></li><li class="navListItem"><a class="navItem" href="/docs/languagedetails">Language Details</a></li><li class="navListItem"><a class="navItem" href="/docs/datastores">Datastores</a></li><li class="navListItem"><a class="navItem" href="/docs/packages">Packages</a></li><li class="navListItem"><a class="navItem" href="/docs/httpclient">HTTP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/http">HTTP Responses</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How to</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/static-assets">Host Static Assets</a></li><li class="navListItem"><a class="navItem" href="/docs/custom-domains">Use a Custom Domain</a></li><li class="navListItem"><a class="navItem" href="/docs/cors">CORS</a></li><li class="navListItem"><a class="navItem" href="/docs/teamwork">Work with your team</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/function-reference">Built-in Function reference</a></li><li class="navListItem"><a class="navItem" href="/docs/keyboard-mapping">Keyboard Mapping</a></li><li class="navListItem"><a class="navItem" href="/docs/support">Support &amp; Feedback</a></li><li class="navListItem"><a class="navItem" href="/docs/known-issues">Known issues</a></li><li class="navListItem"><a class="navItem" href="/docs/sharing-dark">Sharing Your Dark Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/changelog">Changelog</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Your First App</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="your-first-app"></a><a href="#your-first-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your First App</h2>
+<p>We're going to take you through a tutorial to build an entire application that
+uses Dark's basic functionality. This should take between 10m and 45m,
+depending on how thorough you are.</p>
+<p>To start, open <em>darklang.com/a/USERNAME-gettingstarted</em> in another
+window. This will open the Dark editor on your first <em>canvas</em>.</p>
+<p>To see a completed version of this tutorial, go to
+<a href="https://darklang.com/a/sample-gettingstarted">https://darklang.com/a/sample-gettingstarted</a>.
+Note that you should <strong>not</strong> copy/paste this – we want to teach you to
+use the Dark editor.</p>
+<h3><a class="anchor" aria-hidden="true" id="support"></a><a href="#support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Support</h3>
+<p>If you'd like some help, come to the <a href="https://darklang.com/slack-invite">Dark Community
+Slack</a>. Dark engineers answer questions,
+talk you through issues, and fix bugs, often within minutes. Lots of
+experienced community members are also around to offer helpful suggestions.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-endpoint"></a><a href="#api-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API Endpoint</h2>
+<p><strong>Concepts:</strong> Structural elements, blanks, implicit returns, traces.</p>
+<ol>
+<li>Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit <code>Cmd-k</code>/<code>Ctrl-k</code>), or from the plus next to <code>HTTP</code> on the sidebar.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png"></p>
+<ol start="2">
+<li>Enter the HTTP verb as <code>GET</code> and <code>/math</code> for the route.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png"></p>
+<ol start="3">
+<li>You can now write any code in the blank – this is the return value of the API endpoint that you've just created. To start with, let's just return <code>4</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png"></p>
+<ol start="4">
+<li>Click the handler's menu (☰) in the upper right and select &quot;open in new tab&quot;, to see your API endpoint running in production.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png"></p>
+<ol start="5">
+<li>Go back to Dark to edit your code. Add <code>+ 5</code> to the end of the code and leave your cursor in line.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png"></p>
+<ul>
+<li><p>The <code>9</code> below the handler shows you the return value for the handler.</p></li>
+<li><p>The <code>5</code> on the left shows you the result of the expression where the cursor currently is (in this case, 5). This isn't very useful when it's an integer, but if it's a variable it will show you the result of the variable.</p></li>
+</ul>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png"></p>
+<ol start="6">
+<li>Mouse over the white dots on the left. Each dot is a &quot;trace&quot;, representing a
+single request to your handler. Traces are fundamental to coding in Dark,
+and we'll come back to them later.</li>
+</ol>
+<p>Congratulations! You've shipped your first Dark API endpoint.</p>
+<h2><a class="anchor" aria-hidden="true" id="repl"></a><a href="#repl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REPL</h2>
+<p><strong>Concepts:</strong> REPLs, HttpClient library, Play buttons</p>
+<p>REPLs in Dark are general-purpose coding blocks. They're typically used in the
+way you might write a bash script (reusable tools), use traditional REPLs
+(experiments and one-off commands), or admin dashboards (simple reporting).</p>
+<p>We'll run you through creating your first REPL, experimenting with the
+HTTPClient library to make API calls.</p>
+<ol>
+<li><p>Create a new REPL from the sidebar or the omnibox (<code>Ctrl-K</code>/<code>Cmd-K</code>).</p></li>
+<li><p>Type &quot;httpclient&quot; in the REPL (lowercase, no spaces)</p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png"></p>
+<p>This will show you all the standard library functions for HTTPClient, their signatures, and their docstrings.</p>
+<ol start="3">
+<li>Continue typing, until you have &quot;httpclientpost&quot;. Dark autocompletes on substrings so getting the exact text isn't important:</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png"></p>
+<ol start="4">
+<li>Hit enter to add the function into the handler.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png"></p>
+<p>Dark automatically creates blanks for the four arguments that <code>HttpClient::post</code> requires. We display a grey play button beside the function – it will turn green when all the arguments are complete, allowing you to run the function from within the editor.</p>
+<ol start="5">
+<li>Let's call a new <code>/test</code> endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like <code>&quot;https://USERNAME-gettingstarted.builtwithdark.com/test&quot;</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png"></p>
+<ol start="6">
+<li>Next let's add the arguments. The structured editor simplifies creation of the arguments we want:</li>
+</ol>
+<ul>
+<li>For the body, we want to pass <code>{test:&quot;test1&quot;}</code>: type <code>{</code>, hit enter, then add the key and the value.</li>
+<li>For the query, we want an empty dictionary. Type <code>{</code>.</li>
+<li>For the header, we want the JSON content-type: type &quot;json&quot; and the autocomplete will offer you a function to use.</li>
+</ul>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png"></p>
+<ol start="7">
+<li>Once we've filled in all the arguments, the play button (▶️) next to the function turns green, which means we can execute this code from within the editor.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png"></p>
+<ol start="8">
+<li>Hitting play we receive a 404 response. This is because there's no <code>/test</code> endpoint on our canvas (yet!)</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png"></p>
+<ol start="9">
+<li>404s in Dark appear in the 404 section of the sidebar. We'll discuss that more later.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png"></p>
+<p>Congratulations! You've built your first REPL and called your first function in Dark.</p>
+<h2><a class="anchor" aria-hidden="true" id="datastore"></a><a href="#datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datastore</h2>
+<p>In the last section, we made a HTTP request that created a 404. We'll use <em>the trace</em> of that HTTP request to build an endpoint, a technique we call <strong>Trace Driven Development</strong>.</p>
+<ol>
+<li>Hit the plus (+) button in the 404 section of the sidebar. This creates a HTTP endpoint with the HTTP verb (POST) and path (/test) set from the request that creates the 404.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png"></p>
+<ol start="2">
+<li>Hover over the white dot on the left hand side. Here, you can see the full body of the incoming trace from when you posted to the endpoint from the REPL, including the body.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png"></p>
+<ol start="3">
+<li>Let's save the <code>request</code> body to a variable by typing <code>let data = request.body</code>. As you can see, the autocomplete knows the field names of <code>request</code> from the trace, and will complete them for you.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png"></p>
+<ol start="4">
+<li>Let's put this in a datastore. Like we saw with the <code>HttpClient</code> library, typing &quot;DB&quot; in the blank will pull up all datastore functions.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png"></p>
+<p>In this case, we want <code>DB::set</code>, which takes three arguments.</p>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png"></p>
+<ol start="5">
+<li>Now let's make our datastore. From the sidebar or the omnibox, create a new datastore called &quot;Requests&quot;, with fields <code>data</code> and <code>time</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/datastore.png" alt="assets/gettingstarted/datastore.png"></p>
+<p>Dark's datastores are key-value stores; each record has a unique key that is used to store and retrieve the value. For instance, a possible set of records with keys in the above datastore would look like this:</p>
+<pre><code class="hljs css language-text">{
+  key1: {
+          data: {
+                  test: "test2"
+                },
+          time: <Date: 2020-02-11T18:54:39Z>
+        },
+  key2: {
+          data: {
+                  test: "test1"
+                },
+          time: <Date: 2020-02-11T18:54:43Z>
+        }
+}
+</code></pre>
+<ol start="6">
+<li><p>Now that we have a datastore, let's finish our post endpoint.</p>
+<p>The first argument is the record we're inserting. This needs to match the schema, and so it needs to include both <code>date</code> and <code>time</code> (you cannot insert records that are missing fields). Insert our data from above (seeing the live value to the left) and use the <code>Date::now</code> function to get the <code>time</code> field.</p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png"></p>
+<ol start="7">
+<li>We need a unique key for each record that we store. The <code>DB::generateKey</code> function generates random keys – this is useful when your record has no obvious unique identifier.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png"></p>
+<ol start="8">
+<li>The final argument is the Datastore: <code>Requests</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png"></p>
+<ol start="9">
+<li>To call the <code>DB::set</code> function, we first need to run the two functions with side effects (<code>DB::generateKey</code> and <code>Date::now</code>) by hitting the play button. After hitting those two play buttons, the <code>DB::set</code> play button will be enabled:</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png"></p>
+<ol start="10">
+<li>Finally, hitting the play button for <code>DB::set</code> inserts the record into the datastore. This locks the datastore, preventing us from changing the schema, which we see indicated by the red lock (🔒) icon.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="cron"></a><a href="#cron" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cron</h2>
+<p>Now that we're storing requests, we can use a scheduled job (a &quot;Cron&quot;, named after the Unix cron utility) to create a report of all requests per day.</p>
+<ol>
+<li>Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/crondaily.png" alt="assets/gettingstarted/crondaily.png"></p>
+<ol start="2">
+<li><p>To know if a request was executed today, we compare it to the current time. Let's
+assign the current time in seconds to a variable <code>timeSeconds</code>. The current
+time in seconds is <code>Date::now</code>, piped into <code>Date::toSeconds</code>. (Note: to
+create a pipe, type <code>|&gt;</code> after the <code>Date::now</code> function).</p>
+<p>Run the <code>Date::now</code> function to see a live value for your code.</p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/cron_timeseconds.png" alt="assets/gettingstarted/cron_timeseconds.png"></p>
+<ol start="3">
+<li>Next, we'll need to filter the reports to just today's reports. Set <code>allRequests</code> to <code>DB::getAll Requests</code>. Run the function to the live value for <code>allRequests</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/allrequests.png" alt="assets/gettingstarted/allrequests.png"></p>
+<ol start="4">
+<li>To see only today's requests, use <code>List::filter</code>. <code>List::filter</code> takes two arguments - the list to filter (in this case <code>allRequests</code>) and an anonymous function that determines if each element of the list element should be includes in the new list. <code>List::filter</code> is similar to <code>List::map</code> and the concept is explained in more detail <a href="https://darklang.github.io/docs/functional-aspects">here</a>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/listfilter.png" alt="assets/gettingstarted/listefilter.png"></p>
+<ol start="5">
+<li>We want to keep only reports that occurred today, meaning we want to compare the report's time to <code>timeSeconds</code> that we created earlier. Let's convert the time of the request into seconds so that both times have the same units.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/requestseconds.png" alt="assets/gettingstarted/requestseconds.png"></p>
+<ol start="6">
+<li>Next, we calculate the difference from the current time; this tells us if it happened today (in the last 86,400 seconds).</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/comparison.png" alt="assets/gettingstarted/comparison.png"></p>
+<ol start="7">
+<li>To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the <code>HTTPClient::post</code> function from the REPL. Then, when you place your cursor in <code>todayRequests</code> or <code>List::filter</code> you'll see a list of requests from the last 24 hours.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/todayrequest.png" alt="assets/gettingstarted/todayrequest.png"></p>
+<ol start="8">
+<li>Finally, let's emit today's requests to a background worker, using the <code>emit</code> keyword. <code>emit</code> takes two arguments, and in this case we're sending <code>todayRequests</code> to a not-yet-created worker named <code>storeReport</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/emit.png" alt="assets/gettingstarted/emit.png"></p>
+<ol start="9">
+<li>To have our first report run, hit the &quot;replay&quot; button in the upper right of the Cron. This creates a 404 in the sidebar for the Worker <code>storeReport</code>.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="worker"></a><a href="#worker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Worker</h2>
+<p>Workers process jobs in the background, ideal for daily reports. They're also
+commonly used for sending notifications and other asynchronous tasks that we
+don't want to handle in HTTP requests.</p>
+<p>If we were doing this for real, we might send the data to a 3rd party API over HTTP. But for the sake of simplicity, let's just store the data into the <code>DailyReport</code> datastore.</p>
+<ol>
+<li>From the 404 section of the sidebar, hit the plus (+) button to create the <code>storeReport</code> Worker. The Worker will already be named, and hovering over the white dot will show you the event triggered by your cron.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/newworker.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="2">
+<li>For the report, we're going to store our data by human readable dates (like <code>02-27-2020</code>). First, we'll get the current date, and then get the pieces and reaggregate them.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/humandate.png" alt="assets/gettingstarted/humandate.png"></p>
+<ol start="3">
+<li>The <code>event</code> we received is not the exact shape we want. Let's process it using <code>List::map</code> to keep just the <code>data</code> field.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/dataonly.png" alt="assets/gettingstarted/dataonly.png"></p>
+<ol start="4">
+<li>Make a second datastore with three fields: the nicely-formatted date, the list of requests, and the count of requests for that day.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/seconddatastore.png" alt="assets/gettingstarted/seconddatastore.png"></p>
+<ol start="5">
+<li>To get the count, use <code>List::length</code>. Then we store it in the DB, using <code>humanDate</code> as the key.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/dbsetworker.png" alt="assets/gettingstarted/dbsetworker.png"></p>
+<ol start="6">
+<li>Now, our first datastore stores each incoming request, and every 24 hours our Cron runs, sending the right reports to our worker, which stores a report in our second datastore.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="function"></a><a href="#function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Function</h2>
+<p>Let's look at creating a function to return a human readable summary of the number of reports for each day.</p>
+<p>The best way to create a function is by writing the code you want as part of your
+handler, and then extracting the working code to a function. This ensures that whatever code you write has traces and live data.</p>
+<ol>
+<li><p>Start by creating a new REPL.</p></li>
+<li><p>In the REPL, call <code>DB::getAll</code> to get the reports from the datastore. Run the function using the play button (▶️).</p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/dbgetalldaily.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="3">
+<li>Open a pipeline by typing <code>|&gt;</code>, and pipe into a <code>List::map</code>, and create variables <code>date</code> and <code>count</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/functionmapvariable.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="4">
+<li>Pipe <code>val.count</code> into <code>toString</code> (shift-enter on a selected area also pipes that expression).</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/valcounttostring.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="5">
+<li>Return <code>date ++ &quot;: &quot; ++ count</code> in the last line of the block.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/blockend.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="6">
+<li><p>We now have the code to generate our formatted report.</p>
+<p>Let's extract that code into a function. Select all the code within the REPL.</p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/selectall.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="7">
+<li>Type <code>Ctrl-\</code> (Control-Backslash) to open the command palette, then select <code>extract-function</code>.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/extractfunction.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="8">
+<li>This creates the function, and replaces the existing code with a call to the new function.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/extractedfunction.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="9">
+<li>Click on the function reference on the right hand side of the handler to go to the function and rename it.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/functionspace.png" alt="assets/gettingstarted/newworker.png"></p>
+<p>Functions do not live on the main canvas. They are reusable and can be
+called from any handler.</p>
+<p>This function does not have any parameters. When you add parameters, the editor
+will automatically create blanks for the arguments everywhere the function is
+called.</p>
+<ol start="10">
+<li>Go back to the primary canvas via the sidebar, the mini-map, or a reference
+on the right-hand-side of the function. Once back, create a new HTTP GET
+handler and call the function. This creates an API endpoint which returns
+the daily reports.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/functioncall.png" alt="assets/gettingstarted/newworker.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="external-api-call"></a><a href="#external-api-call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>External API Call</h2>
+<p>Dark has built-in standard libraries for working with external HTTP Calls (<code>HTTP</code> and <code>HTTPClient</code>). This allows you to work with any external REST APIs.</p>
+<p>In this Tutorial, we'll send the Daily Report we created to Airtable, so other team members can see it.</p>
+<ol>
+<li>Set up Airtable (~10 minutes).</li>
+</ol>
+<ul>
+<li>Go to <a href="https://airtable.com">Airtable</a> and create a new base.</li>
+<li>In the base, create two columns, one for date (field type is date) and one for requests (field type is number). You can see our sample <a href="https://airtable.com/invite/l?inviteId=invOadxgcpBKaCQiv&amp;inviteToken=e7492a049bf7e4cd1c475b43efac35d296578f66198bff549ca99af6ee5821b4">here</a>.
+<img src="/docs/assets/gettingstarted/airtable_base.png" alt="assets/gettingstarted/newworker.png"></li>
+<li>Generate an API key on the <a href="https://airtable.com/account">Account page</a>. Put the API key in a function in your Dark canvas.
+<img src="/docs/assets/gettingstarted/airtable_key.png" alt="assets/gettingstarted/newworker.png"></li>
+<li>Airtable's full API documentation for your base will be available on the <a href="https://airtable.com/api">API page</a>. Within this page, go to Create Records in the left hand navigation to copy the URI from the right hand side.
+<img src="/docs/assets/gettingstarted/airtable_url.png" alt="assets/gettingstarted/newworker.png"></li>
+</ul>
+<ol start="2">
+<li>Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit <code>return</code> after the <code>Db::set</code> function. <code>DB::set</code> will still run as a side effect, and we can add the new function.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/apiworker_newline.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="3">
+<li>The <code>HTTPClient::post</code> function takes four arguments. Paste the URI from Airtable from the base into the first argument.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/api_httpclientpost.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="4">
+<li>Above <code>HTTPClient::post</code> declare a new variable, <code>airtable_header</code>. Use the <code>HTTPClient::bearerToken</code> and pass your API key function as the argument. Then, pipe <code>|&gt;</code> into <code>Dict::merge</code> and merge with <code>HTTPClient::jsonContentType</code>. The <code>airtable_header</code> will now be a nicely formatted header for the Airtable API.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/api_header.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="5">
+<li><p>The query can be empty for this particular request, but we do need to provide an argument, such as <code>{}</code>.</p></li>
+<li><p>Add the information from the report to the body (the date and number of requests). Airtable expects the following format:<br>
+<code>records : [{fields : {Date : date, Requests : count}}]</code></p></li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/api_body.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="7">
+<li>Run the API request in the editor by hitting the play button next to <code>HTTPClient::post</code>. If the request is successful, a success will be returned and you'll see the record in your Airtable base.</li>
+</ol>
+<p><img src="/docs/assets/gettingstarted/api_success.png" alt="assets/gettingstarted/newworker.png"></p>
+<p>If the request is not successful, the error message will be displayed in line, and you'll see the <code>Error</code> on the error rail. In this case, the format of the date passed did not expect what Airtable expected.</p>
+<p><img src="/docs/assets/gettingstarted/api_error.png" alt="assets/gettingstarted/newworker.png"></p>
+<ol start="8">
+<li>Each time your cron runs (daily, or when triggered) a record will be added to your Airtable base.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="finishing-touches"></a><a href="#finishing-touches" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finishing Touches</h2>
+<p>Try it out:</p>
+<ul>
+<li><p>Change your REPL to say &quot;test3&quot; instead of &quot;test1&quot; and then re-run the request by hitting the play button.</p>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png"></p></li>
+<li><p>A new trace dot will appear on the HTTP Post <code>/test</code> handler. It shows &quot;test6&quot; in the body of the request.</p>
+<p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png"></p></li>
+<li><p>The new request will be in the Datastore, and if you open your reports endpoint tomorrow, you'll see a log of all the new requests, as well as updates to your Airtable base.</p></li>
+</ul>
+<p>Congratulations! You now have your first Dark application: an API that stores requests into a datastore, creates a daily report of those requests, and sends the report to Airtable.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/introduction"><span class="arrow-prev">← </span><span>Hello World!</span></a><a class="docs-next button" href="/docs/dark-backend-components"><span>Components</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#your-first-app">Your First App</a><ul class="toc-headings"><li><a href="#support">Support</a></li></ul></li><li><a href="#api-endpoint">API Endpoint</a></li><li><a href="#repl">REPL</a></li><li><a href="#datastore">Datastore</a></li><li><a href="#cron">Cron</a></li><li><a href="#worker">Worker</a></li><li><a href="#function">Function</a></li><li><a href="#external-api-call">External API Call</a></li><li><a href="#finishing-touches">Finishing Touches</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
