@@ -32,9 +32,9 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - Reorganized our documentation site, breaking tutorials & samples into their own section.
 - Added a [From Python](https://darklang.github.io/docs/from-python) page to help developers familiar with Python learn Dark.
 - Added three sample canvases:
-    - [GCP Bucket](https://darklang.com/a/sample-gcpbucket)
-    - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
-    - [CRUD app](https://darklang.com/a/sample-crud)
+  - [GCP Bucket](https://darklang.com/a/sample-gcpbucket)
+  - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
+  - [CRUD app](https://darklang.com/a/sample-crud)
 - Added a [Setting Up OAuth](https://darklang.github.io/docs/slack-apps/slack-oauth) page to the [Building Slack Apps](https://darklang.github.io/docs/slack-apps/slack-intro) section.
 
 ## Week of 5/8/2020
