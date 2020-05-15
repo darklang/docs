@@ -18,10 +18,10 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - It's now easier to add 404s to your canvas - the entire line is now clickable, instead of just the plus sign.
 - Made a ton of small fixes to feature flags:
-    - The correct docstring now shows when a feature flag is selected
-    - Feature flag expressions now show the correct live value
-    - Feature flags are now correctly created after pressing cmd + a to select everything.
-    - Feature flags no longer incorrectly display the "code was not run executed in this trace" error message.
+  - The correct docstring now shows when a feature flag is selected
+  - Feature flag expressions now show the correct live value
+  - Feature flags are now correctly created after pressing cmd + a to select everything.
+  - Feature flags no longer incorrectly display the "code was not run executed in this trace" error message.
 - 404s should no longer appear off-screen when added to your canvas.
 - When possible, we now display more information where we were previously showing `<Incomplete>` messages.
 - Clicking to go to an error on an infix function now works as expected.
