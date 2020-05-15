@@ -6,6 +6,37 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 5/15/2020
+
+- We've added a Hello World tutorial that will show automatically for new accounts. It can also be accessed via the avatar menu.
+
+![assets/changelog/helloworld.png](assets/changelog/helloworld.png)
+
+- [Package manager functions](https://darklang.github.io/docs/packages) and their underlying code can now be accessed via the sidebar. These functions will appear in the autocomplete, and can be used like any other built-in function.
+
+![assets/changelog/packagemanager.png](assets/changelog/packagemanager.png)
+
+- It's now easier to add 404s to your canvas - the entire line is now clickable, instead of just the plus sign.
+- Made a ton of small fixes to feature flags:
+  - The correct docstring now shows when a feature flag is selected
+  - Feature flag expressions now show the correct live value
+  - Feature flags are now correctly created after pressing cmd + a to select everything.
+  - Feature flags no longer incorrectly display the "code was not run executed in this trace" error message.
+- 404s should no longer appear off-screen when added to your canvas.
+- When possible, we now display more information where we were previously showing `<Incomplete>` messages.
+- Clicking to go to an error on an infix function now works as expected.
+- The command palette will no longer appear behind other handlers when opened.
+
+### Documentation
+
+- Reorganized our documentation site, breaking tutorials & samples into their own section.
+- Added a [From Python](https://darklang.github.io/docs/from-python) page to help developers familiar with Python learn Dark.
+- Added three sample canvases:
+  - [GCP Bucket](https://darklang.com/a/sample-gcpbucket)
+  - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
+  - [CRUD app](https://darklang.com/a/sample-crud)
+- Added a [Setting Up OAuth](https://darklang.github.io/docs/slack-apps/slack-oauth) page to the [Building Slack Apps](https://darklang.github.io/docs/slack-apps/slack-intro) section.
+
 ## Week of 5/8/2020
 
 - We now have Dark badges for your sites! Add a [Made With Dark badge](https://darklang.github.io/docs/sharing-dark) to your apps to establish your early Dark expertise 🎉
