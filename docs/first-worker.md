@@ -9,7 +9,7 @@ don't want to handle in HTTP requests.
 
 If we were doing this for real, we might send the data to a 3rd party API over HTTP. But for the sake of simplicity, let's just store the data into the `DailyReport` datastore.
 
-1. From the 404 section of the sidebar, hit the plus (+) button to create the `storeReport` Worker. The Worker will already be named, and hovering over the white dot will show you the event triggered by your cron.
+1. From the 404 section of the sidebar, hit the plus (+) button to create the `StoreReport` Worker. The Worker will already be named, and hovering over the white dot will show you the event triggered by your cron.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/newworker.png)
 
