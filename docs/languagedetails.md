@@ -234,7 +234,7 @@ datastore. Returning an incomplete via a HTTP handler causes a 500 error.
 
 ### Error rail
 
-You might occasionally see a value marked `<ErrorRail>`, this is used to indicate that a value is on the Error Rail. See [railway oriented programming for more details]
+You might occasionally see a value marked `<ErrorRail>`, this is used to indicate that a value is on the Error Rail. See [Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a) for more details.
 
 ### Sensitive Types
 
