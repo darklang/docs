@@ -25,7 +25,8 @@
       "static-assets",
       "custom-domains",
       "cors",
-      "teamwork"
+      "teamwork",
+      "feature-flags"
     ],
     "Reference": [
       "function-reference",
