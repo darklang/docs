@@ -93,6 +93,7 @@ During the deployment of the assets, our backend replaces the string “DARK_STA
 
 When not using a framework, prefix asset paths with Dark's magic string, for
 example:
+
 ```html
 <img src="DARK_STATIC_ASSETS_BASE_URL/logo.svg" />
 ```
