@@ -111,6 +111,10 @@
 <p>At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at &quot;/static/myimage.png&quot;, that file will not load. You need to use relative URLs instead, in this case “./myimage.png”.</p>
 <p>Your &quot;index.html&quot; likely loads other assets, such as “app.css” or “app.js”. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.</p>
 <p>During the deployment of the assets, our backend replaces the string “DARK_STATIC_ASSETS_BASE_URL” in all of your assets with the actual URL of this deployment.</p>
+<p>When not using a framework, prefix asset paths with Dark's magic string, for
+example:</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"DARK_STATIC_ASSETS_BASE_URL/logo.svg"</span> /&gt;</span>
+</code></pre>
 <p>In React, when compiling your react application, you can use PUBLIC_URL:</p>
 <pre><code class="hljs css language-bash">PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
 </code></pre>
