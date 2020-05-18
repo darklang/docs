@@ -91,6 +91,12 @@ Your "index.html" likely loads other assets, such as “app.css” or “app.js�
 
 During the deployment of the assets, our backend replaces the string “DARK_STATIC_ASSETS_BASE_URL” in all of your assets with the actual URL of this deployment.
 
+When not using a framework, prefix asset paths with Dark's magic string, for
+example:
+```html
+<img src="DARK_STATIC_ASSETS_BASE_URL/logo.svg" />
+```
+
 In React, when compiling your react application, you can use PUBLIC_URL:
 
 ```bash
