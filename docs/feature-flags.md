@@ -66,7 +66,7 @@ Once you're done, re-open the command palette (`ctrl-\` or `alt-x` and commit or
 
 ![Feature Flag](assets/featureflag/commit.png)
 
-When you commit, the feafture flag code now runs for all cases. When you discard, you return to the previous version of the code.
+When you commit, the feature flag code now runs for all cases. When you discard, you return to the previous version of the code.
 
 ![Feature Flag](assets/featureflag/committed.png)
 
