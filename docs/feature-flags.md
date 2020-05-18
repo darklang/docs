@@ -10,25 +10,25 @@ In Dark, all changes are made in production, on your real infrastructure. If you
 
 Before you have users, you can just write code within handlers.
 
- ![Feature Flag](assets/featureflag/write.png)
+![Feature Flag](assets/featureflag/write.png)
 
 ## Add a Feature Flag
 
 Open the command palette while selecting the code you want to modify (`ctrl-\` or `alt-x`). In this case, "hello world."
 
- ![Feature Flag](assets/featureflag/add.png)
+![Feature Flag](assets/featureflag/add.png)
 
- ## Choose a "When" Condition
+## Choose a "When" Condition
 
- By default, the code you write within the flag will not be run. All traffic will still see the result of "Hello World." To have your new code run, specify a condition.
+By default, the code you write within the flag will not be run. All traffic will still see the result of "Hello World." To have your new code run, specify a condition.
 
- ![Feature Flag](assets/featureflag/when.png)
+![Feature Flag](assets/featureflag/when.png)
 
- In this case, the new code will run if the traffic specifies a queryParam `name=Ellen`.
+In this case, the new code will run if the traffic specifies a queryParam `name=Ellen`.
 
- ![Feature Flag](assets/featureflag/whenellen.png)
+![Feature Flag](assets/featureflag/whenellen.png)
 
- Since the new execution code has not been written, if you run the code with `name=Ellen` an error results.
+Since the new execution code has not been written, if you run the code with `name=Ellen` an error results.
 
 ![Feature Flag](assets/featureflag/error.png)
 
@@ -62,7 +62,7 @@ Live values and traces work for analysis within feature flags, but still appear 
 
 ## Commit or Discard
 
-Once you're done, re-open the command palette (`ctrl-\` or `alt-x` and commit or discard the code). 
+Once you're done, re-open the command palette (`ctrl-\` or `alt-x` and commit or discard the code).
 
 ![Feature Flag](assets/featureflag/commit.png)
 
