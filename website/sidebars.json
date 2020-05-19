@@ -26,7 +26,8 @@
       "custom-domains",
       "cors",
       "teamwork",
-      "feature-flags"
+      "feature-flags",
+      "writing-tests"
     ],
     "Reference": [
       "function-reference",
