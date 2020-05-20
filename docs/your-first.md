@@ -374,4 +374,19 @@ Try it out:
 
 - The new request will be in the Datastore, and if you open your reports endpoint tomorrow, you'll see a log of all the new requests, as well as updates to your Airtable base.
 
+## One Last Thing
+
+At this point you'll have a cron that runs daily adding a row to your Airtable
+project. Since we don't want that to happen forever you can do one of two
+things.
+
+1. Click the pause button in the upper-left corner of the worker.
+2. Add logic to your cron that will skip days that have no entries.
+
+If you want to do the latter, make the adjustment to the cron process by adding
+the last 6 lines: assigning the length of todayRequests and then conditionally
+emitting todayRequests to the StoreReport worker or not.
+
+![assets/gettingstarted/airtable_skip_cron.png](assets/gettingstarted/airtable_skip_cron.png)
+
 Congratulations! You now have your first Dark application: an API that stores requests into a datastore, creates a daily report of those requests, and sends the report to Airtable.
