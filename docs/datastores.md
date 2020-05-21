@@ -129,3 +129,7 @@ Users have a pets field, which is a list of strings. The keys for the pets are a
 - If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll). This is probably easiest.
 - You can also copy and make a new, differently-named version of the datastore (i.e. Visits2) to make changes. You can ask in the Slack for best practices here.
 - Setting DBs by type and DB Migrations are coming - requests or inputs please let us know.
+
+## Using an External Datastore
+
+We strongly recommend using this built-in datastore. If you have an external databas, you can connect to it via REST. [Tutorial](/docs/tutorials/external-db).
