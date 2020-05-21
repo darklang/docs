@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Using an External DB · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Using an External DB · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions. "/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class="siteNavGroupActive"><a href="/docs/tutorials/tutorial-intro" target="_self">Tutorials &amp; Samples</a></li><li class=""><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorial &amp; Samples</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorial &amp; Samples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tutorials/tutorial-intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/react-spa-tutorial">React SPA tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/twilio-app-tutorial">Twilio tutorial</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/tutorials/external-db">Using an External DB</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/airtable">Airtable Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/freshdesk">Freshdesk Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/sample-canvases">Sample Canvases</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Using an External DB</h1></header><article><div><span><p>Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions.</p>
+<p>If you already have (or otherwise require) an external database, any external database that provides a REST API can be used. For the purposes of this tutorial, we will be using <a href="https://restdb.io">restdb.io</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="set-up"></a><a href="#set-up" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set Up</h2>
+<ol>
+<li>Create a new database.</li>
+</ol>
+<p><img src="/docs/assets/external-db/create-db.png" alt="assets/external-db/create-db.png"></p>
+<ol start="2">
+<li>Select <strong>Developer Mode</strong> in the upper right, and then choose <strong>Collections +</strong></li>
+</ol>
+<p><img src="/docs/assets/external-db/add-collection.png" alt="assets/external-db/add-collection.png"></p>
+<ol start="3">
+<li>Enter the information for your new collection and click <strong>Save</strong>.</li>
+</ol>
+<p><img src="/docs/assets/external-db/collection.png" alt="assets/external-db/collection.png"></p>
+<ol start="4">
+<li>Add Name and Description text fields to your database by clicking <strong>Add Fields +</strong>.</li>
+</ol>
+<p><img src="/docs/assets/external-db/add-fields.png" alt="assets/external-db/add-field.png"></p>
+<p><img src="/docs/assets/external-db/fields.png" alt="assets/external-db/fields.png"></p>
+<ol start="5">
+<li><p>Grab your API Key by clicking on API Docs and finding the value labeled <strong>x-apikey:</strong>. Save it as a function in your Dark canvas.</p></li>
+<li><p>Optionally, also grab the URL at the top of your page (in my case, its <code>https://mydatastore-e7f9.restdb.io/rest/mydata</code>) and save it as another function in your Dark canvas.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="post-a-new-record"></a><a href="#post-a-new-record" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>POST a New Record</h2>
+<ol>
+<li><p>Create your header by doing a <code>Dict::merge</code> on <code>HttpClient::jsonContentType</code> and a dict comntaining your API Key</p></li>
+<li><p>Write an <code>HttpClient::post</code> using your URL, your fields (note: the field names are case sensitive) and your header, and then run it.</p></li>
+</ol>
+<p><img src="/docs/assets/external-db/post.png" alt="assets/external-db/post.png"></p>
+<ol start="3">
+<li>Your data will appear in the restdb.io console.</li>
+</ol>
+<p><img src="/docs/assets/external-db/data.png" alt="assets/external-db/data.png"></p>
+<h2><a class="anchor" aria-hidden="true" id="get-all-data"></a><a href="#get-all-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GET All Data</h2>
+<ol>
+<li><p>Create your header by doing a <code>Dict::merge</code> on <code>HttpClient::jsonContentType</code> and a dict comntaining your API Key.</p></li>
+<li><p>Write an <code>HttpClient::get</code> using your URL and header, and then run it.</p></li>
+</ol>
+<p><img src="/docs/assets/external-db/get-all.png" alt="assets/external-db/get-all.png"></p>
+<ol start="3">
+<li>Your handler will return all of the data in your database.</li>
+</ol>
+<p><img src="/docs/assets/external-db/get-all-data.png" alt="assets/external-db/get-all-data.png"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/tutorials/twilio-app-tutorial"><span class="arrow-prev">← </span><span>Twilio tutorial</span></a><a class="docs-next button" href="/docs/tutorials/airtable"><span>Airtable Sample</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#set-up">Set Up</a></li><li><a href="#post-a-new-record">POST a New Record</a></li><li><a href="#get-all-data">GET All Data</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
