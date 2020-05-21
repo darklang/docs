@@ -4,7 +4,9 @@ title: Using an External DB
 sidebar_label: Using an External DB
 ---
 
-Your project may require a more complex data structure than our datastores. Good news - any external database that provides a REST API can be used. For the purposes of this tutorial, we will be using [restdb.io](https://restdb.io).
+Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions. 
+
+If you already have (or otherwise require) an external database, any external database that provides a REST API can be used. For the purposes of this tutorial, we will be using [restdb.io](https://restdb.io).
 
 ## Set Up
 
@@ -53,3 +55,4 @@ Your project may require a more complex data structure than our datastores. Good
 3. Your handler will return all of the data in your database.
 
 ![assets/external-db/get-all-data.png](assets/external-db/get-all-data.png)
+
