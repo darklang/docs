@@ -6,6 +6,30 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 5/22/2020
+
+- We've added more information to the sidebar! If you're not sure what a section in the sidebar is for, click on its name and more details will appear on the right side of your canvas.
+
+![assets/changelog/sidebar.gif](assets/changelog/sidebar.gif)
+
+- We've done some major infrastructure work behind the Cron scheduler, which significantly improved its performance. You should now see all Crons, including those with a 1 minute interval, running on time again.
+- Return values and execution fade are no longer stale when taking functions on/off the [error rail](./error-handling#error-rail) or when committing [feature flags](./feature-flags).
+
+## Documentation
+
+Thank you to everyone who contributed to our docs this week! As a reminder, our docs repo is public and all you need to do to contribute is [submit a pull request](https://github.com/darklang/docs/pulls).
+
+- Added instructions for [hosting static assets](./docs/static-assets) when not using an external framework. ([119](https://github.com/darklang/docs/pull/119))
+- Fixed a broken link on the [Language Details](./docs/languagedetails) page. ([117](https://github.com/darklang/docs/pull/117))
+- Added instructions on how to pause your cron once you're done with the [Your First App](./your-first) tutorial. ([122](https://github.com/darklang/docs/pull/122))
+- New how-to pages:
+  - [Feature flags](./feature-flags) ([118](https://github.com/darklang/docs/pull/118))
+  - [Writing tests](./writing-tests) ([120](https://github.com/darklang/docs/pull/120))
+  - [Connecting to external infrastructure](./external-infra) ([126](https://github.com/darklang/docs/pull/126))
+- New tutorials:
+  - [Using an external DB](./tutorials/external-db) ([124](https://github.com/darklang/docs/pull/124))
+  - [Alerting with IFTTT](./tutorials/ifttt-alerts) ([125](https://github.com/darklang/docs/pull/125))
+
 ## Week of 5/15/2020
 
 - We've added a Hello World tutorial that will show automatically for new accounts. It can also be accessed via the avatar menu.
