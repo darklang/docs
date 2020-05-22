@@ -27,7 +27,8 @@
       "cors",
       "teamwork",
       "feature-flags",
-      "writing-tests"
+      "writing-tests",
+      "external-infra"
     ],
     "Reference": [
       "function-reference",
