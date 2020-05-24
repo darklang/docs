@@ -23,7 +23,7 @@ We can even get fancy, and write logic to check that the printed messages say ex
 
 ![assets/writing-tests/namecheck.png](assets/writing-tests/namecheck.png)
 
-In the examples above, the tests would need to be run by running the REPL manually. However, the same logic can be writte in a cron to make sure the tests run at whatever interval you'd prefer.
+In the examples above, the tests would need to be run by running the REPL manually. However, the same logic can be written in a cron to make sure the tests run at whatever interval you'd prefer.
 
 If you're worried about missing a failing test, you can always set up alerts to let you know. This is an example of a cron that runs once an hour and posts a message to Slack if an incorrect message is found:
 
