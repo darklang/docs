@@ -22,7 +22,7 @@ We're still determining specifics, but Dark pricing will be based on how much in
 
 One of the ways that we remove accidental complexity is that we run Dark for you. We run the infrastructure, maintain, monitor and optimize it, and we carry the pager for it. We have not designed Dark to be run by others, and so you will not be able to run it yourself.
 
-##I'm worried about vendor lock-in - what happens if Dark goes out of business?
+## I'm worried about vendor lock-in - what happens if Dark goes out of business?
 
 We're in this for the long haul, but if the worst should happen, we will open-source Dark, and will keep it running as long as possible so you can move off Dark.
 
@@ -57,7 +57,7 @@ Dark will have integrated unit testing for functions and handlers. We plan to ge
 It should also be possible to run integration tests that interact well with Dark - we plan to build features that support this use case.
 
 ## Deployless seems dangerous! Won't I constantly break my application?
-A
+
 Dark is specifically designed to allow instant and safe deployment. When you write code in Dark, you can immediately see your changes, but that doesn't mean the changes are live for all users. With Dark's feature flags, you have precise control over how and when a specific feature or set of features becomes live, and for which part of your user base. You can test your changes as rigorously as makes sense for your usecase with the confidence that your development environment matches the production environment
 
 Dark also supports code review and integration tests today. We plan to support unit testing, and as Dark grows, we will develop additional strategies and features to ensure that instant deployment is safe. To learn more about Dark's approach, read our deployless blog post and watch our launch video.
