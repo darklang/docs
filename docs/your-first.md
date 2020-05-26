@@ -27,13 +27,13 @@ experienced community members are also around to offer helpful suggestions.
 
 ## Your Canvas
 
-A Dark canvas is an integrated development environment (IDE) for the Dark language, an HTTP client, and a web server. You'll write code in the canvas with all the functionality you expect from an IDE (text editing as well as code completion and debugging). The canvas can compose and send HTTP requests, similar to API query tools such as curl, Postman, or Insomnia. Finally, the canvas is a web application server: The canvas can receive HTTP requests (including webhooks, requests from an ordinary browser, or even another canvas). The Dark IDE runs in your browser at [https://darklang.com/a/USERNAME-gettingstarted(https://darklang.com/a/USERNAME-gettingstarted)] and the Dark server responds to HTTP requests at [https://danielkehoe-gettingstarted.builtwithdark.com/](https://USERNAME-gettingstarted.builtwithdark.com/).
+A Dark canvas is an integrated development environment (IDE), an HTTP client, and a web server. You'll write code in the canvas with all the functionality you expect from an IDE (text editing as well as code completion and debugging). The canvas can compose and send HTTP requests, similar to API query tools such as curl, Postman, or Insomnia. Finally, the canvas is a web application server: The canvas can receive HTTP requests (including webhooks, requests from an ordinary browser, or even another canvas). The Dark IDE runs in your browser at [https://darklang.com/a/USERNAME-gettingstarted](https://darklang.com/a/USERNAME-gettingstarted) and the Dark server responds to HTTP requests at [https://USERNAME-gettingstarted.builtwithdark.com/](https://USERNAME-gettingstarted.builtwithdark.com/).
 
 ## API Endpoint
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
 
-Here you'll use the IDE to write code that responds to a browser HTTP request (an API endpoint).
+Here you'll use the IDE to write code (an API endpoint) that responds to a browser HTTP request.
 
 1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP` on the sidebar.
 
