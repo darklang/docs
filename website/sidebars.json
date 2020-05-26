@@ -3,7 +3,8 @@
     "Getting Started": [
       "introduction",
       "your-first",
-      "from-python"
+      "from-python",
+      "from-javascript"
     ],
     "Concepts": [
       "dark-backend-components",
