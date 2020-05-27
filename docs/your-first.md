@@ -24,9 +24,15 @@ Slack](https://darklang.com/slack-invite). Dark engineers answer questions,
 talk you through issues, and fix bugs, often within minutes. Lots of
 experienced community members are also around to offer helpful suggestions.
 
+## Your Canvas
+
+A Dark canvas is an integrated development environment (IDE), an HTTP client, and a web server. You'll write code in the canvas with all the functionality you expect from an IDE (text editing as well as code completion and debugging). The canvas can compose and send HTTP requests, similar to API query tools such as curl, Postman, or Insomnia. Finally, the canvas is a web application server: The canvas can receive HTTP requests (including webhooks, requests from an ordinary browser, or even another canvas). The Dark IDE runs in your browser at [https://darklang.com/a/USERNAME-gettingstarted](https://darklang.com/a/USERNAME-gettingstarted) and the Dark server responds to HTTP requests at [https://USERNAME-gettingstarted.builtwithdark.com/](https://USERNAME-gettingstarted.builtwithdark.com/).
+
 ## API Endpoint
 
 **Concepts:** Structural elements, blanks, implicit returns, traces.
+
+Here you'll use the IDE to write code (an API endpoint) that responds to a browser HTTP request.
 
 1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP` on the sidebar.
 
@@ -62,6 +68,8 @@ Congratulations! You've shipped your first Dark API endpoint.
 
 ## REPL
 
+Here you'll use the IDE to write code that sends an HTTP request. You'll use the HTTPClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).
+
 **Concepts:** REPLs, HttpClient library, Play buttons
 
 REPLs in Dark are general-purpose coding blocks. They're typically used in the
@@ -87,9 +95,11 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post` requires. We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
+Dark automatically creates blanks for the four arguments that `HttpClient::post` requires (URI, body, query, and headers). We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
 
-5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`.
+The URI is the destination of our HTTP request (an API endpoint). We could make a request to any web server; for this tutorial, we'll make a request to the canvas we're working in. We haven't yet written the code that will respond to the request; you'll see what happens when the canvas receives a request without a prepared endpoint. The canvas will respond with a 404 "page not found" response.
+
+5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`. Be sure that you've substituted your username correctly. Also be sure you are using the correct canvas name (for example, if you send the request to "mygettingstarted" or "getingstarted" the wrong canvas will respond and you will not see the 404 result).
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
@@ -119,11 +129,11 @@ Congratulations! You've built your first REPL and called your first function in 
 
 In the last section, we made a HTTP request that created a 404. We'll use _the trace_ of that HTTP request to build an endpoint, a technique we call **Trace Driven Development**.
 
-1. Hit the plus (+) button in the 404 section of the sidebar. This creates a HTTP endpoint with the HTTP verb (POST) and path (/test) set from the request that creates the 404.
+1. Hit the plus (+) button in the 404 section of the sidebar. This creates a HTTP endpoint with the HTTP verb (POST) and path (/test) set from the request that creates the 404. Notice that the 404 event disappears from the sidebar. That's because we've created an endpoint that will respond to the request. Making another request will not create another 404 result; instead it will add another trace to the new endpoint (a trace is represented as a white dot).
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
 
-2. Hover over the white dot on the left hand side. Here, you can see the full body of the incoming trace from when you posted to the endpoint from the REPL, including the body.
+2. Hover over the white dot on the left hand side. Here, you can see the full body of the incoming trace from when you posted to the endpoint from the REPL, including the body. If you've made multiple requests to the endpoint, you'll see multiple white dots, each corresponding to a request.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
 
