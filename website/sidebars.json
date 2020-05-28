@@ -7,6 +7,7 @@
       "from-javascript"
     ],
     "Concepts": [
+      "when-dark",
       "dark-backend-components",
       "trace-driven-development",
       "structured-editing",
