@@ -7,8 +7,11 @@ title: Contributor Getting started guide
 
 - Sign the CLA at https://cla-assistant.io/darklang/cla
 - Join the #contributors channel in the slack
-- Have a specific goal in mind! If you don't have one, talk to Paul and he can help you get one
-- Ask to be added to the repo, in #contributors
+- Go to #contributors and ask Paul Biggar to be added to the repo
+- Follow the "First contribution" guide below to make your first contribution
+- Then, if you have a specific thing you'd like to build, talk to Paul Biggar
+  in Slack and he can help you get that shipped. If you don't have a specific
+  thing, Paul can help you get one.
 
 # Set up the repo
 
