@@ -66,5 +66,10 @@
       "tutorials/freshdesk",
       "tutorials/sample-canvases"
     ]
+  },
+  "Contributing": {
+    "Contributing": [
+      "contributing/getting-started"
+    ]
   }
 }
