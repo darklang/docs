@@ -12,7 +12,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 ![assets/changelog/returntypes.png](assets/changelog/returntypes.png)
 
-- Historically, we did not allow datastores to have fields named `id`. That restriction is no longer in place, thanks to Caleb, our first external contributer!
+- - Datastores can now have fields named id. This was contributed by our first external contributor, Caleb H!
 
 ## Documentation
 
