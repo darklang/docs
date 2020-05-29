@@ -123,20 +123,13 @@ This canvas shows the way to create a reference between two datastores: in this 
 
 Users have a pets field, which is a list of strings. The keys for the pets are added to that list.
 
-### Locking, Unlocking, & Migration
+## Migrations, Locking, and Unlocking
 
-- You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”
-- If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll). This is probably easiest.
-- You can also copy and make a new, differently-named version of the datastore (i.e. Visits2) to make changes. You can ask in the Slack for best practices here.
-- Setting DBs by type and DB Migrations are coming - requests or inputs please let us know.
+You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”
 
-## Using an External Datastore
+If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll).
 
-We strongly recommend using this built-in datastore. If you have an external databas, you can connect to it via REST. [Tutorial](/docs/tutorials/external-db).
-
-## Migrations
-
-Right now, datastore migrations are manual. To change your schema, create a new datastore with the change.
+Once you have traffic, datastore migrations are manual. To change your schema, create a new datastore with the new schema.
 
 ![Migration](assets/datastores/migration.png)
 
@@ -151,3 +144,9 @@ For removing a field, rebuild the record using the existing one or use `Dict::re
 Once you are satisfied with your code, run the REPL to test it (if you are just testing, delete the data after). The new datastore should be locked, and you can use another REPL to verify the output looks correct. Set up each reference to the datastore to use the new one datastore within a [Feature Flag](/docs/feature-flags).
 
 When you're ready to change your traffic to use the new datastore, run the migration, and commit each feature flag.
+
+Setting DBs by type and DB Migrations are coming, if you have requests or inputs please let us know.
+
+## Using an External Datastore
+
+We strongly recommend using this built-in datastore. If you have an external databas, you can connect to it via REST. [Tutorial](/docs/tutorials/external-db).
