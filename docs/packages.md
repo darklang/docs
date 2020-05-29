@@ -62,6 +62,12 @@ Takes a Stripe key (`String`), the amount for the charge (`String`), the currenc
 
 ![createCharge](assets/packages/stripe/createCharge.png)
 
+### createCheckoutSession
+
+Takes a `list` of line items (amount, name, quanity, price, and currency), a customerId (`Any`), a stripeKey (`String`), a cancelUrl (`String`) and a successUrl (`String`).
+
+![createCheckout](assets/packages/stripe/createCheckout.png)
+
 ### createCustomer
 
 Takes a Stripe key (`String`), a description (`String`), an email address (`String`), a name (`String`) and a phone number (`String`) and creates a customer in Stripe.
