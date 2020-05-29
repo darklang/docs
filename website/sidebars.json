@@ -69,7 +69,9 @@
   },
   "Contributing": {
     "Contributing": [
-      "contributing/getting-started"
+      "contributing/getting-started",
+      "contributing/working-in-the-dark-repo",
+      "contributing/what-to-contribute"
     ]
   }
 }
