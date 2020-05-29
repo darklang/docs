@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>What to contribute · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# List of reported bugs"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="What to contribute · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="# List of reported bugs"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class=""><a href="/docs/tutorials/tutorial-intro" target="_self">Tutorials &amp; Samples</a></li><li class=""><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class="siteNavGroupActive"><a href="/docs/contributing/getting-started" target="_self">Contributing</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Contributing</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Contributing</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/contributing/getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/contributing/working-in-the-dark-repo">Working in the Dark repository</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/contributing/what-to-contribute">What to contribute</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">What to contribute</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="list-of-reported-bugs"></a><a href="#list-of-reported-bugs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List of reported bugs</h1>
+<p>We made  alist of the [bugs that have been reported] in the last month (alongside the bug reporter - please feel free to fix one of these even if you aren't the reporter).</p>
+<p>We're going to move this list into the GitHub issues in the Dark repo, along with the backlog of bug reports we keep in our Trello.</p>
+<h1><a class="anchor" aria-hidden="true" id="example-contributions"></a><a href="#example-contributions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example contributions</h1>
+<h2><a class="anchor" aria-hidden="true" id="adding-a-test"></a><a href="#adding-a-test" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a test</h2>
+<p>See <strong>First contribution</strong> above.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-a-function-to-the-query-compiler"></a><a href="#adding-a-function-to-the-query-compiler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a function to the query compiler</h2>
+<p>Dark supports a subset of functions to be used in the query compiler. Those functions can be seen by reading the source in backend/libbackend/sql_compiler. To add new functions, look at binop_to_sql - those are functions that map directly from Dark's builtin types and standard library to Postgres 9.6's builtins. Functions which are easy to add will also have a direct mapping.</p>
+<p>More complex functions need to be handled in lambda_to_sql directly.</p>
+<p>Query compiler functions should all be tested. They have pretty good tests of basic functionality, but could do with more tests. If you want to start small, adding a test for an existing function is very welcome.</p>
+<h2><a class="anchor" aria-hidden="true" id="adding-a-standard-library-function"></a><a href="#adding-a-standard-library-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding a standard library function</h2>
+<p>It's pretty easy to add functions to Dark's standard library. Not all functions should be added though, if it's dealing with a third party API for instance, that should be added in the package manager (coming soon).</p>
+<p>Good candidates to be added in the standard library are functions which:</p>
+<ul>
+<li>are standard. If they feel like they belong in the List, String, Int, Float, Result, Option, UUID, Date, Dict, Bool, Bytes, DB, HTTPClient or HTTP (response) modules, they're welcome. We're interested in a broad set of functions here, so</li>
+<li>provide cryptographic functions: these are hard and slow to do in userspace. We wrap several OCaml libraries to provide our Crypto functions, and in one case a rust library. We want to expand our ability to support calling HTTP APIs, so any functions which support this are welcome</li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="larger-projects"></a><a href="#larger-projects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Larger Projects</h1>
+<p>Dark is a project with a vision for where it is going. Unfortunately, that vision is not as documented as it could be. We'll work on that!</p>
+<p>In the meantime, the best thing to align well with that vision is to be very communicative. While many projects will take drive-by contributions, we are only going to take contributions which move in the same direction we are going. So start by talking to us in #contributors, letting us know what you're thinking you need.</p>
+<p>The best thing to do is something that is personally blocking you. Our main goal with opening Dark is to enable users to unblock themselves or to improve their experience. Many users have shown us long laundry lists of things that bother them - you might have one too. Bring us the list, and we'll talk about where to start.</p>
+<p>If you don't have something personally blocking you, but want to contribute, we have an endless list of bugs and small features that have been asked for!</p>
+<p>The important thing is to start small. Dark is nearly 100,000LOC. And we have the constraints of supporting users' production apps in a continuous delivery manner. You should aim for your first few contributions to be small and non-controversial, before trying to design a big feature or product change.</p>
+<h1><a class="anchor" aria-hidden="true" id="helping-an-initiative"></a><a href="#helping-an-initiative" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Helping an initiative</h1>
+<p>We are in the midst of converting from several old ways of doing things to new ways of doing things. This process can be helped by small, straightforward contributions. These are especially good for a first-time contributor, especially one just learning OCaml. One example:</p>
+<h2><a class="anchor" aria-hidden="true" id="converting-from-old-ast-tests-to-new-ast-tests"></a><a href="#converting-from-old-ast-tests-to-new-ast-tests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Converting from old AST tests to new AST tests</h2>
+<p>All of our original language tests were written like this:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> t_string_trim_noop <span class="hljs-literal">()</span> =
+  check_dval
+    <span class="hljs-string">"stringTrimNoop"</span>
+    (exec_ast <span class="hljs-string">"(String::trim 'foo')"</span>)
+    (<span class="hljs-type">Dval</span>.dstr_of_string_exn <span class="hljs-string">"foo"</span>)
+</code></pre>
+<p>See the <code>exec_ast</code> call which reads that Lisp-y string? I thought I was clever, but that got really hard once it got to 2 or 3 lines.</p>
+<p>Now we write these tests like this:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> t_string_trim_noop <span class="hljs-literal">()</span> =
+  check_dval
+    <span class="hljs-string">"stringTrimNoop"</span>
+    (exec_ast' (fn <span class="hljs-string">"String::trim"</span> [str <span class="hljs-string">"foo"</span>]))
+    (<span class="hljs-type">Dval</span>.dstr_of_string_exn <span class="hljs-string">"foo"</span>)
+</code></pre>
+<p>There are 263 tests that are written the new way, and 162 written the old way. Converting some to the new way would be very helpful</p>
+<h2><a class="anchor" aria-hidden="true" id="convert-from-yarn-to-npm"></a><a href="#convert-from-yarn-to-npm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Convert from yarn to npm</h2>
+<p>We started with yarn, but we get confused as some of our repos use <code>npm</code>, so we've decided to standardize on <code>npm</code>. Sadly, a few scripts rely on the yarn format, and there are yarn lock files. Quite a simple project to start though, esp for the Node/scripting inclined. Grep for <code>yarn</code> to get started.</p>
+<h2><a class="anchor" aria-hidden="true" id="stabilize-integration-tests"></a><a href="#stabilize-integration-tests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stabilize integration tests</h2>
+<p>Our integration tests (./integration_tests) are written in test cafe. They are quite slow and reasonably flaky, and we have found that testcafe's technology does not let us test interesting parts of our code. Some ideas here:</p>
+<ul>
+<li>we are interested in potentially converting from testcafe to playwright. Doing a technical evaluation (converting 1 test perhaps) to start our conversion would be useful</li>
+<li>We are also interested in speeding these tests up and making them more reliable. We have not really looked at speed yet, we periodically look at reliability.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/working-in-the-dark-repo"><span class="arrow-prev">← </span><span>Working in the Dark repository</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#adding-a-test">Adding a test</a></li><li><a href="#adding-a-function-to-the-query-compiler">Adding a function to the query compiler</a></li><li><a href="#adding-a-standard-library-function">Adding a standard library function</a></li><li><a href="#converting-from-old-ast-tests-to-new-ast-tests">Converting from old AST tests to new AST tests</a></li><li><a href="#convert-from-yarn-to-npm">Convert from yarn to npm</a></li><li><a href="#stabilize-integration-tests">Stabilize integration tests</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
