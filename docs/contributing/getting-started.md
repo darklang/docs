@@ -10,14 +10,14 @@ title: Contributor Getting started guide
 - Go to #contributors and ask Paul Biggar to be added to the repo
 - Follow the [First contribution](#first-contribution) guide below to make your first contribution
 - Then, if you have a specific thing you'd like to build, talk to Paul
-  in Slack and he can help you get that shipped. If you don't have a specific
+  in Slack, and he can help you get that shipped. If you don't have a specific
   thing, Paul can help you get one.
 
 # Set up the repo
 
 ***Reminder: Dark is proprietary software, not open source! Do not share it.***
 
-Once you've been added to the repo, you'll be able to access https://github.com/darklang/dark, which is a monorepo containing the main OCaml backend, the editor (client in Bucklescript), as well as some auxilliary services used to run the Dark infrastructure.
+Once you've been added to the repo, you'll be able to access https://github.com/darklang/dark, which is a monorepo containing the main OCaml backend, the editor (client in Bucklescript), as well as some auxiliary services used to run the Dark infrastructure.
 
 - Run through the installation instructions in the [README](https://github.com/darklang/dark/blob/master/README.md)
 - You should now be running `./scripts/builder --compile --test --watch` and seeing a completed build.
@@ -28,10 +28,13 @@ Let's talk you through the first contribution. You'll write a small unit test fo
 
 ### Make the change
 
-We'll assume you have the repo set up as discussed above. Now we want to make the contribution. First, find a function which needs testing. Let's make some lists. First let's see what functions exists:
+We'll assume you have the repo set up as discussed above. Now we want to make the contribution. First, find a function which needs testing. Let's make some lists.
+
+First let's see what functions exists:
 
 `grep -hoP "[A-Z][A-Za-z]+::[_a-zA-Z0-9]+" backend/libexecution/ -R | sort | uniq > exists`
-And now which ones are tested
+
+And now which ones are tested:
 
 `grep -hoP "[A-Z][A-Za-z]+::[_a-zA-Z0-9]+" backend/test -R | sort | uniq > tested`
 
@@ -41,7 +44,7 @@ Now compare them:
 
 `diff tested exists`
 
-You'll see stuff liek this (with a `>`):
+You'll see stuff like this (with a `>`):
 
 ```ocaml
 136a169
@@ -160,7 +163,7 @@ The important thing is to start small. Dark is nearly 100,000LOC. And we have th
 - client - the editor, and the entire frontend application that is found under [darklang.com/a/yourcanvas](http://darklang.com/a/yourcanvas) (note, not darklang.com or the docs). Written in Bucklescript/ReasonML. All frontend functionality, except the server-side APIs used for it, are here
     - src/analysis - handles code related to live values - requesting from the server, storing, sending to the client-side execution engine
     - src/api - most requests to the HTTP API live here
-    - src/app - importat scaffolding for the application (settings, exception tracking, Main.ml)
+    - src/app - important scaffolding for the application (settings, exception tracking, Main.ml)
     - src/canvas - misc files pertaining to layout
     - src/components - a number of parts of Dark have been componentized. They live here.
     - src/core - all the frontend types are defined here, also JSON  encoders and decoders for them
