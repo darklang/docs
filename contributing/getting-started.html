@@ -66,12 +66,12 @@
 <li>Go to #contributors and ask Paul Biggar to be added to the repo</li>
 <li>Follow the <a href="#first-contribution">First contribution</a> guide below to make your first contribution</li>
 <li>Then, if you have a specific thing you'd like to build, talk to Paul
-in Slack and he can help you get that shipped. If you don't have a specific
+in Slack, and he can help you get that shipped. If you don't have a specific
 thing, Paul can help you get one.</li>
 </ul>
 <h1><a class="anchor" aria-hidden="true" id="set-up-the-repo"></a><a href="#set-up-the-repo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set up the repo</h1>
 <p><strong><em>Reminder: Dark is proprietary software, not open source! Do not share it.</em></strong></p>
-<p>Once you've been added to the repo, you'll be able to access <a href="https://github.com/darklang/dark">https://github.com/darklang/dark</a>, which is a monorepo containing the main OCaml backend, the editor (client in Bucklescript), as well as some auxilliary services used to run the Dark infrastructure.</p>
+<p>Once you've been added to the repo, you'll be able to access <a href="https://github.com/darklang/dark">https://github.com/darklang/dark</a>, which is a monorepo containing the main OCaml backend, the editor (client in Bucklescript), as well as some auxiliary services used to run the Dark infrastructure.</p>
 <ul>
 <li>Run through the installation instructions in the <a href="https://github.com/darklang/dark/blob/master/README.md">README</a></li>
 <li>You should now be running <code>./scripts/builder --compile --test --watch</code> and seeing a completed build.</li>
@@ -79,14 +79,15 @@ thing, Paul can help you get one.</li>
 <h1><a class="anchor" aria-hidden="true" id="first-contribution"></a><a href="#first-contribution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First contribution</h1>
 <p>Let's talk you through the first contribution. You'll write a small unit test for a built-in function. This will get you through the process of contributing and get you familiar with how to get code into Dark.</p>
 <h3><a class="anchor" aria-hidden="true" id="make-the-change"></a><a href="#make-the-change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Make the change</h3>
-<p>We'll assume you have the repo set up as discussed above. Now we want to make the contribution. First, find a function which needs testing. Let's make some lists. First let's see what functions exists:</p>
-<p><code>grep -hoP &quot;[A-Z][A-Za-z]+::[_a-zA-Z0-9]+&quot; backend/libexecution/ -R | sort | uniq &gt; exists</code>
-And now which ones are tested</p>
+<p>We'll assume you have the repo set up as discussed above. Now we want to make the contribution. First, find a function which needs testing. Let's make some lists.</p>
+<p>First let's see what functions exists:</p>
+<p><code>grep -hoP &quot;[A-Z][A-Za-z]+::[_a-zA-Z0-9]+&quot; backend/libexecution/ -R | sort | uniq &gt; exists</code></p>
+<p>And now which ones are tested:</p>
 <p><code>grep -hoP &quot;[A-Z][A-Za-z]+::[_a-zA-Z0-9]+&quot; backend/test -R | sort | uniq &gt; tested</code></p>
 <p>(Note that if these commands don't work for you, you can open a shell in the dev container with <code>./scripts/run-in-docker bash</code>, and run them there).</p>
 <p>Now compare them:</p>
 <p><code>diff tested exists</code></p>
-<p>You'll see stuff liek this (with a <code>&gt;</code>):</p>
+<p>You'll see stuff like this (with a <code>&gt;</code>):</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-number">136</span>a169
 &gt; <span class="hljs-type">List</span>::member
 <span class="hljs-number">137</span>a171
@@ -176,7 +177,7 @@ contribution (and you can ignore the checklist for this PR).</p>
 <ul>
 <li>src/analysis - handles code related to live values - requesting from the server, storing, sending to the client-side execution engine</li>
 <li>src/api - most requests to the HTTP API live here</li>
-<li>src/app - importat scaffolding for the application (settings, exception tracking, Main.ml)</li>
+<li>src/app - important scaffolding for the application (settings, exception tracking, Main.ml)</li>
 <li>src/canvas - misc files pertaining to layout</li>
 <li>src/components - a number of parts of Dark have been componentized. They live here.</li>
 <li>src/core - all the frontend types are defined here, also JSON  encoders and decoders for them</li>
