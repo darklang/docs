@@ -10,7 +10,7 @@ Have a tip to add to the guide? [Submit a PR](https://github.com/darklang/docs/p
 
 ## Comments
 
-In Javascript, you use a `#` to start a single line comment, or `/*` and `*/` to wrap a multiline comment.:
+In Javascript, you use a `//` to start a single line comment, or `/*` and `*/` to wrap a multiline comment.:
 
 ```Javascript
 // This is a comment
