@@ -14,7 +14,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 - - Datastores can now have fields named id. This was contributed by our first external contributor, [Caleb H](https://github.com/naclcaleb)!
 
-## Documentation
+### Documentation
 
 - Added:
   - A section around [submitting external contributions](./contributing/getting-started) ([134](https://darklang.github.io/docs/contributing/getting-started))
@@ -34,7 +34,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - We've done some major infrastructure work behind the Cron scheduler, which significantly improved its performance. You should now see all Crons, including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions on/off the [error rail](./error-handling#error-rail) or when committing [feature flags](./feature-flags).
 
-## Documentation
+### Documentation
 
 Thank you to everyone who contributed to our docs this week! As a reminder, our docs repo is public and all you need to do to contribute is [submit a pull request](https://github.com/darklang/docs/pulls).
 
