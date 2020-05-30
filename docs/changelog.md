@@ -6,6 +6,25 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 5/29/2020
+
+- It's now possible to set a return type for functions. The return type will appear in the autocomplete and type errors will be displayed when necessary, making it easier to know that your functions work, and making it easier to use and understand functions. This means that your functions can also now use the Error Rail, if you set their return type to Result or Option.
+
+![assets/changelog/returntypes.png](assets/changelog/returntypes.png)
+
+- Datastores can now have fields named id. This was contributed by our first external contributor, [Caleb H](https://github.com/naclcaleb)!
+
+### Documentation
+
+- Added:
+  - A section around [submitting external contributions](./contributing/getting-started) ([134](https://darklang.github.io/docs/contributing/getting-started))
+  - A guide around [when and when not to use Dark](./when-dark) ([133](https://github.com/darklang/docs/pull/133))
+  - Expanded information about [Datastore migrations](./datastores#migrations-locking-and-unlocking) ([141](https://github.com/darklang/docs/pull/141))
+  - A [From Javascript page](./from-javascript) to help developers familiar with Javascript learn Dark ([132](https://github.com/darklang/docs/pull/132))
+  - Documentation for the [`Slack::createCheckoutSession`](./packages#createcheckoutsession) package ([139](https://github.com/darklang/docs/pull/139))
+- Made a few improvements to the [Your First App](./your-first) tutorial ([129](https://github.com/darklang/docs/pull/129), [130](https://github.com/darklang/docs/pull/130))
+- Misc. spelling fixes ([128](https://github.com/darklang/docs/pull/128), [136](https://github.com/darklang/docs/pull/136))
+
 ## Week of 5/22/2020
 
 - We've added more information to the sidebar! If you're not sure what a section in the sidebar is for, click on its name and more details will appear on the right side of your canvas.
@@ -15,7 +34,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - We've done some major infrastructure work behind the Cron scheduler, which significantly improved its performance. You should now see all Crons, including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions on/off the [error rail](./error-handling#error-rail) or when committing [feature flags](./feature-flags).
 
-## Documentation
+### Documentation
 
 Thank you to everyone who contributed to our docs this week! As a reminder, our docs repo is public and all you need to do to contribute is [submit a pull request](https://github.com/darklang/docs/pulls).
 
