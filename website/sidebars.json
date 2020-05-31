@@ -70,8 +70,8 @@
   "Contributing": {
     "Contributing": [
       "contributing/getting-started",
-      "contributing/working-in-the-dark-repo",
-      "contributing/what-to-contribute"
+      "contributing/what-to-contribute",
+      "contributing/working-in-the-dark-repo"
     ]
   }
 }
