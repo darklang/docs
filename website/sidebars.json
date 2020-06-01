@@ -39,7 +39,8 @@
       "known-issues",
       "sharing-dark",
       "changelog",
-      "faqs"
+      "faqs",
+      "desktop-client"
     ]
   },
   "Slack": {
