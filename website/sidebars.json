@@ -61,6 +61,7 @@
       "tutorials/tutorial-intro",
       "tutorials/react-spa-tutorial",
       "tutorials/twilio-app-tutorial",
+      "tutorials/error-rail-http-tutorial",
       "tutorials/ifttt-alerts",
       "tutorials/external-db",
       "tutorials/airtable",
