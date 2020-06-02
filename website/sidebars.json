@@ -69,9 +69,16 @@
     ]
   },
   "Contributing": {
-    "Contributing": [
+    "Your First Contribution": [
       "contributing/getting-started",
-      "contributing/what-to-contribute",
+      "contributing/setting-up-the-repo",
+      "contributing/adding-your-first-test",
+      "contributing/making-your-first-pull-request"
+    ],
+    "Your Next Contribution": [
+      "contributing/next-contribution"
+    ],
+    "Working in the Dark repo": [
       "contributing/working-in-the-dark-repo"
     ]
   }
