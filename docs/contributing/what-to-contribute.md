@@ -3,6 +3,12 @@ id: what-to-contribute
 title: What to contribute
 ---
 
+## First PR
+
+We've added a tutorial for your first PR, which also makes a valuable
+contribution. We ask that contributors start there rather than jumping into
+something more complicated.
+
 ## Issues
 
 We have started adding issues that have been previously reported to the the
@@ -40,12 +46,8 @@ solved.
 
 Dark is a project with a vision for where it is going. Unfortunately, that vision is not as documented as it could be. We'll work on that!
 
-In the meantime, the best thing to align well with that vision is to be very communicative. While many projects will take drive-by contributions, we are only going to take contributions which move in the same direction we are going. So start by talking to us in #contributors, letting us know what you're thinking you need.
+In the meantime, the best thing to align well with that vision is to be very communicative. While many projects will take drive-by contributions, we are only going to take contributions which move in the same direction we are going. Often, those directions are quite subtle, so start by talking to us in #contributors, letting us know what you're thinking.
 
-The best thing to do is something that is personally blocking you. Our main goal with opening Dark is to enable users to unblock themselves or to improve their experience. Many users have shown us long laundry lists of things that bother them - you might have one too. Bring us the list, and we'll talk about where to start.
-
-If you don't have something personally blocking you, but want to contribute, we have an endless list of bugs and small features that have been asked for!
+The best thing to work on is something that is personally (or professionally!) blocking you. Our main goal with opening Dark is to enable users to unblock themselves or to improve their experience. Many users have shown us long laundry lists of things that bother them - you might have one too. Or bring us the list, and we'll talk about where to start.
 
 The important thing is to start small. Dark is nearly 100,000LOC. And we have the constraints of supporting users' production apps in a continuous delivery manner. You should aim for your first few contributions to be small and non-controversial, before trying to design a big feature or product change.
-
-
