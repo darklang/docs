@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Clean Error Messages with the Error Rail · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial, we will be showing you how to use the error rail with `HttpClient::get` to display clean error messages. We will be using the [PokeAPI](https://pokeapi.co/), as it is publicly available and requires no special authentication."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Clean Error Messages with the Error Rail · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="In this tutorial, we will be showing you how to use the error rail with `HttpClient::get` to display clean error messages. We will be using the [PokeAPI](https://pokeapi.co/), as it is publicly available and requires no special authentication."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'UA-159199190-1');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class="siteNavGroupActive"><a href="/docs/tutorials/tutorial-intro" target="_self">Tutorials &amp; Samples</a></li><li class=""><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class=""><a href="/docs/contributing/getting-started" target="_self">Contributing</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorial &amp; Samples</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorial &amp; Samples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tutorials/tutorial-intro">Intro</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/react-spa-tutorial">React SPA tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/twilio-app-tutorial">Twilio tutorial</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/tutorials/error-rail-http-tutorial">Clean Error Messages with the Error Rail</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/ifttt-alerts">Alerting with IFTTT</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/external-db">Using an External DB</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/airtable">Airtable Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/freshdesk">Freshdesk Sample</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials/sample-canvases">Sample Canvases</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Clean Error Messages with the Error Rail</h1></header><article><div><span><p>In this tutorial, we will be showing you how to use the error rail with <code>HttpClient::get</code> to display clean error messages. We will be using the <a href="https://pokeapi.co/">PokeAPI</a>, as it is publicly available and requires no special authentication.</p>
+<ol>
+<li>Create a new function from the omnibox or sidebar. Call this function <code>pokeSearch</code> and add a pokemon parameter with type <code>String</code>.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/pokeSearch.png" alt="assets/error-rail/pokeSearch.png"></p>
+<ol start="2">
+<li>Now, use your new function by creating a new REPL named search and calling your <code>pokeSearch</code> function with <code>&quot;ditto&quot;</code> as the parameter.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/ditto.png" alt="assets/error-rail/ditto.png"></p>
+<ol start="3">
+<li>Return to your function and check your traces - you should see a new one with <code>&quot;ditto&quot;.</code></li>
+</ol>
+<p><img src="/docs/assets/error-rail/dittoTrace.png" alt="assets/error-rail/dittoTrace.png"></p>
+<ol start="4">
+<li>Create your url by concatenating <code>https://pokeapi.co/api/v2/pokemon/</code> with your parameter.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/url.png" alt="assets/error-rail/url.png"></p>
+<ol start="5">
+<li>Write your <code>HttpClient::get</code> call.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/data.png" alt="assets/error-rail/data.png"></p>
+<ol start="6">
+<li>Return the results of your <code>HttpClient::get</code>. Note the checkmark in the circle to the right of your call - this is indicating that your function is on the Error Rail, and that it isn't returning an error.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/returnData.png" alt="assets/error-rail/returnData.png"></p>
+<ol start="7">
+<li>Return to your <code>search</code> REPL and enter anything other than the name of an actual pokemon. I chose <code>&quot;pikawho&quot;</code>.  Then, run your REPL again to see the <code>Error</code> trace.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/error.png" alt="assets/error-rail/error.png"></p>
+<ol start="8">
+<li>Return to your <code>pokeSearch</code> function, and note that the checkmark has changed to a red exclamation point, indicating that there is an error.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/errorpoint.png" alt="assets/error-rail/errorpoint.png"></p>
+<ol start="9">
+<li>Place your cursor in <code>HttpClient::get,</code> <a href="../structured-editing#command-palette">open the command palette</a>, and select <code>take-function-off-rail</code>.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/offrail.png" alt="assets/error-rail/offrail.png"></p>
+<ol start="10">
+<li>Once you do, you'll notice that the Error Rail icon on the right disappears, and your return trace will update.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/errorTrace.png" alt="assets/error-rail/errorTrace.png"></p>
+<ol start="11">
+<li>Now, we're going to use a <code>match</code> on <code>data</code> to return the result we want. Here, I've said that if <code>data</code> returns an <code>Ok</code> we can just return data, and if <code>data</code> returns an <code>Error</code> we will print out a nice error message.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/niceError.png" alt="assets/error-rail/niceError.png"></p>
+<ol start="12">
+<li>Return to your <code>search</code> REPL, and re-run it. You'll see your nicely formatted error message.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/replError.png" alt="assets/error-rail/replError.png"></p>
+<ol start="13">
+<li>Try again with the name of a real Pokemon to confirm that, when there is no error, <code>data</code> is returned.</li>
+</ol>
+<p><img src="/docs/assets/error-rail/correctName.png" alt="assets/error-rail/correctName.png"></p>
+<p>Congratulations! You've now successfully taken a function off of the error rail to write a custom error message!</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/tutorials/twilio-app-tutorial"><span class="arrow-prev">← </span><span>Twilio tutorial</span></a><a class="docs-next button" href="/docs/tutorials/ifttt-alerts"><span>Alerting with IFTTT</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
+                indexName: 'darklang',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
