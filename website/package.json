@@ -14,12 +14,12 @@
     "check-format": "prettier --check ../docs/*.md"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.3",
+    "docusaurus": "^1.14.4",
     "markdownlint-cli": "^0.22.0",
     "prettier": "^1.19.1"
   },
   "dependencies": {
-    "yarn": "^1.22.1",
+    "yarn": "^1.22.4",
     "minimist": ">=1.2.3"
   }
 }
