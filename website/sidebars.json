@@ -75,11 +75,21 @@
       "contributing/adding-your-first-test",
       "contributing/making-your-first-pull-request"
     ],
-    "Your Next Contribution": [
-      "contributing/next-contribution"
+    "Your Next Contributions": [
+      "contributing/next-contribution",
+      "contributing/adding-a-function",
+      "contributing/adding-a-language-feature",
+      "contributing/adding-a-refactoring"
     ],
     "Working in the Dark repo": [
-      "contributing/working-in-the-dark-repo"
+      "contributing/ocaml-for-dark-developers",
+      "contributing/general-concepts",
+      "contributing/tour-of-editor",
+      "contributing/tour-of-backend",
+      "contributing/repo-layout",
+      "contributing/glossary",
+      "contributing/debugging",
+      "contributing/making-a-pull-request"
     ]
   }
 }
