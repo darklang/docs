@@ -2,10 +2,12 @@
 title: OCaml for Dark developers
 ---
 
+**This doc is under construction**
+
 This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.
 
 
-## OCaml vs ReasonML vs Bucklescript
+## OCaml vs ReasonML vs Bucklescript - what's the difference?
 
 The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.
 
@@ -15,13 +17,15 @@ Bucklescript and OCaml are both compilers:
 
 ReasonML and OCaml are both syntaxes:
 - ReasonML is a JS-like syntax for the OCaml language
-- OCaml has a default syntax (we use this in the Dark repo)
+- OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)
 
 ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.
 
-Again, the simplest mental model is that they're all the same.
+Again, the simplest mental model is that all the words mean the same thing.
 
-
+Specifically:
+- the Dark backend uses the native OCaml compiler and the OCaml syntax
+- the Dark client uses the Bucklescript compiler, and the OCaml syntax.
 
 ## Some simple OCaml code
 
@@ -57,9 +61,11 @@ As you can see, apart from how the function is written, the only
 difference is that `let` statements in OCaml have an `in` at the end of
 the line.
 
-## What do Dark and OCaml have in common?
+## Dark vs OCaml
 
-OCaml and Elm (which is extremely similar) are both the biggest influences to Dark. Dark is aimed at having most of what's in OCaml, although it is currently a smaller subset than is planned.
+OCaml is a very large influence on Dark, and Dark will continue to grow some
+more of OCaml's features. We'll discuss the similarities and differences as we
+go through language features.
 
 ### Syntax
 
@@ -67,7 +73,6 @@ Since Dark doesn't let you type syntax, it doesn't have syntax errors.
 OCaml has syntax errors, and the error messages are not good. I tend to
 make sure that my code syntax checks by running OCamlformat in my
 editor on save: if it reformats, then the syntax was good.
-
 
 ### Types
 
@@ -77,16 +82,20 @@ in OCaml, that the compiler will refuse to compile if the types are
 wrong.
 
 OCaml has type-inference, which means that the compiler will try and
-figure out what the types are. This is the source of frequently bad
+figure out what the types are. This is frequently the source of bad
 compiler messages, often it will tell you something which seems wrong
 because it guessed wrong about certain types.
 
-Usually type errors actually contain useful information, but they need to be read very carefully to find it.
+Usually type errors actually contain useful information, but they need to be
+read very carefully to find it.
 
-The best way to debug incorrect types is to add type annotations to
-everything. We add them to all functions (we didn't always, but we are
-now), including all parameters and return types (see
-[example](#functions) below). You can also add them to all statements:
+We've found the best way to debug incorrect types is to add type annotations to
+everything. We add them to all functions (we didn't always do this, but we do
+now, but we are now), including all parameters and return types (see
+[example](#functions) below).
+
+You can actually add types in many places where they aren't required, such as
+variable definitions:
 
 ```ocaml
 let y = 6.7 in
@@ -94,14 +103,15 @@ let (x : int) = 6 in
 x + 5
 ```
 
-`x` here, despite being a normal variable defitition, has a type
-signature here. OCaml allows this in many places, and it's useful for
+`x` here, despite being a normal variable definition, has a type
+signature. OCaml allows this in many places, and it's useful for
 tracking down these errors.
 
 
 ### Functions
 
-Functions in OCaml are defined in the outer scope. Type signatures are optional but we use them everywhere.
+Functions in OCaml are defined in the outer scope. Type signatures are optional in OCaml
+but required in the Dark codebase:
 
 ```ocaml
 let myFunction (arg1 : int) (arg2 : string) : string = 
@@ -140,7 +150,7 @@ Ints are basically the same in Dark and OCaml, same syntax, same meaning.
 
 ```ocaml
 let x = 5 in
-x + y
+x + 6
 ```
 
 
@@ -155,27 +165,29 @@ let x = 0.1 in
 x +. 0.3
 ```
 
-To convert from floats to ints use `Float.toInt` from 
+To convert from floats to ints use `Float.toInt`, or `Float.round`.
 
 ### Bool
 
 Like in Dark, `bool`s in OCaml are either `true` or `false`.
 
-Because OCaml is statically typed, if statements only allow `bool`s as
-arguments, you can't do something like `if 5 then ...`.
-
-
 
 ### String
 
-Strings in Dark are Unicode (UTF-8), while strings in OCaml are just bytes (we use the `Unicode_string` module to convert them to Unicode).
+Strings in Dark are Unicode (UTF-8), while strings in OCaml are just bytes (we
+use the `Unicode_string` module to convert them to Unicode).
+
+```ocaml
+let myString = "some string, escaping is allowed\nwhich dark doesn't support yet" in
+myString
+```
 
 ### List
 
 Lists in Dark and OCaml are almost the same. In OCaml, lists use `;` as separators, like so:
 
 ```
-[1;2;3;4]
+[1; 2; 3; 4]
 ```
 
 While Dark technically allows you to create lists that have different
@@ -183,7 +195,10 @@ types in them, OCaml emphatically does not.
 
 ### Records
 
-A record in OCaml has this syntax:
+Records are mostly used as objects are in most languages. Like Dark, they only
+have fields, not methods, and you use functions to manipulate them.
+
+A record in OCaml has unusual syntax:
 
 ```ocaml
 {
@@ -195,8 +210,6 @@ A record in OCaml has this syntax:
 
 Note that they use `=` to connect a field and a value, and `;` as row
 separator.
-
-Records are mostly used as objects are in most languages. Like Dark, they only have fields, not methods, and you use functions to manipulate them.
 
 Records are immutable, like almost everything in OCaml, and are updated using an unusual syntax:
 
@@ -226,8 +239,81 @@ The `in` at the end is required.
 
 ### If
 
+`if` statements in OCaml are extremely sumilar to Dark, including that they only allow `bool`s as the condition, and in their syntax.
 
-Dark currently supports int, bool, float, string, dictionaries (maps in OCaml), null (unit in OCaml), let, if, binary operators, lambdas (anonymous functions), fields, variables, records, pipes, enums (variants or sum types in OCaml)
+```ocaml
+if hasAccess user
+then "Welcome!"
+else "Access denied"
+```
+
+### Operators
+
+OCaml, in keeping with its odd syntax, has some unusual operators. Most importantly, the equality operator is `=` (that's just one equals), whereas in most languages it's `==` or `===`. `=` is very strict equality, equivalent to `===` in languages that have that, such as JS.
+
+Dark's `==` is the same as OCaml's `=`. OCaml also has a `==` operator, but you should never use it.
+
+OCaml's inequality operator (`!=` in Dark) is `<>`. Most of its comparison
+operators (such as `<`, `>`, `<=`, etc) only operate on integers.
+
+
+### Match
+
+Dark has a `match` statement that is very similar to OCaml's, with slightly different syntax:
+
+```ocaml
+match myValue with
+| Some x -> 5
+| _ -> 6
+```
+
+Notice the `with` keyword, and starting the patterns with `|`.
+
+OCaml also supports more powerful `match`es, for example multiple patterns can match a single branch:
+
+```ocaml
+match myValue with
+| 4 | 5 | 6 -> "between 4 and 6"
+| _ -> "not between 4 and 6"
+```
+
+OCaml also supports the `when` clause:
+
+```ocaml
+match myValue with
+| Some myInt when myInt >= 4 && myInt <= 6 -> "between 4 and 6"
+| _ -> "not between 4 and 6"
+```
+
+Be careful when combining multiple patterns with `when` clauses: the entire
+pattern will fail if the pattern matches when the clause does not:
+
+```ocaml
+let myValue = Some 5 in
+match myValue with
+| Some 4 | Some myInt when myValue <> Some 4 -> "this will never succeed"
+| _ -> "this will succeed as a fallback"
+```
+
+This is subtle.
+
+
+
+### Variants
+
+Dark has a handful of enums for `Option` and `Result` types: `Just`, `Nothing`, `Ok` and `Error`.
+
+### Unit
+
+OCaml has a `unit` type, whose only member is `()`. That's an actual value, for example, all this is valid code:
+
+```ocaml
+let falseVar = () != () in
+```
+
+
+
+Dark currently supports , dictionaries (maps in OCaml), null (unit in OCaml), let, if, binary operators, lambdas (anonymous functions), fields, variables, records, pipes, enums (variants or sum types in OCaml)
 
 
 
@@ -244,22 +330,5 @@ Dark currently supports int, bool, float, string, dictionaries (maps in OCaml), 
 ## Stuff in OCaml we don't use very much
  
 - Objects / classes
-
-
-## OCaml vs ReasonML vs Bucklescript
-
-The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.
-
-Bucklescript and OCaml are both compilers:
-- the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.
-- the Bucklescript compiler compiles programs to JS. The editor uses Buckelscript.
-
-ReasonML and OCaml are both syntaxes:
-- ReasonML is a JS-like syntax for the OCaml language
-- OCaml has a default syntax (we use this in the Dark repo)
-
-ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.
-
-Again, the simplest mental model is that they're all the same.
 
 
