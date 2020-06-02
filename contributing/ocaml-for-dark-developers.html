@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>OCaml for Dark developers · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="OCaml for Dark developers · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>OCaml for Dark developers · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**This doc is under construction**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="OCaml for Dark developers · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="**This doc is under construction**"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments); }
               gtag('js', new Date());
@@ -59,8 +59,9 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">OCaml for Dark developers</h1></header><article><div><span><p>This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.</p>
-<h2><a class="anchor" aria-hidden="true" id="ocaml-vs-reasonml-vs-bucklescript"></a><a href="#ocaml-vs-reasonml-vs-bucklescript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCaml vs ReasonML vs Bucklescript</h2>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">OCaml for Dark developers</h1></header><article><div><span><p><strong>This doc is under construction</strong></p>
+<p>This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.</p>
+<h2><a class="anchor" aria-hidden="true" id="ocaml-vs-reasonml-vs-bucklescript---whats-the-difference"></a><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCaml vs ReasonML vs Bucklescript - what's the difference?</h2>
 <p>The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.</p>
 <p>Bucklescript and OCaml are both compilers:</p>
 <ul>
@@ -70,10 +71,15 @@
 <p>ReasonML and OCaml are both syntaxes:</p>
 <ul>
 <li>ReasonML is a JS-like syntax for the OCaml language</li>
-<li>OCaml has a default syntax (we use this in the Dark repo)</li>
+<li>OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)</li>
 </ul>
 <p>ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.</p>
-<p>Again, the simplest mental model is that they're all the same.</p>
+<p>Again, the simplest mental model is that all the words mean the same thing.</p>
+<p>Specifically:</p>
+<ul>
+<li>the Dark backend uses the native OCaml compiler and the OCaml syntax</li>
+<li>the Dark client uses the Bucklescript compiler, and the OCaml syntax.</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="some-simple-ocaml-code"></a><a href="#some-simple-ocaml-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Some simple OCaml code</h2>
 <p>Dark and OCaml are very similar. Here's an OCaml function:</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> someFunction (intArgument : <span class="hljs-built_in">int</span>) : <span class="hljs-built_in">string</span> =
@@ -100,8 +106,10 @@ anotherFunction aString anInt aFloat
 <p>As you can see, apart from how the function is written, the only
 difference is that <code>let</code> statements in OCaml have an <code>in</code> at the end of
 the line.</p>
-<h2><a class="anchor" aria-hidden="true" id="what-do-dark-and-ocaml-have-in-common"></a><a href="#what-do-dark-and-ocaml-have-in-common" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What do Dark and OCaml have in common?</h2>
-<p>OCaml and Elm (which is extremely similar) are both the biggest influences to Dark. Dark is aimed at having most of what's in OCaml, although it is currently a smaller subset than is planned.</p>
+<h2><a class="anchor" aria-hidden="true" id="dark-vs-ocaml"></a><a href="#dark-vs-ocaml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dark vs OCaml</h2>
+<p>OCaml is a very large influence on Dark, and Dark will continue to grow some
+more of OCaml's features. We'll discuss the similarities and differences as we
+go through language features.</p>
 <h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
 <p>Since Dark doesn't let you type syntax, it doesn't have syntax errors.
 OCaml has syntax errors, and the error messages are not good. I tend to
@@ -113,23 +121,27 @@ have a type-checker yet. This shows the biggest difference in working
 in OCaml, that the compiler will refuse to compile if the types are
 wrong.</p>
 <p>OCaml has type-inference, which means that the compiler will try and
-figure out what the types are. This is the source of frequently bad
+figure out what the types are. This is frequently the source of bad
 compiler messages, often it will tell you something which seems wrong
 because it guessed wrong about certain types.</p>
-<p>Usually type errors actually contain useful information, but they need to be read very carefully to find it.</p>
-<p>The best way to debug incorrect types is to add type annotations to
-everything. We add them to all functions (we didn't always, but we are
-now), including all parameters and return types (see
-<a href="#functions">example</a> below). You can also add them to all statements:</p>
+<p>Usually type errors actually contain useful information, but they need to be
+read very carefully to find it.</p>
+<p>We've found the best way to debug incorrect types is to add type annotations to
+everything. We add them to all functions (we didn't always do this, but we do
+now, but we are now), including all parameters and return types (see
+<a href="#functions">example</a> below).</p>
+<p>You can actually add types in many places where they aren't required, such as
+variable definitions:</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> y = <span class="hljs-number">6.7</span> <span class="hljs-keyword">in</span>
 <span class="hljs-keyword">let</span> (x : <span class="hljs-built_in">int</span>) = <span class="hljs-number">6</span> <span class="hljs-keyword">in</span>
 x + <span class="hljs-number">5</span>
 </code></pre>
-<p><code>x</code> here, despite being a normal variable defitition, has a type
-signature here. OCaml allows this in many places, and it's useful for
+<p><code>x</code> here, despite being a normal variable definition, has a type
+signature. OCaml allows this in many places, and it's useful for
 tracking down these errors.</p>
 <h3><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h3>
-<p>Functions in OCaml are defined in the outer scope. Type signatures are optional but we use them everywhere.</p>
+<p>Functions in OCaml are defined in the outer scope. Type signatures are optional in OCaml
+but required in the Dark codebase:</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> myFunction (arg1 : <span class="hljs-built_in">int</span>) (arg2 : <span class="hljs-built_in">string</span>) : <span class="hljs-built_in">string</span> = 
   <span class="hljs-keyword">if</span> arg1 &lt; (<span class="hljs-type">String</span>.toInt arg2)
   <span class="hljs-keyword">then</span> <span class="hljs-string">"just return a string"</span>
@@ -153,7 +165,7 @@ libraries where we have not ported it to use Tablecloth yet.</p>
 <h3><a class="anchor" aria-hidden="true" id="int"></a><a href="#int" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Int</h3>
 <p>Ints are basically the same in Dark and OCaml, same syntax, same meaning.</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> x = <span class="hljs-number">5</span> <span class="hljs-keyword">in</span>
-x + y
+x + <span class="hljs-number">6</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="float"></a><a href="#float" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Float</h3>
 <p>Floats are the same in Dark and OCaml, both of them are 64-bit floating point numbers.</p>
@@ -161,21 +173,25 @@ x + y
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> x = <span class="hljs-number">0.1</span> <span class="hljs-keyword">in</span>
 x +. <span class="hljs-number">0.3</span>
 </code></pre>
-<p>To convert from floats to ints use <code>Float.toInt</code> from</p>
+<p>To convert from floats to ints use <code>Float.toInt</code>, or <code>Float.round</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="bool"></a><a href="#bool" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bool</h3>
 <p>Like in Dark, <code>bool</code>s in OCaml are either <code>true</code> or <code>false</code>.</p>
-<p>Because OCaml is statically typed, if statements only allow <code>bool</code>s as
-arguments, you can't do something like <code>if 5 then ...</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="string"></a><a href="#string" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String</h3>
-<p>Strings in Dark are Unicode (UTF-8), while strings in OCaml are just bytes (we use the <code>Unicode_string</code> module to convert them to Unicode).</p>
+<p>Strings in Dark are Unicode (UTF-8), while strings in OCaml are just bytes (we
+use the <code>Unicode_string</code> module to convert them to Unicode).</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> myString = <span class="hljs-string">"some string, escaping is allowed\nwhich dark doesn't support yet"</span> <span class="hljs-keyword">in</span>
+myString
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="list"></a><a href="#list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List</h3>
 <p>Lists in Dark and OCaml are almost the same. In OCaml, lists use <code>;</code> as separators, like so:</p>
-<pre><code class="hljs">[<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>]
+<pre><code class="hljs">[<span class="hljs-number">1</span>; <span class="hljs-number">2</span>; <span class="hljs-number">3</span>; <span class="hljs-number">4</span>]
 </code></pre>
 <p>While Dark technically allows you to create lists that have different
 types in them, OCaml emphatically does not.</p>
 <h3><a class="anchor" aria-hidden="true" id="records"></a><a href="#records" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Records</h3>
-<p>A record in OCaml has this syntax:</p>
+<p>Records are mostly used as objects are in most languages. Like Dark, they only
+have fields, not methods, and you use functions to manipulate them.</p>
+<p>A record in OCaml has unusual syntax:</p>
 <pre><code class="hljs css language-ocaml">{
   field1 = <span class="hljs-number">56</span>;
   field2 = <span class="hljs-literal">true</span>;
@@ -184,7 +200,6 @@ types in them, OCaml emphatically does not.</p>
 </code></pre>
 <p>Note that they use <code>=</code> to connect a field and a value, and <code>;</code> as row
 separator.</p>
-<p>Records are mostly used as objects are in most languages. Like Dark, they only have fields, not methods, and you use functions to manipulate them.</p>
 <p>Records are immutable, like almost everything in OCaml, and are updated using an unusual syntax:</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> x = { field1 = <span class="hljs-number">56</span>; field2 = <span class="hljs-literal">true</span> } <span class="hljs-keyword">in</span>
 <span class="hljs-keyword">let</span> updatedX = { x <span class="hljs-keyword">with</span> field1 = <span class="hljs-number">57</span> } <span class="hljs-keyword">in</span>
@@ -202,7 +217,48 @@ x + <span class="hljs-number">23</span>
 <p>The <code>in</code> at the end is required.</p>
 <p><code>let</code> also allow destructing in OCaml, although we don't currently use that very often/</p>
 <h3><a class="anchor" aria-hidden="true" id="if"></a><a href="#if" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>If</h3>
-<p>Dark currently supports int, bool, float, string, dictionaries (maps in OCaml), null (unit in OCaml), let, if, binary operators, lambdas (anonymous functions), fields, variables, records, pipes, enums (variants or sum types in OCaml)</p>
+<p><code>if</code> statements in OCaml are extremely sumilar to Dark, including that they only allow <code>bool</code>s as the condition, and in their syntax.</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">if</span> hasAccess user
+<span class="hljs-keyword">then</span> <span class="hljs-string">"Welcome!"</span>
+<span class="hljs-keyword">else</span> <span class="hljs-string">"Access denied"</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="operators"></a><a href="#operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operators</h3>
+<p>OCaml, in keeping with its odd syntax, has some unusual operators. Most importantly, the equality operator is <code>=</code> (that's just one equals), whereas in most languages it's <code>==</code> or <code>===</code>. <code>=</code> is very strict equality, equivalent to <code>===</code> in languages that have that, such as JS.</p>
+<p>Dark's <code>==</code> is the same as OCaml's <code>=</code>. OCaml also has a <code>==</code> operator, but you should never use it.</p>
+<p>OCaml's inequality operator (<code>!=</code> in Dark) is <code>&lt;&gt;</code>. Most of its comparison
+operators (such as <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, etc) only operate on integers.</p>
+<h3><a class="anchor" aria-hidden="true" id="match"></a><a href="#match" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Match</h3>
+<p>Dark has a <code>match</code> statement that is very similar to OCaml's, with slightly different syntax:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">match</span> myValue <span class="hljs-keyword">with</span>
+| <span class="hljs-type">Some</span> x -&gt; <span class="hljs-number">5</span>
+| _ -&gt; <span class="hljs-number">6</span>
+</code></pre>
+<p>Notice the <code>with</code> keyword, and starting the patterns with <code>|</code>.</p>
+<p>OCaml also supports more powerful <code>match</code>es, for example multiple patterns can match a single branch:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">match</span> myValue <span class="hljs-keyword">with</span>
+| <span class="hljs-number">4</span> | <span class="hljs-number">5</span> | <span class="hljs-number">6</span> -&gt; <span class="hljs-string">"between 4 and 6"</span>
+| _ -&gt; <span class="hljs-string">"not between 4 and 6"</span>
+</code></pre>
+<p>OCaml also supports the <code>when</code> clause:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">match</span> myValue <span class="hljs-keyword">with</span>
+| <span class="hljs-type">Some</span> myInt <span class="hljs-keyword">when</span> myInt &gt;= <span class="hljs-number">4</span> &amp;&amp; myInt &lt;= <span class="hljs-number">6</span> -&gt; <span class="hljs-string">"between 4 and 6"</span>
+| _ -&gt; <span class="hljs-string">"not between 4 and 6"</span>
+</code></pre>
+<p>Be careful when combining multiple patterns with <code>when</code> clauses: the entire
+pattern will fail if the pattern matches when the clause does not:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> myValue = <span class="hljs-type">Some</span> <span class="hljs-number">5</span> <span class="hljs-keyword">in</span>
+<span class="hljs-keyword">match</span> myValue <span class="hljs-keyword">with</span>
+| <span class="hljs-type">Some</span> <span class="hljs-number">4</span> | <span class="hljs-type">Some</span> myInt <span class="hljs-keyword">when</span> myValue &lt;&gt; <span class="hljs-type">Some</span> <span class="hljs-number">4</span> -&gt; <span class="hljs-string">"this will never succeed"</span>
+| _ -&gt; <span class="hljs-string">"this will succeed as a fallback"</span>
+</code></pre>
+<p>This is subtle.</p>
+<h3><a class="anchor" aria-hidden="true" id="variants"></a><a href="#variants" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variants</h3>
+<p>Dark has a handful of enums for <code>Option</code> and <code>Result</code> types: <code>Just</code>, <code>Nothing</code>, <code>Ok</code> and <code>Error</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="unit"></a><a href="#unit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unit</h3>
+<p>OCaml has a <code>unit</code> type, whose only member is <code>()</code>. That's an actual value, for example, all this is valid code:</p>
+<pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> falseVar = <span class="hljs-literal">()</span> != <span class="hljs-literal">()</span> <span class="hljs-keyword">in</span>
+</code></pre>
+<p>Dark currently supports , dictionaries (maps in OCaml), null (unit in OCaml), let, if, binary operators, lambdas (anonymous functions), fields, variables, records, pipes, enums (variants or sum types in OCaml)</p>
 <h2><a class="anchor" aria-hidden="true" id="stuff-in-ocaml-that-dark-doesnt-have"></a><a href="#stuff-in-ocaml-that-dark-doesnt-have" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stuff in OCaml that Dark doesn't have</h2>
 <ul>
 <li>exceptions</li>
@@ -217,21 +273,7 @@ x + <span class="hljs-number">23</span>
 <ul>
 <li>Objects / classes</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="ocaml-vs-reasonml-vs-bucklescript-1"></a><a href="#ocaml-vs-reasonml-vs-bucklescript-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCaml vs ReasonML vs Bucklescript</h2>
-<p>The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.</p>
-<p>Bucklescript and OCaml are both compilers:</p>
-<ul>
-<li>the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.</li>
-<li>the Bucklescript compiler compiles programs to JS. The editor uses Buckelscript.</li>
-</ul>
-<p>ReasonML and OCaml are both syntaxes:</p>
-<ul>
-<li>ReasonML is a JS-like syntax for the OCaml language</li>
-<li>OCaml has a default syntax (we use this in the Dark repo)</li>
-</ul>
-<p>ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.</p>
-<p>Again, the simplest mental model is that they're all the same.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-refactoring"><span class="arrow-prev">← </span><span>Adding a refactoring</span></a><a class="docs-next button" href="/docs/contributing/general-concepts"><span>General concepts</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ocaml-vs-reasonml-vs-bucklescript">OCaml vs ReasonML vs Bucklescript</a></li><li><a href="#some-simple-ocaml-code">Some simple OCaml code</a></li><li><a href="#what-do-dark-and-ocaml-have-in-common">What do Dark and OCaml have in common?</a><ul class="toc-headings"><li><a href="#syntax">Syntax</a></li><li><a href="#types">Types</a></li><li><a href="#functions">Functions</a></li><li><a href="#standard-library">Standard library</a></li><li><a href="#int">Int</a></li><li><a href="#float">Float</a></li><li><a href="#bool">Bool</a></li><li><a href="#string">String</a></li><li><a href="#list">List</a></li><li><a href="#records">Records</a></li><li><a href="#let">Let</a></li><li><a href="#if">If</a></li></ul></li><li><a href="#stuff-in-ocaml-that-dark-doesnt-have">Stuff in OCaml that Dark doesn't have</a></li><li><a href="#stuff-in-ocaml-we-dont-use-very-much">Stuff in OCaml we don't use very much</a></li><li><a href="#ocaml-vs-reasonml-vs-bucklescript-1">OCaml vs ReasonML vs Bucklescript</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-refactoring"><span class="arrow-prev">← </span><span>Adding a refactoring</span></a><a class="docs-next button" href="/docs/contributing/general-concepts"><span>General concepts</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference">OCaml vs ReasonML vs Bucklescript - what's the difference?</a></li><li><a href="#some-simple-ocaml-code">Some simple OCaml code</a></li><li><a href="#dark-vs-ocaml">Dark vs OCaml</a><ul class="toc-headings"><li><a href="#syntax">Syntax</a></li><li><a href="#types">Types</a></li><li><a href="#functions">Functions</a></li><li><a href="#standard-library">Standard library</a></li><li><a href="#int">Int</a></li><li><a href="#float">Float</a></li><li><a href="#bool">Bool</a></li><li><a href="#string">String</a></li><li><a href="#list">List</a></li><li><a href="#records">Records</a></li><li><a href="#let">Let</a></li><li><a href="#if">If</a></li><li><a href="#operators">Operators</a></li><li><a href="#match">Match</a></li><li><a href="#variants">Variants</a></li><li><a href="#unit">Unit</a></li></ul></li><li><a href="#stuff-in-ocaml-that-dark-doesnt-have">Stuff in OCaml that Dark doesn't have</a></li><li><a href="#stuff-in-ocaml-we-dont-use-very-much">Stuff in OCaml we don't use very much</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
