@@ -492,7 +492,7 @@ let myFunction (regularParamter : int) ~(namedParam : string) : int =
 OCaml also supports optional parameters
 
 ```ocaml
-let myFunction (regularParamter : int) ~(namedParam : string) : int =
+let myFunction ?(optionalParam = 3) (regularParamter : int) : int =
   ...body of function...
 ```
 
