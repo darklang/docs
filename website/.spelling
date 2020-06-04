@@ -11,15 +11,19 @@ Asana
 Bucklescript
 CDN
 CORS
+CRM
 Clojure
 Cloudflare
 CoffeeScript
 Cron
 Crons
 DNS
+EGC
 ErrorRail
 Freshdesk
+GRPC
 GitHub
+GraphQL
 Haskell
 HttpClient
 IFTTT
@@ -46,6 +50,7 @@ UUID
 Vue
 autocomplete
 autocompletes
+backends
 bool
 boolean
 bools
@@ -66,8 +71,11 @@ https
 incomplete
 incompletes
 lifecycle
+meetups
 multiline
 omnibox
+pipelining
+rollout
 subdomain
 subexpression
 subexpressions
@@ -75,6 +83,7 @@ substring
 substrings
 unicode
 versioned
+versioning
 webhook
 webhooks
 

@@ -8,7 +8,7 @@ This section of the documentation is dedicated to step-by-step tutorials and sam
 
 ## Submit Your Own
 
-Have you written a tutorial or sample you'd like to share with the world? We'd love to publish it! Just [submit a PR](https://github.com/darklang/docs/pulls) to our docs Github Repo. Make sure to give yourself credit by including your name and a link of your choice in the page.
+Have you written a tutorial or sample you'd like to share with the world? We'd love to publish it! Just [submit a PR](https://github.com/darklang/docs/pulls) to our docs GitHub Repo. Make sure to give yourself credit by including your name and a link of your choice in the page.
 
 Please note that we will be checking tutorials for basic grammar mistakes and general accuracy. We may ask you to make updates before we accept the submission.
 

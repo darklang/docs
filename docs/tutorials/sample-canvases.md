@@ -62,7 +62,7 @@ For a full Twilio tutorial, click [here](https://www.notion.so/darklang/A-Guide-
 
 [freshdesk](https://darklang.com/a/sample-freshdesk) - examples of common Freshdesk API calls
 
-[github](https://darklang.com/a/sample-github) - examples of common Github API calls
+[github](https://darklang.com/a/sample-github) - examples of common GitHub API calls
 
 [mailchimp](https://darklang.com/a/sample-mailchimp) - sending a Mailchimp campaign
 

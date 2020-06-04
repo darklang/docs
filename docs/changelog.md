@@ -553,7 +553,7 @@ We added a bunch of improved documentation, including:
 ![assets/changelog/image1.gif](assets/changelog/image1.gif)
 
 - Improved [documentation around the Error Rail](https://www.notion.so/darklang/Error-Handling-in-Dark-255f7989a63b4dd49da63cca17ee107e)
-- GitHub API! See our [sample canvas](https://darklang.com/a/sample-github) demonstrating how to call the Github API
+- GitHub API! See our [sample canvas](https://darklang.com/a/sample-github) demonstrating how to call the GitHub API
 - Fixed an issue where deleted from the middle of a concatenated string would cause text to the right of the deletion point to be removed.
 
 ![assets/changelog/image2.gif](assets/changelog/image2.gif)
