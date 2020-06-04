@@ -104,7 +104,7 @@ While you are typing or deleting, you'll often see partially completed expressio
 
 ![Partial](assets/structuredediting/partial_example.png)
 
-The text in red is the partial, and the grey text behind it indicates what was there before. Note that partials evaluate to whatever was there before:
+The text in red is the partial, and the gray text behind it indicates what was there before. Note that partials evaluate to whatever was there before:
 
 ![Partial](assets/structuredediting/partial_almost_filled.png)
 

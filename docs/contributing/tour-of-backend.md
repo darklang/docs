@@ -7,7 +7,7 @@ title: A tour of the Backend
 
 ## Traces
 
-## The journey of a http request
+## The journey of a HTTP request
 
 ## Serialization
 

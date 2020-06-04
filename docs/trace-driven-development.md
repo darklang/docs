@@ -24,7 +24,7 @@ Send requests to Dark _before writing code_. There are several ways to do this:
 
 ![assets/trace/image9.png](assets/trace/image9.png)
 
-You’ll be able to create the endpoint and see the full request (including any query params if you add them - i.e. test?name=ellen). Each request shows up as a trace on the left hand side of the handler as a grey dot, or a white dot when selected.
+You’ll be able to create the endpoint and see the full request (including any query params if you add them - i.e. test?name=ellen). Each request shows up as a trace on the left hand side of the handler as a gray dot, or a white dot when selected.
 
 You can work with the selected trace. In this case, the handler is set to return the "accept" field within the header. If the caret is in the text of “request” you’ll see the full request, in “headers” the full header, and in this case the caret is in "accept," which means we see only that field to the left.
 

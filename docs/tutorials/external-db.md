@@ -34,7 +34,7 @@ If you already have (or otherwise require) an external database, any external da
 
 ## POST a New Record
 
-1. Create your header by doing a `Dict::merge` on `HttpClient::jsonContentType` and a dict comntaining your API Key
+1. Create your header by doing a `Dict::merge` on `HttpClient::jsonContentType` and a dict containing your API Key
 
 2. Write an `HttpClient::post` using your URL, your fields (note: the field names are case sensitive) and your header, and then run it.
 
@@ -46,7 +46,7 @@ If you already have (or otherwise require) an external database, any external da
 
 ## GET All Data
 
-1. Create your header by doing a `Dict::merge` on `HttpClient::jsonContentType` and a dict comntaining your API Key.
+1. Create your header by doing a `Dict::merge` on `HttpClient::jsonContentType` and a dict containing your API Key.
 
 2. Write an `HttpClient::get` using your URL and header, and then run it.
 

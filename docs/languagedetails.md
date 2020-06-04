@@ -19,8 +19,8 @@ It is a high-level language, with immutable values, garbage
 collection, and support for generics/polymorphic types.
 
 Dark is somewhat similar to OCaml or Elm. It has many similarities to Rust and
-Haskell, and is also influenced by Clojure, Ruby, Python, Coffeescript, as well
-as our experience with (alphabetically) Bash, C, Clojure, Coffeescript, C++,
+Haskell, and is also influenced by Clojure, Ruby, Python, CoffeeScript, as well
+as our experience with (alphabetically) Bash, C, Clojure, CoffeeScript, C++,
 Elm, Javascript, Java, Haskell, OCaml, Perl, PHP, Python, ReasonML, Ruby/Rails,
 React, and Rust.
 
@@ -150,7 +150,7 @@ while we build out enough type-system support to allow them to be replaced by
 `Option`.
 
 Null is mostly useful for comparing against incoming JSON and results of
-HTTPClient calls. When returning JSON or making HTTPClient calls, you can use
+HttpClient calls. When returning JSON or making HttpClient calls, you can use
 Options instead and they will be converted properly to `null` in the JSON
 output.
 

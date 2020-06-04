@@ -4,7 +4,7 @@ title: Writing Tests
 sidebar_label: Write Tests
 ---
 
-At the moment, Dark does not provide an out of the box testing framework. However, it's fairly straightforward to write tests using REPLs and crons.
+At the moment, Dark does not provide an out of the box testing framework. However, it's fairly straightforward to write tests using REPLs and Crons.
 
 Let's take a simple example: a character creation process where the creator enters the name of their character and allocates 15 skill points into three possible skills. There are a few constraints:
 

@@ -63,7 +63,7 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our 
 - Made a ton of small fixes to feature flags:
   - The correct docstring now shows when a feature flag is selected
   - Feature flag expressions now show the correct live value
-  - Feature flags are now correctly created after pressing cmd + a to select everything.
+  - Feature flags are now correctly created after pressing `Cmd+a` to select everything.
   - Feature flags no longer incorrectly display the "code was not run executed in this trace" error message.
 - 404s should no longer appear off-screen when added to your canvas.
 - When possible, we now display more information where we were previously showing `<Incomplete>` messages.
@@ -553,12 +553,12 @@ We added a bunch of improved documentation, including:
 ![assets/changelog/image1.gif](assets/changelog/image1.gif)
 
 - Improved [documentation around the Error Rail](https://www.notion.so/darklang/Error-Handling-in-Dark-255f7989a63b4dd49da63cca17ee107e)
-- GitHub API! See our [sample canvas](https://darklang.com/a/sample-github) demonstrating how to call the Github API
+- GitHub API! See our [sample canvas](https://darklang.com/a/sample-github) demonstrating how to call the GitHub API
 - Fixed an issue where deleted from the middle of a concatenated string would cause text to the right of the deletion point to be removed.
 
 ![assets/changelog/image2.gif](assets/changelog/image2.gif)
 
-- We asked y'all to not make HTTPClient calls to your Dark canvas from REPLs. We've made some infrastructural changes that fix the issue on our end, so you should feel free to do that now. This is useful if you want to create a HTTP trace without leaving Dark. (Note: please don't make HTTPClient calls **_to Dark_** from HTTP handlers)
+- We asked y'all to not make HttpClient calls to your Dark canvas from REPLs. We've made some infrastructural changes that fix the issue on our end, so you should feel free to do that now. This is useful if you want to create a HTTP trace without leaving Dark. (Note: please don't make HttpClient calls **_to Dark_** from HTTP handlers)
 
 ## Week of 1/10/2020
 

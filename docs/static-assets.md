@@ -8,7 +8,7 @@ Dark supports hosting your static assets.
 
 Our static assets service is designed to be simple, easy to understand, as well as composable and configurable. As such, a static assets deploy uploads your assets to our cloud CDN, and we provide powerful tools in Dark to serve and configure them.
 
-A [Github Action](https://github.com/marketplace/actions/upload-static-assets-to-dark-canvas) to automate this process is now available thanks to one of our fantastic community members, Greg Brimble!
+A [GitHub Action](https://github.com/marketplace/actions/upload-static-assets-to-dark-canvas) to automate this process is now available thanks to one of our fantastic community members, Greg Brimble!
 
 ## Simple Use Case
 

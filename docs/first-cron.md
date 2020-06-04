@@ -34,7 +34,7 @@ Now that we're storing requests, we can use a scheduled job (a "Cron", named aft
 
 ![assets/gettingstarted/comparison.png](assets/gettingstarted/comparison.png)
 
-7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HTTPClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
+7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HttpClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 

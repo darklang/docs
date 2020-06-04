@@ -68,7 +68,7 @@ Congratulations! You've shipped your first Dark API endpoint.
 
 ## REPL
 
-Here you'll use the IDE to write code that sends an HTTP request. You'll use the HTTPClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).
+Here you'll use the IDE to write code that sends an HTTP request. You'll use the HttpClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).
 
 **Concepts:** REPLs, HttpClient library, Play buttons
 
@@ -77,7 +77,7 @@ way you might write a bash script (reusable tools), use traditional REPLs
 (experiments and one-off commands), or admin dashboards (simple reporting).
 
 We'll run you through creating your first REPL, experimenting with the
-HTTPClient library to make API calls.
+HttpClient library to make API calls.
 
 1. Create a new REPL from the sidebar or the omnibox (`Ctrl-K`/`Cmd-K`).
 
@@ -85,7 +85,7 @@ HTTPClient library to make API calls.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
-This will show you all the standard library functions for HTTPClient, their signatures, and their docstrings.
+This will show you all the standard library functions for HttpClient, their signatures, and their docstrings.
 
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on substrings so getting the exact text isn't important:
 
@@ -95,7 +95,7 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post` requires (URI, body, query, and headers). We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
+Dark automatically creates blanks for the four arguments that `HttpClient::post` requires (URI, body, query, and headers). We display a gray play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
 
 The URI is the destination of our HTTP request (an API endpoint). We could make a request to any web server; for this tutorial, we'll make a request to the canvas we're working in. We haven't yet written the code that will respond to the request; you'll see what happens when the canvas receives a request without a prepared endpoint. The canvas will respond with a 404 "page not found" response.
 
@@ -198,7 +198,7 @@ Dark's datastores are key-value stores; each record has a unique key that is use
 
 Now that we're storing requests, we can use a scheduled job (a "Cron", named after the Unix cron utility) to create a report of all requests per day.
 
-1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.
+1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name `DailyReport`.
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 
@@ -227,7 +227,7 @@ Now that we're storing requests, we can use a scheduled job (a "Cron", named aft
 
 ![assets/gettingstarted/comparison.png](assets/gettingstarted/comparison.png)
 
-7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HTTPClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
+7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HttpClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 
@@ -249,7 +249,7 @@ If we were doing this for real, we might send the data to a 3rd party API over H
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/newworker.png)
 
-2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and reaggregate them.
+2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and re-aggregate them.
 
 ![assets/gettingstarted/humandate.png](assets/gettingstarted/humandate.png)
 
@@ -326,7 +326,7 @@ called.
 
 ## External API Call
 
-Dark has built-in standard libraries for working with external HTTP Calls (`HTTP` and `HTTPClient`). This allows you to work with any external REST APIs.
+Dark has built-in standard libraries for working with external HTTP Calls (`HTTP` and `HttpClient`). This allows you to work with any external REST APIs.
 
 In this Tutorial, we'll send the Daily Report we created to Airtable, so other team members can see it.
 
@@ -340,15 +340,15 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 - Airtable's full API documentation for your base will be available on the [API page](https://airtable.com/api). Within this page, go to Create Records in the left hand navigation to copy the URI from the right hand side.
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_url.png)
 
-2. Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
+2. Add the HTTP POST call to the `storeReport` worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
 
-3. The `HTTPClient::post` function takes four arguments. Paste the URI from Airtable from the base into the first argument.
+3. The `HttpClient::post` function takes four arguments. Paste the URI from Airtable from the base into the first argument.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_httpclientpost.png)
 
-4. Above `HTTPClient::post` declare a new variable, `airtable_header`. Use the `HTTPClient::bearerToken` and pass your API key function as the argument. Then, pipe `|>` into `Dict::merge` and merge with `HTTPClient::jsonContentType`. The `airtable_header` will now be a nicely formatted header for the Airtable API.
+4. Above `HttpClient::post` declare a new variable, `airtable_header`. Use the `HttpClient::bearerToken` and pass your API key function as the argument. Then, pipe `|>` into `Dict::merge` and merge with `HttpClient::jsonContentType`. The `airtable_header` will now be a nicely formatted header for the Airtable API.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_header.png)
 
@@ -359,7 +359,7 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_body.png)
 
-7. Run the API request in the editor by hitting the play button next to `HTTPClient::post`. If the request is successful, a success will be returned and you'll see the record in your Airtable base.
+7. Run the API request in the editor by hitting the play button next to `HttpClient::post`. If the request is successful, a success will be returned and you'll see the record in your Airtable base.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_success.png)
 
@@ -373,11 +373,11 @@ If the request is not successful, the error message will be displayed in line, a
 
 Try it out:
 
-- Change your REPL to say "test3" instead of "test1" and then re-run the request by hitting the play button.
+- Change your REPL to say `"test3"` instead of `"test1"` and then re-run the request by hitting the play button.
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
 
-- A new trace dot will appear on the HTTP Post `/test` handler. It shows "test6" in the body of the request.
+- A new trace dot will appear on the HTTP Post `/test` handler. It shows `"test6"` in the body of the request.
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
 
@@ -393,8 +393,8 @@ things.
 2. Add logic to your cron that will skip days that have no entries.
 
 If you want to do the latter, make the adjustment to the cron process by adding
-the last 6 lines: assigning the length of todayRequests and then conditionally
-emitting todayRequests to the StoreReport worker or not.
+the last 6 lines: assigning the length of `todayRequests` and then conditionally
+emitting `todayRequests` to the `StoreReport` worker or not.
 
 ![assets/gettingstarted/airtable_skip_cron.png](assets/gettingstarted/airtable_skip_cron.png)
 

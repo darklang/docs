@@ -222,7 +222,7 @@ We go back to our /visit endpoint to add the Slack worker. We can even copy most
 
 For this, we’ll be using Slack’s [chat.postMessage API method](https://api.slack.com/methods/chat.postMessage), which requires the method URL: [https://slack.com/api/chat.postMessage](https://slack.com/api/chat.postMessage) and pass a header with a content type and a token.
 
-There are built in methods for formatting headers in the HTTPClient library.
+There are built in methods for formatting headers in the HttpClient library.
 
 ![assets/reactspa/image31.png](assets/reactspa/image31.png)
 

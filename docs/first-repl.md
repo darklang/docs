@@ -10,7 +10,7 @@ way you might write a bash script (reusable tools), use traditional REPLs
 (experiments and one-off commands), or admin dashboards (simple reporting).
 
 We'll run you through creating your first REPL, experimenting with the
-HTTPClient library to make API calls.
+HttpClient library to make API calls.
 
 1. Create a new REPL from the sidebar or the omnibox (`Ctrl-K`/`Cmd-K`).
 
@@ -18,7 +18,7 @@ HTTPClient library to make API calls.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
-This will show you all the standard library functions for HTTPClient, their signatures, and their docstrings.
+This will show you all the standard library functions for HttpClient, their signatures, and their docstrings.
 
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on substrings so getting the exact text isn't important:
 
@@ -28,7 +28,7 @@ This will show you all the standard library functions for HTTPClient, their sign
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post` requires. We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
+Dark automatically creates blanks for the four arguments that `HttpClient::post` requires. We display a gray play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
 
 5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`.
 
