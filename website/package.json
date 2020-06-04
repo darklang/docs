@@ -11,12 +11,14 @@
     "format": "prettier --write ../docs/*.md",
     "format-js": "prettier --write pages/**/*.js",
     "format-css": "prettier --write static/css/*.css",
-    "check-format": "prettier --check ../docs/*.md"
+    "check-format": "prettier --check ../docs/*.md",
+    "check-spelling": "mdspell --report --en-us -n \"../docs/**/*.md\""
   },
   "devDependencies": {
     "docusaurus": "^1.14.4",
     "markdownlint-cli": "^0.22.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "markdown-spellcheck": "1.3.1"
   },
   "dependencies": {
     "yarn": "^1.22.4",
