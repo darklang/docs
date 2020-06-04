@@ -110,19 +110,19 @@ and we'll come back to them later.</li>
 </ol>
 <p>Congratulations! You've shipped your first Dark API endpoint.</p>
 <h2><a class="anchor" aria-hidden="true" id="repl"></a><a href="#repl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REPL</h2>
-<p>Here you'll use the IDE to write code that sends an HTTP request. You'll use the HTTPClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).</p>
+<p>Here you'll use the IDE to write code that sends an HTTP request. You'll use the HttpClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).</p>
 <p><strong>Concepts:</strong> REPLs, HttpClient library, Play buttons</p>
 <p>REPLs in Dark are general-purpose coding blocks. They're typically used in the
 way you might write a bash script (reusable tools), use traditional REPLs
 (experiments and one-off commands), or admin dashboards (simple reporting).</p>
 <p>We'll run you through creating your first REPL, experimenting with the
-HTTPClient library to make API calls.</p>
+HttpClient library to make API calls.</p>
 <ol>
 <li><p>Create a new REPL from the sidebar or the omnibox (<code>Ctrl-K</code>/<code>Cmd-K</code>).</p></li>
 <li><p>Type &quot;httpclient&quot; in the REPL (lowercase, no spaces)</p></li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png"></p>
-<p>This will show you all the standard library functions for HTTPClient, their signatures, and their docstrings.</p>
+<p>This will show you all the standard library functions for HttpClient, their signatures, and their docstrings.</p>
 <ol start="3">
 <li>Continue typing, until you have &quot;httpclientpost&quot;. Dark autocompletes on substrings so getting the exact text isn't important:</li>
 </ol>
@@ -131,7 +131,7 @@ HTTPClient library to make API calls.</p>
 <li>Hit enter to add the function into the handler.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png"></p>
-<p>Dark automatically creates blanks for the four arguments that <code>HttpClient::post</code> requires (URI, body, query, and headers). We display a grey play button beside the function – it will turn green when all the arguments are complete, allowing you to run the function from within the editor.</p>
+<p>Dark automatically creates blanks for the four arguments that <code>HttpClient::post</code> requires (URI, body, query, and headers). We display a gray play button beside the function – it will turn green when all the arguments are complete, allowing you to run the function from within the editor.</p>
 <p>The URI is the destination of our HTTP request (an API endpoint). We could make a request to any web server; for this tutorial, we'll make a request to the canvas we're working in. We haven't yet written the code that will respond to the request; you'll see what happens when the canvas receives a request without a prepared endpoint. The canvas will respond with a 404 &quot;page not found&quot; response.</p>
 <ol start="5">
 <li>Let's call a new <code>/test</code> endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like <code>&quot;https://USERNAME-gettingstarted.builtwithdark.com/test&quot;</code>. Be sure that you've substituted your username correctly. Also be sure you are using the correct canvas name (for example, if you send the request to &quot;mygettingstarted&quot; or &quot;getingstarted&quot; the wrong canvas will respond and you will not see the 404 result).</li>
@@ -223,7 +223,7 @@ HTTPClient library to make API calls.</p>
 <h2><a class="anchor" aria-hidden="true" id="cron"></a><a href="#cron" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cron</h2>
 <p>Now that we're storing requests, we can use a scheduled job (a &quot;Cron&quot;, named after the Unix cron utility) to create a report of all requests per day.</p>
 <ol>
-<li>Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.</li>
+<li>Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name <code>DailyReport</code>.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/crondaily.png" alt="assets/gettingstarted/crondaily.png"></p>
 <ol start="2">
@@ -251,7 +251,7 @@ create a pipe, type <code>|&gt;</code> after the <code>Date::now</code> function
 </ol>
 <p><img src="/docs/assets/gettingstarted/comparison.png" alt="assets/gettingstarted/comparison.png"></p>
 <ol start="7">
-<li>To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the <code>HTTPClient::post</code> function from the REPL. Then, when you place your cursor in <code>todayRequests</code> or <code>List::filter</code> you'll see a list of requests from the last 24 hours.</li>
+<li>To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the <code>HttpClient::post</code> function from the REPL. Then, when you place your cursor in <code>todayRequests</code> or <code>List::filter</code> you'll see a list of requests from the last 24 hours.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/todayrequest.png" alt="assets/gettingstarted/todayrequest.png"></p>
 <ol start="8">
@@ -271,7 +271,7 @@ don't want to handle in HTTP requests.</p>
 </ol>
 <p><img src="/docs/assets/gettingstarted/newworker.png" alt="assets/gettingstarted/newworker.png"></p>
 <ol start="2">
-<li>For the report, we're going to store our data by human readable dates (like <code>02-27-2020</code>). First, we'll get the current date, and then get the pieces and reaggregate them.</li>
+<li>For the report, we're going to store our data by human readable dates (like <code>02-27-2020</code>). First, we'll get the current date, and then get the pieces and re-aggregate them.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/humandate.png" alt="assets/gettingstarted/humandate.png"></p>
 <ol start="3">
@@ -340,7 +340,7 @@ the daily reports.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/functioncall.png" alt="assets/gettingstarted/newworker.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="external-api-call"></a><a href="#external-api-call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>External API Call</h2>
-<p>Dark has built-in standard libraries for working with external HTTP Calls (<code>HTTP</code> and <code>HTTPClient</code>). This allows you to work with any external REST APIs.</p>
+<p>Dark has built-in standard libraries for working with external HTTP Calls (<code>HTTP</code> and <code>HttpClient</code>). This allows you to work with any external REST APIs.</p>
 <p>In this Tutorial, we'll send the Daily Report we created to Airtable, so other team members can see it.</p>
 <ol>
 <li>Set up Airtable (~10 minutes).</li>
@@ -355,15 +355,15 @@ the daily reports.</li>
 <img src="/docs/assets/gettingstarted/airtable_url.png" alt="assets/gettingstarted/newworker.png"></li>
 </ul>
 <ol start="2">
-<li>Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit <code>return</code> after the <code>Db::set</code> function. <code>DB::set</code> will still run as a side effect, and we can add the new function.</li>
+<li>Add the HTTP POST call to the <code>storeReport</code> worker so it will run asynchronously. Hit <code>return</code> after the <code>Db::set</code> function. <code>DB::set</code> will still run as a side effect, and we can add the new function.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/apiworker_newline.png" alt="assets/gettingstarted/newworker.png"></p>
 <ol start="3">
-<li>The <code>HTTPClient::post</code> function takes four arguments. Paste the URI from Airtable from the base into the first argument.</li>
+<li>The <code>HttpClient::post</code> function takes four arguments. Paste the URI from Airtable from the base into the first argument.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/api_httpclientpost.png" alt="assets/gettingstarted/newworker.png"></p>
 <ol start="4">
-<li>Above <code>HTTPClient::post</code> declare a new variable, <code>airtable_header</code>. Use the <code>HTTPClient::bearerToken</code> and pass your API key function as the argument. Then, pipe <code>|&gt;</code> into <code>Dict::merge</code> and merge with <code>HTTPClient::jsonContentType</code>. The <code>airtable_header</code> will now be a nicely formatted header for the Airtable API.</li>
+<li>Above <code>HttpClient::post</code> declare a new variable, <code>airtable_header</code>. Use the <code>HttpClient::bearerToken</code> and pass your API key function as the argument. Then, pipe <code>|&gt;</code> into <code>Dict::merge</code> and merge with <code>HttpClient::jsonContentType</code>. The <code>airtable_header</code> will now be a nicely formatted header for the Airtable API.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/api_header.png" alt="assets/gettingstarted/newworker.png"></p>
 <ol start="5">
@@ -373,7 +373,7 @@ the daily reports.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/api_body.png" alt="assets/gettingstarted/newworker.png"></p>
 <ol start="7">
-<li>Run the API request in the editor by hitting the play button next to <code>HTTPClient::post</code>. If the request is successful, a success will be returned and you'll see the record in your Airtable base.</li>
+<li>Run the API request in the editor by hitting the play button next to <code>HttpClient::post</code>. If the request is successful, a success will be returned and you'll see the record in your Airtable base.</li>
 </ol>
 <p><img src="/docs/assets/gettingstarted/api_success.png" alt="assets/gettingstarted/newworker.png"></p>
 <p>If the request is not successful, the error message will be displayed in line, and you'll see the <code>Error</code> on the error rail. In this case, the format of the date passed did not expect what Airtable expected.</p>
@@ -384,9 +384,9 @@ the daily reports.</li>
 <h2><a class="anchor" aria-hidden="true" id="finishing-touches"></a><a href="#finishing-touches" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finishing Touches</h2>
 <p>Try it out:</p>
 <ul>
-<li><p>Change your REPL to say &quot;test3&quot; instead of &quot;test1&quot; and then re-run the request by hitting the play button.</p>
+<li><p>Change your REPL to say <code>&quot;test3&quot;</code> instead of <code>&quot;test1&quot;</code> and then re-run the request by hitting the play button.</p>
 <p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png"></p></li>
-<li><p>A new trace dot will appear on the HTTP Post <code>/test</code> handler. It shows &quot;test6&quot; in the body of the request.</p>
+<li><p>A new trace dot will appear on the HTTP Post <code>/test</code> handler. It shows <code>&quot;test6&quot;</code> in the body of the request.</p>
 <p><img src="/docs/assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png" alt="assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png"></p></li>
 <li><p>The new request will be in the Datastore, and if you open your reports endpoint tomorrow, you'll see a log of all the new requests, as well as updates to your Airtable base.</p></li>
 </ul>
@@ -399,8 +399,8 @@ things.</p>
 <li>Add logic to your cron that will skip days that have no entries.</li>
 </ol>
 <p>If you want to do the latter, make the adjustment to the cron process by adding
-the last 6 lines: assigning the length of todayRequests and then conditionally
-emitting todayRequests to the StoreReport worker or not.</p>
+the last 6 lines: assigning the length of <code>todayRequests</code> and then conditionally
+emitting <code>todayRequests</code> to the <code>StoreReport</code> worker or not.</p>
 <p><img src="/docs/assets/gettingstarted/airtable_skip_cron.png" alt="assets/gettingstarted/airtable_skip_cron.png"></p>
 <p>Congratulations! You now have your first Dark application: an API that stores requests into a datastore, creates a daily report of those requests, and sends the report to Airtable.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/introduction"><span class="arrow-prev">← </span><span>Hello World!</span></a><a class="docs-next button" href="/docs/from-python"><span>From Python</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#your-first-app">Your First App</a><ul class="toc-headings"><li><a href="#support">Support</a></li></ul></li><li><a href="#your-canvas">Your Canvas</a></li><li><a href="#api-endpoint">API Endpoint</a></li><li><a href="#repl">REPL</a></li><li><a href="#datastore">Datastore</a></li><li><a href="#cron">Cron</a></li><li><a href="#worker">Worker</a></li><li><a href="#function">Function</a></li><li><a href="#external-api-call">External API Call</a></li><li><a href="#finishing-touches">Finishing Touches</a></li><li><a href="#one-last-thing">One Last Thing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>

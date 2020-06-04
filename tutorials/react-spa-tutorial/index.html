@@ -176,7 +176,7 @@ npm run get-dark-cli
 <p>We go back to our /visit endpoint to add the Slack worker. We can even copy most of the code from the beginning of the Twilio handler to get our slackid.</p>
 <p><img src="/docs/assets/reactspa/image8.png" alt="assets/reactspa/image8.png"></p>
 <p>For this, we’ll be using Slack’s <a href="https://api.slack.com/methods/chat.postMessage">chat.postMessage API method</a>, which requires the method URL: <a href="https://slack.com/api/chat.postMessage">https://slack.com/api/chat.postMessage</a> and pass a header with a content type and a token.</p>
-<p>There are built in methods for formatting headers in the HTTPClient library.</p>
+<p>There are built in methods for formatting headers in the HttpClient library.</p>
 <p><img src="/docs/assets/reactspa/image31.png" alt="assets/reactspa/image31.png"></p>
 <p>Finally, we have to make the post request, which takes four parameters, including a body.</p>
 <p><img src="/docs/assets/reactspa/image25.png" alt="assets/reactspa/image25.png"></p>
