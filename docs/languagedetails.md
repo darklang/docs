@@ -19,8 +19,8 @@ It is a high-level language, with immutable values, garbage
 collection, and support for generics/polymorphic types.
 
 Dark is somewhat similar to OCaml or Elm. It has many similarities to Rust and
-Haskell, and is also influenced by Clojure, Ruby, Python, Coffeescript, as well
-as our experience with (alphabetically) Bash, C, Clojure, Coffeescript, C++,
+Haskell, and is also influenced by Clojure, Ruby, Python, CoffeeScript, as well
+as our experience with (alphabetically) Bash, C, Clojure, CoffeeScript, C++,
 Elm, Javascript, Java, Haskell, OCaml, Perl, PHP, Python, ReasonML, Ruby/Rails,
 React, and Rust.
 

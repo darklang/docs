@@ -28,7 +28,7 @@ This will show you all the standard library functions for HttpClient, their sign
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post` requires. We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
+Dark automatically creates blanks for the four arguments that `HttpClient::post` requires. We display a gray play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
 
 5. Let's call a new `/test` endpoint for the application we're developing. As we saw from the GET, our endpoints live at USERNAME-gettingstarted.builtwithdark.com, so enter a string like `"https://USERNAME-gettingstarted.builtwithdark.com/test"`.
 

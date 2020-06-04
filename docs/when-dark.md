@@ -30,7 +30,7 @@ Dark has collaboration, but it doesn't scale particularly well yet. People have 
 
 We recently released our package manager, but currently only Dark employees can add packages. Right now, you can use 3rdparty APIs directly using the HttpClient module. We are working to allow user-contributed packages, which should significantly increase the number of 3rd party APIs that we directly support (such as Stripe, Twitter, Twilio, GitHub, etc), and expect to support them in Q3 2020.
 
-All of our packages are currently built on JSON/HTTP, and so we do not yet support Thrift, GRPC, or Graphql. We expect to support these in the future.
+All of our packages are currently built on JSON/HTTP, and so we do not yet support Thrift, GRPC, or GraphQL. We expect to support these in the future.
 
 ## Incomplete language
 

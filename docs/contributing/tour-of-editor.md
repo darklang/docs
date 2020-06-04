@@ -33,7 +33,7 @@ This is how Elm architectures typically work. Our app mostly works like this, bu
 - we do sometimes directly read from the DOM or other global state (like the random number generator or the History API)
 
 And there are some downsides to our app as well:
-- Main.ml is a mess
+- `Main.ml` is a mess
 - modifications were a bad idea
 - a single change can be spread far across the codebase
 

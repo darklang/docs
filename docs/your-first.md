@@ -95,7 +95,7 @@ This will show you all the standard library functions for HttpClient, their sign
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post` requires (URI, body, query, and headers). We display a grey play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
+Dark automatically creates blanks for the four arguments that `HttpClient::post` requires (URI, body, query, and headers). We display a gray play button beside the function &ndash; it will turn green when all the arguments are complete, allowing you to run the function from within the editor.
 
 The URI is the destination of our HTTP request (an API endpoint). We could make a request to any web server; for this tutorial, we'll make a request to the canvas we're working in. We haven't yet written the code that will respond to the request; you'll see what happens when the canvas receives a request without a prepared endpoint. The canvas will respond with a 404 "page not found" response.
 
