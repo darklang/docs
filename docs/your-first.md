@@ -68,7 +68,7 @@ Congratulations! You've shipped your first Dark API endpoint.
 
 ## REPL
 
-Here you'll use the IDE to write code that sends an HTTP request. You'll use the HTTPClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).
+Here you'll use the IDE to write code that sends an HTTP request. You'll use the HttpClient library to make an API call from an interactive interpreter (often called a REPL or Read-Eval-Print Loop).
 
 **Concepts:** REPLs, HttpClient library, Play buttons
 
@@ -77,7 +77,7 @@ way you might write a bash script (reusable tools), use traditional REPLs
 (experiments and one-off commands), or admin dashboards (simple reporting).
 
 We'll run you through creating your first REPL, experimenting with the
-HTTPClient library to make API calls.
+HttpClient library to make API calls.
 
 1. Create a new REPL from the sidebar or the omnibox (`Ctrl-K`/`Cmd-K`).
 
@@ -85,7 +85,7 @@ HTTPClient library to make API calls.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
-This will show you all the standard library functions for HTTPClient, their signatures, and their docstrings.
+This will show you all the standard library functions for HttpClient, their signatures, and their docstrings.
 
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on substrings so getting the exact text isn't important:
 
@@ -227,7 +227,7 @@ Now that we're storing requests, we can use a scheduled job (a "Cron", named aft
 
 ![assets/gettingstarted/comparison.png](assets/gettingstarted/comparison.png)
 
-7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HTTPClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
+7. To see this work, it's helpful to have a recent request. If you paused in the tutorial, re-run the `HttpClient::post` function from the REPL. Then, when you place your cursor in `todayRequests` or `List::filter` you'll see a list of requests from the last 24 hours.
 
 ![assets/gettingstarted/todayrequest.png](assets/gettingstarted/todayrequest.png)
 
@@ -326,7 +326,7 @@ called.
 
 ## External API Call
 
-Dark has built-in standard libraries for working with external HTTP Calls (`HTTP` and `HTTPClient`). This allows you to work with any external REST APIs.
+Dark has built-in standard libraries for working with external HTTP Calls (`HTTP` and `HttpClient`). This allows you to work with any external REST APIs.
 
 In this Tutorial, we'll send the Daily Report we created to Airtable, so other team members can see it.
 
@@ -344,11 +344,11 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
 
-3. The `HTTPClient::post` function takes four arguments. Paste the URI from Airtable from the base into the first argument.
+3. The `HttpClient::post` function takes four arguments. Paste the URI from Airtable from the base into the first argument.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_httpclientpost.png)
 
-4. Above `HTTPClient::post` declare a new variable, `airtable_header`. Use the `HTTPClient::bearerToken` and pass your API key function as the argument. Then, pipe `|>` into `Dict::merge` and merge with `HTTPClient::jsonContentType`. The `airtable_header` will now be a nicely formatted header for the Airtable API.
+4. Above `HttpClient::post` declare a new variable, `airtable_header`. Use the `HttpClient::bearerToken` and pass your API key function as the argument. Then, pipe `|>` into `Dict::merge` and merge with `HttpClient::jsonContentType`. The `airtable_header` will now be a nicely formatted header for the Airtable API.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_header.png)
 
@@ -359,7 +359,7 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_body.png)
 
-7. Run the API request in the editor by hitting the play button next to `HTTPClient::post`. If the request is successful, a success will be returned and you'll see the record in your Airtable base.
+7. Run the API request in the editor by hitting the play button next to `HttpClient::post`. If the request is successful, a success will be returned and you'll see the record in your Airtable base.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/api_success.png)
 

@@ -29,7 +29,7 @@ You can see that many standard library items are labeled “`v3`” or “`v1`�
 
 ## Functions that use Error Rail
 
-Functions that return Result or Option Types (like `DB::get` and `HTTPClient::get`) are handled by the Error Rail by default. The documentation in the editor indicates if this is the case for a given function.
+Functions that return Result or Option Types (like `DB::get` and `HttpClient::get`) are handled by the Error Rail by default. The documentation in the editor indicates if this is the case for a given function.
 
 The error rail allows you to keep writing code along the “happy path,” without stopping. This is based on [Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a). The idea is that when you call a function which might not succeed, you can keep going. For example, if you try to look up a value in a dictionary or database, we don't make you immediately handle the error case.
 

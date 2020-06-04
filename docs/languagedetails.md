@@ -150,7 +150,7 @@ while we build out enough type-system support to allow them to be replaced by
 `Option`.
 
 Null is mostly useful for comparing against incoming JSON and results of
-HTTPClient calls. When returning JSON or making HTTPClient calls, you can use
+HttpClient calls. When returning JSON or making HttpClient calls, you can use
 Options instead and they will be converted properly to `null` in the JSON
 output.
 
