@@ -198,7 +198,7 @@ Dark's datastores are key-value stores; each record has a unique key that is use
 
 Now that we're storing requests, we can use a scheduled job (a "Cron", named after the Unix cron utility) to create a report of all requests per day.
 
-1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.
+1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name `DailyReport`.
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 
@@ -249,7 +249,7 @@ If we were doing this for real, we might send the data to a 3rd party API over H
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/newworker.png)
 
-2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and reaggregate them.
+2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and re-aggregate them.
 
 ![assets/gettingstarted/humandate.png](assets/gettingstarted/humandate.png)
 
@@ -340,7 +340,7 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 - Airtable's full API documentation for your base will be available on the [API page](https://airtable.com/api). Within this page, go to Create Records in the left hand navigation to copy the URI from the right hand side.
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_url.png)
 
-2. Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
+2. Add the HTTP POST call to the `storeReport` worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
 
@@ -373,11 +373,11 @@ If the request is not successful, the error message will be displayed in line, a
 
 Try it out:
 
-- Change your REPL to say "test3" instead of "test1" and then re-run the request by hitting the play button.
+- Change your REPL to say `"test3"` instead of `"test1"` and then re-run the request by hitting the play button.
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
 
-- A new trace dot will appear on the HTTP Post `/test` handler. It shows "test6" in the body of the request.
+- A new trace dot will appear on the HTTP Post `/test` handler. It shows `"test6"` in the body of the request.
 
   ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
 
@@ -393,8 +393,8 @@ things.
 2. Add logic to your cron that will skip days that have no entries.
 
 If you want to do the latter, make the adjustment to the cron process by adding
-the last 6 lines: assigning the length of todayRequests and then conditionally
-emitting todayRequests to the StoreReport worker or not.
+the last 6 lines: assigning the length of `todayRequests` and then conditionally
+emitting `todayRequests` to the `StoreReport` worker or not.
 
 ![assets/gettingstarted/airtable_skip_cron.png](assets/gettingstarted/airtable_skip_cron.png)
 

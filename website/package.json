@@ -12,7 +12,7 @@
     "format-js": "prettier --write pages/**/*.js",
     "format-css": "prettier --write static/css/*.css",
     "check-format": "prettier --check ../docs/*.md",
-    "check-spelling": "mdspell --report --en-us -n \"../docs/**/*.md\""
+    "check-spelling": "mdspell --report --en-us -n \"../docs/your-first.md\""
   },
   "devDependencies": {
     "docusaurus": "^1.14.4",
