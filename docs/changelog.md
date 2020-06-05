@@ -15,24 +15,24 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - We've updated some tips and error messages.
   - On 404s
 
-        ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
+  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
 
   - On functions that have not yet been run
 
-        ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png)
+  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png)
 
   - When attempting field access on a datastore
 
-        ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png)
+![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png)
 
 - If you attempt to access Dark via a browser other than Chrome we now link you to our [experimental desktop client](http://darklang.com/desktop-client).
 - Variables can now be converted to lists by pressing `[` ([Jelle Besseling](https://github.com/pingiun))
 
-    ![assets/changelog/June5/2020-06-05_14.19.05.gif](assets/changelog/June5/2020-06-05_14.19.05.gif)
+![assets/changelog/June5/2020-06-05_14.19.05.gif](assets/changelog/June5/2020-06-05_14.19.05.gif)
 
 - Added a `convert-if-to-match` option to the command palette ([Jelle Besseling](https://github.com/pingiun))
 
-    ![assets/changelog/June5/2020-06-05_14.21.05.gif](assets/changelog/June5/2020-06-05_14.21.05.gif)
+![assets/changelog/June5/2020-06-05_14.21.05.gif](assets/changelog/June5/2020-06-05_14.21.05.gif)
 
 - References are now shown in the order in which they appear ([Jelle Besseling](https://github.com/pingiun))
 - `String::trim` functions are now supported in the query compiler ([David Cooley](https://github.com/cooleydw494))
