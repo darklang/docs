@@ -51,7 +51,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - `DB::getExisting` ([Caleb H](https://github.com/naclcaleb))
   - `String::prepend` ([Brandon Hamilton](https://github.com/brandonhamilton))
 
-### Internal contributions
+### External contributions
 
 We have started taking external contributions, thanks so much to all the folks who contributed. In addition to the user facing changes above, contributors also added:
 
