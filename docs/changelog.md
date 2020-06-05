@@ -6,6 +6,65 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Week of 6/9/2020
+
+- Function references now appear when you're using a [package manager](https://darklang.github.io/docs/packages) function.
+
+![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png)
+
+- We've updated some tips and error messages.
+
+  - On 404s
+
+  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
+
+  - On functions that have not yet been run
+
+  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png)
+
+  - When attempting field access on a datastore
+
+![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png)
+
+- If you attempt to access Dark via a browser other than Chrome we now link you to our [experimental desktop client](http://darklang.com/desktop-client).
+- Variables can now be converted to lists by pressing `[` ([Jelle Besseling](https://github.com/pingiun))
+
+![assets/changelog/June5/2020-06-05_14.19.05.gif](assets/changelog/June5/2020-06-05_14.19.05.gif)
+
+- Added a `convert-if-to-match` option to the command palette ([Jelle Besseling](https://github.com/pingiun))
+
+![assets/changelog/June5/2020-06-05_14.21.05.gif](assets/changelog/June5/2020-06-05_14.21.05.gif)
+
+- References are now shown in the order in which they appear ([Jelle Besseling](https://github.com/pingiun))
+- `String::trim` functions are now supported in the query compiler ([David Cooley](https://github.com/cooleydw494))
+- `DB::getMany` now returns an `Option` ([Caleb H](https://github.com/naclcaleb))
+- Added font-ligature for lambas ([Daniel Sokil](https://github.com/s0kil))
+- Copy to cURL now uses single quotes instead of double quotes ([Jelle Besseling](https://github.com/pingiun))
+
+### Standard library
+
+- Standard library functions added:
+  - `Crypto::md5` ([Jelle Besseling](https://github.com/pingiun))
+  - `List::member` ([Christopher Brandt](https://github.com/xtopherbrandt))
+  - `List::takeWhile` ([Jelle Besseling](https://github.com/pingiun))
+  - `DB::queryCount` ([Brandon Hamilton](https://github.com/brandonhamilton))
+  - `DB::getExisting` ([Caleb H](https://github.com/naclcaleb))
+  - `String::prepend` ([Brandon Hamilton](https://github.com/brandonhamilton))
+
+### Internal contributions
+
+We have started taking external contributions, thanks so much to all the folks who contributed. In addition to the user facing changes above, contributors also added:
+
+- Switched the Dark repo from using `yarn` to `npm` ([Shahriyar Nasir](https://github.com/snasirca))
+- Updated Linux defaults to make it easier for Linux users to compile and rebuild Dark ([Grzegorz Gajos](https://github.com/ggajos))
+- Added tests ([Felipe Milani](https://github.com/fmilani), [David Cooley](https://github.com/cooleydw494), [Jesse Besseling](https://github.com/pingiun), [Justus Moeller](https://github.com/JustusMoeller), [Christopher Brandt](https://github.com/xtopherbrandt), [Aash Anand](https://github.com/aashanand))
+- Made documentation fixes ([Daniel Afonso](https://github.com/danieljcafonso), [Jesse Besseling](https://github.com/pingiun))
+
+### Documentation
+
+- Added a guide to help contributors with [writing code in OCaml](https://darklang.github.io/docs/contributing/ocaml-for-dark-developers)
+- Added a tutorial around writing [clean error messages using the error rail](https://darklang.github.io/docs/tutorials/error-rail-http-tutorial)
+
 ## Week of 5/29/2020
 
 - It's now possible to set a return type for functions. The return type will appear in the autocomplete and type errors will be displayed when necessary, making it easier to know that your functions work, and making it easier to use and understand functions. This means that your functions can also now use the Error Rail, if you set their return type to Result or Option.
