@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-## Week of 6/9/2020
+## Week of 6/5/2020
 
 - Function references now appear when you're using a [package manager](https://darklang.github.io/docs/packages) function.
 
