@@ -13,6 +13,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png)
 
 - We've updated some tips and error messages.
+
   - On 404s
 
   ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
@@ -54,7 +55,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
 We have started taking external contributions, thanks so much to all the folks who contributed. In addition to the user facing changes above, contributors also added:
 
-- Switched the Dark repo from using `yarn` to `npm`  ([Shahriyar Nasir](https://github.com/snasirca))
+- Switched the Dark repo from using `yarn` to `npm` ([Shahriyar Nasir](https://github.com/snasirca))
 - Updated Linux defaults to make it easier for Linux users to compile and rebuild Dark ([Grzegorz Gajos](https://github.com/ggajos))
 - Added tests ([Felipe Milani](https://github.com/fmilani), [David Cooley](https://github.com/cooleydw494), [Jesse Besseling](https://github.com/pingiun), [Justus Moeller](https://github.com/JustusMoeller), [Christopher Brandt](https://github.com/xtopherbrandt), [Aash Anand](https://github.com/aashanand))
 - Made documentation fixes ([Daniel Afonso](https://github.com/danieljcafonso), [Jesse Besseling](https://github.com/pingiun))
