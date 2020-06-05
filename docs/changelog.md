@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-# Week of 6/9/2020
+## Week of 6/9/2020
 
 - Function references now appear when you're using a [package manager](https://darklang.github.io/docs/packages) function.
 
@@ -40,7 +40,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - Added font-ligature for lambas ([Daniel Sokil](https://github.com/s0kil))
 - Copy to cURL now uses single quotes instead of double quotes ([Jelle Besseling](https://github.com/pingiun))
 
-## Standard library
+### Standard library
 
 - Standard library functions added:
   - `Crypto::md5` ([Jelle Besseling](https://github.com/pingiun))
@@ -50,7 +50,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - `DB::getExisting` ([Caleb H](https://github.com/naclcaleb))
   - `String::prepend` ([Brandon Hamilton](https://github.com/brandonhamilton))
 
-## Internal contributions
+### Internal contributions
 
 We have started taking external contributions, thanks so much to all the folks who contributed. In addition to the user facing changes above, contributors also added:
 
@@ -59,7 +59,7 @@ We have started taking external contributions, thanks so much to all the folks w
 - Added tests ([Felipe Milani](https://github.com/fmilani), [David Cooley](https://github.com/cooleydw494), [Jesse Besseling](https://github.com/pingiun), [Justus Moeller](https://github.com/JustusMoeller), [Christopher Brandt](https://github.com/xtopherbrandt), [Aash Anand](https://github.com/aashanand))
 - Made documentation fixes ([Daniel Afonso](https://github.com/danieljcafonso), [Jesse Besseling](https://github.com/pingiun))
 
-## Documentation
+### Documentation
 
 - Added a guide to help contributors with [writing code in OCaml](https://darklang.github.io/docs/contributing/ocaml-for-dark-developers)
 - Added a tutorial around writing [clean error messages using the error rail](https://darklang.github.io/docs/tutorials/error-rail-http-tutorial)
