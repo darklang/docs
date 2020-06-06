@@ -22,15 +22,15 @@ A full sample canvas for this tutorial is available [here](https://darklang.com/
 
 ## Building in Dark
 
-1. Create a new daily Cron named `checkForNewChannels` by clicking the + in the sidebar next to Cron, and call the [`getNewConversations` Slack function](../slack-packages#getnewconversations) (it's a little confusing, but channels are referred to as conversations in the Slack API). The getNewConversations function is built into Dark's [package manager](./../../packages), and it takes your token as well as an amount of time to check in Epoch seconds. Here, we're asking it to check in the past 24 hours, which is equivalent to 86400 seconds.
+1. Create a new daily Cron named `checkForNewChannels` by clicking the + in the sidebar next to Cron, and call the [`getNewConversations` Slack function](../slack-packages#getnewconversations) (it's a little confusing, but channels are referred to as conversations in the Slack API). The `getNewConversations` function is built into Dark's [package manager](./../../packages), and it takes your token as well as an amount of time to check in Epoch seconds. Here, we're asking it to check in the past 24 hours, which is equivalent to 86400 seconds.
 
 ![assets/slack-apps/tutorials/channelcheck/checkfornewchannels.png](assets/slack-apps/tutorials/channelcheck/checkfornewchannels.png)
 
-2. Click the play button on the [`getNewConversations` function](../slack-packages#getnewconversations) and then place your carat in newChannels. You will see a list of information about any new channels that have been created.
+2. Click the play button on the [`getNewConversations` function](../slack-packages#getnewconversations) and then place your carat in `newChannels`. You will see a list of information about any new channels that have been created.
 
 ![assets/slack-apps/tutorials/channelcheck/checkfornewchannelslive.png](assets/slack-apps/tutorials/channelcheck/checkfornewchannelslive.png)
 
-3. Create a function called `formatChannelList` with a `channelList` parameter. This is where we're going to build the format of the messages Slack will print about your new channels, but for now, just return channelList. You'll notice that an error is shown - this is because channelList has not yet been set.
+3. Create a function called `formatChannelList` with a `channelList` parameter. This is where we're going to build the format of the messages Slack will print about your new channels, but for now, just return `channelList`. You'll notice that an error is shown - this is because `channelList` has not yet been set.
 
 ![assets/slack-apps/tutorials/channelcheck/firstformatchannel.png](assets/slack-apps/tutorials/channelcheck/firstformatchannel.png)
 

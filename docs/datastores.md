@@ -6,7 +6,7 @@ sidebar_label: Datastores
 
 ## Overview
 
-Datastores in Dark are key-value based (persistent hashmaps). When you create a new datastore, you specify the schema for the record.
+Datastores in Dark are key-value based (persistent hash-maps). When you create a new datastore, you specify the schema for the record.
 
 ![Empty Datastore](assets/datastores/empty.png)
 
@@ -31,11 +31,11 @@ The schema is the same for all of these key examples:
 
 Some common key choices:
 
-- A unique field (like userId). If the field is not already a string use `toString`. The key is shown in the preview data.
+- A unique field (like `userId`). If the field is not already a string use `toString`. The key is shown in the preview data.
 
 `[{"1": { userId: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"2": { userId: 2, name: "Paul", pets: []}]`
 
-- A unique derivative of a field (like name and UserId, or a slug).
+- A unique derivative of a field (like name and `UserId`, or a slug).
 
 `[{"ellen1": { userId: 1, name: "Ellen", pets: ["Gutenberg"]} }, {"paul2": { userId: 2, name: "Paul", pets: []}]`
 
@@ -59,7 +59,7 @@ To add items into a datastore, use `DB::set`. `DB::set` takes three parameters (
 
 ![DBset](assets/datastores/dbset_empty.png)
 
-For the earlier example datastore, using this with userID as the key would look as follows:
+For the earlier example datastore, using this with `userID` as the key would look as follows:
 
 ![DBset](assets/datastores/dbset.png)
 
@@ -89,7 +89,7 @@ To easily see is in your Datastore, create a REPL and running `DB::getAll`.
 
 ### Querying by key, DB::get
 
-The key is a good way to be able to find information in the datastore. DB::get finds records by key (reminder: withKeys returns nested dictionaries including keys, so DB::get does not return the key). Datastore functions that allow action based on key are:
+The key is a good way to be able to find information in the datastore. DB::get finds records by key (reminder: `withKeys` returns nested dictionaries including keys, so `DB::get` does not return the key). Datastore functions that allow action based on key are:
 
 - `DB::delete`
 - `DB::get`
@@ -98,7 +98,7 @@ The key is a good way to be able to find information in the datastore. DB::get f
 
 ### Querying by record field, DB::queryExactField
 
-Using DB::queryExactField checks for a specific field within the record. `queryOnewithExactField` finds one response, whereas `queryExactFields` will return as many as exist. (reminder: withKeys returns nested dictionaries including keys).
+Using `DB::queryExactField` checks for a specific field within the record. `DB::queryOnewithExactField` finds one response, whereas `DB::queryExactFields` will return as many as exist. (reminder: withKeys returns nested dictionaries including keys).
 
 - `DB::queryExactFields`
 - `DB::queryExactFieldswithKey`
@@ -113,9 +113,9 @@ This allows you to write a function that can be evaluated for the datastore.
 
 ![DBset](assets/datastores/dbquery.png)
 
-DB::query allows taking a datastore and a block filter. Note that this does not check every value intable but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not yet support the code in question (please let us know when you hit this, and which function you wanted to use!)
+DB::query allows taking a datastore and a block filter. Note that this does not check every value in the table but rather is optimized to find data with indexes. Errors at compile-time if Dark's compiler does not yet support the code in question (please let us know when you hit this, and which function you wanted to use!)
 
-You can also use DB::querywithKey to get both the key and record, DB::queryOne to get only one response, and DB::queryOnewithKey to get only one response, with the key and record.
+You can also use `DB::querywithKey` to get both the key and record, `DB::queryOne` to get only one response, and `DB::queryOnewithKey` to get only one response, with the key and record.
 
 ### Creating References Between DBs
 
@@ -127,13 +127,13 @@ Users have a pets field, which is a list of strings. The keys for the pets are a
 
 You can edit the DB’s schema (col names and types) until it has data in it, at which point it “locks.”
 
-If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (db::deleteAll).
+If you are still in development and don’t need the data, creating a REPL and deleting all data in a DB will unlock it (`DB::deleteAll`).
 
 Once you have traffic, datastore migrations are manual. To change your schema, create a new datastore with the new schema.
 
 ![Migration](assets/datastores/migration.png)
 
-Then, use a REPL to write code to move your existing data, using `DB::getAllWithKeys` and `Dict::map`. For adding a new field, use `dict::set` to add the new field to the existing record. (Note: to pipe a specific section of code, select it first, then press `shift-enter`)
+Then, use a REPL to write code to move your existing data, using `DB::getAllWithKeys` and `Dict::map`. For adding a new field, use `Dict::set` to add the new field to the existing record. (Note: to pipe a specific section of code, select it first, then press `shift-enter`)
 
 ![Migrator](assets/datastores/migrator.png)
 
@@ -149,4 +149,4 @@ Setting DBs by type and DB Migrations are coming, if you have requests or inputs
 
 ## Using an External Datastore
 
-We strongly recommend using this built-in datastore. If you have an external databas, you can connect to it via REST. [Tutorial](/docs/tutorials/external-db).
+We strongly recommend using this built-in datastore. If you have an external database, you can connect to it via REST. [Tutorial](/docs/tutorials/external-db).

@@ -18,7 +18,7 @@ and vision docs about where Dark is going.
 ## Issues
 
 We have started adding issues that have been reported by users to the the
-[Issues on github](https://github.com/darklang/dark/issues). We'll be going
+[Issues on GitHub](https://github.com/darklang/dark/issues). We'll be going
 back through the backlog to add more of these soon.
 
 We've marked a few good starting points:
@@ -67,7 +67,7 @@ themselves or to improve their experience. Many users have shown us long
 laundry lists of things that bother them - you might have one too. Or bring us
 the list, and we'll talk about where to start.
 
-The important thing is to start small. Dark is nearly 100,000LOC. And we have
+The important thing is to start small. Dark is nearly 100,000 LOC. And we have
 the constraints of supporting users' production apps in a continuous delivery
 manner. You should aim for your first few contributions to be small and
 non-controversial, before trying to design a big feature or product change.

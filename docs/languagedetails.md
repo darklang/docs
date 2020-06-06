@@ -51,7 +51,7 @@ unsigned 8-bit integers and bit-manipulation functions.
 
 Floats are double-precision 64-bit floating-point values (IEEE 754).
 
-We intend for numberic operations to return Results, to handle situations which
+We intend for numeric operations to return Results, to handle situations which
 are undefined on the datatype. For example, integer division would return
 `Result Error Int`. Similarly, floating point values would never be `NaN`, and
 instead would return `Result Error Float`. See [Error Handling in
@@ -66,7 +66,7 @@ Booleans are true or false.
 Strings are unicode, and character are unicode “characters” (if it appears as
 one character on the screen, that’s a “character” in Dark).
 
-Specifically, string are immutable utf-8 encoded sequences of Unicode code
+Specifically, string are immutable UTF-8 encoded sequences of Unicode code
 points. Chars are “Extended Grapheme Clusters”. (A codepoint is some bytes that
 implement unicode characters, a grapheme is some codepoints forming a unicode
 entity, such as an emoji; an EGC is some graphemes, used to handle things like
@@ -212,7 +212,7 @@ type Person = Human {age: Int, name: String, itin: String }
 
 Enums can be made by building on existing types, especially records and other enums.
 
-Enums are nominally typed. (Two enums with the same fieldnames and types are not equivalent).
+Enums are nominally typed. (Two enums with the same field names and types are not equivalent).
 
 ## Types unique to Dark
 
@@ -261,7 +261,7 @@ let name = "Stella"
 name
 ```
 
-We often refer to these names as variables, for simplicy. However, they never
+We often refer to these names as variables, for simplicity. However, they never
 vary: once they are defined, they never have any other value.
 
 #### Variable Scope

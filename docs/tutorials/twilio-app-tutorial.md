@@ -19,7 +19,7 @@ All the major handlers work the same way, but the key for many requests is worki
 We’re building this app: [https://sample-textreminder.builtwithdark.com](https://sample-textreminder.builtwithdark.com/)
 It’s an app that will send a text message once per day at a given time to an end user. In this case, we’ll ask the user “did you drink enough water today?” and track their response.
 
-To try out the app and see your traces in the sample canvas text “start” to "+12482653257.”
+To try out the app and see your traces in the sample canvas text “start” to +12482653257.
 
 ### Twilio Credentials
 
@@ -27,7 +27,7 @@ To build your own, you’ll need to set up a Twilio account. Your Twilio SID & T
 
 ![assets/twilio/mage16.png](assets/twilio/image16.png)
 
-You’ll also need to add a phone number from the “more” menu on the lefthand side, then to the phone number section.
+You’ll also need to add a phone number from the “more” menu on the left-hand side, then to the phone number section.
 
 ![assets/twilio/image15.png](assets/twilio/image15.png)
 
@@ -37,7 +37,7 @@ Once you’ve added a phone number, you can configure a webhook:
 
 ### Sending a Message
 
-Dark has a built in Twilio::sendText function. We can call it in a REPL with our own number to verify our webhook.
+Dark has a built in `Twilio::sendText` function. We can call it in a REPL with our own number to verify our webhook.
 
 ![assets/twilio/mage4.png](assets/twilio/image4.png)
 
@@ -45,7 +45,7 @@ Dark has a built in Twilio::sendText function. We can call it in a REPL with our
 
 ### Receiving Responses
 
-After we receive a response, we’ll see a 404 in the side bar section for our webook, which we can create by hitting the “+” button.
+After we receive a response, we’ll see a 404 in the side bar section for our webhook, which we can create by hitting the “+” button.
 
 ![assets/twilio/mage3.png](assets/twilio/image3.png)
 
@@ -67,9 +67,9 @@ At each expression, we can see what the expression evaluates to for a given trac
 
 For processing the various responses, we’ll use a match statement. More on [Match](functional-aspects.md#match) is available, but the tutorial example has enough context to understand how it works for this case.
 
-### Signup & Quit
+### Sign up & Quit
 
-Now, let’s do the “start” case. This allows us to give the user our Twilio number, and have them text “start” to begin receiving a daily reminder. We’ll need a data store to keep track of our users, which can be created from the omnibox (cmd/ctrl-k) or the side bar.
+Now, let’s do the “start” case. This allows us to give the user our Twilio number, and have them text “start” to begin receiving a daily reminder. We’ll need a data store to keep track of our users, which can be created from the omnibox (`Cmd/Ctrl-k`) or the side bar.
 
 ![assets/twilio/image1.png](assets/twilio/image1.png)
 
@@ -97,13 +97,13 @@ To test, you can always send a new reply to the text message (or just message yo
 
 Now we’ll want the cases for when the user responds to the daily question of “did you drink enough water today?”
 
-We’ll want another data store so we can track the daily response by user (side bar or cmd-k).
+We’ll want another data store so we can track the daily response by user (side bar or `Cmd/Ctrl-k`).
 
 ![assets/twilio/image12.png](assets/twilio/image12.png)
 
 [https://darklang.com/a/sample-textreminder#db=1164294845](https://darklang.com/a/sample-textreminder#db=1164294845)
 
-In this case since we do not want to use the phone number as the unique key, we generate a unique key when storing using the built in DB::generateKey function:
+In this case since we do not want to use the phone number as the unique key, we generate a unique key when storing using the built in `DB::generateKey` function:
 
 ![assets/twilio/image18.png](assets/twilio/image18.png)
 
@@ -113,7 +113,7 @@ In this case since we do not want to use the phone number as the unique key, we 
 
 Finally, we need a case for when we don’t match on one of our earlier responses. We’ll want to send a text back to tell the user about the error. To prevent this from blocking other actions, we’ll emit to a background worker.
 
-Here, we emit the user’s number (user) to a background worker named Misunderstood (and see the event as a trace). Once you’ve hit “play” on the emit expression, you should have a 404 for the worker in the side bar that you can hit the + to add. If it does not appear in the sidebar, wait ~ 30s or refresh the browser.
+Here, we emit the user’s number (user) to a background worker named Misunderstood (and see the event as a trace). Once you’ve hit “play” on the emit expression, you should have a 404 for the worker in the side bar that you can hit the + to add. If it does not appear in the sidebar, wait \~30s or refresh the browser.
 
 ![assets/twilio/image14.png](assets/twilio/image14.png)
 
@@ -157,7 +157,7 @@ You could do similar ones for:
 
 #### Cron at Time of Day
 
-If you’d like to set the reminder to occur at a specific time of day, you can set this using a datastore. There’s a sample canvas [here](https://darklang.com/a/sample-setcrontorunatspecifictime). For this application, add the “reminder time” in the Users table, and add a case to allow users to specify a time (that you would then convert to a Date object).
+If you’d like to set the reminder to occur at a specific time of day, you can set this using a datastore. There’s a sample canvas [here](https://darklang.com/a/sample-setcrontorunatspecifictime). For this application, add the “reminder time” in the `Users` table, and add a case to allow users to specify a time (that you would then convert to a Date object).
 
 #### Seeing/Displaying Responses
 

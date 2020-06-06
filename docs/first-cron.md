@@ -5,7 +5,7 @@ title: Your first Cron
 
 Now that we're storing requests, we can use a scheduled job (a "Cron", named after the Unix cron utility) to create a report of all requests per day.
 
-1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name DailyReport.
+1. Hit the plus (`+`) button (or use the omnibox) to create a new Cron. Set it to run daily, and with the name `DailyReport`.
 
 ![assets/gettingstarted/crondaily.png](assets/gettingstarted/crondaily.png)
 

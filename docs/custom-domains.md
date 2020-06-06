@@ -30,7 +30,7 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
    `ALIAS` records (like `CNAME`, but permitted on an apex), that also works - though
    again, for redirects, not SSL certs.
 
-2. Double-check that DNS has resolved. One way to test this is with the `dig` tool on the commandline. If everything is ready, you should see something like this:
+2. Double-check that DNS has resolved. One way to test this is with the `dig` tool on the command line. If everything is ready, you should see something like this:
 
    ```shell
     $dig api.myawesomedarkservice.com
@@ -49,7 +49,7 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
 
 ### I've set up a CNAME but I still don't see `<your_canvas_name>.darkcustomdomain.com` in the results from `dig`!
 
-We've seen this happen for devs using proxies like Cloudflare in front of their domains. For example, you might see:
+We've seen this happen for develops using proxies like CloudFlare in front of their domains. For example, you might see:
 
 ```shell
 $ dig api.myawesomedarkservice.com

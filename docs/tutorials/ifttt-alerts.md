@@ -8,7 +8,7 @@ In this tutorial, we will create a tool that allows you to approve or deny users
 
 ## Waitlist Functionality
 
-1. Start by making a simple webform to allow users to join your waitlist. All of the work for this tutorial can be done locally, but if you're interested you can learn more about [uploading static assets here.](../static-assets)
+1. Start by making a simple web form to allow users to join your waitlist. All of the work for this tutorial can be done locally, but if you're interested you can learn more about [uploading static assets here.](../static-assets)
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png)
 
@@ -28,7 +28,7 @@ We've used the code below - note that you will need to replace the URL that is p
 </html>
 ```
 
-2. Enter some information on the form and click submit. You will get a 404 error.
+2. Enter some information on the form and click "submit". You will get a 404 error.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png)
 
@@ -48,7 +48,7 @@ We've used the code below - note that you will need to replace the URL that is p
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png)
 
-7. Use a `DB::set` to add the information to your datastore. Note that we've also set the reviewed and reviewResult fields. We will be using these to keep track of where waitlist entries are in the process.
+7. Use a `DB::set` to add the information to your datastore. Note that we've also set the `reviewed` and `reviewResult` fields. We will be using these to keep track of where waitlist entries are in the process.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png)
 
@@ -56,7 +56,7 @@ We've used the code below - note that you will need to replace the URL that is p
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png)
 
-9. We now need to create a few more files to see our waitlist queue. Note that you will need to replace the URLs in script.js with your username and canvasname.
+9. We now need to create a few more files to see our waitlist queue. Note that you will need to replace the URLs in `script.js` with your username and canvas name.
 
 <details><summary>queue.html</summary>
 
@@ -199,7 +199,7 @@ request.send()
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png)
 
-11. Write a `DB::query` to grab all of the entries in Signups where reviewed is `false`.
+11. Write a `DB::query` to grab all of the entries in `Signups` where reviewed is `false`.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png)
 
@@ -219,7 +219,7 @@ request.send()
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png)
 
-16. Do a DB::set to update your datastore.
+16. Do a `DB::set` to update your datastore.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png)
 
@@ -305,7 +305,7 @@ request.send()
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png)
 
-18. Do another `DB::query`, but this time, check that reviewResult is approved.
+18. Do another `DB::query`, but this time, check that `reviewResult` is approved.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png](assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png)
 
@@ -329,7 +329,7 @@ We're going to create two alerts - one that will let you know if you have a back
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png)
 
-4. Format the email you will recieve. In our case, we want to modify the subject line and pass through the value of how many unreviewed entries we have.
+4. Format the email you will receive. In our case, we want to modify the subject line and pass through the value of how many unreviewed entries we have.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png)
 
@@ -337,7 +337,7 @@ We're going to create two alerts - one that will let you know if you have a back
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png)
 
-6. Next, create an hourly CRON that checks if your unreviewed count is too high (in this case, we're going to set it to 3) and sends you an email if it is.
+6. Next, create an hourly Cron that checks if your unreviewed count is too high (in this case, we're going to set it to 3) and sends you an email if it is.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png)
 

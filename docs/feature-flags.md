@@ -24,7 +24,7 @@ By default, the code you write within the flag will not be run. All traffic will
 
 ![Feature Flag](assets/featureflag/when.png)
 
-In this case, the new code will run if the traffic specifies a queryParam `name=Ellen`.
+In this case, the new code will run if the traffic specifies a `queryParam` `name=Ellen`.
 
 ![Feature Flag](assets/featureflag/whenellen.png)
 
@@ -42,7 +42,7 @@ Write new code for the section you're looking to change, and try it out.
 
 For any case other than the specific condition, the old code will continue to run.
 
-For instance, if another name is chosen in the queryParam:
+For instance, if another name is chosen in the query param:
 ![Feature Flag](assets/featureflag/whensam.png)
 
 Or if there is not a name:

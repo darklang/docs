@@ -62,31 +62,31 @@ In Dark, you work with production traces to build your backend. **Click on the �
 
 After creating the route, you’ll see the trace showing the full request that Slack made to your Dark app. This includes the code you’ll need to send back to Slack.
 
-Before we send it, you’ll need your client_id and client_secret, which you can get from Slack’s **Basic Information** page.
+Before we send it, you’ll need your `client_id` and `client_secret`, which you can get from Slack’s **Basic Information** page.
 
 ![assets/slack/image18.png](assets/slack/image18.png)
 
-Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).
+Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your `client_id` and `secret_id`, you’ll need to open the string literal first (`"`) and then paste (otherwise it looks like a float and is truncated).
 
-This is the end result, but you’ll see your client_id and client_secret instead of placeholders:
+This is the end result, but you’ll see your `client_id` and `client_secret` instead of placeholders:
 
 ![assets/slack/image9.png](assets/slack/oauthv2.png)
 
-This calls part of Slack’s API ([oauth.access](https://api.slack.com/methods/oauth.access)), which will give you access to the Slack app that requested it.
+This calls part of Slack’s API ([`oauth.access`](https://api.slack.com/methods/oauth.access)), which will give you access to the Slack app that requested it.
 
-When you’ve done this correctly and hit “play” to make the call ([more on play buttons)](trace-driven-development.md#live-values--play-buttons), you’ll get a response that has the right fields. This will include team_id and an access_token. (This may also have a bot_access_token if you add a bot to your Slack functionality).
+When you’ve done this correctly and hit “play” to make the call ([more on play buttons)](trace-driven-development.md#live-values--play-buttons), you’ll get a response that has the right fields. This will include `team_id` and an `access_token`. (This may also have a `bot_access_token` if you add a bot to your Slack functionality).
 
 If you get an error in a response, you won’t be able to keep going. If the code expired, you’ll need to re-open the shareable link from Slack in the browser to re-authenticate.
 
 ![assets/slack/image12.png](assets/slack/image12.png)
 
-You can save the response to a variable by inserting a let (ctrl-\ -> wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:
+You can save the response to a variable by inserting a let (`Cmd/Ctrl-\` -> `wrap-in-let`). You can also just hit return at the end of the function and it will do the same thing:
 
 ![assets/slack/image4.gif](assets/slack/image4.gif)
 
 Now save the tokens you receive to a Datastore.
 
-Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id and access_token - depending on your feature set you might not have a bot_token).
+Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, `team_id` and `access_token` - depending on your feature set you might not have a `bot_token`).
 
 ![assets/slack/image5.png](assets/slack/tokensdb.png)
 
@@ -102,7 +102,7 @@ Now that you’ve installed the app to your workspace, you can build app functio
 
 ## Supporting Slack Commands
 
-Slack’s **Basic Information** page lets you create slash commands, event subscriptions, and interactive components. All three of these options require a Request URL, which is just a url pointing to your Dark app, in the same format as before:
+Slack’s **Basic Information** page lets you create slash commands, event subscriptions, and interactive components. All three of these options require a Request URL, which is just a URL pointing to your Dark app, in the same format as before:
 
 [https://USERNAME-CANVASNAME.builtwithdark.com/ROUTE](https://username-canvasname.builtwithdark.com/ROUTE)
 
@@ -120,7 +120,7 @@ When you create the endpoint from the 404 section, you’ll be able to work with
 
 ## Supporting Bots & Event Subscriptions
 
-You can set up a bot that listens for its name by adding [app_mention](https://api.slack.com/events/app_mention) under Subscribe to bot events in **Features > Event Subscriptions**.
+You can set up a bot that listens for its name by adding [`app_mention`](https://api.slack.com/events/app_mention) under Subscribe to bot events in **Features > Event Subscriptions**.
 
 The command will be sent to the URL you specify and, like OAuth, the route will show up in your 404s. Event subscriptions require that you respond with a challenge parameter to validate the URL that handles that interactivity. This challenge is only sent once, but you can wrap the challenge response in an if/else in the event that you need to validate this URL again:
 
@@ -138,7 +138,7 @@ So far, we’ve typically posted a message to Slack directly from an HTTP handle
 
 ![assets/slack/image1.png](assets/slack/fulleventshandler.png)
 
-We’ll use Slack’s [postMessage](https://api.slack.com/methods/chat.postMessage) method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:
+We’ll use Slack’s [`postMessage`](https://api.slack.com/methods/chat.postMessage) method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:
 
 ![assets/slack/image3.png](assets/slack/image3.png)
 
@@ -146,10 +146,10 @@ We’ll use Slack’s [postMessage](https://api.slack.com/methods/chat.postMessa
 
 If you want to support interactivity that involves working with buttons, menus, or fields within a modal, this may change the shape of Slack’s payload into a string with nested lists. There are several functions you can use that will help with data wrangling in those cases:
 
-- **JSON::parse** - Parses a JSON string and returns it’s value.
-- **Lambda** (or \) - for creating anonymous functions that are most helpful when iterating through lists
-- **|>** (or shift + return) - to pipe into another expression
-- **List::getAt** - For when you know the index of the nested list that contains your value.
+- `JSON::parse` - Parses a JSON string and returns it’s value.
+- `Lambda` (or `\`) - for creating anonymous functions that are most helpful when iterating through lists
+- `|>` (or shift+enter) - to pipe into another expression
+- `List::getAt` - For when you know the index of the nested list that contains your value.
 
 Here is an example of where most of these functions are used to extract the right values and to help draft a reply:
 

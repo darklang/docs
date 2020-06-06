@@ -82,7 +82,7 @@ You're not always going to want to pre-define your workspace or projects via Dar
 
 ![assets/slack-apps/tutorials/asana-tutorial/taskandproject.png](assets/slack-apps/tutorials/asana-tutorial/taskandproject.png)
 
-5. Create a new function called `lookUpProjectID` and then use `DB::queryOne` to grab the id based on the projectName.
+5. Create a new function called `lookUpProjectID` and then use `DB::queryOne` to grab the id based on the `projectName`.
 
 ![assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png](assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png)
 
@@ -110,7 +110,7 @@ Okay, this is all great, but still has some problems. What if someone forgets to
 
 ![assets/slack-apps/tutorials/asana-tutorial/interactivity.png](assets/slack-apps/tutorials/asana-tutorial/interactivity.png)
 
-3. Slack uses `JSON` to generate modals via a framework called Block Kit, even providing a [handy Block Kit builder](https://api.slack.com/tools/block-kit-builder). At this point, it may make sense to pause and create your modal - we'll need the `JSON` soon. The modal we're going to use has 3 fields: a singleline for the task name, a multiline for the task description and a select for a list of projects.
+3. Slack uses `JSON` to generate modals via a framework called Block Kit, even providing a [handy Block Kit builder](https://api.slack.com/tools/block-kit-builder). At this point, it may make sense to pause and create your modal - we'll need the `JSON` soon. The modal we're going to use has 3 fields: a single line for the task name, a multiline for the task description and a select for a list of projects.
 
 4. Call your new slash command and grab the 404, as you did in previous steps.
 
