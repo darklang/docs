@@ -46,15 +46,15 @@ For this tutorial, you're going to need to grab a few different things from Trel
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.48.50_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.48.50_PM.png)
 
-8. In the body of your trace data, you will see a text field in the body. This is what we want to parse to get the name and description of the card we're going to create. In order to parse this information, we're going to use String::split and parse on the special character |.
+8. In the body of your trace data, you will see a text field in the body. This is what we want to parse to get the name and description of the card we're going to create. In order to parse this information, we're going to use `String::split` and parse on the special character `|`.
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.53.21_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.53.21_PM.png)
 
-9. Now that we have a list of messageContent, we can use list getAt to set the name and description of the card.
+9. Now that we have a list of `messageContent`, we can use `List::getAt` to set the name and description of the card.
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.54.04_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.54.04_PM.png)
 
-10. Once we have all of the information we need, we can use the Dark package manager Trello::createNewCard function to create the new card. For simplicity's sake, we're going to use the defaultListID we set earlier.
+10. Once we have all of the information we need, we can use the Dark package manager `Trello::createNewCard` function to create the new card. For simplicity's sake, we're going to use the `defaultListID` we set earlier.
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.54.46_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_1.54.46_PM.png)
 
@@ -76,11 +76,11 @@ For this tutorial, you're going to need to grab a few different things from Trel
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.09.04_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.09.04_PM.png)
 
-15. Now our messageContent will have a third entry in the list.
+15. Now our `messageContent` will have a third entry in the list.
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.09.50_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.09.50_PM.png)
 
-16. Now, using the built in Trello:lookUpListID function, we can grab the name of that list and use it in our createNewCard function.
+16. Now, using the built in `Trello:lookUpListID` function, we can grab the name of that list and use it in our `createNewCard` function.
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-08_at_1.34.24_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-08_at_1.34.24_PM.png)
 
@@ -98,13 +98,13 @@ You're also going to want to turn Interactivity on and specify a URL for the int
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.59.38_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_2.59.38_PM.png)
 
-19. First, grab your trigger_id from the request.body:
+19. First, grab your `trigger_id` from the `request.body`:
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.13_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.13_PM.png)
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.31_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.31_PM.png)
 
-20. Next, create an HttpClient::post request and add your trigger_id and JSON. These are truncated screenshots with a lot of the JSON cut out:
+20. Next, create an `HttpClient::post` request and add your `trigger_id` and JSON. These are truncated screenshots with a lot of the JSON cut out:
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.41_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-07_at_3.01.41_PM.png)
 
@@ -114,7 +114,7 @@ You're also going to want to turn Interactivity on and specify a URL for the int
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.06.48_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.06.48_PM.png)
 
-22. Now we need to work with our /interaction handler, which should be available in your 404s. We're going to start with parsing the payload Slack sent through:
+22. Now we need to work with our `/interaction` handler, which should be available in your 404s. We're going to start with parsing the payload Slack sent through:
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.09.56_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.09.56_PM.png)
 
@@ -122,7 +122,7 @@ You're also going to want to turn Interactivity on and specify a URL for the int
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.17.50_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.17.50_PM.png)
 
-24. And, just like before, we'll use the Trello::lookUpListID to take the list:
+24. And, just like before, we'll use the `Trello::lookUpListID` to take the list:
 
 ![New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.17.57_PM.png](New%20Trello%20Card/Screen_Shot_2020-04-08_at_12.17.57_PM.png)
 

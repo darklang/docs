@@ -32,11 +32,11 @@ When you see "invalid code", it means that your program is complete but has issu
 
 **Example:**
 
-Here we tried to use **DB::set** with an Int for the `key` parameter, even though `key` needs to be a string.
+Here we tried to use `DB::set` with an Int for the `key` parameter, even though `key` needs to be a string.
 
 ![assets/error/image14.png](assets/error/image14.png)
 
-To resolve this problem, we can use a string instead. "123" or 123 |> **toString** will both work.
+To resolve this problem, we can use a string instead. `"123"` or `123 |> toString` will both work.
 
 ## Error Rail
 

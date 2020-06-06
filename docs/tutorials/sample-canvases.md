@@ -68,7 +68,7 @@ For a full Twilio tutorial, click [here](https://www.notion.so/darklang/A-Guide-
 
 [signing](https://darklang.com/a/sample-aws-signing) - AWS signing
 
-[sendgrid](https://darklang.com/a/sample-sendgrid) - sending emails with the Sendgrid API
+[sendgrid](https://darklang.com/a/sample-sendgrid) - sending emails with the SendGrid API
 
 [oauth](https://darklang.com/a/sample-oauth) - using Gmail's OAuth flow
 

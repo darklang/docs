@@ -18,9 +18,9 @@ We have a single page app, written in react. It talks to our API, written in Dar
 
 Here’s how we want our app to work:
 
-- we have an API, served from /api/
-- / serves our index.html page from our assets
-- index.html should point to our static assets host to fetch other assets
+- we have an API, served from `/api/`
+- `/` serves our `index.html` page from our assets
+- `index.html` should point to our static assets host to fetch other assets
 
 **We’ll focus on the last two things we want our app to do in this document.**
 
@@ -85,11 +85,11 @@ We have a command-line app to allow you to deploy your assets.
 
 ### Configure your client
 
-At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at "/static/myimage.png", that file will not load. You need to use relative URLs instead, in this case “./myimage.png”.
+At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at `/static/myimage.png`, that file will not load. You need to use relative URLs instead, in this case `./myimage.png`.
 
-Your "index.html" likely loads other assets, such as “app.css” or “app.js”. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.
+Your `index.html` likely loads other assets, such as `app.css` or `app.js`. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.
 
-During the deployment of the assets, our backend replaces the string “DARK_STATIC_ASSETS_BASE_URL” in all of your assets with the actual URL of this deployment.
+During the deployment of the assets, our backend replaces the string `DARK_STATIC_ASSETS_BASE_URL` in all of your assets with the actual URL of this deployment.
 
 When not using a framework, prefix asset paths with Dark's magic string, for
 example:
@@ -98,7 +98,7 @@ example:
 <img src="DARK_STATIC_ASSETS_BASE_URL/logo.svg" />
 ```
 
-In React, when compiling your react application, you can use PUBLIC_URL:
+In React, when compiling your react application, you can use `PUBLIC_URL`:
 
 ```bash
 PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
@@ -116,13 +116,13 @@ If using Vue, you likely want to set PUBLIC_PATH instead:
 PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 ```
 
-Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:
+Additionally, Vue assumes relative paths. If you are having an issue with your assets, check to make sure that `index.html` has not added leading path notation (`/PUBLIC_PATH`). If it has, you can manually remove and redeploy. More on using this for Vue here:
 
 [vuejs/vue-cli](https://github.com/vuejs/vue-cli/tree/dev/docs/config#publicpath)
 
 ### Deploy
 
-1. To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.
+1. To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory `build`.
 2. Run:
 
    ```bash
@@ -132,18 +132,18 @@ Additionally, Vue assumes relative paths. If you are having an Issue with your a
    ```
 
 (If you want to avoid shell escaping issues entirely, we also support putting
-your creds in `~/.netrc`; the format for that is documented at [https://ec.haxx.se/usingcurl/usingcurl-netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc) for machine darklang.com.)
+your creds in `~/.netrc`; the format for that is documented at [https://ec.haxx.se/usingcurl/usingcurl-netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc) for machine `darklang.com`).
 
-On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
+On success, we’ll show you the deploy hash, a URL, and a long URL. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:
 
 ![assets/staticassets/image1.png](assets/staticassets/image1.png)
 
 ## Set up your App to Load your Assets
 
-If your SPA framework generates an "index.html", or you write one yourself, you can load that for the / route in Dark.
+If your SPA framework generates an `index.html`, or you write one yourself, you can load that for the `/` route in Dark.
 
-- Add a handler for / to load your "index.html" page using **StaticAssets::serveLatest “index.html”.**
-- If you’re using client-side routing, you can also add a handler serving index.html for /:rest which will be a catch-all handler for any URL (besides /) that doesn’t have another handler defined for it. This will allow your users to load your assets from any of your app’s URLs.
+- Add a handler for `/` to load your `index.html` page using `StaticAssets::serveLatest "index.html"`.
+- If you’re using client-side routing, you can also add a handler serving `index.html` for `/:rest` which will be a catch-all handler for any URL (besides `/`) that doesn’t have another handler defined for it. This will allow your users to load your assets from any of your app’s URLs.
 
 You can copy and paste this example from [https://darklang.com/a/sample-static-assets](https://darklang.com/a/sample-static-assets).
 
@@ -157,30 +157,30 @@ If you’re looking to serve a fallback asset, you can use a match statement:
 
 We’ve shown you how to deploy new assets that appear immediately. However, you often want to control the rollout of those assets, perhaps seeing them yourself, or only showing them to users who have opted into beta features. As a result, it is easy to use Dark Static Assets with feature flags.
 
-Instead of calling serveLatest, you can call serve, and use the deploy hash from your command line.
+Instead of calling `HttpClient::serveLatest`, you can call `HttpClient::serve`, and use the deploy hash from your command line.
 
 ## Reference
 
 ### Functions
 
 - `urlFor <deployHash : String> <file : String> -> String`
-  - Returns a url to a file for the current canvas and the given deployHash:
+  - Returns a URL to a file for the current canvas and the given `deployHash`:
   - `StaticAssets::urlFor "o6vs1aqcbx" "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
 - `urlForLatest <deployHash : String> <file : String> -> String`
-  - Returns a url to a file for the current canvas and the latest deploy:
+  - Returns a URL to a file for the current canvas and the latest deploy:
   - `StaticAssets::urlForLatest "foo.html"` -> `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
 - `fetch <deployHash : String> <file : String> -> String`
-  - Returns the contents of a file for the current canvas and the given deployHash:
+  - Returns the contents of a file for the current canvas and the given `deployHash`:
   - `StaticAssets::fetch "o6vs1aqcbx" "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
 - `fetchLatest <deployHash : String> <file : String> -> String`
-  - Returns a url to a file for the current canvas and the latest deploy:
+  - Returns a URL to a file for the current canvas and the latest deploy:
   - `StaticAssets::fetchLatest "foo.html"` -> `"<html><body>Hello, world!</body></html>"`
 - `serve <deployHash : String> <file : String> -> String`
-  - Returns the contents of a file for the current canvas and the given deployHash:
-  - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
+  - Returns the contents of a file for the current canvas and the given `deployHash`:
+  - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file `foo.html` and the headers that the static assets CDN provided
 - `serveLatest <deployHash : String> <file : String> -> String`
-  - Returns a url to a file for the current canvas and the latest deploy:
-  - `StaticAssets::fetchLatest "foo.html"` -> responds with the file foo.html and the headers that the static assets CDN provided
+  - Returns a URL to a file for the current canvas and the latest deploy:
+  - `StaticAssets::fetchLatest "foo.html"` -> responds with the file `foo.html` and the headers that the static assets CDN provided
 
 ### Command line reference
 

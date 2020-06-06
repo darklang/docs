@@ -11,7 +11,7 @@ The backend is in OCaml and the frontend is in Bucklescript. Also, something abo
 
 Bucklescript and OCaml are both compilers:
 - the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.
-- the Bucklescript compiler compiles programs to JS. The editor uses Buckelscript.
+- the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.
 
 ReasonML and OCaml are both syntaxes:
 - ReasonML is a JS-like syntax for the OCaml language
@@ -69,7 +69,7 @@ go through language features.
 
 Since Dark doesn't let you type syntax, it doesn't have syntax errors.
 OCaml has syntax errors, and the error messages are not good. I tend to
-make sure that my code syntax checks by running OCamlformat in my
+make sure that my code syntax checks by running `oCamlformat` in my
 editor on save: if it reformats, then the syntax was good.
 
 ### Types
@@ -258,7 +258,7 @@ very often.
 
 ### If
 
-`if` statements in OCaml are extremely sumilar to Dark, including that they
+`if` statements in OCaml are extremely similar to Dark, including that they
 only allow `bool`s as the condition, and in their syntax.
 
 ```ocaml
@@ -328,7 +328,7 @@ Dark has a handful of enums for `Option` and `Result` types: `Just`, `Nothing`, 
 
 OCaml supports the `Option` and `Result` types and we use them a lot. However, the constructors for Option OCaml are named differently: `Some` and `None`.
 
-OCaml calls enums "variants". We use them frequently, especially to represent expressions. For example in FluidExpression.ml:
+OCaml calls enums "variants". We use them frequently, especially to represent expressions. For example in `FluidExpression.ml`:
 
 ```ocaml
 type t =
@@ -400,7 +400,7 @@ list
 
 ### Dictionaries
 
-Dictionaries (hashmaps, etc) are typically called `Map` in OCaml, and are
+Dictionaries (hash-maps, etc) are typically called `Map` in OCaml, and are
 unforuntately pretty hard to use, which is one reason you won't see them used
 as much as they really should be.
 
@@ -439,10 +439,10 @@ use them a little bit on the backend, which we'd like to do less of.
 
 Unfortunately, it's hard to tell in OCaml when an exception could be thrown.
 
-### .mli files
+### `.mli` files
 
-OCaml code goes in .ml files - each file is a module. OCaml also has interface
-files which describe the module in the .ml file of the same name.
+OCaml code goes in `.ml` files - each file is a module. OCaml also has interface
+files (`.mli`) which describe the module in the `.ml` file of the same name.
 
 While they aren't necessary, they make it easier to know what functions are
 unused, they make APIs clearer, and they make compilation faster. As such, Dark
@@ -480,7 +480,7 @@ Option.withDefault ~default:5 (Some 5)
 These are useful as a named parameter can be placed in any order (this
 is also useful for piping).
 
-You declare functions with named paramters like so:
+You declare functions with named parameters like so:
 
 ```ocaml
 let myFunction (regularParamter : int) ~(namedParam : string) : int =
@@ -544,7 +544,7 @@ let myOtherFunction (param : string) =
 
 ### Modules
 
-OCaml has a complex module system, which takes some time to grasp. Modules can have parameters, have inheritence, and each other these features uses a complicated, difficult to grasp syntax.
+OCaml has a complex module system, which takes some time to grasp. Modules can have parameters, have inheritance, and each other these features uses a complicated, difficult to grasp syntax.
 
 We only barely use modules in the Dark codebase, so here's what you need to know:
 

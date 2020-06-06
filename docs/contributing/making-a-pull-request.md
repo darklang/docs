@@ -20,7 +20,7 @@ When writing a pull request, there are some steps you can take to make it easier
 - explain how your solution addresses the problem
 - highlight any choices you've made in the implementation
 - make clear what the product and user-facing changes are, especially if it could break anything for existing users
-- if the change is in the editor, include a before/after screenshot or gif
+- if the change is in the editor, include a before/after screenshot or GIF
 
 Highlighting these will make it much easier to know that this code is safe.
 

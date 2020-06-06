@@ -16,7 +16,7 @@ This guide will walk you through how you can use Freshdesk’s API to access tic
 
 ![assets/freshdesk/image2.png](assets/freshdesk/image2.png)
 
-Freshdesk uses basic authentication - in this example, we’ve chosen to use our API key and insert random text for the password, but you can replace those with your username and password when using HttpClient::basicAuth.
+Freshdesk uses basic authentication - in this example, we’ve chosen to use our API key and insert random text for the password, but you can replace those with your username and password when using `HttpClient::basicAuth`.
 
 ## Getting All of Your Tickets
 
@@ -36,7 +36,7 @@ In the following example, we are going to add a set of information from all of o
 
 ![assets/freshdesk/image3.png](assets/freshdesk/Image3.png)
 
-Create a datastore to keep track of all of your ids. Because our primary use for this datastore is to append the ids to our request URL, it’s helpful to store ticket_id as a string - you can also cast them to strings later if you’d prefer.
+Create a datastore to keep track of all of your ids. Because our primary use for this datastore is to append the ids to our request URL, it’s helpful to store `ticket_id` as a string - you can also cast them to strings later if you’d prefer.
 
 ![assets/freshdesk/image8.png](assets/freshdesk/image8.png)
 
@@ -44,7 +44,7 @@ Create a worker to populate that table with all of your ticket ids.
 
 ![assets/freshdesk/image6.png](assets/freshdesk/image6.png)
 
-Create a datastore that contains all of the fields you want to save from your tickets - you can see all of your options in [Freshdesk’s API documentation](https://developers.freshdesk.com/api/#view_a_ticket).
+Create a datastore that contains all of the fields you want to save from your tickets--you can see all of your options in [Freshdesk’s API documentation](https://developers.freshdesk.com/api/#view_a_ticket).
 
 ![assets/freshdesk/image9.png](assets/freshdesk/image9.png)
 
@@ -52,7 +52,7 @@ Create a function to add the information about your tickets to your new datastor
 
 ![assets/freshdesk/mage1.png](assets/freshdesk/image1.png)
 
-Create a worker that performs a List::Map on your list of ticket ids, and uses the addTicketstoDB function to populate your datastore.
+Create a worker that performs a `List::map` on your list of ticket ids, and uses the `addTicketstoDB` function to populate your datastore.
 
 ![assets/freshdesk/image7.png](assets/freshdesk//image7.png)
 

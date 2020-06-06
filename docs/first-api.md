@@ -17,7 +17,7 @@ In this Tutorial, we'll send the Daily Report we created to Airtable, so other t
 - Airtable's full API documentation for your base will be available on the [API page](https://airtable.com/api). Within this page, go to Create Records in the left hand navigation to copy the URI from the right hand side.
   ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_url.png)
 
-2. Add the HTTP POST call to the storeReport worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
+2. Add the HTTP POST call to the `storeReport` worker so it will run asynchronously. Hit `return` after the `Db::set` function. `DB::set` will still run as a side effect, and we can add the new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
 

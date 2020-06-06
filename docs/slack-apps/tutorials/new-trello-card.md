@@ -81,7 +81,7 @@ In the future, you probably won't want to worry about hunting around for your li
 
 ![assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png](assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png)
 
-16. Using the built in [`Trello:lookUpListID` function](..\..\packages.md#lookuplistid), we can grab the name of that list and use it in our createNewCard function.
+16. Using the built in [`Trello:lookUpListID` function](..\..\packages.md#lookuplistid), we can grab the name of that list and use it in our `createNewCard` function.
 
 ![assets/slack-apps/tutorials/new-trello-card/lookuplistid.png](assets/slack-apps/tutorials/new-trello-card/lookuplistid.png)
 
@@ -95,13 +95,13 @@ Okay, this is all great, but still has some problems. What if someone forgets to
 
 ![assets/slack-apps/tutorials/new-trello-card/interactivity.png](assets/slack-apps/tutorials/new-trello-card/interactivity.png)
 
-3. Slack uses JSON to generate modals via a framework called Block Kit, even providing a [handy Block Kit builder](https://api.slack.com/tools/block-kit-builder). At this point, it may make sense to pause and create your modal - we'll need the JSON soon. The modal we're going to use has 3 fields: a singleline for the card name, a multiline for the card description and a select for a list of lists.
+3. Slack uses JSON to generate modals via a framework called Block Kit, even providing a [handy Block Kit builder](https://api.slack.com/tools/block-kit-builder). At this point, it may make sense to pause and create your modal - we'll need the JSON soon. The modal we're going to use has 3 fields: a single line for the card name, a multiline for the card description and a select for a list of lists.
 
 4. Now, just like before, we're going to call the Slash command and grab the 404.
 
 ![assets/slack-apps/tutorials/new-trello-card/newslashcommand.png](assets/slack-apps/tutorials/new-trello-card/newslashcommand.png)
 
-5. Grab your `trigger_id` from the request.body:
+5. Grab your `trigger_id` from the `request.body`:
 
 ![assets/slack-apps/tutorials/new-trello-card/triggerid.png](assets/slack-apps/tutorials/new-trello-card/triggerid.png)
 

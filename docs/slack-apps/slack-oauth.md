@@ -24,11 +24,11 @@ This URL should be in the following format: The URL you provide will need to be 
 
 2. Return to the main **Manage Distribution** page, copy the Sharable URL and then navigate to it. Follow the steps, making sure to finish with clicking Allow.
 
-3. Go to your Dark canvas and look in your 404s list to find your oauth-redirect handler, complete with trace. Click the + to add it to your canvas.
+3. Go to your Dark canvas and look in your 404s list to find your `oauth-redirect` handler, complete with trace. Click the `+` to add it to your canvas.
 
-4. Create a new `Datastore` called tokenStore, and add two `String` fields: `team_id` and `access_token`.
+4. Create a new Datastore called `tokenStore`, and add two `String` fields: `team_id` and `access_token`.
 
-5. Return to your oauth-redirect handler and call the [`Slack::oauth` function](./slack-packages#oauth). You will need your client ID and client secret, as well as the token store you created in the previous step. The final parameter is pulling the temporary code out of the request using `request.queryParams.code`.
+5. Return to your `oauth-redirect` handler and call the [`Slack::oauth` function](./slack-packages#oauth). You will need your client ID and client secret, as well as the token store you created in the previous step. The final parameter is pulling the temporary code out of the request using `request.queryParams.code`.
 
 ![assets/slack-apps/oauth.png](assets/slack-apps/oauth.png)
 

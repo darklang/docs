@@ -34,7 +34,7 @@ Traditionally, you call functions with their arguments as parameters. However, t
 
 ![assets/functional/Image6.png](assets/functional/image6.png)
 
-Pipelines perform a series of transformations on a value in order. Here, we start with the string "live" and pipe it to String::reverse to produce "evil". Then we pipe the result to String::toUppercase, producing the string "EVIL":
+Pipelines perform a series of transformations on a value in order. Here, we start with the string `"live"` and pipe it to `String::reverse` to produce `"evil"`. Then we pipe the result to `String::toUppercase`, producing the string `"EVIL"`:
 
 ![assets/functional/image9.png](assets/functional/image9.png)
 
@@ -46,7 +46,7 @@ To start a pipeline, use `|>` at the end of the expression you are piping.
 
 Once you are in a pipeline, hitting `return` at the end of the expression will continue the pipe.
 
-If you need to pipe a specific subset of an expression, you can select it and then hit `shift+return`. For example, selecting UUID::generate to pipe it into toString.
+If you need to pipe a specific subset of an expression, you can select it and then hit `shift+enter`. For example, selecting `UUID::generate` to pipe it into `toString`.
 
 ![assets/functional/openpipe.png](assets/functional/selectpipe.png)
 ![assets/functional/openpipe.png](assets/functional/successfulpipe.png)
@@ -98,7 +98,7 @@ Blocks are anonymous functions that operate on a set of values. Expressions like
 
 ![assets/functional/block.png](assets/functional/block.png)
 
-To open the block type `\`. It autopopulates the parameters it is expecting (like `value` for `Db::query` or `accum, curr` for `List::fold`).
+To open the block type `\`. It auto-populates the parameters it is expecting (like `value` for `Db::query` or `accum, curr` for `List::fold`).
 
 ![assets/functional/block.png](assets/functional/blockfilter.png)
 

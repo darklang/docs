@@ -265,7 +265,7 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our 
 
 - The `add-feature-flag` option in the command palette is now context aware
 - The feature flag panel is now auto-focused when adding a new feature flag
-- Added an autocomplete option for OPTIONS in HTTP. This is especially useful for people doing pre-flight requests as part of CORS
+- Added an autocomplete option for `OPTIONS` in HTTP. This is especially useful for people doing preflight requests as part of `CORS`
 
 ![assets/changelog/option.png](assets/changelog/Apr3/option.png)
 
@@ -274,9 +274,9 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our 
 ![assets/changelog/returntext.png](assets/changelog/Apr3/returntext.png)
 
 - Adding a function at the start of a pipe now works properly (before this, we lost the first argument)
-- Text selection has been reworked and should work a lot better and have fewer bugs. In particular, doubleclicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)
+- Text selection has been reworked and should work a lot better and have fewer bugs. In particular, double-clicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)
 - Typing "." to make a field now always works, even if the autocomplete isn't ready
-- Bug fix: doubleclicking in text boxes now keeps your cursor there
+- Bug fix: double-clicking in text boxes now keeps your cursor there
 - Bug fix: in a `match` with a `Just` pattern, the variable now has the right type in autocomplete
 - `Error:toString` has been deprecated (you can't call functions on type errors)
 
@@ -428,7 +428,7 @@ We added a bunch of improved documentation, including:
 ## Week of 2/28/2020
 
 - Backspacing a comma in a list no longer deletes text to the right of the comma
-- Fixed an issue where CRONs occasionally continued to run after they were deleted
+- Fixed an issue where Crons occasionally continued to run after they were deleted
 - Lists now wrap when they pass 120 characters
 - A few fixes to traces that caused people to get really stuck:
   - Fixed an issue where traces could occasionally vanish
@@ -479,7 +479,7 @@ We added a bunch of improved documentation, including:
 - Fixed the documentation for `Date::parse` (it returns a `Result`)
 - Fixed a few bugs around autocomplete appearing too little or too much
 - Fixed a carat placement bug in pipes
-- Loaded our font (FiraMono) even if you don't have it installed locally
+- Loaded our font (Fira Mono) even if you don't have it installed locally
 - Fixed some issues causing the editor to freeze:
   - Dragging up to select text
   - Repeated clicking in a variable
@@ -563,7 +563,7 @@ We added a bunch of improved documentation, including:
 - Performance and loading improvements for all programs
   - The editor loads program data from the server much faster
   - Workers run with much less overhead (and so higher throughput)
-  - CRONs should be running more reliably
+  - Crons should be running more reliably
   - HTTP requests are much much faster
   - Programs with lots of functions or traces are especially improved
   - Several issues with deleted functions and databases are now resolved
@@ -577,7 +577,7 @@ We added a bunch of improved documentation, including:
 
 ### Library changes
 
-- Added `JSON::parse_v1` which uses a Result in case of error (deprecated JSON::parse_v0)
+- Added `JSON::parse_v1` which uses a `Result` in case of error (deprecated `JSON::parse_v0`)
 - Added `Float::sum`
 
   ![assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png](assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png)
@@ -593,7 +593,7 @@ We added a bunch of improved documentation, including:
 - Fixed renaming function parameters
 - Fixed deleted text persisting when pressing delete
 - Large traces are now properly displayed
-- Commands (ctrl-\) now work more reliably when selecting code
+- Commands (Cmd/Ctrl-\) now work more reliably when selecting code
 - We now allow you to use arbitrary field names
   - You can now use a field even if you don't have a trace or the field does not exist in that trace
 - We've automatically disabled Grammarly, as it was messing with our DOM
@@ -605,7 +605,7 @@ We added a bunch of improved documentation, including:
 
 ## Week of 1/17/2020
 
-- We added DB::query_v4, which allows you use arbitrary queries on your Dark datastores
+- We added `DB::query_v4`, which allows you use arbitrary queries on your Dark datastores
   - We also published a [related blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd)!
 - You can now remove a `let` with the backspace/delete key
 
@@ -626,7 +626,7 @@ We added a bunch of improved documentation, including:
   - € or £ weren't working
   - shift + 2 was not being recognized.
 - Fixed an issue where pressing delete in a match expression was causing the cursor to be placed incorrectly.
-- Stopped errorring when functions are being renamed.
+- Stopped erroring when functions are being renamed.
 - Fixed an issue where the Omnibox was not clickable.
 - Fixed an issue where the minimap was hiding the Dismiss Error button.
 - Fixed a short regression where lambda parameters were not shadowing variables of the same name.

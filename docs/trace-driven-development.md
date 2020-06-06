@@ -50,7 +50,7 @@ When you create the route you’ll see the recent traces as white dots on the le
 
 ![assets/trace/image12.png](assets/trace/image12.png)
 
-Similarly to the get request, you can work with the real data from the trace. In this case the handler shows "request.body.info."
+Similarly to the get request, you can work with the real data from the trace. In this case the handler shows `request.body.info`.
 
 ![assets/trace/image3.png](assets/trace/image3.png)
 
@@ -64,21 +64,21 @@ Once you have requests/traces, you can use them while writing code.
 
 When you write code, if you put your cursor into the code, you will always see the result of that code for the selected trace on the left hand side. These left-hand-side values are called "live values."
 
-As seen above with “testinfo,” expressions will automatically show you their values to the left if they have no side effects. Below, we see the result of the addition:
+As seen above with `testinfo`, expressions will automatically show you their values to the left if they have no side effects. Below, we see the result of the addition:
 
 ![assets/trace/image4.png](assets/trace/image4.png)
 
 When an expression does have side effects (like changing a value in a datastore or calling an external API) it will have a green “play” or “replay” button that allows the developer to _choose_ to run it for the current traces.
 
-In our earlier request, if we saved "request.body.info" to the variable "request_info," we could then choose to insert it into a datastore. In this case, there’s a play button to generate a new key, and a second one to insert the information:
+In our earlier request, if we saved `request.body.info` to the variable `request_info`, we could then choose to insert it into a datastore. In this case, there’s a play button to generate a new key, and a second one to insert the information:
 
 ![assets/trace/image8.png](assets/trace/image8.png)
 
-Once you play the **DB::generateKey**, you can see the resulting key, and choose to play the **DB::set** expression:
+Once you play the `DB::generateKey`, you can see the resulting key, and choose to play the `DB::set` expression:
 
 ![assets/trace/image10.png](assets/trace/image10.png)
 
-When you play **DB::set**, you can see the record that was inserted:
+When you play `DB::set`, you can see the record that was inserted:
 
 ![assets/trace/image6.png](assets/trace/image6.png)
 

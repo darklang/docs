@@ -107,7 +107,7 @@ The URI is the destination of our HTTP request (an API endpoint). We could make 
 
 - For the body, we want to pass `{test:"test1"}`: type `{`, hit enter, then add the key and the value.
 - For the query, we want an empty dictionary. Type `{`.
-- For the header, we want the JSON content-type: type "json" and the autocomplete will offer you a function to use.
+- For the header, we want the JSON content-type: type `json` and the autocomplete will offer you a function to use.
 
 ![assets/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
 

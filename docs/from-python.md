@@ -70,7 +70,7 @@ Dark has a set of built in functions as well, which can be accessed via the auto
 
 ## If/Elif/Else statements
 
-In Python, you would write an `If` statement like this:
+In Python, you would write an `if` statement like this:
 
 ```python
 a = 5
@@ -88,6 +88,6 @@ In Dark, the same statement would look this this:
 
 ![assets/from-python/ifs.png](assets/from-python/ifs.png)
 
-Note that we highlight the path your code takes - so if we were to change the values, a different piece of the `If` statement would be highlighted:
+Note that we highlight the path your code takes - so if we were to change the values, a different piece of the `if` statement would be highlighted:
 
 ![assets/from-python/ifs2.png](assets/from-python/ifs2.png)

@@ -6,7 +6,7 @@ sidebar_label: Clean Error Messages with the Error Rail
 
 In this tutorial, we will be showing you how to use the error rail with `HttpClient::get` to display clean error messages. We will be using the [PokeAPI](https://pokeapi.co/), as it is publicly available and requires no special authentication.
 
-1. Create a new function from the omnibox or sidebar. Call this function `pokeSearch` and add a pokemon parameter with type `String`.
+1. Create a new function from the omnibox or sidebar. Call this function `pokeSearch` and add a Pokemon parameter with type `String`.
 
 ![assets/error-rail/pokeSearch.png](assets/error-rail/pokeSearch.png)
 
@@ -18,7 +18,7 @@ In this tutorial, we will be showing you how to use the error rail with `HttpCli
 
 ![assets/error-rail/dittoTrace.png](assets/error-rail/dittoTrace.png)
 
-4. Create your url by concatenating `https://pokeapi.co/api/v2/pokemon/` with your parameter.
+4. Create your URL by concatenating `https://pokeapi.co/api/v2/pokemon/` with your parameter.
 
 ![assets/error-rail/url.png](assets/error-rail/url.png)
 
@@ -26,15 +26,15 @@ In this tutorial, we will be showing you how to use the error rail with `HttpCli
 
 ![assets/error-rail/data.png](assets/error-rail/data.png)
 
-6. Return the results of your `HttpClient::get`. Note the checkmark in the circle to the right of your call - this is indicating that your function is on the Error Rail, and that it isn't returning an error.
+6. Return the results of your `HttpClient::get`. Note the check mark in the circle to the right of your call - this is indicating that your function is on the Error Rail, and that it isn't returning an error.
 
 ![assets/error-rail/returnData.png](assets/error-rail/returnData.png)
 
-7. Return to your `search` REPL and enter anything other than the name of an actual pokemon. I chose `"pikawho"`.  Then, run your REPL again to see the `Error` trace.
+7. Return to your `search` REPL and enter anything other than the name of an actual Pokemon. I chose `"pikawho"`.  Then, run your REPL again to see the `Error` trace.
 
 ![assets/error-rail/error.png](assets/error-rail/error.png)
 
-8. Return to your `pokeSearch` function, and note that the checkmark has changed to a red exclamation point, indicating that there is an error.
+8. Return to your `pokeSearch` function, and note that the check mark has changed to a red exclamation point, indicating that there is an error.
 
 ![assets/error-rail/errorpoint.png](assets/error-rail/errorpoint.png)
 

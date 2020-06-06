@@ -10,7 +10,7 @@ Dark is good for making backends that need to speak HTTP, store data, do work in
 
 Dark is really good for building web applications, APIs, and things that speak HTTP. Dark is not intended to be usable for embedded systems, to run existing applications in existing languages, or for code that needs to be extremely high performance.
 
-Similarly, Dark does not have support for many use cases such as bitcoin/crypto, AI/big data, image or video manipulation. If you need a specific library (such as tensorflow or imagemagick), you can set up your own service (or use an existing vendor) that supports that library, and then call it from Dark over HTTP, but we do not support these libraries natively in Dark.
+Similarly, Dark does not have support for many use cases such as bitcoin/crypto, AI/big data, image or video manipulation. If you need a specific library (such as TensorFlow or ImageMagick), you can set up your own service (or use an existing vendor) that supports that library, and then call it from Dark over HTTP, but we do not support these libraries natively in Dark.
 
 ## Know what you're building
 
@@ -20,7 +20,7 @@ People who give up typically try to solve Project Euler problems or just poke ar
 
 ## Limited scale
 
-Dark currently does a good job for limited scale applications. We would not feel comfortable with applications with intense spikey loads (such as "daily deals" sites), with a lot of fanout (social networks), with high bandwidth requirements (streaming video). We currently feel comfortable supporting sites with consistently 10 req/s or fewer (approximately 20M requests per month per site).
+Dark currently does a good job for limited scale applications. We would not feel comfortable with applications with intense spiky loads (such as "daily deals" sites), with a lot of fan-out (social networks), with high bandwidth requirements (streaming video). We currently feel comfortable supporting sites with consistently 10 req/s or fewer (approximately 20M requests per month per site).
 
 ## Small Teams
 
@@ -28,7 +28,7 @@ Dark has collaboration, but it doesn't scale particularly well yet. People have 
 
 ## Limited package manager
 
-We recently released our package manager, but currently only Dark employees can add packages. Right now, you can use 3rdparty APIs directly using the HttpClient module. We are working to allow user-contributed packages, which should significantly increase the number of 3rd party APIs that we directly support (such as Stripe, Twitter, Twilio, GitHub, etc), and expect to support them in Q3 2020.
+We recently released our package manager, but currently only Dark employees can add packages. Right now, you can use 3rd party APIs directly using the HttpClient module. We are working to allow user-contributed packages, which should significantly increase the number of 3rd party APIs that we directly support (such as Stripe, Twitter, Twilio, GitHub, etc), and expect to support them in Q3 2020.
 
 All of our packages are currently built on JSON/HTTP, and so we do not yet support Thrift, GRPC, or GraphQL. We expect to support these in the future.
 

@@ -12,7 +12,7 @@ services and APIs.
 
 ### HttpClient
 
-`HttpClient::` supports the core verbs: GET, POST, PATCH, PUT, and DELETE, as well as OPTIONS. Each takes 3-4 parameters: uri, query, body, and header. GET, DELETE, and OPTIONS do not take a body.
+`HttpClient::` supports the core verbs: `GET`, `POST`, `PATCH`, `PUT`, and `DELETE`, as well as `OPTIONS`. Each takes 3-4 parameters: `uri`, `query`, `body`, and `header`. `GET`, `DELETE`, and `OPTIONS` do not take a body.
 
 ![HttpClientPost](assets/httpclient/httpclientpost.png)
 
