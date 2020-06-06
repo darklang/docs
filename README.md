@@ -23,13 +23,13 @@ To change these docs and test the results locally:
 ```sh
 # Install dependencies
 $ cd website
-$ yarn
+$ npm install
 ```
 2. Run your dev server:
 
 ```sh
 # Start watching the site for changes
-$ yarn start
+$ npm start
 ```
 
 ## Project Structure
@@ -173,10 +173,10 @@ For more information about custom pages, click [here](https://docusaurus.io/docs
 ## Checking formatting
 
 We run some tools to ensure that the docs are consistently formatted and to
-find common errors. If you run `yarn format` you should pass the linter.
+find common errors. If you run `npm run format` you should pass the linter.
 
 `markdownlint` is run automatically in CI - you can run it
-locally as `yarn run lint`.
+locally as `npm run lint`.
 
 # How CI Auto-deploys
 
@@ -192,7 +192,7 @@ On the commandline (remember to replace `<YOUR USERNAME>` with your github usern
 
 ```sh
 $ cd website
-$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=master yarn publish-gh-pages
+$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=master npm publish-gh-pages
 ```
 
 If you're using ssh instead of https, replace `GIT_USER=<YOUR USERNAME>` with `USE_SSH=true`.
