@@ -27,3 +27,11 @@ x + y
 ```
 
 
+## Fuzzer
+
+
+## Fluid Debugger
+
+There is a debugger in the UI that is mostly for debugging the fluid
+editor. Mouse over the gear on the left and select "Fluid Debugger".
+
