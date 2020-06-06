@@ -24,7 +24,7 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
    options for providing stable and resilient infrastructure.
    You can read [this Netlify post](https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/) for more information.
 
-   If you wish, you can additionally set up an `A` record pointing the apex (eg `myawesomedarkservice.com`) to
+   If you wish, you can additionally set up an `A` record pointing the apex (e.g. `myawesomedarkservice.com`) to
    `35.227.208.117`. We cannot currently provide an SSL cert for that, but we can
    redirect to your main subdomain (which is usually `www`). If your DNS provider supports
    `ALIAS` records (like `CNAME`, but permitted on an apex), that also works - though
@@ -49,7 +49,7 @@ We'll manage SSL for you - no need to buy your own certificate to make your site
 
 ### I've set up a CNAME but I still don't see `<your_canvas_name>.darkcustomdomain.com` in the results from `dig`!
 
-We've seen this happen for develops using proxies like CloudFlare in front of their domains. For example, you might see:
+We've seen this happen for develops using proxies like Cloudflare in front of their domains. For example, you might see:
 
 ```shell
 $ dig api.myawesomedarkservice.com

@@ -110,7 +110,7 @@ If using Angular, you can run the following command:
 ng build --prod --deploy-url DARK_STATIC_ASSETS_BASE_URL/
 ```
 
-If using Vue, you likely want to set PUBLIC_PATH instead:
+If using Vue, you likely want to set `PUBLIC_PATH` instead:
 
 ```bash
 PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL

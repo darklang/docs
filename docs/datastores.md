@@ -87,7 +87,7 @@ These include:
 
 To easily see is in your Datastore, create a REPL and running `DB::getAll`.
 
-### Querying by key, DB::get
+### Querying by key, `DB::get`
 
 The key is a good way to be able to find information in the datastore. DB::get finds records by key (reminder: `withKeys` returns nested dictionaries including keys, so `DB::get` does not return the key). Datastore functions that allow action based on key are:
 
@@ -96,16 +96,16 @@ The key is a good way to be able to find information in the datastore. DB::get f
 - `DB::getMany`
 - `DB::getManywithKeys`
 
-### Querying by record field, DB::queryExactField
+### Querying by record field, `DB::queryExactField`
 
-Using `DB::queryExactField` checks for a specific field within the record. `DB::queryOnewithExactField` finds one response, whereas `DB::queryExactFields` will return as many as exist. (reminder: withKeys returns nested dictionaries including keys).
+Using `DB::queryExactField` checks for a specific field within the record. `DB::queryOnewithExactField` finds one response, whereas `DB::queryExactFields` will return as many as exist. (reminder: `withKeys` returns nested dictionaries including keys).
 
 - `DB::queryExactFields`
 - `DB::queryExactFieldswithKey`
 - `DB::queryOnewithExactField`
 - `DB::queryOneWithExactFieldWithKey`
 
-### Querying by criteria, DB::query (experimental SQL Compiler)
+### Querying by criteria, `DB::query` (experimental SQL Compiler)
 
 For being able to run more effective datastore queries, we also have a query compiler. More about this feature is in this [blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd).
 

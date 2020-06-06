@@ -117,7 +117,7 @@ Option a = Just a | Nothing
 This is intended to convert effortlessly to null in JSON, but we don't quite
 have enough of the type system to remove null, so they both exist right now.
 
-Functions which return `Option` trigger the [Errorrail](error-handling).
+Functions which return `Option` trigger the [Error Rail](error-handling).
 
 ### Results
 
