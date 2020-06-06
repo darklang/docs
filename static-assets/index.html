@@ -67,9 +67,9 @@
 <p>We have a single page app, written in react. It talks to our API, written in Dark. Now we’d like to deploy that app so that customers can use it too. This also works in a similar way for Vue applications, with a few caveats called out in line.</p>
 <p>Here’s how we want our app to work:</p>
 <ul>
-<li>we have an API, served from /api/</li>
-<li>/ serves our index.html page from our assets</li>
-<li>index.html should point to our static assets host to fetch other assets</li>
+<li>we have an API, served from <code>/api/</code></li>
+<li><code>/</code> serves our <code>index.html</code> page from our assets</li>
+<li><code>index.html</code> should point to our static assets host to fetch other assets</li>
 </ul>
 <p><strong>We’ll focus on the last two things we want our app to do in this document.</strong></p>
 <p>At a high level, here are the steps:</p>
@@ -108,14 +108,14 @@
 <p>Press <code>Allow Anyway</code> and repeat step 3.</p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="configure-your-client"></a><a href="#configure-your-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure your client</h3>
-<p>At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at &quot;/static/myimage.png&quot;, that file will not load. You need to use relative URLs instead, in this case “./myimage.png”.</p>
-<p>Your &quot;index.html&quot; likely loads other assets, such as “app.css” or “app.js”. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.</p>
-<p>During the deployment of the assets, our backend replaces the string “DARK_STATIC_ASSETS_BASE_URL” in all of your assets with the actual URL of this deployment.</p>
+<p>At the moment, our CDN does not support the use of absolute URLs in the generated files. For example, if your CSS file links an image at <code>/static/myimage.png</code>, that file will not load. You need to use relative URLs instead, in this case <code>./myimage.png</code>.</p>
+<p>Your <code>index.html</code> likely loads other assets, such as <code>app.css</code> or <code>app.js</code>. For speed, you will load these directly from the Dark CDN, not via your Dark handler. As such, we’ll need to make some edits to your assets to ensure they’re always pointing at the CDN for other assets.</p>
+<p>During the deployment of the assets, our backend replaces the string <code>DARK_STATIC_ASSETS_BASE_URL</code> in all of your assets with the actual URL of this deployment.</p>
 <p>When not using a framework, prefix asset paths with Dark's magic string, for
 example:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"DARK_STATIC_ASSETS_BASE_URL/logo.svg"</span> /&gt;</span>
 </code></pre>
-<p>In React, when compiling your react application, you can use PUBLIC_URL:</p>
+<p>In React, when compiling your react application, you can use <code>PUBLIC_URL</code>:</p>
 <pre><code class="hljs css language-bash">PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build
 </code></pre>
 <p>If using Angular, you can run the following command:</p>
@@ -124,11 +124,11 @@ example:</p>
 <p>If using Vue, you likely want to set PUBLIC_PATH instead:</p>
 <pre><code class="hljs css language-bash">PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 </code></pre>
-<p>Additionally, Vue assumes relative paths. If you are having an Issue with your assets, check to make sure that index.html has not added leading path notation (/PUBLIC_PATH). If it has, you can manually remove and redeploy. More on using this for Vue here:</p>
+<p>Additionally, Vue assumes relative paths. If you are having an issue with your assets, check to make sure that <code>index.html</code> has not added leading path notation (<code>/PUBLIC_PATH</code>). If it has, you can manually remove and redeploy. More on using this for Vue here:</p>
 <p><a href="https://github.com/vuejs/vue-cli/tree/dev/docs/config#publicpath">vuejs/vue-cli</a></p>
 <h3><a class="anchor" aria-hidden="true" id="deploy"></a><a href="#deploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy</h3>
 <ol>
-<li><p>To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory “build”.</p></li>
+<li><p>To deploy, select the directory you want to upload. In this case, we’ll use React’s default directory <code>build</code>.</p></li>
 <li><p>Run:</p>
 <pre><code class="hljs css language-bash"> <span class="hljs-comment"># The single quotes - around mypass help protect against shell escaping and interpolation.</span>
  <span class="hljs-comment"># If your password contains a single quote or a backslash don't forget to escape it with a \</span>
@@ -136,14 +136,14 @@ example:</p>
 </code></pre></li>
 </ol>
 <p>(If you want to avoid shell escaping issues entirely, we also support putting
-your creds in <code>~/.netrc</code>; the format for that is documented at <a href="https://ec.haxx.se/usingcurl/usingcurl-netrc">https://ec.haxx.se/usingcurl/usingcurl-netrc</a> for machine darklang.com.)</p>
-<p>On success, we’ll show you the deploy-hash, a url, and a long-url. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:</p>
+your creds in <code>~/.netrc</code>; the format for that is documented at <a href="https://ec.haxx.se/usingcurl/usingcurl-netrc">https://ec.haxx.se/usingcurl/usingcurl-netrc</a> for machine <code>darklang.com</code>).</p>
+<p>On success, we’ll show you the deploy hash, a URL, and a long URL. These are where your static assets now live! You can see your static assets in the Routing table in your canvas:</p>
 <p><img src="/docs/assets/staticassets/image1.png" alt="assets/staticassets/image1.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="set-up-your-app-to-load-your-assets"></a><a href="#set-up-your-app-to-load-your-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set up your App to Load your Assets</h2>
-<p>If your SPA framework generates an &quot;index.html&quot;, or you write one yourself, you can load that for the / route in Dark.</p>
+<p>If your SPA framework generates an <code>index.html</code>, or you write one yourself, you can load that for the <code>/</code> route in Dark.</p>
 <ul>
-<li>Add a handler for / to load your &quot;index.html&quot; page using <strong>StaticAssets::serveLatest “index.html”.</strong></li>
-<li>If you’re using client-side routing, you can also add a handler serving index.html for /:rest which will be a catch-all handler for any URL (besides /) that doesn’t have another handler defined for it. This will allow your users to load your assets from any of your app’s URLs.</li>
+<li>Add a handler for <code>/</code> to load your <code>index.html</code> page using <code>StaticAssets::serveLatest &quot;index.html&quot;</code>.</li>
+<li>If you’re using client-side routing, you can also add a handler serving <code>index.html</code> for <code>/:rest</code> which will be a catch-all handler for any URL (besides <code>/</code>) that doesn’t have another handler defined for it. This will allow your users to load your assets from any of your app’s URLs.</li>
 </ul>
 <p>You can copy and paste this example from <a href="https://darklang.com/a/sample-static-assets">https://darklang.com/a/sample-static-assets</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="implementing-a-fallback-in-the-case-of-a-404"></a><a href="#implementing-a-fallback-in-the-case-of-a-404" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementing a Fallback in the Case of a 404</h2>
@@ -151,39 +151,39 @@ your creds in <code>~/.netrc</code>; the format for that is documented at <a hre
 <p><img src="/docs/assets/staticassets/image2.png" alt="assets/staticassets/image2.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="advanced-feature-flags-and-continuous-delivery"></a><a href="#advanced-feature-flags-and-continuous-delivery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced: Feature Flags and Continuous Delivery</h2>
 <p>We’ve shown you how to deploy new assets that appear immediately. However, you often want to control the rollout of those assets, perhaps seeing them yourself, or only showing them to users who have opted into beta features. As a result, it is easy to use Dark Static Assets with feature flags.</p>
-<p>Instead of calling serveLatest, you can call serve, and use the deploy hash from your command line.</p>
+<p>Instead of calling <code>HttpClient::serveLatest</code>, you can call <code>HttpClient::serve</code>, and use the deploy hash from your command line.</p>
 <h2><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h2>
 <h3><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h3>
 <ul>
 <li><code>urlFor &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns a url to a file for the current canvas and the given deployHash:</li>
+<li>Returns a URL to a file for the current canvas and the given <code>deployHash</code>:</li>
 <li><code>StaticAssets::urlFor &quot;o6vs1aqcbx&quot; &quot;foo.html&quot;</code> -&gt; <code>&quot;https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html&quot;</code></li>
 </ul></li>
 <li><code>urlForLatest &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns a url to a file for the current canvas and the latest deploy:</li>
+<li>Returns a URL to a file for the current canvas and the latest deploy:</li>
 <li><code>StaticAssets::urlForLatest &quot;foo.html&quot;</code> -&gt; <code>&quot;https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html&quot;</code></li>
 </ul></li>
 <li><code>fetch &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns the contents of a file for the current canvas and the given deployHash:</li>
+<li>Returns the contents of a file for the current canvas and the given <code>deployHash</code>:</li>
 <li><code>StaticAssets::fetch &quot;o6vs1aqcbx&quot; &quot;foo.html&quot;</code> -&gt; <code>&quot;&lt;html&gt;&lt;body&gt;Hello, world!&lt;/body&gt;&lt;/html&gt;&quot;</code></li>
 </ul></li>
 <li><code>fetchLatest &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns a url to a file for the current canvas and the latest deploy:</li>
+<li>Returns a URL to a file for the current canvas and the latest deploy:</li>
 <li><code>StaticAssets::fetchLatest &quot;foo.html&quot;</code> -&gt; <code>&quot;&lt;html&gt;&lt;body&gt;Hello, world!&lt;/body&gt;&lt;/html&gt;&quot;</code></li>
 </ul></li>
 <li><code>serve &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns the contents of a file for the current canvas and the given deployHash:</li>
-<li><code>StaticAssets::serve &quot;o6vs1aqcbx&quot; &quot;foo.html&quot;</code> -&gt; responds with the file foo.html and the headers that the static assets CDN provided</li>
+<li>Returns the contents of a file for the current canvas and the given <code>deployHash</code>:</li>
+<li><code>StaticAssets::serve &quot;o6vs1aqcbx&quot; &quot;foo.html&quot;</code> -&gt; responds with the file <code>foo.html</code> and the headers that the static assets CDN provided</li>
 </ul></li>
 <li><code>serveLatest &lt;deployHash : String&gt; &lt;file : String&gt; -&gt; String</code>
 <ul>
-<li>Returns a url to a file for the current canvas and the latest deploy:</li>
-<li><code>StaticAssets::fetchLatest &quot;foo.html&quot;</code> -&gt; responds with the file foo.html and the headers that the static assets CDN provided</li>
+<li>Returns a URL to a file for the current canvas and the latest deploy:</li>
+<li><code>StaticAssets::fetchLatest &quot;foo.html&quot;</code> -&gt; responds with the file <code>foo.html</code> and the headers that the static assets CDN provided</li>
 </ul></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="command-line-reference"></a><a href="#command-line-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Command line reference</h3>

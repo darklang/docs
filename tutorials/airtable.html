@@ -69,10 +69,10 @@
 <h2><a class="anchor" aria-hidden="true" id="sending-information-from-airtable-to-dark"></a><a href="#sending-information-from-airtable-to-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sending Information From Airtable to Dark</h2>
 <ul>
 <li>Create a background worker to send data to Airtable.</li>
-<li>Add your API key, the Airtable API, and the Airtable table you’re going to use. An Airtable table looks something like this: appYPi96qgCwabzfE/Airtable%20Sample</li>
-<li>We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using HttpClient::get.
+<li>Add your API key, the Airtable API, and the Airtable table you’re going to use. An Airtable table looks something like this: &quot;appYPi96qgCwabzfE/Airtable%20Sample&quot;</li>
+<li>We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using <code>HttpClient::get</code>.
 <ul>
-<li>Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.</li>
+<li>Headers in Dark are passed in a dict, but we have convenience functions for them, like <code>HttpClient::bearerToken</code> and <code>HttpClient::jsonContentType</code>. You can inspect the headers by clicking on <code>header</code> to see it’s live value.</li>
 <li>To test out the API call, press the Play button.</li>
 </ul></li>
 <li>If you only want one field, like the Name field, you will want to add “Record Type” to your table. To get the exact string for this, reference the Retrieve a Record section of your <a href="https://airtable.com/api">Airtable API documentation</a>.</li>
@@ -84,7 +84,7 @@
 </ol>
 <p><img src="/docs/assets/airtable/image1.png" alt="assets/airtable/image1.png"></p>
 <ol start="2">
-<li>Next iterate through the results - held in allData.body.records, and add them to the DB using DB::set.</li>
+<li>Next iterate through the results - held in allData.body.records, and add them to the DB using <code>DB::set</code>.</li>
 </ol>
 <p><img src="/docs/assets/airtable/image4.png" alt="assets/airtable/image4.png"></p>
 <ol start="3">
@@ -95,12 +95,12 @@
 <ul>
 <li>Create a background worker to send data to Airtable.</li>
 <li>Add your API key, the Airtable API, and the Airtable table you’re going to use. An Airtable table looks something like this: appYPi96qgCwabzfE/Airtable%20Sample</li>
-<li>We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using HttpClient::get.
+<li>We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls using <code>HttpClient::get</code>.
 <ul>
-<li>Headers in Dark are passed in a dict, but we have convenience functions for them, like HttpClient::bearerToken and HttpClient::jsonContentType. You can inspect the headers by clicking on ‘header’ to see it’s live value.</li>
+<li>Headers in Dark are passed in a dict, but we have convenience functions for them, like <code>HttpClient::bearerToken</code> and <code>HttpClient::jsonContentType</code>. You can inspect the headers by clicking on ‘header’ to see it’s live value.</li>
 <li>To test out the API call, press the Play button.</li>
 </ul></li>
-<li>Create your HttpClient::post call. Note that to add a new entry, you will need to format your data using “records” and “fields.” You can click the Play button next to post to manually populate your Airtable to check if its working. Here, I’ve added one entry, but you can replace the strings with variables to add data however you would like.</li>
+<li>Create your <code>HttpClient::post</code> call. Note that to add a new entry, you will need to format your data using <code>records</code> and <code>fields</code>. You can click the Play button next to post to manually populate your Airtable to check if its working. Here, I’ve added one entry, but you can replace the strings with variables to add data however you would like.</li>
 </ul>
 <p><img src="/docs/assets/airtable/image6.png" alt="assets/airtable/image6.png"></p>
 <p><img src="/docs/assets/airtable/image7.png" alt="assets/airtable/image7.png"></p>

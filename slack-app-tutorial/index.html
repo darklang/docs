@@ -88,19 +88,19 @@
 <p><img src="/docs/assets/slack/image19.png" alt="assets/slack/image19.png"></p>
 <p><img src="/docs/assets/slack/image10.png" alt="assets/slack/image10.png"></p>
 <p>After creating the route, you’ll see the trace showing the full request that Slack made to your Dark app. This includes the code you’ll need to send back to Slack.</p>
-<p>Before we send it, you’ll need your client_id and client_secret, which you can get from Slack’s <strong>Basic Information</strong> page.</p>
+<p>Before we send it, you’ll need your <code>client_id</code> and <code>client_secret</code>, which you can get from Slack’s <strong>Basic Information</strong> page.</p>
 <p><img src="/docs/assets/slack/image18.png" alt="assets/slack/image18.png"></p>
-<p>Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your client_id and secret_id, you’ll need to open the string literal first (“) and then paste (otherwise it looks like a float and is truncated).</p>
-<p>This is the end result, but you’ll see your client_id and client_secret instead of placeholders:</p>
+<p>Type the code below into your handler in Dark. As you enter it, you’ll see that the trace is used to show you the results of your code, as well as helping the autocomplete. When copy/pasting your <code>client_id</code> and <code>secret_id</code>, you’ll need to open the string literal first (<code>&quot;</code>) and then paste (otherwise it looks like a float and is truncated).</p>
+<p>This is the end result, but you’ll see your <code>client_id</code> and <code>client_secret</code> instead of placeholders:</p>
 <p><img src="/docs/assets/slack/oauthv2.png" alt="assets/slack/image9.png"></p>
-<p>This calls part of Slack’s API (<a href="https://api.slack.com/methods/oauth.access">oauth.access</a>), which will give you access to the Slack app that requested it.</p>
-<p>When you’ve done this correctly and hit “play” to make the call (<a href="/docs/trace-driven-development#live-values--play-buttons">more on play buttons)</a>, you’ll get a response that has the right fields. This will include team_id and an access_token. (This may also have a bot_access_token if you add a bot to your Slack functionality).</p>
+<p>This calls part of Slack’s API (<a href="https://api.slack.com/methods/oauth.access"><code>oauth.access</code></a>), which will give you access to the Slack app that requested it.</p>
+<p>When you’ve done this correctly and hit “play” to make the call (<a href="/docs/trace-driven-development#live-values--play-buttons">more on play buttons)</a>, you’ll get a response that has the right fields. This will include <code>team_id</code> and an <code>access_token</code>. (This may also have a <code>bot_access_token</code> if you add a bot to your Slack functionality).</p>
 <p>If you get an error in a response, you won’t be able to keep going. If the code expired, you’ll need to re-open the shareable link from Slack in the browser to re-authenticate.</p>
 <p><img src="/docs/assets/slack/image12.png" alt="assets/slack/image12.png"></p>
-<p>You can save the response to a variable by inserting a let (ctrl-\ -&gt; wrap-in-let). You can also just hit return at the end of the function and it will do the same thing:</p>
+<p>You can save the response to a variable by inserting a let (<code>Cmd/Ctrl-\</code> -&gt; <code>wrap-in-let</code>). You can also just hit return at the end of the function and it will do the same thing:</p>
 <p><img src="/docs/assets/slack/image4.gif" alt="assets/slack/image4.gif"></p>
 <p>Now save the tokens you receive to a Datastore.</p>
-<p>Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, team_id and access_token - depending on your feature set you might not have a bot_token).</p>
+<p>Create a new datastore from the omnibox, and set up a schema that matches the fields you want to save (in our example for Lou the Dog, <code>team_id</code> and <code>access_token</code> - depending on your feature set you might not have a <code>bot_token</code>).</p>
 <p><img src="/docs/assets/slack/tokensdb.png" alt="assets/slack/image5.png"></p>
 <p>Then, write the following logic to put values in the datastore (this requires a successful exchange of code for token).</p>
 <p><img src="/docs/assets/slack/oauth-redirect.png" alt="assets/slack/image20.png"></p>
@@ -108,7 +108,7 @@
 <h3><a class="anchor" aria-hidden="true" id="step-two-building-application-functionality--working-with-slacks-payload"></a><a href="#step-two-building-application-functionality--working-with-slacks-payload" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Step Two: Building Application Functionality &amp; Working with Slack’s Payload</h3>
 <p>Now that you’ve installed the app to your workspace, you can build app functionality. We’re not going to go through everything you can do, but rather give you an overview.</p>
 <h2><a class="anchor" aria-hidden="true" id="supporting-slack-commands"></a><a href="#supporting-slack-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supporting Slack Commands</h2>
-<p>Slack’s <strong>Basic Information</strong> page lets you create slash commands, event subscriptions, and interactive components. All three of these options require a Request URL, which is just a url pointing to your Dark app, in the same format as before:</p>
+<p>Slack’s <strong>Basic Information</strong> page lets you create slash commands, event subscriptions, and interactive components. All three of these options require a Request URL, which is just a URL pointing to your Dark app, in the same format as before:</p>
 <p><a href="https://username-canvasname.builtwithdark.com/ROUTE">https://USERNAME-CANVASNAME.builtwithdark.com/ROUTE</a></p>
 <p>Trigger one of these routes, and then use the 404 and trace to build out the functionality, in the same way you did with OAuth.</p>
 <p>For instance, if you used the sample slash command, /test, you’d get this result after triggering it in Slack (and it would appear in your 404 section in Dark).</p>
@@ -117,7 +117,7 @@
 <p>When you create the endpoint from the 404 section, you’ll be able to work with the trace:</p>
 <p><img src="/docs/assets/slack/image16.png" alt="assets/slack/image16.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="supporting-bots--event-subscriptions"></a><a href="#supporting-bots--event-subscriptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supporting Bots &amp; Event Subscriptions</h2>
-<p>You can set up a bot that listens for its name by adding <a href="https://api.slack.com/events/app_mention">app_mention</a> under Subscribe to bot events in <strong>Features &gt; Event Subscriptions</strong>.</p>
+<p>You can set up a bot that listens for its name by adding <a href="https://api.slack.com/events/app_mention"><code>app_mention</code></a> under Subscribe to bot events in <strong>Features &gt; Event Subscriptions</strong>.</p>
 <p>The command will be sent to the URL you specify and, like OAuth, the route will show up in your 404s. Event subscriptions require that you respond with a challenge parameter to validate the URL that handles that interactivity. This challenge is only sent once, but you can wrap the challenge response in an if/else in the event that you need to validate this URL again:</p>
 <p><img src="/docs/assets/slack/image21.png" alt="assets/slack/image21.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="handling-incoming-data"></a><a href="#handling-incoming-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling Incoming Data</h2>
@@ -126,15 +126,15 @@
 <p>As before, use the trace to extract the values you’ll need to post your response.</p>
 <p>So far, we’ve typically posted a message to Slack directly from an HTTP handler. However, it’s better practice to do this using background workers when posting to external API endpoints. Workers respond to events asynchronously, and queue events if they fail. You can use <strong>emit</strong> to trigger a worker, and when you hit play, you’ll see the worker appear in your 404s. Here is the full events handler:</p>
 <p><img src="/docs/assets/slack/fulleventshandler.png" alt="assets/slack/image1.png"></p>
-<p>We’ll use Slack’s <a href="https://api.slack.com/methods/chat.postMessage">postMessage</a> method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:</p>
+<p>We’ll use Slack’s <a href="https://api.slack.com/methods/chat.postMessage"><code>postMessage</code></a> method to respond to a direct mention with a message in Slack, and write the code to post the response in our worker:</p>
 <p><img src="/docs/assets/slack/image3.png" alt="assets/slack/image3.png"></p>
 <p><img src="/docs/assets/slack/image6.png" alt="assets/slack/image6.png"></p>
 <p>If you want to support interactivity that involves working with buttons, menus, or fields within a modal, this may change the shape of Slack’s payload into a string with nested lists. There are several functions you can use that will help with data wrangling in those cases:</p>
 <ul>
-<li><strong>JSON::parse</strong> - Parses a JSON string and returns it’s value.</li>
-<li><strong>Lambda</strong> (or ) - for creating anonymous functions that are most helpful when iterating through lists</li>
-<li><strong>|&gt;</strong> (or shift + return) - to pipe into another expression</li>
-<li><strong>List::getAt</strong> - For when you know the index of the nested list that contains your value.</li>
+<li><code>JSON::parse</code> - Parses a JSON string and returns it’s value.</li>
+<li><code>Lambda</code> (or <code>\</code>) - for creating anonymous functions that are most helpful when iterating through lists</li>
+<li><code>|&gt;</code> (or shift+enter) - to pipe into another expression</li>
+<li><code>List::getAt</code> - For when you know the index of the nested list that contains your value.</li>
 </ul>
 <p>Here is an example of where most of these functions are used to extract the right values and to help draft a reply:</p>
 <p><img src="/docs/assets/slack/image8.png" alt="assets/slack/image8.png"></p>

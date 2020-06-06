@@ -75,15 +75,15 @@
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="building-in-dark"></a><a href="#building-in-dark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building in Dark</h2>
 <ol>
-<li>Create a new daily Cron named <code>checkForNewChannels</code> by clicking the + in the sidebar next to Cron, and call the <a href="../slack-packages#getnewconversations"><code>getNewConversations</code> Slack function</a> (it's a little confusing, but channels are referred to as conversations in the Slack API). The getNewConversations function is built into Dark's <a href="./../../packages">package manager</a>, and it takes your token as well as an amount of time to check in Epoch seconds. Here, we're asking it to check in the past 24 hours, which is equivalent to 86400 seconds.</li>
+<li>Create a new daily Cron named <code>checkForNewChannels</code> by clicking the + in the sidebar next to Cron, and call the <a href="../slack-packages#getnewconversations"><code>getNewConversations</code> Slack function</a> (it's a little confusing, but channels are referred to as conversations in the Slack API). The <code>getNewConversations</code> function is built into Dark's <a href="./../../packages">package manager</a>, and it takes your token as well as an amount of time to check in Epoch seconds. Here, we're asking it to check in the past 24 hours, which is equivalent to 86400 seconds.</li>
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/channelcheck/checkfornewchannels.png" alt="assets/slack-apps/tutorials/channelcheck/checkfornewchannels.png"></p>
 <ol start="2">
-<li>Click the play button on the <a href="../slack-packages#getnewconversations"><code>getNewConversations</code> function</a> and then place your carat in newChannels. You will see a list of information about any new channels that have been created.</li>
+<li>Click the play button on the <a href="../slack-packages#getnewconversations"><code>getNewConversations</code> function</a> and then place your carat in <code>newChannels</code>. You will see a list of information about any new channels that have been created.</li>
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/channelcheck/checkfornewchannelslive.png" alt="assets/slack-apps/tutorials/channelcheck/checkfornewchannelslive.png"></p>
 <ol start="3">
-<li>Create a function called <code>formatChannelList</code> with a <code>channelList</code> parameter. This is where we're going to build the format of the messages Slack will print about your new channels, but for now, just return channelList. You'll notice that an error is shown - this is because channelList has not yet been set.</li>
+<li>Create a function called <code>formatChannelList</code> with a <code>channelList</code> parameter. This is where we're going to build the format of the messages Slack will print about your new channels, but for now, just return <code>channelList</code>. You'll notice that an error is shown - this is because <code>channelList</code> has not yet been set.</li>
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/channelcheck/firstformatchannel.png" alt="assets/slack-apps/tutorials/channelcheck/firstformatchannel.png"></p>
 <ol start="4">

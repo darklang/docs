@@ -62,7 +62,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Alerting with IFTTT</h1></header><article><div><span><p>In this tutorial, we will create a tool that allows you to approve or deny users who have joined a waitlist, and receive alerts about the waitlist via IFTTT. For the purposes of this tutorial, we will host everything locally instead of uploading via static assets.</p>
 <h2><a class="anchor" aria-hidden="true" id="waitlist-functionality"></a><a href="#waitlist-functionality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Waitlist Functionality</h2>
 <ol>
-<li>Start by making a simple webform to allow users to join your waitlist. All of the work for this tutorial can be done locally, but if you're interested you can learn more about <a href="../static-assets">uploading static assets here.</a></li>
+<li>Start by making a simple web form to allow users to join your waitlist. All of the work for this tutorial can be done locally, but if you're interested you can learn more about <a href="../static-assets">uploading static assets here.</a></li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png"></p>
 <p>We've used the code below - note that you will need to replace the URL that is posted to with your own username and canvas.</p>
@@ -79,7 +79,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <ol start="2">
-<li>Enter some information on the form and click submit. You will get a 404 error.</li>
+<li>Enter some information on the form and click &quot;submit&quot;. You will get a 404 error.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png"></p>
 <ol start="3">
@@ -99,7 +99,7 @@
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png"></p>
 <ol start="7">
-<li>Use a <code>DB::set</code> to add the information to your datastore. Note that we've also set the reviewed and reviewResult fields. We will be using these to keep track of where waitlist entries are in the process.</li>
+<li>Use a <code>DB::set</code> to add the information to your datastore. Note that we've also set the <code>reviewed</code> and <code>reviewResult</code> fields. We will be using these to keep track of where waitlist entries are in the process.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png"></p>
 <ol start="8">
@@ -107,7 +107,7 @@
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png"></p>
 <ol start="9">
-<li>We now need to create a few more files to see our waitlist queue. Note that you will need to replace the URLs in script.js with your username and canvasname.</li>
+<li>We now need to create a few more files to see our waitlist queue. Note that you will need to replace the URLs in <code>script.js</code> with your username and canvas name.</li>
 </ol>
 <p><details><summary>queue.html</summary></p>
 <pre><code class="hljs css language-HTML"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
@@ -242,7 +242,7 @@ request.send()
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png"></p>
 <ol start="11">
-<li>Write a <code>DB::query</code> to grab all of the entries in Signups where reviewed is <code>false</code>.</li>
+<li>Write a <code>DB::query</code> to grab all of the entries in <code>Signups</code> where reviewed is <code>false</code>.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png"></p>
 <ol start="12">
@@ -262,7 +262,7 @@ request.send()
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png"></p>
 <ol start="16">
-<li>Do a DB::set to update your datastore.</li>
+<li>Do a <code>DB::set</code> to update your datastore.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png"></p>
 <ol start="17">
@@ -343,7 +343,7 @@ request.send()
 <p></details></p>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png"></p>
 <ol start="18">
-<li>Do another <code>DB::query</code>, but this time, check that reviewResult is approved.</li>
+<li>Do another <code>DB::query</code>, but this time, check that <code>reviewResult</code> is approved.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png"></p>
 <ol start="19">
@@ -365,7 +365,7 @@ request.send()
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png"></p>
 <ol start="4">
-<li>Format the email you will recieve. In our case, we want to modify the subject line and pass through the value of how many unreviewed entries we have.</li>
+<li>Format the email you will receive. In our case, we want to modify the subject line and pass through the value of how many unreviewed entries we have.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png"></p>
 <ol start="5">
@@ -373,7 +373,7 @@ request.send()
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png"></p>
 <ol start="6">
-<li>Next, create an hourly CRON that checks if your unreviewed count is too high (in this case, we're going to set it to 3) and sends you an email if it is.</li>
+<li>Next, create an hourly Cron that checks if your unreviewed count is too high (in this case, we're going to set it to 3) and sends you an email if it is.</li>
 </ol>
 <p><img src="/docs/assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png" alt="assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png"></p>
 <ol start="7">

@@ -334,7 +334,7 @@
 <ul>
 <li>The <code>add-feature-flag</code> option in the command palette is now context aware</li>
 <li>The feature flag panel is now auto-focused when adding a new feature flag</li>
-<li>Added an autocomplete option for OPTIONS in HTTP. This is especially useful for people doing pre-flight requests as part of CORS</li>
+<li>Added an autocomplete option for <code>OPTIONS</code> in HTTP. This is especially useful for people doing preflight requests as part of <code>CORS</code></li>
 </ul>
 <p><img src="/docs/assets/changelog/Apr3/option.png" alt="assets/changelog/option.png"></p>
 <ul>
@@ -343,9 +343,9 @@
 <p><img src="/docs/assets/changelog/Apr3/returntext.png" alt="assets/changelog/returntext.png"></p>
 <ul>
 <li>Adding a function at the start of a pipe now works properly (before this, we lost the first argument)</li>
-<li>Text selection has been reworked and should work a lot better and have fewer bugs. In particular, doubleclicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)</li>
+<li>Text selection has been reworked and should work a lot better and have fewer bugs. In particular, double-clicking on a function name properly selects the function, and selecting with the mouse now works in all cases (that we could find!)</li>
 <li>Typing &quot;.&quot; to make a field now always works, even if the autocomplete isn't ready</li>
-<li>Bug fix: doubleclicking in text boxes now keeps your cursor there</li>
+<li>Bug fix: double-clicking in text boxes now keeps your cursor there</li>
 <li>Bug fix: in a <code>match</code> with a <code>Just</code> pattern, the variable now has the right type in autocomplete</li>
 <li><code>Error:toString</code> has been deprecated (you can't call functions on type errors)</li>
 </ul>
@@ -498,7 +498,7 @@
 <h2><a class="anchor" aria-hidden="true" id="week-of-2282020"></a><a href="#week-of-2282020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 2/28/2020</h2>
 <ul>
 <li>Backspacing a comma in a list no longer deletes text to the right of the comma</li>
-<li>Fixed an issue where CRONs occasionally continued to run after they were deleted</li>
+<li>Fixed an issue where Crons occasionally continued to run after they were deleted</li>
 <li>Lists now wrap when they pass 120 characters</li>
 <li>A few fixes to traces that caused people to get really stuck:
 <ul>
@@ -549,7 +549,7 @@
 <li>Fixed the documentation for <code>Date::parse</code> (it returns a <code>Result</code>)</li>
 <li>Fixed a few bugs around autocomplete appearing too little or too much</li>
 <li>Fixed a carat placement bug in pipes</li>
-<li>Loaded our font (FiraMono) even if you don't have it installed locally</li>
+<li>Loaded our font (Fira Mono) even if you don't have it installed locally</li>
 <li>Fixed some issues causing the editor to freeze:
 <ul>
 <li>Dragging up to select text</li>
@@ -627,7 +627,7 @@
 <ul>
 <li>The editor loads program data from the server much faster</li>
 <li>Workers run with much less overhead (and so higher throughput)</li>
-<li>CRONs should be running more reliably</li>
+<li>Crons should be running more reliably</li>
 <li>HTTP requests are much much faster</li>
 <li>Programs with lots of functions or traces are especially improved</li>
 <li>Several issues with deleted functions and databases are now resolved</li>
@@ -642,7 +642,7 @@
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="library-changes"></a><a href="#library-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Library changes</h3>
 <ul>
-<li><p>Added <code>JSON::parse_v1</code> which uses a Result in case of error (deprecated JSON::parse_v0)</p></li>
+<li><p>Added <code>JSON::parse_v1</code> which uses a <code>Result</code> in case of error (deprecated <code>JSON::parse_v0</code>)</p></li>
 <li><p>Added <code>Float::sum</code></p>
 <p><img src="/docs/assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png" alt="assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png"></p></li>
 <li><p>More improvements to <code>DB::query</code> and friends</p>
@@ -658,7 +658,7 @@
 <li>Fixed renaming function parameters</li>
 <li>Fixed deleted text persisting when pressing delete</li>
 <li>Large traces are now properly displayed</li>
-<li>Commands (ctrl-) now work more reliably when selecting code</li>
+<li>Commands (Cmd/Ctrl-) now work more reliably when selecting code</li>
 <li>We now allow you to use arbitrary field names
 <ul>
 <li>You can now use a field even if you don't have a trace or the field does not exist in that trace</li>
@@ -672,7 +672,7 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="week-of-1172020"></a><a href="#week-of-1172020" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Week of 1/17/2020</h2>
 <ul>
-<li>We added DB::query_v4, which allows you use arbitrary queries on your Dark datastores
+<li>We added <code>DB::query_v4</code>, which allows you use arbitrary queries on your Dark datastores
 <ul>
 <li>We also published a <a href="https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd">related blog post</a>!</li>
 </ul></li>
@@ -697,7 +697,7 @@
 <li>shift + 2 was not being recognized.</li>
 </ul></li>
 <li>Fixed an issue where pressing delete in a match expression was causing the cursor to be placed incorrectly.</li>
-<li>Stopped errorring when functions are being renamed.</li>
+<li>Stopped erroring when functions are being renamed.</li>
 <li>Fixed an issue where the Omnibox was not clickable.</li>
 <li>Fixed an issue where the minimap was hiding the Dismiss Error button.</li>
 <li>Fixed a short regression where lambda parameters were not shadowing variables of the same name.</li>

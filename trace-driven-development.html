@@ -88,21 +88,21 @@
 <p><img src="/docs/assets/trace/image1.png" alt="assets/trace/image1.png"></p>
 <p>When you create the route you’ll see the recent traces as white dots on the left. You can select a given trace by clicking on it and then you’ll see all expressions evaluated for that request.</p>
 <p><img src="/docs/assets/trace/image12.png" alt="assets/trace/image12.png"></p>
-<p>Similarly to the get request, you can work with the real data from the trace. In this case the handler shows &quot;request.body.info.&quot;</p>
+<p>Similarly to the get request, you can work with the real data from the trace. In this case the handler shows <code>request.body.info</code>.</p>
 <p><img src="/docs/assets/trace/image3.png" alt="assets/trace/image3.png"></p>
 <p>You can select which trace you are using when evaluating your code. Below, there are three recent traces, and we’re seeing the value of “info” for the most recent.</p>
 <p><img src="/docs/assets/trace/image2.png" alt="assets/trace/image2.png"></p>
 <h2><a class="anchor" aria-hidden="true" id="live-values--play-buttons"></a><a href="#live-values--play-buttons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Live Values &amp; Play Buttons</h2>
 <p>Once you have requests/traces, you can use them while writing code.</p>
 <p>When you write code, if you put your cursor into the code, you will always see the result of that code for the selected trace on the left hand side. These left-hand-side values are called &quot;live values.&quot;</p>
-<p>As seen above with “testinfo,” expressions will automatically show you their values to the left if they have no side effects. Below, we see the result of the addition:</p>
+<p>As seen above with <code>testinfo</code>, expressions will automatically show you their values to the left if they have no side effects. Below, we see the result of the addition:</p>
 <p><img src="/docs/assets/trace/image4.png" alt="assets/trace/image4.png"></p>
 <p>When an expression does have side effects (like changing a value in a datastore or calling an external API) it will have a green “play” or “replay” button that allows the developer to <em>choose</em> to run it for the current traces.</p>
-<p>In our earlier request, if we saved &quot;request.body.info&quot; to the variable &quot;request_info,&quot; we could then choose to insert it into a datastore. In this case, there’s a play button to generate a new key, and a second one to insert the information:</p>
+<p>In our earlier request, if we saved <code>request.body.info</code> to the variable <code>request_info</code>, we could then choose to insert it into a datastore. In this case, there’s a play button to generate a new key, and a second one to insert the information:</p>
 <p><img src="/docs/assets/trace/image8.png" alt="assets/trace/image8.png"></p>
-<p>Once you play the <strong>DB::generateKey</strong>, you can see the resulting key, and choose to play the <strong>DB::set</strong> expression:</p>
+<p>Once you play the <code>DB::generateKey</code>, you can see the resulting key, and choose to play the <code>DB::set</code> expression:</p>
 <p><img src="/docs/assets/trace/image10.png" alt="assets/trace/image10.png"></p>
-<p>When you play <strong>DB::set</strong>, you can see the record that was inserted:</p>
+<p>When you play <code>DB::set</code>, you can see the record that was inserted:</p>
 <p><img src="/docs/assets/trace/image6.png" alt="assets/trace/image6.png"></p>
 <h3><a class="anchor" aria-hidden="true" id="replay-entire-trace-button"></a><a href="#replay-entire-trace-button" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Replay Entire Trace Button</h3>
 <p>If you wish to replay the entire trace, you can use the “replay” button next to the hamburger menu in the upper right of the handler.</p>

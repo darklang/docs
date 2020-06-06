@@ -67,7 +67,7 @@
 <p><img src="/docs/assets/reactspa/image15.gif" alt="assets/reactspa/image15.gif"></p>
 <p>All the major handlers work the same way, but the key for many requests is working directly with incoming data.</p>
 <h4><a class="anchor" aria-hidden="true" id="this-guide---office-sign-in"></a><a href="#this-guide---office-sign-in" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>This Guide - Office Sign-in</h4>
-<p>We’re building this app: <a href="https://sample-signin.builtwithdark.com/">https://sample-signin.builtwithdark.com</a>. It’s an <a href="https://github.com/darklang/dark-signin">Office Sign-in SPA</a>, built in React. From the webform, you pick a host, announce your name as the visitor).</p>
+<p>We’re building this app: <a href="https://sample-signin.builtwithdark.com/">https://sample-signin.builtwithdark.com</a>. It’s an <a href="https://github.com/darklang/dark-signin">Office Sign-in SPA</a>, built in React. From the form, you pick a host, announce your name as the visitor).</p>
 <p>The application backend will have an API, data storage, and asynchronous background workers to talk to external APIs (Twilio &amp; Slack). You will need Twilio &amp; Slack tokens, which we explain how to get below during that portion of the tutorial.</p>
 <p>Yours will live at <a href="https://username-signin.builtwithdark.com/">https://USERNAME-signin.builtwithdark.com</a>; to work on it go to <a href="https://darklang.com/a/USERNAME-signin">https://darklang.com/a/USERNAME-signin</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="quick-start"></a><a href="#quick-start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quick start</h3>
@@ -85,9 +85,9 @@ npm run get-dark-cli
 <h4><a class="anchor" aria-hidden="true" id="serving-hosted-assets"></a><a href="#serving-hosted-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Serving Hosted Assets</h4>
 <p>When you go back to Dark, your assets will be available (in this case, our compiled Javascript application).</p>
 <p><img src="/docs/assets/reactspa/image24.png" alt="assets/reactspa/image24.png"></p>
-<p>Now, let’s put the assets at the base of our API by creating a new route named “/” from the omnibox, or the side bar:</p>
+<p>Now, let’s put the assets at the base of our API by creating a new route named <code>/</code> from the omnibox, or the side bar:</p>
 <p><img src="/docs/assets/reactspa/image22.png" alt="assets/reactspa/image22.png"></p>
-<p>Once the route is created, we can specify it’s a “GET” method, and start writing code.</p>
+<p>Once the route is created, we can specify it’s a <code>GET</code> method, and start writing code.</p>
 <p><img src="/docs/assets/reactspa/image2.png" alt="assets/reactspa/image2.png"></p>
 <p><img src="/docs/assets/reactspa/image21.png" alt="assets/reactspa/image21.png"></p>
 <p>The finished API will look like this, and you can open it from the hamburger on the right (the tutorial copy is at <a href="https://sample-signin.builtwithdark.com/">https://sample-signin.builtwithdark.com/</a>, and your copy is at USERNAME-signin.builtwithdark.com/).</p>
@@ -97,52 +97,52 @@ npm run get-dark-cli
 <h4><a class="anchor" aria-hidden="true" id="building-the-api---trace-driven-development"></a><a href="#building-the-api---trace-driven-development" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building the API - Trace Driven Development</h4>
 <p>Now, we can build a backend based on the frontend we have. The react app has two requirements:</p>
 <ul>
-<li>GET Hosts - Providing the list of available hosts.</li>
-<li>POST Visit - Checking in and triggering what needs to happen when a visitor arrives.</li>
+<li><code>GET</code> <code>Hosts</code> - Providing the list of available hosts.</li>
+<li><code>POST</code> <code>Visit</code> - Checking in and triggering what needs to happen when a visitor arrives.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="setting-up-the-hosts-endpoint-api-datastore-repl"></a><a href="#setting-up-the-hosts-endpoint-api-datastore-repl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting Up the /hosts Endpoint (API, Datastore, REPL)</h4>
 <p>From Dark, we can see the failed request.</p>
 <p><img src="/docs/assets/reactspa/image3.png" alt="assets/reactspa/image3.png"></p>
 <p>If you do not see a failed request, verify that your host URL in your frontend matches where you’ve hosted the application.</p>
-<p>Hit the + Button to create the route. The route will have the trace from when we opened the page.</p>
+<p>Hit the <code>+</code> button to create the route. The route will have the trace from when we opened the page.</p>
 <p><img src="/docs/assets/reactspa/image32.png" alt="assets/reactspa/mage32.png"></p>
-<p>Now we have our endpoint (you can try it out by making a list [&quot;name1&quot;, &quot;name2&quot;] and refreshing the React application:</p>
+<p>Now we have our endpoint (you can try it out by making a list <code>[&quot;name1&quot;, &quot;name2&quot;]</code> and refreshing the React application:</p>
 <p><img src="/docs/assets/reactspa/image1.png" alt="assets/reactspa/image1.png"></p>
 <p>But for the longer term, we’ll need other backend components (in particular a datastore) to support the endpoint.</p>
-<p>Create a datastore which lists all hosts. We can create it from the omnibox or the left side bar, and rename it. We can also choose other parameters. In this case, I’ve chosen phone numbers &amp; SlackIDs to send texts and DMs.</p>
+<p>Create a datastore which lists all hosts. We can create it from the omnibox or the left side bar, and rename it. We can also choose other parameters. In this case, I’ve chosen phone numbers and Slack IDs to send texts and DMs.</p>
 <p>Datastores in Dark are key-value based, not relational. This tutorial will include step by step instructions, but more information on datastores is available <a href="/docs/dark-backend-components#persistent-datastores">here</a>.</p>
 <p><img src="/docs/assets/reactspa/image7.png" alt="assets/reactspa/image7.png"></p>
 <p>We can add data to the datastore by using a REPL, an internal tool for the application.</p>
 <p>We can name the REPL (or it will have a default adjective-animal name) and then</p>
 <p><img src="/docs/assets/reactspa/image6.png" alt="assets/reactspa/image6.png"></p>
-<p>When we write DB::set into the handler, we’re given three parameters for the expression. The value, the unique identifier for the record, and the table.</p>
+<p>When we write <code>DB::set</code> into the handler, we’re given three parameters for the expression. The value, the unique identifier for the record, and the table.</p>
 <p>Here’s the finished REPL:</p>
 <p><img src="/docs/assets/reactspa/image14.png" alt="assets/reactspa/image14.png"></p>
-<p>In this case, I chose to define slackid as a variable so I could reuse it as a unique key. You can do this after the fact using option/ctrl-\ on the value to extract a variable, or just rewrite starting from the top.</p>
-<p><strong>Please do not use Ellen’s phone number + SlackID for this, because then you won’t get the interactivity!</strong> Use your own name, phone number, and Slackid. Your slackid is found in your profile in the … menu. You will need permission to install Slack apps on a Slack to do this.</p>
+<p>In this case, I chose to define <code>slackid</code> as a variable so I could reuse it as a unique key. You can do this after the fact using <code>Cmd/Ctrl-\</code> on the value to extract a variable, or just rewrite starting from the top.</p>
+<p><strong>Please do not use Ellen’s phone number + Slack ID for this, because then you won’t get the interactivity!</strong> Use your own name, phone number, and Slack ID. Your Slack ID is found in your profile in the … menu. You will need permission to install Slack apps on a Slack to do this.</p>
 <p><img src="/docs/assets/reactspa/image34.png" alt="assets/reactspa/image34.png"></p>
 <p>Press the “play” button to insert the value into the datastore (<a href="https://docs.google.com/document/d/15u_iXi5FZXPX-hn71NqMH8vMLfNQMw3NMD8EOui3m2g/edit?folder=0AJNj3YlxhMcIUk9PVA#heading=h.582o5mgjxu9a">more on interactivity with play buttons</a>).</p>
 <p>After this, when I select my datastore, I will see that it has locked and has a connection to the REPL, and the number of items/most recent item (if you do not see the DB stats on the left, refreshing the tab should work).</p>
 <p><img src="/docs/assets/reactspa/image19.png" alt="assets/reactspa/image19.png"></p>
 <p>Then, you can update the hosts API to use our data storage.</p>
 <p><img src="/docs/assets/reactspa/image5.png" alt="assets/reactspa/image5.png"></p>
-<p>In this case we did a DB::getAll hosts (and played the request). Then, we took that result (a list of objects) and passed it as a parameter into list::map, then took the name for each host.</p>
-<p>To see how this works, click first on DB::getAll to see the list of objects, then click on \val to see an example object, and then val.name will show you the name field. <a href="/docs/functional-aspects">Functional aspects of Dark</a> has more information on pipelines and maps, but for the tutorial copying this code will work.</p>
+<p>In this case we did a <code>DB::getAll</code> hosts (and played the request). Then, we took that result (a list of objects) and passed it as a parameter into <code>List::map</code>, then took the name for each host.</p>
+<p>To see how this works, click first on <code>DB::getAll</code> to see the list of objects, then click on <code>\val</code> to see an example object, and then <code>val.name</code> will show you the <code>name</code> field. <a href="/docs/functional-aspects">Functional aspects of Dark</a> has more information on pipelines and maps, but for the tutorial copying this code will work.</p>
 <p>If you are stuck:</p>
 <ol>
-<li>Make sure to hit the play button for DB::getAll so you’ll have real data.</li>
-<li>Shift-enter or |&gt; will open the pipeline.</li>
-<li>Typing \ in the “block” field will open the \val operator.</li>
+<li>Make sure to hit the play button for <code>DB::getAll</code> so you’ll have real data.</li>
+<li>Shift-enter or <code>|&gt;</code> will open the pipeline.</li>
+<li>Typing <code>\</code> in the <code>block</code> field will open the <code>\val</code> operator.</li>
 </ol>
 <h4><a class="anchor" aria-hidden="true" id="setting-up-the-visits-endpoint-api-datastore-workers"></a><a href="#setting-up-the-visits-endpoint-api-datastore-workers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up the /visits Endpoint (API, Datastore, Workers)</h4>
 <p>First, we do the same thing and go back to our React application, select a host, then type in a visitor name and hit the “sign in” button. This will result in another 404 that we can create, and see the trace for.</p>
 <p><img src="/docs/assets/reactspa/image26.png" alt="assets/reactspa/image26.png"></p>
-<p>First, we’ll store the visit in a datastore as we did from the REPL when creating hosts. Like before, we can create a new datastore, and then use the DB::set expression.</p>
+<p>First, we’ll store the visit in a datastore as we did from the REPL when creating hosts. Like before, we can create a new datastore, and then use the <code>DB::set</code> expression.</p>
 <p>If we match the datastore schema to our incoming request body, we can do it like this:</p>
 <p><img src="/docs/assets/reactspa/image17.png" alt="assets/reactspa/image17.png"></p>
 <p>If our schema does not match exactly, we can still use our incoming request. Here’s a version that also stores the time of the visit:</p>
 <p><img src="/docs/assets/reactspa/image28.png" alt="assets/reactspa/mage28.png"></p>
-<p>In either case, taking advantage of live values and traces is very helpful. When our cursor is in host, we can see what the trace evaluates to for that value on the lefthand side:</p>
+<p>In either case, taking advantage of live values and traces is very helpful. When our cursor is in host, we can see what the trace evaluates to for that value on the left-hand side:</p>
 <p><img src="/docs/assets/reactspa/image9.png" alt="assets/reactspa/image9.png"></p>
 <p>Then, as before, we can run the outstanding functions and insert this trace into our datastore (in this case, we’re building from this specific trace. In the future, when a new sign in happened, this handler would run at that time).</p>
 <p>If you’re having trouble, make sure you’ve hit the play buttons and do not have red underlines. The finished handler &amp; datastore once you’ve run and inserted the visit will look like this:</p>
@@ -154,28 +154,28 @@ npm run get-dark-cli
 <p><img src="/docs/assets/reactspa/image11.png" alt="assets/reactspa/image11.png"></p>
 <p>Once you have an account, you’ll need a number that can send texts, <a href="https://www.twilio.com/console/phone-numbers/incoming">https://www.twilio.com/console/phone-numbers/incoming</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="slack"></a><a href="#slack" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slack</h4>
-<p>To create a Slack token, go to <a href="https://slack.com/api">https://slack.com/api</a>, create a new application, add a bot from the “basic information” add features &amp; functionality section, and install the app in your workspace. After doing so, you’ll get two tokens back, one of which is the format xoxb-.</p>
+<p>To create a Slack token, go to <a href="https://slack.com/api">https://slack.com/api</a>, create a new application, add a bot from the “basic information” add features &amp; functionality section, and install the app in your workspace. After doing so, you’ll get two tokens back, one of which is the format &quot;xoxb-*&quot;.</p>
 <p><img src="/docs/assets/reactspa/image33.png" alt="assets/reactspa/image33.png"></p>
 <h4><a class="anchor" aria-hidden="true" id="twilio-text-message-integration"></a><a href="#twilio-text-message-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Twilio Text Message Integration</h4>
-<p>Back in our post visits handler, hit enter at the end of the line to write more code (This converts our DB::set action into a statement. Not necessary reading now, but more on implicit returns is in the <a href="/docs/functional-aspects">functional aspects of Dark</a>).</p>
+<p>Back in our post visits handler, hit enter at the end of the line to write more code (This converts our <code>DB::set</code> action into a statement. Not necessary reading now, but more on implicit returns is in the <a href="/docs/functional-aspects">functional aspects of Dark</a>).</p>
 <p>To send information to be used asynchronously (like for API calls) we can use the keyword emit to emit to an async background worker with a queue.</p>
-<p>Here, we emit the request.body (seen in a live value on the left) to a worker named “sendText”. Hitting play will create a 404 for that worker, much like how we created our visit and host endpoints.</p>
+<p>Here, we emit the <code>request.body</code> (seen in a live value on the left) to a worker named <code>sendText</code>. Hitting play will create a 404 for that worker, much like how we created our visit and host endpoints.</p>
 <p><img src="/docs/assets/reactspa/image30.png" alt="assets/reactspa/image30.png"></p>
 <p>When created, the worker will have the event information as a trace:</p>
 <p><img src="/docs/assets/reactspa/image10.png" alt="assets/reactspa/image10.png"></p>
 <p>For this worker, we need to get the host’s phone number and then send them a text. This is very similar to the code we wrote before to get the host’s name.</p>
-<p>In this case we use DB::queryOne to get only one response, and look by hostname. Then we can play the query, and make a variable for the field.</p>
+<p>In this case we use <code>DB::queryOne</code> to get only one response, and look by <code>hostname</code>. Then we can play the query, and make a variable for the field.</p>
 <p><img src="/docs/assets/reactspa/image12.png" alt="assets/reactspa/image12.png"></p>
-<p>The last step is adding the Twilio::sendText function, which takes five parameters. The SID, Token, and number you got from Twilio, the hostphone above, and the message you’d like to send.</p>
+<p>The last step is adding the <code>Twilio::sendText</code> function, which takes five parameters. The <code>SID</code>, <code>Token</code>, and <code>number</code> you got from Twilio, the <code>hostphone</code> above, and the message you’d like to send.</p>
 <p><img src="/docs/assets/reactspa/image20.png" alt="assets/reactspa/image20.png"></p>
 <p>When you’ve added yours, it will look like this (but with your tokens).</p>
 <p><img src="/docs/assets/reactspa/image18.png" alt="assets/reactspa/image18.png"></p>
-<p>When you hit “play” on sendText, you will be able to see the API response as a live value, and should receive a text message.</p>
+<p>When you hit “play” on <code>sendText</code>, you will be able to see the API response as a live value, and should receive a text message.</p>
 <p><img src="/docs/assets/reactspa/image27.png" alt="assets/reactspa/image27.png"></p>
 <h4><a class="anchor" aria-hidden="true" id="slack-dm-integration"></a><a href="#slack-dm-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slack DM Integration</h4>
-<p>We go back to our /visit endpoint to add the Slack worker. We can even copy most of the code from the beginning of the Twilio handler to get our slackid.</p>
+<p>We go back to our <code>/visit</code> endpoint to add the Slack worker. We can even copy most of the code from the beginning of the Twilio handler to get our Slack ID.</p>
 <p><img src="/docs/assets/reactspa/image8.png" alt="assets/reactspa/image8.png"></p>
-<p>For this, we’ll be using Slack’s <a href="https://api.slack.com/methods/chat.postMessage">chat.postMessage API method</a>, which requires the method URL: <a href="https://slack.com/api/chat.postMessage">https://slack.com/api/chat.postMessage</a> and pass a header with a content type and a token.</p>
+<p>For this, we’ll be using Slack’s <a href="https://api.slack.com/methods/chat.postMessage"><code>chat.postMessage</code> API method</a>, which requires the method URL: <a href="https://slack.com/api/chat.postMessage">https://slack.com/api/chat.postMessage</a> and pass a header with a content type and a token.</p>
 <p>There are built in methods for formatting headers in the HttpClient library.</p>
 <p><img src="/docs/assets/reactspa/image31.png" alt="assets/reactspa/image31.png"></p>
 <p>Finally, we have to make the post request, which takes four parameters, including a body.</p>
@@ -184,9 +184,9 @@ npm run get-dark-cli
 <p><img src="/docs/assets/reactspa/image13.png" alt="assets/reactspa/image13.png"></p>
 <p>When you hit play, you should receive a DM from your Slackbot, as well as an inline API response.</p>
 <p><img src="/docs/assets/reactspa/image16.png" alt="assets/reactspa/image16.png"></p>
-<p>If it isn’t working, check that all parameters (including {} in the query field) are correct, and read the API response message to debug.</p>
+<p>If it isn’t working, check that all parameters (including <code>{}</code> in the query field) are correct, and read the API response message to debug.</p>
 <h4><a class="anchor" aria-hidden="true" id="thats-it"></a><a href="#thats-it" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>That’s it!</h4>
-<p>Now you should have a working React application with an API, persistent datastorage, and asynchronous background workers, hosted at <a href="https://username-signin.builtwithdark.com/">https://username-signin.builtwithdark.com</a>. When you go back to your React app and submit a new visit, you should receive both a Slack and a Text.</p>
+<p>Now you should have a working React application with an API, persistent data storage, and asynchronous background workers, hosted at <a href="https://username-signin.builtwithdark.com/">https://username-signin.builtwithdark.com</a>. When you go back to your React app and submit a new visit, you should receive both a Slack and a Text.</p>
 <p>(Interested more in Slack apps? We have <a href="/docs/slack-app-tutorial">a guide</a> for that!)</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/tutorials/tutorial-intro"><span class="arrow-prev">← </span><span>Intro</span></a><a class="docs-next button" href="/docs/tutorials/twilio-app-tutorial"><span>Twilio tutorial</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

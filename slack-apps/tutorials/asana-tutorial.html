@@ -130,7 +130,7 @@
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/taskandproject.png" alt="assets/slack-apps/tutorials/asana-tutorial/taskandproject.png"></p>
 <ol start="5">
-<li>Create a new function called <code>lookUpProjectID</code> and then use <code>DB::queryOne</code> to grab the id based on the projectName.</li>
+<li>Create a new function called <code>lookUpProjectID</code> and then use <code>DB::queryOne</code> to grab the id based on the <code>projectName</code>.</li>
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png" alt="assets/slack-apps/tutorials/asana-tutorial/lookupprojectid.png"></p>
 <ol start="6">
@@ -156,7 +156,7 @@
 </ol>
 <p><img src="/docs/assets/slack-apps/tutorials/asana-tutorial/interactivity.png" alt="assets/slack-apps/tutorials/asana-tutorial/interactivity.png"></p>
 <ol start="3">
-<li><p>Slack uses <code>JSON</code> to generate modals via a framework called Block Kit, even providing a <a href="https://api.slack.com/tools/block-kit-builder">handy Block Kit builder</a>. At this point, it may make sense to pause and create your modal - we'll need the <code>JSON</code> soon. The modal we're going to use has 3 fields: a singleline for the task name, a multiline for the task description and a select for a list of projects.</p></li>
+<li><p>Slack uses <code>JSON</code> to generate modals via a framework called Block Kit, even providing a <a href="https://api.slack.com/tools/block-kit-builder">handy Block Kit builder</a>. At this point, it may make sense to pause and create your modal - we'll need the <code>JSON</code> soon. The modal we're going to use has 3 fields: a single line for the task name, a multiline for the task description and a select for a list of projects.</p></li>
 <li><p>Call your new slash command and grab the 404, as you did in previous steps.</p></li>
 <li><p>Start by setting your <code>triggerId</code> using  <code>request.body.trigger_id</code>:</p></li>
 </ol>
