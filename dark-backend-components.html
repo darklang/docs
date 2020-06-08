@@ -64,12 +64,12 @@
 <li>API Endpoints (REST)</li>
 <li>Background workers (with built in event/queue system)</li>
 <li>Scheduled jobs/cron</li>
-<li>Persistent Datastores (key-value/hashmap)</li>
+<li>Persistent Datastores (key-value/hash-map)</li>
 <li>REPLs (internal tools)</li>
 </ul>
-<p>These components live on your canvas. They are created from the sidebar, or by hitting cmd-k to bring up the omnibox.</p>
+<p>These components live on your canvas. They are created from the sidebar, or by hitting <code>Cmd/Ctrl-k</code> to bring up the omnibox.</p>
 <p><img src="/docs/assets/backend/image2.png" alt="assests/backend/image2.png"></p>
-<p>Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using ctrl-, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.</p>
+<p>Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using <code>Cmd/Ctrl-\</code>, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.</p>
 <p>These components <strong>do not</strong> require you to set up any additional infrastructure or deployment processes. As soon as you create them, they’re available and update as you write code (deployless). Each handler is of one of these types, and has a name as well as additional information. You can see examples of each component <a href="https://darklang.com/a/sample-helloworld">here</a>.</p>
 <p>All of these components support core Dark functionality:</p>
 <ul>
@@ -82,13 +82,13 @@
 <h2><a class="anchor" aria-hidden="true" id="canvas"></a><a href="#canvas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Canvas</h2>
 <p>In Dark, your backend components appear in the browser, on a canvas. These are at: <a href="https://darklang.com/a/username">https://darklang.com/a/username</a> or <a href="https://darklang.com/a/username-canvasname">https://darklang.com/a/username-canvasname</a>. We intend for you to only have one canvas per company or entirely separate project. You can create any canvas by navigating to it.</p>
 <p>Your endpoints would appear at: <a href="https://username-canvasname.builtwithdark.com/route">https://username-canvasname.builtwithdark.com/route</a> (we can help you set up DNS if you want another domain to point at your canvas).</p>
-<p>You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using cmd/ctrl-k).</p>
+<p>You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using <code>Cmd/Ctrl-k</code>).</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="rest-api-endpoints"></a><a href="#rest-api-endpoints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REST API Endpoints</h2>
 <ul>
 <li>If you hit an endpoint that does not exist (see: <a href="/docs/trace-driven-development">Trace Driven Development</a>), the endpoint will appear in the 404 section.</li>
 <li>Support the standard REST protocols (GET, POST, PATCH, DELETE, PUT).</li>
-<li>Accept url parameters (ex: /profile/:username) and appear as variables within the handler.</li>
+<li>Accept URL parameters (ex: /profile/:username) and appear as variables within the handler.</li>
 <li>Have implicit returns (see: <a href="/docs/functional-aspects">Functional Aspects of Dark</a>), and return JSON by default.</li>
 <li>All traces are available as dots on the left hand side. If you do not have a trace selected, you will see a spinner for all live values.</li>
 </ul>

@@ -121,7 +121,7 @@ example:</p>
 <p>If using Angular, you can run the following command:</p>
 <pre><code class="hljs css language-bash">ng build --prod --deploy-url DARK_STATIC_ASSETS_BASE_URL/
 </code></pre>
-<p>If using Vue, you likely want to set PUBLIC_PATH instead:</p>
+<p>If using Vue, you likely want to set <code>PUBLIC_PATH</code> instead:</p>
 <pre><code class="hljs css language-bash">PUBLIC_PATH=DARK_STATIC_ASSETS_BASE_URL
 </code></pre>
 <p>Additionally, Vue assumes relative paths. If you are having an issue with your assets, check to make sure that <code>index.html</code> has not added leading path notation (<code>/PUBLIC_PATH</code>). If it has, you can manually remove and redeploy. More on using this for Vue here:</p>
