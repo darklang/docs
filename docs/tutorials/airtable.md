@@ -29,7 +29,7 @@ This guide will walk you through how you can use Airtable’s API to add or upda
 
 ![assets/airtable/image1.png](assets/airtable/image1.png)
 
-2. Next iterate through the results - held in allData.body.records, and add them to the DB using `DB::set`.
+2. Next iterate through the results - held in `allData.body.records`, and add them to the DB using `DB::set`.
 
 ![assets/airtable/image4.png](assets/airtable/image4.png)
 

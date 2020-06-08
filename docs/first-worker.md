@@ -13,7 +13,7 @@ If we were doing this for real, we might send the data to a 3rd party API over H
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/newworker.png)
 
-2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and reaggregate them.
+2. For the report, we're going to store our data by human readable dates (like `02-27-2020`). First, we'll get the current date, and then get the pieces and re-aggregate them.
 
 ![assets/gettingstarted/humandate.png](assets/gettingstarted/humandate.png)
 

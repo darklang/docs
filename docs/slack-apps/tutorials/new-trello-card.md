@@ -91,7 +91,7 @@ Okay, this is all great, but still has some problems. What if someone forgets to
 
 1. Create a new slash command, just as we did at the beginning but with a different name and Request URL. This allows us to build different functionality around this command without losing anything we did previously. I used `/new-trello-card-modal`.
 
-2. Turn Interactivity on via **Features -> Interactvitity and Shortcuts** and specify a URL for the interaction to be sent to:
+2. Turn Interactivity on via **Features -> Interactivity and Shortcuts** and specify a URL for the interaction to be sent to:
 
 ![assets/slack-apps/tutorials/new-trello-card/interactivity.png](assets/slack-apps/tutorials/new-trello-card/interactivity.png)
 

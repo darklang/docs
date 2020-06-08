@@ -42,7 +42,7 @@ Takes your Slack token as a `String` and returns a `list` of records containing 
 
 ### `oauth`
 
-Takes your Slack clientID (`String`), clientSecret (`String`), token datastore (`Any` - but should be the name of your datastore), and oauth code (`String`) and returns a `Result`. Using this function enables you to easily set up Slack oauth.
+Takes your Slack client ID (`String`), client secret (`String`), token datastore (`Any` - but should be the name of your datastore), and OAuth code (`String`) and returns a `Result`. Using this function enables you to easily set up Slack OAuth.
 
 ![Slack](assets/packages/oauth.png)
 

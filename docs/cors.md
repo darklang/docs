@@ -10,9 +10,9 @@ To support intentional uses of APIs from different domains, browsers have all im
 
 This document addresses the common needs developers run into with respect to CORS when writing an application in Dark. The three primary pieces of CORS this document addresses are:
 
-- Access-Control-Allow-Origin — what domains requests are coming from.
-- Access-Control-Allow-Credentials — using tokens (BearerAuth) or cookies within your application.
-- Access-Control-Allow-Headers & Access-Control-Allow-Methods — specific methods & headers used within the application.
+- `Access-Control-Allow-Origin` — what domains requests are coming from.
+- `Access-Control-Allow-Credentials` — using tokens (`"BearerAuth"`) or cookies within your application.
+- `Access-Control-Allow-Headers` & `Access-Control-Allow-Methods` — specific methods & headers used within the application.
 
 ## Out of the Box CORS Settings in Dark
 
@@ -28,7 +28,7 @@ Today, if you need authentication (including cookies) or special headers you wil
 Some simple requests do not require CORS preflighting. This may be the case if your request meets both of these requirements:
 
 - Method: GET, HEAD, POST
-- Content Type: application/x-www-form-urlencoded, multipart/form-data, and text/plain.
+- Content Type: `application/x-www-form-urlencoded`, `multipart/form-data`, and `text/plain`.
 - There are a couple other details, which you can check here: [detailed explanation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
 
 For simple requests, the CORS settings should be returned within the endpoint. Here is an example of setting the headers for simple request that requires an allowed list of origins:
@@ -63,7 +63,7 @@ To allow credentials, add the `{Access-Control-Allow-Credentials: "true"}` heade
 
 ### CORS with Custom Headers & Methods (Allow-Headers, Allow-Methods)
 
-To allow a custom header, add the: `{Access-Control-Allow-Headers: "headerName"}`` header to your response.
+To allow a custom header, add the: `{Access-Control-Allow-Headers: "headerName"}` header to your response.
 
 ![assets/cors/cors_customheader.png](assets/cors/cors_customheader.png)
 
@@ -71,21 +71,21 @@ To allow a specific method, add the `{Access-Control-Allow-Methods: "method"}` h
 
 ## Application Wide CORS
 
-Dark does not yet have middleware, and preflighting must be added per endpoint. We recommend creating a function of the logic and then calling it from each Options hander.
+Dark does not yet have middleware, and preflighting must be added per endpoint. We recommend creating a function of the logic and then calling it from each `OPTIONS` handler.
 
-(Create a function from your Options handler by selecting the code and hitting `ctrl-\` to extract a function).
+(Create a function from your Options handler by selecting the code and hitting `Cmd/Ctrl-\` to extract a function).
 
 ![assets/cors/cors_canvaswide.png](assets/cors/cors_canvaswide.png)
 
 ![assets/cors/cors_callingcanvaswide.png](assets/cors/cors_callingcanvaswide.png)
 
-If you are using the same CORS settings for th entire canvas, you could make one `OPTIONS` handler for `/:url`.
+If you are using the same CORS settings for the entire canvas, you could make one `OPTIONS` handler for `/:url`.
 
 ## Example Common Errors
 
-"Access to XMLHttpRequest at `https://mydomain.builtwithdark.com/myAPI` from origin `http://localhost:1022` has been blocked by CORS policy: The value of the `Access-Control-Allow-Origin` header in the response must not be the wildcard '\*' when the request's credentials mode is 'include'. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the withCredentials attribute."
+"Access to XMLHttpRequest at `https://mydomain.builtwithdark.com/myAPI` from origin `http://localhost:1022` has been blocked by CORS policy: The value of the `Access-Control-Allow-Origin` header in the response must not be the wildcard '\*' when the request's credentials mode is 'include'. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the `withCredentials` attribute."
 
-- You're trying to make a request from an origin that isn't explicitly whitelisted, which means you may not send along cookies. Use [http://localhost:3000](http://localhost:3000/), [http://localhost:5000](http://localhost:5000/), or [http://localhost:8000](http://localhost:8000/) when testing your frontend locally. If this is a URL from the internet, use the documentation for `Access-Control-Allow-Origin` above.
+- You're trying to make a request from an origin that isn't explicitly allowed, which means you may not send along cookies. Use [http://localhost:3000](http://localhost:3000/), [http://localhost:5000](http://localhost:5000/), or [http://localhost:8000](http://localhost:8000/) when testing your frontend locally. If this is a URL from the internet, use the documentation for `Access-Control-Allow-Origin` above.
 
 "Access to XMLHttpRequest at `https://mydomain.builtwithdark.com/myAPI` from origin `http://localhost:1022` has been blocked by CORS policy: The value of the `Access-Control-Allow-Credentials` header in the response is '' which must be 'true' when the request's credentials mode is 'include'.
 

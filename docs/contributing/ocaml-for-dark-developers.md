@@ -401,7 +401,7 @@ list
 ### Dictionaries
 
 Dictionaries (hash-maps, etc) are typically called `Map` in OCaml, and are
-unforuntately pretty hard to use, which is one reason you won't see them used
+unfortunately pretty hard to use, which is one reason you won't see them used
 as much as they really should be.
 
 ### Unit

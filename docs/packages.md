@@ -12,31 +12,31 @@ In the future, packages will be imported vs. being continually accessible, and c
 
 ## Asana Package
 
-### createProject
+### `createProject`
 
 Takes a name (`String`), notes (`String`), workspace (`String`) and Asana token (`String`) and creates a new project in the specified workspace.
 
 ![createProject](assets/packages/asana/createProject.png)
 
-### createTask
+### `createTask`
 
 Takes a name (`String`), assignee (`String`), project (`String`), notes (`String`) and Asana token (`String`) and creates a new task in the specified workspace. The assignee can be a user gid, email or null.
 
 ![createTask](assets/packages/asana/createTask.png)
 
-### createTaskWithDueDate
+### `createTaskWithDueDate`
 
 Takes a name (`String`), assignee (`String`), due date (`String` - 'YYYY-MM-DD' format) project (`String`), notes (`String`) and Asana token (`String`) and creates a new task in the specified workspace. The assignee can be a user gid, email or null.
 
 ![createTaskWithDueDate](assets/packages/asana/createTaskWithDueDate.png)
 
-### getAllProjects
+### `getAllProjects`
 
 Takes an Asana token as a `String` and returns details of all projects that token has access to.
 
 ![getAllProjects](assets/packages/asana/getAllProjects.png)
 
-### getAllWorkspaces
+### `getAllWorkspaces`
 
 Takes an Asana token as a `String` and returns details of all workspaces that token has access to.
 
@@ -44,9 +44,9 @@ Takes an Asana token as a `String` and returns details of all workspaces that to
 
 ## Mailchimp Package
 
-### subscribe
+### `subscribe`
 
-Takes an audience ID (`String`), email (`String`), first name (`String`), last name (`String`), Mailchimp username (`String`), Mailchimp API key (`String`), and Mailchimp datacenter (`String`) and posts to the [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
+Takes an audience ID (`String`), email (`String`), first name (`String`), last name (`String`), Mailchimp username (`String`), Mailchimp API key (`String`), and Mailchimp data center (`String`) and posts to the [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
 
 ![subscribe](assets/packages/subscribe.png)
 
@@ -56,67 +56,67 @@ For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
 ## Stripe Package
 
-### createCharge
+### `createCharge`
 
 Takes a Stripe key (`String`), the amount for the charge (`String`), the currency (`String`), a customer id (`String`) and a card id (`String`) and creates a charge on that customer's card.
 
 ![createCharge](assets/packages/stripe/createCharge.png)
 
-### createCheckoutSession
+### `createCheckoutSession`
 
-Takes a `list` of line items (amount, name, quanity, price, and currency), a customerId (`Any`), a stripeKey (`String`), a cancelUrl (`String`) and a successUrl (`String`).
+Takes a `list` of line items (amount, name, quantity, price, and currency), a customer ID (`Any`), a stripe key (`String`), a `cancelUrl` (`String`) and a `successUrl` (`String`).
 
 ![createCheckout](assets/packages/stripe/createCheckout.png)
 
-### createCustomer
+### `createCustomer`
 
 Takes a Stripe key (`String`), a description (`String`), an email address (`String`), a name (`String`) and a phone number (`String`) and creates a customer in Stripe.
 
 ![createCustomer](assets/packages/stripe/createCustomer.png)
 
-### createFullRefund
+### `createFullRefund`
 
 Takes a Stripe key (`String`) and charge id (`String`) and issues a full refund for that charge.
 
 ![createFullRefund](assets/packages/stripe/createFullRefund.png)
 
-### createPartialRefund
+### `createPartialRefund`
 
-Takes a Stripe key (`String`), charge id (`String`) and amount (`String`) and issues a refund of that amnount to the charge.
+Takes a Stripe key (`String`), charge id (`String`) and amount (`String`) and issues a refund of that amount to the charge.
 
 ![createPartialRefund](assets/packages/stripe/createPartialRefund.png)
 
-### getAllCharges
+### `getAllCharges`
 
 Takes a Stripe key (`String`) and returns all charges for that account.
 
 ![getAllCharges](assets/packages/stripe/getAllCharges.png)
 
-### getAllCustomers
+### `getAllCustomers`
 
 Takes a Stripe key (`String`) and returns all customers for that account.
 
 ![getAllCustomers](assets/packages/stripe/getAllCustomers.png)
 
-### getAllTransactions
+### `getAllTransactions`
 
 Takes a Stripe key (`String`) and returns all transactions for that account.
 
 ![getAllTransactions](assets/packages/stripe/getAllTransactions.png)
 
-### getAvailableBalance
+### `getAvailableBalance`
 
 Takes a Stripe key (`String`) and returns the available balance for that account.
 
 ![getAvailableBalance](assets/packages/stripe/getAvailableBalance.png)
 
-### getCustomer
+### `getCustomer`
 
 Takes a Stripe key (`String`) and a customer id (`String`) and returns information about that customer.
 
 ![getCustomer](assets/packages/stripe/getCustomer.png)
 
-### getPendingBalance
+### `getPendingBalance`
 
 Takes a Stripe key (`String`) and returns the pending balance for that account.
 
@@ -124,51 +124,51 @@ Takes a Stripe key (`String`) and returns the pending balance for that account.
 
 ## Trello Package
 
-### addBoardstoDB
+### `addBoardstoDB`
 
-Takes a `list` of boards and a boardDatastore. Adds the name and id of each of the boards to the datastore.
+Takes a `list` of boards and a board Datastore. Adds the name and ID of each of the boards to the datastore.
 
 ![addBoardstoDB](assets/packages/trello/addBoardsToDB.png)
 
-### addListstoDB
+### `addListstoDB`
 
-Takes a `list` of Trello lists and a listDatastore. Adds the name and id of each of the lists to the datastore.
+Takes a `list` of Trello lists and a list Datastore. Adds the name and id of each of the lists to the datastore.
 
 ![addListstoDB](assets/packages/trello/addListsToDB.png)
 
-### createNewCard
+### `createNewCard`
 
-Takes a listID (`String`), trelloKey (`String`), trelloToken (`String`), name (`String`) and description (`String`). Adds card with that name and description to the list specified.
+Takes a `listID` (`String`), `trelloKey` (`String`), `trelloToken` (`String`), name (`String`) and description (`String`). Adds card with that name and description to the list specified.
 
 ![createNewCard](assets/packages/trello/createNewCard.png)
 
-### getAllBoardsWithDetails
+### `getAllBoardsWithDetails`
 
-Takes a trelloOrgID (`String`), trelloKey (`String`) and trelloToken (`String`) and returns all boards for that Trello org.
+Takes a `trelloOrgID` (`String`), `trelloKey` (`String`) and `trelloToken` (`String`) and returns all boards for that Trello org.
 
 ![getAllBoardsWithDetails](assets/packages/trello/getAllBoardsWithDetails.png)
 
-### getAllListsWithDetails
+### `getAllListsWithDetails`
 
-Takes a trelloKey (`String`), trelloToken (`String`) and Trello board id (`String`) and returns all lists for that Trello board.
+Takes a `trelloKey` (`String`), `trelloToken` (`String`) and Trello board id (`String`) and returns all lists for that Trello board.
 
 ![getAllListsWithDetails](assets/packages/trello/getAllListsWithDetails.png)
 
-### getAllOpenCardsForMemberWithDetails
+### `getAllOpenCardsForMemberWithDetails`
 
-Takes a trelloKey (`String`), trelloToken (`String`) and username (`String`) and returns all open cards for that Trello user.
+Takes a `trelloKey` (`String`), `trelloToken` (`String`) and username (`String`) and returns all open cards for that Trello user.
 
 ![getAllOpenCardsForMembersWithDetails](assets/packages/trello/getAllOpenCardsForMembersWithDetails.png)
 
-### lookUpBoardID
+### `lookUpBoardID`
 
-Takes a boardDatastore (containing names & ids) and a name (`String`) and returns the board id matching the name.
+Takes a board Datastore (containing names & ids) and a name (`String`) and returns the board id matching the name.
 
 ![lookUpBoardID](assets/packages/trello/lookUpBoardID.png)
 
-### lookUpListID
+### `lookUpListID`
 
-Takes a listDatastore (containing names & ids) and a name (`String`) and returns the list id matching the name.
+Takes a list Datastore (containing names & ids) and a name (`String`) and returns the list id matching the name.
 
 ![lookUpListID](assets/packages/trello/lookUpListID.png)
 

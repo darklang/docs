@@ -241,7 +241,7 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our 
 
 ## Week of 4/3/2020
 
-- New Dark accounts are now auto-populated with a username-gettingstarted canvas that demonstrates basic Dark functionality.
+- New Dark accounts are now auto-populated with a USERNAME-gettingstarted canvas that demonstrates basic Dark functionality.
 - Even more functions have been added to the standard library:
   - `List::indexedMap`
   - `Math::pi`
@@ -422,7 +422,7 @@ We added a bunch of improved documentation, including:
 
 ![Float addition showing error message](assets/changelog/Mar6/floaterror.png)
 
-- When you try to use invalid canvas names (eg, with capital letters), we now error much better
+- When you try to use invalid canvas names (e.g. with capital letters), we now error much better
 - When backspacing function names, we now delete the version automatically, which makes it clearer what's being deleted.
 
 ## Week of 2/28/2020
@@ -589,11 +589,11 @@ We added a bunch of improved documentation, including:
 
 - Fixed up/down arrow on fields
 - Single entry autocompletes now work
-- Cmd-arrow with shift now maintains selection
+- `Cmd-arrow` with shift now maintains selection
 - Fixed renaming function parameters
 - Fixed deleted text persisting when pressing delete
 - Large traces are now properly displayed
-- Commands (Cmd/Ctrl-\) now work more reliably when selecting code
+- Commands (`Cmd/Ctrl-\`) now work more reliably when selecting code
 - We now allow you to use arbitrary field names
   - You can now use a field even if you don't have a trace or the field does not exist in that trace
 - We've automatically disabled Grammarly, as it was messing with our DOM
@@ -633,5 +633,5 @@ We added a bunch of improved documentation, including:
 - Deprecated the `Date::sub` function and replaced it with `Date::subtract`.
 - Changed the behavior of new handler placement - they no longer appear directly on top of one another.
 - Changed the behavior of partials - they are now abandoned when clicking away from a handler.
-- Added the `copy-request-as-curl` command for `HttpClient::` functions - use ctrl-\ to activate
+- Added the `copy-request-as-curl` command for `HttpClient::` functions - use `Ctrl-\` to activate
 - Add `Twitter::urlencode` and `Crypto::sha1mac` to support talking to the Twitter API

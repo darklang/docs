@@ -9,14 +9,14 @@ When building in Dark, you are able to create five major backend components, cal
 - API Endpoints (REST)
 - Background workers (with built in event/queue system)
 - Scheduled jobs/cron
-- Persistent Datastores (key-value/hashmap)
+- Persistent Datastores (key-value/hash-map)
 - REPLs (internal tools)
 
-These components live on your canvas. They are created from the sidebar, or by hitting cmd-k to bring up the omnibox.
+These components live on your canvas. They are created from the sidebar, or by hitting `Cmd/Ctrl-k` to bring up the omnibox.
 
 ![assests/backend/image2.png](assets/backend/image2.png)
 
-Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using ctrl-\, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.
+Dark code is meant to be written in these handlers. We always recommend writing code within these components, and then extracting that code into a function, using `Cmd/Ctrl-\`, as needed. Code written in Dark is expression based, and as you add an expression it will automatically create blanks for the parameters it takes. If you delete an expression, the parameters will also be removed.
 
 These components **do not** require you to set up any additional infrastructure or deployment processes. As soon as you create them, they’re available and update as you write code (deployless). Each handler is of one of these types, and has a name as well as additional information. You can see examples of each component [here](https://darklang.com/a/sample-helloworld).
 
@@ -36,7 +36,7 @@ In Dark, your backend components appear in the browser, on a canvas. These are a
 
 Your endpoints would appear at: [https://username-canvasname.builtwithdark.com/route](https://username-canvasname.builtwithdark.com/route) (we can help you set up DNS if you want another domain to point at your canvas).
 
-You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using cmd/ctrl-k).
+You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using `Cmd/Ctrl-k`).
 
 ---
 
@@ -44,7 +44,7 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox (acces
 
 - If you hit an endpoint that does not exist (see: [Trace Driven Development](trace-driven-development.md)), the endpoint will appear in the 404 section.
 - Support the standard REST protocols (GET, POST, PATCH, DELETE, PUT).
-- Accept url parameters (ex: /profile/:username) and appear as variables within the handler.
+- Accept URL parameters (ex: /profile/:username) and appear as variables within the handler.
 - Have implicit returns (see: [Functional Aspects of Dark](functional-aspects.md)), and return JSON by default.
 - All traces are available as dots on the left hand side. If you do not have a trace selected, you will see a spinner for all live values.
 
