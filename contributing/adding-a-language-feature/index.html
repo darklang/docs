@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Adding a language feature · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**Coming soon**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Adding a language feature · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="**Coming soon**"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Adding a language feature · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="There are a number of [language features that we&#x27;d like to add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature) to Dark. While there a quite a few steps involved in adding a language feature, they&#x27;re typically relatively straightforward to add once you&#x27;ve figured out the Dark codebase."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Adding a language feature · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="There are a number of [language features that we&#x27;d like to add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature) to Dark. While there a quite a few steps involved in adding a language feature, they&#x27;re typically relatively straightforward to add once you&#x27;ve figured out the Dark codebase."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments); }
               gtag('js', new Date());
@@ -59,8 +59,126 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Adding a language feature</h1></header><article><div><span><p><strong>Coming soon</strong></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-function"><span class="arrow-prev">← </span><span>Adding a built-in function</span></a><a class="docs-next button" href="/docs/contributing/adding-a-refactoring"><span>Adding a refactoring</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Adding a language feature</h1></header><article><div><span><p>There are a number of <a href="https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature">language features that we'd like to add</a> to Dark. While there a quite a few steps involved in adding a language feature, they're typically relatively straightforward to add once you've figured out the Dark codebase.</p>
+<p>It's important to note that the most important part of a language
+feature is getting agreement on what it does. We typically write specs
+for features, and ensure that we have resolved how edge cases should
+work, as well as ensuring it meshes with the rest of the language and
+language definition. If you're interested in creating a language
+feature, you should engage with Paul Biggar early and often.</p>
+<h3><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h3>
+<p>Most language features will need to be added to our language definition. The language definition is <code>FluidExpression.t</code>, which is a Dark expression (which in turn contains other Dark expressions). This is commonly known as an &quot;Abstract Syntax Tree&quot; (or AST).</p>
+<p>At time of writing, the definition of <code>FluidExpression.t</code> was</p>
+<pre><code class="hljs">type t =
+  | EInteger <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span>
+  | EBool <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * bool
+  | EString <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span>
+  | EFloat <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * <span class="hljs-built_in">string</span>
+  | ENull <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span>
+  | EBlank <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span>
+  | ELet <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t * t
+  | EIf <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * t * t * t
+  | EBinOp <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t * t * sendToRail
+  | ELambda <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> <span class="hljs-built_in">list</span> * t
+  | EFieldAccess <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * t * <span class="hljs-built_in">string</span>
+  | EVariable <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span>
+  | EFnCall <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t <span class="hljs-built_in">list</span> * sendToRail
+  <span class="hljs-comment">(* An EPartial holds the intermediate state of user-input when changing from
+   * one expression to another. The [string] is the exact text that has been
+   * entered and the [t] is the old expression that is being changed. *)</span>
+   
+  | EPartial <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t
+  <span class="hljs-comment">(* An ERightPartial is used while in the process of adding an EBinOp,
+   * allowing for typing multiple characters as operators (eg, "++") after an
+   * expression. The [string] holds the typed characters while the [t] holds
+   * the LHS of the binop. *)</span>
+  | ERightPartial <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t
+  | EList <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * t <span class="hljs-built_in">list</span>
+  | ERecord <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * (<span class="hljs-built_in">string</span> * t) <span class="hljs-built_in">list</span>
+  | EPipe <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * t <span class="hljs-built_in">list</span>
+  | EConstructor <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t <span class="hljs-built_in">list</span>
+  | EMatch <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * t * (FluidPattern.t * t) <span class="hljs-built_in">list</span>
+  <span class="hljs-comment">(* Placeholder that indicates the target of the Thread. May be movable at
+   * some point *)</span>
+  | EPipeTarget <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span>
+  <span class="hljs-comment">(* EFeatureFlag: id, flagName, condExpr, caseAExpr, caseBExpr *)</span>
+  | EFeatureFlag <span class="hljs-keyword">of</span> <span class="hljs-built_in">id</span> * <span class="hljs-built_in">string</span> * t * t * t
+</code></pre>
+<p>This definition is shared between client and backend.</p>
+<p>The backend does the work of executing the expressions, and saving
+programs. The execution engine is also compiled to Javascript in order
+to be available in the client.</p>
+<p>The client is responsible for editing programs. Typically, adding a
+language feature means adding support for it to the many
+transformations that the client does, including refactorings,
+renamings, etc. It will also need support in the &quot;Fluid&quot; editor, which
+is where users actually type code.</p>
+<h2><a class="anchor" aria-hidden="true" id="backend"></a><a href="#backend" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Backend</h2>
+<h3><a class="anchor" aria-hidden="true" id="execution"></a><a href="#execution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execution</h3>
+<p>The execution of the language is defined in <code>backend/libexecution/ast.ml:exec</code>. <code>exec</code> does the work of converting an expressions into a <code>dval</code> -- a Dark value.</p>
+<p>For example, <code>DInt</code> is the run-time value of an integer, which <code>EInteger</code> is the expression that represents an integer. <code>exec</code> converts from an <code>EInteger</code> that the programmer added to their program, into a <code>DInt</code> that can be operated on (added, subtracted, etc).</p>
+<p>As another example, an <code>ELet</code> is a <code>let</code> statement in Dark. When you see</p>
+<pre><code class="hljs">let x = <span class="hljs-number">6</span>
+x + <span class="hljs-number">4</span>
+</code></pre>
+<p>you have an <code>ELet (&quot;x&quot;, EInteger 6, EBinOp (&quot;+&quot;, EVariable &quot;x&quot;, EInteger 4))</code>. When we execute this <code>ELet</code>, we first execute the <code>6</code>,
+creating a <code>dval</code> of <code>DInt 6</code>, which we then store as <code>x</code> in a &quot;symbol
+table&quot;. We then execute <code>x + 4</code> using the symbol table with our known
+value of <code>x = 6</code>.</p>
+<p><code>dval</code>s are defined in <code>backend/libexecution/types.ml</code> and expressions
+are defined in <code>libshared/fluid_expression.ml</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="serialization"></a><a href="#serialization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Serialization</h3>
+<p>The other main purpose of the backend is to save programs. Dark uses a fast binary serialization format, derived directly from expressions. This means you do not have to do anything special to allow users to save your new expression.</p>
+<h4><a class="anchor" aria-hidden="true" id="expr"></a><a href="#expr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>expr</h4>
+<p>Well, not exactly. We currently actually serialize an old format, called <code>expr</code>. We convert between <code>expr</code> and <code>FluidExpression.t</code> in order to save and execute. The client only uses <code>FluidExpression.t</code>, however.</p>
+<h4><a class="anchor" aria-hidden="true" id="expressions-are-add-only"></a><a href="#expressions-are-add-only" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions are add-only</h4>
+<p>The automatic serialization has a caveat: the serializer has some rules
+to maintain compatibility with existing Dark programs. You can add new
+expression types it, but you can't change existing ones. This means
+that if you want to change a language feature to make it more powerful,
+you need to instead add a new version of it, rather than editing the
+current version.</p>
+<p>We do have the ability to remove old formats, but it is a little challenging to coordinate. Whenever we do this, it is always after the new replacement feature is live and stable, and then we go in and remove the old one.</p>
+<p>These rules apply to anything using the <code>bin_io</code> derivers, which currently includes both <code>expr</code>s and <code>tipe</code>s.</p>
+<h2><a class="anchor" aria-hidden="true" id="editor-support"></a><a href="#editor-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editor support</h2>
+<p>The editor is where the developer actually creates code.</p>
+<h3><a class="anchor" aria-hidden="true" id="fluid-editor"></a><a href="#fluid-editor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fluid Editor</h3>
+<p>The &quot;fluid&quot; editor is the subpart of the client where users type code.
+It handles keypresses and the AST transformations that they cause.</p>
+<p>For example: if you have the code (with the cursor denoted as <code>|</code>):</p>
+<pre><code class="hljs">let x = |<span class="hljs-number">6</span>
+x + <span class="hljs-number">4</span>
+</code></pre>
+<p>Pressing <code>1</code> with your cursor here makes the editor look up the current
+expression, and add a <code>1</code> to the front of it. Here that converts <code>6</code>
+into <code>16</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="adding-tokens"></a><a href="#adding-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding tokens</h4>
+<p>The FluidEditor works as a sort of &quot;reverse parser&quot;. Instead of reading text and figuring out meaning, it instead takes the AST and pretty-prints it into a set of <code>FluidToken</code>s. These tokens are stringified, showing the user textual code.</p>
+<p>The tokens also tied the current edit back to an expression. In the example above, the cursor is at the start of a <code>TInteger</code> token, which ties the current position back to the <code>EInteger</code> expression that defines it.</p>
+<p>To add a language feature, you will often need to add new tokens. You
+will occasionally reuse some tokens, but most features use dedicated
+tokens so that there's no ambiguity.</p>
+<p>You add tokens in <code>client/src/core/Types.ml</code> and keystrokes are handled
+in <code>client/src/fluid/Fluid.ml:updateKey</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="ast-transformations"></a><a href="#ast-transformations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AST transformations</h3>
+<p>Once you have added the expression and the tokens, you will need to
+support existing features. Mostly, this means that existing AST
+transformations and refactorings should continue to work. These are
+typically either explicit (via the command palette) or implicit (by
+renaming a variable).</p>
+<p>You will be able to find almost everywhere that this is needed when you
+add the definition to <code>FluidExpression.t</code>. The OCaml compiler will warn
+you at every place that you have not handled it.</p>
+<h2><a class="anchor" aria-hidden="true" id="clientbackend-communication"></a><a href="#clientbackend-communication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client/backend communication</h2>
+<p>The client sends ASTs to the backend to save and to run the programs in
+the cloud. The client also fetches expressions from the backend to
+display and edit them. It does this over JSON.</p>
+<p>The backend has automatic JSON serializers and deserializers, using the
+<code>yojson</code> derivers. The client has hand-written serializers in
+<code>client/src/core/Encoders.ml</code> and <code>client/src/core/Decoders.ml</code>. The
+OCaml compiler will prompt you to add new encoders, but not decoders.
+Writing new ones is straightforward by following other examples there.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-function"><span class="arrow-prev">← </span><span>Adding a built-in function</span></a><a class="docs-next button" href="/docs/contributing/adding-a-refactoring"><span>Adding a refactoring</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#backend">Backend</a><ul class="toc-headings"><li><a href="#execution">Execution</a></li><li><a href="#serialization">Serialization</a></li></ul></li><li><a href="#editor-support">Editor support</a><ul class="toc-headings"><li><a href="#fluid-editor">Fluid Editor</a></li><li><a href="#ast-transformations">AST transformations</a></li></ul></li><li><a href="#clientbackend-communication">Client/backend communication</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
