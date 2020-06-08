@@ -129,6 +129,8 @@ datastore
 datastores
 denormalize
 deployless
+derivers
+deserializers
 destructure
 destructuring
 dev
@@ -152,6 +154,7 @@ incomplete
 incompletes
 interop
 ints
+keypresses
 lifecycle
 localhost
 macOS
@@ -175,12 +178,15 @@ ramping
 refactoring
 refactorings
 reformats
+renamings
 repo
 restdb.io
 rollout
 runtime
 serializer
+serializers
 slugify
+stringified
 subdomain
 subexpression
 subexpressions
@@ -206,7 +212,6 @@ webhooks
 webserver
 websockets
 wildcard
-
 
 - ../docs/your-first.md
 10m 
