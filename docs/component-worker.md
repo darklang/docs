@@ -32,43 +32,43 @@ Creating a Worker from a 404 may result in a delay when executing the first mess
 
 This is all quite confusing, so for now we recommend creating the Worker and completing its code first, before emitting events to it.
 
-## F.A.Q.
+## FAQ
 
-#### How do I access the data from `emit` in the worker?
+### How do I access the data from `emit` in the worker?
 
 The data from the `emit` is available in a variable called `event` from within the worker. Its type will be whatever was passed to `emit` (eg, `emit [1, 2] “my-worker”` will have `event` = `[1, 2]`
 
-#### Do workers execute in parallel?
+### Do workers execute in parallel?
 
 Yes. Workers across a canvas execute in parallel, and multiple messages for a worker may be processed in parallel.
 
-#### Can I control the concurrency of my worker?
+### Can I control the concurrency of my worker?
 
 No. If multiple messages are enqueued for a worker, the Dark platform may execute them concurrently. We intend to eventually add controls for managing concurrency.
 
-#### Can I un-enqueue a message?
+### Can I un-enqueue a message?
 
 No, this is not currently possible. An alternative would be to give each message a unique UUID, then create a datastore of message IDs to ignore, checking it within your worker.
 
-#### Do workers guarantee exactly-once delivery?
+### Do workers guarantee exactly-once delivery?
 
 No. Messages have at-least-once delivery semantics. Adding a unique UUID to every message can be useful in keeping track of which messages have been seen by your worker already.
 
-#### How do I wait for a worker to finish?
+### How do I wait for a worker to finish?
 
 The code that calls `emit` has no way to know when a worker has completed. If you need a synchronous call, consider a function instead.
 
-#### Can I call `emit` from a Worker?
+### Can I call `emit` from a Worker?
 
 Yes. This can be useful to do fan-out of work or batch processing of data.
 
 In fact, you can `emit` to the same Worker that's processing the message. Just be careful that you don't cause a infinite loop or positive feedback loop. (We are likely to disable your Worker if this happens, as it can cause instability of the entire worker infrastructure right now.)
 
-#### How can I tell how long a message was enqueued?
+### How can I tell how long a message was enqueued?
 
 We currently don’t have a way to get this information directly. You can calculate this yourself by adding a timestamp to each message when you call `emit`.
 
-#### Why does my worker show pending messages that aren’t being processed?
+### Why does my worker show pending messages that aren’t being processed?
 
 Your worker is paused and will not process messages while paused. Click the play button at the top left of the worker to resume processing.
 
@@ -76,11 +76,11 @@ Your worker is paused and will not process messages while paused. Click the play
 
 Alternatively, you emitted messages to a non-existent Worker and then created it from the 404 section (see the warning above in **Creating a Worker**). Complete the code in the handler and wait up to 5 minutes for the message to be re-processed.
 
-#### What happens when a message fails?
+### What happens when a message fails?
 
 Nothing special. A message that causes a worker to throw a runtime error (for example by returning Incomplete or having a function call go to the Error Rail) will be silently ignored and the worker will process the next message. We plan to eventually add more error handling capabilities such as automatic retries and dead-letter-queues.
 
-#### How long will it take my worker to execute?
+### How long will it take my worker to execute?
 
 Your Worker executes code the same as any other Dark component. For example, making external HTTP calls will cause execution to take longer.
 
