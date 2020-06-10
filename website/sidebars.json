@@ -11,7 +11,9 @@
       "dark-backend-components",
       "trace-driven-development",
       "structured-editing",
-      "error-handling"
+      "error-handling",
+      "component-worker",
+      "component-cron"
     ],
     "Language": [
       "languageoverview",
