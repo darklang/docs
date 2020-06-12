@@ -28,7 +28,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - `List::dropWhile` ([Thomas Alcala Schneider](https://github.com/ThomasMarcel))
 - The following contributors wrote and updated tests and made CSS improvements: [billy1kaplan](https://github.com/billy1kaplan), [Brian Chen](https://github.com/br1anchen)
 
-## Documentation
+### Documentation
 
 - Detailed documentation is now available around [workers](https://darklang.github.io/docs/component-worker) and [crons](https://darklang.github.io/docs/component-cron)
 - We've begun to create short videos explaining Dark concepts. They will be added throughout the documentation, and a [full playlist](https://www.youtube.com/playlist?list=PLpcgNq_UYVoNZVoPEdqoNVemixjkrye83) is available on our [Youtube channel](https://www.youtube.com/channel/UCYUv1H0ENhZa4lNjOL-EiYg/featured).
