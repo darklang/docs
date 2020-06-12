@@ -21,9 +21,9 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - Tips are now available in the function space.
   - More helpful links have been added to the avatar menu.
 
-- The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand))
+- The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand)
 - The newest version of a function will now always appear first in autocomplete ([Felipe Milani](https://github.com/fmilani))
-* Standard library functions added:
+- Standard library functions added:
   - `Date::atStartOfDay` ([Michael Wizner](https://github.com/mwz))
   - `Date::today` ([Thomas Alcala Schneider](https://github.com/ThomasMarcel))
   - `List::dropWhile` ([Thomas Alcala Schneider](https://github.com/ThomasMarcel))
