@@ -23,6 +23,8 @@ You query datastores in four ways:
 
 Datastores return one or many results, with or without keys.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_LqlHR55GZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Keys
 
 The schema is the same for all of these key examples:
@@ -95,6 +97,8 @@ The key is a good way to be able to find information in the datastore. DB::get f
 - `DB::get`
 - `DB::getMany`
 - `DB::getManywithKeys`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qNA8FzGkdWI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Querying by record field, `DB::queryExactField`
 

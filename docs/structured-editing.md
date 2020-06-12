@@ -147,3 +147,5 @@ This includes the common refactoring tools:
 - Wrap the current expression in a let (insert let here)
 - Insert a let-expression above this one
 - Wrap an expression in an if, if-then, or if-else
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A39iZCaqX-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
