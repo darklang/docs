@@ -38,6 +38,8 @@ Your endpoints would appear at: [https://username-canvasname.builtwithdark.com/r
 
 You can navigate the canvas via the left-hand sidebar, or via the omnibox (accessible using `Cmd/Ctrl-k`).
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lJaIy6Z2V_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 
 ## REST API Endpoints

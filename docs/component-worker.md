@@ -10,6 +10,8 @@ Dark supports doing work asynchronously outside the context of an HTTP handler u
 
 ![basic worker](assets/workers/worker.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JpfZIdde_5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Worker Basics
 
 - Workers will automatically process each message. The `event` data passed to `emit` is available in the Worker as a special variable `event`. This can be of any type, but it is often convenient to use a Dict holding many other values.

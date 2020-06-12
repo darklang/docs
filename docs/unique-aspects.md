@@ -23,6 +23,8 @@ Replay an entire handler for the selected trace (including all functions within 
 
 ![assets/unique/replayhandler.png](assets/unique/replayhandler.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nhShq-HCFxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Function Versioning
 
 You can see that many standard library items are labeled “`v3`” or “`v1`” in the editor. These refer to the version of the function. When you start a new canvas, you will always have the latest versions. If we upgrade, you’ll have the choice to do so, but can continue to use the old ones.

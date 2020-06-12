@@ -8,6 +8,8 @@ Dark supports scheduled jobs via a Cron component. Use a Cron when you want to s
 
 ![Cron Intervals](assets/cron/intervals.png)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ffObUyM1jc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Cron Basics
 
 - Crons run automatically once per interval. (Note: due to the distributed nature of the Dark platform, it's possible that a Cron may erroneously run more than once per interval.)
