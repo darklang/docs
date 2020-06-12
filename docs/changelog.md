@@ -12,21 +12,22 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 
   ![assets/changelog/June12/secrets.png](assets/changelog/June12/secrets.png)
 
+* Onboarding and tooltip updates
 
-- Onboarding and tooltip updates
   - The styling of our tooltips and initial tutorial has been updated
 
-   ![assets/changelog/June12/tooltips.png](assets/changelog/June12/tooltips.png)
+  ![assets/changelog/June12/tooltips.png](assets/changelog/June12/tooltips.png)
 
   - Tips are now available in the function space.
   - More helpful links have been added to the avatar menu.
-- The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand))
-- The newest version of a function will now always appear first in autocomplete ([Felipe Milani](https://github.com/fmilani))
-- Standard library functions added:
+
+* The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand))
+* The newest version of a function will now always appear first in autocomplete ([Felipe Milani](https://github.com/fmilani))
+* Standard library functions added:
   - `Date::atStartOfDay` ([Michael Wizner](https://github.com/mwz))
   - `Date::today` ([Thomas Alcala Schneider](https://github.com/ThomasMarcel))
   - `List::dropWhile` ([Thomas Alcala Schneider](https://github.com/ThomasMarcel))
-- The following contributors wrote and updated tests and made CSS improvements: [billy1kaplan](https://github.com/billy1kaplan), [Brian Chen](https://github.com/br1anchen)
+* The following contributors wrote and updated tests and made CSS improvements: [billy1kaplan](https://github.com/billy1kaplan), [Brian Chen](https://github.com/br1anchen)
 
 ### Documentation
 
