@@ -6,6 +6,8 @@ sidebar_label: Trace Driven Development
 
 Dark flows from end user experience through to the backend components. If you would like to see any of the code from this document, the sample canvas that goes along with it is: [https://darklang.com/a/sample-introtodark](https://darklang.com/a/sample-introtodark#handler=1175293748)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LcQyAfKLLT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Sending Requests to Dark
 
 Send requests to Dark _before writing code_. There are several ways to do this:
