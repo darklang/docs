@@ -131,7 +131,7 @@ automatically returns the result of that expression.
 ### Standard library
 
 Most of the code in Dark uses
-[Tablecloth](https://github.com/darklang/tablecloth), which has the same 
+[Tablecloth](https://github.com/darklang/tablecloth), which has the same
 [interface](https://github.com/darklang/tablecloth/blob/master/bucklescript/src/tablecloth.ml)
 for Bucklescript and native OCaml.
 
