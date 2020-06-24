@@ -131,8 +131,8 @@ automatically returns the result of that expression.
 ### Standard library
 
 Most of the code in Dark uses
-[Tablecloth](https://darklang.com/darklang/tablecloth), which has the same
-[interface](https://github.com/darklang/tablecloth/blob/master/bucklescript/src/tablecloth.mli)
+[Tablecloth](https://github.com/darklang/tablecloth), which has the same 
+[interface](https://github.com/darklang/tablecloth/blob/master/bucklescript/src/tablecloth.ml)
 for Bucklescript and native OCaml.
 
 A lot of the backend uses Core, one of the most popular standard libraries for
