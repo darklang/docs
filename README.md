@@ -34,19 +34,19 @@ $ npm start
 
 ## Project Structure
 
-There are two main branches:
+There are two important branches:
 
-* master
+* main
 * gh-pages
 
-The website is hosted from `gh-pages`, but everything there is auto-generated from `master`.
-When we want to make changes, we create a new branch off `master` with the format `username/my-change` and make as many commits as we need to.
-Then, we create a new pull request from that branch with `master` as the base. When the pull request is merged, CircleCI will automatically
-deploy the changes from `master` to the website (it runs a script against the source files on `master` and deploys the generated website to `gh-pages`).
+The website is hosted from `gh-pages`, but everything there is auto-generated from `main`.
+When we want to make changes, we create a new branch off `main` with the format `username/my-change` and make as many commits as we need to.
+Then, we create a new pull request from that branch with `main` as the base. When the pull request is merged, CircleCI will automatically
+deploy the changes from `main` to the website (it runs a script against the source files on `main` and deploys the generated website to `gh-pages`).
 
 ### Directory Structure
 
-The project file structure in `master` is
+The project file structure in `main` is
 
 ```
 docs/
@@ -181,7 +181,7 @@ locally as `npm run lint`.
 # How CI Auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration.
-It watches for commits/merges into the `master` branch, runs a script to generate the contents of
+It watches for commits/merges into the `main` branch, runs a script to generate the contents of
 `gh-pages`, and pushes `gh-pages` to github.
 
 # Publishing Changes Manually
@@ -192,7 +192,7 @@ On the commandline (remember to replace `<YOUR USERNAME>` with your github usern
 
 ```sh
 $ cd website
-$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=master npm publish-gh-pages
+$ GIT_USER=<YOUR USERNAME> CURRENT_BRANCH=main npm publish-gh-pages
 ```
 
 If you're using ssh instead of https, replace `GIT_USER=<YOUR USERNAME>` with `USE_SSH=true`.

@@ -58,7 +58,7 @@ Let's go through this:
 - `check_dval` is a test that checks that its 2nd and 3rd arguments are the
   same `dval` (a `dval` is a Dark value; every string, int, option, list, etc,
   are all represented as `dvals`. See
-  [`backend/libexecution/types.ml`](https://github.com/darklang/dark/blob/master/backend/libexecution/types.ml)
+  [`backend/libexecution/types.ml`](https://github.com/darklang/dark/blob/main/backend/libexecution/types.ml)
   for the definition).
 - `(DList [Dval.dint 1])` is a run-time Dark value with a list containing an
   int. In Dark, this would be `[1]`
