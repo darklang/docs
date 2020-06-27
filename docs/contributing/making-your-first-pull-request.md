@@ -6,7 +6,7 @@ Right now you've got uncommitted code, let's get that into a Pull Request on Git
 
 ## Formatting the code
 
-We use a `prettifier` on all our files, and this is tested during CI on
+We use a code formatter on all our files, and this is tested during CI on
 all PRs. To format, call `scripts/format format backend`.
 There is also a [git hook you can
 use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
@@ -22,7 +22,7 @@ Then change your local repo to use the fork:
 
 ```bash
 git remote rm origin
-git remote add origin git@github.com:myGitHubUsername/dark.git
+git remote add origin https://github.com/myGitHubUsername/dark.git
 ```
 
 ## Push
@@ -42,10 +42,11 @@ Go back to GitHub and make a pull request. Here's a good message for your pull r
 > "Hi - this is my first pull request. I noticed that List::member didn't have any tests so I added one."
 
 While this doesn't follow our [Pull Request
-guidelines](#writing-a-successful-pull-request-message), it's fine for
-a first contribution (and you can ignore the checklist from the PR
-template too).
+guidelines](/docs/contributing/making-a-pull-request#writing-a-successful-pull-request-message), it's fine for
+a first contribution (and you can ignore the PR
+template too for now).
+
 
 **And that's your first PR - congratulations!**
 
-
+(Note that if you haven't signed the CLA, a bot will prompt you to do so now.)
