@@ -22,7 +22,7 @@ title: Setting up the Dark repo
 
 Once you've been added to the repo, you'll be able to access https://github.com/darklang/dark, which is a monorepo containing the main OCaml backend, the editor (client in Bucklescript), as well as some auxiliary services used to run the Dark infrastructure.
 
-- Run through the installation instructions in the [README](https://github.com/darklang/dark/blob/master/README.md)
+- Run through the installation instructions in the [README](https://github.com/darklang/dark/blob/main/README.md)
 - You should now be running `./scripts/builder --compile --test --watch` and seeing a completed build.
 
 

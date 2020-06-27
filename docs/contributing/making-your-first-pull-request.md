@@ -9,7 +9,7 @@ Right now you've got uncommitted code, let's get that into a Pull Request on Git
 We use a `prettifier` on all our files, and this is tested during CI on
 all PRs. To format, call `scripts/format format backend`.
 There is also a [git hook you can
-use](https://github.com/darklang/dark/blob/master/scripts/pre-commit-hook.sh).
+use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
 
 
 ## Set up your fork

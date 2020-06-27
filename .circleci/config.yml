@@ -1,8 +1,8 @@
 aliases:
- - &filter-only-master
+ - &filter-only-main
    branches:
      only:
-       - master
+       - main
 
 version: 2
 jobs:
@@ -43,5 +43,5 @@ workflows:
   build_and_deploy:
     jobs:
       - deploy-website:
-         # Only run on direct commits to master
-         filters: *filter-only-master
+         # Only run on direct commits to main
+         filters: *filter-only-main
