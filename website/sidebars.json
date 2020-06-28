@@ -80,6 +80,7 @@
     ],
     "Your Next Contributions": [
       "contributing/next-contribution",
+      "contributing/if-you-dont-know-ocaml",
       "contributing/adding-a-function",
       "contributing/adding-a-language-feature",
       "contributing/adding-a-refactoring"
@@ -90,7 +91,6 @@
       "contributing/tour-of-editor",
       "contributing/tour-of-backend",
       "contributing/repo-layout",
-      "contributing/common-pitfalls",
       "contributing/glossary",
       "contributing/debugging",
       "contributing/making-a-pull-request"
