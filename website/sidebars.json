@@ -59,7 +59,7 @@
     ]
   },
   "Tutorials": {
-    "Tutorial & Samples":[
+    "Tutorial & Samples": [
       "tutorials/tutorial-intro",
       "tutorials/react-spa-tutorial",
       "tutorials/twilio-app-tutorial",
@@ -90,6 +90,7 @@
       "contributing/tour-of-editor",
       "contributing/tour-of-backend",
       "contributing/repo-layout",
+      "contributing/common-pitfalls",
       "contributing/glossary",
       "contributing/debugging",
       "contributing/making-a-pull-request"

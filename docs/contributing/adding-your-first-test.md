@@ -8,9 +8,8 @@ and get you familiar with how to get code into Dark.
 
 ## Find a function that needs tests
 
-We'll assume you have the repo set up as discussed above. Now we want to make
-the contribution. First, find a function which needs testing. Let's make some
-lists.
+Assuming the repo is set up and the `builder` script is running, let's find
+something to test.
 
 First let's see what functions exists:
 
@@ -38,7 +37,7 @@ You'll see stuff like this (with a `>`):
 > List::reverse
 ```
 
-OK, these are the functions that need tests. Pick your favorite.
+These are the functions that need tests, so pick your favorite.
 
 ## Adding the test
 
@@ -50,7 +49,7 @@ By looking through `backend/test/test_other_libs.ml` I see that `t_list_stdlibs_
 check_dval
   "List::singleton works"
   (DList [Dval.dint 1])
-  (exec_ast' (fn "List::singleton" [int 1])) ;
+  (exec_ast (fn "List::singleton" [int 1])) ;
 ```
 
 Let's go through this:
@@ -62,11 +61,10 @@ Let's go through this:
   for the definition).
 - `(DList [Dval.dint 1])` is a run-time Dark value with a list containing an
   int. In Dark, this would be `[1]`
-- `exec_ast'` is a function to execute a given AST (`AST` means "abstract
+- `exec_ast` is a function to execute a given AST (`AST` means "abstract
   syntax tree" and is a compiler-y term for "some classes that represent a
-  program".). *Note, there's also an `exec_ast` (no `'` at the end) which we
-  are phasing out.*
-- The AST being executed is a Function call to `List::singleton`, taking a
+  program".). 
+- The AST being executed is a function call (`fn`) to `List::singleton`, taking a
   single parameter, the integer `1`
 - So this test checks that calling `List::singleton 1` gets you `[1]`. That
   seems right.
@@ -77,7 +75,7 @@ Let's make one for `List::member`:
 check_dval
   "List::member works for empty lists"
   (DBool false)
-  (exec_ast' (fn "List::member" [list []; int 1])) ;
+  (exec_ast (fn "List::member" [list []; int 1])) ;
 ```
 
 So this checks whether `List::member [] 1` is `false` as we expect.
