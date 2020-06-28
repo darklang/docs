@@ -2,9 +2,6 @@
 title: Setting up the Dark repo
 ---
 
-***Reminder: Dark is proprietary software, not open source! Do not share it.***
-
-
 You can access the Dark repo at https://github.com/darklang/dark. This is is a
 monorepo containing the main OCaml backend, the editor (client in
 Bucklescript), as well as some auxiliary services (Rust mostly) used to run the
