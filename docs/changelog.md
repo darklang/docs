@@ -6,6 +6,13 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
+## Weeks of 6/19/2020 and 6/26/2020
+
+- There has been a [significant restructure](https://medium.com/darklang/dark-and-the-long-term-2c65ff0baf5e) to the Dark project. We'll write more about the implication in the next few weeks, but in the short term it means that there will be slower progress on feature work.
+- The [Dark repo](https://github.com/darklang/dark) is now _source available_. You can now [file issues](https://github.com/darklang/dark/issues) directly, and also [contribute](https://docs.darklang.com/contributing/getting-started).
+- `Date::hour_v1` is now supported in the query compiler. ([David Cooley](https://github.com/cooleydw494), [#2639](https://github.com/darklang/dark/pull/2639))
+- When code is not synced due to the server being unavailable, an error message correctly explains what happened ([Felipe Milani](https://github.com/fmilani), [#2605](https://github.com/darklang/dark/pull/2605))
+
 ## Week of 6/12/2020
 
 - Secrets are now available! Now you can store API keys, passwords and other sensitive information separately from the rest of your canvas. Secrets will appear in autocomplete in handlers across your entire canvas. They will appear redacted in traces and live values, so it's now easier to stream and screenshot your Dark code!
@@ -21,7 +28,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
   - Tips are now available in the function space.
   - More helpful links have been added to the avatar menu.
 
-- The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand)
+- The SQL compiler now supports `Date::add` and `Date::subtract` ([Aash Anand](https://github.com/aashanand))
 - The newest version of a function will now always appear first in autocomplete ([Felipe Milani](https://github.com/fmilani))
 - Standard library functions added:
   - `Date::atStartOfDay` ([Michael Wizner](https://github.com/mwz))
