@@ -14,6 +14,7 @@ Dark gets better each week! Here is a brief list of the fixes, new features, and
 - Added a contributing doc, showing how you can help if [you don't know OCaml](https://darklang.github.io/docs/contributing/if-you-dont-know-ocaml).
 - `Date::hour_v1` is now supported in the query compiler. ([David Cooley](https://github.com/cooleydw494), [#2639](https://github.com/darklang/dark/pull/2639))
 - When code is not synced due to the server being unavailable, an error message correctly explains what happened ([Felipe Milani](https://github.com/fmilani), [#2605](https://github.com/darklang/dark/pull/2605))
+- `HTTPClient` requests coming from Dark now time out after 30 seconds [#2661](https://github.com/darklang/dark/pull/2661)
 
 ## Week of 6/12/2020
 
