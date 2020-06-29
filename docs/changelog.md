@@ -6,10 +6,11 @@ sidebar_label: Changelog
 
 Dark gets better each week! Here is a brief list of the fixes, new features, and updates.
 
-## Weeks of 6/19/2020 and 6/26/2020
+## Weeks of 6/15/2020 and 6/22/2020
 
-- There has been a [significant restructure](https://medium.com/darklang/dark-and-the-long-term-2c65ff0baf5e) to the Dark project. We'll write more about the implication in the next few weeks, but in the short term it means that there will be slower progress on feature work.
-- The [Dark repo](https://github.com/darklang/dark) is now _source available_. You can now [file issues](https://github.com/darklang/dark/issues) directly, and also [contribute](https://docs.darklang.com/contributing/getting-started).
+- There has been a [significant restructure](https://medium.com/darklang/dark-and-the-long-term-2c65ff0baf5e) to the Dark project. We'll write more about this going forward: Paul has [a new devlog](https://dev.to/darklang/dark-devlog-1-fresh-start-1i2) that talks about it.
+- We now have a [status channel](https://darkcommunity.slack.com/archives/C016LAW6W73/) in the community Slack. You can join the Slack community [here](https://darklang.com/slack-invite)!
+- The [Dark repo](https://github.com/darklang/dark) is now _source available_. This hasn't been publicly announced yet, but you can now [file issues](https://github.com/darklang/dark/issues) directly, and also [contribute](https://docs.darklang.com/contributing/getting-started).
 - `Date::hour_v1` is now supported in the query compiler. ([David Cooley](https://github.com/cooleydw494), [#2639](https://github.com/darklang/dark/pull/2639))
 - When code is not synced due to the server being unavailable, an error message correctly explains what happened ([Felipe Milani](https://github.com/fmilani), [#2605](https://github.com/darklang/dark/pull/2605))
 
