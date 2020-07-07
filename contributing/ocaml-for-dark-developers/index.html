@@ -60,25 +60,6 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">OCaml for Dark developers</h1></header><article><div><span><p>This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.</p>
-<h2><a class="anchor" aria-hidden="true" id="ocaml-vs-reasonml-vs-bucklescript---whats-the-difference"></a><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCaml vs ReasonML vs Bucklescript - what's the difference?</h2>
-<p>The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.</p>
-<p>Bucklescript and OCaml are both compilers:</p>
-<ul>
-<li>the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.</li>
-<li>the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.</li>
-</ul>
-<p>ReasonML and OCaml are both syntaxes:</p>
-<ul>
-<li>ReasonML is a JS-like syntax for the OCaml language</li>
-<li>OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)</li>
-</ul>
-<p>ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.</p>
-<p>Again, the simplest mental model is that all the words mean the same thing.</p>
-<p>Specifically:</p>
-<ul>
-<li>the Dark backend uses the native OCaml compiler and the OCaml syntax</li>
-<li>the Dark client uses the Bucklescript compiler, and the OCaml syntax.</li>
-</ul>
 <h2><a class="anchor" aria-hidden="true" id="some-simple-ocaml-code"></a><a href="#some-simple-ocaml-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Some simple OCaml code</h2>
 <p>Dark and OCaml are very similar. Here's an OCaml function:</p>
 <pre><code class="hljs css language-ocaml"><span class="hljs-keyword">let</span> someFunction (intArgument : <span class="hljs-built_in">int</span>) : <span class="hljs-built_in">string</span> =
@@ -447,7 +428,29 @@ client).</p>
 very much and very discouraged. The only place we really use it for
 interacting with JS (the Bucklescript JS interop code compiles it to direct OO
 in JS).</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-refactoring"><span class="arrow-prev">← </span><span>Adding a refactoring</span></a><a class="docs-next button" href="/docs/contributing/general-concepts"><span>General concepts</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference">OCaml vs ReasonML vs Bucklescript - what's the difference?</a></li><li><a href="#some-simple-ocaml-code">Some simple OCaml code</a></li><li><a href="#dark-vs-ocaml">Dark vs OCaml</a><ul class="toc-headings"><li><a href="#syntax">Syntax</a></li><li><a href="#types">Types</a></li><li><a href="#functions">Functions</a></li><li><a href="#standard-library">Standard library</a></li><li><a href="#int">Int</a></li><li><a href="#float">Float</a></li><li><a href="#bool">Bool</a></li><li><a href="#string">String</a></li><li><a href="#list">List</a></li><li><a href="#records">Records</a></li><li><a href="#let">Let</a></li><li><a href="#if">If</a></li><li><a href="#operators">Operators</a></li><li><a href="#match">Match</a></li><li><a href="#variants">Variants</a></li><li><a href="#lambdas">Lambdas</a></li><li><a href="#pipes">Pipes</a></li><li><a href="#dictionaries">Dictionaries</a></li><li><a href="#unit">Unit</a></li><li><a href="#error-handling">Error handling</a></li><li><a href="#mli-files"><code>.mli</code> files</a></li><li><a href="#imperative-programming">Imperative programming</a></li><li><a href="#advanced-functions">Advanced functions</a></li><li><a href="#modules">Modules</a></li><li><a href="#classes-and-objects">Classes and Objects</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="ocaml-vs-reasonml-vs-bucklescript---whats-the-difference"></a><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCaml vs ReasonML vs Bucklescript - what's the difference?</h2>
+<p>The backend is in OCaml and the frontend is in Bucklescript. Also, something
+about ReasonML. What's the difference? The simplest answer is that these are
+all the same.</p>
+<p>Bucklescript and OCaml are both compilers:</p>
+<ul>
+<li>the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.</li>
+<li>the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.</li>
+</ul>
+<p>ReasonML and OCaml are both syntaxes:</p>
+<ul>
+<li>ReasonML is a JS-like syntax for the OCaml language</li>
+<li>OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)</li>
+</ul>
+<p>ReasonML is also often used to refer to the community around compiling to JS
+using Bucklescript, and associated technologies.</p>
+<p>Again, the simplest mental model is that all the words mean the same thing.</p>
+<p>Specifically:</p>
+<ul>
+<li>the Dark backend uses the native OCaml compiler and the OCaml syntax</li>
+<li>the Dark client uses the Bucklescript compiler, and the OCaml syntax.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/adding-a-refactoring"><span class="arrow-prev">← </span><span>Adding a refactoring</span></a><a class="docs-next button" href="/docs/contributing/general-concepts"><span>General concepts</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#some-simple-ocaml-code">Some simple OCaml code</a></li><li><a href="#dark-vs-ocaml">Dark vs OCaml</a><ul class="toc-headings"><li><a href="#syntax">Syntax</a></li><li><a href="#types">Types</a></li><li><a href="#functions">Functions</a></li><li><a href="#standard-library">Standard library</a></li><li><a href="#int">Int</a></li><li><a href="#float">Float</a></li><li><a href="#bool">Bool</a></li><li><a href="#string">String</a></li><li><a href="#list">List</a></li><li><a href="#records">Records</a></li><li><a href="#let">Let</a></li><li><a href="#if">If</a></li><li><a href="#operators">Operators</a></li><li><a href="#match">Match</a></li><li><a href="#variants">Variants</a></li><li><a href="#lambdas">Lambdas</a></li><li><a href="#pipes">Pipes</a></li><li><a href="#dictionaries">Dictionaries</a></li><li><a href="#unit">Unit</a></li><li><a href="#error-handling">Error handling</a></li><li><a href="#mli-files"><code>.mli</code> files</a></li><li><a href="#imperative-programming">Imperative programming</a></li><li><a href="#advanced-functions">Advanced functions</a></li><li><a href="#modules">Modules</a></li><li><a href="#classes-and-objects">Classes and Objects</a></li></ul></li><li><a href="#ocaml-vs-reasonml-vs-bucklescript---whats-the-difference">OCaml vs ReasonML vs Bucklescript - what's the difference?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

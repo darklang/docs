@@ -166,15 +166,21 @@ syntactic details like commas and semi-colons (hence &quot;abstract&quot;)).</p>
   | <span class="hljs-type">FPNull</span> <span class="hljs-keyword">of</span> id * id
   | <span class="hljs-type">FPBlank</span> <span class="hljs-keyword">of</span> id * id
 </code></pre>
-<p>This isn't exactly right, but it's close. There's definitions for literals like
-ints and strings, for definitions like <code>let</code>s, for function calls with <code>EBinOp</code>
-and <code>EFnCall</code>, and also for various editor-specific intermediate states like
-<code>EPartial</code> and <code>ERightPartial</code>.</p>
+<p>These definitions are in OCaml (we have a <a href="ocaml-for-dark-developers">guide to OCaml for Dark
+developers</a>). Briefly, this means that an <code>expr</code> is
+an integer (which is made up of an id and a string) or a bool (made up of an id
+and a string), or a <code>match</code> (which is an id, an expression to match on, and a
+list of patterns and expressions), etc</p>
+<p>This definition is slightly simplified, but it's close. There's definitions for
+literals like ints and strings, for definitions like <code>let</code>s, for function calls
+with <code>EBinOp</code> and <code>EFnCall</code>, and also for various editor-specific intermediate
+states like <code>EPartial</code> and <code>ERightPartial</code>.</p>
 <p>Each expression has an <code>id</code> that is used to uniquely refer to the expression.
-If an ID is duplicated by accident, the editor will act weirdly, but the
-program will work fine.</p>
+This is used when editing programs, and to relate live values from the analysis
+engine to the display in the editor. If an ID is duplicated by accident, the
+editor will act weirdly, but the program will work fine.</p>
 <p><code>FluidPattern.ml</code> and <code>FluidExpression.ml</code> also contain functions for changing
-them easily, either by changing the by ID or by traversing across the entire
+patterns and expressions easily, either by changing the by ID or by traversing across the entire
 structure. Traversing the structure is generally pretty fast.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/contributing/ocaml-for-dark-developers"><span class="arrow-prev">← </span><span>OCaml for Dark developers</span></a><a class="docs-next button" href="/docs/contributing/tour-of-editor"><span>A tour of the Editor</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#editor-vs-production-how-code-runs">Editor vs Production (how code runs)</a></li><li><a href="#traces--live-values">Traces &amp; Live values</a></li><li><a href="#toplevels">Toplevels</a></li><li><a href="#the-path-of-an-edit">The path of an edit</a><ul class="toc-headings"><li><a href="#sending-the-change-to-the-server">Sending the change to the server</a></li></ul></li><li><a href="#asts">ASTs</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
