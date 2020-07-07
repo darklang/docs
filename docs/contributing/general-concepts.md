@@ -129,16 +129,23 @@ type pattern =
   | FPBlank of id * id
 ```
 
-This isn't exactly right, but it's close. There's definitions for literals like
-ints and strings, for definitions like `let`s, for function calls with `EBinOp`
-and `EFnCall`, and also for various editor-specific intermediate states like
-`EPartial` and `ERightPartial`.
+These definitions are in OCaml (we have a [guide to OCaml for Dark
+developers](ocaml-for-dark-developers)). Briefly, this means that an `expr` is
+an integer (which is made up of an id and a string) or a bool (made up of an id
+and a string), or a `match` (which is an id, an expression to match on, and a
+list of patterns and expressions), etc
+
+This definition is slightly simplified, but it's close. There's definitions for
+literals like ints and strings, for definitions like `let`s, for function calls
+with `EBinOp` and `EFnCall`, and also for various editor-specific intermediate
+states like `EPartial` and `ERightPartial`.
 
 Each expression has an `id` that is used to uniquely refer to the expression.
-If an ID is duplicated by accident, the editor will act weirdly, but the
-program will work fine.
+This is used when editing programs, and to relate live values from the analysis
+engine to the display in the editor. If an ID is duplicated by accident, the
+editor will act weirdly, but the program will work fine.
 
 `FluidPattern.ml` and `FluidExpression.ml` also contain functions for changing
-them easily, either by changing the by ID or by traversing across the entire
+patterns and expressions easily, either by changing the by ID or by traversing across the entire
 structure. Traversing the structure is generally pretty fast.
 

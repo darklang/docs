@@ -5,26 +5,6 @@ title: OCaml for Dark developers
 This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.
 
 
-## OCaml vs ReasonML vs Bucklescript - what's the difference?
-
-The backend is in OCaml and the frontend is in Bucklescript. Also, something about ReasonML. What's the difference? The simplest answer is that these are all the same.
-
-Bucklescript and OCaml are both compilers:
-- the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.
-- the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.
-
-ReasonML and OCaml are both syntaxes:
-- ReasonML is a JS-like syntax for the OCaml language
-- OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)
-
-ReasonML is also often used to refer to the community around compiling to JS using Bucklescript, and associated technologies.
-
-Again, the simplest mental model is that all the words mean the same thing.
-
-Specifically:
-- the Dark backend uses the native OCaml compiler and the OCaml syntax
-- the Dark client uses the Bucklescript compiler, and the OCaml syntax.
-
 ## Some simple OCaml code
 
 Dark and OCaml are very similar. Here's an OCaml function:
@@ -582,4 +562,27 @@ very much and very discouraged. The only place we really use it for
 interacting with JS (the Bucklescript JS interop code compiles it to direct OO
 in JS).
 
+
+## OCaml vs ReasonML vs Bucklescript - what's the difference?
+
+The backend is in OCaml and the frontend is in Bucklescript. Also, something
+about ReasonML. What's the difference? The simplest answer is that these are
+all the same.
+
+Bucklescript and OCaml are both compilers:
+- the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.
+- the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.
+
+ReasonML and OCaml are both syntaxes:
+- ReasonML is a JS-like syntax for the OCaml language
+- OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)
+
+ReasonML is also often used to refer to the community around compiling to JS
+using Bucklescript, and associated technologies.
+
+Again, the simplest mental model is that all the words mean the same thing.
+
+Specifically:
+- the Dark backend uses the native OCaml compiler and the OCaml syntax
+- the Dark client uses the Bucklescript compiler, and the OCaml syntax.
 
