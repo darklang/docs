@@ -31,14 +31,14 @@ Here's the journey it takes:
 
 ## Traces
 
-A trace refers to the tuple of `(event, function_results,
-function_arguments)`:
-- event refers to the HTTP request, worker event, or in the case of
-  Crons, and empty value, that is used to trigger the event handler
-- the trace includes information for every call to every function
-  during the event. For built-in function, we record a hash of the
-  arguments and the result. For canvas functions, we also store the
-  arguments to the function.
+A trace is a combination of an event (referred to in Dark as an "input value"
+and in the code as `StoredEvent`), and the arguments and results of functions
+called during the trace:
+- event refers to the HTTP request, worker event, or in the case of Crons, an
+  empty value, that is used to trigger the event handler
+- the trace includes information for every call to every function during the
+  event. For built-in functions, we record a hash of the arguments and the
+  result. For canvas functions, we also store the arguments to the function.
 
 
 ## Serialization
