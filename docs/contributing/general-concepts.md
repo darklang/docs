@@ -55,6 +55,7 @@ For Fluid, this is the journey:
 - an API call is made to send the change to the server (detailed below)
 
 For forms, the journey is similar:
+
 - the event is processed by `KeyPress.ml`
 - the contents of `m.complete.value` are updated (this is where the value in
   the forms box is stored)
@@ -106,7 +107,7 @@ type expr  =
   | EFieldAccess of id * expr * string
   | EVariable of id * string
   | EFnCall of id * string * expr list * sendToRail
-  
+
   | EPartial of id * string * expr
   | ERightPartial of id * string * expr
   | ELeftPartial of id * string * expr
@@ -148,4 +149,3 @@ editor will act weirdly, but the program will work fine.
 `FluidPattern.ml` and `FluidExpression.ml` also contain functions for changing
 patterns and expressions easily, either by changing the by ID or by traversing across the entire
 structure. Traversing the structure is generally pretty fast.
-

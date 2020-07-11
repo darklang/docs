@@ -7,8 +7,9 @@ sidebar_label: HTTP Responses
 ### HTTP
 
 The `HTTP::` module provides functions to create responses to external HTTP
-calls. Each response function, such as `Http::respond`, creates a response value; a response value
-returned by the handler will be sent as a response to the client.
+calls. Each response function, such as `Http::respond`, creates a response
+value; a response value returned by the handler will be sent as a response to
+the client.
 
 ![HTTPForbidden](assets/http/respondwith.png)
 

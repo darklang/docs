@@ -6,11 +6,13 @@ sidebar_label: From Javascript
 
 This guide will help you learn Dark if you're familiar with Javascript.
 
-Have a tip to add to the guide? [Submit a PR](https://github.com/darklang/docs/pulls)!
+Have a tip to add to the guide?
+[Submit a PR](https://github.com/darklang/docs/pulls)!
 
 ## Comments
 
-In Javascript, you use a `//` to start a single line comment, or `/*` and `*/` to wrap a multiline comment.:
+In Javascript, you use a `//` to start a single line comment, or `/*` and `*/`
+to wrap a multiline comment.:
 
 ```Javascript
 // This is a comment
@@ -20,7 +22,8 @@ also a
 comment */
 ```
 
-In Dark, you use a `let _ =` to start a comment, and you write the comment as a String:
+In Dark, you use a `let _ =` to start a comment, and you write the comment as a
+String:
 
 ![assets/from-python/comment.png](assets/from-python/comment.png)
 
@@ -56,7 +59,8 @@ In Dark, you create a function from the sidebar:
 
 ![assets/from-python/functionside.png](assets/from-python/functionside.png)
 
-This will open a new function in the function space, where you can define the name of the function and its contents:
+This will open a new function in the function space, where you can define the
+name of the function and its contents:
 
 ![assets/from-python/function.png](assets/from-python/function.png)
 
@@ -69,7 +73,8 @@ Javascript defines a set of built in functions that are called like this:
 Math.pow(2,2)
 ```
 
-Dark has a set of built in functions as well, which can be accessed via the autocomplete:
+Dark has a set of built in functions as well, which can be accessed via the
+autocomplete:
 
 ![assets/from-python/power.gif](assets/from-python/power.gif)
 
@@ -95,6 +100,7 @@ In Dark, the same statement would look this this:
 
 ![assets/from-python/ifs.png](assets/from-python/ifs.png)
 
-Note that we highlight the path your code takes - so if we were to change the values, a different piece of the `If` statement would be highlighted:
+Note that we highlight the path your code takes - so if we were to change the
+values, a different piece of the `If` statement would be highlighted:
 
 ![assets/from-python/ifs2.png](assets/from-python/ifs2.png)

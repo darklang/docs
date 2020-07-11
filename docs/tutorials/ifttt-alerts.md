@@ -79,88 +79,119 @@ We've used the code below - note that you will need to replace the URL that is p
   </body>
 </html>
 ```
+
 </details>
 
 <details><summary>script.js</summary>
 
 ```javascript
-const app = document.getElementById('root')
+const app = document.getElementById("root");
 
-const container = document.createElement('div')
-container.setAttribute('class', 'container')
+const container = document.createElement("div");
+container.setAttribute("class", "container");
 
-app.appendChild(container)
+app.appendChild(container);
 
-var request = new XMLHttpRequest()
-request.open('GET', 'https://username-canvasname.builtwithdark.com/get-unreviewed', true)
-request.onload = function() {
+var request = new XMLHttpRequest();
+request.open(
+  "GET",
+  "https://username-canvasname.builtwithdark.com/get-unreviewed",
+  true,
+);
+request.onload = function () {
   // Begin accessing JSON data here
-  var data = JSON.parse(this.response)
+  var data = JSON.parse(this.response);
   if (request.status >= 200 && request.status < 400) {
     data.forEach(entry => {
-      const card = document.createElement('div')
-      card.setAttribute('class', 'card')
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
 
-      const h1 = document.createElement('h1')
-      h1.textContent = entry.name
+      const h1 = document.createElement("h1");
+      h1.textContent = entry.name;
 
-      const lineBreak = document.createElement('br');
+      const lineBreak = document.createElement("br");
 
-      const fn = document.createElement('fn')
-      entry.email = entry.email
-      fn.textContent = `${entry.email} `
+      const fn = document.createElement("fn");
+      entry.email = entry.email;
+      fn.textContent = `${entry.email} `;
 
-      const lineBreak2 = document.createElement('br');
+      const lineBreak2 = document.createElement("br");
 
-      const ln = document.createElement('ln')
-      entry.twitter = entry.twitter
-      ln.textContent = `${entry.twitter}`
+      const ln = document.createElement("ln");
+      entry.twitter = entry.twitter;
+      ln.textContent = `${entry.twitter}`;
 
-      var btn = document.createElement("Button")
-      btn.innerHTML = "Approve"
-      btn.onclick = function markApproved(){
-        var request2 = new XMLHttpRequest()
-        request2.open('POST','https://username-canvasname.builtwithdark.com/reviewed',true);
-        request2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request2.send("name=" + entry.name+ "&email=" + entry.email + "&twitter=" + entry.twitter + "&result=approved");
+      var btn = document.createElement("Button");
+      btn.innerHTML = "Approve";
+      btn.onclick = function markApproved() {
+        var request2 = new XMLHttpRequest();
+        request2.open(
+          "POST",
+          "https://username-canvasname.builtwithdark.com/reviewed",
+          true,
+        );
+        request2.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded",
+        );
+        request2.send(
+          "name=" +
+            entry.name +
+            "&email=" +
+            entry.email +
+            "&twitter=" +
+            entry.twitter +
+            "&result=approved",
+        );
         location.reload();
         return false;
+      };
 
-    }
-
-    var btn2 = document.createElement("Button")
-    btn2.innerHTML = "Reject"
-    btn2.onclick = function markRejected(){
-        var request2 = new XMLHttpRequest()
-        request2.open('POST','https://username-canvasname.builtwithdark.com/reviewed',true);
-        request2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request2.send("name=" + entry.name+ "&email=" + entry.email + "&twitter=" + entry.twitter + "&result=rejected");
+      var btn2 = document.createElement("Button");
+      btn2.innerHTML = "Reject";
+      btn2.onclick = function markRejected() {
+        var request2 = new XMLHttpRequest();
+        request2.open(
+          "POST",
+          "https://username-canvasname.builtwithdark.com/reviewed",
+          true,
+        );
+        request2.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded",
+        );
+        request2.send(
+          "name=" +
+            entry.name +
+            "&email=" +
+            entry.email +
+            "&twitter=" +
+            entry.twitter +
+            "&result=rejected",
+        );
         location.reload();
         return false;
+      };
 
-    }
-
-      container.appendChild(card)
-      card.appendChild(h1)
-      card.appendChild(fn)
-      card.appendChild(lineBreak)
-      card.appendChild(ln)
-      card.appendChild(lineBreak2)
-      card.appendChild(btn)
-      card.appendChild(btn2)
-
-
-
-    })
+      container.appendChild(card);
+      card.appendChild(h1);
+      card.appendChild(fn);
+      card.appendChild(lineBreak);
+      card.appendChild(ln);
+      card.appendChild(lineBreak2);
+      card.appendChild(btn);
+      card.appendChild(btn2);
+    });
   } else {
-    const errorMessage = document.createElement('marquee')
-    errorMessage.textContent = `Gah, it's not working!`
-    app.appendChild(errorMessage)
+    const errorMessage = document.createElement("marquee");
+    errorMessage.textContent = `Gah, it's not working!`;
+    app.appendChild(errorMessage);
   }
-}
+};
 
-request.send()
+request.send();
 ```
+
 </details>
 
 <details><summary>style.css</summary>
@@ -193,6 +224,7 @@ request.send()
   }
 }
 ```
+
 </details>
 
 10. Once you've created the page, visit it to generate another 404. Add your new 404 to your canvas.
@@ -237,6 +269,7 @@ request.send()
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+
   </head>
 
   <body>
@@ -301,6 +334,7 @@ request.onload = function() {
 
 request.send()
 ```
+
 </details>
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png)
@@ -347,7 +381,7 @@ We're going to create two alerts - one that will let you know if you have a back
 
 Let's make another kind of alert - one that fires as soon as something happens. In this case, when someone with a lot of Twitter followers joins your waitlist.
 
-1. Create another event in IFTTT and give it a different name. 
+1. Create another event in IFTTT and give it a different name.
 
 ![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png)
 

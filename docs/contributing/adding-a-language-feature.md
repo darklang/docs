@@ -2,7 +2,11 @@
 title: Adding a language feature
 ---
 
-There are a number of [language features that we'd like to add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature) to Dark. While there a quite a few steps involved in adding a language feature, they're typically relatively straightforward to add once you've figured out the Dark codebase.
+There are a number of [language features that we'd like to
+add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature)
+to Dark. While there a quite a few steps involved in adding a language feature,
+they're typically relatively straightforward to add once you've figured out the
+Dark codebase.
 
 It's important to note that the most important part of a language
 feature is getting agreement on what it does. We typically write specs
@@ -35,7 +39,7 @@ type t =
   (* An EPartial holds the intermediate state of user-input when changing from
    * one expression to another. The [string] is the exact text that has been
    * entered and the [t] is the old expression that is being changed. *)
-   
+
   | EPartial of id * string * t
   (* An ERightPartial is used while in the process of adding an EBinOp,
    * allowing for typing multiple characters as operators (eg, "++") after an
@@ -54,7 +58,6 @@ type t =
   | EFeatureFlag of id * string * t * t * t
 ```
 
-
 This definition is shared between client and backend.
 
 The backend does the work of executing the expressions, and saving
@@ -66,7 +69,6 @@ language feature means adding support for it to the many
 transformations that the client does, including refactorings,
 renamings, etc. It will also need support in the "Fluid" editor, which
 is where users actually type code.
-
 
 ## Backend
 
@@ -83,11 +85,10 @@ let x = 6
 x + 4
 ```
 
-you have an `ELet ("x", EInteger 6, EBinOp ("+", EVariable "x",
-EInteger 4))`. When we execute this `ELet`, we first execute the `6`,
-creating a `dval` of `DInt 6`, which we then store as `x` in a "symbol
-table". We then execute `x + 4` using the symbol table with our known
-value of `x = 6`.
+you have an `ELet ("x", EInteger 6, EBinOp ("+", EVariable "x", EInteger 4))`.
+When we execute this `ELet`, we first execute the `6`, creating a `dval` of
+`DInt 6`, which we then store as `x` in a "symbol table". We then execute `x + 4`
+using the symbol table with our known value of `x = 6`.
 
 `dval`s are defined in `backend/libexecution/types.ml` and expressions
 are defined in `libshared/fluid_expression.ml`.
@@ -99,7 +100,6 @@ The other main purpose of the backend is to save programs. Dark uses a fast bina
 #### expr
 
 Well, not exactly. We currently actually serialize an old format, called `expr`. We convert between `expr` and `FluidExpression.t` in order to save and execute. The client only uses `FluidExpression.t`, however.
-
 
 #### Expressions are add-only
 
@@ -170,4 +170,3 @@ The backend has automatic JSON serializers and deserializers, using the
 `client/src/core/Encoders.ml` and `client/src/core/Decoders.ml`. The
 OCaml compiler will prompt you to add new encoders, but not decoders.
 Writing new ones is straightforward by following other examples there.
-

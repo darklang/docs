@@ -11,7 +11,6 @@ all PRs. To format, call `scripts/format format backend`.
 There is also a [git hook you can
 use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
 
-
 ## Set up your fork
 
 Dark uses a fork model for contributions, like many GitHub projects. Go
@@ -45,7 +44,6 @@ While this doesn't follow our [Pull Request
 guidelines](/docs/contributing/making-a-pull-request#writing-a-successful-pull-request-message), it's fine for
 a first contribution (and you can ignore the PR
 template too for now).
-
 
 **And that's your first PR - congratulations!**
 

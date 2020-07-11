@@ -35,4 +35,3 @@ This URL should be in the following format: The URL you provide will need to be 
 6. Hit the play button for the function. If you get an error, repeat step 2. If everything goes as expected, an entry will be added to your datastore, and it will look locked.
 
 ![assets/slack-apps/lockedtoken.png](assets/slack-apps/lockedtoken.png)
-

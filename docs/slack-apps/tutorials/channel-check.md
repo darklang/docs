@@ -4,14 +4,14 @@ title: Check for New Channels
 sidebar_label: Check for New Channels
 ---
 
-It can be hard to keep up with all of the changes in your Slack workspace! This tutorial will walk you through how to build a simple tool in Dark that posts all new, public Slack channels created in your Slack workspace in the past 24 hours. 
+It can be hard to keep up with all of the changes in your Slack workspace! This tutorial will walk you through how to build a simple tool in Dark that posts all new, public Slack channels created in your Slack workspace in the past 24 hours.
 
 A full sample canvas for this tutorial is available [here](https://darklang.com/a/sample-slackchannelcheck).
 
 ## Slack Configuration
 
 1. [Create a new app in Slack](https://api.slack.com/apps).
-2. Navigate to **Features -> OAuth& Permissions**, scroll down to scopes and add the following bot token scopes: `channels:manage`, `channels:read`, `chat:write`, and `chat:write.public`. This will allow our app to interact with our the channels (also known as conversations) and post messages about them. 
+2. Navigate to **Features -> OAuth& Permissions**, scroll down to scopes and add the following bot token scopes: `channels:manage`, `channels:read`, `chat:write`, and `chat:write.public`. This will allow our app to interact with our the channels (also known as conversations) and post messages about them.
 
 ![assets/slack-apps/tutorials/channelcheck/bottokenscopes.png](assets/slack-apps/tutorials/channelcheck/bottokenscopes.png)
 
@@ -42,7 +42,7 @@ A full sample canvas for this tutorial is available [here](https://darklang.com/
 
 ![assets/slack-apps/tutorials/channelcheck/formatchannellist.png](assets/slack-apps/tutorials/channelcheck/formatchannellist.png)
 
-6. For our purposes, we're going to do a very simple amount of formatting - we're going to add the markdown Slack needs to make channel names links, and add information about the channel's purpose. However, lots of information about Slack channels is available. Type `val.` and scroll through the autocomplete to see all of your options. 
+6. For our purposes, we're going to do a very simple amount of formatting - we're going to add the markdown Slack needs to make channel names links, and add information about the channel's purpose. However, lots of information about Slack channels is available. Type `val.` and scroll through the autocomplete to see all of your options.
 
 ![assets/slack-apps/tutorials/channelcheck/formatchanellistlong.png](assets/slack-apps/tutorials/channelcheck/formatchannellistlong.png)
 
@@ -64,4 +64,4 @@ A full sample canvas for this tutorial is available [here](https://darklang.com/
 
 ![assets/slack-apps/tutorials/channelcheck/newchannelpost.png](assets/slack-apps/tutorials/channelcheck/newchannelpost.png)
 
-Congratulations - you now have a Slack app that will post every 24 hours with any new channels created since it last posted. 
+Congratulations - you now have a Slack app that will post every 24 hours with any new channels created since it last posted.

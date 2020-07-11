@@ -9,6 +9,7 @@ OCaml can be a little bit daunting, but even if you don't know it, there are a b
 Dark has a number of different languages, including Rust, bash, Python, Javascript, HTML, and CSS.
 
 We have issues in each of these:
+
 - [Javascript](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Ajavascript)
 - [Rust](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Arust)
 - [Bash](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Abash)
@@ -62,6 +63,7 @@ Dark is almost everybody's first OCaml project. So if you don't know OCaml,
 join the club - we all learned as we contributed to Dark.
 
 There are a number of resources to help as well:
+
 - [A guided walkthrough of making your first PR](/docs/contributing/adding-your-first-test)
 - [good first bugs](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-bug) assume you don't know anything about OCaml
 
