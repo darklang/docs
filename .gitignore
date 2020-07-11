@@ -1,8 +1,14 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# generated files
+.docusaurus
+.cache-loader
+
+# misc
 .DS_Store
 
-lib/core/metadata.js
-lib/core/MetadataBlog.js
-
-translated_docs
-node_modules
-i18n/*
+npm-debug.log*
