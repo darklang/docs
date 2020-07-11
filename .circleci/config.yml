@@ -1,18 +1,17 @@
 aliases:
- - &filter-only-main
-   branches:
-     only:
-       - main
+  - &filter-only-main
+    branches:
+      only:
+        - main
 
 version: 2
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:12.10.0
+      - image: circleci/node:14.5.0
     steps:
       - checkout
       - run: |
-          cd website
           npm ci
           npm run lint
           npm run check-format
@@ -20,7 +19,7 @@ jobs:
 
   deploy-website:
     docker:
-      - image: circleci/node:12.10.0
+      - image: circleci/node:14.5.0
 
     steps:
       - add_ssh_keys:
@@ -30,10 +29,15 @@ jobs:
       - checkout
       - run:
           name: Deploying to GitHub Pages
+          env:
+            USE_SSH: true
+            CUSTOM_COMMIT_MESSAGE:
+              "[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI"
           command: |
             git config --global user.email "ops@darklang.com"
             git config --global user.name "Dark Ops"
-            cd website && npm install --frozen-lockfile && USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" npm run publish-gh-pages
+            npm install --frozen-lockfile
+            npm run deploy
 
 workflows:
   version: 2
@@ -43,5 +47,5 @@ workflows:
   build_and_deploy:
     jobs:
       - deploy-website:
-         # Only run on direct commits to main
-         filters: *filter-only-main
+          # Only run on direct commits to main
+          filters: *filter-only-main
