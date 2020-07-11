@@ -14,7 +14,6 @@ const siteConfig = {
   // customDocsPath: path.basename(__dirname) + '/docs',
   title: "Dark Documentation", // Title for the website.
   tagline: "Dark Documentation",
-  docsUrl: "",
 
   // Used for publishing and more
   organizationName: "darklang",
@@ -22,30 +21,28 @@ const siteConfig = {
   url: "https://darklang.github.io", // Website URL
   baseUrl: "/docs/", // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
 
+  // TODO: convert to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#headericon-headerlinks
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [
-    { doc: "introduction", label: "Documentation" },
-    { doc: "tutorials/tutorial-intro", label: "Tutorials & Samples" },
-    { doc: "slack-apps/slack-intro", label: "Building Slack Apps" },
-    { doc: "contributing/getting-started", label: "Contributing" }
-  ],
+  // headerLinks: [
+  //   { doc: "introduction", label: "Documentation" },
+  //   { doc: "tutorials/tutorial-intro", label: "Tutorials & Samples" },
+  //   { doc: "slack-apps/slack-intro", label: "Building Slack Apps" },
+  //   { doc: "contributing/getting-started", label: "Contributing" },
+  // ],
+  // headerIcon: "img/favicon.ico",
 
-  // If you have users set above, you add it here:
-  // users,
-
-  /* path to images for header/footer */
-  headerIcon: "img/favicon.ico",
-  footerIcon: "img/favicon.ico",
   favicon: "img/favicon.ico",
 
-  gaTrackingId: "UA-159199190-1",
-  gaGtag: true,
+  // TODO: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#gatrackingid
+  // gaTrackingId: "UA-159199190-1",
+  // gaGtag: true,
 
   /* Colors for website */
-  colors: {
-    primaryColor: "#212121",
-    secondaryColor: "#5f3e6b"
-  },
+  // TODO: migrate to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#colors
+  // colors: {
+  //   primaryColor: "#212121",
+  //   secondaryColor: "#5f3e6b",
+  // },
 
   /* Custom fonts for website */
   /*
@@ -61,27 +58,34 @@ const siteConfig = {
   },
   */
 
-  algolia: {
-    apiKey: "1e1c6adb6b62f53c456dc70e833c2c26",
-    indexName: "darklang",
-    algoliaOptions: {} // Optional, if provided by Algolia
-  },
+  // TODO: migrate to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#algolia
+  // algolia: {
+  //   apiKey: "1e1c6adb6b62f53c456dc70e833c2c26",
+  //   indexName: "darklang",
+  //   algoliaOptions: {}, // Optional, if provided by Algolia
+  // },
 
-  // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Dark`,
+  // TODO: convert to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#footericon-copyright-ogimage-twitterimage-docssidenavcollapsible
+  // footerIcon: "img/favicon.ico",
+  // copyright: `Copyright © ${new Date().getFullYear()} Dark`,
 
-  highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: "default"
-  },
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        docs: {
+          path: "docs",
+          sidebarPath: require.resolve("./sidebars.json"),
+          routeBasePath: "docs",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+        },
+      },
+    ],
+  ],
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ["https://buttons.github.io/buttons.js"],
-
-  // On page navigation for the current documentation page.
-  onPageNav: "separate",
-  // No .html extensions for paths.
-  cleanUrl: true
 
   // Open Graph and Twitter card images for the site when shared.
   // ogImage: 'img/undraw_online.svg',
