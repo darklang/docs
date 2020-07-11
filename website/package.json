@@ -15,7 +15,8 @@
     "check-spelling": "mdspell --report --en-us -n \"../docs/**/*.md\""
   },
   "devDependencies": {
-    "docusaurus": "^1.14.4",
+    "@docusaurus/core": "2.0.0-alpha.48",
+    "@docusaurus/preset-classic": "2.0.0-alpha.48",
     "markdownlint-cli": "^0.22.0",
     "prettier": "2.0.5",
     "markdown-spellcheck": "1.3.1"
