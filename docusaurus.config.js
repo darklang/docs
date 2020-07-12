@@ -93,6 +93,9 @@ module.exports = {
       indexName: "darklang",
       algoliaOptions: {},
     },
+    googleAnalytics: {
+      trackingID: "UA-159199190-1",
+    },
   },
   presets: [
     [

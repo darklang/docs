@@ -7,10 +7,6 @@ module.exports = {
   organizationName: "darklang",
   projectName: "docs",
 
-  // TODO: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#gatrackingid
-  // gaTrackingId: "UA-159199190-1",
-  // gaGtag: true,
-
   /* Colors for website */
   // TODO: migrate to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#colors
   // colors: {
