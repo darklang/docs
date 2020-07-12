@@ -9,14 +9,15 @@ module.exports = {
 
   themeConfig: {
     navbar: {
-      title: "Dark Documention",
+      title: "Dark",
       logo: {
         alt: "Dark logo",
         src: "img/favicon.ico",
+        href: "https://darklang.com",
       },
       links: [
         {
-          to: "docs/",
+          to: "/introduction",
           activeBasePath: "docs",
           label: "Documentation",
           position: "right",
@@ -27,12 +28,12 @@ module.exports = {
           position: "right",
         },
         {
-          href: "slack-apps/slack-intro",
+          to: "slack-apps/slack-intro",
           label: "Building Slack Apps",
           position: "right",
         },
         {
-          href: "contributing/getting-started",
+          to: "contributing/getting-started",
           label: "Contributing",
           position: "right",
         },
