@@ -113,5 +113,6 @@ you'd like a multi-use invite link, you can request one in the community Slack.
 ## Giving talks about Dark
 
 We've also seen users give talks about Dark at meetups and at work. If you'd
-like to do so, we've shared slide templates and logos to help make that easier.
-[slide template](https://drive.google.com/drive/u/1/folders/15GkcOu8jfJkgmk3aY7HxJjWdKgtDBY7C).
+like to do so, we've shared a
+[slide template](https://drive.google.com/drive/u/1/folders/15GkcOu8jfJkgmk3aY7HxJjWdKgtDBY7C)
+to help make that easier.

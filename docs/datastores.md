@@ -202,5 +202,4 @@ please let us know.
 ## Using an External Datastore
 
 We strongly recommend using this built-in datastore. If you have an external
-database, you can connect to it via REST.
-[Tutorial](/docs/tutorials/external-db).
+database, you can [connect to it via REST](/docs/tutorials/external-db).

@@ -4,8 +4,6 @@ title: Language Overview
 sidebar_label: Overview
 ---
 
-### Unique
-
 Dark isn't just a language. It's a combination of the language, editor,
 framework, and infrastructure. When writing code in Dark, you can run functions,
 and wait to handle errors. Many aspects that would be not considered "language"

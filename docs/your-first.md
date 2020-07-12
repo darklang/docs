@@ -4,8 +4,6 @@ title: Your First App
 sidebar_label: Your First App
 ---
 
-## Your First App
-
 We're going to take you through a tutorial to build an entire application that
 uses Dark's basic functionality. This should take between 10m and 45m, depending
 on how thorough you are.
