@@ -43,15 +43,44 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Learning",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/",
+              label: "Demo Video",
+              to: "https://darklang.com/launch/demo-video",
             },
             {
-              label: "Second Doc",
-              to: "docs/doc2/",
+              label: "Tutorial Videos",
+              to: "https://youtube.com/c/Darklang/videos",
+            },
+            {
+              label: "Docs",
+              to: "https://darklang.com/docs",
+            },
+            {
+              label: "Tutorials & Samples",
+              to: "https://darklang.com/docs/tutorials",
+            },
+            {
+              label: "Building Slack Apps",
+              to: "https://darklang.com/docs/slack-apps",
+            },
+          ],
+        },
+        {
+          title: "About",
+          items: [
+            {
+              label: "Company",
+              to: "https://darklang.com/about",
+            },
+            {
+              label: "Dev Blog",
+              to: "https://dev.to/darklang",
+            },
+            {
+              label: "Corp Blog",
+              to: "https://medium.com/darklang",
             },
           ],
         },
@@ -59,29 +88,45 @@ module.exports = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "Community Slack",
+              to: "https://darklang.com/slack-invite",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "Dark Repo",
+              to: "https://github.com/darklang/dark",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "Docs Repo",
+              to: "https://github.com/darklang/docs",
+            },
+            {
+              label: "Contributor Docs",
+              to: "/contributing/getting-started",
+            },
+            {
+              label: "Code of Conduct",
+              to: "https://darklang.com/code-of-conduct",
             },
           ],
         },
         {
-          title: "More",
+          title: "Product",
           items: [
             {
-              label: "Blog",
-              to: "blog",
+              label: "Sign in",
+              to: "https://darklang.com/login",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "Sign up",
+              to: "https://darklang.com/signup",
+            },
+            {
+              label: "Desktop Client",
+              to: "https://darklang.com/desktop-client",
+            },
+            {
+              label: "Mailing List",
+              to: "https://darklang.com/mailing-list",
             },
           ],
         },
