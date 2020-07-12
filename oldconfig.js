@@ -14,20 +14,6 @@ module.exports = {
   //   secondaryColor: "#5f3e6b",
   // },
 
-  /* Custom fonts for website */
-  /*
-  fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },
-  */
-
   presets: [
     [
       "@docusaurus/preset-classic",
