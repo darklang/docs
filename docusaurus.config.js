@@ -98,7 +98,7 @@ module.exports = {
           routeBasePath: "/",
           homePageId: "/docs/introduction",
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/darklang/docs/edit/master/website/",
+          editUrl: "https://github.com/darklang/docs/edit/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
