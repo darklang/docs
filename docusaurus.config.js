@@ -88,6 +88,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Dark Inc. Built with Docusaurus.`,
     },
+    algolia: {
+      apiKey: "1e1c6adb6b62f53c456dc70e833c2c26",
+      indexName: "darklang",
+      algoliaOptions: {},
+    },
   },
   presets: [
     [

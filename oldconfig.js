@@ -32,13 +32,6 @@ module.exports = {
   },
   */
 
-  // TODO: migrate to v2: https://v2.docusaurus.io/docs/migrating-from-v1-to-v2/#algolia
-  // algolia: {
-  //   apiKey: "1e1c6adb6b62f53c456dc70e833c2c26",
-  //   indexName: "darklang",
-  //   algoliaOptions: {}, // Optional, if provided by Algolia
-  // },
-
   presets: [
     [
       "@docusaurus/preset-classic",
