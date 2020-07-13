@@ -16,6 +16,79 @@ In the future, packages will be imported vs. being continually accessible, and
 community members will be able to contribute directly. If you would like to
 request or contribute a package today, please reach out via Slack.
 
+## Slack
+
+### `getAllConversations`
+
+Takes your Slack token as a `String` and returns a `list` of records containing
+both your public and private Slack channel names and ids.
+
+![getAllConversations](assets/packages/slack/getAllConversations.png)
+
+### `getConversations`
+
+Takes your Slack token as a `String` and returns a `list` of records containing
+your public Slack channel names and ids.
+
+![getConversations](assets/packages/slack/getConversations.png)
+
+### `getConversationsWithDetails`
+
+Takes your Slack token as a `String` and returns a `list` of records containing
+the channel name, id, created at date (in Epoch seconds), creator, count of
+members, purpose and current topic. Does not include archived channels.
+
+![getConversationsWithDetails](assets/packages/slack/getConversationsWithDetails.png)
+
+### `getNewConversations`
+
+Takes your Slack token as a `String` and `checkFromSeconds` as an `Int`, and
+returns a list of conversations (as records) where the created at date is
+greater than the current time minus the `checkFromSeconds` time. Each entry
+contains the channel name, id, created at date (in Epoch seconds), creator,
+count of members, purpose and current topic.
+
+![getNewConversations](assets/packages/slack/getNewConversations.png)
+
+### `getPrivateConversations`
+
+Takes your Slack token as a `String` and returns a `list` of records containing
+your private Slack channel names and ids.
+
+![getPrivateConversations](assets/packages/slack/getPrivateConversations.png)
+
+### `oauth`
+
+Takes your Slack client ID (`String`), client secret (`String`), token datastore
+(`Any` - but should be the name of your datastore), and OAuth code (`String`)
+and returns a `Result`. Using this function enables you to easily set up Slack
+OAuth.
+
+![oauth](assets/packages/slack/oauth.png)
+
+![oauth example](assets/packages/slack/oauthexample.png)
+
+### `postMarkdownMessage`
+
+Takes your Slack token, channel id and text as `String`s and posts the text to
+the Slack channel as a markdown message.
+
+![postMarkdownMessage](assets/packages/slack/postMarkdownMessage.png)
+
+### `postMessage`
+
+Takes your Slack token, channel id and text as `String`s and posts the text to
+the Slack channel.
+
+![postMessage](assets/packages/slack/postMessage.png)
+
+### `scheduleMessage`
+
+Takes an Epoch time (`Int`), Slack token (`String`), channel id (`String`) and
+text (`String`) and schedules a message to be posted at the time specified.
+
+![scheduleMessage](assets/packages/slack/scheduleMessage.png)
+
 ## Asana Package
 
 ### `createProject`

@@ -17,7 +17,7 @@ USERNAME-signin for this project).
 
 First, on that canvas build a hello world API endpoint to get a feel for Dark:
 
-![assets/reactspa/image15.gif](/assets/reactspa/image15.gif)
+![assets/reactspa/image15.gif](assets/reactspa/image15.gif)
 
 All the major handlers work the same way, but the key for many requests is
 working directly with incoming data.
