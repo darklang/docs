@@ -31,7 +31,7 @@ jobs:
           command: |
             git config --global user.email "ops@darklang.com"
             git config --global user.name "Dark Ops"
--           npm install --frozen-lockfile && USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" npm run-script deploy
+            npm install --frozen-lockfile && USE_SSH=true CUSTOM_COMMIT_MESSAGE="[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI" npm run-script deploy
 
 workflows:
   version: 2
