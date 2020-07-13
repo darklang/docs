@@ -8,12 +8,12 @@ Try it out:
 - Change your REPL to say "test3" instead of "test1" and then re-run the request
   by hitting the play button.
 
-  ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
+  ![gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
 
 - A new trace dot will appear on the HTTP Post `/test` handler. It shows "test6"
   in the body of the request.
 
-  ![assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](assets/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
+  ![gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
 
 - The new request will be in the Datastore, and if you open your reports
   endpoint tomorrow, you'll see a log of all the new requests, as well as

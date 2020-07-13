@@ -25,7 +25,7 @@ comment */
 In Dark, you use a `let _ =` to start a comment, and you write the comment as a
 String:
 
-![assets/from-python/comment.png](assets/from-python/comment.png)
+![from-python/comment.png](/docs/img/from-python/comment.png)
 
 ## Strings
 
@@ -37,7 +37,7 @@ In Javascript, you can write a String in multiple ways:
 ```
 
 In Dark, you always use double quotes:
-![assets/from-python/string.png](assets/from-python/string.png)
+![from-python/string.png](/docs/img/from-python/string.png)
 
 ## Functions
 
@@ -57,12 +57,12 @@ helloWorld();
 
 In Dark, you create a function from the sidebar:
 
-![assets/from-python/functionside.png](assets/from-python/functionside.png)
+![from-python/functionside.png](/docs/img/from-python/functionside.png)
 
 This will open a new function in the function space, where you can define the
 name of the function and its contents:
 
-![assets/from-python/function.png](assets/from-python/function.png)
+![from-python/function.png](/docs/img/from-python/function.png)
 
 ## Standard Library/Built-in Functions
 
@@ -76,7 +76,7 @@ Math.pow(2,2)
 Dark has a set of built in functions as well, which can be accessed via the
 autocomplete:
 
-![assets/from-python/power.gif](assets/from-python/power.gif)
+![from-python/power.gif](/docs/img/from-python/power.gif)
 
 ## If/Else statements
 
@@ -98,9 +98,9 @@ else
 
 In Dark, the same statement would look this this:
 
-![assets/from-python/ifs.png](assets/from-python/ifs.png)
+![from-python/ifs.png](/docs/img/from-python/ifs.png)
 
 Note that we highlight the path your code takes - so if we were to change the
 values, a different piece of the `If` statement would be highlighted:
 
-![assets/from-python/ifs2.png](assets/from-python/ifs2.png)
+![from-python/ifs2.png](/docs/img/from-python/ifs2.png)

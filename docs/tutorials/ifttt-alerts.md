@@ -15,7 +15,7 @@ uploading via static assets.
    of the work for this tutorial can be done locally, but if you're interested
    you can learn more about [uploading static assets here.](../static-assets)
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png)
 
 We've used the code below - note that you will need to replace the URL that is
 posted to with your own username and canvas.
@@ -37,37 +37,37 @@ posted to with your own username and canvas.
 2. Enter some information on the form and click "submit". You will get a 404
    error.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.19.18_AM.png)
 
 3. Go to your canvas and check your 404s in the sidebar - a new one should be
    available. Click to add it to your canvas.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.31_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.31_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.19.31_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.19.31_AM.png)
 
 4. Once your handler has been added, you can mouse over the trace (white dot on
    the left) to see the data you passed through via the form.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.50_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.19.50_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.19.50_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.19.50_AM.png)
 
 5. We're going to want to add this information to a datastore - create a new one
    via the sidebar and add the following fields.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.20.55_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.20.55_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.20.55_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.20.55_AM.png)
 
 6. Grab the email, name and number of twitter followers from the request.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.21.33_AM.png)
 
 7. Use a `DB::set` to add the information to your datastore. Note that we've
    also set the `reviewed` and `reviewResult` fields. We will be using these to
    keep track of where waitlist entries are in the process.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.22.37_AM.png)
 
 8. Resubmit your form, or use the play button to run your handler. Your
    datastore should update and lock.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.22.52_AM.png)
 
 9. We now need to create a few more files to see our waitlist queue. Note that
    you will need to replace the URLs in `script.js` with your username and
@@ -247,33 +247,33 @@ request.send();
 10. Once you've created the page, visit it to generate another 404. Add your new
     404 to your canvas.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.24.45_AM.png)
 
 11. Write a `DB::query` to grab all of the entries in `Signups` where reviewed
     is `false`.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.25.20_AM.png)
 
 12. Refresh your page - the form entry from before will now be visible.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.30_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.25.30_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.25.30_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.25.30_AM.png)
 
 13. Click either the Approve or Reject buttons on your page to get another 404.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.26.29_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.26.29_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.26.29_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.26.29_AM.png)
 
 14. Check your trace - you should see information from your entry passed
     through.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.50_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.50_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.31.50_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.31.50_AM.png)
 
 15. Just like before, grab the information from the request.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.31.59_AM.png)
 
 16. Do a `DB::set` to update your datastore.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.33.32_AM.png)
 
 17. Let's make one more page, to take a look at our approvals. Once you've
     created it, visit it to get a 404.
@@ -357,16 +357,16 @@ request.send()
 
 </details>
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.34.21_AM.png)
 
 18. Do another `DB::query`, but this time, check that `reviewResult` is
     approved.
 
-![assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png](assets/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png)
+![iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-21_at_1.27.08_PM.png)
 
 19. Visit the page again to see your approvals.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.35.57_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.35.57_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.35.57_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.35.57_AM.png)
 
 ## Creating Alerts
 
@@ -377,59 +377,59 @@ you know if you've gotten a waitlist entry with lots of Twitter followers.
 1. Go to IFTTT and chose **Create**. Start by selecting Webhooks or the Maker
    service.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.30_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.30_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.59.30_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.59.30_AM.png)
 
 2. Name your event and create the trigger.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.47_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.47_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.59.47_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.59.47_AM.png)
 
 3. Choose "Send me an email" as the result of the trigger.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_9.59.59_AM.png)
 
 4. Format the email you will receive. In our case, we want to modify the subject
    line and pass through the value of how many unreviewed entries we have.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.01.07_AM.png)
 
 5. Return to your canvas and create a function that keeps track of how many
    unreviewed entries you have.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.04.20_AM.png)
 
 6. Next, create an hourly Cron that checks if your unreviewed count is too high
    (in this case, we're going to set it to 3) and sends you an email if it is.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.07.49_AM.png)
 
 7. Add more entries to your waitlist and then click the play button to run your
    cron. You should see an email in your inbox.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.08.04_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.08.04_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.08.04_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.08.04_AM.png)
 
 Let's make another kind of alert - one that fires as soon as something happens.
 In this case, when someone with a lot of Twitter followers joins your waitlist.
 
 1. Create another event in IFTTT and give it a different name.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.09.18_AM.png)
 
 2. Format your email.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.10.19_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.10.19_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.10.19_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.10.19_AM.png)
 
 3. In your `/submit` handler, add some logic to check if someone's follower
    count is over 5000 and fire an alert if it is.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.13.52_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.13.52_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.13.52_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.13.52_AM.png)
 
 4. Submit an entry to your waitlist with over 5000 followers.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.14.10_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.14.10_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.14.10_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.14.10_AM.png)
 
 5. Check your email - you should have an alert.
 
-![assets/iftttalerts/Screen_Shot_2020-05-19_at_10.15.56_AM.png](assets/iftttalerts/Screen_Shot_2020-05-19_at_10.15.56_AM.png)
+![iftttalerts/Screen_Shot_2020-05-19_at_10.15.56_AM.png](/docs/img//img/iftttalerts/Screen_Shot_2020-05-19_at_10.15.56_AM.png)
 
 Congratulations, you now have a waitlist you can review, and multiple alerts to
 let you know when something important happens.

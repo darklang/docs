@@ -15,25 +15,25 @@ team members can see it.
 - In the base, create two columns, one for date (field type is date) and one for
   requests (field type is number). You can see our sample
   [here](https://airtable.com/invite/l?inviteId=invOadxgcpBKaCQiv&inviteToken=e7492a049bf7e4cd1c475b43efac35d296578f66198bff549ca99af6ee5821b4).
-  ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_base.png)
+  ![gettingstarted/newworker.png](/docs/img/gettingstarted/airtable_base.png)
 - Generate an API key on the [Account page](https://airtable.com/account). Put
   the API key in a function in your Dark canvas.
-  ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_key.png)
+  ![gettingstarted/newworker.png](/docs/img/gettingstarted/airtable_key.png)
 - Airtable's full API documentation for your base will be available on the
   [API page](https://airtable.com/api). Within this page, go to Create Records
   in the left hand navigation to copy the URI from the right hand side.
-  ![assets/gettingstarted/newworker.png](assets/gettingstarted/airtable_url.png)
+  ![gettingstarted/newworker.png](/docs/img/gettingstarted/airtable_url.png)
 
 2. Add the HTTP POST call to the `storeReport` worker so it will run
    asynchronously. Hit `return` after the `Db::set` function. `DB::set` will
    still run as a side effect, and we can add the new function.
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/apiworker_newline.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/apiworker_newline.png)
 
 3. The `HttpClient::post` function takes four arguments. Paste the URI from
    Airtable from the base into the first argument.
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/api_httpclientpost.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/api_httpclientpost.png)
 
 4. Above `HttpClient::post` declare a new variable, `airtable_header`. Use the
    `HttpClient::bearerToken` and pass your API key function as the argument.
@@ -41,7 +41,7 @@ team members can see it.
    `HttpClient::jsonContentType`. The `airtable_header` will now be a nicely
    formatted header for the Airtable API.
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/api_header.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/api_header.png)
 
 5. The query can be empty for this particular request, but we do need to provide
    an argument, such as `{}`.
@@ -50,19 +50,19 @@ team members can see it.
    requests). Airtable expects the following format:  
    `records : [{fields : {Date : date, Requests : count}}]`
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/api_body.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/api_body.png)
 
 7. Run the API request in the editor by hitting the play button next to
    `HttpClient::post`. If the request is successful, a success will be returned
    and you'll see the record in your Airtable base.
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/api_success.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/api_success.png)
 
 If the request is not successful, the error message will be displayed in line,
 and you'll see the `Error` on the error rail. In this case, the format of the
 date passed did not expect what Airtable expected.
 
-![assets/gettingstarted/newworker.png](assets/gettingstarted/api_error.png)
+![gettingstarted/newworker.png](/docs/img/gettingstarted/api_error.png)
 
 8. Each time your cron runs (daily, or when triggered) a record will be added to
    your Airtable base.

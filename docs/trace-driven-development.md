@@ -33,7 +33,7 @@ Send requests to Dark _before writing code_. There are several ways to do this:
   [https://sample-introtodark.builtwithdark.com/test](https://sample-introtodark.builtwithdark.com/test)).
 - Go back to Dark and check in the 404 section.
 
-![assets/trace/image9.png](assets/trace/image9.png)
+![trace/image9.png](/docs/img/trace/image9.png)
 
 You’ll be able to create the endpoint and see the full request (including any
 query params if you add them - i.e. test?name=ellen). Each request shows up as a
@@ -51,7 +51,7 @@ One current limitation is that you can only write code for existing traces
 (trying to access something that doesn’t exist will not allow you to write the
 code). We’re working on it.
 
-![assets/trace/image7.png](assets/trace/image7.png)
+![trace/image7.png](/docs/img/trace/image7.png)
 
 #### POST Requests
 
@@ -61,26 +61,26 @@ Open terminal and curl:
 curl -X POST -H 'Content-Type: application/json' https://username-canvasname.builtwithdark.com/test2 -d '{"test":"test data","info":"test info"}'
 ```
 
-![assets/trace/image11.png](assets/trace/image11.png)
+![trace/image11.png](/docs/img/trace/image11.png)
 
-![assets/trace/image1.png](assets/trace/image1.png)
+![trace/image1.png](/docs/img/trace/image1.png)
 
 When you create the route you’ll see the recent traces as white dots on the
 left. You can select a given trace by clicking on it and then you’ll see all
 expressions evaluated for that request.
 
-![assets/trace/image12.png](assets/trace/image12.png)
+![trace/image12.png](/docs/img/trace/image12.png)
 
 Similarly to the get request, you can work with the real data from the trace. In
 this case the handler shows `request.body.info`.
 
-![assets/trace/image3.png](assets/trace/image3.png)
+![trace/image3.png](/docs/img/trace/image3.png)
 
 You can select which trace you are using when evaluating your code. Below, there
 are three recent traces, and we’re seeing the value of “info” for the most
 recent.
 
-![assets/trace/image2.png](assets/trace/image2.png)
+![trace/image2.png](/docs/img/trace/image2.png)
 
 ## Live Values & Play Buttons
 
@@ -94,7 +94,7 @@ As seen above with `testinfo`, expressions will automatically show you their
 values to the left if they have no side effects. Below, we see the result of the
 addition:
 
-![assets/trace/image4.png](assets/trace/image4.png)
+![trace/image4.png](/docs/img/trace/image4.png)
 
 When an expression does have side effects (like changing a value in a datastore
 or calling an external API) it will have a green “play” or “replay” button that
@@ -105,23 +105,23 @@ In our earlier request, if we saved `request.body.info` to the variable
 case, there’s a play button to generate a new key, and a second one to insert
 the information:
 
-![assets/trace/image8.png](assets/trace/image8.png)
+![trace/image8.png](/docs/img/trace/image8.png)
 
 Once you play the `DB::generateKey`, you can see the resulting key, and choose
 to play the `DB::set` expression:
 
-![assets/trace/image10.png](assets/trace/image10.png)
+![trace/image10.png](/docs/img/trace/image10.png)
 
 When you play `DB::set`, you can see the record that was inserted:
 
-![assets/trace/image6.png](assets/trace/image6.png)
+![trace/image6.png](/docs/img/trace/image6.png)
 
 ### Replay Entire Trace Button
 
 If you wish to replay the entire trace, you can use the “replay” button next to
 the hamburger menu in the upper right of the handler.
 
-![assets/trace/image14.png](assets/trace/image14.png)
+![trace/image14.png](/docs/img/trace/image14.png)
 
 ## Return Values
 
@@ -129,4 +129,4 @@ When on a handler, you’ll also see a live value at the bottom that corresponds
 to the value a handler returns. Dark has implicit returns (more on this in
 [Functional Aspects of Dark](functional-aspects)).
 
-![assets/trace/image5.png](assets/trace/image5.png)
+![trace/image5.png](/docs/img/trace/image5.png)

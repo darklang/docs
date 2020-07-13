@@ -10,9 +10,9 @@ loosely in-order, executing the code within the Worker once for each message.
 Messages are created by calling `emit` from any other code, and can contain
 arbitrary event data.
 
-![REPL with emit to worker](assets/workers/emit.png)
+![REPL with emit to worker](/docs/img/workers/emit.png)
 
-![basic worker](assets/workers/worker.png)
+![basic worker](/docs/img/workers/worker.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JpfZIdde_5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -42,7 +42,7 @@ Workers can be created from the omnibox or sidebar.
 Similar to HTTP handlers, calling `emit` with a nonexistent Worker name will
 populate that worker in the 404 sidebar section, allowing it to be created.
 
-![404 worker](assets/workers/404.png)
+![404 worker](/docs/img/workers/404.png)
 
 Creating a Worker from a 404 may result in a delay when executing the first
 message. When a new worker is created, it immediately processed the first
@@ -109,7 +109,7 @@ calculate this yourself by adding a timestamp to each message when you call
 Your worker is paused and will not process messages while paused. Click the play
 button at the top left of the worker to resume processing.
 
-![paused worker with pending messages](assets/workers/pending.png)
+![paused worker with pending messages](/docs/img/workers/pending.png)
 
 Alternatively, you emitted messages to a non-existent Worker and then created it
 from the 404 section (see the warning above in **Creating a Worker**). Complete
