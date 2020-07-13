@@ -151,9 +151,10 @@ module.exports = {
           routeBasePath: "/",
           homePageId: "/docs/introduction",
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/darklang/docs/edit/main/",
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          // TODO: re-add these in the footer
+          // editUrl: "https://github.com/darklang/docs/edit/main/",
+          // showLastUpdateAuthor: true,
+          // showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
