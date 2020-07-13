@@ -11,11 +11,10 @@ jobs:
       - image: circleci/node:14.5.0
     steps:
       - checkout
-      - run: |
-          npm ci
-          npm run lint
-          npm run check-format
-          npm run build
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run check-format
+      - run: npm run build
 
   deploy-website:
     docker:
