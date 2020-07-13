@@ -16,18 +16,18 @@ functions.
 - Functions with side effects have play buttons. Press the play button to
   execute the function for the selected trace.
 
-![unique/playbutton.png](/docs/img//img/unique/playbutton.png)
+![unique/playbutton.png](/docs/img/unique/playbutton.png)
 
 The replay icon indicates the function has been executed already. Pressing it
 executes the code for the trace again.
 
-![unique/replaybutton.png](/docs/img//img/unique/replaybutton.png)
+![unique/replaybutton.png](/docs/img/unique/replaybutton.png)
 
 Replay an entire handler for the selected trace (including all functions within
 the handler) in the upper right. This would replay `DB::generateKey` and
 `DB::set`.
 
-![unique/replayhandler.png](/docs/img//img/unique/replayhandler.png)
+![unique/replayhandler.png](/docs/img/unique/replayhandler.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nhShq-HCFxs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -55,13 +55,13 @@ An expression that returns to the rail has a signifier on the right hand side.
 Before it runs, there is a dotted line and no indication of a happy case or
 error.
 
-![unique/railnotyetrun.png](/docs/img//img/unique/railnotyetrun.png)
+![unique/railnotyetrun.png](/docs/img/unique/railnotyetrun.png)
 
 Once it runs, it will show the happy case (circle) or error case (error
 signifier).
 
-![unique/railnotyetrun.png](/docs/img//img/unique/errorrail_success.png)
-![unique/railnotyetrun.png](/docs/img//img/unique/errorrail_failure.png)
+![unique/railnotyetrun.png](/docs/img/unique/errorrail_success.png)
+![unique/railnotyetrun.png](/docs/img/unique/errorrail_failure.png)
 
 In the case of a "happy" value, you can just ignore the result and option type -
 we unwrap them automatically, as seen above. In the case of an error, the
@@ -78,7 +78,7 @@ error for bad results and a 404 for bad Options.
 
 In the case above, when the function is on the rail, the value is as follows.
 
-![unique/onrail_value.png](/docs/img//img/unique/onrail_value.png)
+![unique/onrail_value.png](/docs/img/unique/onrail_value.png)
 
 ## Taking Functions off the Error Rail
 
@@ -89,21 +89,21 @@ the editor command `take-function-off-rail` (open the Command palette by hitting
 In this case it unwraps to `Just val` and the behavior would be the same for
 functions that would return `Ok val`.
 
-![unique/offrail_value.png](/docs/img//img/unique/offrail_value.png)
+![unique/offrail_value.png](/docs/img/unique/offrail_value.png)
 
 When the function is off the rail, instead of execution halting, you will handle
 it yourself.
 
-![unique/offrail_value.png](/docs/img//img/unique/offrail_error.png)
+![unique/offrail_value.png](/docs/img/unique/offrail_error.png)
 
 Handling these errors is best done using a Match statement.
 
-![unique/match.png](/docs/img//img/unique/match.png)
+![unique/match.png](/docs/img/unique/match.png)
 
 Live values on Match statements will show which branch executed. In this case,
 the first arm of the branch `Just result` executed, and `Nothing` did not.
 
-![unique/match.png](/docs/img//img/unique/match_just.png)
+![unique/match.png](/docs/img/unique/match_just.png)
 
 More on Match is available in
 [Functional Aspects of Dark](https://darklang.github.io/docs/functional-aspects),
