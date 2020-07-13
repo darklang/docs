@@ -26,7 +26,7 @@ jobs:
             # repo-specific deploy key
             - "3a:4a:09:a1:7e:64:aa:13:cc:31:3e:c9:51:46:c7:ed"
       - checkout
-      - run: "git config --global user.email 'ops@darklang.com'"
+      - run: git config --global user.email "ops@darklang.com"
       - run: git config --global user.name "Dark Ops"
       - run: npm install --frozen-lockfile
       - run:
