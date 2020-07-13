@@ -3,15 +3,22 @@ id: structured-editing
 title: Structured Editing
 ---
 
-_Note: for now, Dark is only supported for Chrome with browser extensions disabled._
+_Note: for now, Dark is only supported for Chrome with browser extensions
+disabled._
 
-At heart, Dark is an expression-oriented programming language. This aspect of Dark enables powerful features like live values and trace-driven development. This section introduces a simple way to think about the structure of Dark programs within the editor.
+At heart, Dark is an expression-oriented programming language. This aspect of
+Dark enables powerful features like live values and trace-driven development.
+This section introduces a simple way to think about the structure of Dark
+programs within the editor.
 
-When writing code in Dark, you are building up expressions, relying heavily on autocomplete.
+When writing code in Dark, you are building up expressions, relying heavily on
+autocomplete.
 
 ## Blanks
 
-A blank expression acts as a placeholder where you can type to create a different expression. The value of a blank expression is `Incomplete`, because it needs to be completed in order to be useful.
+A blank expression acts as a placeholder where you can type to create a
+different expression. The value of a blank expression is `Incomplete`, because
+it needs to be completed in order to be useful.
 
 ![Blank Example](assets/structuredediting/blank_example.png)
 
@@ -42,31 +49,44 @@ There are also more complex expressions:
 - Conditionals
 - Matches
 
-For more on the language features of each type of expression, visit the [Language Overview](language). Examples of how these expressions are used in the editor are below.
+For more on the language features of each type of expression, visit the
+[Language Overview](language). Examples of how these expressions are used in the
+editor are below.
 
 ## Nesting Expressions
 
-Expressions in Dark are nested. For example, a multiplication expression is a compound expression with two sub-expressions as operands:
+Expressions in Dark are nested. For example, a multiplication expression is a
+compound expression with two sub-expressions as operands:
 
 ![Multiplication Diagram](assets/structuredediting/mul_diagram.png)
 
-Filling a blank with an expression with sub-parts introduces a new blank for each of them.
+Filling a blank with an expression with sub-parts introduces a new blank for
+each of them.
 
 ![Multiplication Diagram](assets/structuredediting/multiplication.png)
 
-In the expression 2 \* 3, these sub-expressions are filled with the expressions 2 and 3:
+In the expression 2 \* 3, these sub-expressions are filled with the expressions
+2 and 3:
 
 ![Multiplication Expression](assets/structuredediting/mul_expression.png)
 
-The value of the expression `2 * 3` is `6`. This is equivalent to saying `2 * 3` evaluates to `6`.
+The value of the expression `2 * 3` is `6`. This is equivalent to saying `2 * 3`
+evaluates to `6`.
 
 ![Multiplication Result](assets/structuredediting/mul_result.png)
 
-Since `2 * 3` is an expression, it can itself be a subexpression of a compound expression. Consider the expression `1 + 2 * 3`, which has the value `7`. It is a compound expression with a binary operator `+` and two subexpressions as operands: `1` and `2 * 3`.
+Since `2 * 3` is an expression, it can itself be a subexpression of a compound
+expression. Consider the expression `1 + 2 * 3`, which has the value `7`. It is
+a compound expression with a binary operator `+` and two subexpressions as
+operands: `1` and `2 * 3`.
 
 ### Let Expressions
 
-This nesting of expressions applies to all parts of the language, not just to mathematical expressions. When defining a variable in Dark, you use a let expression, which has 3 parts: a variable name, a value (an expression!) bound to that variable, and a body (another expression!) within which you can use the name as an expression to stand in for the value:
+This nesting of expressions applies to all parts of the language, not just to
+mathematical expressions. When defining a variable in Dark, you use a let
+expression, which has 3 parts: a variable name, a value (an expression!) bound
+to that variable, and a body (another expression!) within which you can use the
+name as an expression to stand in for the value:
 
 ![Let Diagram](assets/structuredediting/let_diagram.png)
 
@@ -76,7 +96,10 @@ Here's a let with 3 blanks in Dark:
 
 ### Conditional Expressions
 
-If expressions have 3 parts: a boolean conditional expression and two branches, a then and else expression. The value of the conditional expression determines whether the then or else expression is evaluated. The value of the evaluated branch becomes the value of the if expression as a whole.
+If expressions have 3 parts: a boolean conditional expression and two branches,
+a then and else expression. The value of the conditional expression determines
+whether the then or else expression is evaluated. The value of the evaluated
+branch becomes the value of the if expression as a whole.
 
 ![If Diagram](assets/structuredediting/if_diagram.png)
 
@@ -85,26 +108,35 @@ Here's a conditional in Dark:
 
 ### Match Expressions
 
-`match` expressions provide conditional evaluation of one or more expression branches. They may also introduce new variable bindings. Every match has a single value expression that is evaluated once and matched against one or more patterns. The first pattern that matches the evaluated value indicates the expression to evaluate. The value of the evaluated expression becomes the value of the match as a whole.
+`match` expressions provide conditional evaluation of one or more expression
+branches. They may also introduce new variable bindings. Every match has a
+single value expression that is evaluated once and matched against one or more
+patterns. The first pattern that matches the evaluated value indicates the
+expression to evaluate. The value of the evaluated expression becomes the value
+of the match as a whole.
 
 ![Match Diagram](assets/structuredediting/match_diagram.png)
 
 ### Pipelines
 
-Pipelines are a key part of the Dark language. They allow you to create a chain of expressions, where each chain is an input to the next expression in the sequence.
+Pipelines are a key part of the Dark language. They allow you to create a chain
+of expressions, where each chain is an input to the next expression in the
+sequence.
 
-To start one, select the code
-that has the result that you want to pipe, and hit `shift-enter` or type `|>`.
+To start one, select the code that has the result that you want to pipe, and hit
+`shift-enter` or type `|>`.
 
 ![assets/refactoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](assets/structuredediting/pipeline_example.png)
 
 ## Partials (Partially Completed Expressions)
 
-While you are typing or deleting, you'll often see partially completed expressions like this:
+While you are typing or deleting, you'll often see partially completed
+expressions like this:
 
 ![Partial](assets/structuredediting/partial_example.png)
 
-The text in red is the partial, and the gray text behind it indicates what was there before. Note that partials evaluate to whatever was there before:
+The text in red is the partial, and the gray text behind it indicates what was
+there before. Note that partials evaluate to whatever was there before:
 
 ![Partial](assets/structuredediting/partial_almost_filled.png)
 
@@ -114,7 +146,8 @@ The text in red is the partial, and the gray text behind it indicates what was t
 
 ## Comments
 
-To add comments to your Dark code, start a line with `let _ =` and add a string containing the comment you'd like to include.
+To add comments to your Dark code, start a line with `let _ =` and add a string
+containing the comment you'd like to include.
 
 ![Option Example](assets/language/comment.png)
 
@@ -122,21 +155,22 @@ To add comments to your Dark code, start a line with `let _ =` and add a string 
 
 ### Undo/redo
 
-Dark supports unlimited undo/redo in a single element. Undo with `Ctrl-Z`/`Cmd-Z` and redo with `Ctrl-Shift-Z`/`Cmd-Shift-Z`.
+Dark supports unlimited undo/redo in a single element. Undo with
+`Ctrl-Z`/`Cmd-Z` and redo with `Ctrl-Shift-Z`/`Cmd-Shift-Z`.
 
 ### Copy/paste
 
 You can copy/paste selections, which is often used for refactoring.
 
-It may be helpful to note that copy/paste only works in Dark between handlers
-at this time. Copying JSON from an external source will paste into your
-handlers in Dark, but if you write code in the Dark language in your text
-editor of choice, that code will not paste. We hope to improve this experience
-in the future.
+It may be helpful to note that copy/paste only works in Dark between handlers at
+this time. Copying JSON from an external source will paste into your handlers in
+Dark, but if you write code in the Dark language in your text editor of choice,
+that code will not paste. We hope to improve this experience in the future.
 
 ### Command Palette
 
-If you’re looking to do something that is not immediately available, chances are it’s in the command palette (accessed by hitting `ctrl-\`).
+If you’re looking to do something that is not immediately available, chances are
+it’s in the command palette (accessed by hitting `ctrl-\`).
 
 ![assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](assets/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 

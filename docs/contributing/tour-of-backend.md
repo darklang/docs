@@ -7,6 +7,7 @@ title: A tour of the Backend
 When the users of a Dark developer's app (we refer to them as "grand-users") makes a request to a Dark app, it makes it's way directly to the developer's editor.
 
 Here's the journey it takes:
+
 - Google Load Balancer
 - Nginx sidecar container
 - the OCaml webserver in the `bwd` container
@@ -34,12 +35,12 @@ Here's the journey it takes:
 A trace is a combination of an event (referred to in Dark as an "input value"
 and in the code as `StoredEvent`), and the arguments and results of functions
 called during the trace:
+
 - event refers to the HTTP request, worker event, or in the case of Crons, an
   empty value, that is used to trigger the event handler
 - the trace includes information for every call to every function during the
   event. For built-in functions, we record a hash of the arguments and the
   result. For canvas functions, we also store the arguments to the function.
-
 
 ## Serialization
 

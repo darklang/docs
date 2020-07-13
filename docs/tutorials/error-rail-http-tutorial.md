@@ -30,7 +30,7 @@ In this tutorial, we will be showing you how to use the error rail with `HttpCli
 
 ![assets/error-rail/returnData.png](assets/error-rail/returnData.png)
 
-7. Return to your `search` REPL and enter anything other than the name of an actual Pokemon. I chose `"pikawho"`.  Then, run your REPL again to see the `Error` trace.
+7. Return to your `search` REPL and enter anything other than the name of an actual Pokemon. I chose `"pikawho"`. Then, run your REPL again to see the `Error` trace.
 
 ![assets/error-rail/error.png](assets/error-rail/error.png)
 
@@ -50,7 +50,7 @@ In this tutorial, we will be showing you how to use the error rail with `HttpCli
 
 ![assets/error-rail/niceError.png](assets/error-rail/niceError.png)
 
-12. Return to your `search` REPL, and re-run it. You'll see your nicely formatted error message. 
+12. Return to your `search` REPL, and re-run it. You'll see your nicely formatted error message.
 
 ![assets/error-rail/replError.png](assets/error-rail/replError.png)
 

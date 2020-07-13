@@ -4,19 +4,19 @@ title: Language Details
 sidebar_label: Language Details
 ---
 
-This doc describes the Dark language. Dark is really a system - a
-combination of the language, editor, framework and infrastructure. In this
-doc, we'll focus on discussing the language itself, ignoring where possible
-the editor and infrastructure.
+This doc describes the Dark language. Dark is really a system - a combination of
+the language, editor, framework and infrastructure. In this doc, we'll focus on
+discussing the language itself, ignoring where possible the editor and
+infrastructure.
 
 This discusses both the language and the **intended** language. We have taken
 many shortcuts to be able to ship Dark, and so many parts of the language are
-not currently at their end state. Here we discuss both what the language is,
-and what we intend it to be.
+not currently at their end state. Here we discuss both what the language is, and
+what we intend it to be.
 
-Dark is a statically-typed functional/imperative hybrid, based loosely on ML.
-It is a high-level language, with immutable values, garbage
-collection, and support for generics/polymorphic types.
+Dark is a statically-typed functional/imperative hybrid, based loosely on ML. It
+is a high-level language, with immutable values, garbage collection, and support
+for generics/polymorphic types.
 
 Dark is somewhat similar to OCaml or Elm. It has many similarities to Rust and
 Haskell, and is also influenced by Clojure, Ruby, Python, CoffeeScript, as well
@@ -27,11 +27,11 @@ React, and Rust.
 ### Type system
 
 Dark’s type system is most similar to Elm, Haskell, ReasonML, OCaml or Rust:
-based on records, enums, list, and built-in generics/polymorphism. All
-values in Dark are immutable, except refs.
+based on records, enums, list, and built-in generics/polymorphism. All values in
+Dark are immutable, except refs.
 
-Dark has some standard basic types: `int`, `string`, `boolean`, `float`, `list`, and
-`dicts`.
+Dark has some standard basic types: `int`, `string`, `boolean`, `float`, `list`,
+and `dicts`.
 
 We support typical functional types: `Option` and `Result`.
 
@@ -54,8 +54,8 @@ Floats are double-precision 64-bit floating-point values (IEEE 754).
 We intend for numeric operations to return Results, to handle situations which
 are undefined on the datatype. For example, integer division would return
 `Result Error Int`. Similarly, floating point values would never be `NaN`, and
-instead would return `Result Error Float`. See [Error Handling in
-Dark](error-handling) for more.
+instead would return `Result Error Float`. See
+[Error Handling in Dark](error-handling) for more.
 
 ### Booleans
 
@@ -85,8 +85,8 @@ Lists and Arrays use the same datatype, called Lists. The Dark compiler will in
 the future optimize their implementation to support good algorithmic complexity
 and performance for whatever you use them for.
 
-Lists should be used for all “I want a sequence of things” situations,
-including iterating across them, random access, push/pop, etc.
+Lists should be used for all “I want a sequence of things” situations, including
+iterating across them, random access, push/pop, etc.
 
 ```elm
 let x = [8]
@@ -106,7 +106,8 @@ Non-unicode sequences of bytes are supported as the `Binary` type.
 
 ### Options
 
-Instead of allowing all values to potentially be null, as in most imperative languages, Dark uses an Option type:
+Instead of allowing all values to potentially be null, as in most imperative
+languages, Dark uses an Option type:
 
 ```elm
 Option a = Just a | Nothing
@@ -121,13 +122,15 @@ Functions which return `Option` trigger the [Error Rail](error-handling).
 
 ### Results
 
-Any functions which can have an error should use Results. We use results for Int division, Float operations, HTTP operations, etc.
+Any functions which can have an error should use Results. We use results for Int
+division, Float operations, HTTP operations, etc.
 
 ```elm
 Result a = Ok a | Err Error
 ```
 
-Dark has no exceptions - all errors go through Results. See [error handling](error-handling) for more details.
+Dark has no exceptions - all errors go through Results. See
+[error handling](error-handling) for more details.
 
 ![Result Example](assets/language/result_example.png)
 
@@ -145,8 +148,8 @@ Dark supports UUIDs directly.
 
 ### Null
 
-As a temporary hack, Dark also supports `null`. This allows us handle JSON
-while we build out enough type-system support to allow them to be replaced by
+As a temporary hack, Dark also supports `null`. This allows us handle JSON while
+we build out enough type-system support to allow them to be replaced by
 `Option`.
 
 Null is mostly useful for comparing against incoming JSON and results of
@@ -156,8 +159,8 @@ output.
 
 ## User defined types
 
-Dark currently has limited support for user-defined types. Currently, we
-support inline definition of records, but do not support defining record types
+Dark currently has limited support for user-defined types. Currently, we support
+inline definition of records, but do not support defining record types
 explicitly.
 
 Record types are actually implemented under the hood, and we intend to use them
@@ -165,14 +168,16 @@ to support typed Datastores, API contracts, and static types.
 
 Dark does not currently support user-defined enums.
 
-User-defined types will be either records or enums, or combinations of other type expressions.
+User-defined types will be either records or enums, or combinations of other
+type expressions.
 
 Types in Dark are out-of-line, meaning that they are not defined “on the
 canvas”, in a similar way to functions.
 
 All types in Dark will be versioned.
 
-In the future, we intend to support typeclasses or traits to allow ad-hoc polymorphism.
+In the future, we intend to support typeclasses or traits to allow ad-hoc
+polymorphism.
 
 ### Records
 
@@ -193,9 +198,9 @@ Records can not be accessed dynamically; they are not Maps/Hashtables/Dicts.
 Records are structurally typed, and are equivalent to records of the same shape
 but a different name.
 
-Note that at the moment, Dicts and Records share the same implementation and
-can be accessed and modified in the same way. We intend to break these apart in
-the future.
+Note that at the moment, Dicts and Records share the same implementation and can
+be accessed and modified in the same way. We intend to break these apart in the
+future.
 
 ### Enums
 
@@ -210,16 +215,18 @@ type Person = Human {age: Int, name: String, itin: String }
             | Puppers Int String
 ```
 
-Enums can be made by building on existing types, especially records and other enums.
+Enums can be made by building on existing types, especially records and other
+enums.
 
-Enums are nominally typed. (Two enums with the same field names and types are not equivalent).
+Enums are nominally typed. (Two enums with the same field names and types are
+not equivalent).
 
 ## Types unique to Dark
 
 ### Incompletes
 
-Programs in Dark start as a single empty expression. As they get built up in
-our structured editor, they can never become syntactically invalid. However, a
+Programs in Dark start as a single empty expression. As they get built up in our
+structured editor, they can never become syntactically invalid. However, a
 program may be incomplete if any its expressions are empty.
 
 An empty expression is incomplete. A developer may write programs where some
@@ -234,7 +241,10 @@ datastore. Returning an incomplete via a HTTP handler causes a 500 error.
 
 ### Error rail
 
-You might occasionally see a value marked `<ErrorRail>`, this is used to indicate that a value is on the Error Rail. See [Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a) for more details.
+You might occasionally see a value marked `<ErrorRail>`, this is used to
+indicate that a value is on the Error Rail. See
+[Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a)
+for more details.
 
 ### Sensitive Types
 
@@ -249,12 +259,13 @@ access to these values in the Dark editor.
 
 ## Expressions
 
-All Dark language constructs are expressions. That means that they evaluate to
-a value, rather than being used to set state.
+All Dark language constructs are expressions. That means that they evaluate to a
+value, rather than being used to set state.
 
 ### Let
 
-Lets creates a name with an immutable value, and a scope in which that is defined.
+Lets creates a name with an immutable value, and a scope in which that is
+defined.
 
 ```elm
 let name = "Stella"
@@ -287,7 +298,8 @@ See doc on `coding in an expression-based language`.
 Dark supports if/else statement. The argument to an `if` is a boolean. We
 currently support `truthy` types but intend to remove that ability.
 
-We support `&&` and `||` - they do not currently short-circuit but we intend them to in the future.
+We support `&&` and `||` - they do not currently short-circuit but we intend
+them to in the future.
 
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
@@ -310,7 +322,8 @@ construct to support `if` statements that destructure from Enums.
 
 ### Functions
 
-Functions must have type declarations for inputs. We intend to support types on return values soon.
+Functions must have type declarations for inputs. We intend to support types on
+return values soon.
 
 ```elm
 fetch url name =
@@ -346,9 +359,9 @@ List::map [5, 10, 11] \var -> var + 2
 [7, 12, 13]
 ```
 
-In the future, we intend to support a syntax for shorthands for creating
-lambdas to access fields: `.fieldname`. This can be included in a pipe or used
-as a first class function.
+In the future, we intend to support a syntax for shorthands for creating lambdas
+to access fields: `.fieldname`. This can be included in a pipe or used as a
+first class function.
 
 We also intend to support passing functions where blocks are expected.
 
@@ -358,7 +371,8 @@ function.
 
 ### Pipelining
 
-Dark programs are intended to be written, as much as possible, as pipelines of data:
+Dark programs are intended to be written, as much as possible, as pipelines of
+data:
 
 ```elm
 user
@@ -378,9 +392,9 @@ then 5
 else 6
 ```
 
-However, flags differ slightly from ifs in that any condition that is not
-`true` will cause the `then` block to activate. This is especially important
-around `incomplete`s, allowing you to take working code and edit the feature flag
+However, flags differ slightly from ifs in that any condition that is not `true`
+will cause the `then` block to activate. This is especially important around
+`incomplete`s, allowing you to take working code and edit the feature flag
 without disturbing existing users. In an `if` statement, neither branch would
 execute.
 
@@ -388,7 +402,8 @@ execute.
 
 ### Tuples
 
-Dark intends to support tuples: lists of defined length supporting heterogeneous types.
+Dark intends to support tuples: lists of defined length supporting heterogeneous
+types.
 
 ```elm
 x = (1, "string", { name: "Sam" })
@@ -400,7 +415,8 @@ We intend for Dark to support Sets: unordered collections of a single type.
 
 ### Unit
 
-We intend to support the unit type, which indicates something that have no type, such as an imperative function that doesn't return anything.
+We intend to support the unit type, which indicates something that have no type,
+such as an imperative function that doesn't return anything.
 
 ```elm
 x = ()

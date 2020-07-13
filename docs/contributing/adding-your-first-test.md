@@ -63,7 +63,7 @@ Let's go through this:
   int. In Dark, this would be `[1]`
 - `exec_ast` is a function to execute a given AST (`AST` means "abstract
   syntax tree" and is a compiler-y term for "some classes that represent a
-  program".). 
+  program".).
 - The AST being executed is a function call (`fn`) to `List::singleton`, taking a
   single parameter, the integer `1`
 - So this test checks that calling `List::singleton 1` gets you `[1]`. That
@@ -84,5 +84,3 @@ Add your function to `t_list_stdlibs_work` and save the file. It should
 automatically recompile and run the test.
 
 Great, we're done!
-
-

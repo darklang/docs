@@ -48,7 +48,7 @@ First, we're going to learn how to create new Asana projects using slash command
 
 ![assets/slack-apps/tutorials/asana-tutorial/projectname.png](assets/slack-apps/tutorials/asana-tutorial/projectname.png)
 
-5. Using the [`Asana::createProject function`](..\..\packages.md#createproject) and the data we grabbed from the trace, we can now create a new project. You will need to use the workspace id and personal access token you saved in the set-up process.
+5. Using the [`Asana::createProject function`](../../packages.md#createproject) and the data we grabbed from the trace, we can now create a new project. You will need to use the workspace id and personal access token you saved in the set-up process.
 
 ![assets/slack-apps/tutorials/asana-tutorial/createProject.png](assets/slack-apps/tutorials/asana-tutorial/createProject.png)
 
@@ -60,7 +60,7 @@ First, we're going to learn how to create new Asana projects using slash command
 
 ![assets/slack-apps/tutorials/asana-tutorial/textexample.png](assets/slack-apps/tutorials/asana-tutorial/textexample.png)
 
-8. Now, we can use the `String::split` function to separate out our two pieces of information, and add them separately to the [`Asana::createProject function`](..\..\packages.md#createProject) function. 
+8. Now, we can use the `String::split` function to separate out our two pieces of information, and add them separately to the [`Asana::createProject function`](....\packages.md#createProject) function.
 
 ![assets/slack-apps/tutorials/asana-tutorial/notes.png](assets/slack-apps/tutorials/asana-tutorial/notes.png)
 
@@ -72,7 +72,7 @@ You're not always going to want to pre-define your workspace or projects via Dar
 
 ![assets/slack-apps/tutorials/asana-tutorial/projectsdatastore.png](assets/slack-apps/tutorials/asana-tutorial/projectsdatastore.png)
 
-2. Create a new REPL. First, use the [`Asana::getAllProjects`](..\..\packages.md#getAllProjects) function to grab information about all projects you have access to. Then, use a `List::map` to add their names and gids to the DB.
+2. Create a new REPL. First, use the [`Asana::getAllProjects`](....\packages.md#getAllProjects) function to grab information about all projects you have access to. Then, use a `List::map` to add their names and gids to the DB.
 
 ![assets/slack-apps/tutorials/asana-tutorial/populatedb.png](assets/slack-apps/tutorials/asana-tutorial/populatedb.png)
 
@@ -114,7 +114,7 @@ Okay, this is all great, but still has some problems. What if someone forgets to
 
 4. Call your new slash command and grab the 404, as you did in previous steps.
 
-5. Start by setting your `triggerId` using  `request.body.trigger_id`:
+5. Start by setting your `triggerId` using `request.body.trigger_id`:
 
 ![assets/slack-apps/tutorials/asana-tutorial/triggerid.png](assets/slack-apps/tutorials/asana-tutorial/triggerid.png)
 
@@ -140,7 +140,7 @@ Okay, this is all great, but still has some problems. What if someone forgets to
 
 ![assets/slack-apps/tutorials/asana-tutorial/payloaddata.png](assets/slack-apps/tutorials/asana-tutorial/payloaddata.png)
 
-10. Use the [`Asana::createTask`](..\..\packages.md#createTask) and the `lookUpProjectID` functions to create your new task.
+10. Use the [`Asana::createTask`](....\packages.md#createTask) and the `lookUpProjectID` functions to create your new task.
 
 ![assets/slack-apps/tutorials/asana-tutorial/createtask.png](assets/slack-apps/tutorials/asana-tutorial/createtask.png)
 

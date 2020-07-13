@@ -4,7 +4,6 @@ title: OCaml for Dark developers
 
 This guide aims to introduce you to enough OCaml to contribute to Dark, assuming you already know Dark.
 
-
 ## Some simple OCaml code
 
 Dark and OCaml are very similar. Here's an OCaml function:
@@ -24,6 +23,7 @@ finally we call the `anotherFunction` function with all three
 parameters as arguments.
 
 In Dark this would be written:
+
 ```ocaml
 someFunction
   intArgument : Int
@@ -87,21 +87,20 @@ tracking down these errors.
 
 We'll discuss declaring types below.
 
-
 ### Functions
 
 Functions in OCaml are defined in the outer scope. Type signatures are optional in OCaml
 but required in the Dark codebase:
 
 ```ocaml
-let myFunction (arg1 : int) (arg2 : string) : string = 
+let myFunction (arg1 : int) (arg2 : string) : string =
   if arg1 < (String.toInt arg2)
   then "just return a string"
   else arg2
 ```
 
 Here, `myFunction` has two arguments, `arg1` and `arg2`, which are an
-`int` and `string` respectively. It returns a `string`. 
+`int` and `string` respectively. It returns a `string`.
 
 Like in Dark, the body of a function is just an expression, and it
 automatically returns the result of that expression.
@@ -116,16 +115,15 @@ Most of the code in Dark uses
 for Bucklescript and native OCaml.
 
 A lot of the backend uses Core, one of the most popular standard libraries for
-OCaml. The Jane Street Core library has three flavors: Base, Core\_kernel and
-Core, each with progressively more expansive functionality.  The native version
+OCaml. The Jane Street Core library has three flavors: Base, Core_kernel and
+Core, each with progressively more expansive functionality. The native version
 of Tablecloth is built on top of "Base". The Dark backend typically uses
-[Core\_kernel](https://ocaml.janestreet.com/ocaml-core/v0.11/doc/core_kernel/Core_kernel/index.html)
+[Core_kernel](https://ocaml.janestreet.com/ocaml-core/v0.11/doc/core_kernel/Core_kernel/index.html)
 as we have not transitioned to Tablecloth fully.
 
-Note: we try to use Core\_kernel directly when implementing the language and
+Note: we try to use Core_kernel directly when implementing the language and
 standard libraries, as Tablecloth is still in flux and has not yet reached
 stability.
-
 
 ### Int
 
@@ -137,7 +135,6 @@ integers, which is the same as OCaml.
 let x = 5 in
 x + 6
 ```
-
 
 ### Float
 
@@ -156,7 +153,6 @@ To convert from floats to ints use `Float.toInt`, or `Float.round`.
 ### Bool
 
 Like in Dark, `bool`s in OCaml are either `true` or `false`.
-
 
 ### String
 
@@ -260,7 +256,6 @@ should never use it.
 OCaml's inequality operator (`!=` in Dark) is `<>`. Most of its comparison
 operators (such as `<`, `>`, `<=`, etc) only operate on integers.
 
-
 ### Match
 
 Dark has a `match` statement that is very similar to OCaml's, with slightly
@@ -300,7 +295,6 @@ match myValue with
 | Some 4 | Some myInt when myValue <> Some 4 -> "this will never succeed"
 | _ -> "this will succeed as a fallback"
 ```
-
 
 ### Variants
 
@@ -355,7 +349,6 @@ match expr with
 | EInteger (_, str) -> str
 | _ -> "not an int"
 ```
-
 
 ### Lambdas
 
@@ -517,6 +510,7 @@ let () =
 ```
 
 This is the same as if it were defined as:
+
 ```ocaml
 let myOtherFunction (param : string) =
   myFunction 6 param
@@ -554,14 +548,12 @@ We typically `open` the `Prelude` and `Types` modules at the top of all
 files (which in turn open other modules, like `Tablecloth` on the
 client).
 
-
 ### Classes and Objects
 
 OCaml supports traditional object oriented programming, though it's not used
 very much and very discouraged. The only place we really use it for
 interacting with JS (the Bucklescript JS interop code compiles it to direct OO
 in JS).
-
 
 ## OCaml vs ReasonML vs Bucklescript - what's the difference?
 
@@ -570,10 +562,12 @@ about ReasonML. What's the difference? The simplest answer is that these are
 all the same.
 
 Bucklescript and OCaml are both compilers:
+
 - the native OCaml compiler compiles programs to binaries. The backend uses native OCaml.
 - the Bucklescript compiler compiles programs to JS. The editor uses Bucklescript.
 
 ReasonML and OCaml are both syntaxes:
+
 - ReasonML is a JS-like syntax for the OCaml language
 - OCaml has a default syntax (we use this in the Dark repo for both the backend and the client)
 
@@ -583,6 +577,6 @@ using Bucklescript, and associated technologies.
 Again, the simplest mental model is that all the words mean the same thing.
 
 Specifically:
+
 - the Dark backend uses the native OCaml compiler and the OCaml syntax
 - the Dark client uses the Bucklescript compiler, and the OCaml syntax.
-

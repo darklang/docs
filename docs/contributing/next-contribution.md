@@ -22,6 +22,7 @@ We have started adding issues that have been reported by users to the the
 back through the backlog to add more of these soon.
 
 We've marked a few good starting points:
+
 - [good first bugs](https://github.com/darklang/dark/labels/good-first-bug) for
   your first few contributions
 - [good early bugs](https://github.com/darklang/dark/labels/good-early-bug) for
@@ -45,10 +46,10 @@ function](https://github.com/darklang/dark/issues/2411).
 
 If you've got something that you'd like to solve, either [make an
 issue](https://github.com/darklang/dark/issues) or discuss it in
-[#contributors](https://darkcommunity.slack.com/archives/C014H6H6BB3).  Our
+[#contributors](https://darkcommunity.slack.com/archives/C014H6H6BB3). Our
 main purpose of opening the repo was to allow users to solve their problems and
 not be blocked by us, so we highly prioritize solving things you need solved.
- 
+
 ## Larger Projects
 
 Dark is a project with a vision for where it is going. Unfortunately, that

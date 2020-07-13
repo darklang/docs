@@ -3,22 +3,27 @@ id: first-function
 title: Your first Function
 ---
 
-Let's look at creating a function to return a human readable summary of the number of reports for each day.
+Let's look at creating a function to return a human readable summary of the
+number of reports for each day.
 
-The best way to create a function is by writing the code you want as part of your
-handler, and then extracting the working code to a function. This ensures that whatever code you write has traces and live data.
+The best way to create a function is by writing the code you want as part of
+your handler, and then extracting the working code to a function. This ensures
+that whatever code you write has traces and live data.
 
 1. Start by creating a new REPL.
 
-2. In the REPL, call `DB::getAll` to get the reports from the datastore. Run the function using the play button (▶️).
+2. In the REPL, call `DB::getAll` to get the reports from the datastore. Run the
+   function using the play button (▶️).
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/dbgetalldaily.png)
 
-3. Open a pipeline by typing `|>`, and pipe into a `List::map`, and create variables `date` and `count`.
+3. Open a pipeline by typing `|>`, and pipe into a `List::map`, and create
+   variables `date` and `count`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functionmapvariable.png)
 
-4. Pipe `val.count` into `toString` (shift-enter on a selected area also pipes that expression).
+4. Pipe `val.count` into `toString` (shift-enter on a selected area also pipes
+   that expression).
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/valcounttostring.png)
 
@@ -32,20 +37,23 @@ handler, and then extracting the working code to a function. This ensures that w
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/selectall.png)
 
-7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select `extract-function`.
+7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select
+   `extract-function`.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/extractfunction.png)
 
-8. This creates the function, and replaces the existing code with a call to the new function.
+8. This creates the function, and replaces the existing code with a call to the
+   new function.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/extractedfunction.png)
 
-9. Click on the function reference on the right hand side of the handler to go to the function and rename it.
+9. Click on the function reference on the right hand side of the handler to go
+   to the function and rename it.
 
 ![assets/gettingstarted/newworker.png](assets/gettingstarted/functionspace.png)
 
-Functions do not live on the main canvas. They are reusable and can be
-called from any handler.
+Functions do not live on the main canvas. They are reusable and can be called
+from any handler.
 
 This function does not have any parameters. When you add parameters, the editor
 will automatically create blanks for the arguments everywhere the function is

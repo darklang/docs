@@ -4,7 +4,7 @@ title: Using an External DB
 sidebar_label: Using an External DB
 ---
 
-Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions. 
+Your project may require a more complex data structure than our datastores. If a key-value store works, we strongly recommend using the built-in datastore to take advantage of language functions.
 
 If you already have (or otherwise require) an external database, any external database that provides a REST API can be used. For the purposes of this tutorial, we will be using [restdb.io](https://restdb.io).
 
@@ -22,7 +22,7 @@ If you already have (or otherwise require) an external database, any external da
 
 ![assets/external-db/collection.png](assets/external-db/collection.png)
 
-4. Add Name and Description text fields to your database by clicking **Add Fields +**. 
+4. Add Name and Description text fields to your database by clicking **Add Fields +**.
 
 ![assets/external-db/add-field.png](assets/external-db/add-fields.png)
 
@@ -55,4 +55,3 @@ If you already have (or otherwise require) an external database, any external da
 3. Your handler will return all of the data in your database.
 
 ![assets/external-db/get-all-data.png](assets/external-db/get-all-data.png)
-

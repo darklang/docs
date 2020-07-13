@@ -1,0 +1,31 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "lint": "markdownlint --config markdownlint.json docs/*.md",
+    "format": "prettier --write docs/*.md",
+    "format-js": "prettier --write pages/**/*.js",
+    "format-css": "prettier --write static/css/*.css",
+    "check-format": "prettier --check docs/*.md",
+    "check-spelling": "mdspell --report --en-us -n \"docs/**/*.md\""
+  },
+  "devDependencies": {
+    "markdownlint-cli": "0.23.2",
+    "prettier": "2.0.5",
+    "markdown-spellcheck": "1.3.1"
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-alpha.58",
+    "@docusaurus/preset-classic": "2.0.0-alpha.58",
+    "clsx": "^1.1.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}

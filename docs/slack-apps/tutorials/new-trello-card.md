@@ -53,7 +53,7 @@ For this tutorial, you're going to need to grab a few different things from Trel
 
 ![assets/slack-apps/tutorials/new-trello-card/listgetat.png](assets/slack-apps/tutorials/new-trello-card/listgetat.png)
 
-6. Once we have all of the information we need, we can use the Dark package manager [`Trello::createNewCard` function](..\..\packages.md#createNewCard) to create the new card. For simplicity's sake, we're going to use the `defaultListID` we set earlier, as well as the `trelloKey` and `trelloToken`.
+6. Once we have all of the information we need, we can use the Dark package manager [`Trello::createNewCard` function](....\packages.md#createNewCard) to create the new card. For simplicity's sake, we're going to use the `defaultListID` we set earlier, as well as the `trelloKey` and `trelloToken`.
 
 ![assets/slack-apps/tutorials/new-trello-card/trellonewcard.png](assets/slack-apps/tutorials/new-trello-card/trellonewcard.png)
 
@@ -63,7 +63,7 @@ For this tutorial, you're going to need to grab a few different things from Trel
 
 ### Handling Lists
 
-In the future, you probably won't want to worry about hunting around for your list ids. We've made it easy for you to create your own lookup table to match list names and ids. 
+In the future, you probably won't want to worry about hunting around for your list ids. We've made it easy for you to create your own lookup table to match list names and ids.
 
 1. Create a `Lists` db.
 
@@ -81,7 +81,7 @@ In the future, you probably won't want to worry about hunting around for your li
 
 ![assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png](assets/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png)
 
-16. Using the built in [`Trello:lookUpListID` function](..\..\packages.md#lookuplistid), we can grab the name of that list and use it in our `createNewCard` function.
+16. Using the built in [`Trello:lookUpListID` function](....\packages.md#lookuplistid), we can grab the name of that list and use it in our `createNewCard` function.
 
 ![assets/slack-apps/tutorials/new-trello-card/lookuplistid.png](assets/slack-apps/tutorials/new-trello-card/lookuplistid.png)
 

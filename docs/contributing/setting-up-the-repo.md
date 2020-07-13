@@ -9,5 +9,3 @@ Dark infrastructure.
 
 - Run through the installation instructions in the [README](https://github.com/darklang/dark/blob/main/README.md)
 - You should now be running `./scripts/builder --compile --test --watch` and seeing a completed build.
-
-
