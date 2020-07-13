@@ -32,7 +32,8 @@ There are a bunch of
 [tutorials](https://darklang.github.io/docs/tutorials/tutorial-intro) for
 different technologies, frameworks and libraries; writing one for another would
 be extremely useful. It would also allow you to write up how Dark could be
-improved to support that technology.
+improved to support that technology. You can even make [video
+tutorials](https://www.youtube.com/c/Darklang/videos)!
 
 Similarly, we have some guides for people learning Dark who know other
 languages. Adding another language would be wonderful. See for example the
