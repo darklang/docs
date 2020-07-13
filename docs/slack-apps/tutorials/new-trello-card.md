@@ -37,12 +37,12 @@ Trello and store each of them as separate functions in Dark:
    anything to your Dark canvas just yet. Also note our usage hint - a card name
    and card description, separated by a `|` symbol.
 
-![slack-apps/tutorials/new-trello-card/slashcommand.png](/docs/img//img/slack-apps/tutorials/new-trello-card/slashcommand.png)
+![slack-apps/tutorials/new-trello-card/slashcommand.png](/docs/img/slack-apps/tutorials/new-trello-card/slashcommand.png)
 
 3. Add the following scopes to your app: `chat:write`, `chat:write.public`,
    `commands`.
 
-![slack-apps/tutorials/new-trello-card/scopes.png](/docs/img//img/slack-apps/tutorials/new-trello-card/scopes.png)
+![slack-apps/tutorials/new-trello-card/scopes.png](/docs/img/slack-apps/tutorials/new-trello-card/scopes.png)
 
 3. Install your app to the workspace (either via **Settings -> Basic
    Information** or **Settings -> Install App**). Since this app is being built
@@ -58,45 +58,45 @@ Trello and store each of them as separate functions in Dark:
 1. Attempt to use your slash command. Make sure to include some text after your
    slash command, separated by a | symbol.
 
-![slack-apps/tutorials/new-trello-card/fullslashcommand.png](/docs/img//img/slack-apps/tutorials/new-trello-card/fullslashcommand.png)
+![slack-apps/tutorials/new-trello-card/fullslashcommand.png](/docs/img/slack-apps/tutorials/new-trello-card/fullslashcommand.png)
 
-![slack-apps/tutorials/new-trello-card/httperror.png](/docs/img//img/slack-apps/tutorials/new-trello-card/httperror.png)
+![slack-apps/tutorials/new-trello-card/httperror.png](/docs/img/slack-apps/tutorials/new-trello-card/httperror.png)
 
 2. Navigate to your Dark canvas and check the 404s section in the sidebar - you
    should see an HTTP POST created called `/new-trello-card` (or whatever you
    used when setting up your slash command). Click the plus sign to add it to
    your canvas.
 
-![slack-apps/tutorials/new-trello-card/404.png](/docs/img//img/slack-apps/tutorials/new-trello-card/404.png)
+![slack-apps/tutorials/new-trello-card/404.png](/docs/img/slack-apps/tutorials/new-trello-card/404.png)
 
 3. Once it's on your canvas, you can place your carat over the trace on the left
    (the white dot) to see the incoming data Slack attempted to send.
 
-![slack-apps/tutorials/new-trello-card/trace.png](/docs/img//img/slack-apps/tutorials/new-trello-card/trace.png)
+![slack-apps/tutorials/new-trello-card/trace.png](/docs/img/slack-apps/tutorials/new-trello-card/trace.png)
 
 4. In the body of your trace data, you will see a text field in the body. This
    is what we want to parse to get the name and description of the card we're
    going to create. In order to parse this information, we're going to use
    `String::split` and parse on the special character `|`.
 
-![slack-apps/tutorials/new-trello-card/stringsplit.png](/docs/img//img/slack-apps/tutorials/new-trello-card/stringsplit.png)
+![slack-apps/tutorials/new-trello-card/stringsplit.png](/docs/img/slack-apps/tutorials/new-trello-card/stringsplit.png)
 
 5. Now that we have a list of `messageContent`, we can use `List::getAt` to set
    the name and description of the card.
 
-![slack-apps/tutorials/new-trello-card/listgetat.png](/docs/img//img/slack-apps/tutorials/new-trello-card/listgetat.png)
+![slack-apps/tutorials/new-trello-card/listgetat.png](/docs/img/slack-apps/tutorials/new-trello-card/listgetat.png)
 
 6. Once we have all of the information we need, we can use the Dark package
    manager [`Trello::createNewCard` function](....\packages.md#createNewCard) to
    create the new card. For simplicity's sake, we're going to use the
    `defaultListID` we set earlier, as well as the `trelloKey` and `trelloToken`.
 
-![slack-apps/tutorials/new-trello-card/trellonewcard.png](/docs/img//img/slack-apps/tutorials/new-trello-card/trellonewcard.png)
+![slack-apps/tutorials/new-trello-card/trellonewcard.png](/docs/img/slack-apps/tutorials/new-trello-card/trellonewcard.png)
 
 7. Re-run your HTTP handler, or call the slash command again and then check
    Trello - your new card will have been created in the list you specified.
 
-![slack-apps/tutorials/new-trello-card/newcard.png](/docs/img//img/slack-apps/tutorials/new-trello-card/newcard.png)
+![slack-apps/tutorials/new-trello-card/newcard.png](/docs/img/slack-apps/tutorials/new-trello-card/newcard.png)
 
 ### Handling Lists
 
@@ -106,28 +106,28 @@ list names and ids.
 
 1. Create a `Lists` db.
 
-![slack-apps/tutorials/new-trello-card/listdb.png](/docs/img//img/slack-apps/tutorials/new-trello-card/listdb.png)
+![slack-apps/tutorials/new-trello-card/listdb.png](/docs/img/slack-apps/tutorials/new-trello-card/listdb.png)
 
 2. Now, we can use built in Dark package manager functions to get a list of all
    of our Trello lists and add them to our DB. Create a REPL called
    `addListsToDB`, add the following lines of code, and run it:
 
-![slack-apps/tutorials/new-trello-card/addliststodb.png](/docs/img//img/slack-apps/tutorials/new-trello-card/addliststodb.png)
+![slack-apps/tutorials/new-trello-card/addliststodb.png](/docs/img/slack-apps/tutorials/new-trello-card/addliststodb.png)
 
 3. Let's try another slash command, this time with more information - specifying
    the name of a list to add the card to.
 
-![slack-apps/tutorials/new-trello-card/slashcommandlist.png](/docs/img//img/slack-apps/tutorials/new-trello-card/slashcommandlist.png)
+![slack-apps/tutorials/new-trello-card/slashcommandlist.png](/docs/img/slack-apps/tutorials/new-trello-card/slashcommandlist.png)
 
 15. Now `messageContent` will have a third entry in the list.
 
-![slack-apps/tutorials/new-trello-card/messagecontentwithlist.png](/docs/img//img/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png)
+![slack-apps/tutorials/new-trello-card/messagecontentwithlist.png](/docs/img/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png)
 
 16. Using the built in
     [`Trello:lookUpListID` function](....\packages.md#lookuplistid), we can grab
     the name of that list and use it in our `createNewCard` function.
 
-![slack-apps/tutorials/new-trello-card/lookuplistid.png](/docs/img//img/slack-apps/tutorials/new-trello-card/lookuplistid.png)
+![slack-apps/tutorials/new-trello-card/lookuplistid.png](/docs/img/slack-apps/tutorials/new-trello-card/lookuplistid.png)
 
 ### Making input easier with modals
 
@@ -143,7 +143,7 @@ modal to handle their input.
 2. Turn Interactivity on via **Features -> Interactivity and Shortcuts** and
    specify a URL for the interaction to be sent to:
 
-![slack-apps/tutorials/new-trello-card/interactivity.png](/docs/img//img/slack-apps/tutorials/new-trello-card/interactivity.png)
+![slack-apps/tutorials/new-trello-card/interactivity.png](/docs/img/slack-apps/tutorials/new-trello-card/interactivity.png)
 
 3. Slack uses JSON to generate modals via a framework called Block Kit, even
    providing a
@@ -156,51 +156,51 @@ modal to handle their input.
 4. Now, just like before, we're going to call the Slash command and grab
    the 404.
 
-![slack-apps/tutorials/new-trello-card/newslashcommand.png](/docs/img//img/slack-apps/tutorials/new-trello-card/newslashcommand.png)
+![slack-apps/tutorials/new-trello-card/newslashcommand.png](/docs/img/slack-apps/tutorials/new-trello-card/newslashcommand.png)
 
 5. Grab your `trigger_id` from the `request.body`:
 
-![slack-apps/tutorials/new-trello-card/triggerid.png](/docs/img//img/slack-apps/tutorials/new-trello-card/triggerid.png)
+![slack-apps/tutorials/new-trello-card/triggerid.png](/docs/img/slack-apps/tutorials/new-trello-card/triggerid.png)
 
 6. Create an `HttpClient::post` request and add your `trigger_id` and `JSON`.
    These are truncated screenshots with a lot of the JSON cut out:
 
-![slack-apps/tutorials/new-trello-card/json1.png](/docs/img//img/slack-apps/tutorials/new-trello-card/json1.png)
+![slack-apps/tutorials/new-trello-card/json1.png](/docs/img/slack-apps/tutorials/new-trello-card/json1.png)
 
-![slack-apps/tutorials/new-trello-card/json2.png](/docs/img//img/slack-apps/tutorials/new-trello-card/json2.png)
+![slack-apps/tutorials/new-trello-card/json2.png](/docs/img/slack-apps/tutorials/new-trello-card/json2.png)
 
 7. Try your Slash command - a modal should open. Input text and try to send. You
    will get an error message:
 
-![slack-apps/tutorials/new-trello-card/troubleconnecting.png](/docs/img//img/slack-apps/tutorials/new-trello-card/troubleconnecting.png)
+![slack-apps/tutorials/new-trello-card/troubleconnecting.png](/docs/img/slack-apps/tutorials/new-trello-card/troubleconnecting.png)
 
 8. We need to work with our `/interaction` handler, which should be available in
    your 404s. We're going to start with parsing the payload Slack sent through:
 
-![slack-apps/tutorials/new-trello-card/payload.png](/docs/img//img/slack-apps/tutorials/new-trello-card/payload.png)
+![slack-apps/tutorials/new-trello-card/payload.png](/docs/img/slack-apps/tutorials/new-trello-card/payload.png)
 
 9. We can use that payload to grab the information that you submitted in your
    modal:
 
-![slack-apps/tutorials/new-trello-card/submittedinfo.png](/docs/img//img/slack-apps/tutorials/new-trello-card/submittedinfo.png)
+![slack-apps/tutorials/new-trello-card/submittedinfo.png](/docs/img/slack-apps/tutorials/new-trello-card/submittedinfo.png)
 
 10. And, just like before, we'll use the `Trello::lookUpListID` to find the
     correct Trello list:
 
-![slack-apps/tutorials/new-trello-card/lookuplistid2.png](/docs/img//img/slack-apps/tutorials/new-trello-card/lookuplistid2.png)
+![slack-apps/tutorials/new-trello-card/lookuplistid2.png](/docs/img/slack-apps/tutorials/new-trello-card/lookuplistid2.png)
 
 11. All that's left is creating the new card and sending a 200 response back to
     Slack:
 
-![slack-apps/tutorials/new-trello-card/newcard200.png](/docs/img//img/slack-apps/tutorials/new-trello-card/newcard200.png)
+![slack-apps/tutorials/new-trello-card/newcard200.png](/docs/img/slack-apps/tutorials/new-trello-card/newcard200.png)
 
 12. Try to create a ticket again with your Slash command:
 
-![slack-apps/tutorials/new-trello-card/lasttry.png](/docs/img//img/slack-apps/tutorials/new-trello-card/lasttry.png)
+![slack-apps/tutorials/new-trello-card/lasttry.png](/docs/img/slack-apps/tutorials/new-trello-card/lasttry.png)
 
 13. Once you hit submit, your ticket will appear in Trello!
 
-![slack-apps/tutorials/new-trello-card/trelloticket.png](/docs/img//img/slack-apps/tutorials/new-trello-card/trelloticket.png)
+![slack-apps/tutorials/new-trello-card/trelloticket.png](/docs/img/slack-apps/tutorials/new-trello-card/trelloticket.png)
 
 Congratulations, you now have a Slack app that can create Trello cards in
 multiple ways!
