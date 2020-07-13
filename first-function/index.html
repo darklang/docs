@@ -1,74 +1,51 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Your first Function · Dark Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Let&#x27;s look at creating a function to return a human readable summary of the number of reports for each day."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Your first Function · Dark Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://darklang.github.io/docs/"/><meta property="og:description" content="Let&#x27;s look at creating a function to return a human readable summary of the number of reports for each day."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/docs/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159199190-1"></script><script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments); }
-              gtag('js', new Date());
-              gtag('config', 'UA-159199190-1');
-            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/favicon.ico" alt="Dark Documentation"/><h2 class="headerTitleWithLogo">Dark Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Documentation</a></li><li class=""><a href="/docs/tutorials/tutorial-intro" target="_self">Tutorials &amp; Samples</a></li><li class=""><a href="/docs/slack-apps/slack-intro" target="_self">Building Slack Apps</a></li><li class=""><a href="/docs/contributing/getting-started" target="_self">Contributing</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Your first Function</h1></header><article><div><span><p>Let's look at creating a function to return a human readable summary of the number of reports for each day.</p>
-<p>The best way to create a function is by writing the code you want as part of your
-handler, and then extracting the working code to a function. This ensures that whatever code you write has traces and live data.</p>
-<ol>
-<li><p>Start by creating a new REPL.</p></li>
-<li><p>In the REPL, call <code>DB::getAll</code> to get the reports from the datastore. Run the function using the play button (▶️).</p></li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/dbgetalldaily.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="3">
-<li>Open a pipeline by typing <code>|&gt;</code>, and pipe into a <code>List::map</code>, and create variables <code>date</code> and <code>count</code>.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/functionmapvariable.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="4">
-<li>Pipe <code>val.count</code> into <code>toString</code> (shift-enter on a selected area also pipes that expression).</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/valcounttostring.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="5">
-<li>Return <code>date ++ &quot;: &quot; ++ count</code> in the last line of the block.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/blockend.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="6">
-<li><p>We now have the code to generate our formatted report.</p>
-<p>Let's extract that code into a function. Select all the code within the REPL.</p></li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/selectall.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="7">
-<li>Type <code>Ctrl-\</code> (Control-Backslash) to open the command palette, then select <code>extract-function</code>.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/extractfunction.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="8">
-<li>This creates the function, and replaces the existing code with a call to the new function.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/extractedfunction.png" alt="assets/gettingstarted/newworker.png"></p>
-<ol start="9">
-<li>Click on the function reference on the right hand side of the handler to go to the function and rename it.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/functionspace.png" alt="assets/gettingstarted/newworker.png"></p>
-<p>Functions do not live on the main canvas. They are reusable and can be
-called from any handler.</p>
-<p>This function does not have any parameters. When you add parameters, the editor
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.58">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-159199190-1","auto"),ga("send","pageview")</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<link rel="search" type="application/opensearchdescription+xml" title="Dark Documentation" href="/docs/opensearch.xml"><title data-react-helmet="true">Your first Function | Dark Documentation</title><meta data-react-helmet="true" property="og:image" content="https://darklang.github.io/docs/img/favicon.ico"><meta data-react-helmet="true" property="twitter:image" content="https://darklang.github.io/docs/img/favicon.ico"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Dark Documentation"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Your first Function | Dark Documentation"><meta data-react-helmet="true" name="description" content="Let&#x27;s look at creating a function to return a human readable summary of the"><meta data-react-helmet="true" property="og:description" content="Let&#x27;s look at creating a function to return a human readable summary of the"><meta data-react-helmet="true" property="og:url" content="https://darklang.github.io/docs/first-function"><link data-react-helmet="true" rel="shortcut icon" href="/docs/img/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://darklang.github.io/docs/first-function"><link rel="stylesheet" href="/docs/styles.9c2527d3.css">
+<link rel="preload" href="/docs/styles.d77ec5be.js" as="script">
+<link rel="preload" href="/docs/runtime~main.21511724.js" as="script">
+<link rel="preload" href="/docs/main.20acaf08.js" as="script">
+<link rel="preload" href="/docs/1.8ee9888f.js" as="script">
+<link rel="preload" href="/docs/2.2cc68bf5.js" as="script">
+<link rel="preload" href="/docs/90.710a1c0e.js" as="script">
+<link rel="preload" href="/docs/91.f51495dc.js" as="script">
+<link rel="preload" href="/docs/20ac7829.34503339.js" as="script">
+<link rel="preload" href="/docs/17896441.b6c01be1.js" as="script">
+<link rel="preload" href="/docs/dfc7917d.6d568d36.js" as="script">
+</head>
+<body>
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a href="https://darklang.com" target="_blank" rel="noopener noreferrer" class="navbar__brand" to="https://darklang.com"><img class="navbar__logo" src="/docs/img/favicon.ico" alt="Dark logo"><strong class="navbar__title">Dark</strong></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/docs/introduction">Documentation</a><a class="navbar__item navbar__link" href="/docs/tutorials/tutorial-intro">Tutorials &amp; Samples</a><a class="navbar__item navbar__link" href="/docs/slack-apps/slack-intro">Building Slack Apps</a><a class="navbar__item navbar__link" href="/docs/contributing/getting-started">Contributing</a><div class="react-toggle react-toggle--disabled displayOnlyInLargeViewport_1gtM"><div class="react-toggle-track"><div class="react-toggle-track-check"><span class="toggle_keGJ moon_1gwN"></span></div><div class="react-toggle-track-x"><span class="toggle_keGJ sun_3CPA"></span></div></div><div class="react-toggle-thumb"></div><input type="checkbox" disabled="" aria-label="Dark mode toggle" class="react-toggle-screenreader-only"></div><div class="navbar__search"><div class="searchWrapper_-F3-"><span aria-label="expand searchbar" role="button" class="searchIconButton_1Dnz" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_2eto"></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a href="https://darklang.com" target="_blank" rel="noopener noreferrer" class="navbar__brand" to="https://darklang.com"><img class="navbar__logo" src="/docs/img/favicon.ico" alt="Dark logo"><strong class="navbar__title">Dark</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/introduction">Documentation</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/tutorials/tutorial-intro">Tutorials &amp; Samples</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/slack-apps/slack-intro">Building Slack Apps</a></li><li class="menu__list-item"><a class="menu__link" href="/docs/contributing/getting-started">Contributing</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="docPage_1kjD"><main class="docMainContainer_FFX1"><div class="container padding-vert--lg docItemWrapper_1cc7"><div class="row"><div class="col docItemCol_2GOA"><div class="docItemContainer_2cwg"><article><header><h1 class="docTitle_1vWb">Your first Function</h1></header><div class="markdown"><p>Let&#x27;s look at creating a function to return a human readable summary of the
+number of reports for each day.</p><p>The best way to create a function is by writing the code you want as part of
+your handler, and then extracting the working code to a function. This ensures
+that whatever code you write has traces and live data.</p><ol><li><p>Start by creating a new REPL.</p></li><li><p>In the REPL, call <code>DB::getAll</code> to get the reports from the datastore. Run the
+function using the play button (▶️).</p></li></ol><p><img src="assets/gettingstarted/dbgetalldaily.png" alt="assets/gettingstarted/newworker.png"></p><ol start="3"><li>Open a pipeline by typing <code>|&gt;</code>, and pipe into a <code>List::map</code>, and create
+variables <code>date</code> and <code>count</code>.</li></ol><p><img src="assets/gettingstarted/functionmapvariable.png" alt="assets/gettingstarted/newworker.png"></p><ol start="4"><li>Pipe <code>val.count</code> into <code>toString</code> (shift-enter on a selected area also pipes
+that expression).</li></ol><p><img src="assets/gettingstarted/valcounttostring.png" alt="assets/gettingstarted/newworker.png"></p><ol start="5"><li>Return <code>date ++ &quot;: &quot; ++ count</code> in the last line of the block.</li></ol><p><img src="assets/gettingstarted/blockend.png" alt="assets/gettingstarted/newworker.png"></p><ol start="6"><li><p>We now have the code to generate our formatted report.</p><p>Let&#x27;s extract that code into a function. Select all the code within the REPL.</p></li></ol><p><img src="assets/gettingstarted/selectall.png" alt="assets/gettingstarted/newworker.png"></p><ol start="7"><li>Type <code>Ctrl-\</code> (Control-Backslash) to open the command palette, then select
+<code>extract-function</code>.</li></ol><p><img src="assets/gettingstarted/extractfunction.png" alt="assets/gettingstarted/newworker.png"></p><ol start="8"><li>This creates the function, and replaces the existing code with a call to the
+new function.</li></ol><p><img src="assets/gettingstarted/extractedfunction.png" alt="assets/gettingstarted/newworker.png"></p><ol start="9"><li>Click on the function reference on the right hand side of the handler to go
+to the function and rename it.</li></ol><p><img src="assets/gettingstarted/functionspace.png" alt="assets/gettingstarted/newworker.png"></p><p>Functions do not live on the main canvas. They are reusable and can be called
+from any handler.</p><p>This function does not have any parameters. When you add parameters, the editor
 will automatically create blanks for the arguments everywhere the function is
-called.</p>
-<ol start="10">
-<li>Go back to the primary canvas via the sidebar, the mini-map, or a reference
+called.</p><ol start="10"><li>Go back to the primary canvas via the sidebar, the mini-map, or a reference
 on the right-hand-side of the function. Once back, create a new HTTP GET
 handler and call the function. This creates an API endpoint which returns
-the daily reports.</li>
-</ol>
-<p><img src="/docs/assets/gettingstarted/functioncall.png" alt="assets/gettingstarted/newworker.png"></p>
-</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Dark</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
-                document.addEventListener('keyup', function(e) {
-                  if (e.target !== document.body) {
-                    return;
-                  }
-                  // keyCode for '/' (slash)
-                  if (e.keyCode === 191) {
-                    const search = document.getElementById('search_input_react');
-                    search && search.focus();
-                  }
-                });
-              </script><script>
-              var search = docsearch({
-                
-                apiKey: '1e1c6adb6b62f53c456dc70e833c2c26',
-                indexName: 'darklang',
-                inputSelector: '#search_input_react',
-                algoliaOptions: {}
-              });
-            </script></body></html>
+the daily reports.</li></ol><p><img src="assets/gettingstarted/functioncall.png" alt="assets/gettingstarted/newworker.png"></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Learning</h4><ul class="footer__items"><li class="footer__item"><a href="https://darklang.com/launch/demo-video" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/launch/demo-video">Demo Video</a></li><li class="footer__item"><a href="https://youtube.com/c/Darklang/videos" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://youtube.com/c/Darklang/videos">Tutorial Videos</a></li><li class="footer__item"><a href="https://darklang.com/docs" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/docs">Docs</a></li><li class="footer__item"><a href="https://darklang.com/docs/tutorials" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/docs/tutorials">Tutorials &amp; Samples</a></li><li class="footer__item"><a href="https://darklang.com/docs/slack-apps" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/docs/slack-apps">Building Slack Apps</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">About</h4><ul class="footer__items"><li class="footer__item"><a href="https://darklang.com/about" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/about">Company</a></li><li class="footer__item"><a href="https://dev.to/darklang" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://dev.to/darklang">Dev Blog</a></li><li class="footer__item"><a href="https://medium.com/darklang" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://medium.com/darklang">Corp Blog</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a href="https://darklang.com/slack-invite" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/slack-invite">Community Slack</a></li><li class="footer__item"><a href="https://github.com/darklang/dark" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://github.com/darklang/dark">Dark Repo</a></li><li class="footer__item"><a href="https://github.com/darklang/docs" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://github.com/darklang/docs">Docs Repo</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/contributing/getting-started">Contributor Docs</a></li><li class="footer__item"><a href="https://darklang.com/code-of-conduct" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/code-of-conduct">Code of Conduct</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Product</h4><ul class="footer__items"><li class="footer__item"><a href="https://darklang.com/login" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/login">Sign in</a></li><li class="footer__item"><a href="https://darklang.com/signup" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/signup">Sign up</a></li><li class="footer__item"><a href="https://darklang.com/desktop-client" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/desktop-client">Desktop Client</a></li><li class="footer__item"><a href="https://darklang.com/mailing-list" target="_blank" rel="noopener noreferrer" class="footer__link-item" to="https://darklang.com/mailing-list">Mailing List</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 Dark Inc. Built with Docusaurus.</div></div></div></footer></div>
+<script src="/docs/styles.d77ec5be.js"></script>
+<script src="/docs/runtime~main.21511724.js"></script>
+<script src="/docs/main.20acaf08.js"></script>
+<script src="/docs/1.8ee9888f.js"></script>
+<script src="/docs/2.2cc68bf5.js"></script>
+<script src="/docs/90.710a1c0e.js"></script>
+<script src="/docs/91.f51495dc.js"></script>
+<script src="/docs/20ac7829.34503339.js"></script>
+<script src="/docs/17896441.b6c01be1.js"></script>
+<script src="/docs/dfc7917d.6d568d36.js"></script>
+</body>
+</html>
