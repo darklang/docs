@@ -32,9 +32,8 @@ jobs:
             USE_SSH: true
             CUSTOM_COMMIT_MESSAGE:
               "[skip ci] Automated Deploy of $CIRCLE_SHA1 via CircleCI"
+            GIT_USER: ops@darklang.com
           command: |
-            git config --global user.email "ops@darklang.com"
-            git config --global user.name "Dark Ops"
             npm install --frozen-lockfile
             npm run deploy
 
