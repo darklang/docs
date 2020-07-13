@@ -149,8 +149,8 @@ module.exports = {
       {
         docs: {
           path: "docs",
-          routeBasePath: "/",
-          homePageId: "/docs/introduction",
+          routeBasePath: "",
+          homePageId: "",
           sidebarPath: require.resolve("./sidebars.json"),
           // TODO: re-add these in the footer
           // editUrl: "https://github.com/darklang/docs/edit/main/",
