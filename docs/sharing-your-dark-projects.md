@@ -12,9 +12,9 @@ appreciate hearing about bugs, requests, etc, in the Slack.
 
 If your project has launched, you can give it a "Made with Dark" badge.
 
-<div class="badges lightBackground">
-  <div class="badge">
-    <img class="medium" src="assets/branding/md-color-light@2x.png" />
+<div className="badges lightBackground">
+  <div className="badge">
+    <img className="medium" src="assets/branding/md-color-light@2x.png" />
     <p>Files:
       <a href="assets/branding/md-color-light.svg" target="_blank">svg</a> |
       <a href="assets/branding/md-color-light@1x.png" target="_blank">png</a> |
@@ -22,8 +22,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/md-color-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="medium" src="assets/branding/md-mono-light@2x.png" />
+  <div className="badge">
+    <img className="medium" src="assets/branding/md-mono-light@2x.png" />
     <p>Files:
       <a href="assets/branding/md-mono-light.svg" target="_blank">svg</a> |
       <a href="assets/branding/md-mono-light@1x.png" target="_blank">png</a> |
@@ -31,8 +31,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/md-mono-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="small" src="assets/branding/sm-color-light@3x.png" />
+  <div className="badge">
+    <img className="small" src="assets/branding/sm-color-light@3x.png" />
     <p>Files:
       <a href="assets/branding/sm-color-light.svg" target="_blank">svg</a> |
       <a href="assets/branding/sm-color-light@1x.png" target="_blank">png</a> |
@@ -40,8 +40,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/sm-color-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="small" src="assets/branding/sm-mono-light@3x.png" />
+  <div className="badge">
+    <img className="small" src="assets/branding/sm-mono-light@3x.png" />
     <p>Files:
       <a href="assets/branding/sm-mono-light.svg" target="_blank">svg</a> |
       <a href="assets/branding/sm-mono-light@1x.png" target="_blank">png</a> |
@@ -50,9 +50,9 @@ If your project has launched, you can give it a "Made with Dark" badge.
     </p>
   </div>
 </div>
-<div class="badges darkBackground">
-  <div class="badge">
-    <img class="medium" src="assets/branding/md-color-dark@2x.png" />
+<div className="badges darkBackground">
+  <div className="badge">
+    <img className="medium" src="assets/branding/md-color-dark@2x.png" />
     <p>Files:
       <a href="assets/branding/md-color-dark.svg" target="_blank">svg</a> |
       <a href="assets/branding/md-color-dark@1x.png" target="_blank">png</a> |
@@ -60,8 +60,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/md-color-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="medium" src="assets/branding/md-mono-dark@2x.png" />
+  <div className="badge">
+    <img className="medium" src="assets/branding/md-mono-dark@2x.png" />
     <p>Files:
       <a href="assets/branding/md-mono-dark.svg" target="_blank">svg</a> |
       <a href="assets/branding/md-mono-dark@1x.png" target="_blank">png</a> |
@@ -69,8 +69,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/md-mono-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="small" src="assets/branding/sm-color-dark@3x.png" />
+  <div className="badge">
+    <img className="small" src="assets/branding/sm-color-dark@3x.png" />
     <p>Files:
       <a href="assets/branding/sm-color-dark.svg" target="_blank">svg</a> |
       <a href="assets/branding/sm-color-dark@1x.png" target="_blank">png</a> |
@@ -78,8 +78,8 @@ If your project has launched, you can give it a "Made with Dark" badge.
       <a href="assets/branding/sm-color-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
-  <div class="badge">
-    <img class="small" src="assets/branding/sm-mono-dark@3x.png" />
+  <div className="badge">
+    <img className="small" src="assets/branding/sm-mono-dark@3x.png" />
     <p>Files:
       <a href="assets/branding/sm-mono-dark.svg" target="_blank">svg</a> |
       <a href="assets/branding/sm-mono-dark@1x.png" target="_blank">png</a> |
