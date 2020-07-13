@@ -7,6 +7,65 @@ sidebar_label: Changelog
 Dark gets better each week! Here is a brief list of the fixes, new features, and
 updates.
 
+## July 13th, 2020
+
+### Product changes
+
+- Secrets now work in Functions
+  ([#2724](https://github.com/darklang/dark/pull/2724))
+- When copying strings from live values, Dark now omits the quotes
+  ([Brian Chen](https://github.com/br1anchen),
+  [#2723](https://github.com/darklang/dark/pull/2723))
+- Renaming rebound variables now properly renames the variables in the
+  right-hand side of the rebinding expression
+  ([Brian Chen](https://github.com/br1anchen),
+  [#2722](https://github.com/darklang/dark/pull/2722))
+  ![Renaming a
+variable](assets/changelog/2722.gif)
+- Added support for `Date::atStartOfDay`, `Date::day` ,
+  `Date::minute`,`Date::month` ,`Date::second`, and `Date::year` to the query
+  compiler. ([David Cooley](https://github.com/cooleydw494),
+  [#2720](https://github.com/darklang/dark/pull/2720))
+- Ensure the autocomplete menu covers the play button
+  ([Brian Chen](https://github.com/br1anchen),
+  [#2717](https://github.com/darklang/dark/pull/2717))
+- Show unused functions in a different color (to signify that they are unused
+  and can be deleted) ([#2713](https://github.com/darklang/dark/pull/2713))
+  ![Unused functions in a different color](assets/changelog/2713.png)
+- Show canvas name in the browser's title (useful if you've multiple canvases
+  open) ([#2708](https://github.com/darklang/dark/pull/2708))
+- Highlight duplicate fields in records at red to indicate an error
+  ([Brian Chen](https://github.com/br1anchen),
+  [#2705](https://github.com/darklang/dark/pull/2705))
+  ![Duplicate fields, highlighted in red](assets/changelog/2705.png)
+- Add support for `String::replaceAll` to the query compiler
+  ([David Cooley](https://github.com/cooleydw494),
+  [#2692](https://github.com/darklang/dark/pull/2692))
+- Typing a comma in a list will now complete the autocomplete
+  ([Mehmet Aydin Bahadir](https://github.com/actuallymab),
+  [#2650](https://github.com/darklang/dark/pull/2650))
+
+### Documentation and tutorial changes
+
+- The footer on [https://darklang.com](https://darklang.com) now points to many
+  more Learning and Community pages
+  ![the new homepage footer](assets/changelog/footer.png
+- Documentation now supports a Dark mode
+
+### Contributor-related changes
+
+- Greatly expand the "General Concepts" documentation
+  ([#175](https://github.com/darklang/docs/pull/175))
+- Improve documentation around using vim with merlin
+  ([Felipe Milani](https://github.com/fmilani),
+  [#2685](https://github.com/darklang/dark/pull/2685))
+- The repo has standardized on "allowlist" and "blocklist"
+  [#2636](https://github.com/darklang/dark/pull/2636))
+- Change the default branch on Dark repos to `main`
+  [#2635](https://github.com/darklang/dark/pull/2635))
+- New PR template ([#2632](https://github.com/darklang/dark/pull/2632))
+- Update the Pull Request code checklist
+
 ## Weeks of 6/15/2020 and 6/22/2020
 
 - There has been a
