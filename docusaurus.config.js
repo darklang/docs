@@ -8,6 +8,7 @@ module.exports = {
   projectName: "docs", // Usually your repo name.
 
   themeConfig: {
+    image: "img/favicon.ico",
     navbar: {
       title: "Dark",
       logo: {

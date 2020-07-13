@@ -59,7 +59,6 @@ docs/
   package.json -- helper scripts
   siteConfig.js -- core site configuration
   sidebars.json -- sidebar sections and pages
-  blog/ -- we don't use this yet but might want to for the changelog. See [this](https://docusaurus.io/docs/en/adding-blog).
   core/
     Footer.js -- a customizable footer for the website. Required by docusaurus
   pages/ -- additional docs pages not currently linked from anywhere
