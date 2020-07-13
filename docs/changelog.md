@@ -45,7 +45,7 @@ variable](assets/changelog/2722.gif)
   ([Mehmet Aydin Bahadir](https://github.com/actuallymab),
   [#2650](https://github.com/darklang/dark/pull/2650))
 
-### Documentation and tutorial changes:
+### Documentation and tutorial changes
 
 - The footer on [https://darklang.com](https://darklang.com) now points to many
   more Learning and Community pages
