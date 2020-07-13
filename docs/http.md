@@ -11,12 +11,12 @@ calls. Each response function, such as `Http::respond`, creates a response
 value; a response value returned by the handler will be sent as a response to
 the client.
 
-![HTTPForbidden](assets/http/respondwith.png)
+![HTTPForbidden](/docs/img/http/respondwith.png)
 
 The live value beneath the handler will show the return value.
 
-![HTTPForbidden](assets/http/response.png)
+![HTTPForbidden](/docs/img/http/response.png)
 
 To set cookies, you can use `HTTP::setCookie` to create a suitable HTTP header.
 
-![HTTPRespondWithHeaderSetCookie](assets/http/setcookie.png)
+![HTTPRespondWithHeaderSetCookie](/docs/img/http/setcookie.png)

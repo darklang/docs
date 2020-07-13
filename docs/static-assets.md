@@ -85,14 +85,14 @@ We have a command-line app to allow you to deploy your assets.
 
 4. On some versions of macOS, you may get one of the the following popups:
 
-   ![Not downloaded from the app store popup](assets/staticassets/macos-popup1.png)
+   ![Not downloaded from the app store popup](/docs/img/staticassets/macos-popup1.png)
 
-   ![Developer cannot be verified popup](assets/staticassets/macos-popup2.png)
+   ![Developer cannot be verified popup](/docs/img/staticassets/macos-popup2.png)
 
    to resolve this, press `Ok` or `Cancel` and open
    `System Preferences -> Security & Privacy -> General`.
 
-   ![System Preferences -> Security & Privacy -> General -> Allow Anyway](assets/staticassets/macos-allow.png)
+   ![System Preferences -> Security & Privacy -> General -> Allow Anyway](/docs/img/staticassets/macos-allow.png)
 
    Press `Allow Anyway` and repeat step 3.
 
@@ -165,7 +165,7 @@ On success, we’ll show you the deploy hash, a URL, and a long URL. These are
 where your static assets now live! You can see your static assets in the Routing
 table in your canvas:
 
-![assets/staticassets/image1.png](assets/staticassets/image1.png)
+![ticassets/image1.png](/docs/img/staticassets/image1.png)
 
 ## Set up your App to Load your Assets
 
@@ -186,7 +186,7 @@ You can copy and paste this example from
 
 If you’re looking to serve a fallback asset, you can use a match statement:
 
-![assets/staticassets/image2.png](assets/staticassets/image2.png)
+![ticassets/image2.png](/docs/img/staticassets/image2.png)
 
 ## Advanced: Feature Flags and Continuous Delivery
 

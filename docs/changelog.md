@@ -21,7 +21,7 @@ updates.
   ([Brian Chen](https://github.com/br1anchen),
   [#2722](https://github.com/darklang/dark/pull/2722))
   ![Renaming a
-variable](assets/changelog/2722.gif)
+variable](/docs/img/changelog/2722.gif)
 - Added support for `Date::atStartOfDay`, `Date::day` ,
   `Date::minute`,`Date::month` ,`Date::second`, and `Date::year` to the query
   compiler. ([David Cooley](https://github.com/cooleydw494),
@@ -31,13 +31,13 @@ variable](assets/changelog/2722.gif)
   [#2717](https://github.com/darklang/dark/pull/2717))
 - Show unused functions in a different color (to signify that they are unused
   and can be deleted) ([#2713](https://github.com/darklang/dark/pull/2713))
-  ![Unused functions in a different color](assets/changelog/2713.png)
+  ![Unused functions in a different color](/docs/img/changelog/2713.png)
 - Show canvas name in the browser's title (useful if you've multiple canvases
   open) ([#2708](https://github.com/darklang/dark/pull/2708))
 - Highlight duplicate fields in records at red to indicate an error
   ([Brian Chen](https://github.com/br1anchen),
   [#2705](https://github.com/darklang/dark/pull/2705))
-  ![Duplicate fields, highlighted in red](assets/changelog/2705.png)
+  ![Duplicate fields, highlighted in red](/docs/img/changelog/2705.png)
 - Add support for `String::replaceAll` to the query compiler
   ([David Cooley](https://github.com/cooleydw494),
   [#2692](https://github.com/darklang/dark/pull/2692))
@@ -49,7 +49,7 @@ variable](assets/changelog/2722.gif)
 
 - The footer on [https://darklang.com](https://darklang.com) now points to many
   more Learning and Community pages
-  ![the new homepage footer](assets/changelog/footer.png
+  ![the new homepage footer](/docs/img/changelog/footer.png
 - Documentation now supports a Dark mode
 
 ### Contributor-related changes
@@ -100,13 +100,13 @@ variable](assets/changelog/2722.gif)
   redacted in traces and live values, so it's now easier to stream and
   screenshot your Dark code!
 
-  ![assets/changelog/June12/secrets.png](assets/changelog/June12/secrets.png)
+  ![changelog/June12/secrets.png](/docs/img/changelog/June12/secrets.png)
 
 - Onboarding and tooltip updates
 
   - The styling of our tooltips and initial tutorial has been updated
 
-  ![assets/changelog/June12/tooltips.png](assets/changelog/June12/tooltips.png)
+  ![changelog/June12/tooltips.png](/docs/img/changelog/June12/tooltips.png)
 
   - Tips are now available in the function space.
   - More helpful links have been added to the avatar menu.
@@ -140,33 +140,33 @@ variable](assets/changelog/2722.gif)
 - Function references now appear when you're using a
   [package manager](https://darklang.github.io/docs/packages) function.
 
-![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png)
+![changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png](/docs/img/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png)
 
 - We've updated some tips and error messages.
 
   - On 404s
 
-  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
+  ![changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png](/docs/img/changelog/June5/Screen_Shot_2020-06-05_at_2.10.46_PM.png)
 
   - On functions that have not yet been run
 
-  ![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png)
+  ![changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png](/docs/img/changelog/June5/Screen_Shot_2020-06-05_at_2.14.05_PM.png)
 
   - When attempting field access on a datastore
 
-![assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png](assets/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png)
+![changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png](/docs/img/changelog/June5/Screen_Shot_2020-06-05_at_2.16.10_PM.png)
 
 - If you attempt to access Dark via a browser other than Chrome we now link you
   to our [experimental desktop client](http://darklang.com/desktop-client).
 - Variables can now be converted to lists by pressing `[`
   ([Jelle Besseling](https://github.com/pingiun))
 
-![assets/changelog/June5/2020-06-05_14.19.05.gif](assets/changelog/June5/2020-06-05_14.19.05.gif)
+![changelog/June5/2020-06-05_14.19.05.gif](/docs/img/changelog/June5/2020-06-05_14.19.05.gif)
 
 - Added a `convert-if-to-match` option to the command palette
   ([Jelle Besseling](https://github.com/pingiun))
 
-![assets/changelog/June5/2020-06-05_14.21.05.gif](assets/changelog/June5/2020-06-05_14.21.05.gif)
+![changelog/June5/2020-06-05_14.21.05.gif](/docs/img/changelog/June5/2020-06-05_14.21.05.gif)
 
 - References are now shown in the order in which they appear
   ([Jelle Besseling](https://github.com/pingiun))
@@ -222,7 +222,7 @@ added:
   and understand functions. This means that your functions can also now use the
   Error Rail, if you set their return type to Result or Option.
 
-![assets/changelog/returntypes.png](assets/changelog/returntypes.png)
+![changelog/returntypes.png](/docs/img/changelog/returntypes.png)
 
 - Datastores can now have fields named id. This was contributed by our first
   external contributor, [Caleb H](https://github.com/naclcaleb)!
@@ -255,7 +255,7 @@ added:
   in the sidebar is for, click on its name and more details will appear on the
   right side of your canvas.
 
-![assets/changelog/sidebar.gif](assets/changelog/sidebar.gif)
+![changelog/sidebar.gif](/docs/img/changelog/sidebar.gif)
 
 - We've done some major infrastructure work behind the Cron scheduler, which
   significantly improved its performance. You should now see all Crons,
@@ -296,14 +296,14 @@ docs repo is public and all you need to do to contribute is
 - We've added a Hello World tutorial that will show automatically for new
   accounts. It can also be accessed via the avatar menu.
 
-![assets/changelog/helloworld.png](assets/changelog/helloworld.png)
+![changelog/helloworld.png](/docs/img/changelog/helloworld.png)
 
 - [Package manager functions](https://darklang.github.io/docs/packages) and
   their underlying code can now be accessed via the sidebar. These functions
   will appear in the autocomplete, and can be used like any other built-in
   function.
 
-![assets/changelog/packagemanager.png](assets/changelog/packagemanager.png)
+![changelog/packagemanager.png](/docs/img/changelog/packagemanager.png)
 
 - It's now easier to add 404s to your canvas - the entire line is now clickable,
   instead of just the plus sign.
@@ -342,7 +342,7 @@ docs repo is public and all you need to do to contribute is
   [Made With Dark badge](https://darklang.github.io/docs/sharing-dark) to your
   apps to establish your early Dark expertise 🎉
 
-![assets/changelog/badge.png](assets/changelog/badge.png)
+![changelog/badge.png](/docs/img/changelog/badge.png)
 
 - Clicking on a link in the sidebar will now always jump you to the correct
   place on the canvas. This was a super annoying bug that we internally referred
@@ -371,7 +371,7 @@ docs repo is public and all you need to do to contribute is
   whether `if`s return `true` or `false`, and which patterns are matched. This
   should make it much easier to understand code at a glance.
 
-![assets/changelog/codeexecution.gif](assets/changelog/codeexecution.gif)
+![changelog/codeexecution.gif](/docs/img/changelog/codeexecution.gif)
 
 - Fixed a bug that caused text to sometimes be selected in multiple handlers.
 - It is now possible to drag both the return value and docstring fields on a
@@ -462,7 +462,7 @@ docs repo is public and all you need to do to contribute is
   they're editing functions, so we've added some in-editor pointers to it (call
   the function from elsewhere!)
 
-  ![assets/changelog/functions.png](assets/changelog/Apr10/functions.png)
+  ![changelog/functions.png](/docs/img/changelog/Apr10/functions.png)
 
 - We're working a lot on performance of the editor, especially when typing.
   We've optimized a lot of different parts of the app, mostly related to typing
@@ -508,18 +508,18 @@ docs repo is public and all you need to do to contribute is
   - `Math::tanh`
 - We've done a redesign of the sidebar to be more consistent and prettier!
 
-![assets/changelog/sidebar.png](assets/changelog/Apr3/sidebar.png)
+![changelog/sidebar.png](/docs/img/changelog/Apr3/sidebar.png)
 
 - The `add-feature-flag` option in the command palette is now context aware
 - The feature flag panel is now auto-focused when adding a new feature flag
 - Added an autocomplete option for `OPTIONS` in HTTP. This is especially useful
   for people doing preflight requests as part of `CORS`
 
-![assets/changelog/option.png](assets/changelog/Apr3/option.png)
+![changelog/option.png](/docs/img/changelog/Apr3/option.png)
 
 - Made it clearer that return values apply specifically to a trace
 
-![assets/changelog/returntext.png](assets/changelog/Apr3/returntext.png)
+![changelog/returntext.png](/docs/img/changelog/Apr3/returntext.png)
 
 - Adding a function at the start of a pipe now works properly (before this, we
   lost the first argument)
@@ -552,11 +552,11 @@ We released a lot this week, hope you enjoy!
   it, safely, without breaking anything.
 - Feature flags can be created from the command palette.
 
-![assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png](assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png)
+![changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png](/docs/img/changelog/Mar27/Screen_Shot_2020-03-27_at_12.44.20_PM.png)
 
 - The keyboard shortcut for the command palette has changed to `Ctrl-\`
 
-![assets/changelog/Mar27/2020-03-27_12.27.23.gif](assets/changelog/Mar27/2020-03-27_12.27.23.gif)
+![changelog/Mar27/2020-03-27_12.27.23.gif](/docs/img/changelog/Mar27/2020-03-27_12.27.23.gif)
 
 - We've added a ton of standard library functions:
   - `Date::weekday`
@@ -581,7 +581,7 @@ We released a lot this week, hope you enjoy!
 - Hyphens are now allowed in records/dicts, to make it easier to set HTTP
   headers
 
-![assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png](assets/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png)
+![changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png](/docs/img/changelog/Mar27/Screen_Shot_2020-03-27_at_12.33.06_PM.png)
 
 - `HTTP::respond` was renamed to `HTTP::response`, to make it clearer that it
   creates a value.
@@ -605,7 +605,7 @@ We released a lot this week, hope you enjoy!
 - Now you can give us more information about your Dark projects, and let us know
   if they're live. This helps us understand how we can make Dark better for you!
 
-![assets/changelog/Mar20/about.png](assets/changelog/Mar20/about.png)
+![changelog/Mar20/about.png](/docs/img/changelog/Mar20/about.png)
 
 - Significantly faster HTTP requests and canvas loading. We "fixed" this a few
   weeks ago, but only saw modest improvements. Yeah, there was a bug. So now
@@ -619,7 +619,7 @@ We released a lot this week, hope you enjoy!
   - `Float::max`
   - `Float::truncate`
 
-    ![assets/changelog/Mar20/float.png](assets/changelog/Mar20/float.png)
+    ![changelog/Mar20/float.png](/docs/img/changelog/Mar20/float.png)
 
   - `Int::negate`
   - `Int::absoluteValue`
@@ -635,12 +635,12 @@ We released a lot this week, hope you enjoy!
 - We now tell you how to deal with the ErrorRail in the docstrings for functions
   that returns `Options` and `Results`
 
-![assets/changelog/Mar13/errorrail.png](assets/changelog/Mar13/errorrail.png)
+![changelog/Mar13/errorrail.png](/docs/img/changelog/Mar13/errorrail.png)
 
 - We've started narrowing down the types in the autocomplete using types, and we
   now have some nice error messages for options which don't match the types
 
-![assets/changelog/Mar13/autocomplete.png](assets/changelog/Mar13/autocomplete.png)
+![changelog/Mar13/autocomplete.png](/docs/img/changelog/Mar13/autocomplete.png)
 
 - `DB::query` (and other `DB::query` functions) now support `Date` operations
 - Performance: We've improved the load speed of your code on our servers by
@@ -655,7 +655,7 @@ We released a lot this week, hope you enjoy!
   commonly used Slack functions, but let us know via Slack or email if you have
   any requests - or your own functions you'd like to share.
 
-![assets/changelog/Mar13/slackfunctions.png](assets/changelog/Mar13/slackfunctions.png)
+![changelog/Mar13/slackfunctions.png](/docs/img/changelog/Mar13/slackfunctions.png)
 
 ### Bug fixes
 
@@ -683,7 +683,7 @@ We added a bunch of improved documentation, including:
   your invitees to collaborate in your canvases, you still need to ask us though
   — coming soon). Click "Share Dark" to invite people!
 
-  ![Profile menu showing link to "Share Dark" and "Documentation"](assets/changelog/Mar6/account.png)
+  ![Profile menu showing link to "Share Dark" and "Documentation"](/docs/img/changelog/Mar6/account.png)
 
 - There is now a link to documentation in the profile menu
 - You can now move around the canvas using your mouse. Just click and drag!
@@ -707,12 +707,12 @@ We added a bunch of improved documentation, including:
 - You can now use `Date::<` and `Date::>` and `Float::lessThanOrEqualTo` in
   `DB::query` (and also in `DB::queryOne`, `DB::queryWithKey`, etc)
 
-![DB::query call using Date::<](assets/changelog/Mar6/dbquery.png)
+![DB::query call using Date::<](/docs/img/changelog/Mar6/dbquery.png)
 
 - We now give better error messages when you try to use `Int` functions (like
   `+` and `-`) on `Floats` or `Strings`
 
-![Float addition showing error message](assets/changelog/Mar6/floaterror.png)
+![Float addition showing error message](/docs/img/changelog/Mar6/floaterror.png)
 
 - When you try to use invalid canvas names (e.g. with capital letters), we now
   error much better
@@ -743,7 +743,7 @@ We added a bunch of improved documentation, including:
 - The canvas list has been moved into a Settings modal, accessed by mousing over
   your avatar and clicking Account.
 
-  ![assets/changelog/Feb21/settings.png](assets/changelog/Feb21/settings.png)
+  ![changelog/Feb21/settings.png](/docs/img/changelog/Feb21/settings.png)
 
 - A variety of issues were fixed around autocomplete:
   - New variables now correctly display their type instead of Incomplete.
@@ -753,7 +753,7 @@ We added a bunch of improved documentation, including:
 - Added improved error messaging for missing return values on HTTP handlers and
   user functions.
 
-![assets/changelog/Feb21/error.png](assets/changelog/Feb21/error.png)
+![changelog/Feb21/error.png](/docs/img/changelog/Feb21/error.png)
 
 - Having the experimental web platform flag turned on in Chrome should no longer
   cause broken functionality.
@@ -765,17 +765,17 @@ We added a bunch of improved documentation, including:
 
 - Added a Welcome to Dark modal for new users
 
-  ![assets/changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png](assets/changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png)
+  ![changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png](/docs/img/changelog/Feb14/Screen_Shot_2020-02-14_at_4.59.31_PM.png)
 
 - You can now click on the Command Palette
 - Function arguments can now be reordered
 
-![Changelog%20Draft/2020-02-14_13.04.03.gif](assets/changelog/Feb14/2020-02-14_13.04.03.gif)
+![Changelog%20Draft/2020-02-14_13.04.03.gif](/docs/img/changelog/Feb14/2020-02-14_13.04.03.gif)
 
 - You can now delete recursive functions
 - We now show you when a value was not executed in this trace
 
-![Changelog%20Draft/Screen_Shot_2020-02-14_at_1.06.20_PM.png](assets/changelog/Feb14/Screen_Shot_2020-02-14_at_1.06.20_PM.png)
+![Changelog%20Draft/Screen_Shot_2020-02-14_at_1.06.20_PM.png](/docs/img/changelog/Feb14/Screen_Shot_2020-02-14_at_1.06.20_PM.png)
 
 - Live values are now shown in unexecuted `match` branches
 - Fixed a bunch of redirection bugs after log-in
@@ -801,17 +801,17 @@ We added a bunch of improved documentation, including:
   - Going forward, the Dark CLI will tell you when your CLI is out of date.
 - Added `wrap-in-match` to the command palette
 
-  ![assets/changelog/2020-02-07_15.27.43.gif](assets/changelog/2020-02-07_15.27.43.gif)
+  ![changelog/2020-02-07_15.27.43.gif](/docs/img/changelog/2020-02-07_15.27.43.gif)
 
 - Added new functions:
 
   - `List::sortByComparator`
 
-  ![assets/changelog/Screen_Shot_2020-02-07_at_12.28.47_PM.png](assets/changelog/Screen_Shot_2020-02-07_at_12.28.47_PM.png)
+  ![changelog/Screen_Shot_2020-02-07_at_12.28.47_PM.png](/docs/img/changelog/Screen_Shot_2020-02-07_at_12.28.47_PM.png)
 
   - `Bytes::length`
 
-  ![assets/changelog/Screen_Shot_2020-02-07_at_12.33.46_PM.png](assets/changelog/Screen_Shot_2020-02-07_at_12.33.46_PM.png)
+  ![changelog/Screen_Shot_2020-02-07_at_12.33.46_PM.png](/docs/img/changelog/Screen_Shot_2020-02-07_at_12.33.46_PM.png)
 
 - Changing functions now keeps the old function's error rail setting
 - Significant improvement in cursor position
@@ -824,12 +824,12 @@ We added a bunch of improved documentation, including:
 
 - You can now see a list of all of your canvases by mousing over your avatar.
 
-  ![assets/changelog/Screen_Shot_2020-01-31_at_12.18.35_PM.png](assets/changelog/Screen_Shot_2020-01-31_at_12.18.35_PM.png)
+  ![changelog/Screen_Shot_2020-01-31_at_12.18.35_PM.png](/docs/img/changelog/Screen_Shot_2020-01-31_at_12.18.35_PM.png)
 
 - Typing when text is highlighted now causes text to be replaced instead of
   inserted
 
-  ![assets/changelog/2020-01-31_12.23.30.gif](assets/changelog/2020-01-31_12.23.30.gif)
+  ![changelog/2020-01-31_12.23.30.gif](/docs/img/changelog/2020-01-31_12.23.30.gif)
 
 - Many function improvements, including:
 
@@ -839,11 +839,11 @@ We added a bunch of improved documentation, including:
     are unused)
   - Sometimes the Add New Parameter action didn't work - fixed it.
 
-  ![assets/changelog/2020-01-31_12.30.30.gif](assets/changelog/2020-01-31_12.30.30.gif)
+  ![changelog/2020-01-31_12.30.30.gif](/docs/img/changelog/2020-01-31_12.30.30.gif)
 
 - User-created functions now show parameters in blanks
 
-  ![assets/changelog/Screen_Shot_2020-01-31_at_12.33.38_PM.png](assets/changelog/Screen_Shot_2020-01-31_at_12.33.38_PM.png)
+  ![changelog/Screen_Shot_2020-01-31_at_12.33.38_PM.png](/docs/img/changelog/Screen_Shot_2020-01-31_at_12.33.38_PM.png)
 
 - Improved load time of canvases with many traces
 - The cursor now stays in the right place when we reflow/reformat code
@@ -870,7 +870,7 @@ We added a bunch of improved documentation, including:
 
 - Errors/Incompletes now point to the cause of the error
 
-  ![assets/changelog/image3.png](assets/changelog/image3.png)
+  ![changelog/image3.png](/docs/img/changelog/image3.png)
 
 - We substantially improved keyboard entry:
   - Special characters on international keyboards now appear correctly
@@ -890,7 +890,7 @@ We added a bunch of improved documentation, including:
   - you can paste code into many parts of Dark (varnames, strings, records, etc)
   - most copy-paste issues should be solved
 
-  ![assets/changelog/2020-01-24_15.16.12.gif](assets/changelog/2020-01-24_15.16.12.gif)
+  ![changelog/2020-01-24_15.16.12.gif](/docs/img/changelog/2020-01-24_15.16.12.gif)
 
 ### Library changes
 
@@ -898,7 +898,7 @@ We added a bunch of improved documentation, including:
   `JSON::parse_v0`)
 - Added `Float::sum`
 
-  ![assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png](assets/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png)
+  ![changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png](/docs/img/changelog/Screen_Shot_2020-01-24_at_3.19.59_PM.png)
 
 - More improvements to `DB::query` and friends
   - previews now work for all `DB::query` functions (`DB::queryOne`,
@@ -933,7 +933,7 @@ We added a bunch of improved documentation, including:
     [related blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd)!
 - You can now remove a `let` with the backspace/delete key
 
-![assets/changelog/image1.gif](assets/changelog/image1.gif)
+![changelog/image1.gif](/docs/img/changelog/image1.gif)
 
 - Improved
   [documentation around the Error Rail](https://www.notion.so/darklang/Error-Handling-in-Dark-255f7989a63b4dd49da63cca17ee107e)
@@ -942,7 +942,7 @@ We added a bunch of improved documentation, including:
 - Fixed an issue where deleted from the middle of a concatenated string would
   cause text to the right of the deletion point to be removed.
 
-![assets/changelog/image2.gif](assets/changelog/image2.gif)
+![changelog/image2.gif](/docs/img/changelog/image2.gif)
 
 - We asked y'all to not make HttpClient calls to your Dark canvas from REPLs.
   We've made some infrastructural changes that fix the issue on our end, so you

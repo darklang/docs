@@ -17,7 +17,7 @@ USERNAME-signin for this project).
 
 First, on that canvas build a hello world API endpoint to get a feel for Dark:
 
-![assets/reactspa/image15.gif](assets/reactspa/image15.gif)
+![reactspa/image15.gif](/docs/img//img/reactspa/image15.gif)
 
 All the major handlers work the same way, but the key for many requests is
 working directly with incoming data.
@@ -68,30 +68,30 @@ first in your browser.
 When you go back to Dark, your assets will be available (in this case, our
 compiled Javascript application).
 
-![assets/reactspa/image24.png](assets/reactspa/image24.png)
+![reactspa/image24.png](/docs/img//img/reactspa/image24.png)
 
 Now, let’s put the assets at the base of our API by creating a new route named
 `/` from the omnibox, or the side bar:
 
-![assets/reactspa/image22.png](assets/reactspa/image22.png)
+![reactspa/image22.png](/docs/img//img/reactspa/image22.png)
 
 Once the route is created, we can specify it’s a `GET` method, and start writing
 code.
 
-![assets/reactspa/image2.png](assets/reactspa/image2.png)
+![reactspa/image2.png](/docs/img//img/reactspa/image2.png)
 
-![assets/reactspa/image21.png](assets/reactspa/image21.png)
+![reactspa/image21.png](/docs/img//img/reactspa/image21.png)
 
 The finished API will look like this, and you can open it from the hamburger on
 the right (the tutorial copy is at
 [https://sample-signin.builtwithdark.com/](https://sample-signin.builtwithdark.com/),
 and your copy is at USERNAME-signin.builtwithdark.com/).
 
-![assets/reactspa/image4.png](assets/reactspa/image4.png)
+![reactspa/image4.png](/docs/img//img/reactspa/image4.png)
 
 When you open the page it looks like this:
 
-![hassets/reactspa/image29.png](assets/reactspa/image29.png)
+![hassets/reactspa/image29.png](/docs/img//img/reactspa/image29.png)
 
 #### Building the API - Trace Driven Development
 
@@ -106,7 +106,7 @@ requirements:
 
 From Dark, we can see the failed request.
 
-![assets/reactspa/image3.png](assets/reactspa/image3.png)
+![reactspa/image3.png](/docs/img//img/reactspa/image3.png)
 
 If you do not see a failed request, verify that your host URL in your frontend
 matches where you’ve hosted the application.
@@ -114,12 +114,12 @@ matches where you’ve hosted the application.
 Hit the `+` button to create the route. The route will have the trace from when
 we opened the page.
 
-![assets/reactspa/mage32.png](assets/reactspa/image32.png)
+![reactspa/mage32.png](/docs/img//img/reactspa/image32.png)
 
 Now we have our endpoint (you can try it out by making a list
 `["name1", "name2"]` and refreshing the React application:
 
-![assets/reactspa/image1.png](assets/reactspa/image1.png)
+![reactspa/image1.png](/docs/img//img/reactspa/image1.png)
 
 But for the longer term, we’ll need other backend components (in particular a
 datastore) to support the endpoint.
@@ -132,21 +132,21 @@ Datastores in Dark are key-value based, not relational. This tutorial will
 include step by step instructions, but more information on datastores is
 available [here](dark-backend-components.md#persistent-datastores).
 
-![assets/reactspa/image7.png](assets/reactspa/image7.png)
+![reactspa/image7.png](/docs/img//img/reactspa/image7.png)
 
 We can add data to the datastore by using a REPL, an internal tool for the
 application.
 
 We can name the REPL (or it will have a default adjective-animal name) and then
 
-![assets/reactspa/image6.png](assets/reactspa/image6.png)
+![reactspa/image6.png](/docs/img//img/reactspa/image6.png)
 
 When we write `DB::set` into the handler, we’re given three parameters for the
 expression. The value, the unique identifier for the record, and the table.
 
 Here’s the finished REPL:
 
-![assets/reactspa/image14.png](assets/reactspa/image14.png)
+![reactspa/image14.png](/docs/img//img/reactspa/image14.png)
 
 In this case, I chose to define `slackid` as a variable so I could reuse it as a
 unique key. You can do this after the fact using `Cmd/Ctrl-\` on the value to
@@ -157,7 +157,7 @@ won’t get the interactivity!** Use your own name, phone number, and Slack ID.
 Your Slack ID is found in your profile in the … menu. You will need permission
 to install Slack apps on a Slack to do this.
 
-![assets/reactspa/image34.png](assets/reactspa/image34.png)
+![reactspa/image34.png](/docs/img//img/reactspa/image34.png)
 
 Press the “play” button to insert the value into the datastore
 ([more on interactivity with play buttons](https://docs.google.com/document/d/15u_iXi5FZXPX-hn71NqMH8vMLfNQMw3NMD8EOui3m2g/edit?folder=0AJNj3YlxhMcIUk9PVA#heading=h.582o5mgjxu9a)).
@@ -166,11 +166,11 @@ After this, when I select my datastore, I will see that it has locked and has a
 connection to the REPL, and the number of items/most recent item (if you do not
 see the DB stats on the left, refreshing the tab should work).
 
-![assets/reactspa/image19.png](assets/reactspa/image19.png)
+![reactspa/image19.png](/docs/img//img/reactspa/image19.png)
 
 Then, you can update the hosts API to use our data storage.
 
-![assets/reactspa/image5.png](assets/reactspa/image5.png)
+![reactspa/image5.png](/docs/img//img/reactspa/image5.png)
 
 In this case we did a `DB::getAll` hosts (and played the request). Then, we took
 that result (a list of objects) and passed it as a parameter into `List::map`,
@@ -194,7 +194,7 @@ First, we do the same thing and go back to our React application, select a host,
 then type in a visitor name and hit the “sign in” button. This will result in
 another 404 that we can create, and see the trace for.
 
-![assets/reactspa/image26.png](assets/reactspa/image26.png)
+![reactspa/image26.png](/docs/img//img/reactspa/image26.png)
 
 First, we’ll store the visit in a datastore as we did from the REPL when
 creating hosts. Like before, we can create a new datastore, and then use the
@@ -203,18 +203,18 @@ creating hosts. Like before, we can create a new datastore, and then use the
 If we match the datastore schema to our incoming request body, we can do it like
 this:
 
-![assets/reactspa/image17.png](assets/reactspa/image17.png)
+![reactspa/image17.png](/docs/img//img/reactspa/image17.png)
 
 If our schema does not match exactly, we can still use our incoming request.
 Here’s a version that also stores the time of the visit:
 
-![assets/reactspa/mage28.png](assets/reactspa/image28.png)
+![reactspa/mage28.png](/docs/img//img/reactspa/image28.png)
 
 In either case, taking advantage of live values and traces is very helpful. When
 our cursor is in host, we can see what the trace evaluates to for that value on
 the left-hand side:
 
-![assets/reactspa/image9.png](assets/reactspa/image9.png)
+![reactspa/image9.png](/docs/img//img/reactspa/image9.png)
 
 Then, as before, we can run the outstanding functions and insert this trace into
 our datastore (in this case, we’re building from this specific trace. In the
@@ -224,7 +224,7 @@ If you’re having trouble, make sure you’ve hit the play buttons and do not h
 red underlines. The finished handler & datastore once you’ve run and inserted
 the visit will look like this:
 
-![assets/reactspa/image23.png](assets/reactspa/image23.png)
+![reactspa/image23.png](/docs/img//img/reactspa/image23.png)
 
 #### Background Workers & External API connections
 
@@ -236,7 +236,7 @@ depending on if you want to send Texts, DMs, or both.
 To create a new [Twilio account](https://twilio.com/), the SID & Token are in
 your console on the right hand side.
 
-![assets/reactspa/image11.png](assets/reactspa/image11.png)
+![reactspa/image11.png](/docs/img//img/reactspa/image11.png)
 
 Once you have an account, you’ll need a number that can send texts,
 [https://www.twilio.com/console/phone-numbers/incoming](https://www.twilio.com/console/phone-numbers/incoming).
@@ -248,7 +248,7 @@ create a new application, add a bot from the “basic information” add feature
 functionality section, and install the app in your workspace. After doing so,
 you’ll get two tokens back, one of which is the format "xoxb-\*".
 
-![assets/reactspa/image33.png](assets/reactspa/image33.png)
+![reactspa/image33.png](/docs/img//img/reactspa/image33.png)
 
 #### Twilio Text Message Integration
 
@@ -264,11 +264,11 @@ Here, we emit the `request.body` (seen in a live value on the left) to a worker
 named `sendText`. Hitting play will create a 404 for that worker, much like how
 we created our visit and host endpoints.
 
-![assets/reactspa/image30.png](assets/reactspa/image30.png)
+![reactspa/image30.png](/docs/img//img/reactspa/image30.png)
 
 When created, the worker will have the event information as a trace:
 
-![assets/reactspa/image10.png](assets/reactspa/image10.png)
+![reactspa/image10.png](/docs/img//img/reactspa/image10.png)
 
 For this worker, we need to get the host’s phone number and then send them a
 text. This is very similar to the code we wrote before to get the host’s name.
@@ -276,29 +276,29 @@ text. This is very similar to the code we wrote before to get the host’s name.
 In this case we use `DB::queryOne` to get only one response, and look by
 `hostname`. Then we can play the query, and make a variable for the field.
 
-![assets/reactspa/image12.png](assets/reactspa/image12.png)
+![reactspa/image12.png](/docs/img//img/reactspa/image12.png)
 
 The last step is adding the `Twilio::sendText` function, which takes five
 parameters. The `SID`, `Token`, and `number` you got from Twilio, the
 `hostphone` above, and the message you’d like to send.
 
-![assets/reactspa/image20.png](assets/reactspa/image20.png)
+![reactspa/image20.png](/docs/img//img/reactspa/image20.png)
 
 When you’ve added yours, it will look like this (but with your tokens).
 
-![assets/reactspa/image18.png](assets/reactspa/image18.png)
+![reactspa/image18.png](/docs/img//img/reactspa/image18.png)
 
 When you hit “play” on `sendText`, you will be able to see the API response as a
 live value, and should receive a text message.
 
-![assets/reactspa/image27.png](assets/reactspa/image27.png)
+![reactspa/image27.png](/docs/img//img/reactspa/image27.png)
 
 #### Slack DM Integration
 
 We go back to our `/visit` endpoint to add the Slack worker. We can even copy
 most of the code from the beginning of the Twilio handler to get our Slack ID.
 
-![assets/reactspa/image8.png](assets/reactspa/image8.png)
+![reactspa/image8.png](/docs/img//img/reactspa/image8.png)
 
 For this, we’ll be using Slack’s
 [`chat.postMessage` API method](https://api.slack.com/methods/chat.postMessage),
@@ -308,21 +308,21 @@ and pass a header with a content type and a token.
 
 There are built in methods for formatting headers in the HttpClient library.
 
-![assets/reactspa/image31.png](assets/reactspa/image31.png)
+![reactspa/image31.png](/docs/img//img/reactspa/image31.png)
 
 Finally, we have to make the post request, which takes four parameters,
 including a body.
 
-![assets/reactspa/image25.png](assets/reactspa/image25.png)
+![reactspa/image25.png](/docs/img//img/reactspa/image25.png)
 
 You can fill them in as follows from the above code:
 
-![assets/reactspa/image13.png](assets/reactspa/image13.png)
+![reactspa/image13.png](/docs/img//img/reactspa/image13.png)
 
 When you hit play, you should receive a DM from your Slackbot, as well as an
 inline API response.
 
-![assets/reactspa/image16.png](assets/reactspa/image16.png)
+![reactspa/image16.png](/docs/img//img/reactspa/image16.png)
 
 If it isn’t working, check that all parameters (including `{}` in the query
 field) are correct, and read the API response message to debug.
