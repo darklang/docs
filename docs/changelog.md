@@ -20,8 +20,7 @@ updates.
   right-hand side of the rebinding expression
   ([Brian Chen](https://github.com/br1anchen),
   [#2722](https://github.com/darklang/dark/pull/2722))
-  ![Renaming a
-variable](/docs/img/changelog/2722.gif)
+  ![Renaming a variable](/docs/img/changelog/2722.gif)
 - Added support for `Date::atStartOfDay`, `Date::day` ,
   `Date::minute`,`Date::month` ,`Date::second`, and `Date::year` to the query
   compiler. ([David Cooley](https://github.com/cooleydw494),
@@ -49,7 +48,7 @@ variable](/docs/img/changelog/2722.gif)
 
 - The footer on [https://darklang.com](https://darklang.com) now points to many
   more Learning and Community pages
-  ![the new homepage footer](/docs/img/changelog/footer.png
+  ![the new homepage footer](/docs/img/changelog/footer.png)
 - Documentation now supports a Dark mode
 
 ### Contributor-related changes
