@@ -33,7 +33,7 @@ updates.
   ![Unused functions in a different color](/docs/img/changelog/2713.png)
 - Show canvas name in the browser's title (useful if you've multiple canvases
   open) ([#2708](https://github.com/darklang/dark/pull/2708))
-- Highlight duplicate fields in records at red to indicate an error
+- Highlight duplicate fields in records in red to indicate an error
   ([Brian Chen](https://github.com/br1anchen),
   [#2705](https://github.com/darklang/dark/pull/2705))
   ![Duplicate fields, highlighted in red](/docs/img/changelog/2705.png)
