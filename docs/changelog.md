@@ -63,7 +63,8 @@ updates.
 - Change the default branch on Dark repos to `main`
   [#2635](https://github.com/darklang/dark/pull/2635))
 - New PR template ([#2632](https://github.com/darklang/dark/pull/2632))
-- Update the Pull Request code checklist
+- Update the Pull Request
+  [code checklist](https://darklang.github.io/docs/contributing/making-a-pull-request)
 
 ## Weeks of 6/15/2020 and 6/22/2020
 
