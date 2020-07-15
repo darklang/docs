@@ -25,7 +25,7 @@ Similar, the "[needs thought](https://github.com/darklang/dark/issues?q=is%3Aiss
 ## Writing docs
 
 There are lots of docs that would be very helpful to write. If you look at the
-[current docs](https://docs.darklang.com), there are docs that would be useful
+[current docs](https://darklang.github.io/docs), there are docs that would be useful
 that you can write as a non-expert.
 
 There are a bunch of
