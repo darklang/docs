@@ -20,8 +20,7 @@ updates.
   right-hand side of the rebinding expression
   ([Brian Chen](https://github.com/br1anchen),
   [#2722](https://github.com/darklang/dark/pull/2722))
-  ![Renaming a
-variable](/docs/img/changelog/2722.gif)
+  ![Renaming a variable](/docs/img/changelog/2722.gif)
 - Added support for `Date::atStartOfDay`, `Date::day` ,
   `Date::minute`,`Date::month` ,`Date::second`, and `Date::year` to the query
   compiler. ([David Cooley](https://github.com/cooleydw494),
@@ -34,7 +33,7 @@ variable](/docs/img/changelog/2722.gif)
   ![Unused functions in a different color](/docs/img/changelog/2713.png)
 - Show canvas name in the browser's title (useful if you've multiple canvases
   open) ([#2708](https://github.com/darklang/dark/pull/2708))
-- Highlight duplicate fields in records at red to indicate an error
+- Highlight duplicate fields in records in red to indicate an error
   ([Brian Chen](https://github.com/br1anchen),
   [#2705](https://github.com/darklang/dark/pull/2705))
   ![Duplicate fields, highlighted in red](/docs/img/changelog/2705.png)
@@ -49,7 +48,7 @@ variable](/docs/img/changelog/2722.gif)
 
 - The footer on [https://darklang.com](https://darklang.com) now points to many
   more Learning and Community pages
-  ![the new homepage footer](/docs/img/changelog/footer.png
+  ![the new homepage footer](/docs/img/changelog/footer.png)
 - Documentation now supports a Dark mode
 
 ### Contributor-related changes
@@ -64,7 +63,8 @@ variable](/docs/img/changelog/2722.gif)
 - Change the default branch on Dark repos to `main`
   [#2635](https://github.com/darklang/dark/pull/2635))
 - New PR template ([#2632](https://github.com/darklang/dark/pull/2632))
-- Update the Pull Request code checklist
+- Update the Pull Request
+  [code checklist](https://darklang.github.io/docs/contributing/making-a-pull-request)
 
 ## Weeks of 6/15/2020 and 6/22/2020
 
