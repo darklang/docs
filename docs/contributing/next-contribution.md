@@ -10,7 +10,7 @@ bigger.
 ## Getting started
 
 Below you'll find resources to help you figure out what to work on. After that,
-head over to [Working in the Dark repo](working-in-the-dark-repo) to learn how
+head over to [Working in the Dark repo](ocaml-for-dark-developers) to learn how
 to contribute bigger things, like the basics of OCaml, the layout of the repo,
 technical guides to different parts of the codebase and product, and product
 and vision docs about where Dark is going.
