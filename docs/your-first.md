@@ -48,27 +48,27 @@ browser HTTP request.
 1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or
    hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP` on the sidebar.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
 
 2. Enter the HTTP verb as `GET` and `/math` for the route.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png)
 
 3. You can now write any code in the blank &ndash; this is the return value of
    the API endpoint that you've just created. To start with, let's just return
    `4`.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png)
 
 4. Click the handler's menu (☰) in the upper right and select "open in new tab",
    to see your API endpoint running in production.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
 
 5. Go back to Dark to edit your code. Add `+ 5` to the end of the code and leave
    your cursor in line.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
 
 - The `9` below the handler shows you the return value for the handler.
 
@@ -76,7 +76,7 @@ browser HTTP request.
   currently is (in this case, 5). This isn't very useful when it's an integer,
   but if it's a variable it will show you the result of the variable.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
 
 6. Mouse over the white dots on the left. Each dot is a "trace", representing a
    single request to your handler. Traces are fundamental to coding in Dark, and
@@ -103,7 +103,7 @@ HttpClient library to make API calls.
 
 2. Type "httpclient" in the REPL (lowercase, no spaces)
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
 This will show you all the standard library functions for HttpClient, their
 signatures, and their docstrings.
@@ -111,11 +111,11 @@ signatures, and their docstrings.
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on
    substrings so getting the exact text isn't important:
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png)
 
 4. Hit enter to add the function into the handler.
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
 Dark automatically creates blanks for the four arguments that `HttpClient::post`
 requires (URI, body, query, and headers). We display a gray play button beside
@@ -138,7 +138,7 @@ response.
    "mygettingstarted" or "getingstarted" the wrong canvas will respond and you
    will not see the 404 result).
 
-![ngstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
 6. Next let's add the arguments. The structured editor simplifies creation of
    the arguments we want:
@@ -149,23 +149,23 @@ response.
 - For the header, we want the JSON content-type: type `json` and the
   autocomplete will offer you a function to use.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
 
 7. Once we've filled in all the arguments, the play button (▶️) next to the
    function turns green, which means we can execute this code from within the
    editor.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png)
 
 8. Hitting play we receive a 404 response. This is because there's no `/test`
    endpoint on our canvas (yet!)
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
 
 9. 404s in Dark appear in the 404 section of the sidebar. We'll discuss that
    more later.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
 Congratulations! You've built your first REPL and called your first function in
 Dark.
@@ -184,34 +184,34 @@ Driven Development**.
    add another trace to the new endpoint (a trace is represented as a white
    dot).
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
 
 2. Hover over the white dot on the left hand side. Here, you can see the full
    body of the incoming trace from when you posted to the endpoint from the
    REPL, including the body. If you've made multiple requests to the endpoint,
    you'll see multiple white dots, each corresponding to a request.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
 
 3. Let's save the `request` body to a variable by typing
    `let data = request.body`. As you can see, the autocomplete knows the field
    names of `request` from the trace, and will complete them for you.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
 4. Let's put this in a datastore. Like we saw with the `HttpClient` library,
    typing "DB" in the blank will pull up all datastore functions.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png)
 
 In this case, we want `DB::set`, which takes three arguments.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png)
 
 5. Now let's make our datastore. From the sidebar or the omnibox, create a new
    datastore called "Requests", with fields `data` and `time`.
 
-![ngstarted/datastore.png](/img/ngstarted/datastore.png)
+![img/gettingstarted/datastore.png](/img/gettingstarted/datastore.png)
 
 Dark's datastores are key-value stores; each record has a unique key that is
 used to store and retrieve the value. For instance, a possible set of records
@@ -241,30 +241,30 @@ with keys in the above datastore would look like this:
    records that are missing fields). Insert our data from above (seeing the live
    value to the left) and use the `Date::now` function to get the `time` field.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.57.58_AM.png)
 
 7. We need a unique key for each record that we store. The `DB::generateKey`
    function generates random keys &ndash; this is useful when your record has no
    obvious unique identifier.
 
-![ngstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.59.24_AM.png)
 
 8. The final argument is the Datastore: `Requests`.
 
-![ngstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.00.04_AM.png)
 
 9. To call the `DB::set` function, we first need to run the two functions with
    side effects (`DB::generateKey` and `Date::now`) by hitting the play button.
    After hitting those two play buttons, the `DB::set` play button will be
    enabled:
 
-![ngstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.00.55_AM.png)
 
 10. Finally, hitting the play button for `DB::set` inserts the record into the
     datastore. This locks the datastore, preventing us from changing the schema,
     which we see indicated by the red lock (🔒) icon.
 
-![ngstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png)
+![img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png)
 
 ## Cron
 
@@ -274,7 +274,7 @@ after the Unix cron utility) to create a report of all requests per day.
 1. Hit the plus (+) button (or use the omnibox) to create a new Cron. Set it to
    run daily, and with the name `DailyReport`.
 
-![ngstarted/crondaily.png](/img/ngstarted/crondaily.png)
+![img/gettingstarted/crondaily.png](/img/gettingstarted/crondaily.png)
 
 2. To know if a request was executed today, we compare it to the current time.
    Let's assign the current time in seconds to a variable `timeSeconds`. The
@@ -283,13 +283,13 @@ after the Unix cron utility) to create a report of all requests per day.
 
    Run the `Date::now` function to see a live value for your code.
 
-![ngstarted/cron_timeseconds.png](/img/ngstarted/cron_timeseconds.png)
+![img/gettingstarted/cron_timeseconds.png](/img/gettingstarted/cron_timeseconds.png)
 
 3. Next, we'll need to filter the reports to just today's reports. Set
    `allRequests` to `DB::getAll Requests`. Run the function to the live value
    for `allRequests`.
 
-![ngstarted/allrequests.png](/img/ngstarted/allrequests.png)
+![img/gettingstarted/allrequests.png](/img/gettingstarted/allrequests.png)
 
 4. To see only today's requests, use `List::filter`. `List::filter` takes two
    arguments - the list to filter (in this case `allRequests`) and an anonymous
@@ -298,31 +298,31 @@ after the Unix cron utility) to create a report of all requests per day.
    concept is explained in more detail
    [here](https://darklang.github.io/docs/functional-aspects).
 
-![ngstarted/listefilter.png](/img/ngstarted/listfilter.png)
+![img/gettingstarted/listefilter.png](/img/gettingstarted/listfilter.png)
 
 5. We want to keep only reports that occurred today, meaning we want to compare
    the report's time to `timeSeconds` that we created earlier. Let's convert the
    time of the request into seconds so that both times have the same units.
 
-![ngstarted/requestseconds.png](/img/ngstarted/requestseconds.png)
+![img/gettingstarted/requestseconds.png](/img/gettingstarted/requestseconds.png)
 
 6. Next, we calculate the difference from the current time; this tells us if it
    happened today (in the last 86,400 seconds).
 
-![ngstarted/comparison.png](/img/ngstarted/comparison.png)
+![img/gettingstarted/comparison.png](/img/gettingstarted/comparison.png)
 
 7. To see this work, it's helpful to have a recent request. If you paused in the
    tutorial, re-run the `HttpClient::post` function from the REPL. Then, when
    you place your cursor in `todayRequests` or `List::filter` you'll see a list
    of requests from the last 24 hours.
 
-![ngstarted/todayrequest.png](/img/ngstarted/todayrequest.png)
+![img/gettingstarted/todayrequest.png](/img/gettingstarted/todayrequest.png)
 
 8. Finally, let's emit today's requests to a background worker, using the `emit`
    keyword. `emit` takes two arguments, and in this case we're sending
    `todayRequests` to a not-yet-created worker named `storeReport`.
 
-![ngstarted/emit.png](/img/ngstarted/emit.png)
+![img/gettingstarted/emit.png](/img/gettingstarted/emit.png)
 
 9. To have our first report run, hit the "replay" button in the upper right of
    the Cron. This creates a 404 in the sidebar for the Worker `storeReport`.
@@ -341,28 +341,28 @@ HTTP. But for the sake of simplicity, let's just store the data into the
    `storeReport` Worker. The Worker will already be named, and hovering over the
    white dot will show you the event triggered by your cron.
 
-![ngstarted/newworker.png](/img/ngstarted/newworker.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/newworker.png)
 
 2. For the report, we're going to store our data by human readable dates (like
    `02-27-2020`). First, we'll get the current date, and then get the pieces and
    re-aggregate them.
 
-![ngstarted/humandate.png](/img/ngstarted/humandate.png)
+![img/gettingstarted/humandate.png](/img/gettingstarted/humandate.png)
 
 3. The `event` we received is not the exact shape we want. Let's process it
    using `List::map` to keep just the `data` field.
 
-![ngstarted/dataonly.png](/img/ngstarted/dataonly.png)
+![img/gettingstarted/dataonly.png](/img/gettingstarted/dataonly.png)
 
 4. Make a second datastore with three fields: the nicely-formatted date, the
    list of requests, and the count of requests for that day.
 
-![ngstarted/seconddatastore.png](/img/ngstarted/seconddatastore.png)
+![img/gettingstarted/seconddatastore.png](/img/gettingstarted/seconddatastore.png)
 
 5. To get the count, use `List::length`. Then we store it in the DB, using
    `humanDate` as the key.
 
-![ngstarted/dbsetworker.png](/img/ngstarted/dbsetworker.png)
+![img/gettingstarted/dbsetworker.png](/img/gettingstarted/dbsetworker.png)
 
 6. Now, our first datastore stores each incoming request, and every 24 hours our
    Cron runs, sending the right reports to our worker, which stores a report in
@@ -382,42 +382,42 @@ that whatever code you write has traces and live data.
 2. In the REPL, call `DB::getAll` to get the reports from the datastore. Run the
    function using the play button (▶️).
 
-![ngstarted/newworker.png](/img/ngstarted/dbgetalldaily.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/dbgetalldaily.png)
 
 3. Open a pipeline by typing `|>`, and pipe into a `List::map`, and create
    variables `date` and `count`.
 
-![ngstarted/newworker.png](/img/ngstarted/functionmapvariable.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/functionmapvariable.png)
 
 4. Pipe `val.count` into `toString` (shift-enter on a selected area also pipes
    that expression).
 
-![ngstarted/newworker.png](/img/ngstarted/valcounttostring.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/valcounttostring.png)
 
 5. Return `date ++ ": " ++ count` in the last line of the block.
 
-![ngstarted/newworker.png](/img/ngstarted/blockend.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/blockend.png)
 
 6. We now have the code to generate our formatted report.
 
    Let's extract that code into a function. Select all the code within the REPL.
 
-![ngstarted/newworker.png](/img/ngstarted/selectall.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/selectall.png)
 
 7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select
    `extract-function`.
 
-![ngstarted/newworker.png](/img/ngstarted/extractfunction.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/extractfunction.png)
 
 8. This creates the function, and replaces the existing code with a call to the
    new function.
 
-![ngstarted/newworker.png](/img/ngstarted/extractedfunction.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/extractedfunction.png)
 
 9. Click on the function reference on the right hand side of the handler to go
    to the function and rename it.
 
-![ngstarted/newworker.png](/img/ngstarted/functionspace.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/functionspace.png)
 
 Functions do not live on the main canvas. They are reusable and can be called
 from any handler.
@@ -431,7 +431,7 @@ called.
     handler and call the function. This creates an API endpoint which returns
     the daily reports.
 
-![ngstarted/newworker.png](/img/ngstarted/functioncall.png)
+![gettingstarted/newworker.png](/img/gettingstarted/functioncall.png)
 
 ## External API Call
 
@@ -447,25 +447,25 @@ team members can see it.
 - In the base, create two columns, one for date (field type is date) and one for
   requests (field type is number). You can see our sample
   [here](https://airtable.com/invite/l?inviteId=invOadxgcpBKaCQiv&inviteToken=e7492a049bf7e4cd1c475b43efac35d296578f66198bff549ca99af6ee5821b4).
-  ![ngstarted/newworker.png](/img/ngstarted/airtable_base.png)
+  ![img/gettingstarted/newworker.png](/img/gettingstarted/airtable_base.png)
 - Generate an API key on the [Account page](https://airtable.com/account). Put
   the API key in a function in your Dark canvas.
-  ![ngstarted/newworker.png](/img/ngstarted/airtable_key.png)
+  ![img/gettingstarted/newworker.png](/img/gettingstarted/airtable_key.png)
 - Airtable's full API documentation for your base will be available on the
   [API page](https://airtable.com/api). Within this page, go to Create Records
   in the left hand navigation to copy the URI from the right hand side.
-  ![ngstarted/newworker.png](/img/ngstarted/airtable_url.png)
+  ![img/gettingstarted/newworker.png](/img/gettingstarted/airtable_url.png)
 
 2. Add the HTTP POST call to the `storeReport` worker so it will run
    asynchronously. Hit `return` after the `Db::set` function. `DB::set` will
    still run as a side effect, and we can add the new function.
 
-![ngstarted/newworker.png](/img/ngstarted/apiworker_newline.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/apiworker_newline.png)
 
 3. The `HttpClient::post` function takes four arguments. Paste the URI from
    Airtable from the base into the first argument.
 
-![ngstarted/newworker.png](/img/ngstarted/api_httpclientpost.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/api_httpclientpost.png)
 
 4. Above `HttpClient::post` declare a new variable, `airtable_header`. Use the
    `HttpClient::bearerToken` and pass your API key function as the argument.
@@ -473,7 +473,7 @@ team members can see it.
    `HttpClient::jsonContentType`. The `airtable_header` will now be a nicely
    formatted header for the Airtable API.
 
-![ngstarted/newworker.png](/img/ngstarted/api_header.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/api_header.png)
 
 5. The query can be empty for this particular request, but we do need to provide
    an argument, such as `{}`.
@@ -482,19 +482,19 @@ team members can see it.
    requests). Airtable expects the following format:  
    `records : [{fields : {Date : date, Requests : count}}]`
 
-![ngstarted/newworker.png](/img/ngstarted/api_body.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/api_body.png)
 
 7. Run the API request in the editor by hitting the play button next to
    `HttpClient::post`. If the request is successful, a success will be returned
    and you'll see the record in your Airtable base.
 
-![ngstarted/newworker.png](/img/ngstarted/api_success.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/api_success.png)
 
 If the request is not successful, the error message will be displayed in line,
 and you'll see the `Error` on the error rail. In this case, the format of the
 date passed did not expect what Airtable expected.
 
-![ngstarted/newworker.png](/img/ngstarted/api_error.png)
+![img/gettingstarted/newworker.png](/img/gettingstarted/api_error.png)
 
 8. Each time your cron runs (daily, or when triggered) a record will be added to
    your Airtable base.
@@ -506,12 +506,12 @@ Try it out:
 - Change your REPL to say `"test3"` instead of `"test1"` and then re-run the
   request by hitting the play button.
 
-  ![ngstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
+  ![img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.01_AM.png)
 
 - A new trace dot will appear on the HTTP Post `/test` handler. It shows
   `"test6"` in the body of the request.
 
-  ![ngstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](/img/ngstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
+  ![img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.04.07_AM.png)
 
 - The new request will be in the Datastore, and if you open your reports
   endpoint tomorrow, you'll see a log of all the new requests, as well as
@@ -530,7 +530,7 @@ If you want to do the latter, make the adjustment to the cron process by adding
 the last 6 lines: assigning the length of `todayRequests` and then conditionally
 emitting `todayRequests` to the `StoreReport` worker or not.
 
-![ngstarted/airtable_skip_cron.png](/img/ngstarted/airtable_skip_cron.png)
+![img/gettingstarted/airtable_skip_cron.png](/img/gettingstarted/airtable_skip_cron.png)
 
 Congratulations! You now have your first Dark application: an API that stores
 requests into a datastore, creates a daily report of those requests, and sends
