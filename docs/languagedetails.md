@@ -98,7 +98,7 @@ y
 [8, 6]
 ```
 
-![List Example](/docs/img/language/list_example.png)
+![List Example](/img/language/list_example.png)
 
 ### Binary
 
@@ -113,7 +113,7 @@ languages, Dark uses an Option type:
 Option a = Just a | Nothing
 ```
 
-![Option Example](/docs/img/language/option_example.png)
+![Option Example](/img/language/option_example.png)
 
 This is intended to convert effortlessly to null in JSON, but we don't quite
 have enough of the type system to remove null, so they both exist right now.
@@ -132,7 +132,7 @@ Result a = Ok a | Err Error
 Dark has no exceptions - all errors go through Results. See
 [error handling](error-handling) for more details.
 
-![Result Example](/docs/img/language/result_example.png)
+![Result Example](/img/language/result_example.png)
 
 ### Dicts
 
@@ -304,7 +304,7 @@ them to in the future.
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
 
-![If Example](/docs/img/language/if_example.png)
+![If Example](/img/language/if_example.png)
 
 ### Match
 

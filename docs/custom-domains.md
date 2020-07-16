@@ -22,7 +22,7 @@ or service available over `https`.
    The specifics for this step depends on how you manage your DNS settings, but
    here's what it might look like on Cloudflare:
 
-   ![Setting a CNAME on Cloudflare](/docs/img/customdomain/cname-example.png)
+   ![Setting a CNAME on Cloudflare](/img/customdomain/cname-example.png)
 
    **Note**: You _cannot_ use an apex domain like `myawesomedarkservice.com`.
    Using `www.myawesomedarkservice.com` is the usual way, although you can use
@@ -77,7 +77,7 @@ api.myawesomedarkservice.com.    300    IN    A    104.24.119.127
 
 To resolve this, turn off the proxy. On Cloudflare, you can press this button to
 switch from "Proxied" to "DNS only" mode:
-![Turning off the Cloudflare proxy in favor of "DNS only"](/docs/img/customdomain/cloudflare-proxy.png)
+![Turning off the Cloudflare proxy in favor of "DNS only"](/img/customdomain/cloudflare-proxy.png)
 
 ### My DNS is set up correctly, but I'm getting an invalid certificate warning when trying to visit my custom domain via `https`
 

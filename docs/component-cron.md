@@ -7,7 +7,7 @@ sidebar_label: Cron
 Dark supports scheduled jobs via a Cron component. Use a Cron when you want to
 schedule something to occur on a timed interval.
 
-![Cron Intervals](/docs/img/cron/intervals.png)
+![Cron Intervals](/img/cron/intervals.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2ffObUyM1jc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

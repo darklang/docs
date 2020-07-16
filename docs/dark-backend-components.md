@@ -16,7 +16,7 @@ called handlers:
 These components live on your canvas. They are created from the sidebar, or by
 hitting `Cmd/Ctrl-k` to bring up the omnibox.
 
-![assests/backend/image2.png](/docs/img/backend/image2.png)
+![assests/backend/image2.png](/img/backend/image2.png)
 
 Dark code is meant to be written in these handlers. We always recommend writing
 code within these components, and then extracting that code into a function,
@@ -100,7 +100,7 @@ In Dark, all datastores are a key-value store - a persistent hash-map/dictionary
 (not a relational database). When looking at a Datastore you’ll see all handlers
 that call the datastore.
 
-![backend/image3.png](/docs/img/backend/image3.png)
+![backend/image3.png](/img/backend/image3.png)
 
 [Detailed datastore information](datastores.md).
 
@@ -110,4 +110,4 @@ If you delete a handler, we save that code for you in the Deleted section of
 your canvas. Everything you delete is sorted by type, and will remain in that
 section until you remove it.
 
-![backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png](/docs/img/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png)
+![backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png](/img/backend/Screen_Shot_2020-01-07_at_4.00.20_PM.png)

@@ -33,7 +33,7 @@ this later in the tutorial.
 2. Set a Slash command (the option should appear under **Add features &
    functionality** on your app's main page.)
 
-![slack-apps/tutorials/new-trello-card/slashcommand.png](/docs/img/slack-apps/tutorials/new-trello-card/slashcommand.png)
+![slack-apps/tutorials/new-trello-card/slashcommand.png](/img/slack-apps/tutorials/new-trello-card/slashcommand.png)
 
 3. Add the following scopes to your app.
 

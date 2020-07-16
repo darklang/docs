@@ -13,7 +13,7 @@ disabled, or using our [Desktop Client](desktop-client)._
 
 ## Hello World
 
-![Hello World](/docs/img/helloworld.gif)
+![Hello World](/img/helloworld.gif)
 
 Above, you can see the simplest app in Dark: the hello world app. It shows
 starting with an empty canvas, creating a HTTP endpoint (`GET /hello`), running

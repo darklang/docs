@@ -9,7 +9,7 @@ sidebar_label: Datastores
 Datastores in Dark are key-value based (persistent hash-maps). When you create a
 new datastore, you specify the schema for the record.
 
-![Empty Datastore](/docs/img/datastores/empty.png)
+![Empty Datastore](/img/datastores/empty.png)
 
 The key is the unique identifier for each record, and is always of type
 `string`. **The key is not visible when looking at the Datastore's schema on the
@@ -34,7 +34,7 @@ Datastores return one or many results, with or without keys.
 
 The schema is the same for all of these key examples:
 
-![Datastore Schema](/docs/img/datastores/schema.png)
+![Datastore Schema](/img/datastores/schema.png)
 
 Some common key choices:
 
@@ -71,16 +71,16 @@ A list of all datastore functions is available
 To add items into a datastore, use `DB::set`. `DB::set` takes three parameters
 (the record to be added, its unique key, and the datastore).
 
-![DBset](/docs/img/datastores/dbset_empty.png)
+![DBset](/img/datastores/dbset_empty.png)
 
 For the earlier example datastore, using this with `userID` as the key would
 look as follows:
 
-![DBset](/docs/img/datastores/dbset.png)
+![DBset](/img/datastores/dbset.png)
 
 Using the a generated key with `DB::generateKey` would look like this instead:
 
-![DBset](/docs/img/datastores/dbset_genkey.png)
+![DBset](/img/datastores/dbset_genkey.png)
 
 ### Datastore meta-actions
 
@@ -141,7 +141,7 @@ compiler. More about this feature is in this
 
 This allows you to write a function that can be evaluated for the datastore.
 
-![DBset](/docs/img/datastores/dbquery.png)
+![DBset](/img/datastores/dbquery.png)
 
 DB::query allows taking a datastore and a block filter. Note that this does not
 check every value in the table but rather is optimized to find data with
@@ -173,19 +173,19 @@ deleting all data in a DB will unlock it (`DB::deleteAll`).
 Once you have traffic, datastore migrations are manual. To change your schema,
 create a new datastore with the new schema.
 
-![Migration](/docs/img/datastores/migration.png)
+![Migration](/img/datastores/migration.png)
 
 Then, use a REPL to write code to move your existing data, using
 `DB::getAllWithKeys` and `Dict::map`. For adding a new field, use `Dict::set` to
 add the new field to the existing record. (Note: to pipe a specific section of
 code, select it first, then press `shift-enter`)
 
-![Migrator](/docs/img/datastores/migrator.png)
+![Migrator](/img/datastores/migrator.png)
 
 For removing a field, rebuild the record using the existing one or use
 `Dict::remove`.
 
-![Migrator2](/docs/img/datastores/migrator2.png)
+![Migrator2](/img/datastores/migrator2.png)
 
 Once you are satisfied with your code, run the REPL to test it (if you are just
 testing, delete the data after). The new datastore should be locked, and you can

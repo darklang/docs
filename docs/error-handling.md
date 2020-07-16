@@ -20,12 +20,12 @@ block, using a `let`. Since the body of the `let` is empty, the expression as a
 whole is incomplete. To resolve the problem, fill in the body of the `let` (for
 example, with `msg`).
 
-![error/image11.png](/docs/img/error/image11.png)
+![error/image11.png](/img/error/image11.png)
 
 **Example:** Here we left the query parameter blank in a call to
 `HttpClient::get`:
 
-![error/image13.png](/docs/img/error/image13.png)
+![error/image13.png](/img/error/image13.png)
 
 We need to fill in all parameters, here we can use `{}`.
 
@@ -34,7 +34,7 @@ expression may be incomplete even if it seems fine: this is because something it
 depends on is incomplete. For example, in the case below we are returning `var`
 but never defined it:
 
-![error/image10.png](/docs/img/error/image10.png)
+![error/image10.png](/img/error/image10.png)
 
 In these cases, we provide a link to the source of the incomplete. Click on
 "click to locate source" and it will take you to the first blank that has
@@ -51,7 +51,7 @@ enough . Carefully read the message to see what's wrong.
 Here we tried to use `DB::set` with an Int for the `key` parameter, even though
 `key` needs to be a string.
 
-![error/image14.png](/docs/img/error/image14.png)
+![error/image14.png](/img/error/image14.png)
 
 To resolve this problem, we can use a string instead. `"123"` or
 `123 |> toString` will both work.

@@ -60,7 +60,7 @@ For simple requests, the CORS settings should be returned within the endpoint.
 Here is an example of setting the headers for simple request that requires an
 allowed list of origins:
 
-![cors/cors_simple.png](/docs/img/cors/cors_simple.png)
+![cors/cors_simple.png](/img/cors/cors_simple.png)
 
 ## Adding Preflighting via OPTIONS Handlers
 
@@ -72,7 +72,7 @@ get information, and then make its request accordingly.
 
 Options is not a default method on HTTP handlers, but can be entered.
 
-![cors/cors_option.png](/docs/img/cors/cors_option.png)
+![cors/cors_option.png](/img/cors/cors_option.png)
 
 ### CORS with Custom Domains (Allow-Origin)
 
@@ -87,7 +87,7 @@ using 3000, 8000, or 5000, ex `http://localhost:8000`.
 You can set a specific domain directly in the header where we have `corsHeader`
 or if you'd like to check for multiple, you can use a list format as below.
 
-![cors/cors_customdomain.png](/docs/img/cors/cors_customdomain.png)
+![cors/cors_customdomain.png](/img/cors/cors_customdomain.png)
 
 ### CORS with Authentication (Allow-Credentials)
 
@@ -95,14 +95,14 @@ To allow credentials, add the `{Access-Control-Allow-Credentials: "true"}`
 header to your response. This will not be allowed if the list of allowed origins
 is set to `*`.
 
-![cors/cors_auth.png](/docs/img/cors/cors_auth.png)
+![cors/cors_auth.png](/img/cors/cors_auth.png)
 
 ### CORS with Custom Headers & Methods (Allow-Headers, Allow-Methods)
 
 To allow a custom header, add the:
 `{Access-Control-Allow-Headers: "headerName"}` header to your response.
 
-![cors/cors_customheader.png](/docs/img/cors/cors_customheader.png)
+![cors/cors_customheader.png](/img/cors/cors_customheader.png)
 
 To allow a specific method, add the `{Access-Control-Allow-Methods: "method"}`
 header to your response.
@@ -116,9 +116,9 @@ We recommend creating a function of the logic and then calling it from each
 (Create a function from your Options handler by selecting the code and hitting
 `Cmd/Ctrl-\` to extract a function).
 
-![cors/cors_canvaswide.png](/docs/img/cors/cors_canvaswide.png)
+![cors/cors_canvaswide.png](/img/cors/cors_canvaswide.png)
 
-![cors/cors_callingcanvaswide.png](/docs/img/cors/cors_callingcanvaswide.png)
+![cors/cors_callingcanvaswide.png](/img/cors/cors_callingcanvaswide.png)
 
 If you are using the same CORS settings for the entire canvas, you could make
 one `OPTIONS` handler for `/:url`.

@@ -9,7 +9,7 @@ after the Unix cron utility) to create a report of all requests per day.
 1. Hit the plus (`+`) button (or use the omnibox) to create a new Cron. Set it
    to run daily, and with the name `DailyReport`.
 
-![ngstarted/crondaily.png](/docs/img/gettingstarted/crondaily.png)
+![ngstarted/crondaily.png](/img/gettingstarted/crondaily.png)
 
 2. To know if a request was executed today, we compare it to the current time.
    Let's assign the current time in seconds to a variable `timeSeconds`. The
@@ -18,13 +18,13 @@ after the Unix cron utility) to create a report of all requests per day.
 
    Run the `Date::now` function to see a live value for your code.
 
-![ngstarted/cron_timeseconds.png](/docs/img/gettingstarted/cron_timeseconds.png)
+![ngstarted/cron_timeseconds.png](/img/gettingstarted/cron_timeseconds.png)
 
 3. Next, we'll need to filter the reports to just today's reports. Set
    `allRequests` to `DB::getAll Requests`. Run the function to the live value
    for `allRequests`.
 
-![ngstarted/allrequests.png](/docs/img/gettingstarted/allrequests.png)
+![ngstarted/allrequests.png](/img/gettingstarted/allrequests.png)
 
 4. To see only today's requests, use `List::filter`. `List::filter` takes two
    arguments - the list to filter (in this case `allRequests`) and an anonymous
@@ -33,31 +33,31 @@ after the Unix cron utility) to create a report of all requests per day.
    concept is explained in more detail
    [here](https://darklang.github.io/docs/functional-aspects).
 
-![ngstarted/listefilter.png](/docs/img/gettingstarted/listfilter.png)
+![ngstarted/listefilter.png](/img/gettingstarted/listfilter.png)
 
 5. We want to keep only reports that occurred today, meaning we want to compare
    the report's time to `timeSeconds` that we created earlier. Let's convert the
    time of the request into seconds so that both times have the same units.
 
-![ngstarted/requestseconds.png](/docs/img/gettingstarted/requestseconds.png)
+![ngstarted/requestseconds.png](/img/gettingstarted/requestseconds.png)
 
 6. Next, we calculate the difference from the current time; this tells us if it
    happened today (in the last 86,400 seconds).
 
-![ngstarted/comparison.png](/docs/img/gettingstarted/comparison.png)
+![ngstarted/comparison.png](/img/gettingstarted/comparison.png)
 
 7. To see this work, it's helpful to have a recent request. If you paused in the
    tutorial, re-run the `HttpClient::post` function from the REPL. Then, when
    you place your cursor in `todayRequests` or `List::filter` you'll see a list
    of requests from the last 24 hours.
 
-![ngstarted/todayrequest.png](/docs/img/gettingstarted/todayrequest.png)
+![ngstarted/todayrequest.png](/img/gettingstarted/todayrequest.png)
 
 8. Finally, let's emit today's requests to a background worker, using the `emit`
    keyword. `emit` takes two arguments, and in this case we're sending
    `todayRequests` to a not-yet-created worker named `storeReport`.
 
-![ngstarted/emit.png](/docs/img/gettingstarted/emit.png)
+![ngstarted/emit.png](/img/gettingstarted/emit.png)
 
 9. To have our first report run, hit the "replay" button in the upper right of
    the Cron. This creates a 404 in the sidebar for the Worker `storeReport`.

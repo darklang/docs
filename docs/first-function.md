@@ -15,42 +15,42 @@ that whatever code you write has traces and live data.
 2. In the REPL, call `DB::getAll` to get the reports from the datastore. Run the
    function using the play button (▶️).
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/dbgetalldaily.png)
+![gettingstarted/newworker.png](/img/gettingstarted/dbgetalldaily.png)
 
 3. Open a pipeline by typing `|>`, and pipe into a `List::map`, and create
    variables `date` and `count`.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/functionmapvariable.png)
+![gettingstarted/newworker.png](/img/gettingstarted/functionmapvariable.png)
 
 4. Pipe `val.count` into `toString` (shift-enter on a selected area also pipes
    that expression).
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/valcounttostring.png)
+![gettingstarted/newworker.png](/img/gettingstarted/valcounttostring.png)
 
 5. Return `date ++ ": " ++ count` in the last line of the block.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/blockend.png)
+![gettingstarted/newworker.png](/img/gettingstarted/blockend.png)
 
 6. We now have the code to generate our formatted report.
 
    Let's extract that code into a function. Select all the code within the REPL.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/selectall.png)
+![gettingstarted/newworker.png](/img/gettingstarted/selectall.png)
 
 7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select
    `extract-function`.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/extractfunction.png)
+![gettingstarted/newworker.png](/img/gettingstarted/extractfunction.png)
 
 8. This creates the function, and replaces the existing code with a call to the
    new function.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/extractedfunction.png)
+![gettingstarted/newworker.png](/img/gettingstarted/extractedfunction.png)
 
 9. Click on the function reference on the right hand side of the handler to go
    to the function and rename it.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/functionspace.png)
+![gettingstarted/newworker.png](/img/gettingstarted/functionspace.png)
 
 Functions do not live on the main canvas. They are reusable and can be called
 from any handler.
@@ -64,4 +64,4 @@ called.
     handler and call the function. This creates an API endpoint which returns
     the daily reports.
 
-![gettingstarted/newworker.png](/docs/img/gettingstarted/functioncall.png)
+![gettingstarted/newworker.png](/img/gettingstarted/functioncall.png)

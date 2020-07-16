@@ -20,11 +20,11 @@ A blank expression acts as a placeholder where you can type to create a
 different expression. The value of a blank expression is `Incomplete`, because
 it needs to be completed in order to be useful.
 
-![Blank Example](/docs/img/structuredediting/blank_example.png)
+![Blank Example](/img/structuredediting/blank_example.png)
 
 Once a blank is filled in, it won't be a blank anymore:
 
-![Filled Blank Example](/docs/img/structuredediting/filled_blank_example.png)
+![Filled Blank Example](/img/structuredediting/filled_blank_example.png)
 
 2 is an integer expression with the value 2.
 
@@ -58,22 +58,22 @@ editor are below.
 Expressions in Dark are nested. For example, a multiplication expression is a
 compound expression with two sub-expressions as operands:
 
-![Multiplication Diagram](/docs/img/structuredediting/mul_diagram.png)
+![Multiplication Diagram](/img/structuredediting/mul_diagram.png)
 
 Filling a blank with an expression with sub-parts introduces a new blank for
 each of them.
 
-![Multiplication Diagram](/docs/img/structuredediting/multiplication.png)
+![Multiplication Diagram](/img/structuredediting/multiplication.png)
 
 In the expression 2 \* 3, these sub-expressions are filled with the expressions
 2 and 3:
 
-![Multiplication Expression](/docs/img/structuredediting/mul_expression.png)
+![Multiplication Expression](/img/structuredediting/mul_expression.png)
 
 The value of the expression `2 * 3` is `6`. This is equivalent to saying `2 * 3`
 evaluates to `6`.
 
-![Multiplication Result](/docs/img/structuredediting/mul_result.png)
+![Multiplication Result](/img/structuredediting/mul_result.png)
 
 Since `2 * 3` is an expression, it can itself be a subexpression of a compound
 expression. Consider the expression `1 + 2 * 3`, which has the value `7`. It is
@@ -88,11 +88,11 @@ expression, which has 3 parts: a variable name, a value (an expression!) bound
 to that variable, and a body (another expression!) within which you can use the
 name as an expression to stand in for the value:
 
-![Let Diagram](/docs/img/structuredediting/let_diagram.png)
+![Let Diagram](/img/structuredediting/let_diagram.png)
 
 Here's a let with 3 blanks in Dark:
 
-![Blanks in Let](/docs/img/structuredediting/blanks_in_let_example.png)
+![Blanks in Let](/img/structuredediting/blanks_in_let_example.png)
 
 ### Conditional Expressions
 
@@ -101,10 +101,10 @@ a then and else expression. The value of the conditional expression determines
 whether the then or else expression is evaluated. The value of the evaluated
 branch becomes the value of the if expression as a whole.
 
-![If Diagram](/docs/img/structuredediting/if_diagram.png)
+![If Diagram](/img/structuredediting/if_diagram.png)
 
 Here's a conditional in Dark:
-![If Example](/docs/img/structuredediting/if_example.png)
+![If Example](/img/structuredediting/if_example.png)
 
 ### Match Expressions
 
@@ -115,7 +115,7 @@ patterns. The first pattern that matches the evaluated value indicates the
 expression to evaluate. The value of the evaluated expression becomes the value
 of the match as a whole.
 
-![Match Diagram](/docs/img/structuredediting/match_diagram.png)
+![Match Diagram](/img/structuredediting/match_diagram.png)
 
 ### Pipelines
 
@@ -126,30 +126,30 @@ sequence.
 To start one, select the code that has the result that you want to pipe, and hit
 `shift-enter` or type `|>`.
 
-![actoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](/docs/img/structuredediting/pipeline_example.png)
+![actoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](/img/structuredediting/pipeline_example.png)
 
 ## Partials (Partially Completed Expressions)
 
 While you are typing or deleting, you'll often see partially completed
 expressions like this:
 
-![Partial](/docs/img/structuredediting/partial_example.png)
+![Partial](/img/structuredediting/partial_example.png)
 
 The text in red is the partial, and the gray text behind it indicates what was
 there before. Note that partials evaluate to whatever was there before:
 
-![Partial](/docs/img/structuredediting/partial_almost_filled.png)
+![Partial](/img/structuredediting/partial_almost_filled.png)
 
 ...until you complete them from the autocomplete:
 
-![Partial](/docs/img/structuredediting/partial_completed_example.png)
+![Partial](/img/structuredediting/partial_completed_example.png)
 
 ## Comments
 
 To add comments to your Dark code, start a line with `let _ =` and add a string
 containing the comment you'd like to include.
 
-![Option Example](/docs/img/language/comment.png)
+![Option Example](/img/language/comment.png)
 
 ## Refactoring and editing code
 
@@ -172,7 +172,7 @@ that code will not paste. We hope to improve this experience in the future.
 If you’re looking to do something that is not immediately available, chances are
 it’s in the command palette (accessed by hitting `ctrl-\`).
 
-![actoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](/docs/img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
+![actoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](/img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 
 This includes the common refactoring tools:
 

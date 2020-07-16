@@ -16,23 +16,23 @@ tutorial, we will be using [restdb.io](https://restdb.io).
 
 1. Create a new database.
 
-![external-db/create-db.png](/docs/img/external-db/create-db.png)
+![external-db/create-db.png](/img/external-db/create-db.png)
 
 2. Select **Developer Mode** in the upper right, and then choose
    **Collections +**
 
-![external-db/add-collection.png](/docs/img/external-db/add-collection.png)
+![external-db/add-collection.png](/img/external-db/add-collection.png)
 
 3. Enter the information for your new collection and click **Save**.
 
-![external-db/collection.png](/docs/img/external-db/collection.png)
+![external-db/collection.png](/img/external-db/collection.png)
 
 4. Add Name and Description text fields to your database by clicking **Add
    Fields +**.
 
-![external-db/add-field.png](/docs/img/external-db/add-fields.png)
+![external-db/add-field.png](/img/external-db/add-fields.png)
 
-![external-db/fields.png](/docs/img/external-db/fields.png)
+![external-db/fields.png](/img/external-db/fields.png)
 
 5. Grab your API Key by clicking on API Docs and finding the value labeled
    `x-apikey:`. Save it as a function in your Dark canvas.
@@ -49,11 +49,11 @@ tutorial, we will be using [restdb.io](https://restdb.io).
 2. Write an `HttpClient::post` using your URL, your fields (note: the field
    names are case sensitive) and your header, and then run it.
 
-![external-db/post.png](/docs/img/external-db/post.png)
+![external-db/post.png](/img/external-db/post.png)
 
 3. Your data will appear in the restdb.io console.
 
-![external-db/data.png](/docs/img/external-db/data.png)
+![external-db/data.png](/img/external-db/data.png)
 
 ## GET All Data
 
@@ -62,8 +62,8 @@ tutorial, we will be using [restdb.io](https://restdb.io).
 
 2. Write an `HttpClient::get` using your URL and header, and then run it.
 
-![external-db/get-all.png](/docs/img/external-db/get-all.png)
+![external-db/get-all.png](/img/external-db/get-all.png)
 
 3. Your handler will return all of the data in your database.
 
-![external-db/get-all-data.png](/docs/img/external-db/get-all-data.png)
+![external-db/get-all-data.png](/img/external-db/get-all-data.png)
