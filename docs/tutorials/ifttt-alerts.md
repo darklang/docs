@@ -279,6 +279,7 @@ request.send();
     created it, visit it to get a 404.
 
 <details><summary>approved.html</summary>
+
 ```
 <html lang="en">
   <head>
@@ -298,6 +299,7 @@ request.send();
   </body>
 </html>
 ```
+
 </details>
 
 <details><summary>approvedscripts.js</summary>

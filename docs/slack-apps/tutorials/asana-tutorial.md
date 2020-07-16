@@ -198,7 +198,7 @@ modal to handle their input.
 
 ![slack-apps/tutorials/asana-tutorial/payloaddata.png](/img/slack-apps/tutorials/asana-tutorial/payloaddata.png)
 
-10. Use the [`Asana::createTask`](....\packages.md#createTask) and the
+10. Use the [`Asana::createTask`](/packages.md#createTask) and the
     `lookUpProjectID` functions to create your new task.
 
 ![slack-apps/tutorials/asana-tutorial/createtask.png](/img/slack-apps/tutorials/asana-tutorial/createtask.png)

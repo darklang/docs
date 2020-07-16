@@ -24,7 +24,7 @@ your username and password when using `HttpClient::basicAuth`.
 
 ## Getting All of Your Tickets
 
-![freshdesk/image4.png](/img/tutorials/freshdesk/Image4.png)
+![freshdesk/image4.png](/img/tutorials/freshdesk/image4.png)
 
 Freshdesk makes it pretty easy to return a simple list of all of your tickets.
 However, you may find that the information in this list is not quite what you
@@ -45,7 +45,7 @@ with a status of 3, which means Pending.
 In the following example, we are going to add a set of information from all of
 our tickets into a Dark datastore.
 
-![freshdesk/image3.png](/img/tutorials/freshdesk/Image3.png)
+![freshdesk/image3.png](/img/tutorials/freshdesk/image3.png)
 
 Create a datastore to keep track of all of your ids. Because our primary use for
 this datastore is to append the ids to our request URL, it’s helpful to store

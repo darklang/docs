@@ -270,13 +270,12 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our
 docs repo is public and all you need to do to contribute is
 [submit a pull request](https://github.com/darklang/docs/pulls).
 
-- Added instructions for [hosting static assets](./docs/static-assets) when not
-  using an external framework.
-  ([119](https://github.com/darklang/docs/pull/119))
-- Fixed a broken link on the [Language Details](./docs/languagedetails) page.
+- Added instructions for [hosting static assets](/static-assets) when not using
+  an external framework. ([119](https://github.com/darklang/docs/pull/119))
+- Fixed a broken link on the [Language Details](/languagedetails) page.
   ([117](https://github.com/darklang/docs/pull/117))
 - Added instructions on how to pause your cron once you're done with the
-  [Your First App](./your-first) tutorial.
+  [Your First App](/your-first) tutorial.
   ([122](https://github.com/darklang/docs/pull/122))
 - New how-to pages:
   - [Feature flags](./feature-flags)
@@ -814,7 +813,7 @@ We added a bunch of improved documentation, including:
 - Moved our documentation to a
   [new, more readable format](https://darklang.com/docs/)
 - Documented
-  [how to set CORS in Dark](https://darklang.com/docs/getting-started.html#additional-informationadvanced-topics)
+  [how to set CORS in Dark](https://darklang.com/docs/getting-started#additional-informationadvanced-topics)
 
 ## Week of 1/31/2020
 
