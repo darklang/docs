@@ -14,7 +14,7 @@ Start by creating an app in Slack. You can do so quickly by clicking
 the ability to add apps to at least one Slack group in order to create an app.
 
 Once you've created your app, you will see a page with quite a few options:
-![appspage.png](/docs/img/appspage.png)
+![appspage.png](/img/age.png)
 
 You're going to need to configure at least one of these options before you can
 install the app to your workspace. The quickest option is to use a slash
@@ -22,36 +22,36 @@ command. When you create the command, you will be asked for a Request URL. This
 should be pointed at your Dark canvas and look something like
 `https://username-canvas.builtwithdark.com/my-command`.
 
-![slashcommand.png](/docs/img/slashcommand.png)
+![slashcommand.png](/img/command.png)
 
 Once you have your slash command, you will be able to install your app to your
 Slack community via the Basic Information page.
 
-![installslack.png](/docs/img/installslack.png)
+![installslack.png](/img/llslack.png)
 
 Once you have your app installed, you will be able to see your slash command in
 your Slack app:
 
-![command.png](/docs/img/command.png)
+![command.png](/img/nd.png)
 
 ## Building in Dark
 
 Try calling your slash command. You will get an error that looks like this:
 
-![commanderror.png](/docs/img/commanderror.png)
+![commanderror.png](/img/nderror.png)
 
 Navigate to the Dark canvas you used in the Request URL and check the 404s
 section - you will see an entry with the same name you used above.
 
-![404.png](/docs/img/404.png)
+![404.png](/img/ng)
 
 Click to create your handler, and then add a string to the return value:
 
-![hello.png](/docs/img/hello.png)
+![hello.png](/img/.png)
 
 Return to Slack and try out your Slack command again. You should now see a
 response:
 
-![hello.png](/docs/img/hello.png)
+![hello.png](/img/.png)
 
 Congratulations - you've built your first Slack app!

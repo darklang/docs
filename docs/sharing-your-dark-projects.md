@@ -14,87 +14,86 @@ If your project has launched, you can give it a "Made with Dark" badge.
 
 <div className="badges lightBackground">
   <div className="badge">
-    <img className="medium" src="/docs/img/branding/md-color-light@2x.png" />
+    <img className="medium" src="/img/ing/md-color-light@2x.png" />
     <p>Files:
-      <a href="/docs/img/branding/md-color-light.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/md-color-light@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/md-color-light@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/md-color-light@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/md-color-light.svg" target="_blank">svg</a> |
+      <a href="/img/ing/md-color-light@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/md-color-light@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/md-color-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="medium" src="/docs/img/branding/md-mono-light@2x.png" />
+    <img className="medium" src="/img/ing/md-mono-light@2x.png" />
     <p>Files:
-      <a href="/docs/img/branding/md-mono-light.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/md-mono-light@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/md-mono-light@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/md-mono-light@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/md-mono-light.svg" target="_blank">svg</a> |
+      <a href="/img/ing/md-mono-light@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/md-mono-light@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/md-mono-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="small" src="/docs/img/branding/sm-color-light@3x.png" />
+    <img className="small" src="/img/ing/sm-color-light@3x.png" />
     <p>Files:
-      <a href="/docs/img/branding/sm-color-light.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/sm-color-light@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/sm-color-light@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/sm-color-light@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/sm-color-light.svg" target="_blank">svg</a> |
+      <a href="/img/ing/sm-color-light@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/sm-color-light@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/sm-color-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="small" src="/docs/img/branding/sm-mono-light@3x.png" />
+    <img className="small" src="/img/ing/sm-mono-light@3x.png" />
     <p>Files:
-      <a href="/docs/img/branding/sm-mono-light.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/sm-mono-light@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/sm-mono-light@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/sm-mono-light@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/sm-mono-light.svg" target="_blank">svg</a> |
+      <a href="/img/ing/sm-mono-light@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/sm-mono-light@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/sm-mono-light@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
 </div>
 <div className="badges darkBackground">
   <div className="badge">
-    <img className="medium" src="/docs/img/branding/md-color-dark@2x.png" />
+    <img className="medium" src="/img/ing/md-color-dark@2x.png" />
     <p>Files:
-      <a href="/docs/img/branding/md-color-dark.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/md-color-dark@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/md-color-dark@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/md-color-dark@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/md-color-dark.svg" target="_blank">svg</a> |
+      <a href="/img/ing/md-color-dark@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/md-color-dark@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/md-color-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="medium" src="/docs/img/branding/md-mono-dark@2x.png" />
+    <img className="medium" src="/img/ing/md-mono-dark@2x.png" />
     <p>Files:
-      <a href="/docs/img/branding/md-mono-dark.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/md-mono-dark@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/md-mono-dark@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/md-mono-dark@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/md-mono-dark.svg" target="_blank">svg</a> |
+      <a href="/img/ing/md-mono-dark@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/md-mono-dark@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/md-mono-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="small" src="/docs/img/branding/sm-color-dark@3x.png" />
+    <img className="small" src="/img/ing/sm-color-dark@3x.png" />
     <p>Files:
-      <a href="/docs/img/branding/sm-color-dark.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/sm-color-dark@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/sm-color-dark@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/sm-color-dark@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/sm-color-dark.svg" target="_blank">svg</a> |
+      <a href="/img/ing/sm-color-dark@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/sm-color-dark@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/sm-color-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
   <div className="badge">
-    <img className="small" src="/docs/img/branding/sm-mono-dark@3x.png" />
+    <img className="small" src="/img/ing/sm-mono-dark@3x.png" />
     <p>Files:
-      <a href="/docs/img/branding/sm-mono-dark.svg" target="_blank">svg</a> |
-      <a href="/docs/img/branding/sm-mono-dark@1x.png" target="_blank">png</a> |
-      <a href="/docs/img/branding/sm-mono-dark@2x.png" target="_blank">png 2x</a> |
-      <a href="/docs/img/branding/sm-mono-dark@3x.png" target="_blank">png 3x</a>
+      <a href="/img/ing/sm-mono-dark.svg" target="_blank">svg</a> |
+      <a href="/img/ing/sm-mono-dark@1x.png" target="_blank">png</a> |
+      <a href="/img/ing/sm-mono-dark@2x.png" target="_blank">png 2x</a> |
+      <a href="/img/ing/sm-mono-dark@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
 </div>
 
 ## Other Logos
 
-Files: [svg](/docs/img/branding/logo.svg) |
-[png](/docs/img/branding/logo@1x.png) | [png 2x](/docs/img/branding/logo@2x.png)
-| [png 3x](/docs/img/branding/logo@3x.png)
-
+Files: [svg](/img/ing/logo.svg) | [png](/img/branding/logo@1x.png) |
+[png 2ximg/anding/logo@2x.png) | [png 3x](/imimg/g/logo@3x.png)
+img/
 ## Writing about Dark
 
 You can share your experience with Dark publicly. Here's a couple examples of

@@ -16,14 +16,14 @@ a workspace. The three steps are:
 You may be familiar with this workflow without even knowing it - it's likely
 what occurs anytime you see a screen this like when trying to install something:
 
-![permissions.png](/docs/img/permissions.png)
+![permissions.png](/img/permissions.png)
 
 In order to set up OAuth on your Slack app, you will need to take a few steps:
 
 1. Go to your Slack app's **Manage Distribution** page and add an OAuth redirect
    URL:
 
-![oauthredirect.png](/docs/img/oauthredirect.png)
+![oauthredirect.png](/img/oauthredirect.png)
 
 This URL should be in the following format: The URL you provide will need to be
 in the following format:
@@ -46,10 +46,10 @@ https://USERNAME-CANVASNAME.builtwithdark.com/oauth-redirect
    step. The final parameter is pulling the temporary code out of the request
    using `request.queryParams.code`.
 
-![oauth.png](/docs/img/oauth.png)
+![oauth.png](/img/oauth.png)
 
 6. Hit the play button for the function. If you get an error, repeat step 2. If
    everything goes as expected, an entry will be added to your datastore, and it
    will look locked.
 
-![lockedtoken.png](/docs/img/lockedtoken.png)
+![lockedtoken.png](/img/lockedtoken.png)

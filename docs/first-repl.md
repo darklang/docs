@@ -16,7 +16,7 @@ HttpClient library to make API calls.
 
 2. Type "httpclient" in the REPL (lowercase, no spaces)
 
-![gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
 This will show you all the standard library functions for HttpClient, their
 signatures, and their docstrings.
@@ -24,11 +24,11 @@ signatures, and their docstrings.
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on
    substrings so getting the exact text isn't important:
 
-![gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png)
 
 4. Hit enter to add the function into the handler.
 
-![gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
 Dark automatically creates blanks for the four arguments that `HttpClient::post`
 requires. We display a gray play button beside the function &ndash; it will turn
@@ -40,7 +40,7 @@ within the editor.
    USERNAME-gettingstarted.builtwithdark.com, so enter a string like
    `"https://USERNAME-gettingstarted.builtwithdark.com/test"`.
 
-![gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.24.08_AM.png)
 
 6. Next let's add the arguments. The structured editor simplifies creation of
    the arguments we want:
@@ -51,23 +51,23 @@ within the editor.
 - For the header, we want the JSON content-type: type "json" and the
   autocomplete will offer you a function to use.
 
-![gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
 
 7. Once we've filled in all the arguments, the play button (▶️) next to the
    function turns green, which means we can execute this code from within the
    editor.
 
-![gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.42.45_AM.png)
 
 8. Hitting play we receive a 404 response. This is because there's no `/test`
    endpoint on our canvas (yet!)
 
-![gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
 
 9. 404s in Dark appear in the 404 section of the sidebar. We'll discuss that
    more later.
 
-![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/docs/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
+![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
 Congratulations! You've built your first REPL and called your first function in
 Dark.

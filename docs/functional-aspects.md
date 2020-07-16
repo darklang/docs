@@ -43,25 +43,25 @@ chaining in OO languages, and pipes in Bash. Rather than calling functions with
 their parameters, you pass the previous value into the **first** parameter of an
 expression:
 
-![functional/image2.gif](/docs/img/functional/image2.gif)
+![functional/image2.gif](/img/functional/image2.gif)
 
 Traditionally, you call functions with their arguments as parameters. However,
 that is often confusing and can be hard to read:
 
-![functional/Image6.png](/docs/img/functional/image6.png)
+![functional/Image6.png](/img/functional/image6.png)
 
 Pipelines perform a series of transformations on a value in order. Here, we
 start with the string `"live"` and pipe it to `String::reverse` to produce
 `"evil"`. Then we pipe the result to `String::toUppercase`, producing the string
 `"EVIL"`:
 
-![functional/image9.png](/docs/img/functional/image9.png)
+![functional/image9.png](/img/functional/image9.png)
 
 ### How to Pipe
 
 To start a pipeline, use `|>` at the end of the expression you are piping.
 
-![functional/openpipe.png](/docs/img/functional/openpipe.png)
+![functional/openpipe.png](/img/functional/openpipe.png)
 
 Once you are in a pipeline, hitting `return` at the end of the expression will
 continue the pipe.
@@ -70,8 +70,8 @@ If you need to pipe a specific subset of an expression, you can select it and
 then hit `shift+enter`. For example, selecting `UUID::generate` to pipe it into
 `toString`.
 
-![functional/openpipe.png](/docs/img/functional/selectpipe.png)
-![functional/openpipe.png](/docs/img/functional/successfulpipe.png)
+![functional/openpipe.png](/img/functional/selectpipe.png)
+![functional/openpipe.png](/img/functional/successfulpipe.png)
 
 ### Indentation Tip
 
@@ -80,7 +80,7 @@ pipelines is introducing them at an unintended "level". For example, here the
 piped value is the let expression as a whole, but the author intended to pipe
 the expression bound to the variable s:
 
-![functional/image13.png](/docs/img/functional/image13.png)
+![functional/image13.png](/img/functional/image13.png)
 
 \_To view the live code provided in the examples above, visit
 [https://darklang.com/a/sample-pipeline](https://darklang.com/a/sample-pipeline).
@@ -93,17 +93,17 @@ something to a collection of objects in a list.
 `List::map` takes two parameters. In this case we are passing in a list of
 integers, and a block.
 
-![functional/image4.png](/docs/img/functional/image4.png)
+![functional/image4.png](/img/functional/image4.png)
 
 In this case, we multiply each value by two:
 
-![functional/image17.png](/docs/img/functional/image17.png)
+![functional/image17.png](/img/functional/image17.png)
 
 If we wanted to do something involving subsequent list items, we can use a List
 fold (in this case we pipe the output of our previous list into list::fold),
 resulting in a return value of 10,100:
 
-![functional/image14.png](/docs/img/functional/image14.png)
+![functional/image14.png](/img/functional/image14.png)
 
 ### Tips
 
@@ -116,27 +116,27 @@ resulting in a return value of 10,100:
 
 List map with no side effect:
 
-![functional/listmap1.png](/docs/img/functional/listmap1.png)
+![functional/listmap1.png](/img/functional/listmap1.png)
 
 List map with a side effect, appears to use the same Int::random each time:
 
-![functional/listmap2.png](/docs/img/functional/listmap2.png)
+![functional/listmap2.png](/img/functional/listmap2.png)
 
 List map with side effect, discrepancy between analysis and values stored in DB:
 
-![functional/listmap3.png](/docs/img/functional/listmap3.png)
+![functional/listmap3.png](/img/functional/listmap3.png)
 
 ## Blocks (lambdas, anonymous functions)
 
 Blocks are anonymous functions that operate on a set of values. Expressions like
 `List::map` and `DB::query` take them as parameters.
 
-![functional/block.png](/docs/img/functional/block.png)
+![functional/block.png](/img/functional/block.png)
 
 To open the block type `\`. It auto-populates the parameters it is expecting
 (like `value` for `Db::query` or `accum, curr` for `List::fold`).
 
-![functional/block.png](/docs/img/functional/blockfilter.png)
+![functional/block.png](/img/functional/blockfilter.png)
 
 ## Match
 
@@ -150,7 +150,7 @@ Once you remove the function from the Error Rail, use match for destructuring.
 
 Here’s an example of using a match expression with a dictionary lookup.
 
-![functional/image16.png](/docs/img/functional/image16.png)
+![functional/image16.png](/img/functional/image16.png)
 
 Using a variable name as one of the branches will catch all matches. The
 variable can be used on the right side of the branch.
