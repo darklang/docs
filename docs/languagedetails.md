@@ -291,8 +291,6 @@ In the example above, the scope of `height` and `weight` only extends to within
 the `then` block and `else` block respectively. You cannot use either variable
 below the `if` expression.
 
-See doc on `coding in an expression-based language`.
-
 ### If
 
 Dark supports if/else statement. The argument to an `if` is a boolean. We
