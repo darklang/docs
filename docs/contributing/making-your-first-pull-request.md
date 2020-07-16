@@ -2,20 +2,20 @@
 title: Making your first Pull Request
 ---
 
-Right now you've got uncommitted code, let's get that into a Pull Request on GitHub.
+Right now you've got uncommitted code, let's get that into a Pull Request on
+GitHub.
 
 ## Formatting the code
 
-We use a code formatter on all our files, and this is tested during CI on
-all PRs. To format, call `scripts/format format backend`.
-There is also a [git hook you can
-use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
+We use a code formatter on all our files, and this is tested during CI on all
+PRs. To format, call `scripts/format format backend`. There is also a
+[git hook you can use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
 
 ## Set up your fork
 
-Dark uses a fork model for contributions, like many GitHub projects. Go
-to the [Dark repo](https://darklang.com/darklang/dark) in your browser
-and click `fork` to add a fork.
+Dark uses a fork model for contributions, like many GitHub projects. Go to the
+[Dark repo](https://darklang.com/darklang/dark) in your browser and click `fork`
+to add a fork.
 
 Then change your local repo to use the fork:
 
@@ -36,14 +36,16 @@ git push --set-upstream origin first-contribution
 
 ## Make the Pull Request
 
-Go back to GitHub and make a pull request. Here's a good message for your pull request:
+Go back to GitHub and make a pull request. Here's a good message for your pull
+request:
 
-> "Hi - this is my first pull request. I noticed that List::member didn't have any tests so I added one."
+> "Hi - this is my first pull request. I noticed that List::member didn't have
+> any tests so I added one."
 
-While this doesn't follow our [Pull Request
-guidelines](/docs/contributing/making-a-pull-request#writing-a-successful-pull-request-message), it's fine for
-a first contribution (and you can ignore the PR
-template too for now).
+While this doesn't follow our
+[Pull Request guidelines](/contributing/making-a-pull-request#writing-a-successful-pull-request-message),
+it's fine for a first contribution (and you can ignore the PR template too for
+now).
 
 **And that's your first PR - congratulations!**
 

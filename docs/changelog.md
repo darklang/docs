@@ -231,7 +231,7 @@ added:
 
 - Added:
   - A section around
-    [submitting external contributions](./contributing/getting-started)
+    [submitting external contributions](/contributing/getting-started)
     ([134](https://darklang.com/docs/contributing/getting-started))
   - A guide around [when and when not to use Dark](./when-dark)
     ([133](https://github.com/darklang/docs/pull/133))
@@ -812,8 +812,7 @@ We added a bunch of improved documentation, including:
 - Significant improvement in cursor position
 - Moved our documentation to a
   [new, more readable format](https://darklang.com/docs/)
-- Documented
-  [how to set CORS in Dark](https://darklang.com/docs/getting-started#additional-informationadvanced-topics)
+- Documented [how to set CORS in Dark](https://darklang.com/docs/cors)
 
 ## Week of 1/31/2020
 
@@ -914,9 +913,8 @@ We added a bunch of improved documentation, including:
 
 ### Documentation
 
-- A
-  [list of sample canvases](https://www.notion.so/darklang/Sample-Canvases-a5fa5479ffbb442d9f180d83e4bf3588)
-  and descriptions has been added
+- A [list of sample canvases](/tutorials/sample-canvases). and descriptions has
+  been added
 
 ## Week of 1/17/2020
 
@@ -929,7 +927,7 @@ We added a bunch of improved documentation, including:
 ![changelog/image1.gif](/img/changelog/image1.gif)
 
 - Improved
-  [documentation around the Error Rail](https://www.notion.so/darklang/Error-Handling-in-Dark-255f7989a63b4dd49da63cca17ee107e)
+  [documentation around the Error Rail](/tutorials/error-rail-http-tutorial)
 - GitHub API! See our [sample canvas](https://darklang.com/a/sample-github)
   demonstrating how to call the GitHub API
 - Fixed an issue where deleted from the middle of a concatenated string would

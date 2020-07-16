@@ -94,7 +94,7 @@ commands.
 
 8. Now, we can use the `String::split` function to separate out our two pieces
    of information, and add them separately to the
-   [`Asana::createProject function`](....\packages.md#createProject) function.
+   [`Asana::createProject function`](/packages.md#createProject) function.
 
 ![slack-apps/tutorials/asana-tutorial/notes.png](/img/slack-apps/tutorials/asana-tutorial/notes.png)
 
@@ -110,7 +110,7 @@ but it works the same way for workspaces.
 ![slack-apps/tutorials/asana-tutorial/projectsdatastore.png](/img/slack-apps/tutorials/asana-tutorial/projectsdatastore.png)
 
 2. Create a new REPL. First, use the
-   [`Asana::getAllProjects`](....\packages.md#getAllProjects) function to grab
+   [`Asana::getAllProjects`](/packages.md#getAllProjects) function to grab
    information about all projects you have access to. Then, use a `List::map` to
    add their names and gids to the DB.
 
