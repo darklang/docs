@@ -1,8 +1,8 @@
 module.exports = {
   title: "Dark Documentation",
   tagline: "Dark Documentation",
-  url: "https://darklang.github.io", // Website URL
-  baseUrl: "/docs/", // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
+  url: "https://docs.darklang.com", // Website URL
+  baseUrl: "/", // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
   favicon: "img/favicon.ico",
   organizationName: "darklang", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
