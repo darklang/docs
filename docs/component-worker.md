@@ -133,8 +133,9 @@ making external HTTP calls will cause execution to take longer.
 
 This is a list of improvements we'd like to make to Workers. If you have
 opinions on how these might work or other ideas, please reach out in the
-`#general` Slack channel. If you're interested in contributing any of this
-functionality, get in touch in `#contributors`.
+[#general](https://darklang.com/slack-invite) Slack channel. If you're
+interested in contributing any of this functionality, get in touch in
+[#contributors](https://darklang.com/slack-invite).
 
 - Error handling: automatic retry, dead-letter queue
 - Concurrency control, allowing for tuning how many messages a Worker will

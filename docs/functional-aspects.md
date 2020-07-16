@@ -145,7 +145,7 @@ type (`Just` and `Nothing`) and the `Result` type (`Ok` and `Error`). It can
 also be used similarly to switch statements in other languages.
 
 By default, functions that return Option or Result go to the
-[Error Rail](https://darklang.github.io/docs/unique-aspects#functions-that-use-error-rail).
+[Error Rail](https://darklang.com/docs/unique-aspects#functions-that-use-error-rail).
 Once you remove the function from the Error Rail, use match for destructuring.
 
 Here’s an example of using a match expression with a dictionary lookup.

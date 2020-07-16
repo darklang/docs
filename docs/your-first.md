@@ -296,7 +296,7 @@ after the Unix cron utility) to create a report of all requests per day.
    function that determines if each element of the list element should be
    includes in the new list. `List::filter` is similar to `List::map` and the
    concept is explained in more detail
-   [here](https://darklang.github.io/docs/functional-aspects).
+   [here](https://darklang.com/docs/functional-aspects).
 
 ![img/gettingstarted/listefilter.png](/img/gettingstarted/listfilter.png)
 
