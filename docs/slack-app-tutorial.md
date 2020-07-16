@@ -224,7 +224,7 @@ or fields within a modal, this may change the shape of Slack’s payload into a
 string with nested lists. There are several functions you can use that will help
 with data wrangling in those cases:
 
-- `JSON::parse` - Parses a JSON string and returns it’s value.
+- `JSON::parse` - Parses a JSON string and returns its value.
 - `Lambda` (or `\`) - for creating anonymous functions that are most helpful
   when iterating through lists
 - `|>` (or shift+enter) - to pipe into another expression
