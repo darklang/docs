@@ -9,7 +9,7 @@ framework is tightly coupled to the infrastructure, and as you write code you're
 able to develop from real incoming requests/traces.
 
 _Note: for now, Dark is only supported for Chrome with browser extensions
-disabled, or using our [Desktop Client](desktop-client)._
+disabled, or using our [Desktop Client](/desktop-client)._
 
 ## Hello World
 

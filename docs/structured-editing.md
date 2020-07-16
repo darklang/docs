@@ -50,8 +50,8 @@ There are also more complex expressions:
 - Matches
 
 For more on the language features of each type of expression, visit the
-[Language Overview](language). Examples of how these expressions are used in the
-editor are below.
+[Language Overview](languageoverview). Examples of how these expressions are
+used in the editor are below.
 
 ## Nesting Expressions
 
@@ -126,7 +126,7 @@ sequence.
 To start one, select the code that has the result that you want to pipe, and hit
 `shift-enter` or type `|>`.
 
-![actoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](/img/structuredediting/pipeline_example.png)
+![img/refactoring/Screen_Recording_2020-01-07_at_01.56_PM.gif](/img/structuredediting/pipeline_example.png)
 
 ## Partials (Partially Completed Expressions)
 
@@ -172,7 +172,7 @@ that code will not paste. We hope to improve this experience in the future.
 If you’re looking to do something that is not immediately available, chances are
 it’s in the command palette (accessed by hitting `ctrl-\`).
 
-![actoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](/img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
+![img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](/img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 
 This includes the common refactoring tools:
 

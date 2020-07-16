@@ -64,7 +64,7 @@ versioned. In your canvas you will see the latest version, as well as any
 versions you are currently using.
 
 A list of all datastore functions is available
-[in the language reference](https://ops-documentation.builtwithdark.com/?pretty=1).
+[in the function reference](https://ops-documentation.builtwithdark.com/?pretty=1).
 
 ### Adding a record to a Datastore
 
@@ -191,7 +191,7 @@ Once you are satisfied with your code, run the REPL to test it (if you are just
 testing, delete the data after). The new datastore should be locked, and you can
 use another REPL to verify the output looks correct. Set up each reference to
 the datastore to use the new one datastore within a
-[Feature Flag](/docs/feature-flags).
+[Feature Flag](/feature-flags).
 
 When you're ready to change your traffic to use the new datastore, run the
 migration, and commit each feature flag.
@@ -202,4 +202,4 @@ please let us know.
 ## Using an External Datastore
 
 We strongly recommend using this built-in datastore. If you have an external
-database, you can [connect to it via REST](/docs/tutorials/external-db).
+database, you can [connect to it via REST](/tutorials/external-db).
