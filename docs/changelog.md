@@ -814,7 +814,7 @@ We added a bunch of improved documentation, including:
 - Moved our documentation to a
   [new, more readable format](https://darklang.com/docs/)
 - Documented
-  [how to set CORS in Dark](https://darklang.com/docs/docs/getting-started.html#additional-informationadvanced-topics)
+  [how to set CORS in Dark](https://darklang.com/docs/getting-started.html#additional-informationadvanced-topics)
 
 ## Week of 1/31/2020
 
@@ -854,11 +854,9 @@ We added a bunch of improved documentation, including:
 
 ### Documentation
 
-- Created a
-  [Sharing Dark Projects](https://www.notion.so/darklang/Sharing-your-Dark-Projects-26d5b14d6b41457daad6bc44ac849b1a)
-  guide
+- Created a [Sharing Dark Projects](/sharing-dark) guide
 - Improved the steps at the beginning of the
-  [Guide to Building a Backend for a React SPA in Dark](https://www.notion.so/darklang/A-Guide-to-Building-a-Backend-for-a-React-SPA-in-Dark-29ccf25d75bd48daa32b92e4bd555669)
+  [Guide to Building a Backend for a React SPA in Dark](/tutorials/react-spa-tutorial)
 
 ## Week of 1/24/2020
 
