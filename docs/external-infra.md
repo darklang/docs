@@ -8,7 +8,7 @@ sidebar_label: Connect to External Infrastructure
 
 If you already have an existing application, you can build a new service for it
 in Dark. To connect to any other external infrastructure, connect to it's REST
-API using Dark's [HttpClient Library](/docs/httpclient).
+API using Dark's [HttpClient Library](/httpclient).
 
 Dark operates in US-West.
 
@@ -16,11 +16,11 @@ Dark operates in US-West.
 
 While Dark is in private beta, not all functionality is available. If you need
 something that Dark does not support yet, you could also integrate to an
-external service via the [HttpClient Library](/docs/httpclient).
+external service via the [HttpClient Library](/httpclient).
 
 ## Sample Integrations
 
 - [GCP Storage Buckets](https://darklang.com/a/sample-gcpbucket)
 - [AWS Signing](https://darklang.com/a/sample-aws-signing)
 - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
-- [Other Datastores](/docs/tutorials/external-db)
+- [Other Datastores](/tutorials/external-db)

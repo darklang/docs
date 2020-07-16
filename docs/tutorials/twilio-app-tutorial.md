@@ -13,7 +13,7 @@ For this project we recommend darklang.com/a/USERNAME-twilioreminder.
 We recommend building a hello world API endpoint to get a feel for Dark, as
 follows:
 
-![twilio/image2.gif](/img/twilio/image2.gif)
+![twilio/image2.gif](/img/tutorials/twilio/image2.gif)
 
 All the major handlers work the same way, but the key for many requests is
 working directly with incoming data.
@@ -34,23 +34,23 @@ To try out the app and see your traces in the sample canvas text “start” to
 To build your own, you’ll need to set up a Twilio account. Your Twilio SID &
 Token are on the Dashboard.
 
-![twilio/mage16.png](/img/twilio/image16.png)
+![twilio/mage16.png](/img/tutorials/twilio/image16.png)
 
 You’ll also need to add a phone number from the “more” menu on the left-hand
 side, then to the phone number section.
 
-![twilio/image15.png](/img/twilio/image15.png)
+![twilio/image15.png](/img/tutorials/twilio/image15.png)
 
 Once you’ve added a phone number, you can configure a webhook:
 
-![twilio/image17.png](/img/twilio/image17.png)
+![twilio/image17.png](/img/tutorials/twilio/image17.png)
 
 ### Sending a Message
 
 Dark has a built in `Twilio::sendText` function. We can call it in a REPL with
 our own number to verify our webhook.
 
-![twilio/mage4.png](/img/twilio/image4.png)
+![twilio/mage4.png](/img/tutorials/twilio/image4.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1108947374](https://darklang.com/a/sample-textreminder#handler=1108947374)
 
@@ -59,11 +59,11 @@ our own number to verify our webhook.
 After we receive a response, we’ll see a 404 in the side bar section for our
 webhook, which we can create by hitting the “+” button.
 
-![twilio/mage3.png](/img/twilio/image3.png)
+![twilio/mage3.png](/img/tutorials/twilio/image3.png)
 
 Once the handler is created, we’re able to see the full incoming trace.
 
-![twilio/image19.png](/img/twilio/image19.png)
+![twilio/image19.png](/img/tutorials/twilio/image19.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
@@ -74,7 +74,7 @@ In Dark, you can work directly with incoming traces. More on this in
 can parse out the things we care about: a user deciding to start/stop using our
 service, or telling us if they drank enough water or not.
 
-![twilio/image7.png](/img/twilio/image7.png)
+![twilio/image7.png](/img/tutorials/twilio/image7.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
@@ -93,27 +93,27 @@ number, and have them text “start” to begin receiving a daily reminder. We�
 need a data store to keep track of our users, which can be created from the
 omnibox (`Cmd/Ctrl-k`) or the side bar.
 
-![twilio/image1.png](/img/twilio/image1.png)
+![twilio/image1.png](/img/tutorials/twilio/image1.png)
 
 [https://darklang.com/a/sample-textreminder#db=973891964](https://darklang.com/a/sample-textreminder#db=973891964)
 
 Then, we can write the logic to add users to the datastore when they text
 “start.” In this case we use the user’s phone number as the unique key.
 
-![twilio/image9.png](/img/twilio/image9.png)
+![twilio/image9.png](/img/tutorials/twilio/image9.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
 The stop case is very similar, but removes the user from the datastore.
 
-![twilio/image13.png](/img/twilio/image13.png)
+![twilio/image13.png](/img/tutorials/twilio/image13.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
 To test, you can always send a new reply to the text message (or just message
 your number) and walk through the trace to see the live values at each step.
 
-![twilio/image11.png](/img/twilio/image11.png)
+![twilio/image11.png](/img/tutorials/twilio/image11.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
@@ -125,7 +125,7 @@ Now we’ll want the cases for when the user responds to the daily question of
 We’ll want another data store so we can track the daily response by user (side
 bar or `Cmd/Ctrl-k`).
 
-![twilio/image12.png](/img/twilio/image12.png)
+![twilio/image12.png](/img/tutorials/twilio/image12.png)
 
 [https://darklang.com/a/sample-textreminder#db=1164294845](https://darklang.com/a/sample-textreminder#db=1164294845)
 
@@ -133,7 +133,7 @@ In this case since we do not want to use the phone number as the unique key, we
 generate a unique key when storing using the built in `DB::generateKey`
 function:
 
-![twilio/image18.png](/img/twilio/image18.png)
+![twilio/image18.png](/img/tutorials/twilio/image18.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1004312353](https://darklang.com/a/sample-textreminder#handler=1004312353)
 
@@ -149,14 +149,14 @@ expression, you should have a 404 for the worker in the side bar that you can
 hit the + to add. If it does not appear in the sidebar, wait \~30s or refresh
 the browser.
 
-![twilio/image14.png](/img/twilio/image14.png)
+![twilio/image14.png](/img/tutorials/twilio/image14.png)
 
 [https://darklang.com/a/sample-textreminder#handler=331438030](https://darklang.com/a/sample-textreminder#handler=331438030)
 
 Then we can write the code similar to our earlier REPL to send a message asking
 for a more clear response:
 
-![twilio/image8.png](/img/twilio/image8.png)
+![twilio/image8.png](/img/tutorials/twilio/image8.png)
 
 [https://darklang.com/a/sample-textreminder#handler=331438030](https://darklang.com/a/sample-textreminder#handler=331438030)
 
@@ -166,20 +166,20 @@ To send each user a reminder once per day, we’ll want to have a cron set to ru
 daily. In this case we’ll get all the users, then emit to a background worker to
 send the messages.
 
-![twilio/image6.png](/img/twilio/image6.png)
+![twilio/image6.png](/img/tutorials/twilio/image6.png)
 
 [https://darklang.com/a/sample-textreminder#handler=1621731316](https://darklang.com/a/sample-textreminder#handler=1621731316)
 
 Much like before, this will add the worker to the 404 section where you can add
 it, with the traces.
 
-![twilio/image5.png](/img/twilio/image5.png)
+![twilio/image5.png](/img/tutorials/twilio/image5.png)
 
 [https://darklang.com/a/sample-textreminder#handler=337743491](https://darklang.com/a/sample-textreminder#handler=337743491)
 
 The code is identical to the code in our REPL:
 
-![twilio/image10.png](/img/twilio/image10.png)
+![twilio/image10.png](/img/tutorials/twilio/image10.png)
 
 [https://darklang.com/a/sample-textreminder#handler=337743491](https://darklang.com/a/sample-textreminder#handler=337743491)
 

@@ -138,7 +138,7 @@ name (`String`), Mailchimp username (`String`), Mailchimp API key (`String`),
 and Mailchimp data center (`String`) and posts to the
 [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
 
-![subscribe](/img/packages/subscribe.png)
+![subscribe](/img/packages/mailchimp/subscribe.png)
 
 ## Slack Package
 

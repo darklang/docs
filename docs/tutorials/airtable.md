@@ -33,22 +33,22 @@ information in Airtable. An Airtable sample canvas is available
   a Record section of your
   [Airtable API documentation](https://airtable.com/api).
 
-![airtable/image5.png](/img/airtable/image5.png)
+![airtable/image5.png](/img/tutorials/airtable/image5.png)
 
 ## Putting Information From Airtable into a Dark Datastore
 
 1. Create a Dark datastore and populate it with the fields you need.
 
-![airtable/image1.png](/img/airtable/image1.png)
+![airtable/image1.png](/img/tutorials/airtable/image1.png)
 
 2. Next iterate through the results - held in `allData.body.records`, and add
    them to the DB using `DB::set`.
 
-![airtable/image4.png](/img/airtable/image4.png)
+![airtable/image4.png](/img/tutorials/airtable/image4.png)
 
 3. Click the play button - your datastore will update.
 
-![airtable/image2.png](/img/airtable/image2.png)
+![airtable/image2.png](/img/tutorials/airtable/image2.png)
 
 ## Sending Information From Dark to Airtable
 
@@ -68,9 +68,9 @@ information in Airtable. An Airtable sample canvas is available
   working. Here, I’ve added one entry, but you can replace the strings with
   variables to add data however you would like.
 
-![airtable/image6.png](/img/airtable/image6.png)
+![airtable/image6.png](/img/tutorials/airtable/image6.png)
 
-![airtable/image7.png](/img/airtable/image7.png)
+![airtable/image7.png](/img/tutorials/airtable/image7.png)
 
 ## Troubleshooting
 
@@ -80,4 +80,4 @@ information in Airtable. An Airtable sample canvas is available
   getting too much data, verify that you don’t have an extra row in your table,
   like this one:
 
-![airtable/image3.png](/img/airtable/image3.png)
+![airtable/image3.png](/img/tutorials/airtable/image3.png)

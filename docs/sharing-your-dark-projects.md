@@ -92,7 +92,7 @@ If your project has launched, you can give it a "Made with Dark" badge.
 ## Other Logos
 
 Files: [svg](/img/branding/logo.svg) | [png](/img/branding/logo@1x.png) |
-[png 2x](img/branding/logo@2x.png) | [png 3x](/img/branding/logo@3x.png)
+[png 2x](/img/branding/logo@2x.png) | [png 3x](/img/branding/logo@3x.png)
 
 ## Writing about Dark
 

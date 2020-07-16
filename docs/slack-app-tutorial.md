@@ -17,7 +17,7 @@ recommend darklang.com/a/USERNAME-slackapp.
 We recommend building a hello world API endpoint to get a feel for Dark, as
 follows:
 
-![ck/image7.gif](/img//image7.gif)
+![ck/image7.gif](/img/slack/image7.gif)
 
 All the major handlers work the same way, but the key for many requests is
 working directly with incoming data. If you’ve never used Dark before, it may be
@@ -44,7 +44,7 @@ app will need to support at least one feature or functionality.
 Add a /test slash command to start, and point the request URL at
 USERNAME-CANVASNAME.builtwithdark.com/test:
 
-![ck/mage17.png](/img//image17.png)
+![ck/mage17.png](/img/slack/image17.png)
 
 (If you’d like, you can add other features & functionality here, like a bot, but
 this is enough to build the base of the application and get started).
@@ -57,7 +57,7 @@ In order to allow your app to be distributed, let’s quickly set up OAuth
 **Manage Distribution.** From your Slack App’s Manage Distribution page, add a
 redirect URL.
 
-![ck/image11.png](/img//image11.png)
+![ck/image11.png](/img/slack/image11.png)
 
 The URL you provide will need to be in the following format:
 [https://USERNAME-CANVASNAME.builtwithdark.com/OAUTH-REDIRECT](https://username-canvasname.builtwithdark.com/oauth-redirect)
@@ -84,9 +84,9 @@ In Dark, you work with production traces to build your backend. **Click on the
 “+”** next to your 404 to create an HTTP handler that will respond to OAuth
 requests.
 
-![ck/image19.png](/img//image19.png)
+![ck/image19.png](/img/slack/image19.png)
 
-![ck/image10.png](/img//image10.png)
+![ck/image10.png](/img/slack/image10.png)
 
 After creating the route, you’ll see the trace showing the full request that
 Slack made to your Dark app. This includes the code you’ll need to send back to
@@ -95,7 +95,7 @@ Slack.
 Before we send it, you’ll need your `client_id` and `client_secret`, which you
 can get from Slack’s **Basic Information** page.
 
-![ck/image18.png](/img//image18.png)
+![ck/image18.png](/img/slack/image18.png)
 
 Type the code below into your handler in Dark. As you enter it, you’ll see that
 the trace is used to show you the results of your code, as well as helping the
@@ -106,7 +106,7 @@ float and is truncated).
 This is the end result, but you’ll see your `client_id` and `client_secret`
 instead of placeholders:
 
-![ck/image9.png](/img//oauthv2.png)
+![ck/image9.png](/img/slack/oauthv2.png)
 
 This calls part of Slack’s API
 ([`oauth.access`](https://api.slack.com/methods/oauth.access)), which will give
@@ -122,13 +122,13 @@ If you get an error in a response, you won’t be able to keep going. If the cod
 expired, you’ll need to re-open the shareable link from Slack in the browser to
 re-authenticate.
 
-![ck/image12.png](/img//image12.png)
+![ck/image12.png](/img/slack/image12.png)
 
 You can save the response to a variable by inserting a let (`Cmd/Ctrl-\` ->
 `wrap-in-let`). You can also just hit return at the end of the function and it
 will do the same thing:
 
-![ck/image4.gif](/img//image4.gif)
+![ck/image4.gif](/img/slack/image4.gif)
 
 Now save the tokens you receive to a Datastore.
 
@@ -137,12 +137,12 @@ fields you want to save (in our example for Lou the Dog, `team_id` and
 `access_token` - depending on your feature set you might not have a
 `bot_token`).
 
-![ck/image5.png](/img//tokensdb.png)
+![ck/image5.png](/img/slack/tokensdb.png)
 
 Then, write the following logic to put values in the datastore (this requires a
 successful exchange of code for token).
 
-![ck/image20.png](/img//oauth-redirect.png)
+![ck/image20.png](/img/slack/oauth-redirect.png)
 
 Our sample canvas showing this OAuth for Slack can be found
 [here](https://darklang.com/a/sample-slackoauth).
@@ -168,14 +168,14 @@ functionality, in the same way you did with OAuth.
 For instance, if you used the sample slash command, /test, you’d get this result
 after triggering it in Slack (and it would appear in your 404 section in Dark).
 
-![ck/image13.png](/img//image13.png)
+![ck/image13.png](/img/slack/image13.png)
 
-![ck/image14.png](/img//image14.png)
+![ck/image14.png](/img/slack/image14.png)
 
 When you create the endpoint from the 404 section, you’ll be able to work with
 the trace:
 
-![ck/image16.png](/img//image16.png)
+![ck/image16.png](/img/slack/image16.png)
 
 ## Supporting Bots & Event Subscriptions
 
@@ -189,14 +189,14 @@ challenge parameter to validate the URL that handles that interactivity. This
 challenge is only sent once, but you can wrap the challenge response in an
 if/else in the event that you need to validate this URL again:
 
-![ck/image21.png](/img//image21.png)
+![ck/image21.png](/img/slack/image21.png)
 
 ## Handling Incoming Data
 
 Once you’ve set up your request URL or event subscription, you’ll be able to
 receive and work with incoming requests.
 
-![ck/image2.png](/img//image2.png)
+![ck/image2.png](/img/slack/image2.png)
 
 As before, use the trace to extract the values you’ll need to post your
 response.
@@ -208,16 +208,16 @@ events if they fail. You can use **emit** to trigger a worker, and when you hit
 play, you’ll see the worker appear in your 404s. Here is the full events
 handler:
 
-![ck/image1.png](/img//fulleventshandler.png)
+![ck/image1.png](/img/slack/fulleventshandler.png)
 
 We’ll use Slack’s
 [`postMessage`](https://api.slack.com/methods/chat.postMessage) method to
 respond to a direct mention with a message in Slack, and write the code to post
 the response in our worker:
 
-![ck/image3.png](/img//image3.png)
+![ck/image3.png](/img/slack/image3.png)
 
-![ck/image6.png](/img//image6.png)
+![ck/image6.png](/img/slack/image6.png)
 
 If you want to support interactivity that involves working with buttons, menus,
 or fields within a modal, this may change the shape of Slack’s payload into a
@@ -234,4 +234,4 @@ with data wrangling in those cases:
 Here is an example of where most of these functions are used to extract the
 right values and to help draft a reply:
 
-![ck/image8.png](/img//image8.png)
+![ck/image8.png](/img/slack/image8.png)
