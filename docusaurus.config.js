@@ -136,7 +136,7 @@ module.exports = {
     },
     algolia: {
       apiKey: "2192078ff5136794e4902142daebbfb6",
-      indexName: "darklang",
+      indexName: "docs",
       algoliaOptions: {},
     },
     googleAnalytics: {
