@@ -135,9 +135,10 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Dark Inc. Built with Docusaurus.`,
     },
     algolia: {
-      appId: "U2KR159FJG",
+      // this is a docsearch account, which is run by algolia:
+      // https://docsearch.algolia.com. Account is under victoria@darklang.com
       apiKey: "2192078ff5136794e4902142daebbfb6",
-      indexName: "docs",
+      indexName: "darklang",
       algoliaOptions: {},
     },
     googleAnalytics: {
