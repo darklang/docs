@@ -135,6 +135,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Dark Inc. Built with Docusaurus.`,
     },
     algolia: {
+      appId: "U2KR159FJG",
       apiKey: "2192078ff5136794e4902142daebbfb6",
       indexName: "docs",
       algoliaOptions: {},
