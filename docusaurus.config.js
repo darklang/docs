@@ -136,8 +136,9 @@ module.exports = {
     },
     algolia: {
       // this is a docsearch account, which is run by algolia:
-      // https://docsearch.algolia.com. Account is under victoria@darklang.com
-      apiKey: "2192078ff5136794e4902142daebbfb6",
+      // https://docsearch.algolia.com. Config is at
+      // https://github.com/algolia/docsearch-configs/blob/master/configs/darklang.json
+      apiKey: "1e1c6adb6b62f53c456dc70e833c2c26",
       indexName: "darklang",
       algoliaOptions: {},
     },
@@ -164,5 +165,15 @@ module.exports = {
         },
       },
     ],
+  ],
+
+  scripts: [
+    {
+      src:
+        // <savvy-smart-form id="6HBmUjmI12nCuopyvB0B"></savvy-smart-form>
+        "https://cdn.heysavvy.com/wc/savvy.min.js",
+      async: true,
+      defer: true,
+    },
   ],
 };

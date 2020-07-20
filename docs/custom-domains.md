@@ -55,7 +55,7 @@ or service available over `https`.
    Another way to check is with a service like
    [https://dnschecker.org/](https://dnschecker.org/).
 
-3. Once DNS resolves, [contact us](support) with your domain and canvas, and
+3. Once DNS resolves, [contact us](/support) with your domain and canvas, and
    we'll set up an SSL cert and the appropriate redirects from `http` to `https`
    on our end.
 
