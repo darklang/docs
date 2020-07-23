@@ -1,11 +1,38 @@
 module.exports = function (context, options) {
-  var id = options.id;
+  const { siteConfig } = context;
+  const { themeConfig } = siteConfig;
+  const { savvy } = themeConfig || {};
+
+  if (!savvy) {
+    throw new Error(
+      `You need to specify the 'savvy' object in 'themeConfig' with an 'apiKey' field`,
+    );
+  }
+
+  var apiKey = savvy.apiKey;
+  if (!apiKey) {
+    throw new Error("You must specify the `apiKey` field for `savvy`.");
+  }
 
   return {
-    name: "savvy-analytics-snippet",
+    name: "savvy",
     injectHtmlTags: function () {
       return {
         headTags: [
+          {
+            tagName: "link",
+            attributes: {
+              rel: "preconnect",
+              href: "https://cdn.heysavvy.com",
+            },
+          },
+          {
+            tagName: "link",
+            attributes: {
+              rel: "dns-prefetch",
+              href: "https://cdn.heysavvy.com",
+            },
+          },
           {
             attributes: {
               src: "https://cdn.heysavvy.com/wc/savvy.min.js",

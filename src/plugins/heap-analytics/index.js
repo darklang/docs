@@ -26,10 +26,6 @@ module.exports = function (context) {
   return {
     name: "heap-analytics",
 
-    getClientModules() {
-      return [];
-    },
-
     injectHtmlTags() {
       return {
         headTags: [

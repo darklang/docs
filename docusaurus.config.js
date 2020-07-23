@@ -9,10 +9,7 @@ module.exports = {
   projectName: "docs", // Usually your repo name.
   plugins: [
     path.resolve(__dirname, "src/plugins/heap-analytics"),
-    [
-      path.resolve(__dirname, "src/plugins/savvy"),
-      { id: "6HBmUjmI12nCuopyvB0B" },
-    ],
+    path.resolve(__dirname, "src/plugins/savvy"),
   ],
   themeConfig: {
     image: "img/favicon.ico",
@@ -145,6 +142,9 @@ module.exports = {
     heapio: {
       apiKey: 477722926,
       devApiKey: 2080145903,
+    },
+    savvy: {
+      apiKey: "6HBmUjmI12nCuopyvB0B",
     },
     algolia: {
       // this is a docsearch account, which is run by algolia:
