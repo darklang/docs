@@ -7,7 +7,10 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "darklang", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
-  plugins: [path.resolve(__dirname, "src/plugins/heap-analytics")],
+  plugins: [
+    path.resolve(__dirname, "src/plugins/heap-analytics"),
+    path.resolve(__dirname, "src/plugins/savvy"),
+  ],
   themeConfig: {
     image: "img/favicon.ico",
     navbar: {
@@ -140,6 +143,9 @@ module.exports = {
       apiKey: 477722926,
       devApiKey: 2080145903,
     },
+    savvy: {
+      apiKey: "6HBmUjmI12nCuopyvB0B",
+    },
     algolia: {
       // this is a docsearch account, which is run by algolia:
       // https://docsearch.algolia.com. Config is at
@@ -171,15 +177,5 @@ module.exports = {
         },
       },
     ],
-  ],
-
-  scripts: [
-    {
-      src:
-        // <savvy-smart-form id="6HBmUjmI12nCuopyvB0B"></savvy-smart-form>
-        "https://cdn.heysavvy.com/wc/savvy.min.js",
-      async: true,
-      defer: true,
-    },
   ],
 };
