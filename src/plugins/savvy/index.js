@@ -33,14 +33,12 @@ module.exports = function (context, options) {
               href: "https://cdn.heysavvy.com",
             },
           },
-          {
-            attributes: {
-              src: "https://cdn.heysavvy.com/wc/savvy.min.js",
-            },
-            tagName: "script",
-          },
         ],
-        postBodyTags: `<savvy-smart-form id=${id}></savvy-smart-form>`,
+        postBodyTags: `
+        <script async="true" defer="true"
+           src="https://cdn.heysavvy.com/wc/savvy.min.js">
+        </script>
+        <savvy-smart-form id=${apiKey}></savvy-smart-form>`,
       };
     },
   };
