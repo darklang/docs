@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = {
   title: "Dark Documentation",
   tagline: "Dark Documentation",
@@ -6,7 +7,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "darklang", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
-
+  plugins: [path.resolve(__dirname, "src/plugins/heap-analytics")],
   themeConfig: {
     image: "img/favicon.ico",
     navbar: {
@@ -133,6 +134,11 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Dark Inc. Built with Docusaurus.`,
+    },
+    // "v2" heapanalytics.com account
+    heapio: {
+      apiKey: 477722926,
+      devApiKey: 2080145903,
     },
     algolia: {
       // this is a docsearch account, which is run by algolia:
