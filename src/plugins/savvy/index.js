@@ -1,6 +1,6 @@
 module.exports = function (context, options) {
   var id = options.id;
-  var url = options.url;
+
   return {
     name: "savvy-analytics-snippet",
     injectHtmlTags: function () {
@@ -8,7 +8,7 @@ module.exports = function (context, options) {
         headTags: [
           {
             attributes: {
-              src: url || "https://cdn.heysavvy.com/wc/savvy.min.js",
+              src: "https://cdn.heysavvy.com/wc/savvy.min.js",
             },
             tagName: "script",
           },
