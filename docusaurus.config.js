@@ -85,7 +85,7 @@ module.exports = {
             },
             {
               label: "Corp Blog",
-              to: "https://medium.com/darklang",
+              to: "https://blog.darklang.com",
             },
           ],
         },

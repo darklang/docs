@@ -137,7 +137,7 @@ including keys).
 
 For being able to run more effective datastore queries, we also have a query
 compiler. More about this feature is in this
-[blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd).
+[blog post](https://blog.darklang.com/compiling-dark-to-sql).
 
 This allows you to write a function that can be evaluated for the datastore.
 

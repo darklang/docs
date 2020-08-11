@@ -69,7 +69,7 @@ updates.
 ## Weeks of 6/15/2020 and 6/22/2020
 
 - There has been a
-  [significant restructure](https://medium.com/darklang/dark-and-the-long-term-2c65ff0baf5e)
+  [significant restructure](https://blog.darklang.com/dark-and-the-long-term/)
   to the Dark project. We'll write more about this going forward: Paul has
   [a new devlog](https://dev.to/darklang/dark-devlog-1-fresh-start-1i2) that
   talks about it.
@@ -921,7 +921,7 @@ We added a bunch of improved documentation, including:
 - We added `DB::query_v4`, which allows you use arbitrary queries on your Dark
   datastores
   - We also published a
-    [related blog post](https://medium.com/darklang/compiling-dark-to-sql-bb8918d1acdd)!
+    [related blog post](https://blog.darklang.com/compiling-dark-to-sql/)!
 - You can now remove a `let` with the backspace/delete key
 
 ![changelog/image1.gif](/img/changelog/image1.gif)

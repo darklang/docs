@@ -60,7 +60,7 @@ To resolve this problem, we can use a string instead. `"123"` or
 
 The error rail allows you to keep writing code along the “happy path,” without
 stopping to handle errors. This is based on
-[Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a)
+[Railway Oriented Programming](https://blog.darklang.com/real-problems-with-functional-languages)
 and the UI elements are unique to Dark.
 
 You can learn more about
