@@ -46,7 +46,7 @@ in the editor indicates if this is the case for a given function.
 
 The error rail allows you to keep writing code along the “happy path,” without
 stopping. This is based on
-[Railway Oriented Programming](https://medium.com/darklang/real-problems-with-functional-languages-efe668c5264a).
+[Railway Oriented Programming](https://blog.darklang.com/real-problems-with-functional-languages/).
 The idea is that when you call a function which might not succeed, you can keep
 going. For example, if you try to look up a value in a dictionary or database,
 we don't make you immediately handle the error case.
