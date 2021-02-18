@@ -10,6 +10,9 @@ up the repo, write your first test, and make your first pull request. After
 that, it will guide you on how to work on bigger things, especially the current
 big project to [port the backend to F#](porting-the-dark-backend).
 
+If you'd like help contributing, you can
+[book a pairing session with Paul Biggar to help](https://calendly.com/paul-biggar/dark-contributor-pairing-session).
+
 Before you do that, it's helpful to:
 
 - Join the
