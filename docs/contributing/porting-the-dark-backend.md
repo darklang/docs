@@ -23,9 +23,10 @@ running:
 `cat fsharp-backend/src/*/StdLib/*.fs | grep "//" | perl -n -e 'foreach ($_ =~ /name = fn "([A-Za-z0-9]+)" "([A-Za-z0-9]+)" (\d)/ ) { print "$1::$2_v$3\n" } ' | sort | uniq`
 
 When porting a function, start by finding the commented out version of it (in
-fsharp-backend/src/LibExecution/StdLib or fsharp-backend/src/LibBackend/StdLib).
-The original OCaml code has been preprocessed in bulk to closely the intended F#
-code, so once you uncomment it, there should only be a small amount of work.
+`fsharp-backend/src/LibExecution/StdLib` or
+`fsharp-backend/src/LibBackend/StdLib`). The original OCaml code has been
+preprocessed in bulk to closely match the intended F# code, so once you
+uncomment it, there should only be a small amount of work to port it over.
 
 ## TaskOrValue
 
@@ -34,8 +35,8 @@ version is designed to run concurrently. The major difference here is that the
 OCaml backend returns a `Dval` (a Dark value), while the F# version returns a
 `TaskOrValue<Dval>`.
 
-For most simple functions that do no IO, a TaskOrValue just wraps a Dval. For
-example, compare the original OCAml version of `Int::add_v0`:
+For most simple functions that do no IO, a `TaskOrValue` just wraps a `Dval`.
+For example, compare the original OCaml version of `Int::add_v0`:
 
 ```ocaml
   ; { prefix_names = ["Int::add"]
@@ -75,9 +76,9 @@ wrap the `Dval` in a `Value`.
 
 ### Tasks
 
-For functions that perform IO, you'll need to use the `taskv` "computational
-expression". A "computational expression" is a special F# language feature for
-dealing writing abstractions with a nice syntax. The `taskv` CE allows using
+For functions that perform IO, you'll need to use the `taskv` "computation
+expression". A "computation expression" is a special F# language feature for
+writing abstractions with a nice syntax. The `taskv` CE allows using
 TaskOrValues easily, and can best be illustrated with an example:
 
 ```ocaml
@@ -151,15 +152,15 @@ be used to call functions which return Tasks. Here is an example of this:
 
 This runs `map_s`, which applies the function to the list of arguments (`map_s`
 is short for map sequentially, which completes each previous task before
-starting the next one) `applyFnVal` calls the interpreter to run the passed in
+starting the next one). `applyFnVal` calls the interpreter to run the passed in
 function, which might return a Task.
 
 ### New types
 
-The F# port also creates the ability to add read type checking to Dark. Rather
-than using a non-nested type like `TResult`, we use `TRessult(DType, DType)` to
+The F# port also creates the ability to add type checking to Dark. Rather than
+using a non-nested type like `TResult`, we use `TResult(DType, DType)` to
 indicate the types used in the `Ok` and `Error` constructors used by Result. The
-definition has switched from this in OCaml:
+definition of a type has switched from this in OCaml:
 
 ```
 module RuntimeT = struct
@@ -221,23 +222,24 @@ and DType =
   | TRecord of List<string * DType>
 ```
 
-All of the polymorphic types like List, Option, and Result now take type
+All of the polymorphic types like `List`, `Option`, and `Result` now take type
 arguments.
 
-Note in particular first-class functions, such as
-`(TFn([ TVariable "a" ], TVariable "b"))`, which means "this parameter takes a
+Note in particular that it is possible to accurately provide types for
+first-class functions, as opposed to `TLambda` which we used before. For
+example, `(TFn([ TVariable "a" ], TVariable "b"))` means "this parameter takes a
 function with one argument, which can be any type (we'll call it "a") and
-returns any type (we'll call it "b"). Those names can then be reused in the
-return type, such as `TList (TVariable "b")`, above.
+returns any type (we'll call it "b"). Any name in a `TVariable` can then be
+reused in the return type, such as `TList (TVariable "b")`, above.
 
 ## Concerns when porting
 
 The most important thing when porting code over is to keep the exact same
-behaviour between the old code and the new code. That's why we're porting
-deprecated functions, including those with known bugs or bad behaviour.
+behaviour between the old code and the new code. For example, that's why we're
+porting deprecated functions, including those with known bugs or bad behaviour.
 
 In particular, we often have multiple copies of a function because the old one
-handled incompletes incorrectly and the new one handles them properly. If you
+handled `DIncomplete` incorrectly and the new one handles it properly. If you
 see something like `Dval.of_list`, pay special care to replace it with the new
 equivalent (in this case, `Dval.list`), so as to handle these edge cases
 properly.
@@ -251,7 +253,8 @@ functions using:
 `cat fsharp-backend/tests/testfiles/*.tests | grep -v '^\[' | grep "^\/\/" | perl -n -e 'foreach ($_ =~ /([A-Za-z0-9]+)\.([A-Za-z0-9]+_v\d)/ ) { print "$1::$2\n" } ' | grep -v Test | sort | uniq`
 
 That said, functions can never have enough tests, so if you think the existing
-tests aren't adequate, feel free to add more.
+tests aren't adequate, feel free to add more. If you aren't sure of the expected
+behaviour, run it on your canvas on `darklang.com`.
 
 # Porting APIs
 
