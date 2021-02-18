@@ -12,10 +12,10 @@ here's how the various directories intersect, and what language they use:
 - `.circleci` - CI config file
 - `auth0-branding` - has some assets for our login provider
 - `_build` - build dir for OCaml (empty, this is a docker volume)
-- `backend` - this is the main part of our backend, written in OCaml, including
-  the language definition and execution engine, the "framework" (HTTP, DB,
-  queues, etc), the editor's HTTP API, and the execution engine which runs in
-  the client (compiled to JS from OCaml)
+- `backend` - this is the old backend, written in OCaml (the new backend is in
+  fsharp-backend), including the language definition and execution engine, the
+  "framework" (HTTP, DB, queues, etc), the editor's HTTP API, and the execution
+  engine which runs in the client (compiled to JS from OCaml)
   - `bin` - "main" files for executables
   - `jsanalysis` - "main" file for client-side analysis/execution-engine
   - `libbackend` - the main HTTP server, and framework functionality (HTTP, DB,
@@ -76,24 +76,48 @@ here's how the various directories intersect, and what language they use:
   `dev` environment
 - `docs` - sporadic documentation
 - `docs/production` - documentation about how we run the Dark service
+- `fsharp-backend` - The new backend written in F# and .NET. including the
+  language definition and execution engine, the "framework" (HTTP, DB, queues,
+  etc), the editor's HTTP API, and the execution engine which runs in the
+  client.
+  - `Build` - where the compiler puts compiled code. This is inside the
+    container only
+  - `src/ApiServer` - webserver serving the editor and the API used by the
+    editor
+  - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)
+  - `src/LibBackend` - the definition of the Dark frame
+  - `src/WASM` - "main" file for client-side analysis/execution-engine
+  - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
+    secrets, serialization), including standard library functions which only run
+    on the backend (and not in the client)
+  - `src/LibExecution` - the Dark language, including types, the runtime, most
+    of the standard library, and of course the execution engine
+  - `src/LibService` - library with some common functionality for F# services
+    (currently just the backend, soon queues and cron)
+  - `tests/FuzzTests` - code to fuzztest different parts of Dark
+  - `tests/Tests` - mostly unit tests for backend and libexecution functionality
+  - `tests/testfiles` - unit test definitions for language and standard library
+  - `tests/httptestfiles` - tests for the Dark HTTP server and middleware
 - `integration-tests` - integration tests, written in JS using TestCafe. Flaky
   and brittle. Help welcome!
 - `lib` - build directory used by Bucklescript
-- `libshared` - a small set of types that are shared between the backend and
-  client. New and in-progress.
+- `libshared` - a small set of types that are shared between the old backend and
+  client. This will be merged into the client once the old backend is removed.
 - `node_modules` - installation dir for `npm`
 - `postgres-honeytail` - a backend service used to send Postgres logs to
   Honeycomb (our observability vendor). The only Go in our repo.
 - `queue-scheduler` - a Rust backend service that runs our queues.
 - `rundir` - anything that runs and stores something stores it here
   - `integration_test_logs`
-  - `logs` - logs from running services, especially `server.log` (backend)
+  - `logs` - logs from running services, especially `fsharp-bwdserver.log` and
+    `fsharp-apiserver.log` (backend)
   - `screenshots` - for integration tests
   - `videos` - for integration tests
-- `stroller` - a Rust backend service that sits next to our OCaml backend. When
-  the OCaml backend sends data to Pusher (websockets vendor) or Rollbar
-  (exception tracking), it sends it to Stroller to send to the vendor instead.
-  This allows execution to continue running immediately (our backend does not
-  have efficient concurrency, so this is a hack to allow it)
+- `stroller` - a Rust backend service that sits next to our OCaml backend. It
+  will be phased out along with the OCaml backend. When the OCaml backend sends
+  data to Pusher (websockets vendor) or Rollbar (exception tracking), it sends
+  it to Stroller to send to the vendor instead. This allows execution to
+  continue running immediately (our backend does not have efficient concurrency,
+  so this is a hack to allow it)
 - `scripts` - bash scripts to do common (and sometimes uncommon and therefore
   forgettable) actions on the repo. Using scripts is very very common.

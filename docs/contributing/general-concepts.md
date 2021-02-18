@@ -5,24 +5,25 @@ title: General concepts
 ## Editor vs Production (how code runs)
 
 Code runs in two places in Dark, in the Editor, and in Production. In
-production, we have a Kubernetes cluster of interpreters with HTTP servers
-which are connected to a database, connected to the internet via Google Cloud
+production, we have a Kubernetes cluster of interpreters with HTTP servers which
+are connected to a database, connected to the internet via Google Cloud
 infrastructure, that run Dark programs.
 
 When requests are made in production we save their inputs and intermediate
-values (combined, these form a "trace", discussed below). Those are sent to the client.
+values (combined, these form a "trace", discussed below). Those are sent to the
+client.
 
 The Dark interpreter is also compiled to Javascript and is available in the
-browser in the client. The traces are sent to the JS-compiled interpreter,
-which uses their results to fill in for functions which can't be run on the
-client (such as DB functions).
+browser in the client. The traces are sent to the JS-compiled interpreter, which
+uses their results to fill in for functions which can't be run on the client
+(such as DB functions).
 
 ## Traces & Live values
 
 When a request is made to a production server, the inputs (typically a HTTP
 request) are saved. We also save intermediate results of functions which are
-called during the request. Together, these comprise a trace. Traces are shown
-in the editor and users can choose between them.
+called during the request. Together, these comprise a trace. Traces are shown in
+the editor and users can choose between them.
 
 ## Toplevels
 
@@ -39,7 +40,12 @@ have not done it yet).
 
 ## The path of an edit
 
-Most characters that you type are immediately saved in our production database (in, according to our claim, 50ms). Edits are either made to program code, which is part of the "Fluid" editing system, or to handlers, databases, function parameters, or similar metadata, which is part of the "Forms" editing system (originally, all edits were of the "forms" variety - the name was added post-hoc to differentiate it from "fluid").
+Most characters that you type are immediately saved in our production database
+(in, according to our claim, 50ms). Edits are either made to program code, which
+is part of the "Fluid" editing system, or to handlers, databases, function
+parameters, or similar metadata, which is part of the "Forms" editing system
+(originally, all edits were of the "forms" variety - the name was added post-hoc
+to differentiate it from "fluid").
 
 For Fluid, this is the journey:
 
@@ -57,8 +63,8 @@ For Fluid, this is the journey:
 For forms, the journey is similar:
 
 - the event is processed by `KeyPress.ml`
-- the contents of `m.complete.value` are updated (this is where the value in
-  the forms box is stored)
+- the contents of `m.complete.value` are updated (this is where the value in the
+  forms box is stored)
 - the `Autocomplete` values are regenerated
 - after pressing enter, or clicking away, the change is made
 - an API call is made to send the change to the server (detailed below)
@@ -66,9 +72,9 @@ For forms, the journey is similar:
 ### Sending the change to the server
 
 When a change is made, typically an `AddOp` `modification` is made. That
-`modification` is returned by many of the functions that edit programs, and
-it's processed in `Main.ml`. This passes into `API.ml`, where it serializes the
-`Op` change into a JSON via encoders (see `Enconders.ml` and `Decoders.ml`).
+`modification` is returned by many of the functions that edit programs, and it's
+processed in `Main.ml`. This passes into `API.ml`, where it serializes the `Op`
+change into a JSON via encoders (see `Enconders.ml` and `Decoders.ml`).
 
 The change is accepted by `api.ml` in the backend, where it is decoded, applied
 to the program, and then saved into the database. Saving the program involves a
@@ -81,12 +87,13 @@ editor, who ignores it.
 
 ## ASTs
 
-An "AST" is an "Abstract syntax tree". The simple explanation is that it's a
-set of "classes" and "objects" representing programs. (Abstract syntax tree
-means the programs representation (the "syntax tree") without the annoying
-syntactic details like commas and semi-colons (hence "abstract")).
+An "AST" is an "Abstract syntax tree". The simple explanation is that it's a set
+of "classes" and "objects" representing programs. (Abstract syntax tree means
+the programs representation (the "syntax tree") without the annoying syntactic
+details like commas and semi-colons (hence "abstract")).
 
-In Dark, it's defined in `FluidExpression.ml`, and at time of writing looks like this:
+In Dark, it's defined in `FluidExpression.ml`, and at time of writing looks like
+this:
 
 ```ocaml
 type sendToRail =
@@ -130,11 +137,11 @@ type pattern =
   | FPBlank of id * id
 ```
 
-These definitions are in OCaml (we have a [guide to OCaml for Dark
-developers](ocaml-for-dark-developers)). Briefly, this means that an `expr` is
-an integer (which is made up of an id and a string) or a bool (made up of an id
-and a string), or a `match` (which is an id, an expression to match on, and a
-list of patterns and expressions), etc
+These definitions are in ReScript (we have a
+[guide to ReScript for Dark developers](ocaml-for-dark-developers)). Briefly,
+this means that an `expr` is an integer (which is made up of an id and a string)
+or a bool (made up of an id and a string), or a `match` (which is an id, an
+expression to match on, and a list of patterns and expressions), etc
 
 This definition is slightly simplified, but it's close. There's definitions for
 literals like ints and strings, for definitions like `let`s, for function calls
@@ -147,5 +154,5 @@ engine to the display in the editor. If an ID is duplicated by accident, the
 editor will act weirdly, but the program will work fine.
 
 `FluidPattern.ml` and `FluidExpression.ml` also contain functions for changing
-patterns and expressions easily, either by changing the by ID or by traversing across the entire
-structure. Traversing the structure is generally pretty fast.
+patterns and expressions easily, either by changing the by ID or by traversing
+across the entire structure. Traversing the structure is generally pretty fast.

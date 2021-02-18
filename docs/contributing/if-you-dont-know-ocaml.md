@@ -1,9 +1,9 @@
 ---
-title: If you don't know OCaml
+title: If you don't know F# or ReScripts
 ---
 
-OCaml can be a little bit daunting, but even if you don't know it, there are a
-bunch of ways to get involved.
+F# and ReScript can be a little bit daunting, but even if you don't know them,
+there are a bunch of ways to get involved.
 
 ## Other languages
 
@@ -63,19 +63,20 @@ problem for users learning the language the first time. Documenting a bad error
 message, especially with a suggested better version, is a really useful
 contribution.
 
-## Learning OCaml
+## Learning ReScript or F#
 
-Dark is almost everybody's first OCaml project. So if you don't know OCaml, join
-the club - we all learned as we contributed to Dark.
+Dark is almost everybody's first ReScript or F# project. So if you don't know
+these two similar languages, join the club - we all learned as we contributed to
+Dark. Fortunately, they are very similar to Dark.
 
 There are a number of resources to help as well:
 
 - [A guided walkthrough of making your first PR](/contributing/adding-your-first-test)
 - [good first bugs](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-bug)
-  assume you don't know anything about OCaml
+  assume you don't know anything about F# or ReScript
 
-Alos, some bugs, especially our
+Also, some bugs, especially our
 [initiatives](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Ainitiative),
-require almost no OCaml knowledge, despite the fact that they are in OCaml parts
-of the codebase. People with no prior exposure to OCaml should be able to make a
-useful change to one of these in very little time.
+require almost no F# or ReScript knowledge, despite the fact that they are in
+those parts of the codebase. People with no prior exposure to them should be
+able to make a useful change to one of these in very little time.

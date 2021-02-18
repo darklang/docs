@@ -7,6 +7,9 @@ GitHub.
 
 ## Formatting the code
 
+_Note this does not work yet. You can use the formatter in VSCode Ionide plugin
+to format F# correctly._
+
 We use a code formatter on all our files, and this is tested during CI on all
 PRs. To format, call `scripts/format format backend`. There is also a
 [git hook you can use](https://github.com/darklang/dark/blob/main/scripts/pre-commit-hook.sh).
