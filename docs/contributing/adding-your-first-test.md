@@ -11,76 +11,58 @@ and get you familiar with how to get code into Dark.
 Assuming the repo is set up and the `builder` script is running, let's find
 something to test.
 
-First let's see what functions exists:
+First let's see what functions exist:
 
-`grep -hoP "[A-Z][A-Za-z]+::[_a-zA-Z0-9]+" backend/libexecution/ -R | sort | uniq > exists`
+`cat fsharp-backend/src/*/StdLib/*.fs | grep -v "//" | perl -n -e 'foreach ($_ =~ /name = fn "([A-Za-z0-9]+)" "([A-Za-z0-9]+)" (\d)/ ) { print "$1::$2_v$3\n" } ' | sort | uniq > exists`
 
 And now which ones are tested:
 
-`grep -hoP "[A-Z][A-Za-z]+::[_a-zA-Z0-9]+" backend/test -R | sort | uniq > tested`
+`cat fsharp-backend/tests/testfiles/*.tests | grep -v '^\[' | grep -v "^\/\/" | perl -n -e 'foreach ($_ =~ /([A-Za-z0-9]+)\.([A-Za-z0-9]+_v\d)/ ) { print "$1::$2\n" } ' | grep -v Test | sort | uniq > tested`
 
-(Note that if these commands don't work for you, you can open a shell in the dev container with `./scripts/run-in-docker bash`, and run them there).
+_(Note that if these commands don't work for you, you can open a shell in the
+dev container with `./scripts/run-in-docker bash`, and run them there)._
 
 Now compare them:
 
-`diff tested exists`
+`diff -u tested exists`
 
-You'll see stuff like this (with a `>`):
+You'll see stuff like this:
 
 ```ocaml
-136a169
-> List::member
-137a171
-> List::pushBack
-139a174,175
-> List::repeat
-> List::reverse
+@@ -157,9 +115,7 @@
+ String::dropLast_v0
+ String::endsWith_v0
+ String::first_v0
+-String::foreach_v0
+ String::foreach_v1
+-String::fromChar_v0
+ String::fromChar_v1
+ String::fromList_v0
+ String::fromList_v1
 ```
 
-These are the functions that need tests, so pick your favorite.
+The functions with a `-` in front of them do not have tests. Pick your favorite.
 
 ## Adding the test
 
-As an example, let's add one for `List::member`.
+As an example, let's add one for `Float::add_v0`.
 
-By looking through `backend/test/test_other_libs.ml` I see that `t_list_stdlibs_work` is the right place to add this test. An existing test looks like this:
+Unit tests for Dark functions are in `fsharp-backend/Tests/testfiles/*.tests"`,
+typically named after the module we're in (eg, in this case, we want
+`float.tests`). See testfiles/README.md to see the format. An example test is:
 
-```ocaml
-check_dval
-  "List::singleton works"
-  (DList [Dval.dint 1])
-  (exec_ast (fn "List::singleton" [int 1])) ;
+```fsharp
+Float.multiply_v0 26.0 0.5 = 13.0
 ```
 
-Let's go through this:
+This tests the function `Float::multiply_v0` by giving it parameters and an
+expected result. We can write much more complicated functions too
 
-- `check_dval` is a test that checks that its 2nd and 3rd arguments are the
-  same `dval` (a `dval` is a Dark value; every string, int, option, list, etc,
-  are all represented as `dvals`. See
-  [`backend/libexecution/types.ml`](https://github.com/darklang/dark/blob/main/backend/libexecution/types.ml)
-  for the definition).
-- `(DList [Dval.dint 1])` is a run-time Dark value with a list containing an
-  int. In Dark, this would be `[1]`
-- `exec_ast` is a function to execute a given AST (`AST` means "abstract
-  syntax tree" and is a compiler-y term for "some classes that represent a
-  program".).
-- The AST being executed is a function call (`fn`) to `List::singleton`, taking a
-  single parameter, the integer `1`
-- So this test checks that calling `List::singleton 1` gets you `[1]`. That
-  seems right.
+Let's make one for `Float::add_v0`:
 
-Let's make one for `List::member`:
+`Float.add_v0 26.0 0.5 = 26.5`
 
-```ocaml
-check_dval
-  "List::member works for empty lists"
-  (DBool false)
-  (exec_ast (fn "List::member" [list []; int 1])) ;
-```
-
-So this checks whether `List::member [] 1` is `false` as we expect.
-
-Add your function to `t_list_stdlibs_work` and save the file. It should
-automatically recompile and run the test.
+Add this to `float.tests`, save the file, and it should automatically recompile
+and run the test.
 
 Great, we're done!
