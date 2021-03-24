@@ -29,19 +29,17 @@ Now compare them:
 You'll see stuff like this:
 
 ```ocaml
-@@ -157,9 +115,7 @@
- String::dropLast_v0
- String::endsWith_v0
- String::first_v0
--String::foreach_v0
- String::foreach_v1
--String::fromChar_v0
- String::fromChar_v1
- String::fromList_v0
- String::fromList_v1
+@@ -7,6 +7,14 @@
+ Bytes::base64Encode_v0
+ Bytes::hexEncode_v0
+ Bytes::length_v0
++DB::add_v0
++DB::deleteAll_v0
++DB::delete_v0
++DB::fetchAll_v0
 ```
 
-The functions with a `-` in front of them do not have tests. Pick your favorite.
+The functions with a `+` in front of them do not have tests. Pick your favorite.
 
 ## Adding the test
 
