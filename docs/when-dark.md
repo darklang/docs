@@ -27,7 +27,7 @@ We've found that people who come to "try out" Dark usually don't have a good
 experience. Dark—like many languages, editors and frameworks—can be quite
 frustrating at times, and people who try to do things that Dark doesn't do well
 usually give up. People who succeed typically have a particular web app that
-they're to build.
+they're trying to build.
 
 People who give up typically try to solve Project Euler problems or just poke
 around - if you do that, you'll probably get bored and move on pretty quickly.
