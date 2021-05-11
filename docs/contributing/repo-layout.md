@@ -10,8 +10,11 @@ here's how the various directories intersect, and what language they use:
 # Directory listing
 
 - `.circleci` - CI config file
+- `.ionide` - config for F# VsCode plugin
+- `.vscode` - VsCode config
 - `auth0-branding` - has some assets for our login provider
 - `_build` - build dir for OCaml (empty, this is a docker volume)
+- `_esy` build dir for OCaml (empty, this is a docker volume)
 - `backend` - this is the old backend, written in OCaml (the new backend is in
   fsharp-backend), including the language definition and execution engine, the
   "framework" (HTTP, DB, queues, etc), the editor's HTTP API, and the execution
@@ -24,6 +27,8 @@ here's how the various directories intersect, and what language they use:
     of backend
   - `libexecution` - the Dark language, including types, the runtime, most of
     the standard library, and of course the execution engine
+  - `liblegacy` - libraries to help the F# backend reuse OCaml code
+  - `libserialization` - binary serialization for Dark types
   - `libservice` - library with some common functionality for OCaml services
     (backend, queues, cron)
   - `libtarget` - library to support certain functions in native and JS modes.
@@ -80,13 +85,12 @@ here's how the various directories intersect, and what language they use:
   language definition and execution engine, the "framework" (HTTP, DB, queues,
   etc), the editor's HTTP API, and the execution engine which runs in the
   client.
+  - `.paket` - Used by the paket/nuget package manager
   - `Build` - where the compiler puts compiled code. This is inside the
-    container only
+  - `paket-files` - Used by the paket/nuget package manager
   - `src/ApiServer` - webserver serving the editor and the API used by the
     editor
   - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)
-  - `src/LibBackend` - the definition of the Dark frame
-  - `src/WASM` - "main" file for client-side analysis/execution-engine
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
@@ -94,7 +98,12 @@ here's how the various directories intersect, and what language they use:
     of the standard library, and of course the execution engine
   - `src/LibService` - library with some common functionality for F# services
     (currently just the backend, soon queues and cron)
+  - `src/Prelude` - Utilities, libraries, common types. Used everywhere. Includes
+     Tablecloth, a standard library which matches the one we use in OCaml and bucklescript.
+  - `src/Scripts` - some simple command-line programs that use F# libraries
+  - `src/Wasm` - "main" file for client-side analysis/execution-engine
   - `tests/FuzzTests` - code to fuzztest different parts of Dark
+  - `tests/TestUtils` - utilities used in Tests and FuzzTests
   - `tests/Tests` - mostly unit tests for backend and libexecution functionality
   - `tests/testfiles` - unit test definitions for language and standard library
   - `tests/httptestfiles` - tests for the Dark HTTP server and middleware
@@ -113,11 +122,11 @@ here's how the various directories intersect, and what language they use:
     `fsharp-apiserver.log` (backend)
   - `screenshots` - for integration tests
   - `videos` - for integration tests
+- `scripts` - bash scripts to do common (and sometimes uncommon and therefore
+  forgettable) actions on the repo. Using scripts is very very common. Anytime there's something interesting, we add a script to do it. Scripts are occasionally out of date.
 - `stroller` - a Rust backend service that sits next to our OCaml backend. It
   will be phased out along with the OCaml backend. When the OCaml backend sends
   data to Pusher (websockets vendor) or Rollbar (exception tracking), it sends
   it to Stroller to send to the vendor instead. This allows execution to
   continue running immediately (our backend does not have efficient concurrency,
   so this is a hack to allow it)
-- `scripts` - bash scripts to do common (and sometimes uncommon and therefore
-  forgettable) actions on the repo. Using scripts is very very common.
