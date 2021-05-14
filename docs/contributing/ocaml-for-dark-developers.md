@@ -308,7 +308,7 @@ equivalent to `===` in languages that have that, such as JS.
 ReScript/F# also have a `==` operator, but you should never use it.
 
 F#/ReScript use `<>` for inequality (`!=` in
-Dark)`. In ReScript, most of the comparison operators (such as `<`, `>`, `<=`,
+Dark). In ReScript, most of the comparison operators (such as `<`, `>`, `<=`,
 etc) only operate on integers, and not on floats. In F#, they work on both ints
 and floats.
 
