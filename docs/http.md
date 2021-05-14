@@ -10,7 +10,8 @@ their type: records, dictionaries and lists are given the content-type
 `"application/json; charset=utf-8"`, all other types are given the content-type
 `"text/plain; charset=utf-8"`.
 
-*We recogize this is a poor choice, and future versions of the HTTP stack will have better default behaviour.*
+_We recogize this is a poor choice, and future versions of the HTTP stack will
+have better default behaviour._
 
 The `HTTP::` module provides functions to create responses to external HTTP
 calls. Each response function, such as `Http::response`, creates a response
