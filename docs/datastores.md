@@ -165,39 +165,17 @@ added to that list.
 ## Migrations, Locking, and Unlocking
 
 You can edit the DB’s schema (col names and types) until it has data in it, at
-which point it “locks.”
+which point it “locks.” Once a datastore is locked, there are several options
+for changing the schema.
 
 If you are still in development and don’t need the data, creating a REPL and
 deleting all data in a DB will unlock it (`DB::deleteAll`).
 
-Once you have traffic, datastore migrations are manual. To change your schema,
-create a new datastore with the new schema.
-
-![Migration](/img/datastores/migration.png)
-
-Then, use a REPL to write code to move your existing data, using
-`DB::getAllWithKeys` and `Dict::map`. For adding a new field, use `Dict::set` to
-add the new field to the existing record. (Note: to pipe a specific section of
-code, select it first, then press `shift-enter`)
-
-![Migrator](/img/datastores/migrator.png)
-
-For removing a field, rebuild the record using the existing one or use
-`Dict::remove`.
-
-![Migrator2](/img/datastores/migrator2.png)
-
-Once you are satisfied with your code, run the REPL to test it (if you are just
-testing, delete the data after). The new datastore should be locked, and you can
-use another REPL to verify the output looks correct. Set up each reference to
-the datastore to use the new one datastore within a
-[Feature Flag](/feature-flags).
-
-When you're ready to change your traffic to use the new datastore, run the
-migration, and commit each feature flag.
-
-Setting DBs by type and DB Migrations are coming, if you have requests or inputs
-please let us know.
+To change your schema without deleting the data, you can use a live migration
+process. In the future, this will be built into Dark, but for now you can
+follow
+[Paul Shen's excellent guide](https://www.notion.so/paulshen/Datastore-migration-in-Dark-e8d50f81366b48fc92c980372f68d316)
+to the process.
 
 ## Using an External Datastore
 
