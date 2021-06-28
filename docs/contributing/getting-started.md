@@ -16,7 +16,7 @@ If you'd like help contributing, you can
 Before you do that, it's helpful to:
 
 - Join the
-  [#contributors channel](https://darkcommunity.slack.com/archives/C014H6H6BB3)
+  [#development channel](https://darkcommunity.slack.com/archives/C014H6H6BB3)
   in the Dark Slack (join using
   [this invite](https://darklang.com/slack-invite)).
 - Sign the [CLA](https://cla-assistant.io/darklang/cla)

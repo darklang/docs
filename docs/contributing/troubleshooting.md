@@ -5,7 +5,7 @@ title: Troubleshooting
 
 If you're having problems contributing, we want to help:
 
-- ask for help in #contributors in [Slack](https://darklang.com/slack-invite).
+- ask for help in #development in [Slack](https://darklang.com/slack-invite).
   Or DM Paul Biggar directly if you prefer.
 - make an [issue](https://github.com/darklang/dark/issues) describing the
   problem, and someone will come help.
