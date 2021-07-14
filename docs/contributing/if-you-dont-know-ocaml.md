@@ -1,5 +1,5 @@
 ---
-title: If you don't know F# or ReScripts
+title: If you don't know F# or ReScript
 ---
 
 F# and ReScript can be a little bit daunting, but even if you don't know them,
