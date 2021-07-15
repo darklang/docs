@@ -172,8 +172,7 @@ If you are still in development and don’t need the data, creating a REPL and
 deleting all data in a DB will unlock it (`DB::deleteAll`).
 
 To change your schema without deleting the data, you can use a live migration
-process. In the future, this will be built into Dark, but for now you can
-follow
+process. In the future, this will be built into Dark, but for now you can follow
 [Paul Shen's excellent guide](https://www.notion.so/paulshen/Datastore-migration-in-Dark-e8d50f81366b48fc92c980372f68d316)
 to the process.
 
