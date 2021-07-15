@@ -68,7 +68,7 @@ Dark is a large project, and part of where we've cut scope is on the language
 definition. A lot of the Dark language is incomplete, but we believe there is
 enough there to build most web applications. Some examples: Dark is strongly
 typed, but it doesn't have a full type-checker; we don't support tuples or
-character literals; you can't type a negative number is our editor (though you
+character literals; you can't type a negative number in our editor (though you
 can use `Int::negate` or `0 - number` as a substitute). As we grow, we'll grow
 the language with it, and we believe we have a path for Dark to be a powerful,
 expressive language.
