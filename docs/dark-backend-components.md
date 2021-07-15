@@ -50,7 +50,7 @@ are creating an endpoint.
 In Dark, your backend components appear in the browser, on a canvas. These are
 at: [https://darklang.com/a/username](https://darklang.com/a/username) or
 [https://darklang.com/a/username-canvasname](https://darklang.com/a/username-canvasname).
-We intend for you to only have one canvas per company or entirely separate
+We intend for you to only have one canvas per company or an entirely separate
 project. You can create any canvas by navigating to it.
 
 Your endpoints would appear at:
