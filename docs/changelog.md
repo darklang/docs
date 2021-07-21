@@ -4,8 +4,173 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-Dark gets better each week! Here is a brief list of the fixes, new features, and
-updates.
+## 2021
+
+We have been doing a major rewrite of our backend, moving from OCaml to F#.
+This solves significant operational issues and opens Dark to a lot of
+improvements and productivity fixes down the line, especially relying more
+heavily on our cloud provider.
+
+As we prepare to release the new version, we want to give advanced warning
+about some changes to the language and standard library. Though Dark was
+designed to avoid changes to existing functionality, allowing for new versions
+of the language and standard library to be opted-in, we have not built that
+part of the procuct, and given the relatively low usage of Dark we felt the
+tradeoff was not worth it yet.
+
+Almost all of these changes are small - we triaged each change individually to
+determine if we could avoid it, and what the cost of the change was. We would
+like users to be aware of the changes and to change their Dark programs
+appropriately to handle them, if possible. Please feel free to discuss the
+changes with us to see what we can do to mitigate them for you, or if you know
+some other ways to avoid the problem.
+
+_The list below is organized by date discovered, to allow you know when new
+things have been added to the list since you checked._
+
+Discovered before July 16, 2021:
+
+### Standard library
+
+- `String.toLowercase` and `String::toUppercase` worked correctly in the old
+  version of Dark, for all unicode. In the new version, the library we are
+  using does not correctly handle some case changes, instead keeping the
+  original character. This happens when the replacement is a different length
+  than the character being replaced (for example, `"և"` should be `"ԵՒ"` when
+  converted to upper case, which the old version did correctly and the new
+  version does not). We are considering fixing this before shipping, please let
+  us know if this would be a problem for you.
+
+
+- `String::split` would fail if the 2nd argument was `""` and the first
+  argument was a complex Unicode character, such as `String::split
+  "👨‍❤️‍💋‍👨👩‍👩‍👧‍👦🏳️‍⚧️‍️🇵🇷" ""`.
+  This is now split properly.
+
+- Functions whose output relies on the internal ordering of a `Dict` may have
+  different outputs, specifically, the output Lists may be in a different
+  order. Examples include `Dict::keys`, `Dict::values`, and `Dict::toList`
+  which return `List`s of values which are ordered based on the internal
+  ordering in the original `Dict`.
+
+- When calling `List::uniqueBy`, and there is a duplicate, the new version of
+  Dark may pick a different value for the duplicate. For example:
+
+```
+List.uniqueBy_v0 [1;2;3;4] (fun x -> Int.divide_v0 x 2) = [ 1, 3, 4 ] // old Dark
+List.uniqueBy_v0 [1;2;3;4] (fun x -> Int.divide_v0 x 2) = [ 1, 2, 4 ] // new Dark
+```
+
+- `String.trim`, `String::trimEnd` and `String::trimStart` worked incorrectly
+  in some Unicode situations, they now work correctly.
+
+### Error messages
+
+All error messages have been renovated, attempting to make them more consistent
+and to reuse error message machinery. As a result, a majority of Dark error
+messages have changed. If you were relying on the explicit format of a Dark
+language or stdlib error message, expect that it will be different.
+
+If you do any error handling which relies specifically on the text of an error
+message coming from Dark, we recommend you no longer do that, and just use the
+presence of the error instead of the text.
+
+There are two places in Dark which use string error messages:
+
+#### `Result.Error`s
+
+The `Error` enum (referred to as `Result.Error` below for clarity), will
+contain a string error in most cases, which you might be using directly or
+indirectly.
+
+You might be accessing `Result.Error`s and their text contents directly using
+the `match` statement.
+
+You might also be accessing their text contents indirectly, using `toString`,
+or other stringifying functions, such as `toString`, `JSON::` functions and
+`HTTPClient::` functions. This is only true if you taken the function returning
+the `Result.Error` off the error rail. This text may also make it to your
+web/mobile clients or API consumers.
+
+`Result.Error`s returned via a HTTP handler are not presented to the user, so
+text cannot leak that way.
+
+#### Runtime errors
+
+Runtime errors (including type errors) are not accessible via Dark programs, and
+will always terminate the Dark program when they are accessed. As a result, the
+text of any runtime error should not be accessible to your programs or your
+users.
+
+### HTTP stack
+
+Dark has switched to using Kestrel, a high-performance HTTP server from .NET,
+for its HTTP server. There are some differences between the new Kestrel-based
+server and the previous OCaml `cohttp`-based server:
+
+Large differences:
+
+- a `Content-Length` header is now always required by clients making calls to
+  Dark. (We are considering trying to resolve this, please let us know if this
+  is important for you).
+- Dark programs can no longer set the HTTP `Content-Length` header and it will
+  be set automatically. A `content-length` header will be ignored if provided
+  via `Http::response` or similar functions.
+- JSON returned from HTTP requests is now formatted differently
+
+Minor differences:
+
+- When making HTTP requests to Dark:
+  - Clients must send at least 256bytes every 5 seconds or be timed-out
+  - All headers must be sent in first 10s
+  - There must be fewer than 100 headers and they must fit in 32k
+  - The maximum size of HTTP requests to Dark is 10MB
+- Http responses sent by Dark
+  - Headers will be returned in a different order
+  - Headers are not lowercase anymore
+  - The `Date` header is now always present
+  - The `Server` header is now `darklang` and always present
+
+### No overflow
+
+The new version of Dark uses infinite-precision integers (sometimes called
+`BigInt`s). This means they can hold any number, whereas previously the highest
+number they could hold was `4611686018427387903`. This means that functions
+that previously could overflow (for example, `Int::add 4611686018427387903 1`)
+no longer overflow.
+
+The overflow behaviour was not in the docs and we were not fully sure what it
+was until we added tests. As a result, we expect that users are not relying on
+overflow for their programs functioning correctly.
+
+
+## Improvements in the 2021 rewrite
+
+These are being updated below as we remember them, and will be rewritten into a
+changelog when they ship.
+
+- The Dark implementation is now asynchronous, meaning that your programs will no
+  longer be stuck behind other users' programs making HTTP or DB calls. This was
+  a major source of slow Dark programs experienced by most users.
+
+- Integers are now infinite-precision instead of 63 bit. This also removes some
+  differences between the execution engine in the editor (which used 31-bit
+  integers) and the actual production execution engine.
+
+- You can now put a lambda in a variable and pipe into it.
+
+- Better errors in many many cases, especially for bad input.
+
+- `String::length` is `O(1)` instead of `O(N)`
+
+- When reading strings from a user, the string is only passed over once.
+
+- The rewrite also addressed some underlying issues that will come out in new
+  features soon, including a better type system, support for characters and
+  tuples, fixes for poor behaviour in Date and String functions, and more.
+  These issues are tracked in our new [project
+  tracker](https://github.com/darklang/dark/projects/1#column-15173588).
+
 
 ## July 13th, 2020
 
