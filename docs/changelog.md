@@ -26,9 +26,17 @@ changes with us to see what we can do to mitigate them for you, or if you know
 some other ways to avoid the problem.
 
 _The list below is organized by date discovered, to allow you know when new
-things have been added to the list since you checked._
+things have been added to the list since you last checked._
 
-Discovered before July 16, 2021:
+## Discovered before Aug 5, 2021:
+
+### Standard library
+
+- `X509::pemCertificatePublicKeys` used to only work for RSA keys. It now also
+  supports DSA and ECDsa keys. The old version would read and ECdsa keys and
+  return an incorrect answer - it now returns a correct answer.
+
+## Discovered before July 16, 2021:
 
 ### Standard library
 
