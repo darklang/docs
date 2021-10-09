@@ -71,7 +71,7 @@ Dark. Fortunately, they are very similar to Dark.
 
 There are a number of resources to help as well:
 
-- [A guided walkthrough of making your first PR](/contributing/adding-your-first-test)
+- [A guided walkthrough of making your first PR](adding-your-first-test.md)
 - [good first bugs](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-bug)
   assume you don't know anything about F# or ReScript
 

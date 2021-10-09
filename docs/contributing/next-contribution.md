@@ -2,19 +2,19 @@
 title: Your next contribution
 ---
 
-We have everyone start with [a first PR](getting-started), which makes a small
+We have everyone start with [a first PR](getting-started.md), which makes a small
 but valuable contribution. Now that you've got it done, you can build something
 (a little bit) bigger.
 
 ## Porting backend to F#
 
 One of the most valuable projects right now is porting OCaml code to F# in the
-backend. See [Porting the Dark backend](porting-the-dark-backend).
+backend. See [Porting the Dark backend](porting-the-dark-backend.md).
 
 ## Getting started
 
 Below you'll find resources to help you figure out what to work on. After that,
-head over to [Working in the Dark repo](ocaml-for-dark-developers) to learn how
+head over to [Working in the Dark repo](ocaml-for-dark-developers.md) to learn how
 to contribute bigger things, like the basics of F#/ReScript, the layout of the
 repo, technical guides to different parts of the codebase and product, and
 product and vision docs about where Dark is going.

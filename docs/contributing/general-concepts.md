@@ -138,7 +138,7 @@ type pattern =
 ```
 
 These definitions are in ReScript (we have a
-[guide to ReScript for Dark developers](ocaml-for-dark-developers)). Briefly,
+[guide to ReScript for Dark developers](ocaml-for-dark-developers.md)). Briefly,
 this means that an `expr` is an integer (which is made up of an id and a string)
 or a bool (made up of an id and a string), or a `match` (which is an id, an
 expression to match on, and a list of patterns and expressions), etc
