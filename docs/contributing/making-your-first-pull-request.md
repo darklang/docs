@@ -46,7 +46,7 @@ request:
 > any tests so I added one."
 
 While this doesn't follow our
-[Pull Request guidelines](/contributing/making-a-pull-request#writing-a-successful-pull-request-message),
+[Pull Request guidelines](making-a-pull-request.md#writing-a-successful-pull-request-message),
 it's fine for a first contribution (and you can ignore the PR template too for
 now).
 
