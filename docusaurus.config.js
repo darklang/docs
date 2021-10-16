@@ -165,8 +165,8 @@ module.exports = {
         docs: {
           path: "docs",
           sidebarPath: require.resolve("./sidebars.json"),
-          // TODO: re-add these in the footer
-          // editUrl: "https://github.com/darklang/docs/edit/main/",
+          routeBasePath: "/",
+          editUrl: "https://github.com/darklang/docs/edit/main/",
           // showLastUpdateAuthor: true,
           // showLastUpdateTime: true,
         },
