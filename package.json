@@ -6,6 +6,8 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "server": "docusaurus serve",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
