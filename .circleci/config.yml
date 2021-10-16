@@ -8,7 +8,7 @@ version: 2
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:14.5.0
+      - image: cimg/node:16.11.1
     steps:
       - checkout
       - run: npm ci
