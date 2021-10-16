@@ -28,13 +28,35 @@ some other ways to avoid the problem.
 _The list below is organized by date discovered, to allow you know when new
 things have been added to the list since you last checked._
 
+## Discovered before Oct 1, 2021:
+
+- When making a web request to your Dark application, if you did not specific a
+  'user-agent' header, Dark used to add a 'user-agent' header of
+  'ocaml-cohttp/1.2.0'. We no longer add this header.
+
+- When making a web request to your Dark application with a 'content-type'
+  header of "text/ping", Dark used to ignore the code and immediately return a
+  response of status code 418. It now processes the request instead.
+
+## Discovered before Aug 30, 2021:
+
+### Standard library
+
+- `HttpClient::*` functions no longer support making requsts with arbitrary
+  `Content-Type`s. They must now be
+  [valid](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type),
+  for example `"application/json"` or `"application/json; charset=utf-8"`.
+
+- `HttpClient::*` functions called with usernames and passwords in the url can
+  now support arbitrary UTF8 (in the past, emoji (etc) was not supported.)
+
 ## Discovered before Aug 5, 2021:
 
 ### Standard library
 
 - `X509::pemCertificatePublicKeys` used to only work for RSA keys. It now also
-  supports DSA and ECDsa keys. The old version would read and ECdsa keys and
-  return an incorrect answer - it now returns a correct answer.
+  supports DSA and ECDsa keys. The old version would read ECDsa keys and return
+  an incorrect answer - it now returns a correct answer.
 
 ## Discovered before July 16, 2021:
 
