@@ -206,7 +206,7 @@ and use the deploy hash from your command line.
   - Returns a URL to a file for the current canvas and the given `deployHash`:
   - `StaticAssets::urlFor "o6vs1aqcbx" "foo.html"` ->
     `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
-- `urlForLatest <deployHash : String> <file : String> -> String`
+- `urlForLatest <file : String> -> String`
   - Returns a URL to a file for the current canvas and the latest deploy:
   - `StaticAssets::urlForLatest "foo.html"` ->
     `"https://ismith-staticassets.darksa.com/stgbcg3kez_zb9-wlbtgta563t8/o6vs1aqcbx/foo.html"`
@@ -215,7 +215,7 @@ and use the deploy hash from your command line.
     `deployHash`:
   - `StaticAssets::fetch "o6vs1aqcbx" "foo.html"` ->
     `"<html><body>Hello, world!</body></html>"`
-- `fetchLatest <deployHash : String> <file : String> -> String`
+- `fetchLatest <file : String> -> String`
   - Returns a URL to a file for the current canvas and the latest deploy:
   - `StaticAssets::fetchLatest "foo.html"` ->
     `"<html><body>Hello, world!</body></html>"`
@@ -224,9 +224,9 @@ and use the deploy hash from your command line.
     `deployHash`:
   - `StaticAssets::serve "o6vs1aqcbx" "foo.html"` -> responds with the file
     `foo.html` and the headers that the static assets CDN provided
-- `serveLatest <deployHash : String> <file : String> -> String`
+- `serveLatest <file : String> -> String`
   - Returns a URL to a file for the current canvas and the latest deploy:
-  - `StaticAssets::fetchLatest "foo.html"` -> responds with the file `foo.html`
+  - `StaticAssets::serveLatest "foo.html"` -> responds with the file `foo.html`
     and the headers that the static assets CDN provided
 
 ### Command line reference
