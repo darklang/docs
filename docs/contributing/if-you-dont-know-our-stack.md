@@ -1,5 +1,5 @@
 ---
-title: If you don't know F# or ReScript
+title: If you don't know our stack (F# and ReScript)
 ---
 
 F# and ReScript can be a little bit daunting, but even if you don't know them,
@@ -44,11 +44,12 @@ Similarly, we have some guides for people learning Dark who know other
 languages. Adding another language would be wonderful. See for example the
 [Python version](https://darklang.com/docs/from-python).
 
-## Writing issues
+## Reporting bugs
 
 Dark has many bugs and problems: documenting them for other contributors to fix
-would be very useful. Small, compact descriptions with instructions to reproduce
-the bugs are very welcome.
+would be very useful. Small, compact descriptions with instructions to
+reproduce the bugs are very welcome. You can add them to the [issue
+tracker](https://github.com/darklang/dark/issues).
 
 ### Fluid editor
 

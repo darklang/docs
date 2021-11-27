@@ -14,10 +14,11 @@ backend. See [Porting the Dark backend](porting-the-dark-backend.md).
 ## Getting started
 
 Below you'll find resources to help you figure out what to work on. After that,
-head over to [Working in the Dark repo](ocaml-for-dark-developers.md) to learn how
-to contribute bigger things, like the basics of F#/ReScript, the layout of the
-repo, technical guides to different parts of the codebase and product, and
-product and vision docs about where Dark is going.
+head over to [Working in the Dark
+repo](rescript-and-fsharp-for-dark-developers.md) to learn how to contribute
+bigger things, like the basics of F#/ReScript, the layout of the repo,
+technical guides to different parts of the codebase and product, and product
+and vision docs about where Dark is going.
 
 ## Issues
 
@@ -57,7 +58,8 @@ be blocked by us, so we highly prioritize solving things you need solved.
 ## Larger Projects
 
 Dark is a project with a vision for where it is going. Unfortunately, that
-vision is not as documented as it could be. We'll work on that!
+vision is not as documented as it could be. We're working on that over at the
+[Dark Roadmap](https://roadmap.darklang.com)!
 
 In the meantime, the best thing to align well with that vision is to be very
 communicative. While many projects will take drive-by contributions, we are only

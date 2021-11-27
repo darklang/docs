@@ -13,28 +13,27 @@ Here's the journey it takes:
 - Google Load Balancer
 - Nginx sidecar container
 - the Dark
-  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/BwdServer.fs)
+  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs)
   (`bwd` stands for `BuiltWithDark`)
 - our webserver is built on top of ASP.NET, and it directs the request to
-  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/BwdServer.fs).runDarkHandler.
-- if it's a 404, the event is stored in the `stored_events_v2` table and sent
-  to the client via
-  [Stroller](https://github.com/darklang/dark/tree/main/containers/stroller) (a
-  sort of reverse proxy written in Rust)
+  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs).runDarkHandler.
+- if it's a 404, the trace is stored in the `stored_events_v2` table and sent
+  to the client as a 404 via
+  [Pusher](https://pusher.com)
 - if a page is found, the request path, body, and headers are passed to the
-  Dark standard library function
-  [`Http::middleware_v0`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/StdLib/LibMiddleware.fs),
-  called via `Interpreter.callFn`. This middleware creates the `request`
-  parameter that uses see in Dark code.
-- `AST.eval` runs the Dark code, saving parts of the trace as it goes. Input
-  values, function arguments and return values are saved in Postgres tables
+  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware/MiddlewareV0.fs), which creates the `request` parameter, run the code, and converts the response into the correct formats.
+- [`Interpreter.eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs)
+  runs the Dark code, saving parts of the trace as it goes. Input values,
+  function arguments and return values are saved in Postgres tables
   `stored_events_v2`, `function_arguments` and `function_results_v2`
 - A trace is pushed to [Pusher](https://pusher.com), which forwards it to the
   editor, where it appears as a dot on the canvas.
 - When a user clicks on the trace, the trace is loaded from the server. A web
-  worker named `Fetcher` fetches the trace in the background, decodes it, and
-  sends the value to the editor. On the server-side, it is fetched from the
-  [ApiServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api.fs)
+  worker named
+  [`Fetcher`](https://github.com/darklang/dark/blob/main/client/workers/Fetcher.res)
+  fetches the trace in the background, decodes it, and sends the value to the
+  editor. On the server-side, it is fetched from the
+  [ApiServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api.fs).
 
 ## Traces
 
@@ -79,8 +78,8 @@ doesn't have access to from the traces.
 ## Standard library
 
 The standard library is split between
-[`fsharp-backend/src/LibExecution/StdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/LibExecution/StdLib)
+[`fsharp-backend/src/LibExecutionStdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/LibExecutionStdLib)
 (for functions which are available on the client and backend) and
-[`fsharp-backend/src/LibBackend/StdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/LibBackend/StdLib)
+[`fsharp-backend/src/BackendOnlyStdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/BackendOnlyStdLib)
 for functions which are only available on the backend (typically functions where
 we cannot compile some library to JS).

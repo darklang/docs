@@ -19,5 +19,5 @@ Common fixes:
   - for client errors, use `./scripts/clear-bs-cache` and
     `./scripts/clear-node-modules`
   - for other errors, use `./scripts/clear-builder-volumes`
-- Integration tests sometimes fail. At time of writing `execute_function_works`
-  is the only flaky integration test, and you can ignore related test failures.
+- Integration tests sometimes fail. At time of writing `execute_function_works`, `max_callstack_bug`, and `record_consent_saved_across_canvases`
+  are flaky, and you can ignore related test failures.
