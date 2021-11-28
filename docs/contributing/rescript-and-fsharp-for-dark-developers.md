@@ -514,9 +514,9 @@ see something like
 let isRailable (m : model) (name : string) =
   m.functions
   |> Functions.find name
-  |> Option.map ~f:(fun fn ->
+  |> Option.map (fun fn ->
          fn.fnReturnTipe = TOption || fn.fnReturnTipe = TResult)
-  |> Option.withDefault ~default:false
+  |> Option.withDefault false
 ```
 
 To find out if a function goes on the error rail, we search for a function,
