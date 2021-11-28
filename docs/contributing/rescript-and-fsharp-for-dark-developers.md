@@ -3,10 +3,9 @@ title: ReScript and F# for Dark developers
 ---
 
 This guide aims to introduce you to enough F#/ReScript to contribute to Dark,
-assuming you already know Dark. F# and ReScript are very similar languages, both
-derived from OCaml. We currently use ReScript using the OCaml format (\*.ml
-files) for the client. We use F# for the backend, which is very similar to Dark
-as well.
+assuming you already know Dark. F# and ReScript are very similar languages,
+both derived from OCaml. We currently use ReScript for the client. We use F#
+for the backend, which is very similar to Dark as well.
 
 ## Some simple F#/ReScript code
 
@@ -38,18 +37,17 @@ let aFloat = 6.72
 anotherFunction aString anInt aFloat
 ```
 
-In ReScript this would be written (note the `in` at the end of each line):
+In ReScript this would be written:
 
 ```ocaml
-let someFunction (intArgument : int) : string =
-  let aString = "myString" in
-  let anInt = 65 + intArgument in
-  let aFloat = 6.72 in
-  anotherFunction aString anInt aFloat
+let someFunction = (intArgument: int) : string =>
+  let aString = "myString"
+  let anInt = 65 + intArgument 
+  let aFloat = 6.72 
+  anotherFunction(aString, anInt, aFloat)
 ```
 
-As you can see, apart from the function signature, the only difference is that
-`let` statements in ReScript have an `in` at the end of the line.
+As you can see, the syntaxes are very similar.
 
 ## Dark vs ReScript vs F#
 
@@ -78,17 +76,17 @@ everything. We add them to all functions (we didn't always do this, but we do
 now, but we are now), including all parameters and return types (see
 [example](#functions) below).
 
-You can actually add types in many places where they aren't required, such as
+In F#, you can actually add types in many places where they aren't required, such as
 variable definitions:
 
 ```ocaml
-let y = 6.7 in
-let (x : int) = 6 in
+let y = 6.7
+let (x : int) = 6
 x + 5
 ```
 
-`x` here, despite being a normal variable definition, has a type signature.
-OCaml allows this in many places, and it's useful for tracking down these
+`x` here, despite being a normal variable definition, has a type signature.  F#
+and ReScript allow this in many places, and it's useful for tracking down these
 errors.
 
 We'll discuss declaring types below.
@@ -126,11 +124,11 @@ libraries from `.NET`, FSharp.Core, or if necessary, the FSharpPlus library.
 
 ### Int
 
-An `int` is the same in Dark and OCaml, same syntax, same meaning. Note that
-ints are 31 bits in ReScript, 32 bits in F#, and infinite precision in Dark.
+An `int` is the same in Dark and F#, same syntax, same meaning. Note that
+ints are 31 bits in ReScript, 32 bits in F#, and 64bit in Dark.
 
 ```ocaml
-let x = 5 in
+let x = 5
 x + 6
 ```
 
@@ -142,7 +140,7 @@ floating point numbers.
 Like in Dark, there are special operators to work on floats in ReScript.
 
 ```ocaml
-let x = 0.1 in
+let x = 0.1 
 x +. 0.3
 ```
 
@@ -163,7 +161,7 @@ Like in Dark, `bool`s in F# and ReScript are either `true` or `false`.
 
 Strings are Unicode in Dark, ReScript and F#. While you're unlikely to hit
 differences in practice, they do actually use a different in-memory
-representation, with Dark using UTF-8, rescript using the browser's built-in
+representation, with Dark using UTF-8, ReScript using the browser's built-in
 UCS-2, and F# using .NET's UTF-16 (which is very similar but not quite the same
 as UCS-2).
 
@@ -194,18 +192,23 @@ Dark does not currently support String interpolation.
 
 ### List
 
-Lists in Dark, F# and ReScript are almost the same. In ReScript and F#, lists
+Lists in Dark, F# and ReScript are almost the same. In F#, lists
 use `;` as separators, like so:
 
 ```ocaml
 [1; 2; 3; 4]
 ```
 
+If ReScript, the syntax is:
+```ocaml
+list{1, 2, 3, 4}
+```
+
 (However, F# allows separators to be omitted which the list elements are lined
 up vertically, as it uses indentation as the separator).
 
 While Dark technically allows you to create lists that have different types in
-them, ReScript and F# emphatically do not.
+them (which you should not do), ReScript and F# emphatically do not.
 
 To type check a list in ReScript, you specify its type like so: `int list`,
 which is a list of ints. In F#, you use `List<int>` (though `int list` is still
@@ -216,17 +219,17 @@ allowed).
 Records are mostly used as objects are in most languages. Like Dark, they only
 have fields, not methods, and you use functions to manipulate them.
 
-A record in ReScript has unusual syntax:
+A record in ReScript will look quite familiar:
 
 ```ocaml
-{ field1 = 56
-; field2 = true
-; field3 = "asd"
-}
+{ field1: 56,
+  field2: true,
+  field3: "asd"
+ 
 ```
 
-F# uses the same syntax, though it allows you to use indentation instead of
-separators:
+F# uses a similar syntax, but with `=` instead of `:`, though it allows you to
+use indentation instead of separators:
 
 ```ocaml
 {
@@ -240,14 +243,14 @@ Note that they use `=` to connect a field and a value, and `;` as row separator.
 The types of the fields do not have to be declared.
 
 Records are immutable, like almost everything in ReScript/F#, and are updated
-using an unusual syntax:
+using unusual syntaxes:
 
 In ReScript:
 
 ```ocaml
 let x = { field1 = 56; field2 = true } in
-let updatedX = { x with field1 = 57 } in
-doSomethingWith updatedX
+let updatedX = {...x, field1: 57 } in
+doSomethingWith(updatedX)
 ```
 
 In F#:
@@ -263,26 +266,33 @@ with `Dict::set`. We're trying to figure out how to split records and
 dictionaries apart better in Dark, after which they will be more like
 ReScript/F# (though hopefully with better syntax).
 
-Type definitions for records look like this:
+Type definitions for records look like this in F#:
 
 ```ocaml
-type person =
+type Person =
   {
     name : string
   ; age : int
   }
 ```
 
-### Let
-
-ReScript `let`s have a slightly different syntax to Dark:
+and like this in ReScript:
 
 ```ocaml
-let x = 45 in
-x + 23
+type person = {
+  name: string,
+  age: int
+}
 ```
 
-The `in` at the end is required.
+### Let
+
+`let`s in ReScript and F# are the same as in Dark:
+
+```ocaml
+let x = 45 
+x + 23
+```
 
 `let` also allow destructing in ReScript/F#, although we don't currently use
 that very often.
@@ -292,30 +302,48 @@ that very often.
 `if` statements in F#/OCaml are extremely similar to Dark, including that they
 only allow `bool`s as the condition, and in their syntax.
 
+In F#:
+
 ```ocaml
 if hasAccess user
 then "Welcome!"
 else "Access denied"
 ```
 
+In ReScript:
+```ocaml
+if hasAccess(user) {
+  "Welcome!"
+} else {
+  "Access denied" 
+}
+```
+
 ### Operators
 
-F#/OCaml, in keeping with its odd syntax, have some unusual operators. Most
-importantly, the equality operator is `=` (that's just one equals sign), whereas
-in most languages it's `==` (including Dark). `=` is very strict equality,
-equivalent to `===` in languages that have that, such as JS.
+F# has some unusual operators. Most importantly, the equality operator is `=`
+(that's just one equals sign), whereas in most languages it's `==` (including
+Dark and ReScript). `=` is very strict equality, equivalent to `===` in languages that have
+that, such as JS.
 
-ReScript/F# also have a `==` operator, but you should never use it.
+F# also has a `==` operator, but you should never use it.
 
-F#/ReScript use `<>` for inequality (`!=` in
-Dark). In ReScript, most of the comparison operators (such as `<`, `>`, `<=`,
-etc) only operate on integers, and not on floats. In F#, they work on both ints
-and floats.
+F# use `<>` for inequality (`!=` in Dark and ReScript). In ReScript, most of
+the comparison operators (such as `<`, `>`, `<=`, etc) only operate on
+integers, and not on floats. In F#, they work on both ints and floats.
 
 ### Match
 
 Dark has a `match` statement that is very similar to F#/ReScript, with slightly
-different syntax:
+different syntax. In Dark you write:
+
+```ocaml
+match myValue
+  Some x -> 5
+  _ -> 6
+```
+
+while in F# you write
 
 ```ocaml
 match myValue with
@@ -324,6 +352,15 @@ match myValue with
 ```
 
 Notice the `with` keyword, and starting the patterns with `|`.
+
+In ReScript you write:
+
+```ocaml
+switch myValue {
+| Some(x) -> 5
+| _ -> 6
+}
+```
 
 F#/ReScript also support more powerful `match`es, for example multiple patterns
 can match a single branch:
@@ -334,7 +371,7 @@ match myValue with
 | _ -> "not between 4 and 6"
 ```
 
-ReeScript/F# also support the `when` clause:
+F# also supports the `when` clause:
 
 ```ocaml
 match myValue with
@@ -342,12 +379,22 @@ match myValue with
 | _ -> "not between 4 and 6"
 ```
 
+This is called an `if` in ReScript:
+
+```ocaml
+switch myValue {
+| Some(myInt) if myInt >= 4 && myInt <= 6 -> "between 4 and 6"
+| _ -> "not between 4 and 6"
+}
+```
+
+
 Be careful of very subtle bugs when combining multiple patterns with `when`
 clauses: the entire pattern will fail if the pattern matches when the clause
 does not:
 
 ```ocaml
-let myValue = Some 5 in
+let myValue = Some 5
 match myValue with
 | Some 4 | Some myInt when myValue <> Some 4 -> "this will never succeed"
 | _ -> "this will succeed as a fallback"
@@ -364,7 +411,7 @@ However, the constructors for Option are named differently; both languages use:
 `Some` and `None` instead of `Just` and `Nothing`.
 
 These enums are typically called "variants". We use them frequently, especially
-to represent expressions. For example in `FluidExpression.ml`:
+to represent expressions. For example in `FluidExpression.fs`:
 
 ```ocaml
 type t =
@@ -422,24 +469,23 @@ list
 |> List.map (fun elem -> elem + 2)
 ```
 
+and ReScript uses:
+
+```ocaml
+list->List.map((elem) => elem + 2)
+```
+
 It's very common to use functions like `List.map` which have a parameter called
 `f` which take a lambda. In F#, above, that parameter is passed like any other.
 In ReScript, those parameters are passed as labelled variables:
 
 ```ocaml
-list
-|> List.map ~f:(fun elem -> elem + 2)
+list->List.map:(~f=((elem) => elem + 2))
 ```
 
 ### Pipes
 
-OCaml has pipes which are the same as in Dark, except that in ReScript and F#,
-the pipe goes into the final position (in Dark it goes into the first position):
-
-```ocaml
-list
-|> List.map ~f:(fun elem -> elem + 3)
-```
+Both languages have pipes which are the same as in Dark. In Dark, the passed argument goes into the first position. That is also true in ReScript, but not in F#, where it goes into the last position. As a result, we tend to put the "subject" of the function in the pipeable position (first in Dark and ReScript, last in F#). __Note that ReScript uses to have to pipe into the last position but now does first by default; much of our code was designed to work pipe-last, instead of pipe-first, and we'll need to migrate to pipe-first.__
 
 ### Dictionaries
 
@@ -488,21 +534,21 @@ Unfortunately, it's hard to tell when an exception could be thrown.
 ### Imperative programming
 
 F# and ReScript support imperative programming which Dark does not support yet.
-There are mutable values called refs, that can be updated:
+
+In ReScript there are mutable values called refs, that can be updated:
 
 ```ocaml
-let myString = ref "old value" in
-myString := "new value"; (* update contents of myString *)
-print_endline myString
+let myString = ref("old value")
+myString := "new value"; // update contents of myString
+print_endline(myString.contents)
 ```
 
-To go along with it, F# and ReScript have `for` and `while` loop, allowing you
-to use imperative programming in places where it's clearer to do so:
+F# has mutable values that it prefers to refs (it has refs, but they're deprecated). Mutable values are used like so:
 
 ```ocaml
-for i = 1 to n_jobs () do
-  do_next_job ()
-done
+let mutable myString = "old value"
+myString <- "new value"
+print(myString)
 ```
 
 ### Advanced functions
@@ -513,7 +559,7 @@ ReScript Functions support named parameters, which you might see called like
 this (note the `~`):
 
 ```ocaml
-Option.withDefault ~default:5 (Some 5)
+Option.withDefault(~default=5, Some(5)))
 ```
 
 These are useful as a named parameter can be placed in any order (this is also
@@ -522,7 +568,7 @@ useful for piping).
 You declare functions with named parameters like so:
 
 ```ocaml
-let myFunction (regularParamter : int) ~(namedParam : string) : int =
+let myFunction = (regularParamter : int, ~namedParam : string) : int =>
   ...body of function...
 ```
 
@@ -533,7 +579,7 @@ These are not in F# or Dark.
 ReScript also supports optional parameters, which F# and OCaml do not.
 
 ```ocaml
-let myFunction ?(optionalParam = 3) (regularParamter : int) : int =
+let myFunction = (?optionalParam=3, regularParamter : int) : int =
   ...body of function...
 ```
 
@@ -652,6 +698,19 @@ ReScript is the new name (as of 2020) for what was sometimes called Bucklescript
 and sometimes called ReasonML. You may see references to Bucklescript in our
 codebase (including the prefix "bs").
 
-Because Dark's backend was in OCaml, we wrote the frontend using the alternate
-OCaml syntax for ReScript, which is not well documented. We will probably switch
-at some point to the ReScript syntax.
+## Dark's codebase history
+
+Dark's backend was originally written in OCaml, and then ported to F# in 2021.
+A lot of code is written the way it is because that made sense in OCaml,
+especially code with the comment `// CLEANUP` in it.
+
+Dark's frontend was originally written in Elm, before being ported. It was
+ported to what is now ReScript in 2018, but ReScript itself went through a bit
+of an identity crisis. ReScript at the time was sometimes called BuckleScript
+and sometimes called ReasonML. In 2021, it officially renamed itself to
+ReScript, and changed its official syntax (.res).
+
+Our frontend used an alternate syntax (.ml, as ReScript is based on OCaml and
+we used OCaml on our backend too). We switched over to .res in 2021 - however,
+a lot of remnants remain including old comments, and in particular that we
+primarily used pipe-last instead of pipe-first.
