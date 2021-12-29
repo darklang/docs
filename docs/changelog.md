@@ -28,6 +28,16 @@ some other ways to avoid the problem.
 _The list below is organized by date discovered, to allow you know when new
 things have been added to the list since you last checked._
 
+## Discovered before Dec 29, 2021:
+
+- Cronjobs will no longer double-fire during a deployment of Dark code
+
+- Dark used to return the `Access-Control-Allow-Origin` header in lower-case, it is
+  now returned in mixed case.
+
+- JSON requests to Dark with trailing commands in objects (which is technically
+  invalid json) is now supported
+
 ## Discovered before Oct 1, 2021:
 
 - When making a web request to your Dark application, if you did not specific a
@@ -136,10 +146,6 @@ for its HTTP server. There are some differences between the new Kestrel-based
 server and the previous OCaml `cohttp`-based server:
 
 Large differences:
-
-- a `Content-Length` header is now always required by clients making calls to
-  Dark. (We are considering trying to resolve this, please let us know if this
-  is important for you).
 - Dark programs can no longer set the HTTP `Content-Length` header and it will
   be set automatically. A `content-length` header will be ignored if provided
   via `Http::response` or similar functions.
@@ -148,27 +154,15 @@ Large differences:
 Minor differences:
 
 - When making HTTP requests to Dark:
-  - Clients must send at least 256bytes every 5 seconds or be timed-out
-  - All headers must be sent in first 10s
-  - There must be fewer than 100 headers and they must fit in 32k
+  - Clients must send at least 256 bytes every 5 seconds or be timed-out
+  - All headers must be sent in first 10 seconds
+  - There must be fewer than 100 headers and they must fit in 32KB
   - The maximum size of HTTP requests to Dark is 10MB
 - Http responses sent by Dark
   - Headers will be returned in a different order
-  - Headers are not lowercase anymore
+  - Headers are not always lowercase anymore
   - The `Date` header is now always present
   - The `Server` header is now `darklang` and always present
-
-### No overflow
-
-The new version of Dark uses infinite-precision integers (sometimes called
-`BigInt`s). This means they can hold any number, whereas previously the highest
-number they could hold was `4611686018427387903`. This means that functions that
-previously could overflow (for example, `Int::add 4611686018427387903 1`) no
-longer overflow.
-
-The overflow behaviour was not in the docs and we were not fully sure what it
-was until we added tests. As a result, we expect that users are not relying on
-overflow for their programs functioning correctly.
 
 ## Improvements in the 2021 rewrite
 
@@ -178,10 +172,6 @@ changelog when they ship.
 - The Dark implementation is now asynchronous, meaning that your programs will
   no longer be stuck behind other users' programs making HTTP or DB calls. This
   was a major source of slow Dark programs experienced by most users.
-
-- Integers are now infinite-precision instead of 63 bit. This also removes some
-  differences between the execution engine in the editor (which used 31-bit
-  integers) and the actual production execution engine.
 
 - You can now put a lambda in a variable and pipe into it.
 
