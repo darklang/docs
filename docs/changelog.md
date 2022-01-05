@@ -146,6 +146,7 @@ for its HTTP server. There are some differences between the new Kestrel-based
 server and the previous OCaml `cohttp`-based server:
 
 Large differences:
+
 - Dark programs can no longer set the HTTP `Content-Length` header and it will
   be set automatically. A `content-length` header will be ignored if provided
   via `Http::response` or similar functions.
