@@ -24,7 +24,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             # repo-specific deploy key
-            - "3a:4a:09:a1:7e:64:aa:13:cc:31:3e:c9:51:46:c7:ed"
+            - "6f:c2:ae:f9:8e:45:e9:17:82:ea:d0:8b:66:93:11:88"
       - checkout
       - run:
           name: Deploying to GitHub Pages
@@ -37,7 +37,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - build-and-test
+      - build-and-test:
+          branches:
+            ignore:
+              - gh-pages
   build_and_deploy:
     jobs:
       - deploy-website:
