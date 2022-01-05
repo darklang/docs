@@ -1,8 +1,5 @@
 aliases:
   - &filter-only-main
-    branches:
-      only:
-        - main
 
 version: 2
 jobs:
@@ -42,8 +39,15 @@ workflows:
             branches:
               ignore:
                 - gh-pages
+                - main
+
   build_and_deploy:
     jobs:
+      - build-and-test
       - deploy-website:
-          # Only run on direct commits to main
-          filters: *filter-only-main
+          requires:
+            - build-and-test
+          filters:
+            branches:
+              only:
+                - main
