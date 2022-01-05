@@ -151,7 +151,7 @@ module.exports = {
       // https://docsearch.algolia.com. Config is at
       // https://github.com/algolia/docsearch-configs/blob/master/configs/darklang.json
       appId: "QFOZBC0VVL",
-      apiKey: "f581153fedba855f81883aa35dc36b13",
+      apiKey: "715121cc838a8c3c4ea54324456bd5f9",
       indexName: "darklang",
     },
     googleAnalytics: {
