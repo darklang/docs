@@ -32,8 +32,8 @@ things have been added to the list since you last checked._
 
 - Cronjobs will no longer double-fire during a deployment of Dark code
 
-- Dark used to return the `Access-Control-Allow-Origin` header in lower-case, it is
-  now returned in mixed case.
+- Dark used to return the `Access-Control-Allow-Origin` header in lower-case, it
+  is now returned in mixed case.
 
 - JSON requests to Dark with trailing commands in objects (which is technically
   invalid json) is now supported
