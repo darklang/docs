@@ -6,6 +6,7 @@ module.exports = {
   baseUrl: "/", // Base URL for the project. For projects hosted on GitHub pages, it follows the format "/projectName/"
   favicon: "img/favicon.ico",
   organizationName: "darklang", // Usually your GitHub org/user name.
+  trailingSlash: false, // See https://docusaurus.io/docs/deployment#deploying-to-github-pages
   projectName: "docs", // Usually your repo name.
   plugins: [
     path.resolve(__dirname, "src/plugins/heap-analytics"),
