@@ -7,20 +7,18 @@ sidebar_label: FAQs
 Some common questions about Dark. Don't see what you're looking for?
 [Contact us!](./support)
 
-## What does it mean that Dark is in private beta? Why isn't Dark available to everyone?
+## What does it mean that Dark is in public beta?
 
-The primary reason that we're not opening up access fully is that we have
-customers who run their businesses on Dark, and so it's important that we ensure
-a great experience for them and their users. Our primary focus so far has been
-on creating the concept of Dark and proving that you can use it to build useful
-applications. There remains some work before Dark is ready to be open to the
-public, including features around scalability, privacy, compliance, and
-accessibility.
+Dark is not yet in a position where we feel confident putting a "1.0" version on it.
+Our primary focus so far has been on creating the concept of Dark and proving that
+you can use it to build useful applications. There remains some work before we feel
+that Dark is ready for General Availability, including features around scalability,
+privacy, compliance, and accessibility.
 
 ## Is Dark Production ready? Who should use Dark today?
 
-Dark is in private beta, so we're not confident enough to call it production
-ready. We have a few dozen people using it, some for their entire businesses, so
+Dark is in public beta, so we're not confident enough to call it production
+ready. We have a few hundred people using it, some for their entire businesses, so
 if you can tolerate some risk, Dark should be sufficiently production ready for
 you. Good use cases are side projects, new startups, or if you have limited time
 or resources. Otherwise, we suggest waiting.
@@ -28,10 +26,10 @@ or resources. Otherwise, we suggest waiting.
 ## How much will Dark cost?
 
 We're still determining specifics, but Dark pricing will be based on how much
-infrastructure you use. We will be charging for traffic, compute, and memory
-usage, similar to other infrastructure. Dark will be free to start, and will
-gradually scale up with usage. We expect that our free tier will fully cover
-small projects.
+infrastructure you use, possibly combined with a premium accounts similar to how
+GitHub charges. We will be charging for traffic, compute, and memory usage, similar
+to other infrastructure. Dark will be free to start, and will gradually scale up
+with usage. We expect that our free tier will fully cover small projects.
 
 ## Will I be able to run Dark myself?
 
@@ -55,11 +53,11 @@ We know that developers and companies will need to move off Dark for various
 reasons, and plan to support this. We have a couple of strategies planned, based
 on your needs.
 
-We currently support exporting your data using regular Dark tooling. We intend
-to create an exporter that will generate a readable Go or NodeJS application
-that matches the structure and intention of your Dark program, that you can host
-yourself. This will not be a perfect substitute, but it should greatly simplify
-your migration.
+We currently support exporting your data using regular Dark tooling. We intend to
+create an exporter that will generate a readable Go or NodeJS application that
+matches the structure and intention of your Dark program, that you can host yourself.
+However, this will likely be long in the future, though we hoope to support the
+community building this.
 
 ## Who owns the code that I write in Dark, and the data that I and my users save in Dark?
 
