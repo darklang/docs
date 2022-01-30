@@ -4,7 +4,7 @@ title: General concepts
 
 ## Editor vs Production (how code runs)
 
-Code runs in two places in Dark, in the Editor, and in Production. In
+Code runs in two places in Dark: in the Editor, and in Production. In
 production, we have a Kubernetes cluster of interpreters with HTTP servers which
 are connected to a database, connected to the internet via Google Cloud
 infrastructure, that run Dark programs.
