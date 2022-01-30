@@ -130,7 +130,7 @@ includes both `expr`s and `tipe`s.
 
 ## Editor support
 
-The editor is where the developer actually creates code.
+The editor is where the developer (a Dark user) actually creates code.
 
 ### Fluid Editor
 
@@ -187,7 +187,7 @@ them. It does this over JSON.
 
 The F# backend has automatic JSON serializers and deserializers, using automatic
 serializers of types in
-[Api.fs](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api.fs).
+[Api](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api).
 The client has hand-written serializers in
 [`client/src/core/Encoders.ml`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.ml)
 and

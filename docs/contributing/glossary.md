@@ -15,3 +15,4 @@ title: Glossary
 - Trace
 - Fluid
 - Structured Editor
+- Analysis

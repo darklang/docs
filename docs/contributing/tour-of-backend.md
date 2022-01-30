@@ -73,7 +73,7 @@ respond to HTTP handlers, and is also compiled to WASM to run in the editor.
 The play button on functions and on handlers executes the code on the server,
 returning updates to the trace of those functions. In all other cases, the
 editor runs code in the JS version, filling in the results of the functions it
-doesn't have access to from the traces.
+doesn't have access to (e.g. DB calls) from the traces.
 
 ## Standard library
 

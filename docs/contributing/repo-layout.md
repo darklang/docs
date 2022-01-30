@@ -90,23 +90,28 @@ here's how the various directories intersect, and what language they use:
   - `paket-files` - Used by the paket/nuget package manager
   - `src/ApiServer` - webserver serving the editor and the API used by the
     editor
+  - `src/BackendOnlyStdLib` - impl. of functions which need to be run on the backend, due to their connection to the DB, queues, etc.
+  - `src/Benchmark` - a benchmark executable to measure the performance of Dark code
   - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)
+  - `src/CronChecker` - trigger events for scheduled work
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
-  - `src/LibExecution` - the Dark language, including types, the runtime, most
-    of the standard library, and of course the execution engine
+  - `src/LibExecution` - the Dark language, including types, the runtime, and of course the execution engine
+  - `src/LibExecutionStdLib` - most of the standard library functions (anything that doesn't _need_ to be run on the backend)
   - `src/LibService` - library with some common functionality for F# services
     (currently just the backend, soon queues and cron)
-  - `src/Prelude` - Utilities, libraries, common types. Used everywhere. Includes
-     Tablecloth, a standard library which matches the one we use in OCaml and bucklescript.
+  - `src/Prelude` - utilities, libraries, common types; used everywhere
+  - `src/QueueWorker` - pulls user events from the queue and runs them
   - `src/Scripts` - some simple command-line programs that use F# libraries
+  - `src/Tablecloth` - a standard library which matches the one we use in OCaml and bucklescript.
   - `src/Wasm` - "main" file for client-side analysis/execution-engine
   - `tests/FuzzTests` - code to fuzztest different parts of Dark
   - `tests/TestUtils` - utilities used in Tests and FuzzTests
   - `tests/Tests` - mostly unit tests for backend and libexecution functionality
   - `tests/testfiles` - unit test definitions for language and standard library
   - `tests/httptestfiles` - tests for the Dark HTTP server and middleware
+  - `tests/httpclienttestfiles` - tests for the HTTP Library functions
 - `integration-tests` - integration tests, written in JS using TestCafe. Flaky
   and brittle. Help welcome!
 - `lib` - build directory used by Bucklescript
