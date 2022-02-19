@@ -1,7 +1,7 @@
 # Dark Documentation
 
-Welcome to the source for the Dark documentation. Contribute your improvements
-as a pull request, or report problems in an issue.
+Welcome to the source for the [Dark](https://darklang.com) documentation. Contribute
+your improvements as a pull request, or report problems in an issue.
 
 View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 
@@ -10,12 +10,25 @@ trying to do something beyond the scope of this README, check out their docs.
 
 ## What's In This Document
 
-- [Get Started in 5 Minutes](#get-started-in-5-minutes)
-- [Project Structure](#project-structure)
-- [Editing Content](#editing-content)
-- [Adding Content](#adding-content)
-- [How CI Auto-deploys](#how-ci-auto-deploys)
-- [Publishing Changes Manually](#publishing-changes-manually)
+- [Dark Documentation](#dark-documentation)
+  - [What's In This Document](#whats-in-this-document)
+  - [Get Started in 5 Minutes](#get-started-in-5-minutes)
+  - [Documentation structure](#documentation-structure)
+    - [Tutorials](#tutorials)
+    - [How-to guides](#how-to-guides)
+    - [Explanations](#explanations)
+    - [Reference material](#reference-material)
+  - [Project Structure](#project-structure)
+      - [Directory Structure](#directory-structure)
+  - [Editing Content](#editing-content)
+    - [Editing an existing docs page](#editing-an-existing-docs-page)
+  - [Adding Content](#adding-content)
+    - [Adding a new docs page to an existing sidebar](#adding-a-new-docs-page-to-an-existing-sidebar)
+    - [Adding items to your site's top navigation bar](#adding-items-to-your-sites-top-navigation-bar)
+    - [Adding custom pages](#adding-custom-pages)
+      - [Checking formatting](#checking-formatting)
+  - [How CI Auto-deploys](#how-ci-auto-deploys)
+  - [Publishing Changes Manually](#publishing-changes-manually)
 
 ## Get Started in 5 Minutes
 
@@ -26,7 +39,49 @@ npm install
 npm run-script start
 ```
 
-### Project Structure
+## Documentation structure
+
+Dark's documentation is organized into four categories:
+
+- tutorials
+- how-to guides
+- background information and discussion
+- reference material
+
+This follows the [Divio Documentation System](https://documentation.divio.com/).
+Using this system, documentation in each category should not do the work of any other
+category. For example, a tutorial should just step the user through doing the work,
+and should not provide background expanations or other reference material or
+discussion.
+
+In the future, we intend to provide access to all this material in the app, with
+context-sensitive reference materials available for all product and language
+features, and interactive tutorials and how-to guides built-in.
+
+### Tutorials
+
+- "teaching a child how to cook"
+- tells them what to do
+- does not explain why they are doing it
+- include specifics and let them learn the generalities over time
+- assume that "obvious" things are not known
+- do not include choices
+- should be bulletproof
+
+### How-to guides
+
+- "recipes"
+- should have very specific names such as "how to add a custom domain to Dark"
+
+### Explanations
+- background material to understand further
+- provides context
+
+### Reference material
+- just descriptions
+- follows the structure of the project/language (eg each type is represented)
+
+## Project Structure
 
 There are two important branches:
 
