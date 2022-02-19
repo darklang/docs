@@ -1,7 +1,6 @@
 ---
-id: new-trello-card
-title: Create a New Trello Card from Slack
-sidebar_label: Create a New Trello Card
+id: howto-slack-trello
+title: How to Create a New Trello Card from Slack
 ---
 
 Connecting your Trello account with your Slack account can make for a powerful

@@ -1,7 +1,6 @@
 ---
-id: asana-tutorial
-title: Create Asana Projects & Tasks
-sidebar_label: Create Asana Projects & Tasks
+id: howto-slack-asana
+title: How to connect Slack to Asana
 ---
 
 Connecting your Asana account with your Slack account can make for a powerful

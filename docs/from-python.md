@@ -1,5 +1,5 @@
 ---
-id: from-python
+id: python-cheat-sheet
 title: From Python
 sidebar_label: From Python
 ---

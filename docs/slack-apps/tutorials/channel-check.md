@@ -1,7 +1,7 @@
 ---
 id: channel-check
-title: Check for New Channels
-sidebar_label: Check for New Channels
+title: Check for New Slack Channels
+sidebar_label: Check for New Slack Channels
 ---
 
 It can be hard to keep up with all of the changes in your Slack workspace! This

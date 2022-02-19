@@ -1,77 +1,68 @@
 {
-  "docs": {
-    "Getting Started": [
-      "introduction",
-      "your-first",
-      "from-python",
-      "from-javascript"
-    ],
-    "Concepts": [
-      "when-dark",
-      "dark-backend-components",
-      "trace-driven-development",
-      "structured-editing",
-      "error-handling",
-      "component-worker",
-      "component-cron"
-    ],
-    "Language": [
-      "languageoverview",
-      "unique-aspects",
-      "functional-aspects",
-      "languagedetails",
-      "datastores",
-      "packages",
-      "httpclient",
-      "http"
-    ],
-    "How to": [
-      "static-assets",
-      "custom-domains",
-      "cors",
-      "teamwork",
-      "feature-flags",
-      "writing-tests",
-      "external-infra"
-    ],
-    "Reference": [
-      "function-reference",
-      "keyboard-mapping",
-      "support",
-      "sharing-dark",
-      "changelog",
-      "faqs",
-      "terms-of-service",
-      "backward-compatibility",
-      "desktop-client"
-    ]
-  },
-  "Slack": {
-    "Slack Apps": [
-      "slack-apps/slack-intro",
-      "slack-apps/slack-oauth",
-      "slack-apps/slack-packages"
-    ],
-    "Tutorials": [
-      "slack-apps/tutorials/channel-check",
-      "slack-apps/tutorials/asana-tutorial",
-      "slack-apps/tutorials/new-trello-card",
-      "slack-app-tutorial"
-    ]
-  },
-  "Tutorials": {
-    "Tutorial & Samples": [
-      "tutorials/tutorial-intro",
-      "tutorials/react-spa-tutorial",
-      "tutorials/twilio-app-tutorial",
-      "tutorials/error-rail-http-tutorial",
-      "tutorials/ifttt-alerts",
-      "tutorials/external-db",
-      "tutorials/airtable",
-      "tutorials/freshdesk",
-      "tutorials/sample-canvases"
-    ]
-  },
+  "docs": [
+    {
+      "Introduction": ["introduction"],
+      "Tutorials": [
+        "your-first",
+        "tutorials/sample-canvases",
+        "slack-apps/slack-intro",
+        "slack-apps/slack-oauth",
+        "slack-apps/slack-packages",
+        "slack-apps/tutorials/channel-check",
+        "slack-app-tutorial",
+        "tutorials/tutorial-intro"
+      ],
+      "How-to Guides": [
+        "static-assets",
+        "custom-domains",
+        "cors",
+        "teamwork",
+        "feature-flags",
+        "writing-tests",
+        "external-infra",
+        "slack-apps/tutorials/howto-slack-asana",
+        "slack-apps/tutorials/howto-slack-trello",
+        "tutorials/react-spa-tutorial",
+        "tutorials/twilio-app-tutorial",
+        "tutorials/error-rail-http-tutorial",
+        "tutorials/ifttt-alerts",
+        "tutorials/external-db",
+        "tutorials/airtable",
+        "tutorials/freshdesk"
+      ],
+      "Discussion & Explanations": [
+        "languageoverview",
+        "unique-aspects",
+        "functional-aspects",
+        "when-dark",
+        "dark-backend-components",
+        "trace-driven-development",
+        "structured-editing",
+        "error-handling",
+        "component-worker",
+        "component-cron"
+      ],
+      "Reference": [
+        {
+          "Cheat Sheets": ["python-cheat-sheet", "javascript-cheat-sheet"]
+        },
+        "languagedetails",
+        "datastores",
+        "function-reference",
+        "packages",
+        "httpclient",
+        "http",
+        "keyboard-mapping",
+        "support",
+        "sharing-dark",
+        "changelog",
+        "faqs",
+        "terms-of-service",
+        "backward-compatibility",
+        "desktop-client"
+      ]
+    }
+  ],
   "Contributing": {
     "Your First Contribution": [
       "contributing/getting-started",

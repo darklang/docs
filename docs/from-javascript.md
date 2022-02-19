@@ -1,5 +1,5 @@
 ---
-id: from-javascript
+id: javascript-cheat-sheet
 title: From Javascript
 sidebar_label: From Javascript
 ---
