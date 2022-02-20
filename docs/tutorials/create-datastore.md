@@ -7,26 +7,28 @@ In the last section, we made a HTTP request that created a 404. We'll use _the
 trace_ of that HTTP request to build an endpoint, a technique we call **Trace
 Driven Development**.
 
-1. Hit the plus (+) button in the 404 section of the sidebar. This creates a
-   HTTP endpoint with the HTTP verb (POST) and path (/test) set from the request
-   that creates the 404.
+1. Go to the 404 section of the sidebar and you should see the HTTP request that you
+   just made with your REPL.
+
+2. Hit the plus (+) button next to the 404. This creates a HTTP endpoint with the
+   HTTP method (`POST`) and path (`/test`) set from the request that creates the 404.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
 
-2. Hover over the white dot on the left hand side. Here, you can see the full
+4. Hover over the white dot on the left hand side. Here, you can see the full
    body of the incoming trace from when you posted to the endpoint from the
    REPL, including the body.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
 
 3. Let's save the `request` body to a variable by typing
-   `let data = request.body`. As you can see, the autocomplete knows the field
+   `let data = request.body`. The autocomplete knows the field
    names of `request` from the trace, and will complete them for you.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
-4. Let's put this in a datastore. Like we saw with the `HttpClient` library,
-   typing "DB" in the blank will pull up all datastore functions.
+4. Let's put this in a datastore. Type "DB" to bring up a list of Dark datastore
+   functions.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png)
 
@@ -34,31 +36,10 @@ In this case, we want `DB::set`, which takes three arguments.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png)
 
-5. Now let's make our datastore. From the sidebar or the omnibox, create a new
-   datastore called "Requests", with fields `data` and `time`.
+5. Now let's make our datastore. Press `Ctrl-k`/`Cmd-k` to bring up the omnibox, and
+   create a new datastore called "Requests", with fields `data` and `time`.
 
 ![img/gettingstarted/datastore.png](/img/gettingstarted/datastore.png)
-
-Dark's datastores are key-value stores; each record has a unique key that is
-used to store and retrieve the value. For instance, a possible set of records
-with keys in the above datastore would look like this:
-
-```text
-{
-  key1: {
-          data: {
-                  test: "test2"
-                },
-          time: <Date: 2020-02-11T18:54:39Z>
-        },
-  key2: {
-          data: {
-                  test: "test1"
-                },
-          time: <Date: 2020-02-11T18:54:43Z>
-        }
-}
-```
 
 6. Now that we have a datastore, let's finish our post endpoint.
 
@@ -91,3 +72,5 @@ with keys in the above datastore would look like this:
     which we see indicated by the red lock (🔒) icon.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png)
+
+Congratulations! You've created a Dark Datastore and stored data inside it.

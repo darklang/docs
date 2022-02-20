@@ -3,22 +3,18 @@ title: "Tutorial: Create a REPL"
 sidebar_label: Create a REPL
 ---
 
-**Concepts:** REPLs, HttpClient library, Play buttons
+REPLs in Dark are general-purpose coding blocks. They're typically to create reuable tools, experiments, one-off commands, or admin dashboards, in a similar way that you might use scripts or REPLs in other languages.
 
-REPLs in Dark are general-purpose coding blocks. They're typically used in the
-way you might write a bash script (reusable tools), use traditional REPLs
-(experiments and one-off commands), or admin dashboards (simple reporting).
-
-We'll run you through creating your first REPL, experimenting with the
+We'll run you through creating a REPL, experimenting with the
 HttpClient library to make API calls.
 
-1. Create a new REPL from the sidebar or the omnibox (`Ctrl-K`/`Cmd-K`).
+1. Open the omnibox by pressing (`Ctrl-K`/`Cmd-K`), and create a new REPL.
 
 2. Type "httpclient" in the REPL (lowercase, no spaces)
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.20.25_AM.png)
 
-This will show you all the standard library functions for HttpClient, their
+This will show you all the standard library functions for `HttpClient`, their
 signatures, and their docstrings.
 
 3. Continue typing, until you have "httpclientpost". Dark autocompletes on
@@ -30,7 +26,7 @@ signatures, and their docstrings.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates blanks for the four arguments that `HttpClient::post`
+Dark automatically creates spaces for the four arguments that `HttpClient::post`
 requires. We display a gray play button beside the function &ndash; it will turn
 green when all the arguments are complete, allowing you to run the function from
 within the editor.
@@ -45,10 +41,12 @@ within the editor.
 6. Next let's add the arguments. The structured editor simplifies creation of
    the arguments we want:
 
-- For the body, we want to pass `{test:"test1"}`: type `{`, hit enter, then add
+- For the body, we want to pass the value `{ test : "test1" }`. To do so, type `{` to start a record, then hit enter and add
   the key and the value.
-- For the query, we want an empty dictionary. Type `{`.
-- For the header, we want the JSON content-type: type "json" and the
+
+- For the query, we want an empty dictionary. Type `{` to create one.
+
+- For the header, we want the JSON content-type, so type "json" and the
   autocomplete will offer you a function to use.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.41.50_AM.png)
@@ -69,5 +67,4 @@ within the editor.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
-Congratulations! You've built your first REPL and called your first function in
-Dark.
+Congratulations! You've built a Dark REPL and which calls the Dark HTTP Client function.

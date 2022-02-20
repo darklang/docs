@@ -3,17 +3,19 @@
     {
       "Introduction": ["introduction"],
       "Tutorials": [
-        "tutorials/first-dark-application",
-        "tutorials/create-http-handler",
-        "tutorials/create-repl",
-        "tutorials/create-datastore",
-        "tutorials/create-cron-handler",
-        "tutorials/create-worker",
-        "tutorials/create-function",
-        "tutorials/create-external-api-call",
-        "tutorials/complete-first-application",
-        "tutorials/first-app",
-        "tutorials/first-dark-application",
+        {
+          "Create a full application": [
+            "tutorials/first-dark-application",
+            "tutorials/create-http-handler",
+            "tutorials/create-repl",
+            "tutorials/create-datastore",
+            "tutorials/create-cron-handler",
+            "tutorials/create-worker",
+            "tutorials/create-function",
+            "tutorials/create-external-api-call",
+            "tutorials/complete-first-application"
+          ]
+        },
         "tutorials/create-slack-app",
         "tutorials/sample-canvases",
         "tutorials/external-db",

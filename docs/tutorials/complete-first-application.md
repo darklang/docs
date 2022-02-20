@@ -3,7 +3,7 @@ title: "Tutorial: Complete your first Darklang application"
 sidebar_label: Complete your first application
 ---
 
-Try it out:
+To try out the end-to-end application:
 
 - Change your REPL to say "test3" instead of "test1" and then re-run the request
   by hitting the play button.
@@ -19,6 +19,6 @@ Try it out:
   endpoint tomorrow, you'll see a log of all the new requests, as well as
   updates to your Airtable base.
 
-Congratulations! You now have your first Dark application: an API that stores
-requests into a datastore, creates a daily report of those requests, and sends
-the report to Airtable.
+Congratulations! You've built an entire Darklang application: an API that stores
+requests into a datastore, creates a daily report of those requests, and sends the
+report to Airtable.

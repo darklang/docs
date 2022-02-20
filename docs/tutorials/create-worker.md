@@ -7,8 +7,7 @@ Workers process jobs in the background, ideal for daily reports. They're also
 commonly used for sending notifications and other asynchronous tasks that we
 don't want to handle in HTTP requests.
 
-If we were doing this for real, we might send the data to a 3rd party API over
-HTTP. But for the sake of simplicity, let's just store the data into the
+We're going to create a report, and store the aggregate data in the
 `DailyReport` datastore.
 
 1. From the 404 section of the sidebar, hit the plus (+) button to create the

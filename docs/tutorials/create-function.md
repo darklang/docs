@@ -3,8 +3,7 @@ title: "Tutorial: Create a Function"
 sidebar_label: "Create a Function"
 ---
 
-Let's look at creating a function to return a human readable summary of the
-number of reports for each day.
+To create the human readable summary of the daily reports, we'll create a function.
 
 The best way to create a function is by writing the code you want as part of
 your handler, and then extracting the working code to a function. This ensures
@@ -37,8 +36,8 @@ that whatever code you write has traces and live data.
 
 ![gettingstarted/newworker.png](/img/gettingstarted/selectall.png)
 
-7. Type `Ctrl-\` (Control-Backslash) to open the command palette, then select
-   `extract-function`.
+7. Type `Ctrl-\` to open the command palette, then select
+   `extract-function`. (On some keyboards, you might instead need to press `Alt-x` or `Ctrl-s`).
 
 ![gettingstarted/newworker.png](/img/gettingstarted/extractfunction.png)
 

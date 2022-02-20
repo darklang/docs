@@ -9,6 +9,8 @@ Dark has built-in standard libraries for working with external HTTP Calls
 In this Tutorial, we'll send the Daily Report we created to Airtable, so other
 team members can see it.
 
+If you don't feel like setting up an Airtable account, this step can be safely skipped, and you can continue to the [final step](./complete-first-application).
+
 1. Set up Airtable (~10 minutes).
 
 - Go to [Airtable](https://airtable.com) and create a new base.
