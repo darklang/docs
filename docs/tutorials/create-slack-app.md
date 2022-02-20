@@ -1,10 +1,6 @@
----
-title: "Tutorial: Create a Slack App"
-sidebar_label: "Create a Slack App"
----
+# How to create a Slack App
 
-Watch a demo video of a Slack app:
-[https://vimeo.com/380770154](https://vimeo.com/380770154)
+Watch a [demo video of building a Slack app](https://www.youtube.com/watch?v=cLFwsRwL5Ww).
 
 ## Getting started
 

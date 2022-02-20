@@ -16,16 +16,19 @@
             "tutorials/complete-first-application"
           ]
         },
-        "tutorials/create-slack-app",
-        "tutorials/sample-canvases",
-        "tutorials/external-db",
-        "slack-apps/slack-intro",
-        "slack-apps/slack-oauth",
-        "slack-apps/slack-packages",
-        "slack-apps/tutorials/channel-check",
-        "tutorials/tutorial-intro"
+        {
+          "Create a Slack app in Dark": [
+            "slack-apps/slack-intro",
+            "slack-apps/slack-oauth",
+            "slack-apps/slack-packages"
+          ]
+        },
+        "tutorials/video-tutorials"
       ],
       "How-to Guides": [
+        "slack-apps/tutorials/channel-check",
+        "tutorials/external-db",
+        "tutorials/sample-canvases",
         "how-to-guides/static-assets",
         "how-to-guides/custom-domains",
         "how-to-guides/cors",
@@ -33,6 +36,7 @@
         "how-to-guides/feature-flags",
         "how-to-guides/writing-tests",
         "how-to-guides/external-infra",
+        "tutorials/create-slack-app",
         "slack-apps/tutorials/howto-slack-asana",
         "slack-apps/tutorials/howto-slack-trello",
         "tutorials/react-spa-tutorial",
