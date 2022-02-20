@@ -15,28 +15,26 @@
         "tutorials/handle-error-errorrail",
         "tutorials/next-steps"
       ],
-      "How-to Guides": [
+      "Walk-throughs": [
         {
-          "Building applications": [
-            {
-              "Create a Slack app in Dark": [
-                "slack-apps/slack-intro",
-                "slack-apps/slack-oauth",
-                "slack-apps/slack-packages"
-              ]
-            },
-            "slack-apps/tutorials/channel-check",
-            "how-to-guides/create-slack-app",
-            "slack-apps/tutorials/howto-slack-asana",
-            "slack-apps/tutorials/howto-slack-trello",
-            "how-to-guides/react-spa-tutorial",
-            "how-to-guides/twilio-app-tutorial",
-            "how-to-guides/ifttt-alerts",
-            "how-to-guides/external-db",
-            "how-to-guides/airtable",
-            "how-to-guides/freshdesk"
+          "Create a Slack app in Dark": [
+            "slack-apps/slack-intro",
+            "slack-apps/slack-oauth",
+            "slack-apps/slack-packages"
           ]
         },
+        "slack-apps/tutorials/channel-check",
+        "how-to-guides/create-slack-app",
+        "slack-apps/tutorials/howto-slack-asana",
+        "slack-apps/tutorials/howto-slack-trello",
+        "how-to-guides/react-spa-tutorial",
+        "how-to-guides/twilio-app-tutorial",
+        "how-to-guides/ifttt-alerts",
+        "how-to-guides/external-db",
+        "how-to-guides/airtable",
+        "how-to-guides/freshdesk"
+      ],
+      "How-to Guides": [
         "how-to-guides/static-assets",
         "how-to-guides/custom-domains",
         "how-to-guides/cors",
