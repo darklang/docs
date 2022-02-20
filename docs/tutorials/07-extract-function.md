@@ -1,10 +1,10 @@
 ---
-title: "Tutorial: Create a Function"
-sidebar_label: "Create a Function"
-id: create-function
+title: "Tutorial: Extract code into a function"
+sidebar_label: "Extract code into a Function"
+id: extract-function
 ---
 
-To create the human readable summary of the daily reports, we'll create a function.
+Next, we'll create the human readable summary of the daily reports. To ensure that our code is well architected, we'll put this code in a function.
 
 The best way to create a function is by writing the code you want as part of
 your handler, and then extracting the working code to a function. This ensures

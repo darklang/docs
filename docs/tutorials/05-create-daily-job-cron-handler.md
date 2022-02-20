@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Create a Cron handler"
-sidebar_label: "Create a Cron handler"
-id: create-cron-handler
+title: "Tutorial: Create a daily job with a Cron handler"
+sidebar_label: "Create a daily job with a Cron handler"
+id: create-daily-job-cron-handler
 ---
 
 Now that we're storing requests, we can use a scheduled job (a "Cron", named

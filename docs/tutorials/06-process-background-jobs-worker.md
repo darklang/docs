@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Create a Worker"
-sidebar_label: Create a Worker
-id: create-worker
+title: "Tutorial: Process background jobs in a Worker"
+sidebar_label: Process background jobs in a Worker
+id: process-background-jobs-worker
 ---
 
 Workers process jobs in the background, ideal for daily reports. They're also

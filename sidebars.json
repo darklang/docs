@@ -5,14 +5,14 @@
       "Tutorial": [
         "tutorials/first-dark-application",
         "tutorials/create-http-handler",
-        "tutorials/create-repl",
-        "tutorials/create-datastore",
-        "tutorials/create-cron-handler",
-        "tutorials/create-worker",
-        "tutorials/create-function",
-        "tutorials/create-external-api-call",
+        "tutorials/create-tool-repl",
+        "tutorials/save-data-to-datastore",
+        "tutorials/create-daily-job-cron-handler",
+        "tutorials/process-background-jobs-worker",
+        "tutorials/extract-function",
+        "tutorials/call-external-api",
         "tutorials/complete-first-application",
-        "tutorials/errorrail-http-tutorial",
+        "tutorials/handle-error-errorrail",
         "tutorials/next-steps"
       ],
       "How-to Guides": [

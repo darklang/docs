@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Create a Datastore"
-sidebar_label: "Create a Datastore"
-id: create-datastore
+title: "Tutorial: Save data to a Datastore"
+sidebar_label: "Save data to a Datastore"
+id: save-data-to-datastore
 ---
 
 In the last section, we made a HTTP request that created a 404. We'll use _the

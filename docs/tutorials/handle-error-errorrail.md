@@ -1,8 +1,10 @@
 ---
-id: errorrail-http-tutorial
-title: Clean Error Messages with the Error Rail
-sidebar_label: Clean Error Messages with the Error Rail
+title: "Tutorial: Handle error messages with the Error Rail"
+sidebar_label: Handle error messages with the Error Rail
+id: handle-error-errorrail
 ---
+
+*Note: This is a self-contained tutorial and not part of the previous set.*
 
 In this tutorial, we will be showing you how to use the error rail with
 `HttpClient::get` to display clean error messages. We will be using the
