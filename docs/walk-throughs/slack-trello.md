@@ -1,5 +1,4 @@
 ---
-id: howto-slack-trello
 title: How to Create a New Trello Card from Slack
 ---
 

@@ -1,5 +1,4 @@
 ---
-id: twilio-app-tutorial
 title: Twilio tutorial
 sidebar_label: Twilio tutorial
 ---

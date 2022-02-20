@@ -23,16 +23,16 @@
             "slack-apps/slack-packages"
           ]
         },
-        "slack-apps/tutorials/channel-check",
-        "how-to-guides/create-slack-app",
-        "slack-apps/tutorials/howto-slack-asana",
-        "slack-apps/tutorials/howto-slack-trello",
-        "how-to-guides/react-spa-tutorial",
-        "how-to-guides/twilio-app-tutorial",
-        "how-to-guides/ifttt-alerts",
-        "how-to-guides/external-db",
-        "how-to-guides/airtable",
-        "how-to-guides/freshdesk"
+        "walk-throughs/slack-channel-check",
+        "walk-throughs/slack-app",
+        "walk-throughs/slack-asana",
+        "walk-throughs/slack-trello",
+        "walk-throughs/react-app",
+        "walk-throughs/twilio-app",
+        "walk-throughs/ifttt-alerts",
+        "walk-throughs/external-db",
+        "walk-throughs/airtable",
+        "walk-throughs/freshdesk"
       ],
       "How-to Guides": [
         "how-to-guides/static-assets",

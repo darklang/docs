@@ -1,5 +1,4 @@
 ---
-id: external-db
 title: Using an External DB
 sidebar_label: Using an External DB
 ---

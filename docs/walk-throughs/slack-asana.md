@@ -1,5 +1,4 @@
 ---
-id: howto-slack-asana
 title: How to connect Slack to Asana
 ---
 

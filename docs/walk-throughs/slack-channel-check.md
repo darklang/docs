@@ -1,5 +1,4 @@
 ---
-id: channel-check
 title: Check for New Slack Channels
 sidebar_label: Check for New Slack Channels
 ---

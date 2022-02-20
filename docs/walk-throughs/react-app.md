@@ -1,5 +1,4 @@
 ---
-id: react-spa-tutorial
 title: React SPA tutorial
 sidebar_label: React SPA tutorial
 ---

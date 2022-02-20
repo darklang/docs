@@ -1,5 +1,4 @@
 ---
-id: ifttt-alerts
 title: Alerting with IFTTT
 sidebar_label: Alerting with IFTTT
 ---

@@ -1,5 +1,4 @@
 ---
-id: freshdesk
 title: Freshdesk Sample
 sidebar_label: Freshdesk Sample
 ---
