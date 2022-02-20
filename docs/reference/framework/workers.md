@@ -1,8 +1,4 @@
----
-id: component-worker
-title: Workers
-sidebar_label: Workers
----
+# Workers
 
 Dark supports doing work asynchronously outside the context of an HTTP handler
 using a **Worker**. Each worker has a queue of messages, which are processed

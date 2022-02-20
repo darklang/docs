@@ -1,8 +1,4 @@
----
-id: component-cron
-title: Cron
-sidebar_label: Cron
----
+# Cron
 
 Dark supports scheduled jobs via a Cron component. Use a Cron when you want to
 schedule something to occur on a timed interval.

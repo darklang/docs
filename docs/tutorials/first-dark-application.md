@@ -1,7 +1,6 @@
 ---
-id: your-first
-title: Your First App
-sidebar_label: Your First App
+title: "Tutorial: Your first Darklang application"
+sidebar_label: "Your first Darklang application"
 ---
 
 We're going to take you through a tutorial to build an entire application that
@@ -479,7 +478,7 @@ team members can see it.
    an argument, such as `{}`.
 
 6. Add the information from the report to the body (the date and number of
-   requests). Airtable expects the following format:  
+   requests). Airtable expects the following format:
    `records : [{fields : {Date : date, Requests : count}}]`
 
 ![img/gettingstarted/newworker.png](/img/gettingstarted/api_body.png)

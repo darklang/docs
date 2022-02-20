@@ -1,8 +1,4 @@
----
-id: packages
-title: Packages
-sidebar_label: Packages
----
+# Packages
 
 ## Overview
 

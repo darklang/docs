@@ -1,8 +1,4 @@
----
-id: http
-title: HTTP Responses
-sidebar_label: HTTP Responses
----
+# HTTP Framework
 
 The result of HTTP handlers are automatically converted into HTTP responses. By
 default, they are converted to JSON, and returned with a content-type based on

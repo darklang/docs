@@ -1,20 +1,21 @@
----
-id: python-cheat-sheet
-title: From Python
-sidebar_label: From Python
----
+# Javascript cheat sheet
 
-This guide will help you learn Dark if you're familiar with Python.
+This guide will help you learn Dark if you're familiar with Javascript.
 
 Have a tip to add to the guide?
 [Submit a PR](https://github.com/darklang/docs/pulls)!
 
 ## Comments
 
-In Python, you use a `#` to start a comment:
+In Javascript, you use a `//` to start a single line comment, or `/*` and `*/`
+to wrap a multiline comment.:
 
-```python
-# This is a comment
+```Javascript
+// This is a comment
+
+/* This is
+also a
+comment */
 ```
 
 In Dark, you use a `let _ =` to start a comment, and you write the comment as a
@@ -24,9 +25,9 @@ String:
 
 ## Strings
 
-In Python, you can write a String in multiple ways:
+In Javascript, you can write a String in multiple ways:
 
-```python
+```Javascript
 "This is a string"
 'This is also a string'
 ```
@@ -36,17 +37,18 @@ In Dark, you always use double quotes:
 
 ## Functions
 
-In Python, you use the `def` keyword to define a function:
+In Javascript, you use the `function` keyword to define a function:
 
-```python
-def say_hello():
-    print('Hello World')
+```Javascript
+function helloWorld(){
+    return "Hello World";
+}
 ```
 
 and you call a function with the function name, followed by parentheses:
 
-```python
-say_hello()
+```Javascript
+helloWorld();
 ```
 
 In Dark, you create a function from the sidebar:
@@ -60,11 +62,11 @@ name of the function and its contents:
 
 ## Standard Library/Built-in Functions
 
-Python defines a set of built in functions that are called like this:
+Javascript defines a set of built in functions that are called like this:
 
-```python
-# This returns 2 to the power of 2.
-math.power(2,2)
+```Javascript
+// This returns 2 to the power of 2.
+Math.pow(2,2)
 ```
 
 Dark has a set of built in functions as well, which can be accessed via the
@@ -72,20 +74,22 @@ autocomplete:
 
 ![from-python/power.gif](/img/from-python/power.gif)
 
-## If/Elif/Else statements
+## If/Else statements
 
-In Python, you would write an `if` statement like this:
+In Javascript, you would write an `if` statement like this:
 
-```python
-a = 5
-b = 10
+```Javascript
+var a = 5
+var b = 10
 
-if p > a:
-   print("b is greater than a")
-elif a == b:
-   print("a and b are equal")
+if (b > a) {
+   return "b is greater than a";
+}
+else if (a == b) {
+   return "a and b are equal";
+}
 else
-    print("a is greater than b")
+    return "a is greater than b";
 ```
 
 In Dark, the same statement would look this this:
@@ -93,6 +97,6 @@ In Dark, the same statement would look this this:
 ![from-python/ifs.png](/img/from-python/ifs.png)
 
 Note that we highlight the path your code takes - so if we were to change the
-values, a different piece of the `if` statement would be highlighted:
+values, a different piece of the `If` statement would be highlighted:
 
 ![from-python/ifs2.png](/img/from-python/ifs2.png)

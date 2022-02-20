@@ -3,23 +3,23 @@
     {
       "Introduction": ["introduction"],
       "Tutorials": [
-        "your-first",
+        "tutorials/first-dark-application",
+        "tutorials/creating-slack-app",
         "tutorials/sample-canvases",
         "slack-apps/slack-intro",
         "slack-apps/slack-oauth",
         "slack-apps/slack-packages",
         "slack-apps/tutorials/channel-check",
-        "slack-app-tutorial",
         "tutorials/tutorial-intro"
       ],
       "How-to Guides": [
-        "static-assets",
-        "custom-domains",
-        "cors",
-        "teamwork",
-        "feature-flags",
-        "writing-tests",
-        "external-infra",
+        "how-to-guides/static-assets",
+        "how-to-guides/custom-domains",
+        "how-to-guides/cors",
+        "how-to-guides/teamwork",
+        "how-to-guides/feature-flags",
+        "how-to-guides/writing-tests",
+        "how-to-guides/external-infra",
         "slack-apps/tutorials/howto-slack-asana",
         "slack-apps/tutorials/howto-slack-trello",
         "tutorials/react-spa-tutorial",
@@ -27,39 +27,46 @@
         "tutorials/error-rail-http-tutorial",
         "tutorials/ifttt-alerts",
         "tutorials/external-db",
-        "tutorials/airtable",
+        "how-to-guides/airtable",
         "tutorials/freshdesk"
       ],
       "Discussion & Explanations": [
-        "languageoverview",
-        "unique-aspects",
-        "functional-aspects",
-        "when-dark",
-        "dark-backend-components",
-        "trace-driven-development",
-        "structured-editing",
-        "error-handling",
-        "component-worker",
-        "component-cron"
+        "discussion/languageoverview",
+        "discussion/unique-aspects",
+        "discussion/functional-aspects",
+        "discussion/when-dark",
+        "discussion/dark-backend-components",
+        "discussion/trace-driven-development",
+        "discussion/structured-editing",
+        "discussion/error-handling"
       ],
       "Reference": [
         {
-          "Cheat Sheets": ["python-cheat-sheet", "javascript-cheat-sheet"]
+          "Cheat Sheets": [
+            "reference/cheatsheets/python-cheatsheet",
+            "reference/cheatsheets/javascript-cheatsheet"
+          ],
+          "Function & Package reference": [
+            "reference/function-reference",
+            "reference/packages",
+            "reference/httpclient"
+          ],
+          "Framework components": [
+            "reference/framework/http-framework",
+            "reference/framework/datastores",
+            "reference/framework/workers",
+            "reference/framework/cron"
+          ]
         },
-        "languagedetails",
-        "datastores",
-        "function-reference",
-        "packages",
-        "httpclient",
-        "http",
-        "keyboard-mapping",
-        "support",
-        "sharing-dark",
-        "changelog",
-        "faqs",
-        "terms-of-service",
-        "backward-compatibility",
-        "desktop-client"
+        "reference/languagedetails",
+        "reference/keyboard-mapping",
+        "reference/support",
+        "reference/sharing-dark",
+        "reference/changelog",
+        "reference/faqs",
+        "reference/terms-of-service",
+        "reference/backward-compatibility",
+        "reference/desktop-client"
       ]
     }
   ],

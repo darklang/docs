@@ -1,8 +1,4 @@
----
-id: datastores
-title: Datastores
-sidebar_label: Datastores
----
+# Datastores
 
 ## Overview
 

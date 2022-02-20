@@ -1,8 +1,4 @@
----
-id: httpclient
-title: HTTP Client
-sidebar_label: HTTP Client
----
+# HTTP Client
 
 ## Overview
 
