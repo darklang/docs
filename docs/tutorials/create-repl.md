@@ -1,6 +1,6 @@
 ---
-id: first-repl
-title: Your first REPL
+title: "Tutorial: Create a REPL"
+sidebar_label: Create a REPL
 ---
 
 **Concepts:** REPLs, HttpClient library, Play buttons

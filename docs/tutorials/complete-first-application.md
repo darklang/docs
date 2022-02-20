@@ -1,6 +1,6 @@
 ---
-id: finishing-touches
-title: Finishing touches
+title: "Tutorial: Complete your first Darklang application"
+sidebar_label: Complete your first application
 ---
 
 Try it out:

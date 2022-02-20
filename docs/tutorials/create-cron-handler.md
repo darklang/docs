@@ -1,6 +1,6 @@
 ---
-id: first-cron
-title: Your first Cron
+title: "Tutorial: Create a Cron handler"
+sidebar_label: "Create a Cron handler"
 ---
 
 Now that we're storing requests, we can use a scheduled job (a "Cron", named

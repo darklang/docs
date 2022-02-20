@@ -1,6 +1,6 @@
 ---
-id: first-function
-title: Your first Function
+title: "Tutorial: Create a Function"
+sidebar_label: "Create a Function"
 ---
 
 Let's look at creating a function to return a human readable summary of the

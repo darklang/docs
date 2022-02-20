@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Creating a Slack App"
-sidebar_label: "Creating a Slack App"
+title: "Tutorial: Create a Slack App"
+sidebar_label: "Create a Slack App"
 ---
 
 Watch a demo video of a Slack app:

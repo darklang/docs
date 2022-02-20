@@ -5,9 +5,9 @@ sidebar_label: "Your first Darklang application"
 
 We're going to take you through a tutorial to build an entire application that
 uses Dark's basic functionality. This should take between 10m and 45m, depending
-on how thorough you are.
+on how thorough you are. If you're having problems, come talk to us in the [Dark Community Slack](https://darklang.com/slack-invite).
 
-If your account was created after March 2020, you can see a completed version of
+You can see a completed version of
 this tutorial at _darklang.com/a/USERNAME-gettingstarted_. If you'd like to
 start from scratch, navigate to a fresh canvas
 (_darklang.com/a/USERNAME-gettingstarted2_, for example.)
@@ -17,66 +17,13 @@ A completed version of this tutorial, is also available at
 Note that you should **not** copy/paste this &ndash; we want to teach you to use
 the Dark editor.
 
-### Support
+## Open the Editor
 
-If you'd like some help, come to the
-[Dark Community Slack](https://darklang.com/slack-invite). Dark engineers answer
-questions, talk you through issues, and fix bugs, often within minutes. Lots of
-experienced community members are also around to offer helpful suggestions.
+To start, open the Dark editor by going to _darklang.com/a/USERNAME_. If you haven't
+signed up yet, you'll need to [sign up for an account](https://darklang.com/signup)
+(it's free to signup).
 
-## Your Canvas
-
-A Dark canvas is an integrated development environment (IDE), an HTTP client,
-and a web server. You'll write code in the canvas with all the functionality you
-expect from an IDE (text editing as well as code completion and debugging). The
-canvas can compose and send HTTP requests, similar to API query tools such as
-curl, Postman, or Insomnia. Finally, the canvas is a web application server: The
-canvas can receive HTTP requests (including webhooks, requests from an ordinary
-browser, or even another canvas). The Dark IDE runs in your browser at
-[https://darklang.com/a/USERNAME-gettingstarted](https://darklang.com/a/USERNAME-gettingstarted)
-and the Dark server responds to HTTP requests at
-[https://USERNAME-gettingstarted.builtwithdark.com/](https://USERNAME-gettingstarted.builtwithdark.com/).
-
-## API Endpoint
-
-**Concepts:** Structural elements, blanks, implicit returns, traces.
-
-Here you'll use the IDE to write code (an API endpoint) that responds to a
-browser HTTP request.
-
-1. Create a new HTTP endpoint from the omnibox (click anywhere on the screen or
-   hit `Cmd-k`/`Ctrl-k`), or from the plus next to `HTTP` on the sidebar.
-
-![gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
-
-2. Enter the HTTP verb as `GET` and `/math` for the route.
-
-![img/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.11.23_AM.png)
-
-3. You can now write any code in the blank &ndash; this is the return value of
-   the API endpoint that you've just created. To start with, let's just return
-   `4`.
-
-![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.02_AM.png)
-
-4. Click the handler's menu (☰) in the upper right and select "open in new tab",
-   to see your API endpoint running in production.
-
-![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
-
-5. Go back to Dark to edit your code. Add `+ 5` to the end of the code and leave
-   your cursor in line.
-
-![img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
-
-- The `9` below the handler shows you the return value for the handler.
-
-- The `5` on the left shows you the result of the expression where the cursor
-  currently is (in this case, 5). This isn't very useful when it's an integer,
-  but if it's a variable it will show you the result of the variable.
-
-![img/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
-
+<!--
 6. Mouse over the white dots on the left. Each dot is a "trace", representing a
    single request to your handler. Traces are fundamental to coding in Dark, and
    we'll come back to them later.
@@ -533,4 +480,4 @@ emitting `todayRequests` to the `StoreReport` worker or not.
 
 Congratulations! You now have your first Dark application: an API that stores
 requests into a datastore, creates a daily report of those requests, and sends
-the report to Airtable.
+the report to Airtable. -->

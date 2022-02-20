@@ -1,6 +1,6 @@
 ---
-id: first-api
-title: Your first External API Call
+title: "Tutorial: Create an External API Call"
+sidebar_label: "Create an External API Call"
 ---
 
 Dark has built-in standard libraries for working with external HTTP Calls
@@ -47,7 +47,7 @@ team members can see it.
    an argument, such as `{}`.
 
 6. Add the information from the report to the body (the date and number of
-   requests). Airtable expects the following format:  
+   requests). Airtable expects the following format:
    `records : [{fields : {Date : date, Requests : count}}]`
 
 ![gettingstarted/newworker.png](/img/gettingstarted/api_body.png)

@@ -1,6 +1,6 @@
 ---
-id: first-worker
-title: Your first Worker
+title: "Tutorial: Create a Worker"
+sidebar_label: Create a Worker
 ---
 
 Workers process jobs in the background, ideal for daily reports. They're also

@@ -1,6 +1,6 @@
 ---
-id: first-datastore
-title: Your first Datastore
+title: "Tutorial: Create a Datastore"
+sidebar_label: "Create a Datastore"
 ---
 
 In the last section, we made a HTTP request that created a 404. We'll use _the
