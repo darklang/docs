@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Complete your first Darklang application"
 sidebar_label: Complete your first application
+id: complete-first-application
 ---
 
 To try out the end-to-end application:

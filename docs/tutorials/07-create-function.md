@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Create a Function"
 sidebar_label: "Create a Function"
+id: create-function
 ---
 
 To create the human readable summary of the daily reports, we'll create a function.

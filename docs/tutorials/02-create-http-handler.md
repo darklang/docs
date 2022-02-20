@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Create a HTTP handler"
 sidebar_label: Create a HTTP handler
+id: create-http-handler
 ---
 
 Let's start by using the editor to write an API endpoint that responds to a

@@ -29,13 +29,8 @@ module.exports = {
           position: "right",
         },
         {
-          to: "tutorials/tutorial-intro",
-          label: "Tutorials & Samples",
-          position: "right",
-        },
-        {
-          to: "slack-apps/slack-intro",
-          label: "Building Slack Apps",
+          to: "tutorials/first-dark-application",
+          label: "Tutorial",
           position: "right",
         },
         {
@@ -78,14 +73,10 @@ module.exports = {
           items: [
             {
               label: "Company",
-              to: "https://darklang.com/about",
+              to: "https://darklang.com/",
             },
             {
-              label: "Dev Blog",
-              to: "https://dev.to/darklang",
-            },
-            {
-              label: "Corp Blog",
+              label: "Blog",
               to: "https://blog.darklang.com",
             },
           ],

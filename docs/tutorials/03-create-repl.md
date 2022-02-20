@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Create a REPL"
 sidebar_label: Create a REPL
+id: create-repl
 ---
 
 REPLs in Dark are general-purpose coding blocks. They're typically to create reuable tools, experiments, one-off commands, or admin dashboards, in a similar way that you might use scripts or REPLs in other languages.

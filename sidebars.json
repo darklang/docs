@@ -2,50 +2,50 @@
   "docs": [
     {
       "Introduction": ["introduction"],
-      "Tutorials": [
-        {
-          "Create a full application": [
-            "tutorials/first-dark-application",
-            "tutorials/create-http-handler",
-            "tutorials/create-repl",
-            "tutorials/create-datastore",
-            "tutorials/create-cron-handler",
-            "tutorials/create-worker",
-            "tutorials/create-function",
-            "tutorials/create-external-api-call",
-            "tutorials/complete-first-application"
-          ]
-        },
-        {
-          "Create a Slack app in Dark": [
-            "slack-apps/slack-intro",
-            "slack-apps/slack-oauth",
-            "slack-apps/slack-packages"
-          ]
-        },
-        "tutorials/video-tutorials"
+      "Tutorial": [
+        "tutorials/first-dark-application",
+        "tutorials/create-http-handler",
+        "tutorials/create-repl",
+        "tutorials/create-datastore",
+        "tutorials/create-cron-handler",
+        "tutorials/create-worker",
+        "tutorials/create-function",
+        "tutorials/create-external-api-call",
+        "tutorials/complete-first-application",
+        "tutorials/errorrail-http-tutorial",
+        "tutorials/next-steps"
       ],
       "How-to Guides": [
-        "slack-apps/tutorials/channel-check",
-        "tutorials/external-db",
-        "tutorials/sample-canvases",
-        "how-to-guides/static-assets",
-        "how-to-guides/custom-domains",
-        "how-to-guides/cors",
-        "how-to-guides/teamwork",
-        "how-to-guides/feature-flags",
-        "how-to-guides/writing-tests",
-        "how-to-guides/external-infra",
-        "tutorials/create-slack-app",
-        "slack-apps/tutorials/howto-slack-asana",
-        "slack-apps/tutorials/howto-slack-trello",
-        "tutorials/react-spa-tutorial",
-        "tutorials/twilio-app-tutorial",
-        "tutorials/error-rail-http-tutorial",
-        "tutorials/ifttt-alerts",
-        "tutorials/external-db",
-        "how-to-guides/airtable",
-        "tutorials/freshdesk"
+        {
+          "Building applications": [
+            {
+              "Create a Slack app in Dark": [
+                "slack-apps/slack-intro",
+                "slack-apps/slack-oauth",
+                "slack-apps/slack-packages"
+              ]
+            },
+            "slack-apps/tutorials/channel-check",
+            "how-to-guides/create-slack-app",
+            "slack-apps/tutorials/howto-slack-asana",
+            "slack-apps/tutorials/howto-slack-trello",
+            "how-to-guides/react-spa-tutorial",
+            "how-to-guides/twilio-app-tutorial",
+            "how-to-guides/ifttt-alerts",
+            "how-to-guides/external-db",
+            "how-to-guides/airtable",
+            "how-to-guides/freshdesk"
+          ],
+          "Using Dark features": [
+            "how-to-guides/static-assets",
+            "how-to-guides/custom-domains",
+            "how-to-guides/cors",
+            "how-to-guides/teamwork",
+            "how-to-guides/feature-flags",
+            "how-to-guides/writing-tests",
+            "how-to-guides/external-infra"
+          ]
+        }
       ],
       "Discussion & Explanations": [
         "discussion/languageoverview",
@@ -75,6 +75,7 @@
             "reference/framework/cron"
           ]
         },
+        "reference/sample-canvases",
         "reference/languagedetails",
         "reference/keyboard-mapping",
         "reference/support",

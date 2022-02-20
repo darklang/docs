@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Create a Worker"
 sidebar_label: Create a Worker
+id: create-worker
 ---
 
 Workers process jobs in the background, ideal for daily reports. They're also

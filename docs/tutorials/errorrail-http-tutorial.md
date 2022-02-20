@@ -1,5 +1,5 @@
 ---
-id: error-rail-http-tutorial
+id: errorrail-http-tutorial
 title: Clean Error Messages with the Error Rail
 sidebar_label: Clean Error Messages with the Error Rail
 ---

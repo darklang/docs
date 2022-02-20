@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Create an External API Call"
 sidebar_label: "Create an External API Call"
+id: create-external-api-call
 ---
 
 Dark has built-in standard libraries for working with external HTTP Calls

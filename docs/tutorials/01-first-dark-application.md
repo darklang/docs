@@ -1,6 +1,7 @@
 ---
 title: "Tutorial: Your first Darklang application"
 sidebar_label: "Your first Darklang application"
+id: first-dark-application
 ---
 
 We're going to take you through a tutorial to build an entire application that
