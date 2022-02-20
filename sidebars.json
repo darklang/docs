@@ -35,17 +35,14 @@
             "how-to-guides/external-db",
             "how-to-guides/airtable",
             "how-to-guides/freshdesk"
-          ],
-          "Using Dark features": [
-            "how-to-guides/static-assets",
-            "how-to-guides/custom-domains",
-            "how-to-guides/cors",
-            "how-to-guides/teamwork",
-            "how-to-guides/feature-flags",
-            "how-to-guides/writing-tests",
-            "how-to-guides/external-infra"
           ]
-        }
+        },
+        "how-to-guides/static-assets",
+        "how-to-guides/custom-domains",
+        "how-to-guides/cors",
+        "how-to-guides/collaborate",
+        "how-to-guides/feature-flags",
+        "how-to-guides/write-tests"
       ],
       "Discussion & Explanations": [
         "discussion/languageoverview",

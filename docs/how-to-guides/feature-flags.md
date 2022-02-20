@@ -1,7 +1,7 @@
 ---
 id: feature-flags
-title: Use Feature Flags
-sidebar_label: Use Feature Flags
+title: How to use Feature Flags
+sidebar_label: How to use Feature Flags
 ---
 
 In Dark, all changes are made in production, on your real infrastructure. If

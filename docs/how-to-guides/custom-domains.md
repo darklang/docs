@@ -1,7 +1,7 @@
 ---
 id: custom-domains
-title: Use a Custom Domain
-sidebar_label: Use a Custom Domain
+title: How to set up a Custom Domain
+sidebar_label: How to set up a custom domain
 ---
 
 Your backend endpoints are always available at

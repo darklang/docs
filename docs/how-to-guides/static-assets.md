@@ -1,7 +1,7 @@
 ---
 id: static-assets
-title: Host Static Assets
-sidebar_label: Host Static Assets
+title: How to host Static Assets on Dark
+sidebar_label: How to host Static Assets
 ---
 
 Dark supports hosting your static assets.

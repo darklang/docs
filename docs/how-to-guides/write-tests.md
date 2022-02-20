@@ -1,7 +1,7 @@
 ---
-id: writing-tests
-title: Writing Tests
-sidebar_label: Write Tests
+id: write-tests
+title: How to Write Tests in Dark
+sidebar_label: How to write tests
 ---
 
 At the moment, Dark does not provide an out of the box testing framework.
