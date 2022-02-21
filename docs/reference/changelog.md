@@ -473,17 +473,17 @@ added:
   - A section around
     [submitting external contributions](/contributing/getting-started)
     ([134](https://darklang.com/docs/contributing/getting-started))
-  - A guide around [when and when not to use Dark](./when-dark)
+  - A guide around [when and when not to use Dark](/discussion/when-dark)
     ([133](https://github.com/darklang/docs/pull/133))
   - Expanded information about
-    [Datastore migrations](./datastores#migrations-locking-and-unlocking)
+    [Datastore migrations](/reference/framework/datastores#migrations-locking-and-unlocking)
     ([141](https://github.com/darklang/docs/pull/141))
-  - A [From Javascript page](./from-javascript) to help developers familiar with
+  - A [From Javascript page](/reference/cheatsheets/javascript-cheatsheet) to help developers familiar with
     Javascript learn Dark ([132](https://github.com/darklang/docs/pull/132))
   - Documentation for the
     [`Slack::createCheckoutSession`](./packages#createcheckoutsession) package
     ([139](https://github.com/darklang/docs/pull/139))
-- Made a few improvements to the [Your First App](./your-first) tutorial
+- Made a few improvements to the [Your First App](/tutorials/first-dark-application) tutorial
   ([129](https://github.com/darklang/docs/pull/129),
   [130](https://github.com/darklang/docs/pull/130))
 - Misc. spelling fixes ([128](https://github.com/darklang/docs/pull/128),
@@ -501,8 +501,8 @@ added:
   significantly improved its performance. You should now see all Crons,
   including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions
-  on/off the [error rail](./error-handling#error-rail) or when committing
-  [feature flags](./feature-flags).
+  on/off the [error rail](/discussion/error-handling#error-rail) or when committing
+  [feature flags](/how-to-guides/feature-flags).
 
 ### Documentation
 
@@ -510,24 +510,23 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our
 docs repo is public and all you need to do to contribute is
 [submit a pull request](https://github.com/darklang/docs/pulls).
 
-- Added instructions for [hosting static assets](/static-assets) when not using
+- Added instructions for [hosting static assets](/how-to-guides/static-assets) when not using
   an external framework. ([119](https://github.com/darklang/docs/pull/119))
-- Fixed a broken link on the [Language Details](/languagedetails) page.
+- Fixed a broken link on the [Language Details](/reference/languagedetails) page.
   ([117](https://github.com/darklang/docs/pull/117))
 - Added instructions on how to pause your cron once you're done with the
-  [Your First App](/your-first) tutorial.
+  [Your First App](/tutorials/first-dark-application) tutorial.
   ([122](https://github.com/darklang/docs/pull/122))
 - New how-to pages:
-  - [Feature flags](./feature-flags)
+  - [Feature flags](/how-to-guides/feature-flags)
     ([118](https://github.com/darklang/docs/pull/118))
-  - [Writing tests](./writing-tests)
+  - [Writing tests](/how-to-guides/write-tests)
     ([120](https://github.com/darklang/docs/pull/120))
-  - [Connecting to external infrastructure](./external-infra)
     ([126](https://github.com/darklang/docs/pull/126))
 - New tutorials:
-  - [Using an external DB](./tutorials/external-db)
+  - [Using an external DB](/walk-throughs/external-db)
     ([124](https://github.com/darklang/docs/pull/124))
-  - [Alerting with IFTTT](./tutorials/ifttt-alerts)
+  - [Alerting with IFTTT](/walk-throughs/ifttt-events)
     ([125](https://github.com/darklang/docs/pull/125))
 
 ## Week of 5/15/2020
@@ -576,7 +575,7 @@ docs repo is public and all you need to do to contribute is
 ## Week of 5/8/2020
 
 - We now have Dark badges for your sites! Add a
-  [Made With Dark badge](https://darklang.com/docs/sharing-dark) to your apps to
+  [Made With Dark badge](https://darklang.com/docs/reference/sharing-dark) to your apps to
   establish your early Dark expertise 🎉
 
 ![changelog/badge.png](/img/changelog/badge.png)
@@ -1092,9 +1091,9 @@ We added a bunch of improved documentation, including:
 
 ### Documentation
 
-- Created a [Sharing Dark Projects](/sharing-dark) guide
+- Created a [Sharing Dark Projects](/reference/sharing-dark) guide
 - Improved the steps at the beginning of the
-  [Guide to Building a Backend for a React SPA in Dark](/tutorials/react-spa-tutorial)
+  [Guide to Building a Backend for a React SPA in Dark](/walk-throughs/react-app)
 
 ## Week of 1/24/2020
 
@@ -1153,7 +1152,7 @@ We added a bunch of improved documentation, including:
 
 ### Documentation
 
-- A [list of sample canvases](/tutorials/sample-canvases). and descriptions has
+- A [list of sample canvases](/reference/sample-canvases). and descriptions has
   been added
 
 ## Week of 1/17/2020
@@ -1167,7 +1166,7 @@ We added a bunch of improved documentation, including:
 ![changelog/image1.gif](/img/changelog/image1.gif)
 
 - Improved
-  [documentation around the Error Rail](/tutorials/error-rail-http-tutorial)
+  [documentation around the Error Rail](/tutorials/handle-error-errorrail)
 - GitHub API! See our [sample canvas](https://darklang.com/a/sample-github)
   demonstrating how to call the GitHub API
 - Fixed an issue where deleted from the middle of a concatenated string would

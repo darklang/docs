@@ -2,7 +2,12 @@
   "docs": [
     "introduction",
     {
-      "Tutorial": [
+      "type": "category",
+      "label": "Tutorial",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
         "tutorials/first-dark-application",
         "tutorials/create-http-handler",
         "tutorials/create-tool-repl",
@@ -14,8 +19,15 @@
         "tutorials/complete-first-application",
         "tutorials/handle-error-errorrail",
         "tutorials/next-steps"
-      ],
-      "Walk-throughs": [
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Walk-throughs",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
         "walk-throughs/react-app",
         "walk-throughs/slack-app",
         "walk-throughs/external-db",
@@ -26,16 +38,30 @@
         "walk-throughs/ifttt-events",
         "walk-throughs/airtable",
         "walk-throughs/freshdesk"
-      ],
-      "How-to Guides": [
+      ]
+    },
+    {
+      "type": "category",
+      "label": "How-to Guides",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
         "how-to-guides/static-assets",
         "how-to-guides/custom-domains",
         "how-to-guides/cors",
         "how-to-guides/collaborate",
         "how-to-guides/feature-flags",
         "how-to-guides/write-tests"
-      ],
-      "Discussion & Explanations": [
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Discussion",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
         "discussion/languageoverview",
         "discussion/unique-aspects",
         "discussion/functional-aspects",
@@ -44,8 +70,15 @@
         "discussion/trace-driven-development",
         "discussion/structured-editing",
         "discussion/error-handling"
-      ],
-      "Reference": [
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Reference",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
         {
           "Cheat Sheets": [
             "reference/cheatsheets/python-cheatsheet",

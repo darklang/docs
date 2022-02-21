@@ -23,12 +23,12 @@ endpoint is immediately
 
 The documentation is split into:
 
-- [tutorials](/tutorials)
-- [walk-throughs](/walk-throughs) of creating application in Dark
-- [how-to guides](/how-to) for using Dark features
-- [background, discussions and explanations](/discussion)
-- [reference materials](/reference)
+- [tutorials](/category/tutorial)
+- [walk-throughs](/category/walk-throughs) of creating application in Dark
+- [how-to guides](/category/how-to-guides) for using Dark features
+- [background, discussions and explanations](/category/discussion)
+- [reference materials](/category/reference)
 
 New folks should start at the
-[Your first Darklang application](./tutorials/first-dark-application) tutorial
+[Your first Darklang application](/tutorials/first-dark-application) tutorial
 to get started.
