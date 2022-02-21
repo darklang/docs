@@ -16,21 +16,14 @@
         "tutorials/next-steps"
       ],
       "Walk-throughs": [
-        {
-          "Create a Slack app in Dark": [
-            "slack-apps/slack-intro",
-            "slack-apps/slack-oauth",
-            "slack-apps/slack-packages"
-          ]
-        },
-        "walk-throughs/slack-channel-check",
+        "walk-throughs/react-app",
         "walk-throughs/slack-app",
+        "walk-throughs/external-db",
+        "walk-throughs/slack-channel-check",
         "walk-throughs/slack-asana",
         "walk-throughs/slack-trello",
-        "walk-throughs/react-app",
         "walk-throughs/twilio-app",
         "walk-throughs/ifttt-events",
-        "walk-throughs/external-db",
         "walk-throughs/airtable",
         "walk-throughs/freshdesk"
       ],

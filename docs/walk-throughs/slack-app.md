@@ -1,30 +1,15 @@
 ---
-title: "Walk-through: Create a complete Slack app"
-sidebar_label: "Slack: create a complete app"
+title: "Walk-through: Send and receive messages"
+sidebar_label: "Slack: send and receive messages"
 ---
 
 Watch a [demo video of building a Slack app](https://www.youtube.com/watch?v=cLFwsRwL5Ww).
 
 ## Getting started
 
-Dark allows you to build backends (API endpoints, workers, cron, and data
-storage) by writing only your business logic, using production traces. You can
-access your account from darklang.com/a/USERNAME-CANVASNAME. For this project we
-recommend darklang.com/a/USERNAME-slackapp.
-
-We recommend building a hello world API endpoint to get a feel for Dark, as
-follows:
-
-![ck/image7.gif](/img/slack/image7.gif)
-
-All the major handlers work the same way, but the key for many requests is
-working directly with incoming data. If you’ve never used Dark before, it may be
-helpful to take a quick look at the
-[editor explanation](https://docs.google.com/document/d/1swhQBeCx1Ykly1SJfjVFiPiXuevcEyzPLkc04dMKbgQ/edit#heading=h.75uupsex1kqv).
-
-This guide will walk you through how to set up a Slack application, trigger
-events from it, and write the corresponding backend logic. Our app is called Lou
-Dog to the Rescue and sends photos of Lou, (one of) our office dogs.
+This guide will walk you through how to set up a Slack application, trigger events
+from it, and write the corresponding backend logic. Our app is for sharing photos of
+office dogs.
 
 ## Creating a Slack App
 
