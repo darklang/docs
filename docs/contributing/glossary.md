@@ -2,7 +2,7 @@
 title: Glossary
 ---
 
-**Coming soon**
+## Coming soon
 
 - Toplevel
 - Structural toplevel

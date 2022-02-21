@@ -7,11 +7,11 @@ OCaml to F#. The motivation for this is to give us access to a richer ecosystem
 of libraries to build Dark on, especially cloud libraries. This is described
 more in a set of blog posts:
 
-- https://blog.darklang.com/leaving-ocaml/
-- https://blog.darklang.com/new-backend-fsharp/
-- https://blog.darklang.com/why-dark-didnt-choose-rust/
+- [https://blog.darklang.com/leaving-ocaml/](https://blog.darklang.com/leaving-ocaml/)
+- [https://blog.darklang.com/new-backend-fsharp/](https://blog.darklang.com/new-backend-fsharp/)
+- [https://blog.darklang.com/why-dark-didnt-choose-rust/](https://blog.darklang.com/why-dark-didnt-choose-rust/)
 
-# Porting standard library functions
+## Porting standard library functions
 
 Dark's standard library functions need to be ported from OCaml to F#. At last
 count there were 267 functions that needed porting, in addition to the 207
@@ -28,14 +28,14 @@ When porting a function, start by finding the commented out version of it (in
 preprocessed in bulk to closely match the intended F# code, so once you
 uncomment it, there should only be a small amount of work to port it over.
 
-## TaskOrValue
+### Ply
 
 The functions in OCaml were written to not function concurrently, while the F#
 version is designed to run concurrently. The major difference here is that the
 OCaml backend returns a `Dval` (a Dark value), while the F# version returns a
-`TaskOrValue<Dval>`.
+`Ply<Dval>`.
 
-For most simple functions that do no IO, a `TaskOrValue` just wraps a `Dval`.
+For most simple functions that do no IO, a `Ply` just wraps a `Dval`.
 For example, compare the original OCaml version of `Int::add_v0`:
 
 ```ocaml
@@ -257,7 +257,7 @@ That said, functions can never have enough tests, so if you think the existing
 tests aren't adequate, feel free to add more. If you aren't sure of the expected
 behaviour, run it on your canvas on `darklang.com`.
 
-# Porting APIs
+## Porting APIs
 
 There are many APIs that need to be ported - these are used by the editor. The
 APIs that need to still be implemented are commented out at the bottom of
@@ -273,7 +273,7 @@ These are implemented in two parts:
 Look at existing examples for how to do this, especially for how to port SQL
 calls from OCaml to Dark.
 
-# Other work to be done
+## Other work to be done
 
 The remainder of the work is bring tracked in the issue tracker under the
 [F# label](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Af%23).

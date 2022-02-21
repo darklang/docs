@@ -49,7 +49,7 @@ let someFunction = (intArgument: int) : string =>
 
 As you can see, the syntaxes are very similar.
 
-## Dark vs ReScript vs F#
+## Dark vs ReScript vs F\#
 
 Dark, ReScript, and F# are all influenced by OCaml. Though Dark is currently a
 subset of these languages, Dark will continue to grow some more of their
@@ -200,6 +200,7 @@ use `;` as separators, like so:
 ```
 
 If ReScript, the syntax is:
+
 ```rescript
 list{1, 2, 3, 4}
 ```
@@ -311,6 +312,7 @@ else "Access denied"
 ```
 
 In ReScript:
+
 ```rescript
 if hasAccess(user) {
   "Welcome!"
@@ -387,7 +389,6 @@ switch myValue {
 | _ -> "not between 4 and 6"
 }
 ```
-
 
 Be careful of very subtle bugs when combining multiple patterns with `when`
 clauses: the entire pattern will fail if the pattern matches when the clause

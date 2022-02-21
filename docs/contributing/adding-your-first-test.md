@@ -8,7 +8,6 @@ and get you familiar with how to get code into Dark.
 
 _We're assuming you've got the repo is set up and the `builder` script is running (or if you're running the devcontainer in VSCode, that the decvontainer is running)!_
 
-
 ## Adding the test
 
 We keep a list of functions which need tests an the [Test Every Function issue](https://github.com/darklang/dark/issues/3262) - pick your favorite.

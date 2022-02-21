@@ -7,7 +7,7 @@ here's how the various directories intersect, and what language they use:
 
 ![Compilation targets and their respective directories](/img/contributing/compilation-targets.png)
 
-# Directory listing
+## Directory listing
 
 - `.circleci` - CI config file
 - `.ionide` - config for F# VsCode plugin
