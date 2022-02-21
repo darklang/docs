@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7735],{62473:t=>{t.exports=JSON.parse('{"title":"Tutorial","slug":"/category/tutorial","permalink":"/category/tutorial","navigation":{"previous":{"title":"Overview","permalink":"/introduction"},"next":{"title":"Your first Darklang application","permalink":"/tutorials/first-dark-application"}}}')}}]);

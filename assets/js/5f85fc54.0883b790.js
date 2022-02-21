@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2559],{51008:s=>{s.exports=JSON.parse('{"title":"Discussion","slug":"/category/discussion","permalink":"/category/discussion","navigation":{"previous":{"title":"How to write tests","permalink":"/how-to/write-tests"},"next":{"title":"Overview","permalink":"/discussion/languageoverview"}}}')}}]);
