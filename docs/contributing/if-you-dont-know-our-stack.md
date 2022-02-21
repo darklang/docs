@@ -64,7 +64,7 @@ problem for users learning the language the first time. Documenting a bad error
 message, especially with a suggested better version, is a really useful
 contribution.
 
-## Learning ReScript or F\
+## Learning ReScript or F\#
 
 Dark is almost everybody's first ReScript or F# project. So if you don't know
 these two similar languages, join the club - we all learned as we contributed to

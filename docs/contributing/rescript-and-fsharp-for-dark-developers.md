@@ -7,7 +7,7 @@ assuming you already know Dark. F# and ReScript are very similar languages, both
 derived from OCaml. We currently use ReScript for the client. We use F# for the
 backend, which is very similar to Dark as well.
 
-## Some simple F#/ReScript code
+## Some simple F\#/ReScript code
 
 Dark and F# and ReScript are very similar. Here's an example function in F#:
 
@@ -49,7 +49,7 @@ let someFunction = (intArgument: int) : string =>
 
 As you can see, the syntaxes are very similar.
 
-## Dark vs ReScript vs F\
+## Dark vs ReScript vs F\#
 
 Dark, ReScript, and F# are all influenced by OCaml. Though Dark is currently a
 subset of these languages, Dark will continue to grow some more of their
