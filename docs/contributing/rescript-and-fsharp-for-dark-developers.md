@@ -49,7 +49,7 @@ let someFunction = (intArgument: int) : string =>
 
 As you can see, the syntaxes are very similar.
 
-## Dark vs ReScript vs F\#
+## Dark vs F\# vs ReScript
 
 Dark, ReScript, and F# are all influenced by OCaml. Though Dark is currently a
 subset of these languages, Dark will continue to grow some more of their
