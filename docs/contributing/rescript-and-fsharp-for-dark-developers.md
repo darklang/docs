@@ -3,9 +3,9 @@ title: ReScript and F# for Dark developers
 ---
 
 This guide aims to introduce you to enough F#/ReScript to contribute to Dark,
-assuming you already know Dark. F# and ReScript are very similar languages,
-both derived from OCaml. We currently use ReScript for the client. We use F#
-for the backend, which is very similar to Dark as well.
+assuming you already know Dark. F# and ReScript are very similar languages, both
+derived from OCaml. We currently use ReScript for the client. We use F# for the
+backend, which is very similar to Dark as well.
 
 ## Some simple F#/ReScript code
 
@@ -49,7 +49,7 @@ let someFunction = (intArgument: int) : string =>
 
 As you can see, the syntaxes are very similar.
 
-## Dark vs ReScript vs F\#
+## Dark vs ReScript vs F\
 
 Dark, ReScript, and F# are all influenced by OCaml. Though Dark is currently a
 subset of these languages, Dark will continue to grow some more of their
@@ -76,8 +76,8 @@ everything. We add them to all functions (we didn't always do this, but we do
 now, but we are now), including all parameters and return types (see
 [example](#functions) below).
 
-In F#, you can actually add types in many places where they aren't required, such as
-variable definitions:
+In F#, you can actually add types in many places where they aren't required,
+such as variable definitions:
 
 ```fsharp
 let y = 6.7
@@ -85,7 +85,7 @@ let (x : int) = 6
 x + 5
 ```
 
-`x` here, despite being a normal variable definition, has a type signature.  F#
+`x` here, despite being a normal variable definition, has a type signature. F#
 and ReScript allow this in many places, and it's useful for tracking down these
 errors.
 
@@ -124,8 +124,8 @@ libraries from `.NET`, FSharp.Core, or if necessary, the FSharpPlus library.
 
 ### Int
 
-An `int` is the same in Dark and F#, same syntax, same meaning. Note that
-ints are 31 bits in ReScript, 32 bits in F#, and 64bit in Dark.
+An `int` is the same in Dark and F#, same syntax, same meaning. Note that ints
+are 31 bits in ReScript, 32 bits in F#, and 64bit in Dark.
 
 ```fsharp
 let x = 5
@@ -192,8 +192,8 @@ Dark does not currently support String interpolation.
 
 ### List
 
-Lists in Dark, F# and ReScript are almost the same. In F#, lists
-use `;` as separators, like so:
+Lists in Dark, F# and ReScript are almost the same. In F#, lists use `;` as
+separators, like so:
 
 ```fsharp
 [1; 2; 3; 4]
@@ -325,14 +325,14 @@ if hasAccess(user) {
 
 F# has some unusual operators. Most importantly, the equality operator is `=`
 (that's just one equals sign), whereas in most languages it's `==` (including
-Dark and ReScript). `=` is very strict equality, equivalent to `===` in languages that have
-that, such as JS.
+Dark and ReScript). `=` is very strict equality, equivalent to `===` in
+languages that have that, such as JS.
 
 F# also has a `==` operator, but you should never use it.
 
-F# use `<>` for inequality (`!=` in Dark and ReScript). In ReScript, most of
-the comparison operators (such as `<`, `>`, `<=`, etc) only operate on
-integers, and not on floats. In F#, they work on both ints and floats.
+F# use `<>` for inequality (`!=` in Dark and ReScript). In ReScript, most of the
+comparison operators (such as `<`, `>`, `<=`, etc) only operate on integers, and
+not on floats. In F#, they work on both ints and floats.
 
 ### Match
 
@@ -486,7 +486,13 @@ list->List.map:(~f=((elem) => elem + 2))
 
 ### Pipes
 
-Both languages have pipes which are the same as in Dark. In Dark, the passed argument goes into the first position. That is also true in ReScript, but not in F#, where it goes into the last position. As a result, we tend to put the "subject" of the function in the pipeable position (first in Dark and ReScript, last in F#). __Note that ReScript uses to have to pipe into the last position but now does first by default; much of our code was designed to work pipe-last, instead of pipe-first, and we'll need to migrate to pipe-first.__
+Both languages have pipes which are the same as in Dark. In Dark, the passed
+argument goes into the first position. That is also true in ReScript, but not in
+F#, where it goes into the last position. As a result, we tend to put the
+"subject" of the function in the pipeable position (first in Dark and ReScript,
+last in F#). **Note that ReScript uses to have to pipe into the last position
+but now does first by default; much of our code was designed to work pipe-last,
+instead of pipe-first, and we'll need to migrate to pipe-first.**
 
 ### Dictionaries
 
@@ -544,7 +550,8 @@ myString := "new value"; // update contents of myString
 print_endline(myString.contents)
 ```
 
-F# has mutable values that it prefers to refs (it has refs, but they're deprecated). Mutable values are used like so:
+F# has mutable values that it prefers to refs (it has refs, but they're
+deprecated). Mutable values are used like so:
 
 ```fsharp
 let mutable myString = "old value"
@@ -701,8 +708,8 @@ codebase (including the prefix "bs").
 
 ## Dark's codebase history
 
-Dark's backend was originally written in OCaml, and then ported to F# in 2021.
-A lot of code is written the way it is because that made sense in OCaml,
+Dark's backend was originally written in OCaml, and then ported to F# in 2021. A
+lot of code is written the way it is because that made sense in OCaml,
 especially code with the comment `// CLEANUP` in it.
 
 Dark's frontend was originally written in Elm, before being ported. It was
@@ -711,7 +718,7 @@ of an identity crisis. ReScript at the time was sometimes called BuckleScript
 and sometimes called ReasonML. In 2021, it officially renamed itself to
 ReScript, and changed its official syntax (.res).
 
-Our frontend used an alternate syntax (.ml, as ReScript is based on OCaml and
-we used OCaml on our backend too). We switched over to .res in 2021 - however,
-a lot of remnants remain including old comments, and in particular that we
+Our frontend used an alternate syntax (.ml, as ReScript is based on OCaml and we
+used OCaml on our backend too). We switched over to .res in 2021 - however, a
+lot of remnants remain including old comments, and in particular that we
 primarily used pipe-last instead of pipe-first.

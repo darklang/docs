@@ -3,13 +3,14 @@ title: "Walk-through: Send and receive messages"
 sidebar_label: "Slack: send and receive messages"
 ---
 
-Watch a [demo video of building a Slack app](https://www.youtube.com/watch?v=cLFwsRwL5Ww).
+Watch a
+[demo video of building a Slack app](https://www.youtube.com/watch?v=cLFwsRwL5Ww).
 
 ## Getting started
 
-This guide will walk you through how to set up a Slack application, trigger events
-from it, and write the corresponding backend logic. Our app is for sharing photos of
-office dogs.
+This guide will walk you through how to set up a Slack application, trigger
+events from it, and write the corresponding backend logic. Our app is for
+sharing photos of office dogs.
 
 ## Creating a Slack App
 
@@ -53,8 +54,8 @@ Manage Distribution** and copy the Shareable URL to your browser’s address bar
 **_Before continuing, please visit the Shareable URL to install the
 application._** By visiting this URL, you’re making sure you have a real trace
 to work from in Dark. If you’re new to Dark,
-[Trace driven development](/discussion/trace-driven-development.md) is a good overview of
-why.
+[Trace driven development](/discussion/trace-driven-development.md) is a good
+overview of why.
 
 --
 

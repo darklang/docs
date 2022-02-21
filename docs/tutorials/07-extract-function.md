@@ -4,7 +4,8 @@ sidebar_label: "Extract code into a Function"
 id: extract-function
 ---
 
-Next, we'll create the human readable summary of the daily reports. To ensure that our code is well architected, we'll put this code in a function.
+Next, we'll create the human readable summary of the daily reports. To ensure
+that our code is well architected, we'll put this code in a function.
 
 The best way to create a function is by writing the code you want as part of
 your handler, and then extracting the working code to a function. This ensures
@@ -37,8 +38,8 @@ that whatever code you write has traces and live data.
 
 ![gettingstarted/newworker.png](/img/gettingstarted/selectall.png)
 
-7. Type `Ctrl-\` to open the command palette, then select
-   `extract-function`. (On some keyboards, you might instead need to press `Alt-x` or `Ctrl-s`).
+7. Type `Ctrl-\` to open the command palette, then select `extract-function`.
+   (On some keyboards, you might instead need to press `Alt-x` or `Ctrl-s`).
 
 ![gettingstarted/newworker.png](/img/gettingstarted/extractfunction.png)
 

@@ -71,9 +71,10 @@ commands.
 
 ![slack-apps/tutorials/asana-tutorial/projectname.png](/img/slack-apps/tutorials/asana-tutorial/projectname.png)
 
-5. Using the [`Asana::createProject function`](/reference/packages.md#createproject)
-   and the data we grabbed from the trace, we can now create a new project. You
-   will need to use the workspace id and personal access token you saved in the
+5. Using the
+   [`Asana::createProject function`](/reference/packages.md#createproject) and
+   the data we grabbed from the trace, we can now create a new project. You will
+   need to use the workspace id and personal access token you saved in the
    set-up process.
 
 ![slack-apps/tutorials/asana-tutorial/createProject.png](/img/slack-apps/tutorials/asana-tutorial/createProject.png)
@@ -93,7 +94,8 @@ commands.
 
 8. Now, we can use the `String::split` function to separate out our two pieces
    of information, and add them separately to the
-   [`Asana::createProject function`](/reference/packages.md#createProject) function.
+   [`Asana::createProject function`](/reference/packages.md#createProject)
+   function.
 
 ![slack-apps/tutorials/asana-tutorial/notes.png](/img/slack-apps/tutorials/asana-tutorial/notes.png)
 
@@ -109,9 +111,9 @@ but it works the same way for workspaces.
 ![slack-apps/tutorials/asana-tutorial/projectsdatastore.png](/img/slack-apps/tutorials/asana-tutorial/projectsdatastore.png)
 
 2. Create a new REPL. First, use the
-   [`Asana::getAllProjects`](/reference/packages.md#getAllProjects) function to grab
-   information about all projects you have access to. Then, use a `List::map` to
-   add their names and gids to the DB.
+   [`Asana::getAllProjects`](/reference/packages.md#getAllProjects) function to
+   grab information about all projects you have access to. Then, use a
+   `List::map` to add their names and gids to the DB.
 
 ![slack-apps/tutorials/asana-tutorial/populatedb.png](/img/slack-apps/tutorials/asana-tutorial/populatedb.png)
 

@@ -35,8 +35,8 @@ version is designed to run concurrently. The major difference here is that the
 OCaml backend returns a `Dval` (a Dark value), while the F# version returns a
 `Ply<Dval>`.
 
-For most simple functions that do no IO, a `Ply` just wraps a `Dval`.
-For example, compare the original OCaml version of `Int::add_v0`:
+For most simple functions that do no IO, a `Ply` just wraps a `Dval`. For
+example, compare the original OCaml version of `Int::add_v0`:
 
 ```ocaml
   ; { prefix_names = ["Int::add"]
@@ -76,11 +76,11 @@ wrap the `Dval` in a `Value`.
 
 ### Tasks
 
-For functions that perform IO, you'll need to use the `ply` "computation expression".
-A "computation expression" is a special F# language feature for writing abstractions
-with a nice syntax. The `ply` CE allows using a specialized asyncronous structure
-called Ply (which is extremely similar to a .Net Task) easily, and can best be
-illustrated with an example:
+For functions that perform IO, you'll need to use the `ply` "computation
+expression". A "computation expression" is a special F# language feature for
+writing abstractions with a nice syntax. The `ply` CE allows using a specialized
+asyncronous structure called Ply (which is extremely similar to a .Net Task)
+easily, and can best be illustrated with an example:
 
 ```fsharp
   (function
@@ -95,13 +95,12 @@ illustrated with an example:
 
 Let's break this down line by line:
 
-- `uply {`: this creates the CE, whose return value will be a
-  `Ply<'any>`.
+- `uply {`: this creates the CE, whose return value will be a `Ply<'any>`.
 - `let db = state.dbs.[dbname]` - this is just regular F# code
 - `let! _id = UserDB.set state true db key value` - the special thing here is
-  the `let!` - this line calls `UserDB.set`, a function which returns a
-  `Ply`, and unwraps the `Ply`. This means that `_id` can be
-  treated as a normal value for the rest of this `taskv`.
+  the `let!` - this line calls `UserDB.set`, a function which returns a `Ply`,
+  and unwraps the `Ply`. This means that `_id` can be treated as a normal value
+  for the rest of this `taskv`.
 - `return DObj value` - return takes an ordinary value and turns it into a
   `TaskOrValue`, in this case a `TaskOrValue<Dval>`.
 

@@ -177,7 +177,8 @@ then took the name for each host.
 
 To see how this works, click first on `DB::getAll` to see the list of objects,
 then click on `\val` to see an example object, and then `val.name` will show you
-the `name` field. [Functional aspects of Dark](/discussion/functional-aspects.md) has more
+the `name` field.
+[Functional aspects of Dark](/discussion/functional-aspects.md) has more
 information on pipelines and maps, but for the tutorial copying this code will
 work.
 
@@ -334,5 +335,5 @@ storage, and asynchronous background workers, hosted at
 When you go back to your React app and submit a new visit, you should receive
 both a Slack and a Text.
 
-(Interested more in Slack apps? We have [a guide](/walk-throughs/slack-app.md) for
-that!)
+(Interested more in Slack apps? We have [a guide](/walk-throughs/slack-app.md)
+for that!)

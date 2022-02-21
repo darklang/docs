@@ -9,8 +9,8 @@ accessible via autocomplete. The package manager today is intended for
 connections to third party services and APIs.
 
 In the future, packages will be imported vs. being continually accessible, and
-community members will be able to contribute directly. If you would like to request
-or contribute a package today, please reach out via
+community members will be able to contribute directly. If you would like to
+request or contribute a package today, please reach out via
 [Slack](https://darklang.com/slack-invite).
 
 ## Slack

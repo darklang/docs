@@ -4,7 +4,7 @@ sidebar_label: Handle error messages with the Error Rail
 id: handle-error-errorrail
 ---
 
-*Note: This is a self-contained tutorial and not part of the previous set.*
+_Note: This is a self-contained tutorial and not part of the previous set._
 
 In this tutorial, we will be showing you how to use the error rail with
 `HttpClient::get` to display clean error messages. We will be using the

@@ -21,5 +21,5 @@ To try out the end-to-end application:
   updates to your Airtable base.
 
 Congratulations! You've built an entire Darklang application: an API that stores
-requests into a datastore, creates a daily report of those requests, and sends the
-report to Airtable.
+requests into a datastore, creates a daily report of those requests, and sends
+the report to Airtable.

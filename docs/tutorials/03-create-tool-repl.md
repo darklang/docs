@@ -4,10 +4,12 @@ sidebar_label: Create a tool in a REPL
 id: create-tool-repl
 ---
 
-REPLs in Dark are general-purpose coding blocks. They're typically to create reuable tools, experiments, one-off commands, or admin dashboards, in a similar way that you might use scripts or REPLs in other languages.
+REPLs in Dark are general-purpose coding blocks. They're typically to create
+reuable tools, experiments, one-off commands, or admin dashboards, in a similar
+way that you might use scripts or REPLs in other languages.
 
-We'll run you through creating a REPL, experimenting with the
-HttpClient library to make API calls.
+We'll run you through creating a REPL, experimenting with the HttpClient library
+to make API calls.
 
 1. Open the omnibox by pressing (`Ctrl-K`/`Cmd-K`), and create a new REPL.
 
@@ -42,8 +44,8 @@ within the editor.
 6. Next let's add the arguments. The structured editor simplifies creation of
    the arguments we want:
 
-- For the body, we want to pass the value `{ test : "test1" }`. To do so, type `{` to start a record, then hit enter and add
-  the key and the value.
+- For the body, we want to pass the value `{ test : "test1" }`. To do so, type
+  `{` to start a record, then hit enter and add the key and the value.
 
 - For the query, we want an empty dictionary. Type `{` to create one.
 
@@ -68,4 +70,5 @@ within the editor.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
-Congratulations! You've built a Dark REPL and which calls the Dark HTTP Client function.
+Congratulations! You've built a Dark REPL and which calls the Dark HTTP Client
+function.

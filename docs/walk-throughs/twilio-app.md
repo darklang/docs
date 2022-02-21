@@ -69,9 +69,9 @@ Once the handler is created, we’re able to see the full incoming trace.
 ### Processing & Storing Responses
 
 In Dark, you can work directly with incoming traces. More on this in
-[Trace Driven Development](/discussion/trace-driven-development.md). For this handler, we
-can parse out the things we care about: a user deciding to start/stop using our
-service, or telling us if they drank enough water or not.
+[Trace Driven Development](/discussion/trace-driven-development.md). For this
+handler, we can parse out the things we care about: a user deciding to
+start/stop using our service, or telling us if they drank enough water or not.
 
 ![twilio/image7.png](/img/tutorials/twilio/image7.png)
 
@@ -82,8 +82,8 @@ trace. Here, we see the From number. In this case we also do some cleaning on
 the response in case the user had a capital letter or an extraneous space.
 
 For processing the various responses, we’ll use a match statement. More on
-[Match](/discussion/functional-aspects.md#match) is available, but the tutorial example has
-enough context to understand how it works for this case.
+[Match](/discussion/functional-aspects.md#match) is available, but the tutorial
+example has enough context to understand how it works for this case.
 
 ### Sign up & Quit
 

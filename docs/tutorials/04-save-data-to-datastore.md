@@ -8,11 +8,12 @@ In the last section, we made a HTTP request that created a 404. We'll use _the
 trace_ of that HTTP request to build an endpoint, a technique we call **Trace
 Driven Development**.
 
-1. Go to the 404 section of the sidebar and you should see the HTTP request that you
-   just made with your REPL.
+1. Go to the 404 section of the sidebar and you should see the HTTP request that
+   you just made with your REPL.
 
-2. Hit the plus (+) button next to the 404. This creates a HTTP endpoint with the
-   HTTP method (`POST`) and path (`/test`) set from the request that creates the 404.
+2. Hit the plus (+) button next to the 404. This creates a HTTP endpoint with
+   the HTTP method (`POST`) and path (`/test`) set from the request that creates
+   the 404.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.54_AM.png)
 
@@ -23,8 +24,8 @@ Driven Development**.
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.45.57_AM.png)
 
 3. Let's save the `request` body to a variable by typing
-   `let data = request.body`. The autocomplete knows the field
-   names of `request` from the trace, and will complete them for you.
+   `let data = request.body`. The autocomplete knows the field names of
+   `request` from the trace, and will complete them for you.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
@@ -37,8 +38,8 @@ In this case, we want `DB::set`, which takes three arguments.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.51_AM.png)
 
-5. Now let's make our datastore. Press `Ctrl-k`/`Cmd-k` to bring up the omnibox, and
-   create a new datastore called "Requests", with fields `data` and `time`.
+5. Now let's make our datastore. Press `Ctrl-k`/`Cmd-k` to bring up the omnibox,
+   and create a new datastore called "Requests", with fields `data` and `time`.
 
 ![img/gettingstarted/datastore.png](/img/gettingstarted/datastore.png)
 

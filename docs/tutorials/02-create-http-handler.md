@@ -7,9 +7,9 @@ id: create-http-handler
 Let's start by using the editor to write an API endpoint that responds to a
 browser HTTP request.
 
-1. To create a new HTTP endpoint, we first bring up the omnibox, by clicking anywhere
-on the screen, pressing `Cmd-k`/`Ctrl-k`, or pressing the plus next to `HTTP` on the
-sidebar.
+1. To create a new HTTP endpoint, we first bring up the omnibox, by clicking
+   anywhere on the screen, pressing `Cmd-k`/`Ctrl-k`, or pressing the plus next
+   to `HTTP` on the sidebar.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.10.26_AM.png)
 
@@ -41,8 +41,8 @@ sidebar.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.16.06_AM.png)
 
-6. Hover your mouse over the white dots on the left. Each dot is a "trace", representing a
-   single request to your handler. Traces are fundamental to coding in Dark, and
-   we'll come back to them later.
+6. Hover your mouse over the white dots on the left. Each dot is a "trace",
+   representing a single request to your handler. Traces are fundamental to
+   coding in Dark, and we'll come back to them later.
 
 Congratulations! You've now created (and deployed) a HTTP endpoint on Dark.
