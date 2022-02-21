@@ -1,6 +1,6 @@
 ---
-title: Twilio tutorial
-sidebar_label: Twilio tutorial
+title: "Walk-through: Send and receive texts via Twilio"
+sidebar_label: "Twilio: send and receive texts"
 ---
 
 Dark allows you to build backends (API endpoints, workers, cron, and data

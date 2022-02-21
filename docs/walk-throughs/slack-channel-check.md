@@ -1,6 +1,6 @@
 ---
-title: Check for New Slack Channels
-sidebar_label: Check for New Slack Channels
+title: "Walk-through: Check for New Slack Channels"
+sidebar_label: "Slack: check for new channels"
 ---
 
 It can be hard to keep up with all of the changes in your Slack workspace! This

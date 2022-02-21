@@ -1,4 +1,7 @@
-# How to create a Slack App
+---
+title: "Walk-through: Create a complete Slack app"
+sidebar_label: "Slack: create a complete app"
+---
 
 Watch a [demo video of building a Slack app](https://www.youtube.com/watch?v=cLFwsRwL5Ww).
 

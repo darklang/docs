@@ -1,4 +1,7 @@
-# Airtable Sample
+---
+title: "Walk-through: Fetch and update an Airtable"
+sidebar_label: "Airtable: fetch and update"
+---
 
 This guide will walk you through how you can use Airtable’s API to add or update
 information in Airtable. An Airtable sample canvas is available

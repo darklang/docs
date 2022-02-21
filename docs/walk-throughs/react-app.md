@@ -1,6 +1,6 @@
 ---
-title: React SPA tutorial
-sidebar_label: React SPA tutorial
+title: "Walkthrough: Build a backend to a React app"
+sidebar_label: "React: Build a backend"
 ---
 
 Watch a demo video of this project:

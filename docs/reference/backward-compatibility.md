@@ -45,7 +45,7 @@ may change.
 ## HTTP / Transport
 
 Dark may move to newer version of HTTP (HTTP/2, HTTP3) without warning and without
-maintaining backward compatibility.
+maintaining exact HTTP/1.1 compatibility.
 
 ## Timeouts
 

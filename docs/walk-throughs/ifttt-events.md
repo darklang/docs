@@ -1,6 +1,6 @@
 ---
-title: Alerting with IFTTT
-sidebar_label: Alerting with IFTTT
+title: "Walk-through: Trigger an event on IFTTT"
+sidebar_label: "IFTTT: trigger an event"
 ---
 
 In this tutorial, we will create a tool that allows you to approve or deny users

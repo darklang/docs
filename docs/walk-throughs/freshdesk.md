@@ -1,6 +1,6 @@
 ---
-title: Freshdesk Sample
-sidebar_label: Freshdesk Sample
+title: "Walk-through: Fetch and update tickets on Freshdesk"
+sidebar_label: "Freshdesk: Fetch and update tickets"
 ---
 
 This guide will walk you through how you can use Freshdesk’s API to access
