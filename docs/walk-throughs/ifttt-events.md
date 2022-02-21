@@ -279,7 +279,7 @@ request.send();
 
 <details><summary>approved.html</summary>
 
-```
+```html
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -303,7 +303,7 @@ request.send();
 
 <details><summary>approvedscripts.js</summary>
 
-```
+```js
 const app = document.getElementById('root')
 
 const container = document.createElement('div')

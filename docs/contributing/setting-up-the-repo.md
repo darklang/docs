@@ -2,10 +2,10 @@
 title: Setting up the Dark repo
 ---
 
-You can access the Dark repo at https://github.com/darklang/dark. This is is a
-monorepo containing the main F# backend, the editor (client in ReScript), as
-well as some auxiliary services (Rust mostly) used to run the Dark
-infrastructure.
+You can access the Dark repo at
+[https://github.com/darklang/dark](https://github.com/darklang/dark). This is a
+monorepo containing the main F# backend, the editor (client in ReScript), as well as
+some auxiliary services (Rust mostly) used to run the Dark infrastructure.
 
 - **Note**: Dark is in a transition: the backend is changing from OCaml to F#,
   and the frontend language was called Bucklescript but is now called ReScript.

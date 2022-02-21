@@ -95,7 +95,7 @@ details like commas and semi-colons (hence "abstract")).
 In Dark, it's defined in `FluidExpression.ml`, and at time of writing looks like
 this:
 
-```ocaml
+```fsharp
 type sendToRail =
   | Rail
   | NoRail

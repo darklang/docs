@@ -10,6 +10,7 @@ on how thorough you are. If you're having problems, come talk to us in the [Dark
 
 The application will accept requests and aggregate those requests into a report
 daily. It will optionally store the daily report in Airtable. You will create:
+
 - a HTTP handler to make requests to
 - a REPL to make requests to the handler
 - a Datastore storing those requests

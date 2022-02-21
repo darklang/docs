@@ -11,6 +11,7 @@ to edit.
 
 To request an organization, send a DM to Paul Biggar in [the Dark
 Slack](https://darklang.com/slack-invite). Please include:
+
 - your username
 - the organization username you'd like
 - the usernames of any other users you'd like added

@@ -139,7 +139,7 @@ handles keypresses and the AST transformations that they cause.
 
 For example: if you have the code (with the cursor denoted as `|`):
 
-```
+```fsharp
 let x = |6
 x + 4
 ```

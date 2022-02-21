@@ -11,7 +11,7 @@ for the backend, which is very similar to Dark as well.
 
 Dark and F# and ReScript are very similar. Here's an example function in F#:
 
-```ocaml
+```fsharp
 let someFunction (intArgument : int) : string =
   let aString = "myString"
   let anInt = 65 + intArgument
@@ -26,7 +26,7 @@ body, first a string, then an int, then a float, and finally we call the
 
 In Dark this would be written:
 
-```ocaml
+```fsharp
 someFunction
   intArgument : Int
   ↪ String
@@ -39,11 +39,11 @@ anotherFunction aString anInt aFloat
 
 In ReScript this would be written:
 
-```ocaml
+```rescript
 let someFunction = (intArgument: int) : string =>
   let aString = "myString"
-  let anInt = 65 + intArgument 
-  let aFloat = 6.72 
+  let anInt = 65 + intArgument
+  let aFloat = 6.72
   anotherFunction(aString, anInt, aFloat)
 ```
 
@@ -79,7 +79,7 @@ now, but we are now), including all parameters and return types (see
 In F#, you can actually add types in many places where they aren't required, such as
 variable definitions:
 
-```ocaml
+```fsharp
 let y = 6.7
 let (x : int) = 6
 x + 5
@@ -96,7 +96,7 @@ We'll discuss declaring types below.
 Functions in ReScript and F# are defined in the outer scope. Type signatures are
 optional but we always use them:
 
-```ocaml
+```fsharp
 let myFunction (arg1 : int) (arg2 : string) : string =
   if arg1 < (String.toInt arg2)
   then "just return a string"
@@ -127,7 +127,7 @@ libraries from `.NET`, FSharp.Core, or if necessary, the FSharpPlus library.
 An `int` is the same in Dark and F#, same syntax, same meaning. Note that
 ints are 31 bits in ReScript, 32 bits in F#, and 64bit in Dark.
 
-```ocaml
+```fsharp
 let x = 5
 x + 6
 ```
@@ -139,8 +139,8 @@ floating point numbers.
 
 Like in Dark, there are special operators to work on floats in ReScript.
 
-```ocaml
-let x = 0.1 
+```fsharp
+let x = 0.1
 x +. 0.3
 ```
 
@@ -148,7 +148,7 @@ To convert from floats to ints use `Float.toInt`, or `Float.round`.
 
 In F#, standard operators work on floats too.
 
-```ocaml
+```fsharp
 let x = 0.1 in
 x +. 0.3
 ```
@@ -165,7 +165,7 @@ representation, with Dark using UTF-8, ReScript using the browser's built-in
 UCS-2, and F# using .NET's UTF-16 (which is very similar but not quite the same
 as UCS-2).
 
-```ocaml
+```fsharp
 let myString = "some string, escaping is allowed\nwhich dark doesn't support yet" in
 myString
 ```
@@ -174,7 +174,7 @@ myString
 
 Both ReScript and F# support string interpolation. In F#:
 
-```ocaml
+```fsharp
 let x = 6
 let y = 7.8
 let myString = $"some string with x: {x} and also {y}"
@@ -182,7 +182,7 @@ let myString = $"some string with x: {x} and also {y}"
 
 In ReScript:
 
-```ocaml
+```rescript
 let x = 6
 let y = 7.8
 let myString = {j|some string with x: $x and also $y|j}
@@ -195,12 +195,12 @@ Dark does not currently support String interpolation.
 Lists in Dark, F# and ReScript are almost the same. In F#, lists
 use `;` as separators, like so:
 
-```ocaml
+```fsharp
 [1; 2; 3; 4]
 ```
 
 If ReScript, the syntax is:
-```ocaml
+```rescript
 list{1, 2, 3, 4}
 ```
 
@@ -221,17 +221,17 @@ have fields, not methods, and you use functions to manipulate them.
 
 A record in ReScript will look quite familiar:
 
-```ocaml
+```rescript
 { field1: 56,
   field2: true,
   field3: "asd"
- 
+
 ```
 
 F# uses a similar syntax, but with `=` instead of `:`, though it allows you to
 use indentation instead of separators:
 
-```ocaml
+```fsharp
 {
   field1 = 56
   field2 = true
@@ -247,7 +247,7 @@ using unusual syntaxes:
 
 In ReScript:
 
-```ocaml
+```rescript
 let x = { field1 = 56; field2 = true } in
 let updatedX = {...x, field1: 57 } in
 doSomethingWith(updatedX)
@@ -255,7 +255,7 @@ doSomethingWith(updatedX)
 
 In F#:
 
-```ocaml
+```fsharp
 let x = { field1 = 56; field2 = true }
 let updatedX = { x with field1 = 57 }
 doSomethingWith updatedX
@@ -268,7 +268,7 @@ ReScript/F# (though hopefully with better syntax).
 
 Type definitions for records look like this in F#:
 
-```ocaml
+```fsharp
 type Person =
   {
     name : string
@@ -278,7 +278,7 @@ type Person =
 
 and like this in ReScript:
 
-```ocaml
+```rescript
 type person = {
   name: string,
   age: int
@@ -289,8 +289,8 @@ type person = {
 
 `let`s in ReScript and F# are the same as in Dark:
 
-```ocaml
-let x = 45 
+```fsharp
+let x = 45
 x + 23
 ```
 
@@ -304,18 +304,18 @@ only allow `bool`s as the condition, and in their syntax.
 
 In F#:
 
-```ocaml
+```fsharp
 if hasAccess user
 then "Welcome!"
 else "Access denied"
 ```
 
 In ReScript:
-```ocaml
+```rescript
 if hasAccess(user) {
   "Welcome!"
 } else {
-  "Access denied" 
+  "Access denied"
 }
 ```
 
@@ -337,7 +337,7 @@ integers, and not on floats. In F#, they work on both ints and floats.
 Dark has a `match` statement that is very similar to F#/ReScript, with slightly
 different syntax. In Dark you write:
 
-```ocaml
+```fsharp
 match myValue
   Some x -> 5
   _ -> 6
@@ -345,7 +345,7 @@ match myValue
 
 while in F# you write
 
-```ocaml
+```fsharp
 match myValue with
 | Some x -> 5
 | _ -> 6
@@ -355,7 +355,7 @@ Notice the `with` keyword, and starting the patterns with `|`.
 
 In ReScript you write:
 
-```ocaml
+```rescript
 switch myValue {
 | Some(x) -> 5
 | _ -> 6
@@ -365,7 +365,7 @@ switch myValue {
 F#/ReScript also support more powerful `match`es, for example multiple patterns
 can match a single branch:
 
-```ocaml
+```rescript
 match myValue with
 | 4 | 5 | 6 -> "between 4 and 6"
 | _ -> "not between 4 and 6"
@@ -373,7 +373,7 @@ match myValue with
 
 F# also supports the `when` clause:
 
-```ocaml
+```fsharp
 match myValue with
 | Some myInt when myInt >= 4 && myInt <= 6 -> "between 4 and 6"
 | _ -> "not between 4 and 6"
@@ -381,7 +381,7 @@ match myValue with
 
 This is called an `if` in ReScript:
 
-```ocaml
+```rescript
 switch myValue {
 | Some(myInt) if myInt >= 4 && myInt <= 6 -> "between 4 and 6"
 | _ -> "not between 4 and 6"
@@ -393,7 +393,7 @@ Be careful of very subtle bugs when combining multiple patterns with `when`
 clauses: the entire pattern will fail if the pattern matches when the clause
 does not:
 
-```ocaml
+```rescript
 let myValue = Some 5
 match myValue with
 | Some 4 | Some myInt when myValue <> Some 4 -> "this will never succeed"
@@ -413,7 +413,7 @@ However, the constructors for Option are named differently; both languages use:
 These enums are typically called "variants". We use them frequently, especially
 to represent expressions. For example in `FluidExpression.fs`:
 
-```ocaml
+```fsharp
 type t =
   | EInteger of id * string
   | EBool of id * bool
@@ -447,13 +447,13 @@ doesn't have a big enough integer type).
 
 To create a `t`, you'd do something like this:
 
-```ocaml
+```fsharp
 let expr = EInteger (id, "test")
 ```
 
 To get values from them, you pattern match:
 
-```ocaml
+```fsharp
 match expr with
 | EInteger (_, str) -> str
 | _ -> "not an int"
@@ -464,14 +464,14 @@ match expr with
 ReScript and F# support lambdas and we use them frequently. They have a
 different syntax to Dark, F# uses:
 
-```ocaml
+```fsharp
 list
 |> List.map (fun elem -> elem + 2)
 ```
 
 and ReScript uses:
 
-```ocaml
+```rescript
 list->List.map((elem) => elem + 2)
 ```
 
@@ -479,7 +479,7 @@ It's very common to use functions like `List.map` which have a parameter called
 `f` which take a lambda. In F#, above, that parameter is passed like any other.
 In ReScript, those parameters are passed as labelled variables:
 
-```ocaml
+```rescript
 list->List.map:(~f=((elem) => elem + 2))
 ```
 
@@ -498,7 +498,7 @@ see them used as much as they really should be.
 F#/ReScript have a `unit` type, whose only member is `()`. That's an actual
 value, for example, all this is valid code:
 
-```ocaml
+```fsharp
 let falseVar = () != () in
 ```
 
@@ -510,7 +510,7 @@ meaningful arguments, such as `gid ()` (which generates IDs).
 Typically we use `Result` or `Option`s for error handling. You'll very commonly
 see something like
 
-```ocaml
+```fsharp
 let isRailable (m : model) (name : string) =
   m.functions
   |> Functions.find name
@@ -537,7 +537,7 @@ F# and ReScript support imperative programming which Dark does not support yet.
 
 In ReScript there are mutable values called refs, that can be updated:
 
-```ocaml
+```rescript
 let myString = ref("old value")
 myString := "new value"; // update contents of myString
 print_endline(myString.contents)
@@ -545,7 +545,7 @@ print_endline(myString.contents)
 
 F# has mutable values that it prefers to refs (it has refs, but they're deprecated). Mutable values are used like so:
 
-```ocaml
+```fsharp
 let mutable myString = "old value"
 myString <- "new value"
 print(myString)
@@ -558,7 +558,7 @@ print(myString)
 ReScript Functions support named parameters, which you might see called like
 this (note the `~`):
 
-```ocaml
+```rescript
 Option.withDefault(~default=5, Some(5)))
 ```
 
@@ -567,7 +567,7 @@ useful for piping).
 
 You declare functions with named parameters like so:
 
-```ocaml
+```rescript
 let myFunction = (regularParamter : int, ~namedParam : string) : int =>
   ...body of function...
 ```
@@ -578,7 +578,7 @@ These are not in F# or Dark.
 
 ReScript also supports optional parameters, which F# and OCaml do not.
 
-```ocaml
+```rescript
 let myFunction = (?optionalParam=3, regularParamter : int) : int =
   ...body of function...
 ```
@@ -588,7 +588,7 @@ let myFunction = (?optionalParam=3, regularParamter : int) : int =
 By default, F#/ReScript functions are not recursive: they cannot call
 themselves. To allow a function to call itself, add the `rec` keyword:
 
-```ocaml
+```fsharp
 let rec myFunction (var : int) : int =
   if var > 6 then 6
   else myFunction (var + 2)
@@ -598,7 +598,7 @@ Similarly, if two functions need to call each other, they need to be aware of
 each other (F#/ReScript programs require all functions to be defined before they
 are used). The `and` keyword allows this:
 
-```ocaml
+```fsharp
 let firstFunction (var : int) =
   (secondFunction var) + 2
 
@@ -613,7 +613,7 @@ and secondFunction (var : int) =
 Occasionally you'll see a function called with fewer arguments than it has
 parameters:
 
-```ocaml
+```fsharp
 let myFunction (param1: int) (param2 : string) =
   ...body...
 
@@ -625,14 +625,14 @@ called (this is often called _Currying_ in the functional language community).
 This just means that some parameters are filled in, and you now have a function
 which can be called with the remaining parameters:
 
-```ocaml
+```fsharp
 let () =
   myOtherfunction "final argument"
 ```
 
 This is the same as if it were defined as:
 
-```ocaml
+```fsharp
 let myOtherFunction (param : string) =
   myFunction 6 param
 ```
@@ -651,7 +651,7 @@ know:
 
 - using a module is simple:
 
-```ocaml
+```rescript
 open MyModule1 (* all function and types are available *)
 module M = MyModule2 (* access members as if the module was called M *)
 
@@ -660,7 +660,7 @@ let x = MyModule3.myFunction 6
 
 - the syntax of creating a module is also straightforward:
 
-```ocaml
+```rescript
 module MyModule = struct
   type t = int
   let myfunction x = x + 2
@@ -682,7 +682,7 @@ with JS (the ReScript JS interop code compiles it to direct OO in JS).
 F# has OO that is used to interact with .NET types, and call C# libraries. We do
 not use it very much but we do use it some. Defining a method:
 
-```ocaml
+```fsharp
 type Pos =
   { x : int
   ; y : int

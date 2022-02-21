@@ -11,7 +11,7 @@
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "lint": "markdownlint --config markdownlint.json docs/*.md",
+    "lint": "markdownlint --config markdownlint.json docs/**/*.md docs/*.md",
     "format": "prettier --write docs/*.md",
     "format-js": "prettier --write pages/**/*.js",
     "format-css": "prettier --write static/css/*.css",

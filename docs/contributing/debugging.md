@@ -11,7 +11,7 @@ Both the frontend and backend have simple log statements, which return `()`.
 
 If you have existing code like this:
 
-```ocaml
+```rescript
 let x = 5 in
 let y = 6 in
 x + y
@@ -19,7 +19,7 @@ x + y
 
 You can add log statements like so:
 
-```ocaml
+```rescript
 let x = 5 in
 Log.inspecT "my message" x; (* or Js.log2, in the client)
 let y = 6 in

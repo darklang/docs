@@ -50,7 +50,7 @@ Whenever you type code, you are using the "fluid" editor. This is a structured e
 
 A structured editor is means that you cannot write invalid code. The editor edits the AST of the program
 
-**More coming soon**
+### More coming soon
 
 ### Command palette
 

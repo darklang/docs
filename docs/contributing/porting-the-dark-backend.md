@@ -57,7 +57,7 @@ For example, compare the original OCaml version of `Int::add_v0`:
 
 to the F# version
 
-```ocaml
+```fsharp
     { name = fn "Int" "add" 0
       parameters = [ Param.make "a" TInt ""; Param.make "b" TInt "" ]
       returnType = TInt
@@ -76,15 +76,16 @@ wrap the `Dval` in a `Value`.
 
 ### Tasks
 
-For functions that perform IO, you'll need to use the `taskv` "computation
-expression". A "computation expression" is a special F# language feature for
-writing abstractions with a nice syntax. The `taskv` CE allows using
-TaskOrValues easily, and can best be illustrated with an example:
+For functions that perform IO, you'll need to use the `ply` "computation expression".
+A "computation expression" is a special F# language feature for writing abstractions
+with a nice syntax. The `ply` CE allows using a specialized asyncronous structure
+called Ply (which is extremely similar to a .Net Task) easily, and can best be
+illustrated with an example:
 
-```ocaml
+```fsharp
   (function
   | state, [ DObj value; DStr key; DDB dbname ] ->
-      taskv {
+      uply {
         let db = state.dbs.[dbname]
         let! _id = UserDB.set state true db key value
         return DObj value
@@ -94,12 +95,12 @@ TaskOrValues easily, and can best be illustrated with an example:
 
 Let's break this down line by line:
 
-- `taskv {`: this creates the CE, whose return value will be a
-  `TaskOrValue<'any>`.
+- `uply {`: this creates the CE, whose return value will be a
+  `Ply<'any>`.
 - `let db = state.dbs.[dbname]` - this is just regular F# code
 - `let! _id = UserDB.set state true db key value` - the special thing here is
   the `let!` - this line calls `UserDB.set`, a function which returns a
-  `TaskOrValue`, and unwraps the `TaskOrValue`. This means that `_id` can be
+  `Ply`, and unwraps the `Ply`. This means that `_id` can be
   treated as a normal value for the rest of this `taskv`.
 - `return DObj value` - return takes an ordinary value and turns it into a
   `TaskOrValue`, in this case a `TaskOrValue<Dval>`.
@@ -115,7 +116,7 @@ JS, Rust, C# or Python.
 You'll also need this for first-class functions like `List::map_v0`, as they may
 be used to call functions which return Tasks. Here is an example of this:
 
-```ocaml
+```fsharp
     { name = fn "List" "map" 0
       parameters =
         [ Param.make "list" (TList varA) "The list to be operated on"
@@ -162,7 +163,7 @@ using a non-nested type like `TResult`, we use `TResult(DType, DType)` to
 indicate the types used in the `Ok` and `Error` constructors used by Result. The
 definition of a type has switched from this in OCaml:
 
-```
+```ocaml
 module RuntimeT = struct
   type tipe = Serialization_format.tipe =
     | TAny
@@ -193,7 +194,7 @@ module RuntimeT = struct
 
 to this in F#:
 
-```ocaml
+```fsharp
 and DType =
   | TAny
   | TInt

@@ -19,7 +19,8 @@ immediately [available in the cloud](https://ellen-helloworld3.builtwithdark.com
 
 ## Guide to documentation
 
-The documentation is split into
+The documentation is split into:
+
 - [tutorials](./tutorials)
 - [walk-throughs](./walk-throughs) of creating application in Dark
 - [how-to guides](./how-to) for using Dark features

@@ -28,7 +28,6 @@ sidebar.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
 
-
 5. Go back to Dark to edit your code. Add `+ 5` to the end of the code and leave
    your cursor in line.
 
