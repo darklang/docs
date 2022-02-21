@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Introduction to Darklang
+title: Overview
 ---
 
 Darklang is am integrated language, framework, and editor for building web backends:
