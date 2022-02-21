@@ -15,7 +15,7 @@ trying to do something beyond the scope of this README, check out their docs.
   - [Get Started in 5 Minutes](#get-started-in-5-minutes)
   - [Documentation structure](#documentation-structure)
     - [Tutorials](#tutorials)
-    - [How-to guides](#how-to-guides)
+    - [How-to guides](#how-to)
     - [Explanations](#explanations)
     - [Reference material](#reference-material)
   - [Project Structure](#project-structure)

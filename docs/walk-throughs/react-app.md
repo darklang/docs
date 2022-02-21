@@ -44,7 +44,7 @@ We’ll need some setup on your machine to upload the react app. Run these
 commands on OSX to install. To read a longer version explaining what each of
 these commands do, go here:
 
-[Hosting Static Assets in Dark](/how-to-guides/static-assets.md)
+[Hosting Static Assets in Dark](/how-to/static-assets.md)
 
 Note, replace anywhere that says USERNAME and PASSWORD with your Dark username
 and password.

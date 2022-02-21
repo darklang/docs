@@ -47,12 +47,12 @@
         "type": "generated-index"
       },
       "items": [
-        "how-to-guides/static-assets",
-        "how-to-guides/custom-domains",
-        "how-to-guides/cors",
-        "how-to-guides/collaborate",
-        "how-to-guides/feature-flags",
-        "how-to-guides/write-tests"
+        "how-to/static-assets",
+        "how-to/custom-domains",
+        "how-to/cors",
+        "how-to/collaborate",
+        "how-to/feature-flags",
+        "how-to/write-tests"
       ]
     },
     {

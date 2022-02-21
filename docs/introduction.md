@@ -25,7 +25,7 @@ The documentation is split into:
 
 - [tutorials](/category/tutorial)
 - [walk-throughs](/category/walk-throughs) of creating application in Dark
-- [how-to guides](/category/how-to-guides) for using Dark features
+- [how-to guides](/category/how-to) for using Dark features
 - [background, discussions and explanations](/category/discussion)
 - [reference materials](/category/reference)
 

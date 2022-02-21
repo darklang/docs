@@ -504,7 +504,7 @@ added:
   including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions
   on/off the [error rail](/discussion/error-handling#error-rail) or when
-  committing [feature flags](/how-to-guides/feature-flags).
+  committing [feature flags](/how-to/feature-flags).
 
 ### Documentation
 
@@ -512,8 +512,8 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our
 docs repo is public and all you need to do to contribute is
 [submit a pull request](https://github.com/darklang/docs/pulls).
 
-- Added instructions for [hosting static assets](/how-to-guides/static-assets)
-  when not using an external framework.
+- Added instructions for [hosting static assets](/how-to/static-assets) when not
+  using an external framework.
   ([119](https://github.com/darklang/docs/pull/119))
 - Fixed a broken link on the [Language Details](/reference/languagedetails)
   page. ([117](https://github.com/darklang/docs/pull/117))
@@ -521,9 +521,9 @@ docs repo is public and all you need to do to contribute is
   [Your First App](/tutorials/first-dark-application) tutorial.
   ([122](https://github.com/darklang/docs/pull/122))
 - New how-to pages:
-  - [Feature flags](/how-to-guides/feature-flags)
+  - [Feature flags](/how-to/feature-flags)
     ([118](https://github.com/darklang/docs/pull/118))
-  - [Writing tests](/how-to-guides/write-tests)
+  - [Writing tests](/how-to/write-tests)
     ([120](https://github.com/darklang/docs/pull/120))
     ([126](https://github.com/darklang/docs/pull/126))
 - New tutorials:
