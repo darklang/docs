@@ -53,8 +53,8 @@ special authentication.
 ![error-rail/errorpoint.png](/img/tutorials/error-rail/errorpoint.png)
 
 9. Place your cursor in `HttpClient::get,`
-   [open the command palette](/discussion/structured-editing#command-palette), and select
-   `take-function-off-rail`.
+   [open the command palette](/discussion/structured-editing#command-palette),
+   and select `take-function-off-rail`.
 
 ![error-rail/offrail.png](/img/tutorials/error-rail/offrail.png)
 

@@ -40,19 +40,19 @@ A full sample canvas for this tutorial is available
 
 1. Create a new daily Cron named `checkForNewChannels` by clicking the + in the
    sidebar next to Cron, and call the
-   [`getNewConversations` Slack function](/reference/packages#getnewconversations) (it's a
-   little confusing, but channels are referred to as conversations in the Slack
-   API). The `getNewConversations` function is built into Dark's
-   [package manager](/reference/packages), and it takes your token as well as an amount of
-   time to check in Epoch seconds. Here, we're asking it to check in the past 24
-   hours, which is equivalent to 86400 seconds.
+   [`getNewConversations` Slack function](/reference/packages#getnewconversations)
+   (it's a little confusing, but channels are referred to as conversations in
+   the Slack API). The `getNewConversations` function is built into Dark's
+   [package manager](/reference/packages), and it takes your token as well as an
+   amount of time to check in Epoch seconds. Here, we're asking it to check in
+   the past 24 hours, which is equivalent to 86400 seconds.
 
 ![slack-apps/tutorials/channelcheck/checkfornewchannels.png](/img/slack-apps/tutorials/channelcheck/checkfornewchannels.png)
 
 2. Click the play button on the
-   [`getNewConversations` function](/reference/packages#getnewconversations) and then
-   place your carat in `newChannels`. You will see a list of information about
-   any new channels that have been created.
+   [`getNewConversations` function](/reference/packages#getnewconversations) and
+   then place your carat in `newChannels`. You will see a list of information
+   about any new channels that have been created.
 
 ![slack-apps/tutorials/channelcheck/checkfornewchannelslive.png](/img/slack-apps/tutorials/channelcheck/checkfornewchannelslive.png)
 
@@ -94,8 +94,8 @@ A full sample canvas for this tutorial is available
 9. The full code is going to look like this - if there are entries in the list,
    we'll post an announcement message and then the list of new channels. You'll
    notice that we also use the
-   [`postMarkDownMessage` Slack function](/reference/packages#postmarkdownmessage) to
-   simplify the posting of the message.
+   [`postMarkDownMessage` Slack function](/reference/packages#postmarkdownmessage)
+   to simplify the posting of the message.
 
 ![slack-apps/tutorials/channelcheck/fullcheckfornewchannels.png](/img/slack-apps/tutorials/channelcheck/fullcheckfornewchannels.png)
 

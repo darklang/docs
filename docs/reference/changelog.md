@@ -478,12 +478,14 @@ added:
   - Expanded information about
     [Datastore migrations](/reference/framework/datastores#migrations-locking-and-unlocking)
     ([141](https://github.com/darklang/docs/pull/141))
-  - A [From Javascript page](/reference/cheatsheets/javascript-cheatsheet) to help developers familiar with
-    Javascript learn Dark ([132](https://github.com/darklang/docs/pull/132))
+  - A [From Javascript page](/reference/cheatsheets/javascript-cheatsheet) to
+    help developers familiar with Javascript learn Dark
+    ([132](https://github.com/darklang/docs/pull/132))
   - Documentation for the
     [`Slack::createCheckoutSession`](./packages#createcheckoutsession) package
     ([139](https://github.com/darklang/docs/pull/139))
-- Made a few improvements to the [Your First App](/tutorials/first-dark-application) tutorial
+- Made a few improvements to the
+  [Your First App](/tutorials/first-dark-application) tutorial
   ([129](https://github.com/darklang/docs/pull/129),
   [130](https://github.com/darklang/docs/pull/130))
 - Misc. spelling fixes ([128](https://github.com/darklang/docs/pull/128),
@@ -501,8 +503,8 @@ added:
   significantly improved its performance. You should now see all Crons,
   including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions
-  on/off the [error rail](/discussion/error-handling#error-rail) or when committing
-  [feature flags](/how-to-guides/feature-flags).
+  on/off the [error rail](/discussion/error-handling#error-rail) or when
+  committing [feature flags](/how-to-guides/feature-flags).
 
 ### Documentation
 
@@ -510,10 +512,11 @@ Thank you to everyone who contributed to our docs this week! As a reminder, our
 docs repo is public and all you need to do to contribute is
 [submit a pull request](https://github.com/darklang/docs/pulls).
 
-- Added instructions for [hosting static assets](/how-to-guides/static-assets) when not using
-  an external framework. ([119](https://github.com/darklang/docs/pull/119))
-- Fixed a broken link on the [Language Details](/reference/languagedetails) page.
-  ([117](https://github.com/darklang/docs/pull/117))
+- Added instructions for [hosting static assets](/how-to-guides/static-assets)
+  when not using an external framework.
+  ([119](https://github.com/darklang/docs/pull/119))
+- Fixed a broken link on the [Language Details](/reference/languagedetails)
+  page. ([117](https://github.com/darklang/docs/pull/117))
 - Added instructions on how to pause your cron once you're done with the
   [Your First App](/tutorials/first-dark-application) tutorial.
   ([122](https://github.com/darklang/docs/pull/122))
@@ -575,8 +578,8 @@ docs repo is public and all you need to do to contribute is
 ## Week of 5/8/2020
 
 - We now have Dark badges for your sites! Add a
-  [Made With Dark badge](https://darklang.com/docs/reference/sharing-dark) to your apps to
-  establish your early Dark expertise 🎉
+  [Made With Dark badge](https://darklang.com/docs/reference/sharing-dark) to
+  your apps to establish your early Dark expertise 🎉
 
 ![changelog/badge.png](/img/changelog/badge.png)
 

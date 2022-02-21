@@ -30,5 +30,5 @@ The documentation is split into:
 - [reference materials](/category/reference)
 
 New folks should start at the
-[Your first Darklang application](/tutorials/first-dark-application) tutorial
-to get started.
+[Your first Darklang application](/tutorials/first-dark-application) tutorial to
+get started.
