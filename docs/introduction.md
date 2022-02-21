@@ -1,20 +1,34 @@
 ---
 id: introduction
-title: Hello World!
+title: Overview
 ---
 
-Dark is a language and framework for building web backends: REST API endpoints,
-asynchronous background workers, scheduled jobs, and persistent storage. Dark's
-framework is tightly coupled to the infrastructure, and as you write code you're
-able to develop from real incoming requests/traces.
-
-_Note: for now, Dark is only supported for Chrome with browser extensions
-disabled, or using our [Desktop Client](/desktop-client)._
+Darklang is am integrated language, framework, and editor for building web
+backends: REST API endpoints, asynchronous background workers, scheduled jobs,
+and persistent storage. Dark's framework is tightly coupled to the
+infrastructure, and as you write code you're able to develop from real incoming
+requests/traces.
 
 ## Hello World
 
 ![Hello World](/img/helloworld.gif)
 
-Above, you can see the simplest app in Dark: the hello world app. It shows
-starting with an empty canvas, creating a HTTP endpoint (`GET /hello`), running
-code (`"Hello world"`) and opening that page.
+Above, you can see how to create a simple Hello World application in Dark.
+Starting with an empty canvas in the Darklang editor, it creates a HTTP endpoint
+(`GET /hello`), and adds code (`"Hello world"`) to return a response. That
+endpoint is immediately
+[available in the cloud](https://ellen-helloworld3.builtwithdark.com/hello).
+
+## Guide to documentation
+
+The documentation is split into:
+
+- [tutorials](/category/tutorial)
+- [walk-throughs](/category/walk-throughs) of creating application in Dark
+- [how-to guides](/category/how-to) for using Dark features
+- [background, discussions and explanations](/category/discussion)
+- [reference materials](/category/reference)
+
+New folks should start at the
+[Your first Darklang application](/tutorials/first-dark-application) tutorial to
+get started.

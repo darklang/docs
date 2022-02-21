@@ -2,4 +2,4 @@
 title: Adding a refactoring
 ---
 
-**Coming soon**
+## Coming soon

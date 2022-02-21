@@ -1,77 +1,115 @@
 {
-  "docs": {
-    "Getting Started": [
-      "introduction",
-      "your-first",
-      "from-python",
-      "from-javascript"
-    ],
-    "Concepts": [
-      "when-dark",
-      "dark-backend-components",
-      "trace-driven-development",
-      "structured-editing",
-      "error-handling",
-      "component-worker",
-      "component-cron"
-    ],
-    "Language": [
-      "languageoverview",
-      "unique-aspects",
-      "functional-aspects",
-      "languagedetails",
-      "datastores",
-      "packages",
-      "httpclient",
-      "http"
-    ],
-    "How to": [
-      "static-assets",
-      "custom-domains",
-      "cors",
-      "teamwork",
-      "feature-flags",
-      "writing-tests",
-      "external-infra"
-    ],
-    "Reference": [
-      "function-reference",
-      "keyboard-mapping",
-      "support",
-      "sharing-dark",
-      "changelog",
-      "faqs",
-      "terms-of-service",
-      "backward-compatibility",
-      "desktop-client"
-    ]
-  },
-  "Slack": {
-    "Slack Apps": [
-      "slack-apps/slack-intro",
-      "slack-apps/slack-oauth",
-      "slack-apps/slack-packages"
-    ],
-    "Tutorials": [
-      "slack-apps/tutorials/channel-check",
-      "slack-apps/tutorials/asana-tutorial",
-      "slack-apps/tutorials/new-trello-card",
-      "slack-app-tutorial"
-    ]
-  },
-  "Tutorials": {
-    "Tutorial & Samples": [
-      "tutorials/tutorial-intro",
-      "tutorials/react-spa-tutorial",
-      "tutorials/twilio-app-tutorial",
-      "tutorials/error-rail-http-tutorial",
-      "tutorials/ifttt-alerts",
-      "tutorials/external-db",
-      "tutorials/airtable",
-      "tutorials/freshdesk",
-      "tutorials/sample-canvases"
-    ]
-  },
+  "docs": [
+    "introduction",
+    {
+      "type": "category",
+      "label": "Tutorial",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "tutorials/first-dark-application",
+        "tutorials/create-http-handler",
+        "tutorials/create-tool-repl",
+        "tutorials/save-data-to-datastore",
+        "tutorials/create-daily-job-cron-handler",
+        "tutorials/process-background-jobs-worker",
+        "tutorials/extract-function",
+        "tutorials/call-external-api",
+        "tutorials/complete-first-application",
+        "tutorials/handle-error-errorrail",
+        "tutorials/next-steps"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Walk-throughs",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "walk-throughs/react-app",
+        "walk-throughs/slack-app",
+        "walk-throughs/external-db",
+        "walk-throughs/slack-channel-check",
+        "walk-throughs/slack-asana",
+        "walk-throughs/slack-trello",
+        "walk-throughs/twilio-app",
+        "walk-throughs/ifttt-events",
+        "walk-throughs/airtable",
+        "walk-throughs/freshdesk"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "How-to Guides",
+      "link": {
+        "type": "generated-index",
+        "slug": "/category/how-to"
+      },
+      "items": [
+        "how-to/static-assets",
+        "how-to/custom-domains",
+        "how-to/cors",
+        "how-to/collaborate",
+        "how-to/feature-flags",
+        "how-to/write-tests"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Discussion",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "discussion/languageoverview",
+        "discussion/unique-aspects",
+        "discussion/functional-aspects",
+        "discussion/when-dark",
+        "discussion/dark-backend-components",
+        "discussion/trace-driven-development",
+        "discussion/structured-editing",
+        "discussion/error-handling"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Reference",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        {
+          "Cheat Sheets": [
+            "reference/cheatsheets/python-cheatsheet",
+            "reference/cheatsheets/javascript-cheatsheet"
+          ],
+          "Function & Package reference": [
+            "reference/function-reference",
+            "reference/packages",
+            "reference/httpclient"
+          ],
+          "Framework components": [
+            "reference/framework/http-framework",
+            "reference/framework/datastores",
+            "reference/framework/workers",
+            "reference/framework/cron"
+          ]
+        },
+        "reference/sample-canvases",
+        "reference/languagedetails",
+        "reference/keyboard-mapping",
+        "reference/support",
+        "reference/sharing-dark",
+        "reference/changelog",
+        "reference/faqs",
+        "reference/terms-of-service",
+        "reference/backward-compatibility",
+        "reference/desktop-client"
+      ]
+    }
+  ],
   "Contributing": {
     "Your First Contribution": [
       "contributing/getting-started",

@@ -47,9 +47,9 @@ languages. Adding another language would be wonderful. See for example the
 ## Reporting bugs
 
 Dark has many bugs and problems: documenting them for other contributors to fix
-would be very useful. Small, compact descriptions with instructions to
-reproduce the bugs are very welcome. You can add them to the [issue
-tracker](https://github.com/darklang/dark/issues).
+would be very useful. Small, compact descriptions with instructions to reproduce
+the bugs are very welcome. You can add them to the
+[issue tracker](https://github.com/darklang/dark/issues).
 
 ### Fluid editor
 
@@ -64,7 +64,7 @@ problem for users learning the language the first time. Documenting a bad error
 message, especially with a suggested better version, is a really useful
 contribution.
 
-## Learning ReScript or F#
+## Learning F\# or ReScript
 
 Dark is almost everybody's first ReScript or F# project. So if you don't know
 these two similar languages, join the club - we all learned as we contributed to

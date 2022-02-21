@@ -1,0 +1,61 @@
+# Backward compatibility
+
+We aim to keep Dark's behaviour consistent and backwards compatible, in order to
+prevent your programs from changing without your knowlege. Sometimes cannot
+achieve this due to the underlying technology (eg HTTP servers and proxies, JSON
+parsers/serializers, etc) that we are built-on top of.
+
+## Serialized Dark values
+
+Dark serialized values appear in HTTP responses, in functions like `toString`
+and `Dict::toJSON`, and are sent to servers using `HttpClient::` functions.
+
+- Dark may change the formatting of values as they are serialized to users.
+  Typically, we will only do this to correct incorrect behaviour.
+
+- Dark tries to generate standard JSON. We don't always, and where we generate
+  non-standard JSON, we may switch to generating more standard JSON.
+
+- We may switch the format of JSON (indentation, spacing, etc), at any point to
+  make it prettier.
+
+- Dark serializes integers to JSON as integers, even when they are larger than
+  standard JSON values.
+
+- Dark does not promise to parse non-standard JSON (it may do so in some cases,
+  please do not rely on this). Where Dark does parse non-standard JSON, it may
+  stop doing so without warning.
+
+## Dictionaries and Database ordering
+
+When fetching lists of data from databases, or converting dictionaries or sets
+to lists, we make no promises as to the ordering of values, and may change them
+without warning.
+
+## Unicode
+
+Unicode is a moving standard, and Dark strings will upgrade behind the scenes
+based on the latest standard. The changes will not necessarily happen in
+backwards compatible ways.
+
+## Language/framework behaviour
+
+Error messages in Dark may change at any time. We recommend that you do not use
+Dark error messages as user-facing values, or if you do, set expectations that
+they may change.
+
+## HTTP / Transport
+
+Dark may move to newer version of HTTP (HTTP/2, HTTP3) without warning and
+without maintaining exact HTTP/1.1 compatibility.
+
+## Timeouts
+
+Not all parts of Dark have timeouts, but we may add or change timeouts to make
+the service run better.
+
+## Private APIs
+
+Dark's APIs (such as those used in the editor) are private and may change at any
+time. Feel free to use them, but do not rely on them in any way. If you wish to
+build on them, please contact us and we may be able to find ways to help.

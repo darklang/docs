@@ -13,6 +13,6 @@ big project to [port the backend to F#](porting-the-dark-backend.md).
 If you'd like help contributing, you can
 [book a pairing session with Paul Biggar to help](https://calendly.com/paul-biggar/dark-contributor-pairing-session).
 
-Before you do that, it's helpful to join the [#development
-channel](https://darkcommunity.slack.com/archives/C014H6H6BB3) in the Dark
-Slack (join using [this invite](https://darklang.com/slack-invite)).
+Before you do that, it's helpful to join the
+[#development channel](https://darkcommunity.slack.com/archives/C014H6H6BB3) in
+the Dark Slack (join using [this invite](https://darklang.com/slack-invite)).

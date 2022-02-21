@@ -7,11 +7,11 @@ OCaml to F#. The motivation for this is to give us access to a richer ecosystem
 of libraries to build Dark on, especially cloud libraries. This is described
 more in a set of blog posts:
 
-- https://blog.darklang.com/leaving-ocaml/
-- https://blog.darklang.com/new-backend-fsharp/
-- https://blog.darklang.com/why-dark-didnt-choose-rust/
+- [https://blog.darklang.com/leaving-ocaml/](https://blog.darklang.com/leaving-ocaml/)
+- [https://blog.darklang.com/new-backend-fsharp/](https://blog.darklang.com/new-backend-fsharp/)
+- [https://blog.darklang.com/why-dark-didnt-choose-rust/](https://blog.darklang.com/why-dark-didnt-choose-rust/)
 
-# Porting standard library functions
+## Porting standard library functions
 
 Dark's standard library functions need to be ported from OCaml to F#. At last
 count there were 267 functions that needed porting, in addition to the 207
@@ -28,15 +28,15 @@ When porting a function, start by finding the commented out version of it (in
 preprocessed in bulk to closely match the intended F# code, so once you
 uncomment it, there should only be a small amount of work to port it over.
 
-## TaskOrValue
+### Ply
 
 The functions in OCaml were written to not function concurrently, while the F#
 version is designed to run concurrently. The major difference here is that the
 OCaml backend returns a `Dval` (a Dark value), while the F# version returns a
-`TaskOrValue<Dval>`.
+`Ply<Dval>`.
 
-For most simple functions that do no IO, a `TaskOrValue` just wraps a `Dval`.
-For example, compare the original OCaml version of `Int::add_v0`:
+For most simple functions that do no IO, a `Ply` just wraps a `Dval`. For
+example, compare the original OCaml version of `Int::add_v0`:
 
 ```ocaml
   ; { prefix_names = ["Int::add"]
@@ -57,7 +57,7 @@ For example, compare the original OCaml version of `Int::add_v0`:
 
 to the F# version
 
-```ocaml
+```fsharp
     { name = fn "Int" "add" 0
       parameters = [ Param.make "a" TInt ""; Param.make "b" TInt "" ]
       returnType = TInt
@@ -76,15 +76,16 @@ wrap the `Dval` in a `Value`.
 
 ### Tasks
 
-For functions that perform IO, you'll need to use the `taskv` "computation
+For functions that perform IO, you'll need to use the `ply` "computation
 expression". A "computation expression" is a special F# language feature for
-writing abstractions with a nice syntax. The `taskv` CE allows using
-TaskOrValues easily, and can best be illustrated with an example:
+writing abstractions with a nice syntax. The `ply` CE allows using a specialized
+asyncronous structure called Ply (which is extremely similar to a .Net Task)
+easily, and can best be illustrated with an example:
 
-```ocaml
+```fsharp
   (function
   | state, [ DObj value; DStr key; DDB dbname ] ->
-      taskv {
+      uply {
         let db = state.dbs.[dbname]
         let! _id = UserDB.set state true db key value
         return DObj value
@@ -94,13 +95,12 @@ TaskOrValues easily, and can best be illustrated with an example:
 
 Let's break this down line by line:
 
-- `taskv {`: this creates the CE, whose return value will be a
-  `TaskOrValue<'any>`.
+- `uply {`: this creates the CE, whose return value will be a `Ply<'any>`.
 - `let db = state.dbs.[dbname]` - this is just regular F# code
 - `let! _id = UserDB.set state true db key value` - the special thing here is
-  the `let!` - this line calls `UserDB.set`, a function which returns a
-  `TaskOrValue`, and unwraps the `TaskOrValue`. This means that `_id` can be
-  treated as a normal value for the rest of this `taskv`.
+  the `let!` - this line calls `UserDB.set`, a function which returns a `Ply`,
+  and unwraps the `Ply`. This means that `_id` can be treated as a normal value
+  for the rest of this `taskv`.
 - `return DObj value` - return takes an ordinary value and turns it into a
   `TaskOrValue`, in this case a `TaskOrValue<Dval>`.
 
@@ -115,7 +115,7 @@ JS, Rust, C# or Python.
 You'll also need this for first-class functions like `List::map_v0`, as they may
 be used to call functions which return Tasks. Here is an example of this:
 
-```ocaml
+```fsharp
     { name = fn "List" "map" 0
       parameters =
         [ Param.make "list" (TList varA) "The list to be operated on"
@@ -162,7 +162,7 @@ using a non-nested type like `TResult`, we use `TResult(DType, DType)` to
 indicate the types used in the `Ok` and `Error` constructors used by Result. The
 definition of a type has switched from this in OCaml:
 
-```
+```ocaml
 module RuntimeT = struct
   type tipe = Serialization_format.tipe =
     | TAny
@@ -193,7 +193,7 @@ module RuntimeT = struct
 
 to this in F#:
 
-```ocaml
+```fsharp
 and DType =
   | TAny
   | TInt
@@ -256,7 +256,7 @@ That said, functions can never have enough tests, so if you think the existing
 tests aren't adequate, feel free to add more. If you aren't sure of the expected
 behaviour, run it on your canvas on `darklang.com`.
 
-# Porting APIs
+## Porting APIs
 
 There are many APIs that need to be ported - these are used by the editor. The
 APIs that need to still be implemented are commented out at the bottom of
@@ -272,7 +272,7 @@ These are implemented in two parts:
 Look at existing examples for how to do this, especially for how to port SQL
 calls from OCaml to Dark.
 
-# Other work to be done
+## Other work to be done
 
 The remainder of the work is bring tracked in the issue tracker under the
 [F# label](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Af%23).

@@ -11,11 +11,11 @@
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "lint": "markdownlint --config markdownlint.json docs/*.md",
-    "format": "prettier --write docs/*.md",
+    "lint": "markdownlint --config markdownlint.json docs/**/*.md docs/*.md",
+    "format": "prettier --write docs/*.md docs/**/*.md",
     "format-js": "prettier --write pages/**/*.js",
     "format-css": "prettier --write static/css/*.css",
-    "check-format": "prettier --check docs/*.md",
+    "check-format": "prettier --check docs/*.md docs/**/*.md",
     "check-spelling": "mdspell --report --en-us -n \"docs/**/*.md\""
   },
   "devDependencies": {
@@ -24,8 +24,8 @@
     "prettier": "2.0.5"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.7",
-    "@docusaurus/preset-classic": "2.0.0-beta.7",
+    "@docusaurus/core": "2.0.0-beta.15",
+    "@docusaurus/preset-classic": "2.0.0-beta.15",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",

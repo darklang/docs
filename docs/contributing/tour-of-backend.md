@@ -17,11 +17,12 @@ Here's the journey it takes:
   (`bwd` stands for `BuiltWithDark`)
 - our webserver is built on top of ASP.NET, and it directs the request to
   [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs).runDarkHandler.
-- if it's a 404, the trace is stored in the `stored_events_v2` table and sent
-  to the client as a 404 via
-  [Pusher](https://pusher.com)
+- if it's a 404, the trace is stored in the `stored_events_v2` table and sent to
+  the client as a 404 via [Pusher](https://pusher.com)
 - if a page is found, the request path, body, and headers are passed to the
-  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware/MiddlewareV0.fs), which creates the `request` parameter, run the code, and converts the response into the correct formats.
+  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware/MiddlewareV0.fs),
+  which creates the `request` parameter, run the code, and converts the response
+  into the correct formats.
 - [`Interpreter.eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs)
   runs the Dark code, saving parts of the trace as it goes. Input values,
   function arguments and return values are saved in Postgres tables
