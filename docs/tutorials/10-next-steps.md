@@ -9,7 +9,7 @@ We have more material to help you on your journey:
 
 - video walk-throughs of
   [building complete apps in Dark](https://www.youtube.com/playlist?list=PLpcgNq_UYVoPU7vi_aDABfEoGqf9bfmP4)
-- [sample canvases](./sample-canvases) for language features and
+- [sample canvases](/reference/sample-canvases) for language features and
 - video introductions to
   [Dark language features and components](https://www.youtube.com/playlist?list=PLpcgNq_UYVoNZVoPEdqoNVemixjkrye83)
 - [In-depth how-to guides](http://localhost:3000/slack-apps/tutorials/channel-check)

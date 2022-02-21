@@ -57,7 +57,7 @@ Slack slash command
 [magiceightball](https://darklang.com/a/sample-magiceightball) - a full magic
 eight ball Slackbot
 
-For a full Slackbot tutorial, click [here](/slack-app-tutorial).
+For a full Slackbot walk-through, click [here](/walk-throughs/slack-app).
 
 ## Twilio
 
@@ -67,7 +67,7 @@ upon arrival
 [textreminder](https://darklang.com/a/sample-textreminder) - get texted
 reminders
 
-For a full Twilio tutorial, click [here](/tutorials/twilio-app-tutorial).
+For a full Twilio tutorial, click [here](/walk-throughs/twilio-app).
 
 ## Misc. Integrations
 

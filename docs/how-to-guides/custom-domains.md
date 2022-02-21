@@ -55,7 +55,7 @@ or service available over `https`.
    Another way to check is with a service like
    [https://dnschecker.org/](https://dnschecker.org/).
 
-3. Once DNS resolves, [contact us](/support) with your domain and canvas, and
+3. Once DNS resolves, [contact us](/reference/support) with your domain and canvas, and
    we'll set up an SSL cert and the appropriate redirects from `http` to `https`
    on our end.
 
@@ -82,5 +82,5 @@ switch from "Proxied" to "DNS only" mode:
 ### My DNS is set up correctly, but I'm getting an invalid certificate warning when trying to visit my custom domain via `https`
 
 If this happens we likely haven't set up an SSL certificate for you yet (see
-step 3 above). In any case, please [contact us](support) with your domain and
+step 3 above). In any case, please [contact us](/reference/support) with your domain and
 canvas.

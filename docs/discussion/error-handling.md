@@ -64,4 +64,4 @@ stopping to handle errors. This is based on
 and the UI elements are unique to Dark.
 
 You can learn more about
-[which functions go to the error rail and how it works](/unique-aspects#functions-that-use-error-rail).
+[which functions go to the error rail and how it works](/discussion/unique-aspects#functions-that-use-error-rail).

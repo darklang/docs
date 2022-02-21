@@ -12,7 +12,7 @@ uploading via static assets.
 
 1. Start by making a simple web form to allow users to join your waitlist. All
    of the work for this tutorial can be done locally, but if you're interested
-   you can learn more about [uploading static assets here.](../static-assets)
+   you can learn more about [uploading static assets here.](/how-to-guides/static-assets)
 
 ![iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png](/img/tutorials/iftttalerts/Screen_Shot_2020-05-19_at_9.19.01_AM.png)
 

@@ -175,4 +175,4 @@ to the process.
 ## Using an External Datastore
 
 We strongly recommend using this built-in datastore. If you have an external
-database, you can [connect to it via REST](/tutorials/external-db).
+database, you can [connect to it via REST](/walk-throughs/external-db).
