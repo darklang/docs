@@ -102,7 +102,7 @@ that call the datastore.
 
 ![backend/image3.png](/img/backend/image3.png)
 
-[Detailed datastore information](datastores.md).
+[Detailed datastore information](/reference/framework/datastores.md).
 
 ## Deleted
 

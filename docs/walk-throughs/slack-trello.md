@@ -86,7 +86,7 @@ Trello and store each of them as separate functions in Dark:
 ![slack-apps/tutorials/new-trello-card/listgetat.png](/img/slack-apps/tutorials/new-trello-card/listgetat.png)
 
 6. Once we have all of the information we need, we can use the Dark package
-   manager [`Trello::createNewCard` function](/packages.md#createNewCard) to
+   manager [`Trello::createNewCard` function](/reference/packages.md#createNewCard) to
    create the new card. For simplicity's sake, we're going to use the
    `defaultListID` we set earlier, as well as the `trelloKey` and `trelloToken`.
 
@@ -123,7 +123,7 @@ list names and ids.
 ![slack-apps/tutorials/new-trello-card/messagecontentwithlist.png](/img/slack-apps/tutorials/new-trello-card/messagecontentwithlist.png)
 
 16. Using the built in
-    [`Trello:lookUpListID` function](/packages.md#lookuplistid), we can grab the
+    [`Trello:lookUpListID` function](/reference/packages.md#lookuplistid), we can grab the
     name of that list and use it in our `createNewCard` function.
 
 ![slack-apps/tutorials/new-trello-card/lookuplistid.png](/img/slack-apps/tutorials/new-trello-card/lookuplistid.png)

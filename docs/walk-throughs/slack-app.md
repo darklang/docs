@@ -53,7 +53,7 @@ Manage Distribution** and copy the Shareable URL to your browser’s address bar
 **_Before continuing, please visit the Shareable URL to install the
 application._** By visiting this URL, you’re making sure you have a real trace
 to work from in Dark. If you’re new to Dark,
-[Trace driven development](trace-driven-development.md) is a good overview of
+[Trace driven development](/discussion/trace-driven-development.md) is a good overview of
 why.
 
 --
@@ -96,7 +96,7 @@ This calls part of Slack’s API
 you access to the Slack app that requested it.
 
 When you’ve done this correctly and hit “play” to make the call
-([more on play buttons)](trace-driven-development.md#live-values--play-buttons),
+([more on play buttons)](/discussion/trace-driven-development.md#live-values--play-buttons),
 you’ll get a response that has the right fields. This will include `team_id` and
 an `access_token`. (This may also have a `bot_access_token` if you add a bot to
 your Slack functionality).

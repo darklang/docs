@@ -44,7 +44,7 @@ We’ll need some setup on your machine to upload the react app. Run these
 commands on OSX to install. To read a longer version explaining what each of
 these commands do, go here:
 
-[Hosting Static Assets in Dark](static-assets.md)
+[Hosting Static Assets in Dark](/how-to-guides/static-assets.md)
 
 Note, replace anywhere that says USERNAME and PASSWORD with your Dark username
 and password.
@@ -129,7 +129,7 @@ case, I’ve chosen phone numbers and Slack IDs to send texts and DMs.
 
 Datastores in Dark are key-value based, not relational. This tutorial will
 include step by step instructions, but more information on datastores is
-available [here](dark-backend-components.md#persistent-datastores).
+available [here](/discussion/dark-backend-components.md#persistent-datastores).
 
 ![reactspa/image7.png](/img/tutorials/reactspa/image7.png)
 
@@ -177,7 +177,7 @@ then took the name for each host.
 
 To see how this works, click first on `DB::getAll` to see the list of objects,
 then click on `\val` to see an example object, and then `val.name` will show you
-the `name` field. [Functional aspects of Dark](functional-aspects.md) has more
+the `name` field. [Functional aspects of Dark](/discussion/functional-aspects.md) has more
 information on pipelines and maps, but for the tutorial copying this code will
 work.
 
@@ -254,7 +254,7 @@ you’ll get two tokens back, one of which is the format "xoxb-\*".
 Back in our post visits handler, hit enter at the end of the line to write more
 code (This converts our `DB::set` action into a statement. Not necessary reading
 now, but more on implicit returns is in the
-[functional aspects of Dark](functional-aspects.md)).
+[functional aspects of Dark](/discussion/functional-aspects.md)).
 
 To send information to be used asynchronously (like for API calls) we can use
 the keyword emit to emit to an async background worker with a queue.
@@ -334,5 +334,5 @@ storage, and asynchronous background workers, hosted at
 When you go back to your React app and submit a new visit, you should receive
 both a Slack and a Text.
 
-(Interested more in Slack apps? We have [a guide](slack-app-tutorial.md) for
+(Interested more in Slack apps? We have [a guide](/walk-throughs/slack-app.md) for
 that!)

@@ -9,8 +9,9 @@ accessible via autocomplete. The package manager today is intended for
 connections to third party services and APIs.
 
 In the future, packages will be imported vs. being continually accessible, and
-community members will be able to contribute directly. If you would like to
-request or contribute a package today, please reach out via Slack.
+community members will be able to contribute directly. If you would like to request
+or contribute a package today, please reach out via
+[Slack](https://darklang.com/slack-invite).
 
 ## Slack
 
@@ -135,10 +136,6 @@ and Mailchimp data center (`String`) and posts to the
 [Mailchimp Subscribers API](https://mailchimp.com/developer/guides/manage-subscribers-with-the-mailchimp-api/#Add_a_contact_to_a_list%2Faudience).
 
 ![subscribe](/img/packages/mailchimp/subscribe.png)
-
-## Slack Package
-
-For a full list of Slack functions, click [here](slack-apps/slack-packages).
 
 ## Stripe Package
 
@@ -276,11 +273,6 @@ Takes a list Datastore (containing names & ids) and a name (`String`) and
 returns the list id matching the name.
 
 ![lookUpListID](/img/packages/trello/lookUpListID.png)
-
-## Upcoming Packages
-
-We have some ideas of packages we intend to implement, but would love to hear
-what would be most useful.
 
 ## Contributions
 

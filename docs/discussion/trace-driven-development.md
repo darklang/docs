@@ -17,7 +17,7 @@ Send requests to Dark _before writing code_. There are several ways to do this:
 
 1. Build your frontend or mobile app first and point your API endpoints at Dark
    (you can host your frontend on Dark by
-   [uploading your static assets](static-assets.md) via CLI).
+   [uploading your static assets](/how-to-guides/static-assets.md) via CLI).
 2. Use another platform that makes requests via REST (Slack, Twilio, Shopify)
    and use Dark with existing webhooks or calls.
 3. **Use postman, curl, or another tool of your choice to send test data in the
