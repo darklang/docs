@@ -4,6 +4,29 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## 2021-Febuary 2022
+
+In the Editor, code that can be executed without external resources (such as
+a datastore) is executed within the Editor itself. This "Analysis" is powered by
+a  portion of our backend that is compiled to WebAssembly, called by the Editor
+as you write your Dark program.
+
+As part of our backend rewrite, moving from OCaml to F#, we are migrating the 
+Editor to provide this Analysis by a WASM-compiled F# backend, rather than the
+OCaml one.
+
+If you face any issues in in-Editor code execution,
+- please [let us know](https://github.com/darklang/dark/issues) so we can
+  address the issue.
+- you can locally revert to use the legacy OCaml execution by changing the URL
+  in your browser: if you add a `wasm-use-ocaml=true` query parameter, the old
+  WASM-compiled Analysis engine will be used instead. If you are using the
+  desktop Dark application, there is no way to switch back at this point.
+
+Currently, we are aware of some performance degradation with this transition - 
+the F#-compiled Analysis has worse load-time and run-time performance. We plan to
+focus on performance improvements here soon.
+
 ## 2021-January 2022
 
 We have been doing a major rewrite of our backend, moving from OCaml to F#. This
