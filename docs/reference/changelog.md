@@ -30,13 +30,13 @@ things have been added to the list since you last checked._
 
 ## Discovered before Feb 28, 2022:
 
-We have changed the execution engine in the Darklang editor (used when editing on
-darklang.com or in the Desktop Client). If you experience any issues, you can revert
-to the old execution enginer using the `use-ocaml-analysis=true` query param, (eg
-`https://darklang.com/a/CANVASNAME?use-ocaml-analysis=true`). In the Darklang Desktop
-application, you can open the JS console and run `window.DarkAnalysis.useOcaml =
-true`). We are aware of some performance issues, and will be working on these in the
-future.
+We have changed the execution engine in the Darklang editor (used when editing
+on darklang.com or in the Desktop Client). If you experience any issues, you can
+revert to the old execution enginer using the `use-ocaml-analysis=true` query
+param, (eg `https://darklang.com/a/CANVASNAME?use-ocaml-analysis=true`). In the
+Darklang Desktop application, you can open the JS console and run
+`window.DarkAnalysis.useOcaml = true`). We are aware of some performance issues,
+and will be working on these in the future.
 
 ## Discovered before Jan 10, 2022:
 
