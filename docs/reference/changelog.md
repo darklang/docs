@@ -11,6 +11,11 @@ solves significant operational issues and opens Dark to a lot of improvements
 and productivity fixes down the line, especially relying more heavily on our
 cloud provider.
 
+- To test out the new backend in the Dark editor, go to
+  https://darklang.com/a-testing-fsharp/CANVASNAME?fsharp-backend=true
+- To test out the new backend on builtwithdark.com, send us a message
+  [on Slack](https://darklang.com/slack-invite)
+
 As we prepare to release the new version, we want to give advanced warning about
 some changes to the language and standard library. Though Dark was designed to
 avoid changes to existing functionality, allowing for new versions of the
