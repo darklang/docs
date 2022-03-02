@@ -12,7 +12,7 @@ and productivity fixes down the line, especially relying more heavily on our
 cloud provider.
 
 - To test out the new backend in the Dark editor, go to
-  https://darklang.com/a-testing-fsharp/CANVASNAME?fsharp-backend=true
+  darklang.com/a-testing-fsharp/CANVASNAME?fsharp-backend=true
 - To test out the new backend on builtwithdark.com, send us a message
   [on Slack](https://darklang.com/slack-invite)
 
