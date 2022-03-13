@@ -3,7 +3,7 @@ id: introduction
 title: Overview
 ---
 
-Darklang is am integrated language, framework, and editor for building web
+Darklang is an integrated language, framework, and editor for building web
 backends: REST API endpoints, asynchronous background workers, scheduled jobs,
 and persistent storage. Dark's framework is tightly coupled to the
 infrastructure, and as you write code you're able to develop from real incoming
