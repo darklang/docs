@@ -39,6 +39,6 @@ Add this to `float.tests`, save the file, and it should automatically recompile
 and run the test.
 
 (If you're running the container in VSCode, run
-`./scripts/run-fsharp-test --filter-test-list float` instead)
+`./scripts/run-fsharp-tests --filter-test-list float` instead)
 
 Great, we're done!
