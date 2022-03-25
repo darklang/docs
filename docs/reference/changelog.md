@@ -35,9 +35,9 @@ things have been added to the list since you last checked._
 
 ## Discovered before Mar 25, 2022:
 
-Dark is now less lenient to receiving incorrect Content-Length headers. If the data
-sent does not match the expected Content-Length, the HTTP server will return a 400
-Bad Request error. Omitting the Content-Length header is still OK.
+Dark is now less lenient to receiving incorrect Content-Length headers. If the
+data sent does not match the expected Content-Length, the HTTP server will
+return a 400 Bad Request error. Omitting the Content-Length header is still OK.
 
 ## Discovered before Feb 28, 2022:
 
