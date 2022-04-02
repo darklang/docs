@@ -29,7 +29,7 @@ A completed version of this tutorial, is also available at
 Note that you should **not** copy/paste this &ndash; we want to teach you to use
 the Dark editor.
 
-## Open the Editor
+## Open the Editor 2
 
 To start, open the Dark editor by going to _darklang.com/a/USERNAME_. If you
 haven't signed up yet, you'll need to
