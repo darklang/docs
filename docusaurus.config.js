@@ -61,12 +61,12 @@ module.exports = {
               to: "https://darklang.com/docs",
             },
             {
-              label: "Tutorials & Samples",
-              to: "https://darklang.com/docs/tutorials",
+              label: "Tutorial",
+              to: "tutorials/first-dark-application",
             },
             {
-              label: "Building Slack Apps",
-              to: "https://darklang.com/docs/slack-apps",
+              label: "Walk-throughs",
+              to: "category/walk-throughs",
             },
           ],
         },
@@ -126,6 +126,10 @@ module.exports = {
             {
               label: "Mailing List",
               to: "https://darklang.com/mailing-list",
+            },
+            {
+              label: "Changelog",
+              to: "reference/changelog",
             },
           ],
         },
