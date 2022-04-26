@@ -524,8 +524,9 @@ added:
   significantly improved its performance. You should now see all Crons,
   including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions
-  on/off the [error rail](https://docs.darklang.com/discussion/error-handling#error-rail) or when
-  committing [feature flags](/how-to/feature-flags).
+  on/off the
+  [error rail](https://docs.darklang.com/discussion/error-handling#error-rail)
+  or when committing [feature flags](/how-to/feature-flags).
 
 ### Documentation
 
@@ -560,9 +561,10 @@ docs repo is public and all you need to do to contribute is
 
 ![changelog/helloworld.png](/img/changelog/helloworld.png)
 
-- [Package manager functions](https://docs.darklang.com/reference/packages) and their
-  underlying code can now be accessed via the sidebar. These functions will
-  appear in the autocomplete, and can be used like any other built-in function.
+- [Package manager functions](https://docs.darklang.com/reference/packages) and
+  their underlying code can now be accessed via the sidebar. These functions
+  will appear in the autocomplete, and can be used like any other built-in
+  function.
 
 ![changelog/packagemanager.png](/img/changelog/packagemanager.png)
 
@@ -585,8 +587,9 @@ docs repo is public and all you need to do to contribute is
 
 - Reorganized our documentation site, breaking tutorials & samples into their
   own section.
-- Added a [From Python](https://docs.darklang.com/reference/cheatsheets/python-cheatsheet) page to help
-  developers familiar with Python learn Dark.
+- Added a
+  [From Python](https://docs.darklang.com/reference/cheatsheets/python-cheatsheet)
+  page to help developers familiar with Python learn Dark.
 - Added three sample canvases:
   - [GCP Bucket](https://darklang.com/a/sample-gcpbucket)
   - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
@@ -702,8 +705,8 @@ docs repo is public and all you need to do to contribute is
 
 - We've done a lot of work to improve how quickly we can set up custom domains -
   if you want a custom domain to point to your Dark app,
-  [read the documentation](https://docs.darklang.com/how-to/custom-domains) to see how
-  to do it.
+  [read the documentation](https://docs.darklang.com/how-to/custom-domains) to
+  see how to do it.
 - More standard library functions! We're ramping down our concentrated effort to
   add more all at once, so if you have any requests post in the
   [Community Slack](https://darklang.com/slack-invite) or email
@@ -796,7 +799,8 @@ docs repo is public and all you need to do to contribute is
 
 ### Documentation
 
-- Added a doc about how to use [CORS in Dark](https://docs.darklang.com/how-to/cors)
+- Added a doc about how to use
+  [CORS in Dark](https://docs.darklang.com/how-to/cors)
 - Added and documented many
   [Slack package manager functions](https://docs.darklang.com/reference/packages#slack)
 
@@ -853,10 +857,13 @@ We released a lot this week, hope you enjoy!
 
 ### Documentation
 
-- Added [Your First Function](https://docs.darklang.com/tutorials/extract-function) and
+- Added
+  [Your First Function](https://docs.darklang.com/tutorials/extract-function)
+  and
   [Your First External API Call](https://docs.darklang.com/tutorials/call-external-api)
-- Updated the [Slack tutorial](https://docs.darklang.com/walk-throughs/slack-app) to
-  discuss OAuth v2
+- Updated the
+  [Slack tutorial](https://docs.darklang.com/walk-throughs/slack-app) to discuss
+  OAuth v2
 
 ## Week of 3/20/2020
 
@@ -907,11 +914,11 @@ We released a lot this week, hope you enjoy!
   then (though it is also less noticeable there as the JS overhead is higher
   than the DB overhead so 🤷🏽‍♀️)
 - We have launched an alpha
-  [package manager](https://docs.darklang.com/reference/packages), which allows re-using
-  Dark functions from other users or canvases. Today, only Dark employees can
-  add functions to the package manager. We've started with some commonly used
-  Slack functions, but let us know via Slack or email if you have any requests -
-  or your own functions you'd like to share.
+  [package manager](https://docs.darklang.com/reference/packages), which allows
+  re-using Dark functions from other users or canvases. Today, only Dark
+  employees can add functions to the package manager. We've started with some
+  commonly used Slack functions, but let us know via Slack or email if you have
+  any requests - or your own functions you'd like to share.
 
 ![changelog/Mar13/slackfunctions.png](/img/changelog/Mar13/slackfunctions.png)
 
@@ -927,8 +934,9 @@ We added a bunch of improved documentation, including:
 
 - better docs for hosting
   [static assets](https://docs.darklang.com/how-to/static-assets)
-- a new doc describing [Datastores](https://docs.darklang.com/reference/framework/datastores) in
-  more detail
+- a new doc describing
+  [Datastores](https://docs.darklang.com/reference/framework/datastores) in more
+  detail
 - a new doc describing our (very limited) support for
   [packages](https://docs.darklang.com/reference/packages)
 - [a new doc describing the HTTP client library](https://docs.darklang.com/reference/httpclient)
@@ -993,8 +1001,8 @@ We added a bunch of improved documentation, including:
 - Docs can now be accessed at
   [https://darklang.com/docs](https://darklang.com/docs)
 - [Your first Cron](https://docs.darklang.com/reference/framework/cron) and
-  [Your first Worker](https://docs.darklang.com/reference/framework/workers) sections have been
-  added to the Getting Started guide
+  [Your first Worker](https://docs.darklang.com/reference/framework/workers)
+  sections have been added to the Getting Started guide
 
 ## Week of 2/21/2020
 

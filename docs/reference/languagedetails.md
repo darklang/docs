@@ -55,7 +55,8 @@ We intend for numeric operations to return Results, to handle situations which
 are undefined on the datatype. For example, integer division would return
 `Result Error Int`. Similarly, floating point values would never be `NaN`, and
 instead would return `Result Error Float`. See
-[Error Handling in Dark](https://docs.darklang.com/discussion/error-handling) for more.
+[Error Handling in Dark](https://docs.darklang.com/discussion/error-handling)
+for more.
 
 ### Booleans
 
@@ -131,7 +132,8 @@ Result a = Ok a | Err Error
 ```
 
 Dark has no exceptions - all errors go through Results. See
-[error handling](https://docs.darklang.com/discussion/error-handling) for more details.
+[error handling](https://docs.darklang.com/discussion/error-handling) for more
+details.
 
 ![Result Example](/img/language/result_example.png)
 
