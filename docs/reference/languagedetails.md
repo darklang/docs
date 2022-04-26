@@ -55,7 +55,7 @@ We intend for numeric operations to return Results, to handle situations which
 are undefined on the datatype. For example, integer division would return
 `Result Error Int`. Similarly, floating point values would never be `NaN`, and
 instead would return `Result Error Float`. See
-[Error Handling in Dark](/discussion/error-handling) for more.
+[Error Handling in Dark](https://docs.darklang.com/discussion/error-handling) for more.
 
 ### Booleans
 
@@ -119,7 +119,7 @@ This is intended to convert effortlessly to null in JSON, but we don't quite
 have enough of the type system to remove null, so they both exist right now.
 
 Functions which return `Option` trigger the
-[Error Rail](/discussion/error-handling).
+[Error Rail](https://docs.darklang.com/discussion/error-handling).
 
 ### Results
 
@@ -131,7 +131,7 @@ Result a = Ok a | Err Error
 ```
 
 Dark has no exceptions - all errors go through Results. See
-[error handling](discussion/error-handling) for more details.
+[error handling](https://docs.darklang.com/discussion/error-handling) for more details.
 
 ![Result Example](/img/language/result_example.png)
 
