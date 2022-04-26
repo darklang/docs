@@ -343,7 +343,7 @@ changelog when they ship.
   [file issues](https://github.com/darklang/dark/issues) directly, and also
   [contribute](https://docs.darklang.com/contributing/getting-started).
 - Added a contributing doc, showing how you can help if
-  [you don't know OCaml](https://darklang.com/docs/contributing/if-you-dont-know-ocaml).
+  [you don't know OCaml](https://docs.darklang.com/contributing/if-you-dont-know-our-stack).
 - `Date::hour_v1` is now supported in the query compiler.
   ([David Cooley](https://github.com/cooleydw494),
   [#2639](https://github.com/darklang/dark/pull/2639))
@@ -388,8 +388,8 @@ changelog when they ship.
 ### Documentation
 
 - Detailed documentation is now available around
-  [workers](https://darklang.com/docs/component-worker) and
-  [crons](https://darklang.com/docs/component-cron)
+  [workers](https://docs.darklang.com/reference/framework/workers) and
+  [crons](https://docs.darklang.com/reference/framework/cron)
 - We've begun to create short videos explaining Dark concepts. They will be
   added throughout the documentation, and a
   [full playlist](https://www.youtube.com/playlist?list=PLpcgNq_UYVoNZVoPEdqoNVemixjkrye83)
@@ -399,7 +399,7 @@ changelog when they ship.
 ## Week of 6/5/2020
 
 - Function references now appear when you're using a
-  [package manager](https://darklang.com/docs/packages) function.
+  [package manager](https://docs.darklang.com/reference/packages) function.
 
 ![changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png](/img/changelog/June5/Screen_Shot_2020-06-05_at_2.08.39_PM.png)
 
@@ -471,7 +471,7 @@ added:
 ### Documentation
 
 - Added a guide to help contributors with
-  [writing code in OCaml](https://darklang.com/docs/contributing/ocaml-for-dark-developers)
+  [writing code in OCaml](https://docs.darklang.com/contributing/rescript-and-fsharp-for-dark-developers)
 - Added a tutorial around writing
   [clean error messages using the error rail](https://darklang.com/docs/tutorials/error-rail-http-tutorial)
 
@@ -524,8 +524,9 @@ added:
   significantly improved its performance. You should now see all Crons,
   including those with a 1 minute interval, running on time again.
 - Return values and execution fade are no longer stale when taking functions
-  on/off the [error rail](/discussion/error-handling#error-rail) or when
-  committing [feature flags](/how-to/feature-flags).
+  on/off the
+  [error rail](https://docs.darklang.com/discussion/error-handling#error-rail)
+  or when committing [feature flags](/how-to/feature-flags).
 
 ### Documentation
 
@@ -548,9 +549,9 @@ docs repo is public and all you need to do to contribute is
     ([120](https://github.com/darklang/docs/pull/120))
     ([126](https://github.com/darklang/docs/pull/126))
 - New tutorials:
-  - [Using an external DB](/walk-throughs/external-db)
+  - [Using an external DB](https://docs.darklang.com/walk-throughs/external-db)
     ([124](https://github.com/darklang/docs/pull/124))
-  - [Alerting with IFTTT](/walk-throughs/ifttt-events)
+  - [Alerting with IFTTT](https://docs.darklang.com/walk-throughs/ifttt-events)
     ([125](https://github.com/darklang/docs/pull/125))
 
 ## Week of 5/15/2020
@@ -560,9 +561,10 @@ docs repo is public and all you need to do to contribute is
 
 ![changelog/helloworld.png](/img/changelog/helloworld.png)
 
-- [Package manager functions](https://darklang.com/docs/packages) and their
-  underlying code can now be accessed via the sidebar. These functions will
-  appear in the autocomplete, and can be used like any other built-in function.
+- [Package manager functions](https://docs.darklang.com/reference/packages) and
+  their underlying code can now be accessed via the sidebar. These functions
+  will appear in the autocomplete, and can be used like any other built-in
+  function.
 
 ![changelog/packagemanager.png](/img/changelog/packagemanager.png)
 
@@ -585,21 +587,22 @@ docs repo is public and all you need to do to contribute is
 
 - Reorganized our documentation site, breaking tutorials & samples into their
   own section.
-- Added a [From Python](https://darklang.com/docs/from-python) page to help
-  developers familiar with Python learn Dark.
+- Added a
+  [From Python](https://docs.darklang.com/reference/cheatsheets/python-cheatsheet)
+  page to help developers familiar with Python learn Dark.
 - Added three sample canvases:
   - [GCP Bucket](https://darklang.com/a/sample-gcpbucket)
   - [Firebase Auth](https://darklang.com/a/sample-firebaseauth)
   - [CRUD app](https://darklang.com/a/sample-crud)
-- Added a [Setting Up OAuth](https://darklang.com/docs/slack-apps/slack-oauth)
+- Added a [Setting Up OAuth](https://docs.darklang.com/walk-throughs/slack-app)
   page to the
-  [Building Slack Apps](https://darklang.com/docs/slack-apps/slack-intro)
+  [Building Slack Apps](https://docs.darklang.com/category/walk-throughs)
   section.
 
 ## Week of 5/8/2020
 
 - We now have Dark badges for your sites! Add a
-  [Made With Dark badge](https://darklang.com/docs/reference/sharing-dark) to
+  [Made With Dark badge](https://docs.darklang.com/reference/sharing-dark) to
   your apps to establish your early Dark expertise 🎉
 
 ![changelog/badge.png](/img/changelog/badge.png)
@@ -663,9 +666,9 @@ docs repo is public and all you need to do to contribute is
 ### Documentation
 
 - Improved the documentation around
-  [setting up a custom domain](https://darklang.com/docs/custom-domains)
+  [setting up a custom domain](https://docs.darklang.com/how-to/custom-domains)
 - Added a tutorial around
-  [creating new Asana projects and tasks via Slack](https://darklang.com/docs/slack-apps/tutorials/asana-tutorial)
+  [creating new Asana projects and tasks via Slack](https://docs.darklang.com/walk-throughs/slack-asana)
 
 ## Week of 4/17/2020
 
@@ -686,9 +689,9 @@ docs repo is public and all you need to do to contribute is
 ### Package Manager
 
 - Added and documented many
-  [Asana package manager functions](https://darklang.com/docs/packages#asana-package).
+  [Asana package manager functions](https://docs.darklang.com/reference/packages#asana-package).
 - Added and documented a
-  [Mailchimp subscribe function](https://darklang.com/docs/packages#mailchimp-package)
+  [Mailchimp subscribe function](https://docs.darklang.com/reference/packages#mailchimp-package)
 
 ### Documentation
 
@@ -696,14 +699,14 @@ docs repo is public and all you need to do to contribute is
   reported them!
 - Improved the documentation around `match`, thanks to Nathan Lloyd Smith!
 - Added a tutorial around
-  [creating new Trello cards via Slack](https://darklang.com/docs/slack-apps/tutorials/new-trello-card)
+  [creating new Trello cards via Slack](https://docs.darklang.com/walk-throughs/slack-trello)
 
 ## Week of 4/10/2020
 
 - We've done a lot of work to improve how quickly we can set up custom domains -
   if you want a custom domain to point to your Dark app,
-  [read the documentation](https://darklang.com/docs/custom-domains) to see how
-  to do it.
+  [read the documentation](https://docs.darklang.com/how-to/custom-domains) to
+  see how to do it.
 - More standard library functions! We're ramping down our concentrated effort to
   add more all at once, so if you have any requests post in the
   [Community Slack](https://darklang.com/slack-invite) or email
@@ -739,11 +742,11 @@ docs repo is public and all you need to do to contribute is
 ### Documentation
 
 - Added a separate section to the documentation for
-  [Building Slack Apps](https://darklang.com/docs/slack-apps/slack-intro)
+  [Building Slack Apps](https://docs.darklang.com/walk-throughs/slack-app)
 - Added a tutorial for
-  [building a slack app that checks for new channels and posts them](https://darklang.com/docs/slack-apps/tutorials/channel-check)
+  [building a slack app that checks for new channels and posts them](https://docs.darklang.com/walk-throughs/slack-channel-check)
 - Added and documented many
-  [Trello package manager functions](https://darklang.com/docs/packages#trello-package)
+  [Trello package manager functions](https://docs.darklang.com/reference/packages#trello-package)
 
 ## Week of 4/3/2020
 
@@ -796,9 +799,10 @@ docs repo is public and all you need to do to contribute is
 
 ### Documentation
 
-- Added a doc about how to use [CORS in Dark](https://darklang.com/docs/cors)
+- Added a doc about how to use
+  [CORS in Dark](https://docs.darklang.com/how-to/cors)
 - Added and documented many
-  [Slack package manager functions](https://darklang.com/docs/packages#slack-package)
+  [Slack package manager functions](https://docs.darklang.com/reference/packages#slack)
 
 ## Week of 3/27/2020
 
@@ -853,10 +857,13 @@ We released a lot this week, hope you enjoy!
 
 ### Documentation
 
-- Added [Your First Function](https://darklang.com/docs/first-function) and
-  [Your First External API Call](https://darklang.com/docs/first-api)
-- Updated the [Slack tutorial](https://darklang.com/docs/slack-app-tutorial) to
-  discuss OAuth v2
+- Added
+  [Your First Function](https://docs.darklang.com/tutorials/extract-function)
+  and
+  [Your First External API Call](https://docs.darklang.com/tutorials/call-external-api)
+- Updated the
+  [Slack tutorial](https://docs.darklang.com/walk-throughs/slack-app) to discuss
+  OAuth v2
 
 ## Week of 3/20/2020
 
@@ -907,11 +914,11 @@ We released a lot this week, hope you enjoy!
   then (though it is also less noticeable there as the JS overhead is higher
   than the DB overhead so 🤷🏽‍♀️)
 - We have launched an alpha
-  [package manager](https://darklang.com/docs/packages), which allows re-using
-  Dark functions from other users or canvases. Today, only Dark employees can
-  add functions to the package manager. We've started with some commonly used
-  Slack functions, but let us know via Slack or email if you have any requests -
-  or your own functions you'd like to share.
+  [package manager](https://docs.darklang.com/reference/packages), which allows
+  re-using Dark functions from other users or canvases. Today, only Dark
+  employees can add functions to the package manager. We've started with some
+  commonly used Slack functions, but let us know via Slack or email if you have
+  any requests - or your own functions you'd like to share.
 
 ![changelog/Mar13/slackfunctions.png](/img/changelog/Mar13/slackfunctions.png)
 
@@ -926,14 +933,15 @@ We released a lot this week, hope you enjoy!
 We added a bunch of improved documentation, including:
 
 - better docs for hosting
-  [static assets](https://darklang.com/docs/static-assets)
-- a new doc describing [Datastores](https://darklang.com/docs/datastores) in
-  more detail
+  [static assets](https://docs.darklang.com/how-to/static-assets)
+- a new doc describing
+  [Datastores](https://docs.darklang.com/reference/framework/datastores) in more
+  detail
 - a new doc describing our (very limited) support for
-  [packages](https://darklang.com/docs/packages)
-- [a new doc describing the HTTP client library](https://darklang.com/docs/httpclient)
+  [packages](https://docs.darklang.com/reference/packages)
+- [a new doc describing the HTTP client library](https://docs.darklang.com/reference/httpclient)
 - a new doc describing how to
-  [respond to HTTP requests](https://darklang.com/docs/http)
+  [respond to HTTP requests](https://docs.darklang.com/reference/framework/http-framework)
 
 ## Week of 3/6/2020
 
@@ -992,9 +1000,9 @@ We added a bunch of improved documentation, including:
 
 - Docs can now be accessed at
   [https://darklang.com/docs](https://darklang.com/docs)
-- [Your first Cron](https://darklang.com/docs/first-cron) and
-  [Your first Worker](https://darklang.com/docs/first-worker) sections have been
-  added to the Getting Started guide
+- [Your first Cron](https://docs.darklang.com/reference/framework/cron) and
+  [Your first Worker](https://docs.darklang.com/reference/framework/workers)
+  sections have been added to the Getting Started guide
 
 ## Week of 2/21/2020
 
@@ -1075,7 +1083,7 @@ We added a bunch of improved documentation, including:
 - Significant improvement in cursor position
 - Moved our documentation to a
   [new, more readable format](https://darklang.com/docs/)
-- Documented [how to set CORS in Dark](https://darklang.com/docs/cors)
+- Documented [how to set CORS in Dark](https://docs.darklang.com/how-to/cors)
 
 ## Week of 1/31/2020
 

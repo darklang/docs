@@ -106,5 +106,5 @@ the first arm of the branch `Just result` executed, and `Nothing` did not.
 ![unique/match.png](/img/unique/match_just.png)
 
 More on Match is available in
-[Functional Aspects of Dark](https://darklang.com/docs/functional-aspects), and
-there is a sample [here](https://darklang.com/a/sample-match).
+[Functional Aspects of Dark](https://docs.darklang.com/discussion/functional-aspects),
+and there is a sample [here](https://darklang.com/a/sample-match).

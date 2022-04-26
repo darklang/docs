@@ -33,16 +33,15 @@ There are lots of docs that would be very helpful to write. If you look at the
 [current docs](https://darklang.com/docs), there are docs that would be useful
 that you can write as a non-expert.
 
-There are a bunch of
-[tutorials](https://darklang.com/docs/tutorials/tutorial-intro) for different
-technologies, frameworks and libraries; writing one for another would be
-extremely useful. It would also allow you to write up how Dark could be improved
-to support that technology. You can even make
+There are a bunch of [tutorials](https://docs.darklang.com/category/tutorial)
+for different technologies, frameworks and libraries; writing one for another
+would be extremely useful. It would also allow you to write up how Dark could be
+improved to support that technology. You can even make
 [video tutorials](https://www.youtube.com/c/Darklang/videos)!
 
 Similarly, we have some guides for people learning Dark who know other
 languages. Adding another language would be wonderful. See for example the
-[Python version](https://darklang.com/docs/from-python).
+[Python version](https://docs.darklang.com/reference/cheatsheets/python-cheatsheet).
 
 ## Reporting bugs
 
