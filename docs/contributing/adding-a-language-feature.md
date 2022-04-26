@@ -24,7 +24,7 @@ Most language features will need to be added to our language definition. The
 language definition is `Expr` in
 [F#](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/RuntimeTypes.fs),
 or `FluidExpression.t` in
-[ReScript](https://github.com/darklang/dark/blob/main/libshared/FluidExpression.ml),
+[ReScript](https://github.com/darklang/dark/blob/main/backend/libshared/FluidExpression.ml),
 which represent a Dark expression (which in turn contains other Dark
 expressions). This is commonly known as an "Abstract Syntax Tree" (or AST).
 
