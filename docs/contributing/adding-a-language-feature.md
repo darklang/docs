@@ -73,7 +73,7 @@ does, including refactorings, renamings, etc. It will also need support in the
 ### Execution
 
 The execution of the language is defined in
-[`fsharp-backend/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs).
+[`fsharp-backend/src/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs).
 `eval` does the work of converting an expressions into a `dval` -- a Dark value.
 
 For example, `DInt` is the run-time value of an integer, while `EInteger` is the
@@ -94,9 +94,9 @@ When we execute this `ELet`, we first execute the `6`, creating a `dval` of
 `x + 4` using the symbol table with our known value of `x = 6`.
 
 `dval`s are defined in
-[`fsharp-backend/LibExecution/RuntimeTypes.fs`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/RuntimeTypes.fs)
+[`fsharp-backend/src/LibExecution/RuntimeTypes.fs`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/RuntimeTypes.fs)
 and expressions are defined in
-[`libshared/FluidExpression.ml`](https://github.com/darklang/dark/blob/main/libshared/FluidExpression.ml).
+[`libshared/FluidExpression.ml`](https://github.com/darklang/dark/blob/main/backend/libshared/FluidExpression.ml).
 
 ### Serialization
 
@@ -109,7 +109,7 @@ do not have to do anything special to allow users to save your new expression.
 Well, not exactly. We currently actually serialize using an
 [OCaml definition of an old format, called `expr`](https://github.com/darklang/dark/blob/main/backend/libexecution/serialization_format.ml).
 We
-[convert](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibBackend/ProgramSerialization/OCamlInterop.fs)
+[convert](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibBackend/OCamlInterop.fs)
 between `expr` and `Expr` in order to save and execute. The client only uses
 `Expr`, however.
 
@@ -164,9 +164,9 @@ occasionally reuse some tokens, but most features use dedicated tokens so that
 there's no ambiguity.
 
 You add tokens in
-[`client/src/core/Types.ml`](https://github.com/darklang/dark/blob/main/client/src/core/Types.ml)
+[`client/src/core/Types.res`](https://github.com/darklang/dark/blob/main/client/src/core/Types.res)
 and keystrokes are handled in
-[`client/src/fluid/Fluid.ml:updateKey`](https://github.com/darklang/dark/blob/main/client/src/fluid/Fluid.ml).
+[`client/src/fluid/Fluid.res:updateKey`](https://github.com/darklang/dark/blob/main/client/src/fluid/Fluid.res).
 
 ### AST transformations
 
@@ -189,8 +189,8 @@ The F# backend has automatic JSON serializers and deserializers, using automatic
 serializers of types in
 [Api](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api).
 The client has hand-written serializers in
-[`client/src/core/Encoders.ml`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.ml)
+[`client/src/core/Encoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.res)
 and
-[`client/src/core/Decoders.ml`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.ml).
+[`client/src/core/Decoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.res).
 The OCaml compiler will prompt you to add new encoders, but not decoders.
 Writing new ones is straightforward by following other examples there.
