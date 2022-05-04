@@ -32,9 +32,9 @@ document addresses are:
 Dark automatically uses permissive canvas-wide CORS settings with localhost to
 make it easy to get started when developing your backend with Dark.
 
-- Today, Dark sets accepts requests from localhost:3000,
-  localhost:5000, and localhost:8000, as long as you do **not** have special
-  headers or authentication. More on the default supported headers is in
+- Today, Dark sets accepts requests from localhost:3000, localhost:5000, and
+  localhost:8000, as long as you do **not** have special headers or
+  authentication. More on the default supported headers is in
   [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 - In the future for any version of localhost, we will also return all headers
   from the preflight request, all common methods, and accept credentials. This
@@ -134,11 +134,9 @@ one `OPTIONS` handler for `/:url`.
 
 This error means that you're trying to make a request from an origin that isn't
 explicitly allowed, which means you may not send along cookies. Use
-http://localhost:3000,
-http://localhost:5000, or
-http://localhost:8000 when testing your frontend
-locally. If this is a URL from the internet, use the documentation for
-`Access-Control-Allow-Origin` above.
+http://localhost:3000, http://localhost:5000, or http://localhost:8000 when
+testing your frontend locally. If this is a URL from the internet, use the
+documentation for `Access-Control-Allow-Origin` above.
 
 > "Access to XMLHttpRequest at `https://mydomain.builtwithdark.com/myAPI` from
 > origin `http://localhost:1022` has been blocked by CORS policy: The value of
