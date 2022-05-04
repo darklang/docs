@@ -12,4 +12,4 @@ We have more material to help you on your journey:
 - [sample canvases](/reference/sample-canvases) for language features and
 - video introductions to
   [Dark language features and components](https://www.youtube.com/playlist?list=PLpcgNq_UYVoNZVoPEdqoNVemixjkrye83)
-- [In-depth how-to guides](http://localhost:3000/slack-apps/tutorials/channel-check)
+- [In-depth how-to guides](https://docs.darklang.com/category/walk-throughs)
