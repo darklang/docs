@@ -473,7 +473,7 @@ added:
 - Added a guide to help contributors with
   [writing code in OCaml](https://docs.darklang.com/contributing/rescript-and-fsharp-for-dark-developers)
 - Added a tutorial around writing
-  [clean error messages using the error rail](https://darklang.com/docs/tutorials/error-rail-http-tutorial)
+  [clean error messages using the error rail](https://docs.darklang.com/tutorials/handle-error-errorrail)
 
 ## Week of 5/29/2020
 
