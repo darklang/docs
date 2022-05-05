@@ -135,3 +135,9 @@ the editor command `take-function-off-rail` (open the Command palette by hitting
 ![unique/match.png](/img/unique/match_just.png)
 
 See [our sample canvas](https://darklang.com/a/sample-match) for examples.
+
+## Error rails with Incomplete and Type Errors
+
+Incompletes and type errors are not the same as `Option` and `Result` types, and
+cannot be used together. You cannot handle `<Incomplete>`s or type error using the
+error rail.
