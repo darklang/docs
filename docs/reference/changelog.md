@@ -33,6 +33,14 @@ some other ways to avoid the problem.
 _The list below is organized by date discovered, to allow you know when new
 things have been added to the list since you last checked._
 
+## May 3, 2022:
+
+We have switched all HTTP requests to the new backend.
+
+## Apr 2, 2022:
+
+We have started migrating web requests to Darklang to use the new backend.
+
 ## Discovered before Mar 25, 2022:
 
 Dark is now less lenient to receiving incorrect Content-Length headers. If the
