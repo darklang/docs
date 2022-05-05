@@ -54,8 +54,8 @@ canvas per company or entirely separate project. You can create any canvas by
 navigating to it.
 
 Your endpoints would appear at:
-[https://username-canvasname.builtwithdark.com/route] (we can help you set up DNS
-if you want another domain to point at your canvas).
+[https://username-canvasname.builtwithdark.com/route] (we can help you set up
+DNS if you want another domain to point at your canvas).
 
 You can navigate the canvas via the left-hand sidebar, or via the omnibox
 (accessible using `Cmd/Ctrl-k`).

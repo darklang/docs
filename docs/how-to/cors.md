@@ -134,8 +134,8 @@ one `OPTIONS` handler for `/:url`.
 
 This error means that you're trying to make a request from an origin that isn't
 explicitly allowed, which means you may not send along cookies. Use
-[http://localhost:3000], [http://localhost:5000], or [http://localhost:8000] when
-testing your frontend locally. If this is a URL from the internet, use the
+[http://localhost:3000], [http://localhost:5000], or [http://localhost:8000]
+when testing your frontend locally. If this is a URL from the internet, use the
 documentation for `Access-Control-Allow-Origin` above.
 
 > "Access to XMLHttpRequest at `https://mydomain.builtwithdark.com/myAPI` from
