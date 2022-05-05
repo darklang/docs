@@ -44,7 +44,7 @@ redirect URL.
 ![ck/image11.png](/img/slack/image11.png)
 
 The URL you provide will need to be in the following format:
-https://USERNAME-CANVASNAME.builtwithdark.com/OAUTH-REDIRECT
+[https://USERNAME-CANVASNAME.builtwithdark.com/OAUTH-REDIRECT]
 
 Make sure you click on the option to Save URLs, then navigate to **Settings >
 Manage Distribution** and copy the Shareable URL to your browser’s address bar.
@@ -144,7 +144,7 @@ subscriptions, and interactive components. All three of these options require a
 Request URL, which is just a URL pointing to your Dark app, in the same format
 as before:
 
-https://USERNAME-CANVASNAME.builtwithdark.com/ROUTE
+[https://USERNAME-CANVASNAME.builtwithdark.com/ROUTE]
 
 Trigger one of these routes, and then use the 404 and trace to build out the
 functionality, in the same way you did with OAuth.
