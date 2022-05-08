@@ -11,11 +11,6 @@ solves significant operational issues and opens Dark to a lot of improvements
 and productivity fixes down the line, especially relying more heavily on our
 cloud provider.
 
-- To test out the new backend in the Dark editor, go to
-  darklang.com/a-testing-fsharp/CANVASNAME?fsharp-backend=true
-- To test out the new backend on builtwithdark.com, send us a message
-  [on Slack](https://darklang.com/slack-invite)
-
 As we prepare to release the new version, we want to give advanced warning about
 some changes to the language and standard library. Though Dark was designed to
 avoid changes to existing functionality, allowing for new versions of the
@@ -167,8 +162,8 @@ old versions.
   this would be a problem for you.
 
 - `String::split` would fail if the 2nd argument was `""` and the first argument
-  was a complex Unicode character, such as `String::split "👨‍❤️‍💋‍👨👩‍👩‍👧‍👦🏳️‍⚧️‍️🇵🇷" ""`.
-  This is now split properly.
+  was a complex Unicode character, such as `String::split "👨‍❤️‍💋‍👨👩‍👩‍👧‍👦🏳️‍⚧️‍️🇵🇷" ""`. This
+  is now split properly.
 
 - Functions whose output relies on the internal ordering of a `Dict` may have
   different outputs, specifically, the output Lists may be in a different order.
