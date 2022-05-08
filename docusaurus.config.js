@@ -11,6 +11,10 @@ module.exports = {
   plugins: [
     path.resolve(__dirname, "src/plugins/heap-analytics"),
     path.resolve(__dirname, "src/plugins/savvy"),
+    [
+      "@docusaurus/plugin-client-redirects",
+      { redirects: [{ to: "/reference/changelog", from: "/changelog" }] },
+    ],
   ],
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
