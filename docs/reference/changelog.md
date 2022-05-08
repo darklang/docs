@@ -167,8 +167,8 @@ old versions.
   this would be a problem for you.
 
 - `String::split` would fail if the 2nd argument was `""` and the first argument
-  was a complex Unicode character, such as `String::split "👨‍❤️‍💋‍👨👩‍👩‍👧‍👦🏳️‍⚧️‍️🇵🇷" ""`.
-  This is now split properly.
+  was a complex Unicode character, such as `String::split "👨‍❤️‍💋‍👨👩‍👩‍👧‍👦🏳️‍⚧️‍️🇵🇷" ""`. This
+  is now split properly.
 
 - Functions whose output relies on the internal ordering of a `Dict` may have
   different outputs, specifically, the output Lists may be in a different order.
