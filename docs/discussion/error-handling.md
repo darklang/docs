@@ -20,7 +20,6 @@ executed, it results in a value of `<Incomplete>`.
 
 Incomplete values are allowed to co-exist with other values--whenever they interact, the result is another `<Incomplete>`. If they do not interract, often the valid value will continue, perhaps being returned to your user in a HTTP handler, or saved in a datastore.
 
-
 **Example:** Here we left the query parameter blank in a call to
 `HttpClient::get`. The result of the function is therefore `<Incomplete>`.
 
@@ -50,7 +49,6 @@ The same is true of fields in a record: they will be ignored until the field's v
 
 If a HTTP handler results in an `<Incomplete>`, your user will get a 500 status code
 with an error message.
-
 
 ## Type errors
 
