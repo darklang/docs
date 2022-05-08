@@ -33,10 +33,8 @@ background workers to talk to external APIs (Twilio & Slack). You will need
 Twilio & Slack tokens, which we explain how to get below during that portion of
 the tutorial.
 
-Yours will live at
-[https://USERNAME-signin.builtwithdark.com](https://username-signin.builtwithdark.com/);
-to work on it go to
-[https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin).
+Yours will live at [https://USERNAME-signin.builtwithdark.com]; to work on it go
+to [https://darklang.com/a/USERNAME-signin].
 
 ### Quick start
 
@@ -59,8 +57,7 @@ npm run get-dark-cli
 ```
 
 If you get “Not found” on the last step, you’ll need to visit
-[https://darklang.com/a/USERNAME-signin](https://darklang.com/a/USERNAME-signin)
-first in your browser.
+[https://darklang.com/a/USERNAME-signin] first in your browser.
 
 #### Serving Hosted Assets
 
@@ -331,9 +328,8 @@ field) are correct, and read the API response message to debug.
 
 Now you should have a working React application with an API, persistent data
 storage, and asynchronous background workers, hosted at
-[https://username-signin.builtwithdark.com](https://username-signin.builtwithdark.com/).
-When you go back to your React app and submit a new visit, you should receive
-both a Slack and a Text.
+[https://username-signin.builtwithdark.com]. When you go back to your React app
+and submit a new visit, you should receive both a Slack and a Text.
 
 (Interested more in Slack apps? We have [a guide](/walk-throughs/slack-app.md)
 for that!)

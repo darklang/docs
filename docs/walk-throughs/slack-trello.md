@@ -15,7 +15,7 @@ For this tutorial, you're going to need to grab a few different things from
 Trello and store each of them as separate functions in Dark:
 
 - Your Trello API Key and Token,
-  [available on this page](https://trello.com/app-key/)
+  [available on this page after logging in](https://trello.com/app-key/)
 - Your Trello org id, the id for one of your boards, and the id for one of your
   lists, which we will refer to as our `defaultListID` throughout the tutorial.
   The best way to get all of these at once is to add `.json` to the end of the
