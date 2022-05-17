@@ -15,8 +15,8 @@ Cron jobs are also run using the same infrastructure.
 
 ## Running an event
 
-When a handler runs, the event that was `emit`ed will be available as the
-`event` parameter.
+When a Worker handler runs, the event that was `emit`ed will be available as
+an `event` parameter available in the Worker.
 
 When viewing a handler, you can see the number of items in the queue. When an
 event is completed, a trace will be stored where you can view the execution.
@@ -36,7 +36,7 @@ Events are run as quickly as we can, you cannot be assured that an event will
 wait for a previous event to complete before running - in fact, it probably will
 not.
 
-Events are also not guaranteed to process in the order they are `emit`it.
+Events are also not guaranteed to process in the order they are `emit`ed.
 
 ## Pausing
 
