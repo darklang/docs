@@ -15,8 +15,8 @@ Cron jobs are also run using the same infrastructure.
 
 ## Running an event
 
-When a Worker handler runs, the event that was `emit`ed will be available as
-an `event` parameter available in the Worker.
+When a Worker handler runs, the event that was `emit`ed will be available as an
+`event` parameter available in the Worker.
 
 When viewing a handler, you can see the number of items in the queue. When an
 event is completed, a trace will be stored where you can view the execution.
