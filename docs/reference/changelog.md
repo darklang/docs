@@ -277,7 +277,7 @@ Minor differences:
 
 ## Testing changes
 
-We have gone from abotu 250 backend tests to over 11,000. We now have custom
+We have gone from about 250 backend tests to over 11,000. We now have custom
 test frameworks for:
 
 - [language and standard library testing](https://github.com/darklang/dark/tree/main/fsharp-backend/tests/testfiles)
