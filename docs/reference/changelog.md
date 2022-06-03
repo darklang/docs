@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 ## Darklang release 2
 
-In May, we anticipate releasing "Darklang Release 2", the culmination of 18
+In May, we anticipate releasing "Darklang Release 2", the culmination of 20
 months work of rewriting the backend from OCaml to F#. This was done to give us
 more productivity by allowing us use more 3rd party SDKs, to solve operational
 issues, and to make it easier to contribute. Our reasons for making the change
@@ -17,10 +17,10 @@ were discussed at the time: [1](https://blog.darklang.com/new-backend-fsharp/),
 As of now, the rewrite has been deployed to much, but not all of our
 infrastructure:
 
-- The execution engine in the editor is on track to be completed in May
-- The migration to new queues is expected to finish in May
+- The execution engine in the editor is on track to be completed in June
+- The migration to the new queues was fully converted on May 27th.
 - HTTP backends (for builtwithdark.com) were finished converting on May 3rd.
-- The editor backend was fully migrated by April 2nd
+- The editor backend was fully migrated by April 2nd.
 
 The change was documented in a series of blogposts:
 [1](https://blog.darklang.com/hows-the-dark-rewrite-going/),
