@@ -559,6 +559,46 @@ myString <- "new value"
 print(myString)
 ```
 
+### Async/Tasks
+
+For functions that perform IO, you'll need to use the `ply` or `task`
+"computation expression". A "computation expression" is a special F# language
+feature for writing abstractions with a nice syntax. The `ply` CE allows using a
+specialized asyncronous structure called Ply (which is extremely similar to a
+.Net Task) easily, and can best be illustrated with an example:
+
+```fsharp
+  (function
+  | state, [ DObj value; DStr key; DDB dbname ] ->
+      uply {
+        let db = state.dbs.[dbname]
+        let! _id = UserDB.set state true db key value
+        return DObj value
+      }
+  | _ -> incorrectArgs ())
+```
+
+Let's break this down line by line:
+
+- `uply {`: this creates the CE, whose return value will be a `Ply<'any>`.
+- `let db = state.dbs.[dbname]` - this is just regular F# code
+- `let! _id = UserDB.set state true db key value` - the special thing here is
+  the `let!` - this line calls `UserDB.set`, a function which returns a `Ply`,
+  and unwraps the `Ply`. This means that `_id` can be treated as a normal value
+  for the rest of this `taskv`.
+- `return DObj value` - return takes an ordinary value and turns it into a
+  `Ply`, in this case a `Ply<Dval>`.
+
+Why do we go through all this trouble? Because this is an async runtime, and
+`let!` and `return` are the enablers of the asyncronicity. A `Ply` is a promise,
+and `let!` waits for the promise and then continues (running other code while
+the IO is still pending). This is the exact same as the `async` keyword in JS,
+Rust, C# or Python.
+
+Note that while we primarily use `Ply` and `uply` inside the Interpreter, most
+of our other async code use `Task` and `task`. These are interchangeable except
+that Tasks are a little slower.
+
 ### Advanced functions
 
 #### Named parameters
@@ -696,27 +736,19 @@ type Pos =
   ; y : int
   }
   member this.JustXPlease() = this.x
-  override member this.ToString() = #"{this.x
-end
+  override member this.ToString() = $"{this.x}
 ```
-
-## ReScript vs Bucklescript/ReasonML?
-
-ReScript is the new name (as of 2020) for what was sometimes called Bucklescript
-and sometimes called ReasonML. You may see references to Bucklescript in our
-codebase (including the prefix "bs").
 
 ## Dark's codebase history
 
-Dark's backend was originally written in OCaml, and then ported to F# in 2021. A
-lot of code is written the way it is because that made sense in OCaml,
-especially code with the comment `// CLEANUP` in it.
+Dark's backend was originally written in OCaml, and then ported to F# in
+2021/2022. A lot of code is written the way it is because that made sense in
+OCaml, especially code with the comment `// CLEANUP` in it.
 
 Dark's frontend was originally written in Elm, before being ported. It was
-ported to what is now ReScript in 2018, but ReScript itself went through a bit
-of an identity crisis. ReScript at the time was sometimes called BuckleScript
-and sometimes called ReasonML. In 2021, it officially renamed itself to
-ReScript, and changed its official syntax (.res).
+ported to what is now ReScript in 2018. ReScript is the new name (as of 2020)
+for what was sometimes called Bucklescript and sometimes called ReasonML. You
+may see references to Bucklescript in our codebase (including the prefix "bs").
 
 Our frontend used an alternate syntax (.ml, as ReScript is based on OCaml and we
 used OCaml on our backend too). We switched over to .res in 2021 - however, a

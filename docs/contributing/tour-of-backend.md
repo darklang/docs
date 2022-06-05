@@ -11,7 +11,6 @@ editor.
 Here's the journey it takes:
 
 - Google Load Balancer
-- Nginx sidecar container
 - the Dark
   [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs)
   (`bwd` stands for `BuiltWithDark`)
@@ -20,7 +19,7 @@ Here's the journey it takes:
 - if it's a 404, the trace is stored in the `stored_events_v2` table and sent to
   the client as a 404 via [Pusher](https://pusher.com)
 - if a page is found, the request path, body, and headers are passed to the
-  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware/MiddlewareV0.fs),
+  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware),
   which creates the `request` parameter, run the code, and converts the response
   into the correct formats.
 - [`Interpreter.eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs)
