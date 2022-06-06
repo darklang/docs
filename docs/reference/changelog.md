@@ -6,11 +6,11 @@ sidebar_label: Changelog
 
 ## June 6th, 2022: Darklang release 2
 
-In June, we released "Darklang Release 2", the culmination of 20 months work of
-rewriting the backend from OCaml to F#. This was done to give us more
-productivity by allowing us use more 3rd party SDKs, to solve operational
-issues, and to make it easier to contribute. Our reasons for making the change
-were discussed at the time: [1](https://blog.darklang.com/new-backend-fsharp/),
+Darklang Release 2 is the culmination of 20 months work of rewriting the backend
+from OCaml to F#. This was done to give us more productivity by allowing us use
+more 3rd party SDKs, to solve operational issues, and to make it easier to
+contribute. Our reasons for making the change were discussed at the time:
+[1](https://blog.darklang.com/new-backend-fsharp/),
 [2](https://blog.darklang.com/why-dark-didnt-choose-rust/),
 [3](https://blog.darklang.com/leaving-ocaml/).
 
