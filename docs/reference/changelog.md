@@ -25,9 +25,18 @@ The change was documented in a series of blogposts:
 [3](https://blog.darklang.com/optimizing-tasks-in-fsharp/),
 [4](https://blog.darklang.com/benchmarking-fsharp6-tasks/),
 [5](https://blog.darklang.com/darklang-year-in-review-2021/),
-[6](https://blog.darklang.com/try-out-the-new-darklang-backend/).
+[6](https://blog.darklang.com/try-out-the-new-darklang-backend/), and
+[7](https://blog.darklang.com/backend-rewrite-complete/).
 
-The following changes are in Darklang Release 2:
+Thanks to everyone who contributed, including
+[Araceli Sánchez](https://github.com/Athinanarof),
+[Lev Lazinskiy](https://github.com/levlaz),
+[María José Dávila](https://github.com/mariajdab),
+[Matthew Jeffryes](https://github.com/mjeffryes),
+[jwalter](https://github.com/jwalter),
+[Daniela Campagna](https://github.com/danicampagna),
+[Sean Manton](https://github.com/sxmanton), and especially
+[Stachu Korick](https://github.com/stachudotnet).
 
 ### Major changes
 
