@@ -4,7 +4,7 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-## Darklang release 2
+## June 6th, 2022: Darklang release 2
 
 In June, we released "Darklang Release 2", the culmination of 20 months work of
 rewriting the backend from OCaml to F#. This was done to give us more
