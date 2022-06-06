@@ -13,7 +13,6 @@ Javascript, HTML, and CSS.
 We have issues in each of these:
 
 - [Javascript](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Ajavascript)
-- [Rust](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Arust)
 - [Bash](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Abash)
 
 ## Non-code

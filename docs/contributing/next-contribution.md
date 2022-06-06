@@ -6,11 +6,6 @@ We have everyone start with [a first PR](getting-started.md), which makes a
 small but valuable contribution. Now that you've got it done, you can build
 something (a little bit) bigger.
 
-## Porting backend to F\# from OCaml
-
-One of the most valuable projects right now is porting OCaml code to F# in the
-backend. See [Porting the Dark backend](porting-the-dark-backend.md).
-
 ## Getting started
 
 Below you'll find resources to help you figure out what to work on. After that,

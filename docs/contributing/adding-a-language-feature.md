@@ -104,15 +104,6 @@ The other main purpose of the backend is to save programs. Dark uses a fast
 binary serialization format, derived directly from expressions. This means you
 do not have to do anything special to allow users to save your new expression.
 
-#### expr
-
-Well, not exactly. We currently actually serialize using an
-[OCaml definition of an old format, called `expr`](https://github.com/darklang/dark/blob/main/backend/libexecution/serialization_format.ml).
-We
-[convert](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibBackend/OCamlInterop.fs)
-between `expr` and `Expr` in order to save and execute. The client only uses
-`Expr`, however.
-
 #### Expressions are add-only
 
 The automatic serialization has a caveat: the serializer has some rules to
@@ -125,8 +116,8 @@ We do have the ability to remove old formats, but it is a little challenging to
 coordinate. Whenever we do this, it is always after the new replacement feature
 is live and stable, and then we go in and remove the old one.
 
-These rules apply to anything using the `bin_io` derivers, which currently
-includes both `expr`s and `tipe`s.
+These rules apply to anything using the serializers, which currently includes
+both `expr`s and `tipe`s.
 
 ## Editor support
 

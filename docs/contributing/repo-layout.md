@@ -120,12 +120,7 @@ here's how the various directories intersect, and what language they use:
 - `integration-tests` - integration tests, written in JS using TestCafe. Flaky
   and brittle. Help welcome!
 - `lib` - build directory used by Bucklescript
-- `libshared` - a small set of types that are shared between the old backend and
-  client. This will be merged into the client once the old backend is removed.
 - `node_modules` - installation dir for `npm`
-- `postgres-honeytail` - a backend service used to send Postgres logs to
-  Honeycomb (our observability vendor). The only Go in our repo.
-- `queue-scheduler` - a Rust backend service that runs our queues.
 - `rundir` - anything that runs and stores something stores it here
   - `integration_test_logs`
   - `logs` - logs from running services, especially `fsharp-bwdserver.log` and
@@ -136,9 +131,3 @@ here's how the various directories intersect, and what language they use:
   forgettable) actions on the repo. Using scripts is very very common. Anytime
   there's something interesting, we add a script to do it. Scripts are
   occasionally out of date.
-- `stroller` - a Rust backend service that sits next to our OCaml backend. It
-  will be phased out along with the OCaml backend. When the OCaml backend sends
-  data to Pusher (websockets vendor) or Rollbar (exception tracking), it sends
-  it to Stroller to send to the vendor instead. This allows execution to
-  continue running immediately (our backend does not have efficient concurrency,
-  so this is a hack to allow it)

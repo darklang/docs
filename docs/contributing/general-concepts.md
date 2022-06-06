@@ -80,10 +80,9 @@ The change is accepted by `api.ml` in the backend, where it is decoded, applied
 to the program, and then saved into the database. Saving the program involves a
 special binary serialization format, in `Serialization_format.ml`.
 
-After being saved, it is sent to `Stroller`, a "sidecar" process in Rust that
-sends it to Pusher.com, the websockets vendor we use. This is sent to other
-clients which then update their programs. It is also sent to the original
-editor, who ignores it.
+After being saved, it is sent to Pusher.com, the websockets vendor we use. This
+is sent to other clients which then update their programs. It is also sent to
+the original editor, who ignores it.
 
 ## ASTs
 
