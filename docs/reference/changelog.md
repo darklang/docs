@@ -66,7 +66,7 @@ changes, and sunsetting old features.
 
 ## Internal improvements
 
-- refactor integration tests away from being one big file
+- Refactor integration tests away from being one big file
   ([#4167](https://github.com/darklang/dark/pull/4167))
 
 - Fail deploy if assets don't upload
