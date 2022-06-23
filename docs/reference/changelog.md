@@ -4,6 +4,12 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+The following will be part of Release 3:
+
+## Jun 9th, 2022
+
+-
+
 ## June 6th, 2022: Darklang release 2
 
 Darklang Release 2 is the culmination of 20 months work of rewriting the backend
@@ -337,6 +343,20 @@ Behind the scenes, Dark has greatly improved its operations.
 
 - All certs except darksa.com and darkstaticassets.com are now managed
   automatically
+
+### Documentation changes
+
+- moved docs to docs.darklang.com
+- [refactored docs](https://github.com/darklang/docs/pull/220) to use the Divio
+  documentation system, categorizing all docs into Tuotials, Reference, How-tos,
+  Walk-throughs and Discussion.
+- fixed all links
+- redo the
+  [Error Rail discussion](https://docs.darklang.com/discussion/error-handling)
+- add a discussion of
+  [how the Queues work](https://docs.darklang.com/discussion/queues)
+- improved and expanded
+  [keyboard shortcuts docs](https://docs.darklang.com/reference/keyboard-mapping)
 
 ### Contributing changes
 
