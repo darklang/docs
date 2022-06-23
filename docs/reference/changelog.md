@@ -4,12 +4,6 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-The following will be part of Release 3:
-
-## Jun 9th, 2022
-
--
-
 ## June 6th, 2022: Darklang release 2
 
 Darklang Release 2 is the culmination of 20 months work of rewriting the backend
