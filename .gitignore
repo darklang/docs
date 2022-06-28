@@ -12,3 +12,7 @@
 .DS_Store
 
 npm-debug.log*
+
+# ide and editors
+.idea
+.vscode
