@@ -50,6 +50,10 @@ a {
   color: #6d74c5;
 }
 
+img {
+  height: auto;
+}
+
 .badges {
   margin: 2em 0;
   display: flex;
