@@ -5,7 +5,7 @@ id: create-tool-repl
 ---
 
 REPLs in Dark are general-purpose coding blocks. They're typically to create
-reuable tools, experiments, one-off commands, or admin dashboards, in a similar
+reusable tools, experiments, one-off commands, or admin dashboards, in a similar
 way that you might use scripts or REPLs in other languages.
 
 We'll run you through creating a REPL, experimenting with the HttpClient library
