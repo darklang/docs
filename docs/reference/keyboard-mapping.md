@@ -20,38 +20,38 @@ sidebar_label: Keyboard Mapping
 
 ## Code editing (Dark specific)
 
-| Key                            | Context                            | Command                                               |
-| ------------------------------ | ---------------------------------- | ----------------------------------------------------- |
-| Cmd/Ctrl-S, Alt-X, Cmd/Ctrl-\  |                                    | Open command / refactoring palette                    |
-| Tab, Shift-Tab                 |                                    | Move to next / previous blank                         |
-| Tab, Shift-Tab                 | In autocomplete                    | Complete and go to next / previous blank              |
-| Enter                          | In autocomplete                    | Complete and stay in same place                       |
-| Space                          | In autocomplete                    | Complete and move forward one space                   |
-| Escape                         | In autocomplete                    | Close autocomplete                                    |
-| `\`                            | In blank                           | Start lambda expression                               |
-| `,`                            | In lambda                          | Add lambda parameter                                  |
-| `[`                            | In blank                           | Create list                                           |
-| `]`                            | In list, before closing `]`        | Skip `]`                                              |
-| `,`                            | In list                            | Add new list entry                                    |
-| `[`                            | Before variable, integer, etc      | Wrap in list                                          |
-| `,`                            | Autocomplete in list               | Complete list entry and add new list entry            |
-| `.`                            | On variable                        | Create fieldaccess                                    |
-| `.`                            | Selecting variable in autocomplete | Complete variable and begin fieldaccess               |
-| `.`                            | In integer                         | Convert integer to a float                            |
-| `=`                            | Cursor on `=` in a `let`           | Skip over assignment                                  |
-| `{`                            | In blank                           | Start record                                          |
-| `}`                            | In record, before closing `}`      | Skip `}` at end of record                             |
-| `:`                            | Cursor on `:` in a record          | Skip over `:`                                         |
-| Enter                          | In a record                        | Add record entry                                      |
-| `"`                            | In blank                           | Start string                                          |
-| `"`                            | In string, before closing `"`      | Skip `"`                                              |
-| `->`                           |                                    | Skip over `->` in a match                             |
-| Enter                          | In a match                         | Add match entry                                       |
-| \|>                            |                                    | Start pipe using current line                         |
-| Shift-Enter                    |                                    | Start pipe using selected code                        |
-| Enter                          | In a pipe                          | Add line to pipe                                      |
-| Enter                          | In body of a `let`                 | Wrap current expression in `let _ =`, go to next line |
-| Enter                          | Between `let` expressions          | Insert a new line with a `let`                        |
+| Key                                      | Context                            | Command                                               |
+| ---------------------------------------- | ---------------------------------- | ----------------------------------------------------- |
+| Cmd/Ctrl-S, Alt-X, Cmd/Ctrl-\            |                                    | Open command / refactoring palette                    |
+| Tab, Shift-Tab                           |                                    | Move to next / previous blank                         |
+| Tab, Shift-Tab                           | In autocomplete                    | Complete and go to next / previous blank              |
+| Enter                                    | In autocomplete                    | Complete and stay in same place                       |
+| Space                                    | In autocomplete                    | Complete and move forward one space                   |
+| Escape                                   | In autocomplete                    | Close autocomplete                                    |
+| `\` | In blank | Start lambda expression |
+| `,`                                      | In lambda                          | Add lambda parameter                                  |
+| `[`                                      | In blank                           | Create list                                           |
+| `]`                                      | In list, before closing `]`        | Skip `]`                                              |
+| `,`                                      | In list                            | Add new list entry                                    |
+| `[`                                      | Before variable, integer, etc      | Wrap in list                                          |
+| `,`                                      | Autocomplete in list               | Complete list entry and add new list entry            |
+| `.`                                      | On variable                        | Create fieldaccess                                    |
+| `.`                                      | Selecting variable in autocomplete | Complete variable and begin fieldaccess               |
+| `.`                                      | In integer                         | Convert integer to a float                            |
+| `=`                                      | Cursor on `=` in a `let`           | Skip over assignment                                  |
+| `{`                                      | In blank                           | Start record                                          |
+| `}`                                      | In record, before closing `}`      | Skip `}` at end of record                             |
+| `:`                                      | Cursor on `:` in a record          | Skip over `:`                                         |
+| Enter                                    | In a record                        | Add record entry                                      |
+| `"`                                      | In blank                           | Start string                                          |
+| `"`                                      | In string, before closing `"`      | Skip `"`                                              |
+| `->`                                     |                                    | Skip over `->` in a match                             |
+| Enter                                    | In a match                         | Add match entry                                       |
+| \|>                                      |                                    | Start pipe using current line                         |
+| Shift-Enter                              |                                    | Start pipe using selected code                        |
+| Enter                                    | In a pipe                          | Add line to pipe                                      |
+| Enter                                    | In body of a `let`                 | Wrap current expression in `let _ =`, go to next line |
+| Enter                                    | Between `let` expressions          | Insert a new line with a `let`                        |
 
 ## Code editing (similar to other editors)
 
