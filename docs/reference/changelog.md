@@ -6,55 +6,80 @@ sidebar_label: Changelog
 
 ## August 1, 2022:
 
-Make toplevel serialization output more obvious
+- Make toplevel serialization output more obvious
+([#4331](https://github.com/darklang/dark/pull/4331)).
 
-Add StdLib fns for Tuples
+- Add StdLib fns for Tuples
+([#4311](https://github.com/darklang/dark/pull/4311)).
 
-Update/improve 'running against prod' doc
+- Update/improve 'running against prod' doc
+([#4300](https://github.com/darklang/dark/pull/4300)).
 
-Switch Presence URL to dark-editor canvas
+- Switch Presence URL to dark-editor canvas
+([#4294](https://github.com/darklang/dark/pull/4294)).
 
-Correct ngrok command in docs
+- Correct ngrok command in docs
+([#4291](https://github.com/darklang/dark/pull/4291)).
 
-Switch client-side types to match backend types, pt 2
+- Switch client-side types to match backend types, pt 2
+([#4288](https://github.com/darklang/dark/pull/4288)).
 
-Add Bytes::base64Decode_v1 which fails properly on invalid input
+- Add Bytes::base64Decode_v1 which fails properly on invalid input
+([#4287](https://github.com/darklang/dark/pull/4287)).
 
-Remove admin flag from autocomplete
+- Remove admin flag from autocomplete
+([#4285](https://github.com/darklang/dark/pull/4285)).
 
-Switch client-side types to match backend types, pt 1
+- Switch client-side types to match backend types, pt 1
+([#4284](https://github.com/darklang/dark/pull/4284)).
 
-Include TAny case in client DType.decodeOld fn
+- Include TAny case in client DType.decodeOld fn
+([#4282](https://github.com/darklang/dark/pull/4282)).
 
-Include TFloat case in client's DType.decodeOld
+- Include TFloat case in client's DType.decodeOld
+([#4281](https://github.com/darklang/dark/pull/4281)).
 
-Change v1 api routes for non-OCamlTypes, non-ocamlCompatible responses
+- Change v1 api routes for non-OCamlTypes, non-ocamlCompatible responses
+([#4279](https://github.com/darklang/dark/pull/4279)).
 
-Expose more internal staticassets fns for uploads
+- Expose more internal staticassets fns for uploads
+([#4278](https://github.com/darklang/dark/pull/4278)).
 
-Send more fn info to the client and refactor
+- Send more fn info to the client and refactor
+([#4277](https://github.com/darklang/dark/pull/4277)).
 
-Better descriptions
+- Better descriptions
+([#4273](https://github.com/darklang/dark/pull/4273)).
 
-Allow non-string errors in Result::fromOption
+- Allow non-string errors in Result::fromOption
+([#4272](https://github.com/darklang/dark/pull/4272)).
 
-Allow admin fns for all admin canvases
+- Allow admin fns for all admin canvases
+([#4271](https://github.com/darklang/dark/pull/4271)).
 
-Fix analysis timezone offset bug
+- Fix analysis timezone offset bug
+([#4260](https://github.com/darklang/dark/pull/4260)).
 
-64 bit serializers
+- 64 bit serializers
+([#4257](https://github.com/darklang/dark/pull/4257)).
 
-Start moving APIs over to the vanilla serializer
+- Start moving APIs over to the vanilla serializer
+([#4256](https://github.com/darklang/dark/pull/4256)).
 
-Remove scripts/run-fsharp-benchmark
+- Remove scripts/run-fsharp-benchmark
+([#4255](https://github.com/darklang/dark/pull/4255)).
 
-Start of new types on the client
+- Start of new types on the client
+([#4254](https://github.com/darklang/dark/pull/4254)).
 
-Add testing for vanilla and ocamlcompatible serializers
+- Add testing for vanilla and ocamlcompatible serializers
+([#4252](https://github.com/darklang/dark/pull/4252)).
 
-Add more exclusions to shellcheck directory searching
+- Add more exclusions to shellcheck directory searching
+([#4238](https://github.com/darklang/dark/pull/4238)).
 
-Make build work on m1/m2 macs
+- Make build work on m1/m2 macs
+([#4227](https://github.com/darklang/dark/pull/4237)).
 
 ## Darklang Release 3 (July 1, 2022)
 
