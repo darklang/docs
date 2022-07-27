@@ -36,7 +36,6 @@ type Expr =
   | EBool of id * bool
   | EString of id * string
   | ECharacter of id * string
-  // allow the user to have arbitrarily big numbers, even if they don't make sense as floats
   | EFloat of id * Sign * bigint * bigint
   | ENull of id
   | EBlank of id
@@ -51,6 +50,7 @@ type Expr =
   | ERightPartial of id * string * Expr
   | ELeftPartial of id * string * Expr
   | EList of id * List<Expr>
+  | ETuple of id * Expr * Expr * List<Expr>
   | ERecord of id * List<string * Expr>
   | EPipe of id * Expr * Expr * List<Expr>
   | EConstructor of id * string * List<Expr>
@@ -183,5 +183,6 @@ The client has hand-written serializers in
 [`client/src/core/Encoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.res)
 and
 [`client/src/core/Decoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.res).
-The OCaml compiler will prompt you to add new encoders, but not decoders.
-Writing new ones is straightforward by following other examples there.
+The OCaml compiler (used for ReScript) will prompt you to add new encoders,
+but not decoders. Writing new ones is straightforward by following other
+examples there.

@@ -4,6 +4,25 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## Darklang Release 4 (August 1, 2022)
+
+## Tuples
+
+Dark now supports tuples - unstructured lists of heterogeneous data:
+```fsharp
+let x = (1, "string", { name: "Sam" })
+```
+
+Tuple support is currently thin - creating tuples of size greater than 3 is not recommended at this time, as deconstructing tuples is not yet available.
+
+- Tuples can be created, deconstructed (`let (lat, long) = (39.9526, 75.1652)`), and used in literal `match` patterns
+- New standard library functions have been added to work with Tuples:
+  - `Tuple2::`
+- Several standard library functions have new versions, updated to use tuples:
+  - `List.zip`, `List.zipShortest`, `List.unzip`
+  - `Dict.fromList`, `Dict.fromListOverwritingDuplicates`, `Dict.toList`
+- More details on using tuples can be found in [Language Details](languagedetails###Tuples).
+
 ## Darklang Release 3 (July 1, 2022)
 
 Darklang Release 3 is focused primarily on taking advantage of the recent

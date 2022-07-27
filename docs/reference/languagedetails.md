@@ -101,6 +101,39 @@ y
 
 ![List Example](/img/language/list_example.png)
 
+### Tuples
+
+Dark supports tuples: lists of defined length supporting heterogeneous types.
+
+```fsharp
+let x = (1, "string", { name: "Sam" })
+```
+
+- Tuples can be created in the editor by entering `(` in a blank.
+- Inserting additional separators (`,`) extends the size of the tuple;
+  Removing separators/elements reduces the size
+- Dark's Standard Library includes `Tuple2` and `Tuple3` modules
+  These provide functions used to work with tuples of size 2 and 3.
+
+The following constructs are planned but not yet implemented:
+
+- Tuples will be deconstructable into their parts:
+  ```fsharp
+  let philadelphia = (39.9526, 75.1652) 
+  let (lat, long) = philadelphia
+  ```
+- `match` will work on tuple literals:
+  ```fsharp
+  let headers = Dict::toList request.headers
+  let contentTypePlain =
+    List::findFirst headers \header ->
+      let (key, value) = Tuple2::mapFirst (\key -> String::toLower key) header
+      match key, value
+        ("content-type", "application/json") -> Just "json"
+        ("content-type", "text/html") -> Just "html"
+        _ -> Nothing
+  ```
+
 ### Binary
 
 Non-unicode sequences of bytes are supported as the `Binary` type.
@@ -400,15 +433,6 @@ without disturbing existing users. In an `if` statement, neither branch would
 execute.
 
 ## Planned language features
-
-### Tuples
-
-Dark intends to support tuples: lists of defined length supporting heterogeneous
-types.
-
-```elm
-x = (1, "string", { name: "Sam" })
-```
 
 ### Sets
 

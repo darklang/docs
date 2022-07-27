@@ -45,6 +45,7 @@ There are also more complex expressions:
 - Lists
 - Dicts
 - Records
+- Tuples
 - Functions
 - Conditionals
 - Matches

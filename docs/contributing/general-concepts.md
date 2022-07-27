@@ -118,6 +118,7 @@ type expr  =
   | ERightPartial of id * string * expr
   | ELeftPartial of id * string * expr
   | EList of id * expr list
+  | ETuple of id * expr * expr * expr list
   | ERecord of id * (string * expr) list
   | EPipe of id * expr list
   | EConstructor of id * string * expr list
