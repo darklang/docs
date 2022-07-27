@@ -79,7 +79,7 @@ sidebar_label: Changelog
 ([#4238](https://github.com/darklang/dark/pull/4238)).
 
 - Make build work on m1/m2 macs
-([#4227](https://github.com/darklang/dark/pull/4237)).
+([#4237](https://github.com/darklang/dark/pull/4237)).
 
 ## Darklang Release 3 (July 1, 2022)
 
