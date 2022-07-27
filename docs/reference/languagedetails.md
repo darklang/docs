@@ -110,19 +110,22 @@ let x = (1, "string", { name: "Sam" })
 ```
 
 - Tuples can be created in the editor by entering `(` in a blank.
-- Inserting additional separators (`,`) extends the size of the tuple;
-  Removing separators/elements reduces the size
-- Dark's Standard Library includes `Tuple2` and `Tuple3` modules
-  These provide functions used to work with tuples of size 2 and 3.
+- Inserting additional separators (`,`) extends the size of the tuple; Removing
+  separators/elements reduces the size
+- Dark's Standard Library includes `Tuple2` and `Tuple3` modules These provide
+  functions used to work with tuples of size 2 and 3.
 
 The following constructs are planned but not yet implemented:
 
 - Tuples will be deconstructable into their parts:
+
   ```fsharp
-  let philadelphia = (39.9526, 75.1652) 
+  let philadelphia = (39.9526, 75.1652)
   let (lat, long) = philadelphia
   ```
+
 - `match` will work on tuple literals:
+
   ```fsharp
   let headers = Dict::toList request.headers
   let contentTypePlain =

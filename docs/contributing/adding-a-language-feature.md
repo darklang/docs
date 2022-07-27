@@ -183,6 +183,6 @@ The client has hand-written serializers in
 [`client/src/core/Encoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.res)
 and
 [`client/src/core/Decoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.res).
-The OCaml compiler (used for ReScript) will prompt you to add new encoders,
-but not decoders. Writing new ones is straightforward by following other
-examples there.
+The OCaml compiler (used for ReScript) will prompt you to add new encoders, but
+not decoders. Writing new ones is straightforward by following other examples
+there.
