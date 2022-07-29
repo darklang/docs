@@ -4,13 +4,96 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## Darklang Release 4 (August 1, 2022)
+
+- Many standard library functions now have better descriptions
+  ([#4273](https://github.com/darklang/dark/pull/4273)).
+
+- Add new version of `Result::fromOption`, which allows non-string errors
+  ([#4272](https://github.com/darklang/dark/pull/4272)).
+
+- Add new version of `Bytes::base64Decode`, which fails properly on invalid
+  input ([#4287](https://github.com/darklang/dark/pull/4287)).
+
+- Bug fix: Dates were offset in Analysis by the number of hours away the user is
+  from GMT ([#4260](https://github.com/darklang/dark/pull/4260)).
+
+### Rewrite Dark in Dark
+
+Much of ApiSever (the backend that powers the editor) is being rewritten in
+Dark.
+
+- Expose more internal staticassets fns for uploads
+  ([#4278](https://github.com/darklang/dark/pull/4278)).
+
+- Switch Presence URL to dark-editor canvas
+  ([#4294](https://github.com/darklang/dark/pull/4294)).
+
+### Work towards future improvements
+
+- Add StdLib fns for Tuples
+  ([#4311](https://github.com/darklang/dark/pull/4311)). While tuples are not
+  yet available in the Editor, we're making steady progress and hope to have
+  them available next release.
+
+- Provide more metadata to the client regarding standard library functions
+  ([#4277](https://github.com/darklang/dark/pull/4277)). In a follow up PR, the
+  editor will leverage this data to display additional contextual data around
+  functions being used.
+
+### Internal improvements
+
+- Given OCaml deprecation, start to define and use new client types to match F#
+  backend types
+
+  - 64 bit serializers ([#4257](https://github.com/darklang/dark/pull/4257)).
+  - Start of new types on the client
+    ([#4254](https://github.com/darklang/dark/pull/4254)).
+  - Switch client-side types to match backend types
+    ([#4284](https://github.com/darklang/dark/pull/4284)
+    [#4288](https://github.com/darklang/dark/pull/4288)).
+  - Include TFloat case in client's DType.decodeOld
+    ([#4281](https://github.com/darklang/dark/pull/4281)
+    [#4282](https://github.com/darklang/dark/pull/4282)).
+
+- Continue migrating away from OCaml-compatible serializers
+
+  - Add testing for vanilla and ocamlcompatible serializers
+    ([#4252](https://github.com/darklang/dark/pull/4252)).
+  - Start moving APIs over to the vanilla serializer
+    ([#4256](https://github.com/darklang/dark/pull/4256)).
+  - Change v1 api routes for non-OCamlTypes, non-ocamlCompatible responses
+    ([#4279](https://github.com/darklang/dark/pull/4279)).
+  - Make toplevel serialization output more obvious
+    ([#4331](https://github.com/darklang/dark/pull/4331)).
+
+- Update/improve 'running against prod' doc
+  ([#4300](https://github.com/darklang/dark/pull/4300)).
+
+- Make build work on m1/m2 macs
+  ([#4237](https://github.com/darklang/dark/pull/4237)).
+
+- Allow admin fns for all admin canvases
+  ([#4271](https://github.com/darklang/dark/pull/4271)).
+
+- Add more exclusions to shellcheck directory searching
+  ([#4238](https://github.com/darklang/dark/pull/4238)).
+
+- Small cleanup efforts
+  - Remove admin flag from autocomplete
+    ([#4285](https://github.com/darklang/dark/pull/4285)).
+  - Remove scripts/run-fsharp-benchmark
+    ([#4255](https://github.com/darklang/dark/pull/4255)).
+  - Correct ngrok command in docs
+    ([#4291](https://github.com/darklang/dark/pull/4291)).
+
 ## Darklang Release 3 (July 1, 2022)
 
 Darklang Release 3 is focused primarily on taking advantage of the recent
 changes, including new stdlib functions, small languages changes, and sunsetting
 old features.
 
-## Language improvements
+### Language improvements
 
 - When a function is called with a runtime error as an argument, return the
   runtime error instead of a new error
@@ -22,7 +105,7 @@ old features.
   numbers above `2^53` and numbers above `2^63`)
   ([#4209](https://github.com/darklang/dark/pull/4209))
 
-## Stdlib improvements
+### Stdlib improvements
 
 - Allow `HttpClient::basicAuth_v0` and `HttpClient::basicAuth_v1` to run in the
   editor ([#4147](https://github.com/darklang/dark/pull/4147))
@@ -55,7 +138,7 @@ old features.
   descriptions ([#4096](https://github.com/darklang/dark/pull/4096),
   [#4200](https://github.com/darklang/dark/pull/4200))
 
-## Editor improvements
+### Editor improvements
 
 - Fix using secrets when run in the editor
   ([#4128](https://github.com/darklang/dark/pull/4128),
@@ -73,12 +156,12 @@ old features.
 - Remove the canvas minimap which was causing a long hang when switching to edit
   functions ([#4106](https://github.com/darklang/dark/pull/4106))
 
-## Http Framework improvements
+### Http Framework improvements
 
 - Load programs faster by removing 3-4 fewer DB requests during load
   ([#4051](https://github.com/darklang/dark/pull/4051))
 
-## Internal improvements
+### Internal improvements
 
 - Make the Dark repo build on Mac with M1/M2 (arm) chips
   ([#4237](https://github.com/darklang/dark/pull/4237)).
