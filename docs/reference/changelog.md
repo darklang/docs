@@ -18,6 +18,9 @@ sidebar_label: Changelog
 - Bug fix: Dates were offset in Analysis by the number of hours away the user is
   from GMT ([#4260](https://github.com/darklang/dark/pull/4260)).
 
+- Improved handling of 64-bit ints in editor
+  ([#4257](https://github.com/darklang/dark/pull/4257)).
+
 ### Rewrite Dark in Dark
 
 Much of ApiSever (the backend that powers the editor) is being rewritten in
@@ -26,7 +29,7 @@ Dark.
 - Expose more internal staticassets fns for uploads
   ([#4278](https://github.com/darklang/dark/pull/4278)).
 
-- Switch Presence URL to dark-editor canvas
+- Ported Presence functionality to `dark-editor` canvas
   ([#4294](https://github.com/darklang/dark/pull/4294)).
 
 ### Work towards future improvements
@@ -44,48 +47,34 @@ Dark.
 ### Internal improvements
 
 - Given OCaml deprecation, start to define and use new client types to match F#
-  backend types
-
-  - 64 bit serializers ([#4257](https://github.com/darklang/dark/pull/4257)).
-  - Start of new types on the client
-    ([#4254](https://github.com/darklang/dark/pull/4254)).
-  - Switch client-side types to match backend types
-    ([#4284](https://github.com/darklang/dark/pull/4284)
-    [#4288](https://github.com/darklang/dark/pull/4288)).
-  - Include TFloat case in client's DType.decodeOld
-    ([#4281](https://github.com/darklang/dark/pull/4281)
-    [#4282](https://github.com/darklang/dark/pull/4282)).
+  backend types ([#4254](https://github.com/darklang/dark/pull/4254)
+  [#4284](https://github.com/darklang/dark/pull/4284)
+  [#4288](https://github.com/darklang/dark/pull/4288)
+  [#4281](https://github.com/darklang/dark/pull/4281)
+  [#4282](https://github.com/darklang/dark/pull/4282)).
 
 - Continue migrating away from OCaml-compatible serializers
-
-  - Add testing for vanilla and ocamlcompatible serializers
-    ([#4252](https://github.com/darklang/dark/pull/4252)).
-  - Start moving APIs over to the vanilla serializer
-    ([#4256](https://github.com/darklang/dark/pull/4256)).
-  - Change v1 api routes for non-OCamlTypes, non-ocamlCompatible responses
-    ([#4279](https://github.com/darklang/dark/pull/4279)).
-  - Make toplevel serialization output more obvious
-    ([#4331](https://github.com/darklang/dark/pull/4331)).
-
-- Update/improve 'running against prod' doc
-  ([#4300](https://github.com/darklang/dark/pull/4300)).
+  ([#4252](https://github.com/darklang/dark/pull/4252)
+  [#4256](https://github.com/darklang/dark/pull/4256)
+  [#4279](https://github.com/darklang/dark/pull/4279)).
 
 - Make build work on m1/m2 macs
   ([#4237](https://github.com/darklang/dark/pull/4237)).
 
+- Make toplevel serialization output more obvious
+  ([#4331](https://github.com/darklang/dark/pull/4331)).
+
+- Update/improve 'running against prod' doc
+  ([#4300](https://github.com/darklang/dark/pull/4300)).
+
 - Allow admin fns for all admin canvases
   ([#4271](https://github.com/darklang/dark/pull/4271)).
 
-- Add more exclusions to shellcheck directory searching
-  ([#4238](https://github.com/darklang/dark/pull/4238)).
-
-- Small cleanup efforts
-  - Remove admin flag from autocomplete
-    ([#4285](https://github.com/darklang/dark/pull/4285)).
-  - Remove scripts/run-fsharp-benchmark
-    ([#4255](https://github.com/darklang/dark/pull/4255)).
-  - Correct ngrok command in docs
-    ([#4291](https://github.com/darklang/dark/pull/4291)).
+- Smaller code-cleanup efforts
+  ([#4238](https://github.com/darklang/dark/pull/4238)
+  [#4285](https://github.com/darklang/dark/pull/4285)
+  [#4255](https://github.com/darklang/dark/pull/4255)
+  [#4291](https://github.com/darklang/dark/pull/4291)).
 
 ## Darklang Release 3 (July 1, 2022)
 
