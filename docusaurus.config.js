@@ -155,6 +155,7 @@ module.exports = {
       appId: "QFOZBC0VVL",
       apiKey: "715121cc838a8c3c4ea54324456bd5f9",
       indexName: "darklang",
+      contextualSearch: false,
     },
   },
   presets: [
