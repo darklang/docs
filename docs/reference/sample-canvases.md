@@ -86,12 +86,15 @@ calls
 [mailchimp](https://darklang.com/a/sample-mailchimp) - sending a Mailchimp
 campaign
 
+[oauth](https://darklang.com/a/sample-oauth) - using Gmail's OAuth flow
+
 [signing](https://darklang.com/a/sample-aws-signing) - AWS signing
 
 [sendgrid](https://darklang.com/a/sample-sendgrid) - sending emails with the
 SendGrid API
 
-[oauth](https://darklang.com/a/sample-oauth) - using Gmail's OAuth flow
+[twitter api oauth 1.0](https://darklang.com/a/sample-twitter-auth) - using
+Twitter's OAuth 1.0 flow
 
 ## Full Sample Projects
 
