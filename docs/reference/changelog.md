@@ -13,8 +13,7 @@ new settings for contributors, and significant internal reworks.
 
 ### Experimental tuple support
 
-Dark now has work-in-progress
-[#4265](https://github.com/darklang/dark/issues/4265) support for tuples -
+Dark now has [work-in-progress](https://github.com/darklang/dark/issues/4265) support for tuples -
 unstructured lists of heterogeneous data:
 
 - Tuple expressions can be created by entering `(` in a blank expression
