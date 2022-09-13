@@ -101,6 +101,56 @@ y
 
 ![List Example](/img/language/list_example.png)
 
+### Tuples (In-Progress)
+
+Dark supports tuples: lists of defined length supporting heterogeneous types.
+
+Tuple support is currently a
+[work-in-progress](https://github.com/darklang/dark/issues/4265), and only
+available in the editor after opting in via the Settings dialog. Feedback is
+welcome!
+
+See Release 5 in the [changelog](https://docs.darklang.com/reference/changelog)
+for a demo of opting in.
+
+```fsharp
+let x = (1, "string", { name: "Sam" })
+```
+
+- Tuples can be created in the editor by entering `(` in a blank.
+- Inserting additional separators (`,`) extends the size of the tuple; removing
+  separators/elements reduces the size, generally removing the element to the
+  left of the separator
+- Dark's Standard Library includes `Tuple2` and `Tuple3` modules, which provide
+  functions used to work with tuples of size 2 and 3.
+- Pattern matching with `match` supports tuples:
+
+  ```fsharp
+  let headers = Dict::toList request.headers
+  let contentTypePlain =
+    List::findFirst headers \header ->
+      let (key, value) = Tuple2::mapFirst (\key -> String::toLower key) header
+      match key, value
+        ("content-type", "application/json") -> Just "json"
+        ("content-type", "text/html") -> Just "html"
+        _ -> Nothing
+  ```
+
+  Tuple match patterns can be created and extended the same way as tuple
+  expressions.
+
+The following constructs are planned but not yet implemented:
+
+- Tuples can be deconstructable into their parts in a `let` expression:
+
+  ```fsharp
+  let philadelphia = (39.9526, 75.1652)
+  let (lat, long) = philadelphia
+  ```
+
+- User functions may accept and return Tuples (TODO: I'm not sure how to phrase
+  this)
+
 ### Binary
 
 Non-unicode sequences of bytes are supported as the `Binary` type.
