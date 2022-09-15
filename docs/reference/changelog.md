@@ -6,15 +6,17 @@ sidebar_label: Changelog
 
 ## Darklang Release 5 (September 1, 2022)
 
-Darklang Release 5 includes opt-in tuple support, a revamped settings panel with
+Darklang Release 5 includes support for Tuples, a revamped settings panel with
 new settings for contributors, and significant internal reworks.
 
-![contributor settings and tuple demo](/img/changelog/release-5-contrib-settings.gif)
+### Major feature: experimental tuple support
 
-### Experimental tuple support
-
-Dark now has [work-in-progress](https://github.com/darklang/dark/issues/4265)
-support for tuples - unstructured lists of heterogeneous data:
+Dark now has work-in-progress support for tuples
+([#4265](https://github.com/darklang/dark/issues/4265),
+[#4425](https://github.com/darklang/dark/pull/4425),
+[#4404](https://github.com/darklang/dark/pull/4404),
+[#4311](https://github.com/darklang/dark/pull/4311)) - unstructured lists of
+heterogeneous data:
 
 - Tuple expressions can be created by entering `(` in a blank expression
 - Tuples may be deconstructed in `match` patterns
@@ -31,56 +33,69 @@ support for tuples - unstructured lists of heterogeneous data:
 - More details on using tuples can be found in
   [Language Details](languagedetails###Tuples).
 
-### Settings UI Improvements, Contributor Settings
+### Major feature: contributor settings
 
-The settings modal has been reworked, and an additional "Contributing" section
-has been added.
+A new Contributor Settings page has been added, allowing devs to look under the
+hood and use the same tools that employees are using to develop Darklang.
 
-- Revamped UI ([#4401](https://github.com/darklang/dark/pull/4401),
-  [#4420](https://github.com/darklang/dark/pull/4420),
-  [#4426](https://github.com/darklang/dark/pull/4426))
+![contributor settings and tuple demo](/img/changelog/release-5-contrib-settings.gif)
 
-- Contributor Settings
-  - Enable Tuples ([#4429](https://github.com/darklang/dark/pull/4429))
-  - Allow non-admins to view in-Editor debugger
-    ([#4343](https://github.com/darklang/dark/pull/4343))
-  - Add tunnel host setting
-    ([#4387](https://github.com/darklang/dark/pull/4387),
-    [#4402](https://github.com/darklang/dark/pull/4402))
+In particular, devs can now build a local version of the Darklang editor, and
+use it against their production Darklang codebase
+([#4387](https://github.com/darklang/dark/pull/4387),
+[#4402](https://github.com/darklang/dark/pull/4402))
+
+We have also made it possible to enable the in-Editor debugger (note: this is
+useful for the debugging the Darklang editor, not for debugging Darklang
+programs) ([#4343](https://github.com/darklang/dark/pull/4343))
+
+Finally, in-progress features can now be enabled for devs, starting with Tuples
+([#4429](https://github.com/darklang/dark/pull/4429))
+
+### Language improvements
+
+- Allow floats where the whole number part is empty
+  ([#4371](https://github.com/darklang/dark/pull/4371))
 
 ### Editor Improvements
 
 - Allow pressing enter in more expression bodies
   ([#4438](https://github.com/darklang/dark/pull/4438))
 
+- Fixed Undo functionality, which was briefly broken
+  ([#4392](https://github.com/darklang/dark/pull/4392))
+
+- Prevent Analysis errors due to using Tasks incorrectly
+  ([#4436](https://github.com/darklang/dark/pull/4436))
+
+- Revamping settings UI, adding reusuable components, animations, toggle
+  switches, and switching to TailwindCSS
+  ([#4375](https://github.com/darklang/dark/pull/4375),
+  [#4401](https://github.com/darklang/dark/pull/4401),
+  [#4420](https://github.com/darklang/dark/pull/4420),
+  [#4426](https://github.com/darklang/dark/pull/4426))
+
+### In-progress features - HttpClient and Http framework
+
+The current HttpClient and Http framework are quite limited, only supporting
+text request/response bodies, among many other problems. They also lack the
+flexibility to control and compose their behaviour.
+
+As part of rewriting the Static Assets feature in Dark itself
+([#4259](https://github.com/darklang/dark/issues/4259)), we are creating
+"thinner", more flexible, and more composable HttpClient
+([#4366](https://github.com/darklang/dark/pull/4366)) and Http handlers
+([#4353](https://github.com/darklang/dark/pull/4353))
+
 ### Internal Improvements
 
 - Huge refactor of client types
   ([#4326](https://github.com/darklang/dark/pull/4326))
-- Refactor and componentize Settings pages
-  ([#4375](https://github.com/darklang/dark/pull/4375))
-- Start on thinner base Http Client and Handlers The current HTTP Client and
-  HTTP Handlers only support text request/response bodies, and do not allow
-  sufficient control of their functionality.
-  - HttpBaseClient ([#4366](https://github.com/darklang/dark/pull/4366))
-  - HttpBaseHandler ([#4353](https://github.com/darklang/dark/pull/4353)) These
-    efforts are driven by a goal of rewriting the Static Assets feature in Dark
-    itself. ([#4259](https://github.com/darklang/dark/issues/4259))
-- Refactor Interpreter pattern-matching logic to prepare for Tuple pattern
-  ([#4404](https://github.com/darklang/dark/pull/4404))
-- Implement Tuple match pattern
-  ([#4425](https://github.com/darklang/dark/pull/4425))
-- Prevent Analysis errors by no longer calling `.Result` in Blazor code
-  ([#4436](https://github.com/darklang/dark/pull/4436))
-- Allow floats where the whole number part is empty
-  ([#4371](https://github.com/darklang/dark/pull/4371))
 - Remove OCamlTypes (used for interop with the old OCaml backend)
   ([#4396](https://github.com/darklang/dark/pull/4396),
   [#4398](https://github.com/darklang/dark/pull/4398))
 - Add internal function to load Ops for a TopLevel
   ([#4391](https://github.com/darklang/dark/pull/4391))
-- Fixed Undo functionality, which was briefly broken
-  ([#4392](https://github.com/darklang/dark/pull/4392))
 - Tidy F# fuzztests ([#4412](https://github.com/darklang/dark/pull/4412))
 - Consolidate F# testfiles ([#4411](https://github.com/darklang/dark/pull/4411))
 
