@@ -130,7 +130,7 @@ let x = (1, "string", { name: "Sam" })
   let contentTypePlain =
     List::findFirst headers \header ->
       let (key, value) = Tuple2::mapFirst (\key -> String::toLower key) header
-      match key, value
+      match (key, value)
         ("content-type", "application/json") -> Just "json"
         ("content-type", "text/html") -> Just "html"
         _ -> Nothing
