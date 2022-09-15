@@ -9,7 +9,7 @@ sidebar_label: Changelog
 Darklang Release 5 includes support for Tuples, a revamped settings panel with
 new settings for contributors, and significant internal reworks.
 
-### Major feature: experimental tuple support
+### Major feature: experimental Tuple support
 
 Dark now has work-in-progress support for tuples
 ([#4265](https://github.com/darklang/dark/issues/4265),
@@ -33,7 +33,7 @@ heterogeneous data:
 - More details on using tuples can be found in
   [Language Details](languagedetails###Tuples).
 
-### Major feature: contributor settings
+### Major feature: Contributor settings
 
 A new Contributor Settings page has been added, allowing devs to look under the
 hood and use the same tools that employees are using to develop Darklang.
@@ -57,7 +57,7 @@ Finally, in-progress features can now be enabled for devs, starting with Tuples
 - Allow floats where the whole number part is empty
   ([#4371](https://github.com/darklang/dark/pull/4371))
 
-### Editor Improvements
+### Editor improvements
 
 - Allow pressing enter in more expression bodies
   ([#4438](https://github.com/darklang/dark/pull/4438))
@@ -65,10 +65,13 @@ Finally, in-progress features can now be enabled for devs, starting with Tuples
 - Fixed Undo functionality, which was briefly broken
   ([#4392](https://github.com/darklang/dark/pull/4392))
 
+- Fixed display of Error rail, which was briefly broken
+  ([#4373](https://github.com/darklang/dark/pull/4373))
+
 - Prevent Analysis errors due to using Tasks incorrectly
   ([#4436](https://github.com/darklang/dark/pull/4436))
 
-- Revamping settings UI, adding reusuable components, animations, toggle
+- Revamping settings UI, adding reusuable form components, animations, toggle
   switches, and switching to TailwindCSS
   ([#4375](https://github.com/darklang/dark/pull/4375),
   [#4401](https://github.com/darklang/dark/pull/4401),
@@ -87,7 +90,7 @@ As part of rewriting the Static Assets feature in Dark itself
 ([#4366](https://github.com/darklang/dark/pull/4366)) and Http handlers
 ([#4353](https://github.com/darklang/dark/pull/4353))
 
-### Internal Improvements
+### Internal improvements
 
 - Huge refactor of client types
   ([#4326](https://github.com/darklang/dark/pull/4326))
@@ -96,8 +99,8 @@ As part of rewriting the Static Assets feature in Dark itself
   [#4398](https://github.com/darklang/dark/pull/4398))
 - Add internal function to load Ops for a TopLevel
   ([#4391](https://github.com/darklang/dark/pull/4391))
-- Tidy F# fuzztests ([#4412](https://github.com/darklang/dark/pull/4412))
-- Consolidate F# testfiles ([#4411](https://github.com/darklang/dark/pull/4411))
+- Test file cleanuops ([#4412](https://github.com/darklang/dark/pull/4412),
+  [#4411](https://github.com/darklang/dark/pull/4411))
 
 ## Darklang Release 4 (August 1, 2022)
 
