@@ -33,6 +33,9 @@ sidebar_label: Keyboard Mapping
 | `[`                            | In blank                           | Create list                                           |
 | `]`                            | In list, before closing `]`        | Skip `]`                                              |
 | `,`                            | In list                            | Add new list entry                                    |
+| `(`                            | In blank (expression or pattern)   | Create tuple expression or pattern                    |
+| `)`                            | In tuple, before closing `)`       | Skip `)`                                              |
+| `,`                            | In tuple                           | Extend tuple size                                     |
 | `[`                            | Before variable, integer, etc      | Wrap in list                                          |
 | `,`                            | Autocomplete in list               | Complete list entry and add new list entry            |
 | `.`                            | On variable                        | Create fieldaccess                                    |
@@ -52,6 +55,9 @@ sidebar_label: Keyboard Mapping
 | Enter                          | In a pipe                          | Add line to pipe                                      |
 | Enter                          | In body of a `let`                 | Wrap current expression in `let _ =`, go to next line |
 | Enter                          | Between `let` expressions          | Insert a new line with a `let`                        |
+
+Note: tuple support currently requires you to opt in - see Release 5 in the
+[changelog](https://docs.darklang.com/reference/changelog) for details.
 
 ## Code editing (similar to other editors)
 

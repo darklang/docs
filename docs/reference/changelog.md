@@ -4,6 +4,86 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## Darklang Release 5 (September 1, 2022)
+
+Darklang Release 5 includes opt-in tuple support, a revamped settings panel with
+new settings for contributors, and significant internal reworks.
+
+![contributor settings and tuple demo](/img/changelog/release-5-contrib-settings.gif)
+
+### Experimental tuple support
+
+Dark now has [work-in-progress](https://github.com/darklang/dark/issues/4265)
+support for tuples - unstructured lists of heterogeneous data:
+
+- Tuple expressions can be created by entering `(` in a blank expression
+- Tuples may be deconstructed in `match` patterns
+- New standard library functions have been added to work with Tuples:
+  - `Tuple2::create`, `::first`, `::second`, `::swap`, `::mapFirst`,
+    `::mapSecond`, `::mapBoth`
+  - `Tuple3::create`, `::first`, `::second`, `::third`, `::mapFirst`,
+    `::mapSecond`, `::mapThird`, `::mapAllThree`
+- Tuple deconstruction (`let (lat long) = (39.9526, 75.1652)`) is not yet
+  available, so creating tuples of size greater than 3 is not recommended at
+  this time, unless you plan to use `match` expressions to deconstruct the
+  values.
+- Tuples are only available after opting in via Settings (see next section)
+- More details on using tuples can be found in
+  [Language Details](languagedetails###Tuples).
+
+### Settings UI Improvements, Contributor Settings
+
+The settings modal has been reworked, and an additional "Contributing" section
+has been added.
+
+- Revamped UI ([#4401](https://github.com/darklang/dark/pull/4401),
+  [#4420](https://github.com/darklang/dark/pull/4420),
+  [#4426](https://github.com/darklang/dark/pull/4426))
+
+- Contributor Settings
+  - Enable Tuples ([#4429](https://github.com/darklang/dark/pull/4429))
+  - Allow non-admins to view in-Editor debugger
+    ([#4343](https://github.com/darklang/dark/pull/4343))
+  - Add tunnel host setting
+    ([#4387](https://github.com/darklang/dark/pull/4387),
+    [#4402](https://github.com/darklang/dark/pull/4402))
+
+### Editor Improvements
+
+- Allow pressing enter in more expression bodies
+  ([#4438](https://github.com/darklang/dark/pull/4438))
+
+### Internal Improvements
+
+- Huge refactor of client types
+  ([#4326](https://github.com/darklang/dark/pull/4326))
+- Refactor and componentize Settings pages
+  ([#4375](https://github.com/darklang/dark/pull/4375))
+- Start on thinner base Http Client and Handlers The current HTTP Client and
+  HTTP Handlers only support text request/response bodies, and do not allow
+  sufficient control of their functionality.
+  - HttpBaseClient ([#4366](https://github.com/darklang/dark/pull/4366))
+  - HttpBaseHandler ([#4353](https://github.com/darklang/dark/pull/4353)) These
+    efforts are driven by a goal of rewriting the Static Assets feature in Dark
+    itself. ([#4259](https://github.com/darklang/dark/issues/4259))
+- Refactor Interpreter pattern-matching logic to prepare for Tuple pattern
+  ([#4404](https://github.com/darklang/dark/pull/4404))
+- Implement Tuple match pattern
+  ([#4425](https://github.com/darklang/dark/pull/4425))
+- Prevent Analysis errors by no longer calling `.Result` in Blazor code
+  ([#4436](https://github.com/darklang/dark/pull/4436))
+- Allow floats where the whole number part is empty
+  ([#4371](https://github.com/darklang/dark/pull/4371))
+- Remove OCamlTypes (used for interop with the old OCaml backend)
+  ([#4396](https://github.com/darklang/dark/pull/4396),
+  [#4398](https://github.com/darklang/dark/pull/4398))
+- Add internal function to load Ops for a TopLevel
+  ([#4391](https://github.com/darklang/dark/pull/4391))
+- Fixed Undo functionality, which was briefly broken
+  ([#4392](https://github.com/darklang/dark/pull/4392))
+- Tidy F# fuzztests ([#4412](https://github.com/darklang/dark/pull/4412))
+- Consolidate F# testfiles ([#4411](https://github.com/darklang/dark/pull/4411))
+
 ## Darklang Release 4 (August 1, 2022)
 
 ### Standard library improvements
