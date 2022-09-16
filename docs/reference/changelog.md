@@ -99,7 +99,7 @@ As part of rewriting the Static Assets feature in Dark itself
   [#4398](https://github.com/darklang/dark/pull/4398))
 - Add internal function to load Ops for a TopLevel
   ([#4391](https://github.com/darklang/dark/pull/4391))
-- Test file cleanuops ([#4412](https://github.com/darklang/dark/pull/4412),
+- Test file cleanups ([#4412](https://github.com/darklang/dark/pull/4412),
   [#4411](https://github.com/darklang/dark/pull/4411))
 
 ## Darklang Release 4 (August 1, 2022)
