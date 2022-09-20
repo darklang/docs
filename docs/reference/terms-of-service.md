@@ -32,6 +32,6 @@ operational, legal, etc).
 Dark has short downtime approximately four times a year when our hosted DB
 provider (Google Cloud SQL) performs maintenance. This is scheduled for Tuesdays
 around 8am PST, and often lasts as little as 30 seconds. We usually notify the
-#status channel in our Slack in advance, and as it happens.
+#status channel in our Discord in advance, and as it happens.
 
 <!-- markdown-lint-enable MD018 -->

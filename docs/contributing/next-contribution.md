@@ -46,8 +46,8 @@ A common example is to
 
 If you've got something that you'd like to solve, either
 [make an issue](https://github.com/darklang/dark/issues) or discuss it in
-[Slack](https://darklang.com/slack-invite). Our main purpose of opening the repo
-was to allow users to solve their problems and not be blocked by us, so we
+[Discord](https://darklang.com/discord-invite). Our main purpose of opening the
+repo was to allow users to solve their problems and not be blocked by us, so we
 highly prioritize solving things you need solved.
 
 ## Larger Projects
@@ -60,7 +60,7 @@ In the meantime, the best thing to align well with that vision is to be very
 communicative. While many projects will take drive-by contributions, we are only
 going to take contributions which move in the same direction we are going.
 Often, those directions are quite subtle, so start by talking to us in
-[Slack](https://darklang.com/slack-invite), letting us know what you're
+[Discord](https://darklang.com/discord-invite), letting us know what you're
 thinking.
 
 The best thing to work on is something that is personally (or professionally!)

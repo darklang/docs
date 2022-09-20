@@ -7,7 +7,7 @@ id: first-dark-application
 We're going to take you through a tutorial to build an entire application that
 uses Dark's basic functionality. This should take between 10m and 45m, depending
 on how thorough you are. If you're having problems, come talk to us in the
-[Dark Community Slack](https://darklang.com/slack-invite).
+[Dark Community Discord](https://darklang.com/discord-invite).
 
 The application will accept requests and aggregate those requests into a report
 daily. It will optionally store the daily report in Airtable. You will create:

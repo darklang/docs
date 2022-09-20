@@ -637,7 +637,7 @@ Behind the scenes, Dark has greatly improved its operations.
 
 - Moved 99% of project collaboration to our
   [public github](https://github.com/darklang/dark) and
-  [public community slack](https://darklang.com/slack-invite)
+  [public community chat](https://darklang.com/discord-invite)
 
 - ported our
   [contributor guides](https://docs.darklang.com/contributing/rescript-and-fsharp-for-dark-developers)
@@ -709,10 +709,8 @@ Behind the scenes, Dark has greatly improved its operations.
   to the Dark project. We'll write more about this going forward: Paul has
   [a new devlog](https://dev.to/darklang/dark-devlog-1-fresh-start-1i2) that
   talks about it.
-- We now have a
-  [status channel](https://darkcommunity.slack.com/archives/C016LAW6W73/) in the
-  community Slack. You can join the Slack community
-  [here](https://darklang.com/slack-invite)!
+- We now have a status channel in the community chat. You can join the chat
+  community [here](https://darklang.com/discord-invite)!
 - The [Dark repo](https://github.com/darklang/dark) is now _source available_.
   This hasn't been publicly announced yet, but you can now
   [file issues](https://github.com/darklang/dark/issues) directly, and also
@@ -1084,7 +1082,7 @@ docs repo is public and all you need to do to contribute is
   see how to do it.
 - More standard library functions! We're ramping down our concentrated effort to
   add more all at once, so if you have any requests post in the
-  [Community Slack](https://darklang.com/slack-invite) or email
+  [Community Chat](https://darklang.com/discord-invite) or email
   feedback@darklang.com
   - `Float::clamp`
   - `Int::clamp`
@@ -1292,7 +1290,7 @@ We released a lot this week, hope you enjoy!
   [package manager](https://docs.darklang.com/reference/packages), which allows
   re-using Dark functions from other users or canvases. Today, only Dark
   employees can add functions to the package manager. We've started with some
-  commonly used Slack functions, but let us know via Slack or email if you have
+  commonly used Slack functions, but let us know via chat or email if you have
   any requests - or your own functions you'd like to share.
 
 ![changelog/Mar13/slackfunctions.png](/img/changelog/Mar13/slackfunctions.png)

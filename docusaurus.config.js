@@ -91,8 +91,8 @@ module.exports = {
           title: "Community",
           items: [
             {
-              label: "Community Slack",
-              to: "https://darklang.com/slack-invite",
+              label: "Community Discord",
+              to: "https://darklang.com/discord-invite",
             },
             {
               label: "Dark Repo",
