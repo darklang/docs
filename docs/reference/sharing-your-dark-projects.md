@@ -6,7 +6,7 @@ sidebar_label: Sharing Your Dark Projects
 
 Thanks for being part of our private beta! We're excited for you to share your
 Dark projects. The most important thing to us is getting your feedback. We
-appreciate hearing about bugs, requests, etc, in the Slack.
+appreciate hearing about bugs, requests, etc, in the Discord.
 
 ## Made with Dark badge
 
@@ -106,9 +106,6 @@ users sharing about Dark:
   [Ellie's Project](https://twitter.com/janiczek/status/1220519157135003649)).
 - If you tag us on Twitter, [@darklang](https://twitter.com/darklang) we'll try
   to RT.
-
-Feel free to let your readers know that they can ask you for an invite, or if
-you'd like a multi-use invite link, you can request one in the community Slack.
 
 ## Giving talks about Dark
 
