@@ -20,9 +20,9 @@ If you click on a handler and a trace, you'll find this url in the browser's
 location bar.
 
 We really appreciate feedback, especially long-form feedback discussing what
-your found confusing or where you got stuck. We keep a collection of feedback
-in the 
+your found confusing or where you got stuck. We keep a collection of feedback in
+the
 [Feedback discussion forum](https://github.com/darklang/dark/discussions/categories/feedback)
 -- we would love it if you commented there. If you would prefer to comment
-anonymously, you can send it to 
+anonymously, you can send it to
 [feedback@darklang.com](mailto:feedback@darklang.com).
