@@ -51,7 +51,7 @@ the most specific match will be used. For example, with the handlers
 `/users/paul/projects/1` would match against `/users/:username/projects/:id` as
 that is more specific than `/users/:username`.
 
-However, `/users/:username/projects/:id` were not present, it would match
+However, if `/users/:username/projects/:id` were not present, it would match
 against `/users/:username` (in this case, the variable `username` would have the
 value `paul/projects/1`.
 
