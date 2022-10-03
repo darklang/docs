@@ -24,7 +24,7 @@ The contents of the request will be available in your handler as the variable `r
 - `jsonBody`: the body, parsed as JSON. If it cannot be parsed, this will be `null`
 - `body`: the contents of either `jsonBody` or `formBody`, or null if neither are set
 - `headers`: a dictionary of all the headers.
-- `cookies: a dictionary of the cookies
+- `cookies`: a dictionary of the cookies
 - `queryParam`: a dictionary of the parameters in the query string (eg `/?a=b`)
 - `url`: the full url of the request
 
