@@ -170,8 +170,8 @@ that code will not paste. We hope to improve this experience in the future.
 ### Command Palette
 
 If you’re looking to do something that is not immediately available, chances are
-it’s in the command palette (accessed by hitting `alt-x` on a US keyboard or `ctrl-\`
-or `ctrl-s` on other keyboards).
+it’s in the command palette (accessed by hitting `alt-x` on a US keyboard or
+`ctrl-\` or `ctrl-s` on other keyboards).
 
 ![img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png](/img/refactoring/Screen_Shot_2020-01-07_at_1.40.42_PM.png)
 
