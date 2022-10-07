@@ -4,6 +4,175 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## Darklang Release 6 (October 1, 2022)
+
+### Major features
+
+#### Support for negative ints and floats
+
+- Turn existing ints and floats negative by typing `-` in front
+  ([#4498](https://github.com/darklang/dark/pull/4498)) TODOIMAGE
+
+- Type negative ints and floats from scratch
+  ([#4497](https://github.com/darklang/dark/pull/4497)) TODOIMAGE
+
+- Edit partials and turn them into ints and floats (including negatives)
+  ([#4497](https://github.com/darklang/dark/pull/4497)) TODOIMAGE
+
+### Editor improvements
+
+- Show live values for lambdas Trace lambdas properly (actually trace them and
+  then display them)) ([#4456](https://github.com/darklang/dark/pull/4456))
+  TODOIMAGE
+
+- Fix a few places secrets weren't hidden
+  ([#4456](https://github.com/darklang/dark/pull/4456))
+
+- Error messages use less ugly representation of dicts and lists
+  ([#4456](https://github.com/darklang/dark/pull/4456))
+
+- Hide irrelevent GC error in analysis
+  ([#4505](https://github.com/darklang/dark/pull/4505),
+  [#4483](https://github.com/darklang/dark/pull/4483),
+  [#4449](https://github.com/darklang/dark/pull/4449))
+
+- When a handle's route changes, update "open-in-new-window" to use the new
+  route ([#4502](https://github.com/darklang/dark/pull/4502))
+
+- dont insert 0s when cxopy/pasting patterns IMAGE
+  ([#4492](https://github.com/darklang/dark/pull/4492))
+
+- Dont create empty patterns when creating match
+  ([#4469](https://github.com/darklang/dark/pull/4469))
+
+- Explain why functions are deprecated
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Don't confuse secrets and datastores in the docs
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+- Show live values for literals instead of a spinner
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Correctly show analysis for partials (the old value)
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Show the correct live value for let definitions and record field names
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Show pipe live value for current pipe entry
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Don't spin when there's a pipe in a blank
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Fix some standard library function descrpiotns for typos and punctuation
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+- Better UI when a function has no description (affects functions in the package
+  manager) ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+  - Allow users to use deprecated functions they already use (fix for more
+    cases) ([#4482](https://github.com/darklang/dark/pull/4482))
+
+Tuples
+
+ONLY WHEN USING TUPLE setting (IMAGE)
+
+- Allow Tuple2 and Tuple3 stdlib fns when in-progress setting set
+  ([#4482](https://github.com/darklang/dark/pull/4482))
+- Add tuple pattern autocomplete completion
+  ([#4465](https://github.com/darklang/dark/pull/4465)) IMAGE
+- Allow copy/pasting tuple patterns
+  ([#4469](https://github.com/darklang/dark/pull/4469))
+
+- Swallow ) input at end of tuple pattern
+  ([#4454](https://github.com/darklang/dark/pull/4454))
+- Put cursor at _start_ of blank TUPLE pattern when removing elements, not end
+  ([#4455](https://github.com/darklang/dark/pull/4455))
+- Bugfix: don't allow tuple pattern parts to be overwritten
+  ([#4453](https://github.com/darklang/dark/pull/4453))
+
+Fix fluid pattern autocomplete flashing
+([#4462](https://github.com/darklang/dark/pull/4462))
+
+Fix bug when going further than 3 places down in the autocomplete for patterns
+([#4462](https://github.com/darklang/dark/pull/4462))
+
+Backspacing fixes
+
+- allow deleting an if keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+- allow deleting an match keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+- allow deleting a lambda keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+
+Strings
+
+- Tone down the string background a bit
+  ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
+
+- add indent to multiline strings
+  ([#4477](https://github.com/darklang/dark/pull/4477))
+
+- show slight background in strings to help see how they line up
+  ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
+  ([#4477](https://github.com/darklang/dark/pull/4477))
+
+Small fixes
+
+- cursor in right place after a string edit
+  ([#4497](https://github.com/darklang/dark/pull/4497))
+
+- convert partials to ints and floats
+  ([#4497](https://github.com/darklang/dark/pull/4497))
+
+fix broken floats automatically
+([#4497](https://github.com/darklang/dark/pull/4497))
+
+## Standard library changes
+
+String::toUUID to Uuid.parse more
+([#4480](https://github.com/darklang/dark/pull/4480))
+
+### Internal improvements
+
+Small fixes
+
+- cursor in right place after a string edit
+  ([#4497](https://github.com/darklang/dark/pull/4497))
+
+- convert partials to ints and floats
+  ([#4497](https://github.com/darklang/dark/pull/4497))
+
+fix broken floats automatically
+([#4497](https://github.com/darklang/dark/pull/4497))
+
+## Standard library changes
+
+String::toUUID to Uuid.parse more
+([#4480](https://github.com/darklang/dark/pull/4480))
+
+### Internal improvements
+
+Repo is tagged for each release
+
+Improve debugging AST view
+
+- Add IDs to debuggerr AST view
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+- A number of fixes related to lambdas
+  ([#4456](https://github.com/darklang/dark/pull/4456))
+
+Refactors
+
+- Rebrand 'pattern' as 'match pattern' throughout client codebase
+  ([#4487](https://github.com/darklang/dark/pull/4487))
+
+- Refactor function representation
+  ([#4485](https://github.com/darklang/dark/pull/4485))
+
+Internal functions use IDs more
+
+- Use IDs more ([#4480](https://github.com/darklang/dark/pull/4480))
+
 ## Darklang Release 5 (September 1, 2022)
 
 Darklang Release 5 includes support for Tuples, a revamped settings panel with
