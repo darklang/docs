@@ -18,61 +18,28 @@ sidebar_label: Changelog
 
 - Edit partials and turn them into ints and floats (including negatives)
   ([#4497](https://github.com/darklang/dark/pull/4497)) TODOIMAGE
+ 
+#### Show function deprecation info
+
+- Display why functions are deprecated
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+#### Allow converting if/lambda and match with just one expression
+
+- allow deleting an if keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+  
+- allow deleting an match keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+  
+- allow deleting a lambda keyword with just one expression
+  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
 
 ### Editor improvements
 
-- Show live values for lambdas Trace lambdas properly (actually trace them and
-  then display them)) ([#4456](https://github.com/darklang/dark/pull/4456))
-  TODOIMAGE
+#### Tuples
 
-- Fix a few places secrets weren't hidden
-  ([#4456](https://github.com/darklang/dark/pull/4456))
-
-- Error messages use less ugly representation of dicts and lists
-  ([#4456](https://github.com/darklang/dark/pull/4456))
-
-- Hide irrelevent GC error in analysis
-  ([#4505](https://github.com/darklang/dark/pull/4505),
-  [#4483](https://github.com/darklang/dark/pull/4483),
-  [#4449](https://github.com/darklang/dark/pull/4449))
-
-- When a handle's route changes, update "open-in-new-window" to use the new
-  route ([#4502](https://github.com/darklang/dark/pull/4502))
-
-- dont insert 0s when cxopy/pasting patterns IMAGE
-  ([#4492](https://github.com/darklang/dark/pull/4492))
-
-- Dont create empty patterns when creating match
-  ([#4469](https://github.com/darklang/dark/pull/4469))
-
-- Explain why functions are deprecated
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Don't confuse secrets and datastores in the docs
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-
-- Show live values for literals instead of a spinner
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Correctly show analysis for partials (the old value)
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Show the correct live value for let definitions and record field names
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Show pipe live value for current pipe entry
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Don't spin when there's a pipe in a blank
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- Fix some standard library function descrpiotns for typos and punctuation
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-
-- Better UI when a function has no description (affects functions in the package
-  manager) ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-- ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-
-  - Allow users to use deprecated functions they already use (fix for more
-    cases) ([#4482](https://github.com/darklang/dark/pull/4482))
-
-Tuples
-
-ONLY WHEN USING TUPLE setting (IMAGE)
+Tuples are in preview - enable them in Settings/Contributor Settings
 
 - Allow Tuple2 and Tuple3 stdlib fns when in-progress setting set
   ([#4482](https://github.com/darklang/dark/pull/4482))
@@ -88,22 +55,8 @@ ONLY WHEN USING TUPLE setting (IMAGE)
 - Bugfix: don't allow tuple pattern parts to be overwritten
   ([#4453](https://github.com/darklang/dark/pull/4453))
 
-Fix fluid pattern autocomplete flashing
-([#4462](https://github.com/darklang/dark/pull/4462))
 
-Fix bug when going further than 3 places down in the autocomplete for patterns
-([#4462](https://github.com/darklang/dark/pull/4462))
-
-Backspacing fixes
-
-- allow deleting an if keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
-- allow deleting an match keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
-- allow deleting a lambda keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
-
-Strings
+#### Strings
 
 - Tone down the string background a bit
   ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
@@ -115,39 +68,79 @@ Strings
   ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
   ([#4477](https://github.com/darklang/dark/pull/4477))
 
+
+#### Live values
+- Show live values for lambdas properly (actually trace them and
+  then display them)) ([#4456](https://github.com/darklang/dark/pull/4456))
+  TODOIMAGE
+
+- Show live values for literals instead of a spinner
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Correctly show analysis for partials (the old value)
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Show the correct live value for let definitions and record field names
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Show pipe live value for current pipe entry
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Don't spin when there's a pipe in a blank
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Fix some standard library function descriptions - typos and punctuation
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+- Better UI when a function has no description (affects functions in the package
+  manager) ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  
+- Allow users to use deprecated functions they already use in more cases ([#4482](https://github.com/darklang/dark/pull/4482))
+
+- Fix fluid pattern autocomplete flashing
+([#4462](https://github.com/darklang/dark/pull/4462))
+
+- Fix bug when going further than 3 places down in the autocomplete for patterns
+([#4462](https://github.com/darklang/dark/pull/4462))
+
+
 Small fixes
 
-- cursor in right place after a string edit
+- Fix a few places secrets weren't hidden
+  ([#4456](https://github.com/darklang/dark/pull/4456))
+
+- Error messages use less ugly representation of dicts and lists
+  ([#4456](https://github.com/darklang/dark/pull/4456))
+
+- Hide irrelevent GC error in analysis
+  ([#4505](https://github.com/darklang/dark/pull/4505),
+  [#4483](https://github.com/darklang/dark/pull/4483),
+  [#4449](https://github.com/darklang/dark/pull/4449))
+
+- When a handle's route changes, update "open-in-new-window" to use the new
+  route ([#4502](https://github.com/darklang/dark/pull/4502))
+
+- dont insert 0s when copy/pasting patterns IMAGE
+  ([#4492](https://github.com/darklang/dark/pull/4492))
+
+- Dont create empty patterns when creating match
+  ([#4469](https://github.com/darklang/dark/pull/4469))
+
+- Don't confuse secrets and datastores in the docs
+  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+
+- put the cursor in right place after a string edit
   ([#4497](https://github.com/darklang/dark/pull/4497))
 
-- convert partials to ints and floats
-  ([#4497](https://github.com/darklang/dark/pull/4497))
+- convert partials to ints and floats ([#4497](https://github.com/darklang/dark/pull/4497))
 
-fix broken floats automatically
-([#4497](https://github.com/darklang/dark/pull/4497))
+- fix broken floats automatically ([#4497](https://github.com/darklang/dark/pull/4497))
+
 
 ## Standard library changes
 
-String::toUUID to Uuid.parse more
-([#4480](https://github.com/darklang/dark/pull/4480))
+- Add `Uuid::parse_v0` and deprecate `String::toUUID` ([#4480](https://github.com/darklang/dark/pull/4480))
 
-### Internal improvements
-
-Small fixes
-
-- cursor in right place after a string edit
-  ([#4497](https://github.com/darklang/dark/pull/4497))
-
-- convert partials to ints and floats
-  ([#4497](https://github.com/darklang/dark/pull/4497))
-
-fix broken floats automatically
-([#4497](https://github.com/darklang/dark/pull/4497))
-
-## Standard library changes
-
-String::toUUID to Uuid.parse more
-([#4480](https://github.com/darklang/dark/pull/4480))
 
 ### Internal improvements
 
@@ -168,8 +161,6 @@ Refactors
 
 - Refactor function representation
   ([#4485](https://github.com/darklang/dark/pull/4485))
-
-Internal functions use IDs more
 
 - Use IDs more ([#4480](https://github.com/darklang/dark/pull/4480))
 
