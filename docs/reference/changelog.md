@@ -11,90 +11,98 @@ sidebar_label: Changelog
 #### Support for negative ints and floats
 
 - Turn existing ints and floats negative by typing `-` in front
-  ([#4498](https://github.com/darklang/dark/pull/4498)) TODOIMAGE
+  ([#4498](https://github.com/darklang/dark/pull/4498)) 
+  
+![](https://user-images.githubusercontent.com/181762/192357264-7ae39197-3ec8-4516-9f43-930817b80b99.gif)
 
 - Type negative ints and floats from scratch
-  ([#4497](https://github.com/darklang/dark/pull/4497)) TODOIMAGE
+  ([#4497](https://github.com/darklang/dark/pull/4497))
 
 - Edit partials and turn them into ints and floats (including negatives)
-  ([#4497](https://github.com/darklang/dark/pull/4497)) TODOIMAGE
+  ([#4497](https://github.com/darklang/dark/pull/4497))
  
+![](https://user-images.githubusercontent.com/181762/192331575-d4affbb3-127c-46c0-8e88-7a74c2e877db.gif)
+
 #### Show function deprecation info
 
 - Display why functions are deprecated
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
-#### Allow converting if/lambda and match with just one expression
+  ([#4491](https://github.com/darklang/dark/pull/4491))
 
-- allow deleting an if keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+![](https://user-images.githubusercontent.com/181762/191844123-3c57f9a7-5240-4b84-8691-c91e7b8aee13.png)
   
-- allow deleting an match keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
-  
-- allow deleting a lambda keyword with just one expression
-  ([#4457](https://github.com/darklang/dark/pull/4457)) IMAGE
+#### Expression backspacing/conversion
+
+When you delete an `if`, `match`, or lambda (`\`) with one expression, replace it with that expression ([#4457](https://github.com/darklang/dark/pull/4457))
+
+![](https://user-images.githubusercontent.com/181762/188941656-b0a584be-d115-41cc-a956-28b79646fa89.gif)
 
 ### Editor improvements
 
 #### Tuples
 
-Tuples are in preview - enable them in Settings/Contributor Settings
+*Tuples are in preview - enable them in __Settings/Contributor Settings__*
 
-- Allow Tuple2 and Tuple3 stdlib fns when in-progress setting set
+- Show Tuple2 and Tuple3 functions in the autocomplete
   ([#4482](https://github.com/darklang/dark/pull/4482))
+
 - Add tuple pattern autocomplete completion
-  ([#4465](https://github.com/darklang/dark/pull/4465)) IMAGE
+  ([#4465](https://github.com/darklang/dark/pull/4465))
+
+![](https://user-images.githubusercontent.com/906686/189388902-82bf765f-a9f4-4629-9fda-8f99918d259c.gif)
+
 - Allow copy/pasting tuple patterns
   ([#4469](https://github.com/darklang/dark/pull/4469))
 
-- Swallow ) input at end of tuple pattern
-  ([#4454](https://github.com/darklang/dark/pull/4454))
-- Put cursor at _start_ of blank TUPLE pattern when removing elements, not end
+- Allow you to press `)` to go over a tuple's closing parenthesis ([#4454](https://github.com/darklang/dark/pull/4454))
+
+- Put cursor at _start_ of blank tuple pattern when removing elements
   ([#4455](https://github.com/darklang/dark/pull/4455))
-- Bugfix: don't allow tuple pattern parts to be overwritten
+
+- Don't allow tuple pattern parts to be overwritten by literals
   ([#4453](https://github.com/darklang/dark/pull/4453))
 
 
 #### Strings
 
-- Tone down the string background a bit
-  ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
-
-- add indent to multiline strings
+- indent one more space to line up multiline strings
   ([#4477](https://github.com/darklang/dark/pull/4477))
 
-- show slight background in strings to help see how they line up
-  ([#4479](https://github.com/darklang/dark/pull/4479)) IMAGE
-  ([#4477](https://github.com/darklang/dark/pull/4477))
+- show slight background in strings to help see how they line up (it's subtle!)
+  ([#4479](https://github.com/darklang/dark/pull/4479), 
+  [#4477](https://github.com/darklang/dark/pull/4477))
+
+![](https://user-images.githubusercontent.com/181762/190904975-276ea41d-5880-460f-b68f-fedc70b1a0e1.png)
 
 
 #### Live values
 - Show live values for lambdas properly (actually trace them and
   then display them)) ([#4456](https://github.com/darklang/dark/pull/4456))
-  TODOIMAGE
+
+- Display a lambda's runtime value as a live value ([#4456](https://github.com/darklang/dark/pull/4456))
+
+![](https://user-images.githubusercontent.com/181762/188888447-62103469-5f6b-4eec-a4d3-fcc8f0fd9764.png)
 
 - Show live values for literals instead of a spinner
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  ([#4491](https://github.com/darklang/dark/pull/4491))
   
 - Correctly show analysis for partials (the old value)
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
+
 - Show the correct live value for let definitions and record field names
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
+
 - Show pipe live value for current pipe entry
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
+
 - Don't spin when there's a pipe in a blank
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
+
 - Fix some standard library function descriptions - typos and punctuation
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
 
 - Better UI when a function has no description (affects functions in the package
-  manager) ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
-  
+  manager) ([#4491](https://github.com/darklang/dark/pull/4491))
+
 - Allow users to use deprecated functions they already use in more cases ([#4482](https://github.com/darklang/dark/pull/4482))
 
 - Fix fluid pattern autocomplete flashing
@@ -120,14 +128,14 @@ Small fixes
 - When a handle's route changes, update "open-in-new-window" to use the new
   route ([#4502](https://github.com/darklang/dark/pull/4502))
 
-- dont insert 0s when copy/pasting patterns IMAGE
+- dont insert `0` when copy/pasting from the start of ints in patterns
   ([#4492](https://github.com/darklang/dark/pull/4492))
 
 - Dont create empty patterns when creating match
   ([#4469](https://github.com/darklang/dark/pull/4469))
 
 - Don't confuse secrets and datastores in the docs
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+  ([#4491](https://github.com/darklang/dark/pull/4491))
 
 - put the cursor in right place after a string edit
   ([#4497](https://github.com/darklang/dark/pull/4497))
@@ -144,17 +152,13 @@ Small fixes
 
 ### Internal improvements
 
-Repo is tagged for each release
+- The dark repo is now [tagged for each release](https://github.com/darklang/dark/tags)
 
-Improve debugging AST view
-
-- Add IDs to debuggerr AST view
-  ([#4491](https://github.com/darklang/dark/pull/4491)) IMAGE
+- Add IDs to debugger AST view
+  ([#4491](https://github.com/darklang/dark/pull/4491)) 
 
 - A number of fixes related to lambdas
   ([#4456](https://github.com/darklang/dark/pull/4456))
-
-Refactors
 
 - Rebrand 'pattern' as 'match pattern' throughout client codebase
   ([#4487](https://github.com/darklang/dark/pull/4487))
@@ -163,6 +167,8 @@ Refactors
   ([#4485](https://github.com/darklang/dark/pull/4485))
 
 - Use IDs more ([#4480](https://github.com/darklang/dark/pull/4480))
+
+
 
 ## Darklang Release 5 (September 1, 2022)
 
