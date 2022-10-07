@@ -125,7 +125,7 @@ Small fixes
   [#4483](https://github.com/darklang/dark/pull/4483),
   [#4449](https://github.com/darklang/dark/pull/4449))
 
-- When a handle's route changes, update "open-in-new-window" to use the new
+- When a handler's route changes, update "open-in-new-window" to use the new
   route ([#4502](https://github.com/darklang/dark/pull/4502))
 
 - dont insert `0` when copy/pasting from the start of ints in patterns
