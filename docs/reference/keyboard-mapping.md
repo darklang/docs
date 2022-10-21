@@ -17,6 +17,7 @@ sidebar_label: Keyboard Mapping
 | Ctrl-E            | Scroll page right one page |
 | Ctrl-B, PgUp      | Scroll canvas up one page  |
 | Ctrl-F, PgDn      | Scroll page down one page  |
+| Left-click        | Open Omnibox / Search      |
 
 ## Code editing (Dark specific)
 
@@ -55,6 +56,9 @@ sidebar_label: Keyboard Mapping
 | Enter                          | In a pipe                          | Add line to pipe                                      |
 | Enter                          | In body of a `let`                 | Wrap current expression in `let _ =`, go to next line |
 | Enter                          | Between `let` expressions          | Insert a new line with a `let`                        |
+| Double-click                   | In a string                        | Select word                                           |
+| Double-click                   | outside a string                   | Select token (eg function name, keyword, etc)         |
+| Alt+Double-click               |                                    | Select entire expression                              |
 
 Note: tuple support currently requires you to opt in - see Release 5 in the
 [changelog](https://docs.darklang.com/reference/changelog) for details.
@@ -76,3 +80,4 @@ Note: tuple support currently requires you to opt in - see Release 5 in the
 | Cmd/Ctrl-Right | Ctrl-E, Ctrl-End             | Go to end of line                            |
 | Ctrl-Left      | Alt-Left (Mac only)          | Go to start of word                          |
 | Ctrl-Right     | Alt-Right (Mac only)         | Go to end of word                            |
+| Left-click     | Place caret                  |
