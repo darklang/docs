@@ -101,9 +101,8 @@ users sharing about Dark:
 
 - [Kevin Hoffman's blog](https://medium.com/@KevinHoffman/shedding-some-light-on-dark-9086b45988ed)
   about IoT sensors
-- Tair's [snipy tool for Slack](https://snipy.io/).
-- The best way to share code for now is often via screenshot (ex:
-  [Ellie's Project](https://twitter.com/janiczek/status/1220519157135003649)).
+- The best way to share code for now is often via screenshot (eg:
+  [Ellies](https://twitter.com/janiczek/status/1220519157135003649)).
 - If you tag us on Twitter, [@darklang](https://twitter.com/darklang) we'll try
   to RT.
 
@@ -111,5 +110,4 @@ users sharing about Dark:
 
 We've also seen users give talks about Dark at meetups and at work. If you'd
 like to do so, we've shared a
-[slide template](https://drive.google.com/drive/u/1/folders/15GkcOu8jfJkgmk3aY7HxJjWdKgtDBY7C)
-to help make that easier.
+[slide template](https://darklang.com/slide-template) to help make that easier.
