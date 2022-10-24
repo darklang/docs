@@ -50,11 +50,13 @@ a {
   color: #6d74c5;
 }
 
+/* Sharing dark logo layout */
+
 img {
   height: auto;
 }
 
-.badges {
+.logos {
   margin: 2em 0;
   display: flex;
   flex-direction: row;
@@ -62,29 +64,117 @@ img {
   justify-content: space-evenly;
 }
 
-.badge {
-  display: inline-block;
-  margin: 2em;
+.logos > div {
+  margin: 1.5em;
 }
 
-.badge img.medium {
-  width: 250px;
-  height: 100px;
+.logos .logo, .logos .wordmark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.badge img.small {
-  width: 126px;
-  height: 24px;
+.logos .wordmark img, .logos .logo img {
+  height: 8rem;
+  width: auto;
 }
 
-.badges.darkBackground {
-  background: #424242;
+.logos a {
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
-.badges.lightBackground {
-  background: #fafafa;
+.logos p {
+  margin-bottom: 0px;
 }
 
-.badges.darkBackground a:hover {
-  color: #f8f8f8;
+.logos .spacer {
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+}
+
+.logos .colors .swatch {
+  font-size: 0.8rem;
+  padding: 2px 4px;
+  border-radius: 60px;
+}
+
+
+
+/* Dark background */
+.logos.darkBackground {
+  background: #2F2F2F;
+  color: #F8F8F8;
+}
+
+.logos.darkBackground p {
+  color: #6F6F6F;
+}
+
+.logos.darkBackground a {
+  color: #6D74C5;
+}
+
+.logos.darkBackground a:hover {
+  color: #F8F8F8;
+}
+
+.logos.logos.darkBackground .spacer {
+  color: #4F4F4F;
+}
+
+.logos.darkBackground .colors .black {
+  background: #282828;
+  color: #F8F8F8;
+  border: solid 1px;
+  border-color: #F8F8F8;
+}
+
+.logos.darkBackground .colors .white {
+  background: #F8F8F8;
+  color: #282828;
+}
+
+.logos.darkBackground .colors .purple {
+  background: #8F5EA1;
+  border-width: 0px;
+  color: #F8F8F8;
+}
+
+.logos.darkBackground .colors .blue {
+  background: #747AB9;
+  color: #F8F8F8;
+}
+
+/* Light background */
+
+.logos.lightBackground {
+  background: #F8F8F8;
+}
+
+.logos.logos.lightBackground .spacer {
+  color: #8F8F8F;
+}
+
+.logos.lightBackground .colors .black {
+  background: #282828;
+  color: #F8F8F8;
+}
+
+.logos.lightBackground .colors .white {
+  background: #F8F8F8;
+  color: #282828;
+  border: solid 1px;
+  border-color: #282828;
+}
+
+.logos.lightBackground .colors .purple {
+  background: #955B9F;
+  color: #F8F8F8;
+}
+
+.logos.lightBackground .colors .blue {
+  background: #747AB9;
+  color: #F8F8F8;
 }
