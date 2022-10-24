@@ -21,9 +21,9 @@ module.exports = {
   themeConfig: {
     image: "img/favicon.ico",
     navbar: {
-      title: "Dark",
+      title: "Darklang",
       logo: {
-        alt: "Dark logo",
+        alt: "Darklang logo",
         src: "img/favicon.ico",
         href: "https://darklang.com",
       },
