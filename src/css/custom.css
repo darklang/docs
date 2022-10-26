@@ -22,6 +22,10 @@
   --ifm-color-primary-light: #684476;
   --ifm-color-primary-lighter: #6d477b;
   --ifm-color-primary-lightest: #7b518b;
+  --darklang-white: #F8F8F8;
+  --darklang-black: #2F2F2F;
+  --darklang-darkBackground-grey: #6F6F6F;
+  --darklang-lightBackground-grey: #8F8F8F;
 }
 
 .docusaurus-highlight-code-line {
@@ -61,14 +65,17 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: 100%;
 }
 
-.logos > div {
-  margin: 1.5em;
+
+.logos .logo, .logos .wordmark, .logos .colors {
+  width: 50%;
+  padding: 1.5em;
+  height: 13rem;
 }
 
-.logos .logo, .logos .wordmark{
+.logos .logo, .logos .wordmark {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,87 +101,131 @@ img {
   padding-left: 0.4rem;
 }
 
+/* Colors */
+
+.logos .colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 9rem;
+}
+
+.logos .colors .colorName {
+  height: 1rem;
+  line-height: 1rem;
+  width: 50%;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
 .logos .colors .swatch {
+  height: 1.2rem;
+  line-height: 1rem;
   font-size: 0.8rem;
-  padding: 2px 4px;
+  padding: 1px 6px 2px 6px;
   border-radius: 60px;
 }
 
 
 
 /* Dark background */
-.logos.darkBackground {
-  background: #2F2F2F;
-  color: #F8F8F8;
+.logos .darkBackground {
+  background: var(--darklang-black);
+  color: var(--darklang-darkBackground-grey);
 }
 
-.logos.darkBackground p {
-  color: #6F6F6F;
-}
 
-.logos.darkBackground a {
+.logos .darkBackground a {
   color: #6D74C5;
 }
 
-.logos.darkBackground a:hover {
-  color: #F8F8F8;
+.logos .darkBackground a:hover {
+  color: var(--darklang-white);
 }
 
-.logos.logos.darkBackground .spacer {
-  color: #4F4F4F;
+.logos .darkBackground .spacer {
+  color: var(--darklang-darkBackground-grey)
 }
 
-.logos.darkBackground .colors .black {
-  background: #282828;
-  color: #F8F8F8;
+.logos .darkBackground.colors .black {
+  background: var(--darklang-black);
+  color: var(--darklang-white);
   border: solid 1px;
-  border-color: #F8F8F8;
+  padding-top: 0;
+  border-color: var(--darklang-white);
 }
 
-.logos.darkBackground .colors .white {
-  background: #F8F8F8;
-  color: #282828;
+.logos .darkBackground.colors .white {
+  background: var(--darklang-white);
+  color: var(--darklang-black);
 }
 
-.logos.darkBackground .colors .purple {
+.logos .darkBackground.colors .purple {
   background: #8F5EA1;
   border-width: 0px;
-  color: #F8F8F8;
+  color: var(--darklang-white);
 }
 
-.logos.darkBackground .colors .blue {
+.logos .darkBackground.colors .blue {
   background: #747AB9;
-  color: #F8F8F8;
+  color: var(--darklang-white);
 }
 
 /* Light background */
 
-.logos.lightBackground {
-  background: #F8F8F8;
+.logos .lightBackground {
+  background: var(--darklang-white);
 }
 
-.logos.logos.lightBackground .spacer {
+.logos .lightBackground .spacer {
   color: #8F8F8F;
 }
 
-.logos.lightBackground .colors .black {
-  background: #282828;
-  color: #F8F8F8;
+.logos .lightBackground.colors .black {
+  background: var(--darklang-black);
+  color: var(--darklang-white);
 }
 
-.logos.lightBackground .colors .white {
-  background: #F8F8F8;
-  color: #282828;
+.logos .lightBackground.colors .white {
+  background: var(--darklang-white);
+  color: var(--darklang-black);
   border: solid 1px;
-  border-color: #282828;
+  padding-top: 0;
+  border-color: var(--darklang-black);
 }
 
-.logos.lightBackground .colors .purple {
+.logos .lightBackground.colors .purple {
   background: #955B9F;
-  color: #F8F8F8;
+  color: var(--darklang-white);
 }
 
-.logos.lightBackground .colors .blue {
+.logos .lightBackground.colors .blue {
   background: #747AB9;
-  color: #F8F8F8;
+  color: var(--darklang-white);
+}
+
+.logos .wordmark {
+  position: relative;
+}
+
+/* Transparency */
+.logos .transparent {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  border-radius: 60px;
+  padding: 0rem 0.4rem 0.1rem;
+  line-height: 1.3rem;
+  height: 1.3rem;
+}
+
+
+.logos .darkBackground .transparent {
+  background: #F8F8F833;
+  color: #c8c8c8;
+}
+
+.logos .lightBackground .transparent {
+  background: #28282866;
+  color: #282828;
 }
