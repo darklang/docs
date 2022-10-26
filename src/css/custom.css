@@ -22,6 +22,10 @@
   --ifm-color-primary-light: #684476;
   --ifm-color-primary-lighter: #6d477b;
   --ifm-color-primary-lightest: #7b518b;
+  --darklang-white: #F8F8F8;
+  --darklang-black: #2F2F2F;
+  --darklang-darkBackground-grey: #6F6F6F;
+  --darklang-lightBackground-grey: #8F8F8F;
 }
 
 .docusaurus-highlight-code-line {
@@ -54,37 +58,181 @@ img {
   height: auto;
 }
 
-.badges {
+/* Sharing dark logo layout */
+
+/* overall layout */
+
+.logos {
   margin: 2em 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: 100%;
 }
 
-.badge {
-  display: inline-block;
-  margin: 2em;
+.logos .logo, .logos .wordmark, .logos .colors {
+  width: 50%;
+  padding: 1.5em;
+  height: 13rem;
 }
 
-.badge img.medium {
-  width: 250px;
-  height: 100px;
+/* general styles */
+
+.logos a {
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 
-.badge img.small {
-  width: 126px;
-  height: 24px;
+/* layout of logo and wordmark (with image options) */
+
+.logos .logo, .logos .wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.badges.darkBackground {
-  background: #424242;
+.logos .wordmark img, .logos .logo img {
+  height: 8rem;
+  width: auto;
 }
 
-.badges.lightBackground {
-  background: #fafafa;
+.logos p {
+  margin-bottom: 0px;
 }
 
-.badges.darkBackground a:hover {
-  color: #f8f8f8;
+.logos .spacer {
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+}
+
+
+/* Dark background */
+
+.logos .darkBackground {
+  background: var(--darklang-black);
+  color: var(--darklang-darkBackground-grey);
+}
+
+.logos .darkBackground a {
+  color: #6D74C5;
+}
+
+.logos .darkBackground a:hover {
+  color: var(--darklang-white);
+}
+
+.logos .darkBackground .spacer {
+  color: var(--darklang-darkBackground-grey)
+}
+
+
+/* Light background */
+
+.logos .lightBackground {
+  background: var(--darklang-white);
+}
+
+.logos .lightBackground .spacer {
+  color: #8F8F8F;
+}
+
+
+/* Transparency */
+
+.logos .wordmark {
+  position: relative;
+}
+
+.logos .transparent {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  border-radius: 60px;
+  padding: 0rem 0.4rem 0.1rem;
+  line-height: 1.3rem;
+  height: 1.3rem;
+}
+
+.logos .darkBackground .transparent {
+  background: #F8F8F833;
+  color: #c8c8c8;
+}
+
+.logos .lightBackground .transparent {
+  background: #28282833;
+  color: #282828;
+}
+
+
+/* Colors */
+
+.logos .colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+}
+
+.logos .colors .colorName {
+  height: 1rem;
+  line-height: 1rem;
+  width: 50%;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
+.logos .colors .swatch {
+  height: 1.2rem;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  padding: 1px 6px 2px 6px;
+  border-radius: 60px;
+}
+
+.logos .lightBackground.colors .black {
+  background: var(--darklang-black);
+  color: var(--darklang-white);
+}
+
+.logos .lightBackground.colors .white {
+  background: var(--darklang-white);
+  color: var(--darklang-black);
+  border: solid 1px;
+  padding-top: 0;
+  border-color: var(--darklang-black);
+}
+
+.logos .lightBackground.colors .purple {
+  background: #955B9F;
+  color: var(--darklang-white);
+}
+
+.logos .lightBackground.colors .blue {
+  background: #747AB9;
+  color: var(--darklang-white);
+}
+
+.logos .darkBackground.colors .black {
+  background: var(--darklang-black);
+  color: var(--darklang-white);
+  border: solid 1px;
+  padding-top: 0;
+  border-color: var(--darklang-white);
+}
+
+.logos .darkBackground.colors .white {
+  background: var(--darklang-white);
+  color: var(--darklang-black);
+}
+
+.logos .darkBackground.colors .purple {
+  background: #8F5EA1;
+  border-width: 0px;
+  color: var(--darklang-white);
+}
+
+.logos .darkBackground.colors .blue {
+  background: #747AB9;
+  color: var(--darklang-white);
 }
