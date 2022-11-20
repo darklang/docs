@@ -23,7 +23,8 @@ _See also:
 Most language features will need to be added to our language definition. The
 language definition is `Expr` in
 [F#](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/ProgramTypes.fs),
-or [ReScript](https://github.com/darklang/dark/blob/main/client/src/core/ProgramTypes.res),
+or
+[ReScript](https://github.com/darklang/dark/blob/main/client/src/core/ProgramTypes.res),
 which represent a Dark expression (which in turn contains other Dark
 expressions). This is commonly known as an "Abstract Syntax Tree" (or AST).
 
