@@ -33,7 +33,7 @@ Here's the journey it takes:
   [`Fetcher`](https://github.com/darklang/dark/blob/main/client/workers/Fetcher.res)
   fetches the trace in the background, decodes it, and sends the value to the
   editor. On the server-side, it is fetched from the
-  [ApiServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api.fs).
+  [ApiServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api/APITraces.fs).
 
 ## Traces
 
