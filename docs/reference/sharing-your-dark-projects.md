@@ -70,14 +70,25 @@ Dark at meetups and at work.
     </p>
   </div>
 
-  <div className="wordmark lightBackground">
+  <div className="logo lightBackground">
     <p className="transparent">Transparent</p>
-    <img src="/img/branding/wordmark-light-transparent@2x.png" />
+    <img src="/img/branding/logo-light@2x.png" />
     <p>
-      <a href="/img/branding/wordmark-light-transparent.svg" target="_blank">svg</a><span className="spacer">|</span>
-      <a href="/img/branding/wordmark-light-transparent.png" target="_blank">png</a><span className="spacer">|</span>
-      <a href="/img/branding/wordmark-light-transparent@2x.png" target="_blank">png 2x</a><span className="spacer">|</span>
-      <a href="/img/branding/wordmark-light-transparent@3x.png" target="_blank">png 3x</a>
+      <a href="/img/branding/logo-light-transparent.svg" target="_blank">svg</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-light-transparent.png" target="_blank">png</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-light-transparent@2x.png" target="_blank">png 2x</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-light-transparent@3x.png" target="_blank">png 3x</a>
+    </p>
+  </div>
+
+  <div className="logo darkBackground">
+    <p className="transparent">Transparent</p>
+    <img src="/img/branding/logo-dark@2x.png" />
+    <p>
+      <a href="/img/branding/logo-dark-transparent.svg" target="_blank">svg</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-dark-transparent.png" target="_blank">png</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-dark-transparent@2x.png" target="_blank">png 2x</a><span className="spacer">|</span>
+      <a href="/img/branding/logo-dark-transparent@3x.png" target="_blank">png 3x</a>
     </p>
   </div>
 
@@ -92,11 +103,15 @@ Dark at meetups and at work.
     </p>
   </div>
 
-  <div className="colors darkBackground">
-    <div className="colorName">black</div><div className="swatch black">#2F2F2F</div>
-    <div className="colorName">white</div><div className="swatch white">#F8F8F8</div>
-    <div className="colorName">purple</div><div className="swatch purple">#8F5EA1</div>
-    <div className="colorName">blue</div><div className="swatch blue">#6D74C5</div>
+  <div className="wordmark lightBackground">
+    <p className="transparent">Transparent</p>
+    <img src="/img/branding/wordmark-light-transparent@2x.png" />
+    <p>
+      <a href="/img/branding/wordmark-light-transparent.svg" target="_blank">svg</a><span className="spacer">|</span>
+      <a href="/img/branding/wordmark-light-transparent.png" target="_blank">png</a><span className="spacer">|</span>
+      <a href="/img/branding/wordmark-light-transparent@2x.png" target="_blank">png 2x</a><span className="spacer">|</span>
+      <a href="/img/branding/wordmark-light-transparent@3x.png" target="_blank">png 3x</a>
+    </p>
   </div>
 
   <div className="colors lightBackground">
@@ -104,6 +119,13 @@ Dark at meetups and at work.
     <div className="colorName">white</div><div className="swatch white">#F8F8F8</div>
     <div className="colorName">purple</div><div className="swatch purple">#955B9F</div>
     <div className="colorName">blue</div><div className="swatch blue">#747AB9</div>
+  </div>
+
+  <div className="colors darkBackground">
+    <div className="colorName">black</div><div className="swatch black">#2F2F2F</div>
+    <div className="colorName">white</div><div className="swatch white">#F8F8F8</div>
+    <div className="colorName">purple</div><div className="swatch purple">#8F5EA1</div>
+    <div className="colorName">blue</div><div className="swatch blue">#6D74C5</div>
   </div>
 
 </div>
