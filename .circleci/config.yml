@@ -5,7 +5,7 @@ version: 2
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:16.11.1
+      - image: cimg/node:19.0.1
     steps:
       - checkout
       - run: npm ci
@@ -15,7 +15,7 @@ jobs:
 
   deploy-website:
     docker:
-      - image: cimg/node:16.11.1
+      - image: cimg/node:19.0.1
 
     steps:
       - add_ssh_keys:
