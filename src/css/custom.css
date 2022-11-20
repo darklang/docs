@@ -22,10 +22,10 @@
   --ifm-color-primary-light: #684476;
   --ifm-color-primary-lighter: #6d477b;
   --ifm-color-primary-lightest: #7b518b;
-  --darklang-white: #F8F8F8;
-  --darklang-black: #2F2F2F;
-  --darklang-darkBackground-grey: #6F6F6F;
-  --darklang-lightBackground-grey: #8F8F8F;
+  --darklang-white: #f8f8f8;
+  --darklang-black: #2f2f2f;
+  --darklang-darkBackground-grey: #6f6f6f;
+  --darklang-lightBackground-grey: #8f8f8f;
 }
 
 .docusaurus-highlight-code-line {
@@ -70,7 +70,9 @@ img {
   width: 100%;
 }
 
-.logos .logo, .logos .wordmark, .logos .colors {
+.logos .logo,
+.logos .wordmark,
+.logos .colors {
   width: 50%;
   padding: 1.5em;
   height: 13rem;
@@ -85,14 +87,16 @@ img {
 
 /* layout of logo and wordmark (with image options) */
 
-.logos .logo, .logos .wordmark {
+.logos .logo,
+.logos .wordmark {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.logos .wordmark img, .logos .logo img {
+.logos .wordmark img,
+.logos .logo img {
   height: 8rem;
   width: auto;
 }
@@ -106,7 +110,6 @@ img {
   padding-left: 0.4rem;
 }
 
-
 /* Dark background */
 
 .logos .darkBackground {
@@ -115,7 +118,7 @@ img {
 }
 
 .logos .darkBackground a {
-  color: #6D74C5;
+  color: #6d74c5;
 }
 
 .logos .darkBackground a:hover {
@@ -123,9 +126,8 @@ img {
 }
 
 .logos .darkBackground .spacer {
-  color: var(--darklang-darkBackground-grey)
+  color: var(--darklang-darkBackground-grey);
 }
-
 
 /* Light background */
 
@@ -134,13 +136,13 @@ img {
 }
 
 .logos .lightBackground .spacer {
-  color: #8F8F8F;
+  color: #8f8f8f;
 }
-
 
 /* Transparency */
 
-.logos .wordmark {
+.logos .wordmark,
+.logos .logo {
   position: relative;
 }
 
@@ -155,7 +157,7 @@ img {
 }
 
 .logos .darkBackground .transparent {
-  background: #F8F8F833;
+  background: #f8f8f833;
   color: #c8c8c8;
 }
 
@@ -163,7 +165,6 @@ img {
   background: #28282833;
   color: #282828;
 }
-
 
 /* Colors */
 
@@ -204,12 +205,12 @@ img {
 }
 
 .logos .lightBackground.colors .purple {
-  background: #955B9F;
+  background: #955b9f;
   color: var(--darklang-white);
 }
 
 .logos .lightBackground.colors .blue {
-  background: #747AB9;
+  background: #747ab9;
   color: var(--darklang-white);
 }
 
@@ -227,12 +228,12 @@ img {
 }
 
 .logos .darkBackground.colors .purple {
-  background: #8F5EA1;
+  background: #8f5ea1;
   border-width: 0px;
   color: var(--darklang-white);
 }
 
 .logos .darkBackground.colors .blue {
-  background: #747AB9;
+  background: #747ab9;
   color: var(--darklang-white);
 }
