@@ -8,7 +8,8 @@ GitHub.
 ## Formatting the code
 
 We use a code formatter on all our files, and this is tested during CI on all
-PRs. To format, call `scripts/format format backend`. There is also a
+PRs. To format, call `scripts/formatting/format format --include-rescript`.
+There is also a
 [git hook you can use](https://github.com/darklang/dark/blob/56a800909195829ef757e9a4444409af14c171ac/scripts/formatting/pre-commit-hook.sh).
 
 ## Set up your fork
