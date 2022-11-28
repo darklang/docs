@@ -4,6 +4,93 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+## Darklang Release 7 (November 1, 2022)
+
+## Editor improvements
+
+- Remove expandable sidebar; update sidebar to use Tailwind
+  ([#4511](https://github.com/darklang/dark/pull/4511))
+
+  TODO: choose a screenshot before/after pair that represents the visual changes
+  well
+
+- Deleting a selected range of code is now more accurate
+  ([#4531](https://github.com/darklang/dark/pull/4531))
+
+- Rewrite how copy/paste of match patterns works
+  [#4513](https://github.com/darklang/dark/pull/4513)
+
+- Improve editor load time ([#4520](https://github.com/darklang/dark/pull/4520),
+  [#4519](https://github.com/darklang/dark/pull/4519))
+
+- Use the same documentation box in autocomplete and when showing docs
+  ([#4510](https://github.com/darklang/dark/pull/4510))
+
+- Upgrade icons to Fontawesome 6
+  ([#4565](https://github.com/darklang/dark/pull/4565))
+
+- Several improvements for interacting with tuples
+  ([#4521](https://github.com/darklang/dark/pull/4521))
+
+## Standard library
+
+- Rename `String::toFloat_v1` to `Float::parse_v0`
+  ([#4536](https://github.com/darklang/dark/pull/4536))
+
+- All standard library functions now use pretty formatting in their docstrings
+  ([#4535](https://github.com/darklang/dark/pull/4535))
+
+## HTTP server
+
+- Use new default favicon ([#4562](https://github.com/darklang/dark/pull/4562))
+
+## Internal
+
+- Use exact package versions and prevent hang during `npm install`
+  ([#4566](https://github.com/darklang/dark/pull/4566))
+
+- use gcloud storage commands instead of gsutil for deployment
+  ([#4525](https://github.com/darklang/dark/pull/4525))
+
+- Switch to published version of Tablecloth (0.8.0)
+  ([#4543](https://github.com/darklang/dark/pull/4543))
+
+- Add additional playwright timeouts to diagnose integration tests hanging in CI
+  ([#4534](https://github.com/darklang/dark/pull/4534))
+
+- Ensure package functions include params in display
+  ([#4516)](https://github.com/darklang/dark/pull/4516))
+
+- Remove old `backend/templates` directory
+  ([#4517](https://github.com/darklang/dark/pull/4517))
+
+## Documentation
+
+(in [`docs`](https://github.com/darklang/docs))
+
+- Document mouse-based shortcuts
+  ([#281](https://github.com/darklang/docs/pull/281))
+
+- Optimize pngs using tinypng.io
+  ([#283](https://github.com/darklang/docs/pull/283))
+
+- Use new logos and redo the "sharing dark" page
+  ([#282](https://github.com/darklang/docs/pull/282))
+
+- Add other command palette options
+  ([#268](https://github.com/darklang/docs/pull/268))
+
+- Mention feedback forum ([#269](https://github.com/darklang/docs/pull/269))
+
+- Explain how the HTTP handlers work
+  ([#267](https://github.com/darklang/docs/pull/267))
+
+- (internal) Create dependabot.yml, update packages
+  ([#270](https://github.com/darklang/docs/pull/270),
+  [#271](https://github.com/darklang/docs/pull/271))
+
+(TODO: verify we haven't reported on these since the last changelog post)
+
 ## Darklang Release 6 (October 1, 2022)
 
 ### Major features
