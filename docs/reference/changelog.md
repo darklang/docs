@@ -8,28 +8,32 @@ sidebar_label: Changelog
 
 ## Editor improvements
 
-- Remove expandable sidebar; update sidebar to use Tailwind
+- Remove expandable sidebar, make collapsed sidebar more reliable
   ([#4511](https://github.com/darklang/dark/pull/4511))
 
   TODO: choose a screenshot before/after pair that represents the visual changes
   well
 
-- Deleting a selected range of code is now more accurate
-  ([#4531](https://github.com/darklang/dark/pull/4531))
-
-- Rewrite how copy/paste of match patterns works
-  [#4513](https://github.com/darklang/dark/pull/4513)
-
-- Improve editor load time ([#4520](https://github.com/darklang/dark/pull/4520),
+- Improve editor load time, using preconnects and preloads
+  ([#4520](https://github.com/darklang/dark/pull/4520),
   [#4519](https://github.com/darklang/dark/pull/4519))
 
-- Use the same documentation box in autocomplete and when showing docs
+- Show the return type of called functions in the documentation box
   ([#4510](https://github.com/darklang/dark/pull/4510))
+
+- Fix parameter display when using package functions
+  ([#4516)](https://github.com/darklang/dark/pull/4516))
+
+- Deleting a selected range of code now handles situations where the code
+  reflows during deletion ([#4531](https://github.com/darklang/dark/pull/4531))
+
+- Fix bugs when copy/pasting match expressions and patterns
+  [#4513](https://github.com/darklang/dark/pull/4513)
 
 - Upgrade icons to Fontawesome 6
   ([#4565](https://github.com/darklang/dark/pull/4565))
 
-- Several improvements for interacting with tuples
+- Fix a few tuple interactions
   ([#4521](https://github.com/darklang/dark/pull/4521))
 
 ## Standard library
@@ -42,7 +46,31 @@ sidebar_label: Changelog
 
 ## HTTP server
 
-- Use new default favicon ([#4562](https://github.com/darklang/dark/pull/4562))
+- Use new logo in favicon ([#4562](https://github.com/darklang/dark/pull/4562))
+
+## Documentation
+
+- Document
+  [mouse-based shortcuts](https://docs.darklang.com/reference/keyboard-mapping)
+  ([#281](https://github.com/darklang/docs/pull/281))
+
+- Document
+  [additional shortcut to bring up command palette](https://docs.darklang.com/discussion/structured-editing#command-palette)
+  ([#268](https://github.com/darklang/docs/pull/268))
+
+- Redo the [sharing Dark](https://docs.darklang.com/reference/sharing-dark) page
+  ([#282](https://github.com/darklang/docs/pull/282))
+
+- Use new Darklang logos; optimize using tinypng.io
+  ([#282](https://github.com/darklang/docs/pull/282),
+  [#283](https://github.com/darklang/docs/pull/283))
+
+- [Mention GitHub Discussions](https://docs.darklang.com/reference/support) as a
+  feedback forum ([#269](https://github.com/darklang/docs/pull/269))
+
+- Explain how the
+  [HTTP handlers](https://docs.darklang.com/reference/framework/http-framework)
+  work ([#267](https://github.com/darklang/docs/pull/267))
 
 ## Internal
 
@@ -52,40 +80,18 @@ sidebar_label: Changelog
 - use gcloud storage commands instead of gsutil for deployment
   ([#4525](https://github.com/darklang/dark/pull/4525))
 
-- Switch to published version of Tablecloth (0.8.0)
-  ([#4543](https://github.com/darklang/dark/pull/4543))
-
-- Add additional playwright timeouts to diagnose integration tests hanging in CI
-  ([#4534](https://github.com/darklang/dark/pull/4534))
-
-- Ensure package functions include params in display
-  ([#4516)](https://github.com/darklang/dark/pull/4516))
-
 - Remove old `backend/templates` directory
   ([#4517](https://github.com/darklang/dark/pull/4517))
 
-## Documentation
+- Update sidebar to use Tailwind
+  ([#4511](https://github.com/darklang/dark/pull/4511))
 
-- Redo the "sharing Dark" page
-  ([#282](https://github.com/darklang/docs/pull/282))
+- Refactor and simplify editor loading, move FontAwesome to a CDN, combine
+  multiple files, remove old implementation
+  ([#4520](https://github.com/darklang/dark/pull/4520),
+  [#4519](https://github.com/darklang/dark/pull/4519))
 
-- Use new logos; optimize using tinypng.io
-  ([#282](https://github.com/darklang/docs/pull/282),
-  [#283](https://github.com/darklang/docs/pull/283))
-
-- Document mouse-based shortcuts
-  ([#281](https://github.com/darklang/docs/pull/281))
-
-- Document additional shortcut to bring up command palette
-  ([#268](https://github.com/darklang/docs/pull/268))
-
-- Mention GitHub "Discussions" as forum for feedback
-  ([#269](https://github.com/darklang/docs/pull/269))
-
-- Explain how the HTTP handlers work
-  ([#267](https://github.com/darklang/docs/pull/267))
-
-- (internal) Create dependabot.yml, update packages
+- Create dependabot.yml for docs, update packages
   ([#270](https://github.com/darklang/docs/pull/270),
   [#271](https://github.com/darklang/docs/pull/271))
 
