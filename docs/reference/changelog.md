@@ -66,21 +66,21 @@ sidebar_label: Changelog
 
 ## Documentation
 
-(in [`docs`](https://github.com/darklang/docs))
+- Redo the "sharing Dark" page
+  ([#282](https://github.com/darklang/docs/pull/282))
+
+- Use new logos; optimize using tinypng.io
+  ([#282](https://github.com/darklang/docs/pull/282),
+  [#283](https://github.com/darklang/docs/pull/283))
 
 - Document mouse-based shortcuts
   ([#281](https://github.com/darklang/docs/pull/281))
 
-- Optimize pngs using tinypng.io
-  ([#283](https://github.com/darklang/docs/pull/283))
-
-- Use new logos and redo the "sharing dark" page
-  ([#282](https://github.com/darklang/docs/pull/282))
-
-- Add other command palette options
+- Document additional shortcut to bring up command palette
   ([#268](https://github.com/darklang/docs/pull/268))
 
-- Mention feedback forum ([#269](https://github.com/darklang/docs/pull/269))
+- Mention GitHub "Discussions" as forum for feedback
+  ([#269](https://github.com/darklang/docs/pull/269))
 
 - Explain how the HTTP handlers work
   ([#267](https://github.com/darklang/docs/pull/267))
@@ -88,8 +88,6 @@ sidebar_label: Changelog
 - (internal) Create dependabot.yml, update packages
   ([#270](https://github.com/darklang/docs/pull/270),
   [#271](https://github.com/darklang/docs/pull/271))
-
-(TODO: verify we haven't reported on these since the last changelog post)
 
 ## Darklang Release 6 (October 1, 2022)
 
