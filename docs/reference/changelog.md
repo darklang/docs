@@ -11,9 +11,6 @@ sidebar_label: Changelog
 - Remove expandable sidebar, make collapsed sidebar more reliable
   ([#4511](https://github.com/darklang/dark/pull/4511))
 
-  TODO: choose a screenshot before/after pair that represents the visual changes
-  well
-
 - Improve editor load time, using preconnects and preloads
   ([#4520](https://github.com/darklang/dark/pull/4520),
   [#4519](https://github.com/darklang/dark/pull/4519))
