@@ -25,7 +25,7 @@ sidebar_label: Changelog
   reflows during deletion ([#4531](https://github.com/darklang/dark/pull/4531))
 
 - Fix bugs when copy/pasting match expressions and patterns
-  [#4513](https://github.com/darklang/dark/pull/4513)
+  ([#4513](https://github.com/darklang/dark/pull/4513))
 
 - Upgrade icons to Fontawesome 6
   ([#4565](https://github.com/darklang/dark/pull/4565))
