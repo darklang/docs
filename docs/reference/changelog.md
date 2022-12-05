@@ -8,7 +8,7 @@ sidebar_label: Changelog
 
 ### Editor
 
-- Preload first API requests to load the editor faster
+- Speed up editor load by preloading first API requests
   ([#4574](https://github.com/darklang/dark/pull/4574))
 
 ### Documentation
@@ -18,7 +18,8 @@ sidebar_label: Changelog
 - Correct documentation of how code is formatted via terminal
   ([#294](https://github.com/darklang/docs/pull/294))
 
-- Fix some links to code ([#293](https://github.com/darklang/docs/pull/293))
+- Fix some links to Darklang code
+  ([#293](https://github.com/darklang/docs/pull/293))
 
 - Update to Docusaurus 2.2 ([#292](https://github.com/darklang/docs/pull/292))
 
@@ -30,8 +31,8 @@ sidebar_label: Changelog
 - Update both development and production containers to Ubuntu 22.04
   ([#4118](https://github.com/darklang/dark/pull/4118))
 
-- Do not require setup on the container host (fixes bugs for WSL users)
-  ([#4581](https://github.com/darklang/dark/pull/4581))
+- Improve build reliability (especially for WSL users) by removing setup steps
+  on the container host ([#4581](https://github.com/darklang/dark/pull/4581))
 
 ### Internal improvements
 
@@ -45,21 +46,21 @@ sidebar_label: Changelog
 - Update ReScript to version 9.1.4
   ([#4570](https://github.com/darklang/dark/pull/4570))
 
-- Update Settings modal to use Tailwind for styling
+- Use Tailwind in many more places
   ([#4591](https://github.com/darklang/dark/pull/4591),
   [#4601](https://github.com/darklang/dark/pull/4601),
   [#4610](https://github.com/darklang/dark/pull/4610))
 
-- Improve integration tests using non-fluid entry boxes
+- Make integration tests more reliable when using non-fluid entry boxes
   ([#4578](https://github.com/darklang/dark/pull/4578))
 
-- Allow integration tests to loop
+- Add `--loop` to integration tests to find flaky tests
   ([#4592](https://github.com/darklang/dark/pull/4592))
 
-- Deploy when no deploy locks are present
+- Fix deployment when no deploy locks are present
   ([#4576](https://github.com/darklang/dark/pull/4576))
 
-- Don't let cert-manager prevent us from scaling down
+- Scale down even when cert-manager containers are present
   ([#4617](https://github.com/darklang/dark/pull/4617))
 
 ## Darklang Release 7 (November 1, 2022)
