@@ -6,21 +6,21 @@ sidebar_label: Changelog
 
 ## Darklang Release 8 (December 1, 2022)
 
-### Documentation
-
-- Add transparent Dark logos ([#291](https://github.com/darklang/docs/pull/291))
-
-- Correct documentation of how Dark code is formatted via terminal
-  ([#294](https://github.com/darklang/docs/pull/294))
-
-- Fix some links ([#293](https://github.com/darklang/docs/pull/293))
-
-- Update to Docusaurus 2.2 ([#292](https://github.com/darklang/docs/pull/292))
-
 ### Editor
 
 - Preload first API requests to load the editor faster
   ([#4574](https://github.com/darklang/dark/pull/4574))
+
+### Documentation
+
+- Add transparent Dark logos ([#291](https://github.com/darklang/docs/pull/291))
+
+- Correct documentation of how code is formatted via terminal
+  ([#294](https://github.com/darklang/docs/pull/294))
+
+- Fix some links to code ([#293](https://github.com/darklang/docs/pull/293))
+
+- Update to Docusaurus 2.2 ([#292](https://github.com/darklang/docs/pull/292))
 
 ### Contributor experience
 
@@ -39,25 +39,25 @@ sidebar_label: Changelog
   This allows for safe adjustments of those types without leaking into our
   domain logic ([#4542](https://github.com/darklang/dark/pull/4542))
 
-- Allow integration tests to loop
-  ([#4592](https://github.com/darklang/dark/pull/4592))
-
-- Improve integration tests using non-fluid entry boxes
-  ([#4578](https://github.com/darklang/dark/pull/4578))
-
-- Deploy when no deploy locks are present
-  ([#4576](https://github.com/darklang/dark/pull/4576))
+- Improve how we ensure backend JSON-serializable types are tested for
+  consistent serialization ([#4588](https://github.com/darklang/dark/pull/4588))
 
 - Update ReScript to version 9.1.4
   ([#4570](https://github.com/darklang/dark/pull/4570))
-
-- Improve how we ensure backend JSON-serializable types are tested for
-  consistent serialization ([#4588](https://github.com/darklang/dark/pull/4588))
 
 - Update Settings modal to use Tailwind for styling
   ([#4591](https://github.com/darklang/dark/pull/4591),
   [#4601](https://github.com/darklang/dark/pull/4601),
   [#4610](https://github.com/darklang/dark/pull/4610))
+
+- Improve integration tests using non-fluid entry boxes
+  ([#4578](https://github.com/darklang/dark/pull/4578))
+
+- Allow integration tests to loop
+  ([#4592](https://github.com/darklang/dark/pull/4592))
+
+- Deploy when no deploy locks are present
+  ([#4576](https://github.com/darklang/dark/pull/4576))
 
 ## Darklang Release 7 (November 1, 2022)
 
