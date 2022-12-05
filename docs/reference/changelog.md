@@ -59,6 +59,9 @@ sidebar_label: Changelog
 - Deploy when no deploy locks are present
   ([#4576](https://github.com/darklang/dark/pull/4576))
 
+- Don't let cert-manager prevent us from scaling down
+  ([#4617](https://github.com/darklang/dark/pull/4617))
+
 ## Darklang Release 7 (November 1, 2022)
 
 ### Editor improvements
