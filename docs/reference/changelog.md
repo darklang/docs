@@ -78,7 +78,7 @@ sidebar_label: Changelog
   ([#4510](https://github.com/darklang/dark/pull/4510))
 
 - Fix parameter display when using package functions
-  ([#4516)](https://github.com/darklang/dark/pull/4516))
+  ([#4516](https://github.com/darklang/dark/pull/4516))
 
 - Deleting a selected range of code now handles situations where the code
   reflows during deletion ([#4531](https://github.com/darklang/dark/pull/4531))
@@ -133,7 +133,7 @@ sidebar_label: Changelog
 - Use exact package versions and prevent hang during `npm install`
   ([#4566](https://github.com/darklang/dark/pull/4566))
 
-- use gcloud storage commands instead of gsutil for deployment
+- Use gcloud storage commands instead of gsutil for deployment
   ([#4525](https://github.com/darklang/dark/pull/4525))
 
 - Remove old `backend/templates` directory
