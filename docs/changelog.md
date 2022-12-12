@@ -4,8 +4,6 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-# Changelog of Darklang Releases
-
 We continuously deploy all features as they're written, but find it useful to
 have "releases" that cover work released with a given period of time. At this
 point, we 'release' on a monthly basis, which basically amounts to publishing a

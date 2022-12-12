@@ -146,7 +146,7 @@ _Tuples are in preview - enable them in **Settings/Contributor Settings**_
 - fix broken floats automatically
   ([#4497](https://github.com/darklang/dark/pull/4497))
 
-# Standard library changes
+## Standard library changes
 
 - Add `Uuid::parse_v0` and deprecate `String::toUUID`
   ([#4480](https://github.com/darklang/dark/pull/4480))
