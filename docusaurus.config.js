@@ -13,7 +13,7 @@ module.exports = {
     path.resolve(__dirname, "src/plugins/savvy"),
     [
       "@docusaurus/plugin-client-redirects",
-      { redirects: [{ to: "/reference/changelog", from: "/changelog" }] },
+      { redirects: [{ from: "/reference/changelog", to: "/changelog" }] },
     ],
   ],
   onBrokenLinks: "throw",
