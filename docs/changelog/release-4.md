@@ -1,4 +1,6 @@
-# Darklang Release 4 (August 1, 2022)
+# Darklang Release 4
+
+August 1, 2022
 
 ## Standard library improvements
 

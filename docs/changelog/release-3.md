@@ -1,4 +1,6 @@
-# Darklang Release 3 (July 1, 2022)
+# Darklang Release 3
+
+July 1, 2022
 
 Darklang Release 3 is focused primarily on taking advantage of the recent
 changes, including new stdlib functions, small languages changes, and sunsetting

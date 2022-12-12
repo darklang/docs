@@ -1,4 +1,6 @@
-# Darklang Release 6 (October 1, 2022)
+# Darklang Release 6
+
+October 1, 2022
 
 ## Major features
 

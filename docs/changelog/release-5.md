@@ -1,4 +1,6 @@
-# Darklang Release 5 (September 1, 2022)
+# Darklang Release 5
+
+September 1, 2022
 
 Darklang Release 5 includes support for Tuples, a revamped settings panel with
 new settings for contributors, and significant internal reworks.

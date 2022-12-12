@@ -1,4 +1,6 @@
-# Darklang Release 7 (November 1, 2022)
+# Darklang Release 7
+
+November 1, 2022
 
 ## Editor improvements
 

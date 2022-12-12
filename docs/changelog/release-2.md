@@ -1,4 +1,6 @@
-# Darklang Release 2 (June 6th, 2022)
+# Darklang Release 2
+
+June 6th, 2022
 
 Darklang Release 2 is the culmination of 20 months work of rewriting the backend
 from OCaml to F#. This was done to give us more productivity by allowing us use
