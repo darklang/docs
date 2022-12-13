@@ -76,6 +76,25 @@
     },
     {
       "type": "category",
+      "label": "Changelog",
+      "link": {
+        "type": "doc",
+        "id": "changelog"
+      },
+      "items": [
+        "changelog/release-8",
+        "changelog/release-7",
+        "changelog/release-6",
+        "changelog/release-5",
+        "changelog/release-4",
+        "changelog/release-3",
+        "changelog/release-2",
+        "changelog/release-2",
+        "changelog/release-1"
+      ]
+    },
+    {
+      "type": "category",
       "label": "Reference",
       "link": {
         "type": "generated-index"
@@ -103,7 +122,6 @@
         "reference/keyboard-mapping",
         "reference/support",
         "reference/sharing-dark",
-        "changelog",
         "reference/faqs",
         "reference/terms-of-service",
         "reference/backward-compatibility",
