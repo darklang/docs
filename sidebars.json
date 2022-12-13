@@ -76,6 +76,56 @@
     },
     {
       "type": "category",
+      "label": "Changelog",
+      "link": {
+        "type": "doc",
+        "id": "changelog"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "changelog/release-8",
+          "label": "Release 8 - Dec 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-7",
+          "label": "Release 7 - Nov 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-6",
+          "label": "Release 6 - Oct 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-5",
+          "label": "Release 5 - Sept 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-4",
+          "label": "Release 4 - Aug 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-3",
+          "label": "Release 3 - July 1, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-2",
+          "label": "Release 2 - June 6, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-1",
+          "label": "Release 1"
+        }
+      ]
+    },
+    {
+      "type": "category",
       "label": "Reference",
       "link": {
         "type": "generated-index"
@@ -103,7 +153,6 @@
         "reference/keyboard-mapping",
         "reference/support",
         "reference/sharing-dark",
-        "reference/changelog",
         "reference/faqs",
         "reference/terms-of-service",
         "reference/backward-compatibility",
