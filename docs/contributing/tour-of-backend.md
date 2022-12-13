@@ -12,17 +12,17 @@ Here's the journey it takes:
 
 - Google Load Balancer
 - the Dark
-  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs)
+  [BwdServer](https://github.com/darklang/dark/blob/main/backend/src/BwdServer/Server.fs)
   (`bwd` stands for `BuiltWithDark`)
 - our webserver is built on top of ASP.NET, and it directs the request to
-  [BwdServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/BwdServer/Server.fs).runDarkHandler.
+  [BwdServer](https://github.com/darklang/dark/blob/main/backend/src/BwdServer/Server.fs).runDarkHandler.
 - if it's a 404, the trace is stored in the `stored_events_v2` table and sent to
   the client as a 404 via [Pusher](https://pusher.com)
 - if a page is found, the request path, body, and headers are passed to the
-  [HttpMiddleware](https://github.com/darklang/dark/blob/main/fsharp-backend/src/HttpMiddleware),
+  [HttpMiddleware](https://github.com/darklang/dark/blob/main/backend/src/HttpMiddleware),
   which creates the `request` parameter, run the code, and converts the response
   into the correct formats.
-- [`Interpreter.eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs)
+- [`Interpreter.eval`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/Interpreter.fs)
   runs the Dark code, saving parts of the trace as it goes. Input values,
   function arguments and return values are saved in Postgres tables
   `stored_events_v2`, `function_arguments` and `function_results_v2`
@@ -33,7 +33,7 @@ Here's the journey it takes:
   [`Fetcher`](https://github.com/darklang/dark/blob/main/client/workers/Fetcher.res)
   fetches the trace in the background, decodes it, and sends the value to the
   editor. On the server-side, it is fetched from the
-  [ApiServer](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api/APITraces.fs).
+  [ApiServer](https://github.com/darklang/dark/blob/main/backend/src/ApiServer/Api/APITraces.fs).
 
 ## Traces
 
@@ -64,9 +64,9 @@ One downside of this is that we have to be very careful what changes we make the
 Dark AST definition. There is a doc in the dark repo discussing this in more
 detail.
 
-## `Libexecution` and the editor
+## `LibExecution` and the editor
 
-[`LibExecution`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/LibExecution)
+[`LibExecution`](https://github.com/darklang/dark/tree/main/backend/src/LibExecution)
 is the "execution engine" of Dark. The same code is compiled to native code to
 respond to HTTP handlers, and is also compiled to WASM to run in the editor.
 
@@ -78,8 +78,8 @@ doesn't have access to (e.g. DB calls) from the traces.
 ## Standard library
 
 The standard library is split between
-[`fsharp-backend/src/LibExecutionStdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/LibExecutionStdLib)
+[`backend/src/LibExecutionStdLib`](https://github.com/darklang/dark/tree/main/backend/src/LibExecutionStdLib)
 (for functions which are available on the client and backend) and
-[`fsharp-backend/src/BackendOnlyStdLib`](https://github.com/darklang/dark/tree/main/fsharp-backend/src/BackendOnlyStdLib)
+[`backend/src/BackendOnlyStdLib`](https://github.com/darklang/dark/tree/main/backend/src/BackendOnlyStdLib)
 for functions which are only available on the backend (typically functions where
 we cannot compile some library to JS).

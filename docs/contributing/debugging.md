@@ -4,6 +4,8 @@ title: Debugging
 
 ## Log statements
 
+TODO these are both out of date
+
 Both the frontend and backend have simple log statements, which return `()`.
 
 - Frontend (prints in the browser console): `Js.log2 "my message" anyValue`
@@ -29,7 +31,9 @@ x + y
 
 ## Fuzzer
 
-## Fluid Debugger
+## Contributor Editor Debugging Tools
 
-There is a debugger in the UI that is mostly for debugging the fluid editor.
-Mouse over the gear on the left and select "Fluid Debugger".
+There are some tools built into the Editor to help with debugging. These include
+a Fluid debugger and the ability to view the AST of your handlers' code. You may
+turn these on by going to the Contributing tab of the Settings menu within the
+Editor.
