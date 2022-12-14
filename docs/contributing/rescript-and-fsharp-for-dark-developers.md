@@ -115,8 +115,7 @@ returns the result of that expression.
 
 Most of the code in Dark uses
 [Tablecloth](https://github.com/darklang/tablecloth), which has the same
-[interface](https://github.com/darklang/tablecloth/blob/main/rescript/src/Tablecloth.TODO)
-for ReScript and F#.
+interface for ReScript and F#.
 
 Note: for implementing the standard libraries, we do not use Tablecloth as it is
 still pretty new and may be in flux. Instead, we try to make sure that we use

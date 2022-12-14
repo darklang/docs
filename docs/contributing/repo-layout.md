@@ -84,7 +84,7 @@ here's how the various directories intersect, and what language they use:
   - `src/Prelude` - utilities, libraries, common types; used everywhere
   - `src/QueueWorker` - pulls user events from the queue and runs them
   - `src/Scripts` - some simple command-line programs that use F# libraries
-  - `src/Wasm` - "main" file for client-side analysis/execution-engine
+  - `src/Wasm` - "main" module for client-side analysis/execution-engine
   - `tests/FuzzTests` - code to fuzztest different parts of Dark
   - `tests/TestUtils` - utilities used in Tests and FuzzTests
   - `tests/Tests` - mostly unit tests for backend and libexecution functionality
@@ -93,7 +93,6 @@ here's how the various directories intersect, and what language they use:
     library
   - `testfiles/httphandler` - tests for the Dark HTTP server and middleware
   - `testfiles/httpclient` - tests for the HTTP Library functions
-  - `testfiles/staticassets` - TODO
 - `integration-tests` - integration tests, written in JS using TestCafe. Flaky
   and brittle. Help welcome!
 - `lib` - build directory used by ReScript

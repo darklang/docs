@@ -76,9 +76,9 @@ When a change is made, typically an `AddOp` `modification` is made. That
 processed in `Main.res`. This passes into `API.res`, where it serializes the
 `Op` change into a JSON via encoders (see `Enconders.res` and `Decoders.res`).
 
-The change is accepted by `api.TODO` in the backend, where it is decoded,
+The change is accepted by `ApiServer.fs` in the backend, where it is decoded,
 applied to the program, and then saved into the database. Saving the program
-involves a special binary serialization format, in `Serialization_format.TODO`.
+involves a special binary serialization format, in `BinarySerialization.fs`.
 
 After being saved, it is sent to Pusher.com, the websockets vendor we use. This
 is sent to other clients which then update their programs. It is also sent to

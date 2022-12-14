@@ -72,7 +72,7 @@ respond to HTTP handlers, and is also compiled to WASM to run in the editor.
 
 The play button on functions and on handlers executes the code on the server,
 returning updates to the trace of those functions. In all other cases, the
-editor runs code in the JS version, filling in the results of the functions it
+editor runs code in the WASM version, filling in the results of the functions it
 doesn't have access to (e.g. DB calls) from the traces.
 
 ## Standard library
@@ -82,4 +82,4 @@ The standard library is split between
 (for functions which are available on the client and backend) and
 [`backend/src/BackendOnlyStdLib`](https://github.com/darklang/dark/tree/main/backend/src/BackendOnlyStdLib)
 for functions which are only available on the backend (typically functions where
-we cannot compile some library to JS).
+we cannot compile some library to WASM).

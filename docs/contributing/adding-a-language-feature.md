@@ -173,18 +173,24 @@ not handled it.
 
 ## Client/backend communication
 
-TODO this needs some rewrite given "ClientTypes" work
-
 The client sends ASTs to the backend to save and to run the programs in the
 cloud. The client also fetches expressions from the backend to display and edit
 them. It does this over JSON.
 
-The F# backend has automatic JSON serializers and deserializers, using automatic
-serializers of types in
-[Api](https://github.com/darklang/dark/blob/main/backend/src/ApiServer/Api). The
-client has hand-written serializers in
-[`client/src/core/Encoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.res)
-and
-[`client/src/core/Decoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.res).
-The F# compiler will prompt you to add new encoders, but not decoders. Writing
-new ones is straightforward by following other examples there.
+Any types used in client-server communication (e.g. for API calls) are generally
+protected from accidentally updating a type and causing breakage in
+communication. In the backend, a
+[`ClientTypes`](https://github.com/darklang/dark/blob/main/backend/src/ClientTypes)
+project is defined where these types live. These include core types such as in
+the `ClientTypes.ProgramTypes` module that may be used throughout client/server
+communciation, as well as types specific to one use case, such as in
+`ClientTypes.Api`. Adjacent projects `ClientTypes2ExecutionTypes` and
+`ClientTypes2BackendTypes` are used to map between 'internal' types and the
+`ClientTypes` that are used in client-server communication. These `ClientTypes`
+are individually registered as types we allow to be serialized/deserialized
+through our "Vanilla" JSON serializer, which is based on `System.Text.Json`.
+
+In the client, encoders and decoders are hand-written to match the `ClientTypes`
+defined in the backend. Many of these exist in `client/src/core`, and others are
+spread throughout the codebase wherever client/server communication happens
+(e.g. in `client/src/api`).
