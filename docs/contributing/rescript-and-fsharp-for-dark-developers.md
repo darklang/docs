@@ -749,8 +749,3 @@ Dark's frontend was originally written in Elm, before being ported. It was
 ported to what is now ReScript in 2018. ReScript is the new name (as of 2020)
 for what was sometimes called Bucklescript and sometimes called ReasonML. You
 may see references to Bucklescript in our codebase (including the prefix "bs").
-
-Our frontend used an alternate syntax (.TODO, as ReScript is based on OCaml and
-we used OCaml on our backend too). We switched over to .res in 2021 - however, a
-lot of remnants remain including old comments, and in particular that we
-primarily used pipe-last instead of pipe-first.
