@@ -12,8 +12,10 @@ development, which return `()`.
 In the `client`, you may log with either of:
 
 - `Js.log2("my message", anyValue)`
-- `Debug.loG("my message", anyValue)` Both of these print in the browser
-  console.
+- `Debug.loG("my message", anyValue)`
+
+Both of these print in the browser console, with `Debug.loG` being more
+flexible.
 
 ### Backend
 
