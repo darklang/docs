@@ -53,7 +53,7 @@ but there are some exceptions:
 
 And there are some downsides to our app as well:
 
-- `Main.ml` is a mess
+- `Main.res` is a mess
 - modifications were a bad idea
 - a single change can be spread far across the codebase
 

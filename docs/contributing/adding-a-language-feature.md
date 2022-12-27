@@ -22,7 +22,7 @@ _See also:
 
 Most language features will need to be added to our language definition. The
 language definition is `Expr` in
-[F#](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/ProgramTypes.fs),
+[F#](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/ProgramTypes.fs),
 or
 [ReScript](https://github.com/darklang/dark/blob/main/client/src/core/ProgramTypes.res),
 which represent a Dark expression (which in turn contains other Dark
@@ -57,10 +57,11 @@ type Expr =
   | EMatch of id * Expr * List<Pattern * Expr>
   | EPipeTarget of id
   | EFeatureFlag of id * string * Expr * Expr * Expr
+  | ETuple of id * Expr * Expr * List<Expr>
 ```
 
 The backend does the work of executing the expressions, and saving programs. The
-execution engine is also compiled to Javascript in order to be available in the
+execution engine is also compiled to WebAssembly in order to be available in the
 client.
 
 The client is responsible for editing programs. Typically, adding a language
@@ -73,7 +74,7 @@ does, including refactorings, renamings, etc. It will also need support in the
 ### Execution
 
 The execution of the language is defined in
-[`fsharp-backend/src/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/Interpreter.fs).
+[`backend/src/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/Interpreter.fs).
 `eval` does the work of converting an expressions into a `dval` -- a Dark value.
 
 For example, `DInt` is the run-time value of an integer, while `EInteger` is the
@@ -94,9 +95,9 @@ When we execute this `ELet`, we first execute the `6`, creating a `dval` of
 `x + 4` using the symbol table with our known value of `x = 6`.
 
 `dval`s are defined in
-[`fsharp-backend/src/LibExecution/RuntimeTypes.fs`](https://github.com/darklang/dark/blob/main/fsharp-backend/src/LibExecution/RuntimeTypes.fs)
+[`backend/src/LibExecution/RuntimeTypes.fs`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/RuntimeTypes.fs)
 and expressions are defined in
-[`libshared/FluidExpression.res`](https://github.com/darklang/dark/blob/main/client/src/libshared/FluidExpression.res).
+[`backend/src/LibExecution/ProgramTypes.fs`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/ProgramTypes.res).
 
 ### Serialization
 
@@ -155,7 +156,7 @@ occasionally reuse some tokens, but most features use dedicated tokens so that
 there's no ambiguity.
 
 You add tokens in
-[`client/src/core/Types.res`](https://github.com/darklang/dark/blob/main/client/src/core/Types.res)
+[`client/src/fluid/FluidTypes.res`](https://github.com/darklang/dark/blob/main/client/src/fluid/FluidTypes.res)
 and keystrokes are handled in
 [`client/src/fluid/Fluid.res:updateKey`](https://github.com/darklang/dark/blob/main/client/src/fluid/Fluid.res).
 
@@ -176,12 +177,20 @@ The client sends ASTs to the backend to save and to run the programs in the
 cloud. The client also fetches expressions from the backend to display and edit
 them. It does this over JSON.
 
-The F# backend has automatic JSON serializers and deserializers, using automatic
-serializers of types in
-[Api](https://github.com/darklang/dark/blob/main/fsharp-backend/src/ApiServer/Api).
-The client has hand-written serializers in
-[`client/src/core/Encoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Encoders.res)
-and
-[`client/src/core/Decoders.res`](https://github.com/darklang/dark/blob/main/client/src/core/Decoders.res).
-The OCaml compiler will prompt you to add new encoders, but not decoders.
-Writing new ones is straightforward by following other examples there.
+Any types used in client-server communication (e.g. for API calls) are generally
+protected from accidentally updating a type and causing breakage in
+communication. In the backend, a
+[`ClientTypes`](https://github.com/darklang/dark/blob/main/backend/src/ClientTypes)
+project is defined where these types live. These include core types such as in
+the `ClientTypes.ProgramTypes` module that may be used throughout client/server
+communciation, as well as types specific to one use case, such as in
+`ClientTypes.Api`. Adjacent projects `ClientTypes2ExecutionTypes` and
+`ClientTypes2BackendTypes` are used to map between 'internal' types and the
+`ClientTypes` that are used in client-server communication. These `ClientTypes`
+are individually registered as types we allow to be serialized/deserialized
+through our "Vanilla" JSON serializer, which is based on `System.Text.Json`.
+
+In the client, encoders and decoders are hand-written to match the `ClientTypes`
+defined in the backend. Many of these exist in `client/src/core`, and others are
+spread throughout the codebase wherever client/server communication happens
+(e.g. in `client/src/api`).

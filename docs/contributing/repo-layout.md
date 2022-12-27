@@ -15,47 +15,15 @@ here's how the various directories intersect, and what language they use:
 - `auth0-branding` - has some assets for our login provider
 - `_build` - build dir for OCaml (empty, this is a docker volume)
 - `_esy` build dir for OCaml (empty, this is a docker volume)
-- `backend` - this is the old backend, written in OCaml (the new backend is in
-  fsharp-backend), including the language definition and execution engine, the
-  "framework" (HTTP, DB, queues, etc), the editor's HTTP API, and the execution
-  engine which runs in the client (compiled to JS from OCaml)
-  - `bin` - "main" files for executables
-  - `jsanalysis` - "main" file for client-side analysis/execution-engine
-  - `libbackend` - the main HTTP server, and framework functionality (HTTP, DB,
-    queues)
-  - `libcommon` - some utilities shared between JS- and OCaml-compiled versions
-    of backend
-  - `libexecution` - the Dark language, including types, the runtime, most of
-    the standard library, and of course the execution engine
-  - `liblegacy` - libraries to help the F# backend reuse OCaml code
-  - `libserialization` - binary serialization for Dark types
-  - `libservice` - library with some common functionality for OCaml services
-    (backend, queues, cron)
-  - `libtarget` - library to support certain functions in native and JS modes.
-    Interface only.
-  - `libtarget.js` - JS implementation of `libtarget`
-  - `libtarget.ocaml` - OCaml implementation of `libtarget`
-  - `libunshared` - platform specific (native) version of `libunshared`, which
-    is used to provide types to `libshared`
-  - `migrations` - SQL for migrations
-  - `node_modules` - installation dir for Esy (package manager-ish thing for
-    OCaml)
-  - `serialization` - definition of a binary serialization format we use to
-    store Dark programs
-  - `static` - static HTTP assets (icons, fonts, etc)
-  - `swagger` - deprecated old functionality
-  - `templates` - where the single editor HTML template is stored
-  - `test` - all backend unit tests
-  - `test_appdata` - serialized mocked data for integration tests
 - `client` - the editor, and the entire frontend application that is found under
   [darklang.com/a/yourcanvas](http://darklang.com/a/yourcanvas) (note, not
-  darklang.com or the docs). Written in Bucklescript/ReasonML. All frontend
-  functionality, except the server-side APIs used for it, are here
+  darklang.com or the docs). Written in ReScript. All frontend functionality,
+  except the server-side APIs used for it, are here
   - `src/analysis` - handles code related to live values - requesting from the
     server, storing, sending to the client-side execution engine
   - `src/api` - most requests to the HTTP API live here
   - `src/app` - important scaffolding for the application (settings, exception
-    tracking, `Main.ml`)
+    tracking, `Main.res`)
   - `src/canvas` - misc files pertaining to layout
   - `src/components` - a number of parts of Dark have been componentized. They
     live here.
@@ -66,7 +34,7 @@ here's how the various directories intersect, and what language they use:
   - `src/forms` - the "forms" editor, used for editing any form-like boxes (HTTP
     handler headings, DB fields, etc). Still recovering from when it was also
     how we wrote Dark code
-  - `src/package` -the Dark package manager
+  - `src/package` - the Dark package manager
   - `src/prelude` - builtin functions that are available in most other files
     (which start with `open Prelude`)
   - `src/toplevels` - HTTP handler, workers, REPLs, DBs, functions, etc, are all
@@ -81,12 +49,11 @@ here's how the various directories intersect, and what language they use:
   `dev` environment
 - `docs` - sporadic documentation
 - `docs/production` - documentation about how we run the Dark service
-- `fsharp-backend` - The new backend written in F# and .NET. including the
-  language definition and execution engine, the "framework" (HTTP, DB, queues,
-  etc), the editor's HTTP API, and the execution engine which runs in the
-  client.
+- `backend` - The backend written in F# and .NET. including the language
+  definition and execution engine, the "framework" (HTTP, DB, queues, etc), the
+  editor's HTTP API, and the execution engine which runs in the client.
   - `.paket` - Used by the paket/nuget package manager
-  - `Build` - where the compiler puts compiled code. This is inside the
+  - `Build` - where the compiler puts compiled code
   - `paket-files` - Used by the paket/nuget package manager
   - `src/ApiServer` - webserver serving the editor and the API used by the
     editor
@@ -95,10 +62,19 @@ here's how the various directories intersect, and what language they use:
   - `src/Benchmark` - a benchmark executable to measure the performance of Dark
     code
   - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)
+  - `src/ClientTypes` - type definitions of types that are used in client-server
+    communication
+  - `src/ClientTypes2BackendTypes` and `src/ClientTypes2ExecutionTypes` -
+    mappings between 'internal' types and our client-facing types
   - `src/CronChecker` - trigger events for scheduled work
+  - `src/HttpMiddleware` - where we define our middlewares used in Dark HTTP
+    handlers
+  - `src/LibAnalysis` -
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
+  - `src/LibBinarySerialization` - types that we use to store Dark programs to
+    our Postgres database
   - `src/LibExecution` - the Dark language, including types, the runtime, and of
     course the execution engine
   - `src/LibExecutionStdLib` - most of the standard library functions (anything
@@ -108,18 +84,18 @@ here's how the various directories intersect, and what language they use:
   - `src/Prelude` - utilities, libraries, common types; used everywhere
   - `src/QueueWorker` - pulls user events from the queue and runs them
   - `src/Scripts` - some simple command-line programs that use F# libraries
-  - `src/Tablecloth` - a standard library which matches the one we use in OCaml
-    and bucklescript.
-  - `src/Wasm` - "main" file for client-side analysis/execution-engine
+  - `src/Wasm` - "main" module for client-side analysis/execution-engine
   - `tests/FuzzTests` - code to fuzztest different parts of Dark
   - `tests/TestUtils` - utilities used in Tests and FuzzTests
   - `tests/Tests` - mostly unit tests for backend and libexecution functionality
-  - `tests/testfiles` - unit test definitions for language and standard library
-  - `tests/httptestfiles` - tests for the Dark HTTP server and middleware
-  - `tests/httpclienttestfiles` - tests for the HTTP Library functions
+  - `testfiles/data` - text and binary files used during various backend tests
+  - `testfiles/execution` - unit test definitions for language and standard
+    library
+  - `testfiles/httphandler` - tests for the Dark HTTP server and middleware
+  - `testfiles/httpclient` - tests for the HTTP Library functions
 - `integration-tests` - integration tests, written in JS using TestCafe. Flaky
   and brittle. Help welcome!
-- `lib` - build directory used by Bucklescript
+- `lib` - build directory used by ReScript
 - `node_modules` - installation dir for `npm`
 - `rundir` - anything that runs and stores something stores it here
   - `integration_test_logs`

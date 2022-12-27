@@ -115,8 +115,7 @@ returns the result of that expression.
 
 Most of the code in Dark uses
 [Tablecloth](https://github.com/darklang/tablecloth), which has the same
-[interface](https://github.com/darklang/tablecloth/blob/main/rescript/src/Tablecloth.ml)
-for ReScript and F#.
+interface for ReScript and F#.
 
 Note: for implementing the standard libraries, we do not use Tablecloth as it is
 still pretty new and may be in flux. Instead, we try to make sure that we use
@@ -749,8 +748,3 @@ Dark's frontend was originally written in Elm, before being ported. It was
 ported to what is now ReScript in 2018. ReScript is the new name (as of 2020)
 for what was sometimes called Bucklescript and sometimes called ReasonML. You
 may see references to Bucklescript in our codebase (including the prefix "bs").
-
-Our frontend used an alternate syntax (.ml, as ReScript is based on OCaml and we
-used OCaml on our backend too). We switched over to .res in 2021 - however, a
-lot of remnants remain including old comments, and in particular that we
-primarily used pipe-last instead of pipe-first.
