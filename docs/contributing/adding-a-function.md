@@ -2,9 +2,10 @@
 title: Adding a built-in function
 ---
 
-Adding a built-in or "Standard Library Function"...
+Adding a built-in or "Standard Library Function" is usually straight-forward
+involving implementation and testing only in the backend.
 
-(this is a WIP document. TODO: follow up here.)
+(This document is in-progress and needs work)
 
 ## Define the function
 
