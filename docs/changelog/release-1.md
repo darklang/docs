@@ -68,16 +68,16 @@ timelines. This page captures all releases before this switch-over.
 - There has been a
   [significant restructure](https://blog.darklang.com/dark-and-the-long-term/)
   to the Dark project. We'll write more about this going forward: Paul has
-  [a new devlog](https://dev.to/darklang/dark-devlog-1-fresh-start-1i2) that
+  [a new blog post](https://blog.darklang.com/dark-devlog-1-fresh-start/) that
   talks about it.
 - We now have a status channel in the community chat. You can join the chat
   community [here](https://darklang.com/discord-invite)!
-- The [Dark repo](https://github.com/darklang/dark) is now _source available_.
-  This hasn't been publicly announced yet, but you can now
+- The [Darklang repo](https://github.com/darklang/dark) is now _source
+  available_. This hasn't been publicly announced yet, but you can now
   [file issues](https://github.com/darklang/dark/issues) directly, and also
   [contribute](https://docs.darklang.com/contributing/getting-started).
 - Added a contributing doc, showing how you can help if
-  [you don't know OCaml](https://docs.darklang.com/contributing/if-you-dont-know-our-stack).
+  [you don't know our stack](https://docs.darklang.com/contributing/if-you-dont-know-our-stack).
 - `Date::hour_v1` is now supported in the query compiler.
   ([David Cooley](https://github.com/cooleydw494),
   [#2639](https://github.com/darklang/dark/pull/2639))
@@ -237,8 +237,8 @@ added:
     help developers familiar with Javascript learn Dark
     ([132](https://github.com/darklang/docs/pull/132))
   - Documentation for the
-    [`Slack::createCheckoutSession`](./packages#createcheckoutsession) package
-    ([139](https://github.com/darklang/docs/pull/139))
+    [`Slack::createCheckoutSession`](/reference/packages#createcheckoutsession)
+    package ([139](https://github.com/darklang/docs/pull/139))
 - Made a few improvements to the
   [Your First App](/tutorials/first-dark-application) tutorial
   ([129](https://github.com/darklang/docs/pull/129),
@@ -940,10 +940,10 @@ We added a bunch of improved documentation, including:
 
 ![changelog/image2.gif](/img/changelog/image2.gif)
 
-- We asked y'all to not make HttpClient calls to your Dark canvas from REPLs.
+- We asked y'all to not make `HttpClient` calls to your Dark canvas from REPLs.
   We've made some infrastructural changes that fix the issue on our end, so you
   should feel free to do that now. This is useful if you want to create a HTTP
-  trace without leaving Dark. (Note: please don't make HttpClient calls **_to
+  trace without leaving Dark. (Note: please don't make `HttpClient` calls **_to
   Dark_** from HTTP handlers)
 
 ## Week of 1/10/2020

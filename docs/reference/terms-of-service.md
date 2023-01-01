@@ -24,7 +24,7 @@ and have no obligations to any customer or user in this regard.
 We recommend that an individual canvas makes no more than 10 requests per
 second.
 
-We may disable part or all of a Dark canvas which is causing issues for us (eg
+We may disable part or all of a Dark canvas which is causing issues for us (e.g.
 operational, legal, etc).
 
 <!-- markdownlint-disable MD018 -->

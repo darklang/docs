@@ -34,7 +34,7 @@ August 1, 2022
   ([#4294](https://github.com/darklang/dark/pull/4294)).
 
 - Tuples are not ready ready to release, but much of the behind the scenes work
-  is done, including adding standard library fuctions
+  is done, including adding standard library functions
   ([#4311](https://github.com/darklang/dark/pull/4311)).
 
 - We are working to expose more useful information in the editor, especially

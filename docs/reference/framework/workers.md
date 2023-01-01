@@ -54,7 +54,7 @@ completing its code first, before emitting events to it.
 ### How do I access the data from `emit` in the worker?
 
 The data from the `emit` is available in a variable called `event` from within
-the worker. Its type will be whatever was passed to `emit` (eg,
+the worker. Its type will be whatever was passed to `emit` (e.g.,
 `emit [1, 2] “my-worker”` will have `event` = `[1, 2]`
 
 ### Do workers execute in parallel?

@@ -17,7 +17,7 @@ daily. It will optionally store the daily report in Airtable. You will create:
 - a Datastore storing those requests
 - a Cron aggregating those requests daily into a report
 - another Datastore storing the reports
-- (optional) a HttpClient call to Airtable
+- (optional) a `HttpClient` call to Airtable
 
 You can see a completed version of this tutorial at
 _darklang.com/a/USERNAME-gettingstarted_. If you'd like to start from scratch,

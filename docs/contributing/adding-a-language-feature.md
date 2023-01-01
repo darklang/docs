@@ -97,7 +97,7 @@ When we execute this `ELet`, we first execute the `6`, creating a `dval` of
 `dval`s are defined in
 [`backend/src/LibExecution/RuntimeTypes.fs`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/RuntimeTypes.fs)
 and expressions are defined in
-[`backend/src/LibExecution/ProgramTypes.fs`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/ProgramTypes.res).
+[`backend/src/LibExecution/ProgramTypes.fs`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/ProgramTypes.fs).
 
 ### Serialization
 

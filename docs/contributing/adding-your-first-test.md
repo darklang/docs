@@ -7,7 +7,7 @@ for a built-in function. This will get you through the process of contributing
 and get you familiar with how to get code into Dark.
 
 _We're assuming you've got the repo is set up and the `builder` script is
-running (or if you're running the devcontainer in VSCode, that the decvontainer
+running (or if you're running the devcontainer in VSCode, that the devcontainer
 is running)!_
 
 ## Adding the test
@@ -19,7 +19,7 @@ your favorite.
 As an example, let's add one for `Float::add_v0`.
 
 Unit tests for Dark functions are in `backend/testfiles/execution/*.tests"`,
-typically named after the module we're in (eg, in this case, we want
+typically named after the module we're in (e.g., in this case, we want
 `float.tests`). See
 [testfiles/README.md](https://github.com/darklang/dark/tree/main/backend/testfiles/README.md)
 to see detailed notes on the options of how to write tests. An example test is:

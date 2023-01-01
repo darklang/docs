@@ -39,8 +39,8 @@ sidebar_label: Keyboard Mapping
 | `,`                            | In tuple                           | Extend tuple size                                     |
 | `[`                            | Before variable, integer, etc      | Wrap in list                                          |
 | `,`                            | Autocomplete in list               | Complete list entry and add new list entry            |
-| `.`                            | On variable                        | Create fieldaccess                                    |
-| `.`                            | Selecting variable in autocomplete | Complete variable and begin fieldaccess               |
+| `.`                            | On variable                        | Create field access                                   |
+| `.`                            | Selecting variable in autocomplete | Complete variable and begin field access              |
 | `.`                            | In integer                         | Convert integer to a float                            |
 | `=`                            | Cursor on `=` in a `let`           | Skip over assignment                                  |
 | `{`                            | In blank                           | Start record                                          |
@@ -57,7 +57,7 @@ sidebar_label: Keyboard Mapping
 | Enter                          | In body of a `let`                 | Wrap current expression in `let _ =`, go to next line |
 | Enter                          | Between `let` expressions          | Insert a new line with a `let`                        |
 | Double-click                   | In a string                        | Select word                                           |
-| Double-click                   | outside a string                   | Select token (eg function name, keyword, etc)         |
+| Double-click                   | outside a string                   | Select token (e.g. function name, keyword, etc)       |
 | Alt+Double-click               |                                    | Select entire expression                              |
 
 Note: tuple support currently requires you to opt in - see Release 5 in the

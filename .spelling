@@ -1,6 +1,8 @@
 # Don't add code words here, surround them in code blocks (`) instead
 
 404s
+31-bit
+32-bit
 63-bit
 64-bit
 API
@@ -13,7 +15,6 @@ Asana
 Auth0
 Biggar
 Booleans
-Bucklescript
 CCPA
 CDN
 CLA
@@ -24,16 +25,16 @@ CRM
 CSS
 Clojure
 Cloudflare
+Cmd
 CoffeeScript
-Cohttp
 Cron
 Crons
+Ctrl
 DBs
 DMs
 DNS
 EGC
 ErrorRail
-Esy
 Fira
 Freshdesk
 GCP
@@ -44,27 +45,31 @@ Gmail
 Grammarly
 GraphQL
 HIPAA
+HTTP3
 Haskell
 Honeycomb
-HttpClient
 IFTTT
 ImageMagick
 JS
 JSON
 Javascript
+Kubernetes
 LOC
 MDN
+MacOS
 Mailchimp
-Mono
 Netlify
 Nginx
 NodeJS
+NuGet
 OAuth
 OCaml
 OSX
+Onboarding
 Overwatch
 PHP
 PII
+Paket
 PokeAPI
 Pokemon
 Postgres
@@ -74,10 +79,15 @@ Q3
 README
 REPL
 REPLs
+RSA
+DSA
+ECDSA
 React
 Read-Eval-Print
 ReasonML
 Rollbar
+SDKs
+SLA
 SOC2
 SSL
 SendGrid
@@ -91,26 +101,35 @@ TestCafe
 Toplevels
 Trello
 Twilio
+UCS-2
 UDP
 UI
 URI
 USERNAME-CANVASNAME
+UTF-16
 UTF-8
 UUID
 UUIDs
+VSCode
 Vue
+WASM
+WebAssembly
 XMLHttpRequest
 ad-hoc
+allowlist
+architected
 async
 autocomplete
 autocompletes
 backend
 backends
 backends
+blocklist
 bool
 boolean
 bools
 builtwithdark.com
+changelog
 checkins
 codebase
 codepoint
@@ -134,16 +153,19 @@ deserializers
 destructure
 destructuring
 dev
+devcontainer
 dicts
 docstring
 docstrings
 e.g.
 emojis
+enqueued
 enum
 enums
 env
 erroring
 executables
+favicon
 frontend
 fuzzer
 gRPC
@@ -160,6 +182,7 @@ localhost
 macOS
 manager-ish
 meetups
+metadata
 middleware
 minimap
 monorepo
@@ -168,6 +191,7 @@ natively
 omnibox
 param
 params
+pipeable
 pipelining
 popups
 pre-define
@@ -180,28 +204,42 @@ refactorings
 reformats
 renamings
 repo
-restdb.io
+repos
 rollout
 runtime
 serializer
 serializers
+serverless
 slugify
 stringified
+stringifying
 subdomain
 subexpression
 subexpressions
 substring
 substrings
 syntaxes
+timelines
+timestamp
+tokenized
+tooltip
+tooltips
 toplevel
 toplevels
 typeclass
 typeclasses
+unenqueue
 unexecuted
 unicode
+unpaused
+unpausing
 unreviewed
+uptime
 usecase
 username-canvasname
+v0
+v1
+v2
 varnames
 versioned
 versioning
@@ -214,11 +252,11 @@ websockets
 wildcard
 
 - ../docs/your-first.md
-10m 
+10m
 45m
 
 - ../docs/first-app.md
-10m 
+10m
 45m
 
 - ../docs/when-dark.md
@@ -227,9 +265,7 @@ wildcard
 - ../docs/changelog.md
 3x
 3s
-v2
 70ms
-v0
 
 - ../docs/tutorials/twilio-app-tutorial.md
 USERNAME-twilioreminder

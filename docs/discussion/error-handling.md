@@ -20,7 +20,7 @@ is not filled in. Therefore the handler returns `<Incomplete>`.
 ![error/image11.png](/img/error/image11.png)
 
 Incomplete values are allowed to co-exist with other values--whenever they
-interact, the result is another `<Incomplete>`. If they do not interract, often
+interact, the result is another `<Incomplete>`. If they do not interact, often
 the valid value will continue, perhaps being returned to your user in a HTTP
 handler, or saved in a datastore.
 
@@ -109,7 +109,7 @@ any function which doesn't always succeed (which is a lot of them).
 ### Prototyping using the Error Rail
 
 When you are prototyping, you don't want to write tedious error checking code
-that you might subsequently delete anyway. To make protying easier, functions
+that you might subsequently delete anyway. To make prototyping easier, functions
 that result `Option` and `Result` types can be automatically unwrapped. It's as
 if these functions threw exceptions in the error case instead of using our more
 structured error handling mechanism.
@@ -136,7 +136,7 @@ right to indicate that an error could happen.
 ### Handling errors exhaustively
 
 While this is useful in prototyping, once you've figured out what your code is
-supposed to do, you'll want to handle potential errors. The errorrail indicators
+supposed to do, you'll want to handle potential errors. The ErrorRail indicators
 will show you places where an error might happen, allowing you to add error
 handling code.
 

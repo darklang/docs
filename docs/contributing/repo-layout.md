@@ -10,11 +10,9 @@ here's how the various directories intersect, and what language they use:
 ## Directory listing
 
 - `.circleci` - CI config file
-- `.ionide` - config for F# VsCode plugin
-- `.vscode` - VsCode config
+- `.ionide` - config for F# VSCode plugin
+- `.vscode` - VSCode config
 - `auth0-branding` - has some assets for our login provider
-- `_build` - build dir for OCaml (empty, this is a docker volume)
-- `_esy` build dir for OCaml (empty, this is a docker volume)
 - `client` - the editor, and the entire frontend application that is found under
   [darklang.com/a/yourcanvas](http://darklang.com/a/yourcanvas) (note, not
   darklang.com or the docs). Written in ReScript. All frontend functionality,
@@ -52,13 +50,13 @@ here's how the various directories intersect, and what language they use:
 - `backend` - The backend written in F# and .NET. including the language
   definition and execution engine, the "framework" (HTTP, DB, queues, etc), the
   editor's HTTP API, and the execution engine which runs in the client.
-  - `.paket` - Used by the paket/nuget package manager
+  - `.paket` - Used by the Paket/NuGet package manager
   - `Build` - where the compiler puts compiled code
-  - `paket-files` - Used by the paket/nuget package manager
+  - `paket-files` - Used by the Paket/NuGet package manager
   - `src/ApiServer` - webserver serving the editor and the API used by the
     editor
-  - `src/BackendOnlyStdLib` - impl. of functions which need to be run on the
-    backend, due to their connection to the DB, queues, etc.
+  - `src/BackendOnlyStdLib` - implementation of functions which need to be run
+    on the backend, due to their connection to the DB, queues, etc.
   - `src/Benchmark` - a benchmark executable to measure the performance of Dark
     code
   - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)

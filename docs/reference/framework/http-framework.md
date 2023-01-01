@@ -6,7 +6,7 @@ your canvas.
 ## Routing
 
 If your canvas is `myusername-app1`, then requests to
-https://myusername-app1.builtwithdark.com/, with any path, will go to your
+`https://myusername-app1.builtwithdark.com`, with any path, will go to your
 canvas.
 
 Each handler has a HTTP method (such as `GET`, `POST`, etc) - anything is
@@ -38,14 +38,15 @@ The contents of the request will be available in your handler as the variable
   are set
 - `headers`: a dictionary of all the headers.
 - `cookies`: a dictionary of the cookies
-- `queryParam`: a dictionary of the parameters in the query string (eg `/?a=b`)
-- `url`: the full url of the request
+- `queryParam`: a dictionary of the parameters in the query string (e.g.
+  `/?a=b`)
+- `url`: the full URL of the request
 
 The request's IP address can usually be found in
 `request.headers.x-forwarded-for`. This is a string with multiple IP addresses,
 separated by commas, representing the steps taken by the request as it moved
 through the internet. Usually, the first IP address is the one that made the
-request (eg that's your user).
+request (e.g. that's your user).
 
 Other variables will be available from dynamic routing.
 
@@ -92,8 +93,8 @@ their type: records, dictionaries and lists are given the content-type
 `"application/json; charset=utf-8"`, all other types are given the content-type
 `"text/plain; charset=utf-8"`.
 
-_We recogize this is a poor choice, and future versions of the HTTP stack will
-have better default behaviour._
+_We recognize this is a poor choice, and future versions of the HTTP stack will
+have better default behavior._
 
 The `HTTP::` module provides functions to create responses to external HTTP
 calls. Each response function, such as `Http::response`, creates a response

@@ -3,7 +3,7 @@
 July 1, 2022
 
 Darklang Release 3 is focused primarily on taking advantage of the recent
-changes, including new stdlib functions, small languages changes, and sunsetting
+changes, including new StdLib functions, small languages changes, and sunsetting
 old features.
 
 ## Language improvements
@@ -14,7 +14,7 @@ old features.
   source of annoyance for devs trying to figure out why their code wasn't
   working.
 
-- 64bit ints now work end-to-end (previously we had two separate issues with
+- 64-bit ints now work end-to-end (previously we had two separate issues with
   numbers above `2^53` and numbers above `2^63`)
   ([#4209](https://github.com/darklang/dark/pull/4209))
 
@@ -69,7 +69,7 @@ old features.
 - Remove the canvas minimap which was causing a long hang when switching to edit
   functions ([#4106](https://github.com/darklang/dark/pull/4106))
 
-## Http Framework improvements
+## HTTP Framework improvements
 
 - Load programs faster by removing 3-4 fewer DB requests during load
   ([#4051](https://github.com/darklang/dark/pull/4051))
