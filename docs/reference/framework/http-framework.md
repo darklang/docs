@@ -6,7 +6,7 @@ your canvas.
 ## Routing
 
 If your canvas is `myusername-app1`, then requests to
-https://myusername-app1.builtwithdark.com/, with any path, will go to your
+`https://myusername-app1.builtwithdark.com`, with any path, will go to your
 canvas.
 
 Each handler has a HTTP method (such as `GET`, `POST`, etc) - anything is
