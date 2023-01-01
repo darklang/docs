@@ -282,13 +282,13 @@ Minor differences:
 We have gone from about 250 backend tests to over 5,000. We now have custom test
 frameworks for:
 
-- [language and standard library testing](https://github.com/darklang/dark/tree/main/fsharp-backend/tests/testfiles)
+- [language and standard library testing](https://github.com/darklang/dark/tree/main/backend/testfiles/execution)
 
-- [Http server testing](https://github.com/darklang/dark/tree/main/fsharp-backend/tests/httptestfiles)
+- [Http server testing](https://github.com/darklang/dark/tree/main/backend/testfiles/httphandler)
 
-- [Testing Http clients](https://github.com/darklang/dark/tree/main/fsharp-backend/tests/httpclienttestfiles)
+- [Testing Http clients](https://github.com/darklang/dark/tree/main/backend/testfiles/httpclient)
 
-- [Fuzz testing](https://github.com/darklang/dark/tree/main/fsharp-backend/tests/FuzzTests)
+- [Fuzz testing](https://github.com/darklang/dark/tree/main/backend/tests/FuzzTests)
 
 - [Integration tests](https://github.com/darklang/dark/tree/main/integration-tests)
   were ported to [Playwright](https://playwright.dev/), from TestCafe. They now
