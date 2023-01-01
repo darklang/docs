@@ -940,10 +940,10 @@ We added a bunch of improved documentation, including:
 
 ![changelog/image2.gif](/img/changelog/image2.gif)
 
-- We asked y'all to not make HttpClient calls to your Dark canvas from REPLs.
+- We asked y'all to not make `HttpClient` calls to your Dark canvas from REPLs.
   We've made some infrastructural changes that fix the issue on our end, so you
   should feel free to do that now. This is useful if you want to create a HTTP
-  trace without leaving Dark. (Note: please don't make HttpClient calls **_to
+  trace without leaving Dark. (Note: please don't make `HttpClient` calls **_to
   Dark_** from HTTP handlers)
 
 ## Week of 1/10/2020

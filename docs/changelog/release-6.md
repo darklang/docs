@@ -131,10 +131,10 @@ _Tuples are in preview - enable them in **Settings/Contributor Settings**_
 - When a handler's route changes, update "open-in-new-window" to use the new
   route ([#4502](https://github.com/darklang/dark/pull/4502))
 
-- dont insert `0` when copy/pasting from the start of ints in patterns
+- don't insert `0` when copy/pasting from the start of ints in patterns
   ([#4492](https://github.com/darklang/dark/pull/4492))
 
-- Dont create empty patterns when creating match
+- Don't create empty patterns when creating match
   ([#4469](https://github.com/darklang/dark/pull/4469))
 
 - put the cursor in right place after a string edit

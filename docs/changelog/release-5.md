@@ -74,9 +74,9 @@ Finally, in-progress features can now be enabled for devs, starting with Tuples
   [#4420](https://github.com/darklang/dark/pull/4420),
   [#4426](https://github.com/darklang/dark/pull/4426))
 
-## In-progress features - HttpClient and HTTP framework
+## In-progress features - `HttpClient` and HTTP framework
 
-The current HttpClient and HTTP framework are quite limited, only supporting
+The current `HttpClient` and HTTP framework are quite limited, only supporting
 text request/response bodies, among many other problems. They also lack the
 flexibility to control and compose their behavior.
 

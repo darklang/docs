@@ -205,9 +205,9 @@ As a temporary hack, Dark also supports `null`. This allows us handle JSON while
 we build out enough type-system support to allow them to be replaced by
 `Option`.
 
-Null is mostly useful for comparing against incoming JSON and results of
-HttpClient calls. When returning JSON or making HttpClient calls, you can use
-Options instead and they will be converted properly to `null` in the JSON
+`Null` is mostly useful for comparing against incoming JSON and results of
+`HttpClient` calls. When returning JSON or making `HttpClient` calls, you can
+use `Option`s instead and they will be converted properly to `null` in the JSON
 output.
 
 ## User defined types

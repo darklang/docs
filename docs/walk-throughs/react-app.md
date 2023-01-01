@@ -302,7 +302,7 @@ which requires the method URL:
 [https://slack.com/api/chat.postMessage](https://slack.com/api/chat.postMessage)
 and pass a header with a content type and a token.
 
-There are built in methods for formatting headers in the HttpClient library.
+There are built in methods for formatting headers in the `HttpClient` library.
 
 ![reactspa/image31.png](/img/tutorials/reactspa/image31.png)
 

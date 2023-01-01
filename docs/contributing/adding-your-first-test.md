@@ -7,7 +7,7 @@ for a built-in function. This will get you through the process of contributing
 and get you familiar with how to get code into Dark.
 
 _We're assuming you've got the repo is set up and the `builder` script is
-running (or if you're running the devcontainer in VSCode, that the decvontainer
+running (or if you're running the devcontainer in VSCode, that the devcontainer
 is running)!_
 
 ## Adding the test

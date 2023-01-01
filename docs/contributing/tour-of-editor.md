@@ -6,7 +6,7 @@ The editor is in `client/`. We refer to it as the client or the editor (we don't
 call it the frontend though).
 
 It started life as an Elm application, and still uses the Elm Architecture
-(which we like). The current app is in Bucklescript.
+(which we like). The current app is in ReScript.
 
 ## Elm architecture
 

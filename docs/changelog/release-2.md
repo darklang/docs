@@ -132,7 +132,7 @@ users.
   response of status code 418. It now processes the request instead.
 
 - `HttpClient::*` functions called with usernames and passwords in the URL can
-  now support arbitrary UTF8 (in the past, Unicode was not supported.)
+  now support arbitrary UTF-8 (in the past, Unicode was not supported.)
 
 - `X509::pemCertificatePublicKeys` used to only work for RSA keys. It now also
   supports DSA and ECDSA keys. The old version would read ECDSA keys and return
@@ -149,7 +149,7 @@ users.
 
 These breaking changes were documented and announced many months in advance of
 switching over to the new version of Darklang. We also very careful deployed the
-new code, watching for suspiscious changes in any Dark programs that were
+new code, watching for suspicious changes in any Dark programs that were
 running. In the rare case where something went awry, we contacted the users and
 worked with them to ensure a seamless transition.
 
@@ -199,7 +199,7 @@ bare identifiers, while the new version puts them in a string (e.g. `NaN` vs
 This may occur in any of the places in which we generate JSON, which are:
 
 - when responding to a HTTP request in the HTTP framework
-- when making a request with HttpClient (any version)
+- when making a request with `HttpClient` (any version)
 - when calling any of:
   - `Dict::toJson_v0`
   - `Object::toJson_v1` (_deprecated_)
@@ -232,7 +232,7 @@ before).
 Dark parses JSON:
 
 - when receiving a HTTP request in the HTTP framework
-- when receiving a response to a request made with HttpClient (any version)
+- when receiving a response to a request made with `HttpClient` (any version)
 - when calling any of:
 
   - `JSON::parse_v1`
@@ -314,14 +314,14 @@ Behind the scenes, Dark has greatly improved its operations.
 
 - Nodes are now autoscaled, leading to significant cost savings.
 
-- Updated to latest version of kubernetes, cert-manager (which powers our
+- Updated to latest version of Kubernetes, `cert-manager` (which powers our
   [custom domains](https://docs.darklang.com/how-to/custom-domains) feature),
   nginx, and other tools that we use.
 
 - Added internal [feature flagging](https://launchdarkly.com) to give us more
   control over how our infrastructure runs in production
 
-- Significantly increased use of kubernetes' security features, in particular
+- Significantly increased use of Kubernetes' security features, in particular
   internal firewalls.
 
 - Standardized our production deployment process using a tool we wrote called
@@ -338,8 +338,8 @@ Behind the scenes, Dark has greatly improved its operations.
 
 - moved docs to docs.darklang.com
 - [refactored docs](https://github.com/darklang/docs/pull/220) to use the Divio
-  documentation system, categorizing all docs into Tuotials, Reference, How-tos,
-  Walk-throughs and Discussion.
+  documentation system, categorizing all docs into Tutorials, Reference,
+  How-tos, Walk-throughs and Discussion.
 - fixed all links
 - redo the
   [Error Rail discussion](https://docs.darklang.com/discussion/error-handling)
@@ -357,7 +357,7 @@ Behind the scenes, Dark has greatly improved its operations.
   throughout the [darklang repo](https://github.com/darklang/dark)
 
 - Moved 99% of project collaboration to our
-  [public github](https://github.com/darklang/dark) and
+  [public GitHub](https://github.com/darklang/dark) and
   [public community chat](https://darklang.com/discord-invite)
 
 - ported our

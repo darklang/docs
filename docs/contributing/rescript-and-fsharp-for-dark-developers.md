@@ -124,7 +124,7 @@ libraries from `.NET`, FSharp.Core, or if necessary, the FSharpPlus library.
 ### Int
 
 An `int` is the same in Dark and F#, same syntax, same meaning. Note that ints
-are 31 bits in ReScript, 32 bits in F#, and 64bit in Dark.
+are 31-bit in ReScript, 32-bit in F#, and 64-bit in Dark.
 
 ```fsharp
 let x = 5
@@ -442,7 +442,7 @@ type t =
 
 Type `t` (it's a common convention to name the main type of a module `t`) must
 be one of `EInteger`, `EBool`, `EString`, etc. `EInteger` takes two parameters,
-an `id` and a `string` (we use a string to represent integers as Bucklescript
+an `id` and a `string` (we use a string to represent integers as ReScript
 doesn't have a big enough integer type).
 
 To create a `t`, you'd do something like this:
@@ -477,7 +477,7 @@ list->List.map((elem) => elem + 2)
 
 It's very common to use functions like `List.map` which have a parameter called
 `f` which take a lambda. In F#, above, that parameter is passed like any other.
-In ReScript, those parameters are passed as labelled variables:
+In ReScript, those parameters are passed as labeled variables:
 
 ```rescript
 list->List.map:(~f=((elem) => elem + 2))
@@ -563,7 +563,7 @@ print(myString)
 For functions that perform IO, you'll need to use the `ply` or `task`
 "computation expression". A "computation expression" is a special F# language
 feature for writing abstractions with a nice syntax. The `ply` CE allows using a
-specialized asyncronous structure called Ply (which is extremely similar to a
+specialized asynchronous structure called Ply (which is extremely similar to a
 .Net Task) easily, and can best be illustrated with an example:
 
 ```fsharp
@@ -589,10 +589,10 @@ Let's break this down line by line:
   `Ply`, in this case a `Ply<Dval>`.
 
 Why do we go through all this trouble? Because this is an async runtime, and
-`let!` and `return` are the enablers of the asyncronicity. A `Ply` is a promise,
-and `let!` waits for the promise and then continues (running other code while
-the IO is still pending). This is the exact same as the `async` keyword in JS,
-Rust, C# or Python.
+`let!` and `return` are the enablers of the asynchronicity. A `Ply` is a
+promise, and `let!` waits for the promise and then continues (running other code
+while the IO is still pending). This is the exact same as the `async` keyword in
+JS, Rust, C# or Python.
 
 Note that while we primarily use `Ply` and `uply` inside the Interpreter, most
 of our other async code use `Task` and `task`. These are interchangeable except

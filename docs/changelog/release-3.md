@@ -14,7 +14,7 @@ old features.
   source of annoyance for devs trying to figure out why their code wasn't
   working.
 
-- 64bit ints now work end-to-end (previously we had two separate issues with
+- 64-bit ints now work end-to-end (previously we had two separate issues with
   numbers above `2^53` and numbers above `2^63`)
   ([#4209](https://github.com/darklang/dark/pull/4209))
 

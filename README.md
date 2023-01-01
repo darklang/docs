@@ -1,7 +1,7 @@
 # Dark Documentation
 
-Welcome to the source for the [Dark](https://darklang.com) documentation. Contribute
-your improvements as a pull request, or report problems in an issue.
+Welcome to the source for the [Dark](https://darklang.com) documentation.
+Contribute your improvements as a pull request, or report problems in an issue.
 
 View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 
@@ -254,14 +254,14 @@ common errors. If you run `npm run format` you should pass the linter.
 
 The `.circleci/config.yml` file describes the CircleCI configuration. It watches
 for commits/merges into the `main` branch, runs a script to generate the
-contents of `gh-pages`, and pushes `gh-pages` to github.
+contents of `gh-pages`, and pushes `gh-pages` to GitHub.
 
 ## Publishing Changes Manually
 
 **NOTE: You shouldn't need to do this because CircleCI runs this
 automatically.**
 
-On the commandline (remember to replace `<YOUR USERNAME>` with your github
+On the commandline (remember to replace `<YOUR USERNAME>` with your GitHub
 username):
 
 ```sh
