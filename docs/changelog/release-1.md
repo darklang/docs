@@ -237,8 +237,8 @@ added:
     help developers familiar with Javascript learn Dark
     ([132](https://github.com/darklang/docs/pull/132))
   - Documentation for the
-    [`Slack::createCheckoutSession`](./packages#createcheckoutsession) package
-    ([139](https://github.com/darklang/docs/pull/139))
+    [`Slack::createCheckoutSession`](/reference/packages#createcheckoutsession)
+    package ([139](https://github.com/darklang/docs/pull/139))
 - Made a few improvements to the
   [Your First App](/tutorials/first-dark-application) tutorial
   ([129](https://github.com/darklang/docs/pull/129),

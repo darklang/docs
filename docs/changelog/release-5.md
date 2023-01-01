@@ -27,7 +27,7 @@ heterogeneous data:
   values.
 - Tuples are only available after opting in via Settings (see next section)
 - More details on using tuples can be found in
-  [Language Details](languagedetails###Tuples).
+  [Language Details](/reference/languagedetails###Tuples).
 
 ## Major feature: Contributor settings
 
