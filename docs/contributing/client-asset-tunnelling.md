@@ -6,6 +6,8 @@ title: Client Asset Tunnelling
 It's often useful to test local editor/client changes against the production
 backend. The editor includes a "Tunnel" feature to support this.
 
+![Client asset tunnelling](/img/contributing/client-asset-tunnelling.gif)
+
 ## Host the static assets locally
 
 First, you'll need a web server on your machine to host the static assets. The
