@@ -57,7 +57,7 @@ on your needs.
 We currently support exporting your data using regular Dark tooling. We intend
 to create an exporter that will generate a readable Go or NodeJS application
 that matches the structure and intention of your Dark program, that you can host
-yourself. However, this will likely be long in the future, though we hoope to
+yourself. However, this will likely be long in the future, though we hope to
 support the community building this.
 
 ## Who owns the code that I write in Dark, and the data that I and my users save in Dark?

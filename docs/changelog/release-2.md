@@ -15,7 +15,7 @@ contribute. Our reasons for making the change were discussed at the time:
 - The migration to the new queues was fully converted on May 27th.
 - The execution engine in the editor was switched over on June 5th.
 
-The change was documented in a series of blogposts:
+The change was documented in a series of blog posts:
 [1](https://blog.darklang.com/hows-the-dark-rewrite-going/),
 [2](https://blog.darklang.com/changes-the-the-dark-rewrite/),
 [3](https://blog.darklang.com/optimizing-tasks-in-fsharp/),
@@ -77,7 +77,7 @@ Thanks to everyone who contributed, including
 
 - The rewrite also addressed some underlying issues that will come out in new
   features soon, including a better type system, support for characters and
-  tuples, fixes for poor behaviour in Date and String functions, and more. These
+  tuples, fixes for poor behavior in Date and String functions, and more. These
   issues are tracked in our new
   [project tracker](https://github.com/darklang/dark/projects/1#column-15173588).
 
@@ -86,7 +86,7 @@ Thanks to everyone who contributed, including
 All error messages have been renovated, attempting to make them more consistent
 and to reuse error message machinery. As a result, a majority of Dark error
 messages have changed. If you were relying on the explicit format of a Dark
-language or stdlib error message, expect that it will be different.
+language or StdLib error message, expect that it will be different.
 
 If you do any error handling which relies specifically on the text of an error
 message coming from Dark, we recommend you no longer do that, and just use the
@@ -124,18 +124,18 @@ users.
   is now returned in mixed case.
 
 - When making a web request to your Dark application, if you did not specific a
-  'user-agent' header, Dark used to add a 'user-agent' header of
-  'ocaml-cohttp/1.2.0'. We no longer add this header.
+  `user-agent` header, Dark used to add a `user-agent` header of
+  `ocaml-cohttp/1.2.0`. We no longer add this header.
 
-- When making a web request to your Dark application with a 'content-type'
-  header of "text/ping", Dark used to ignore the code and immediately return a
+- When making a web request to your Dark application with a `content-type`
+  header of `text/ping`, Dark used to ignore the code and immediately return a
   response of status code 418. It now processes the request instead.
 
-- `HttpClient::*` functions called with usernames and passwords in the url can
+- `HttpClient::*` functions called with usernames and passwords in the URL can
   now support arbitrary UTF8 (in the past, Unicode was not supported.)
 
 - `X509::pemCertificatePublicKeys` used to only work for RSA keys. It now also
-  supports DSA and ECDsa keys. The old version would read ECDsa keys and return
+  supports DSA and ECDSA keys. The old version would read ECDSA keys and return
   an incorrect answer - it now returns a correct answer.
 
 - `String::split` would fail if the 2nd argument was `""` and the first argument
@@ -149,7 +149,7 @@ users.
 
 These breaking changes were documented and announced many months in advance of
 switching over to the new version of Darklang. We also very careful deployed the
-new code, watching for suspisious changes in any Dark programs that were
+new code, watching for suspiscious changes in any Dark programs that were
 running. In the rare case where something went awry, we contacted the users and
 worked with them to ensure a seamless transition.
 
@@ -179,7 +179,7 @@ List.uniqueBy_v0 [1;2;3;4] (fun x -> Int.divide_v0 x 2) = [ 1, 3, 4 ] // old Dar
 List.uniqueBy_v0 [1;2;3;4] (fun x -> Int.divide_v0 x 2) = [ 1, 2, 4 ] // new Dark
 ```
 
-### Http Clients
+### HTTP Clients
 
 - `HttpClient::*` functions no longer support making requests with arbitrary
   `Content-Type`s. They must now be
@@ -193,7 +193,7 @@ Dark is now standards compliant, and uses a different formatting style.
 
 In the old version of Dark, we would generate invalid JSON for the Float values
 `NaN`, `Infinity` and `-Infinity`. The old version of Dark generates them as
-bare identifiers, while the new version puts them in a string (eg `NaN` vs
+bare identifiers, while the new version puts them in a string (e.g. `NaN` vs
 `"NaN"`).
 
 This may occur in any of the places in which we generate JSON, which are:
@@ -207,8 +207,8 @@ This may occur in any of the places in which we generate JSON, which are:
   - `Twilio::sendText_v1`
   - `Twilio::sendText_v0` (_deprecated_)
 
-Note that the following `JWT` functions do not use this new behaviour, and
-should have the exact same behaviour as before, including:
+Note that the following `JWT` functions do not use this new behavior, and should
+have the exact same behavior as before, including:
 
 - `JWT::signAndEncode_v0` (_deprecated_)
 - `JWT::signAndEncode_v1`
@@ -271,7 +271,7 @@ Minor differences:
   - All headers must be sent in first 10 seconds
   - There must be fewer than 100 headers and they must fit in 32KB
   - The maximum size of HTTP requests to Dark is 10MB
-- Http responses sent by Dark
+- HTTP responses sent by Dark
   - Headers will be returned in a different order
   - Headers are not always lowercase anymore
   - The `Date` header is now always present
@@ -284,9 +284,9 @@ frameworks for:
 
 - [language and standard library testing](https://github.com/darklang/dark/tree/main/backend/testfiles/execution)
 
-- [Http server testing](https://github.com/darklang/dark/tree/main/backend/testfiles/httphandler)
+- [HTTP server testing](https://github.com/darklang/dark/tree/main/backend/testfiles/httphandler)
 
-- [Testing Http clients](https://github.com/darklang/dark/tree/main/backend/testfiles/httpclient)
+- [Testing HTTP clients](https://github.com/darklang/dark/tree/main/backend/testfiles/httpclient)
 
 - [Fuzz testing](https://github.com/darklang/dark/tree/main/backend/tests/FuzzTests)
 

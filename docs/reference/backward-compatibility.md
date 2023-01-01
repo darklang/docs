@@ -1,9 +1,9 @@
 # Backward compatibility
 
-We aim to keep Dark's behaviour consistent and backwards compatible, in order to
-prevent your programs from changing without your knowlege. Sometimes cannot
-achieve this due to the underlying technology (eg HTTP servers and proxies, JSON
-parsers/serializers, etc) that we are built-on top of.
+We aim to keep Dark's behavior consistent and backwards compatible, in order to
+prevent your programs from changing without your knowledge. Sometimes cannot
+achieve this due to the underlying technology (e.g. HTTP servers and proxies,
+JSON parsers/serializers, etc) that we are built-on top of.
 
 ## Serialized Dark values
 
@@ -11,7 +11,7 @@ Dark serialized values appear in HTTP responses, in functions like `toString`
 and `Dict::toJSON`, and are sent to servers using `HttpClient::` functions.
 
 - Dark may change the formatting of values as they are serialized to users.
-  Typically, we will only do this to correct incorrect behaviour.
+  Typically, we will only do this to correct incorrect behavior.
 
 - Dark tries to generate standard JSON. We don't always, and where we generate
   non-standard JSON, we may switch to generating more standard JSON.
@@ -38,7 +38,7 @@ Unicode is a moving standard, and Dark strings will upgrade behind the scenes
 based on the latest standard. The changes will not necessarily happen in
 backwards compatible ways.
 
-## Language/framework behaviour
+## Language/framework behavior
 
 Error messages in Dark may change at any time. We recommend that you do not use
 Dark error messages as user-facing values, or if you do, set expectations that

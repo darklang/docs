@@ -68,16 +68,16 @@ timelines. This page captures all releases before this switch-over.
 - There has been a
   [significant restructure](https://blog.darklang.com/dark-and-the-long-term/)
   to the Dark project. We'll write more about this going forward: Paul has
-  [a new devlog](https://dev.to/darklang/dark-devlog-1-fresh-start-1i2) that
+  [a new blog post](https://blog.darklang.com/dark-devlog-1-fresh-start/) that
   talks about it.
 - We now have a status channel in the community chat. You can join the chat
   community [here](https://darklang.com/discord-invite)!
-- The [Dark repo](https://github.com/darklang/dark) is now _source available_.
-  This hasn't been publicly announced yet, but you can now
+- The [Darklang repo](https://github.com/darklang/dark) is now _source
+  available_. This hasn't been publicly announced yet, but you can now
   [file issues](https://github.com/darklang/dark/issues) directly, and also
   [contribute](https://docs.darklang.com/contributing/getting-started).
 - Added a contributing doc, showing how you can help if
-  [you don't know OCaml](https://docs.darklang.com/contributing/if-you-dont-know-our-stack).
+  [you don't know our stack](https://docs.darklang.com/contributing/if-you-dont-know-our-stack).
 - `Date::hour_v1` is now supported in the query compiler.
   ([David Cooley](https://github.com/cooleydw494),
   [#2639](https://github.com/darklang/dark/pull/2639))

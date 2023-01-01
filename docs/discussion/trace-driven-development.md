@@ -36,8 +36,8 @@ Send requests to Dark _before writing code_. There are several ways to do this:
 ![trace/image9.png](/img/trace/image9.png)
 
 You’ll be able to create the endpoint and see the full request (including any
-query params if you add them - i.e. test?name=ellen). Each request shows up as a
-trace on the left hand side of the handler as a gray dot, or a white dot when
+query params if you add them - i.e. `test?name=paul`). Each request shows up as
+a trace on the left hand side of the handler as a gray dot, or a white dot when
 selected.
 
 You can work with the selected trace. In this case, the handler is set to return

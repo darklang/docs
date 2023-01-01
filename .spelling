@@ -24,16 +24,17 @@ CRM
 CSS
 Clojure
 Cloudflare
+Cmd
 CoffeeScript
 Cohttp
 Cron
 Crons
+Ctrl
 DBs
 DMs
 DNS
 EGC
 ErrorRail
-Esy
 Fira
 Freshdesk
 GCP
@@ -44,6 +45,7 @@ Gmail
 Grammarly
 GraphQL
 HIPAA
+HTTP3
 Haskell
 Honeycomb
 HttpClient
@@ -54,6 +56,7 @@ JSON
 Javascript
 LOC
 MDN
+MacOS
 Mailchimp
 Mono
 Netlify
@@ -62,6 +65,7 @@ NodeJS
 OAuth
 OCaml
 OSX
+Onboarding
 Overwatch
 PHP
 PII
@@ -74,10 +78,13 @@ Q3
 README
 REPL
 REPLs
+RSA
 React
 Read-Eval-Print
 ReasonML
 Rollbar
+SDKs
+SLA
 SOC2
 SSL
 SendGrid
@@ -96,21 +103,26 @@ UI
 URI
 USERNAME-CANVASNAME
 UTF-8
+UTF8
 UUID
 UUIDs
 Vue
 XMLHttpRequest
 ad-hoc
+allowlist
+architected
 async
 autocomplete
 autocompletes
 backend
 backends
 backends
+blocklist
 bool
 boolean
 bools
 builtwithdark.com
+changelog
 checkins
 codebase
 codepoint
@@ -139,11 +151,13 @@ docstring
 docstrings
 e.g.
 emojis
+enqueued
 enum
 enums
 env
 erroring
 executables
+favicon
 frontend
 fuzzer
 gRPC
@@ -180,28 +194,42 @@ refactorings
 reformats
 renamings
 repo
+repos
 restdb.io
 rollout
 runtime
 serializer
 serializers
+serverless
 slugify
 stringified
+stringifying
 subdomain
 subexpression
 subexpressions
 substring
 substrings
 syntaxes
+timelines
+timestamp
+tooltip
+tooltips
 toplevel
 toplevels
 typeclass
 typeclasses
+unenqueue
 unexecuted
 unicode
+unpaused
+unpausing
 unreviewed
+uptime
 usecase
 username-canvasname
+v0
+v1
+v2
 varnames
 versioned
 versioning
@@ -214,11 +242,11 @@ websockets
 wildcard
 
 - ../docs/your-first.md
-10m 
+10m
 45m
 
 - ../docs/first-app.md
-10m 
+10m
 45m
 
 - ../docs/when-dark.md
@@ -227,9 +255,7 @@ wildcard
 - ../docs/changelog.md
 3x
 3s
-v2
 70ms
-v0
 
 - ../docs/tutorials/twilio-app-tutorial.md
 USERNAME-twilioreminder

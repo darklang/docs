@@ -13,8 +13,6 @@ here's how the various directories intersect, and what language they use:
 - `.ionide` - config for F# VsCode plugin
 - `.vscode` - VsCode config
 - `auth0-branding` - has some assets for our login provider
-- `_build` - build dir for OCaml (empty, this is a docker volume)
-- `_esy` build dir for OCaml (empty, this is a docker volume)
 - `client` - the editor, and the entire frontend application that is found under
   [darklang.com/a/yourcanvas](http://darklang.com/a/yourcanvas) (note, not
   darklang.com or the docs). Written in ReScript. All frontend functionality,

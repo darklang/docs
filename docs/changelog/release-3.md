@@ -3,7 +3,7 @@
 July 1, 2022
 
 Darklang Release 3 is focused primarily on taking advantage of the recent
-changes, including new stdlib functions, small languages changes, and sunsetting
+changes, including new StdLib functions, small languages changes, and sunsetting
 old features.
 
 ## Language improvements
@@ -69,7 +69,7 @@ old features.
 - Remove the canvas minimap which was causing a long hang when switching to edit
   functions ([#4106](https://github.com/darklang/dark/pull/4106))
 
-## Http Framework improvements
+## HTTP Framework improvements
 
 - Load programs faster by removing 3-4 fewer DB requests during load
   ([#4051](https://github.com/darklang/dark/pull/4051))

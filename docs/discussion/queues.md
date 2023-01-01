@@ -42,7 +42,7 @@ Events are also not guaranteed to process in the order they are `emit`ed.
 
 Handlers can be paused. When handlers are paused, they will continue to allow
 events to be `emit`ed, but they will not run the event. When handlers are
-unpaused, all the events will start to run as soon as posssible.
+unpaused, all the events will start to run as soon as possible.
 
 ### Blocking
 

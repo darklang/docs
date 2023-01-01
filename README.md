@@ -49,10 +49,10 @@ Dark's documentation is organized into four categories:
 - reference material
 
 This follows the [Divio Documentation System](https://documentation.divio.com/).
-Using this system, documentation in each category should not do the work of any other
-category. For example, a tutorial should just step the user through doing the work,
-and should not provide background expanations or other reference material or
-discussion.
+Using this system, documentation in each category should not do the work of any
+other category. For example, a tutorial should just step the user through doing
+the work, and should not provide background expanations or other reference
+material or discussion.
 
 In the future, we intend to provide access to all this material in the app, with
 context-sensitive reference materials available for all product and language
@@ -74,12 +74,14 @@ features, and interactive tutorials and how-to guides built-in.
 - should have very specific names such as "how to add a custom domain to Dark"
 
 ### Explanations
+
 - background material to understand further
 - provides context
 
 ### Reference material
+
 - just descriptions
-- follows the structure of the project/language (eg each type is represented)
+- follows the structure of the project/language (e.g. each type is represented)
 
 ## Project Structure
 

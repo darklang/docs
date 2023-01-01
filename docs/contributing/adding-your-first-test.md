@@ -19,7 +19,7 @@ your favorite.
 As an example, let's add one for `Float::add_v0`.
 
 Unit tests for Dark functions are in `backend/testfiles/execution/*.tests"`,
-typically named after the module we're in (eg, in this case, we want
+typically named after the module we're in (e.g., in this case, we want
 `float.tests`). See
 [testfiles/README.md](https://github.com/darklang/dark/tree/main/backend/testfiles/README.md)
 to see detailed notes on the options of how to write tests. An example test is:

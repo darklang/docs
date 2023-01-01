@@ -148,10 +148,9 @@ In this case, I chose to define `slackid` as a variable so I could reuse it as a
 unique key. You can do this after the fact using `Cmd/Ctrl-\` on the value to
 extract a variable, or just rewrite starting from the top.
 
-**Please do not use Ellen’s phone number + Slack ID for this, because then you
-won’t get the interactivity!** Use your own name, phone number, and Slack ID.
-Your Slack ID is found in your profile in the … menu. You will need permission
-to install Slack apps on a Slack to do this.
+**Please Use your own name, phone number, and Slack ID.** Your Slack ID is found
+in your profile in the … menu. You will need permission to install Slack apps on
+a Slack to do this.
 
 ![reactspa/image34.png](/img/tutorials/reactspa/image34.png)
 

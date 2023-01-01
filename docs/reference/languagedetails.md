@@ -141,7 +141,7 @@ let x = (1, "string", { name: "Sam" })
 
 The following constructs are planned but not yet implemented:
 
-- Tuples can be deconstructable into their parts in a `let` expression:
+- Tuples can be deconstructed into their parts via a `let` expression:
 
   ```fsharp
   let philadelphia = (39.9526, 75.1652)

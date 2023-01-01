@@ -101,7 +101,7 @@ Twitter's OAuth 1.0 flow
 [emojimood](https://darklang.com/a/sample-emojimood) - use emojis to express
 your mood!
 
-[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving fizzbuzz in Dark
+[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving FizzBuzz in Dark
 
 [login](https://darklang.com/a/sample-login) - a full login flow
 
