@@ -32,7 +32,7 @@ Alternative tools include [localtunnel](https://localtunnel.me).
 
 ## Register the tunnel in the Editor
 
-Finally, take the hostname provided to you by your tunnel, enter, and choose to
+Finally, copy/paste the hostname provided to you by your tunnel, and choose to
 "Use tunneled assets" in the Contributing tab of the Editor's settings. This
 will cause a refresh of the editor, with static assets being served through the
 tunnel from your local dev environment.
