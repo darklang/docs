@@ -183,6 +183,7 @@
       "contributing/glossary",
       "contributing/debugging",
       "contributing/troubleshooting",
+      "contributing/client-asset-tunnelling",
       "contributing/making-a-pull-request"
     ]
   }
