@@ -2,6 +2,40 @@
 
 January 1, 2023
 
+## Language and Standard Library
+
+- Support short-circuiting `||` and `&&` expressions (initially behind a flag -
+  go to Settings to enable)
+  ([#4640](https://github.com/darklang/dark/pull/4640))
+
+- Add `List::partition_v0` function to split a list into 2 lists
+  ([#4618](https://github.com/darklang/dark/pull/4618))
+
+- Fix lambda argument names for `List::all_v0`
+  ([#4626](https://github.com/darklang/dark/pull/4626))
+
+- Add functions that operate on characters: `Char::isUppercase_v0`,
+  `Char::isLowercase_v0`, `Char::toUppercase_v1`, `Char::toLowercase_v1`,
+  `Char::isDigit_v0`, `Char::isASCII_v0`, and `Char::isASCIILetter_v0`
+  ([#4628](https://github.com/darklang/dark/pull/4628))
+
+## Editor Improvements
+
+- Allow using `Char` as a function parameter type and return type
+  ([#4628](https://github.com/darklang/dark/pull/4628))
+
+- Update the styling of settings invite
+  ([#4643](https://github.com/darklang/dark/pull/4643))
+
+- Switch some settings pages to a regular font (we previously used monospace
+  fonts everywhere) ([#4640](https://github.com/darklang/dark/pull/4640),
+  [#4656](https://github.com/darklang/dark/pull/4656))
+
+## Contributor Experience
+
+- Add more client debugging functions
+  ([#4640](https://github.com/darklang/dark/pull/4640))
+
 ## Internal improvements
 
 - Allow traces to be stored in Cloud Storage instead of the DB
@@ -42,37 +76,3 @@ January 1, 2023
 
 - Remove unused config variables
   ([#4651](https://github.com/darklang/dark/pull/4651))
-
-## Language and Standard Library
-
-- Support short-circuiting `||` and `&&` expressions (initially behind a flag -
-  go to Settings to enable)
-  ([#4640](https://github.com/darklang/dark/pull/4640))
-
-- Add `List::partition_v0` function to split a list into 2 lists
-  ([#4618](https://github.com/darklang/dark/pull/4618))
-
-- Fix lambda argument names for `List::all_v0`
-  ([#4626](https://github.com/darklang/dark/pull/4626))
-
-- Add functions that operate on characters: `Char::isUppercase_v0`,
-  `Char::isLowercase_v0`, `Char::toUppercase_v1`, `Char::toLowercase_v1`,
-  `Char::isDigit_v0`, `Char::isASCII_v0`, and `Char::isASCIILetter_v0`
-  ([#4628](https://github.com/darklang/dark/pull/4628))
-
-## Contributor Experience
-
-- Add more client debugging functions
-  ([#4640](https://github.com/darklang/dark/pull/4640))
-
-## Editor Improvements
-
-- Allow using `Char` as a function parameter type and return type
-  ([#4628](https://github.com/darklang/dark/pull/4628))
-
-- Update the styling of settings invite
-  ([#4643](https://github.com/darklang/dark/pull/4643))
-
-- Switch some settings pages to a regular font (we previously used monospace
-  fonts everywhere) ([#4640](https://github.com/darklang/dark/pull/4640),
-  [#4656](https://github.com/darklang/dark/pull/4656))
