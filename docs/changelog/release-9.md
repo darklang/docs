@@ -11,6 +11,9 @@ January 1, 2023
 - Add `List::partition_v0` function to split a list into 2 lists
   ([#4618](https://github.com/darklang/dark/pull/4618))
 
+  Note: tuples are currently in 'preview,' and this returns a tuple. Enable them
+  in **Settings/Contributor Settings** to use this function.
+
 - Fix lambda argument names for `List::all_v0`
   ([#4626](https://github.com/darklang/dark/pull/4626))
 
@@ -56,11 +59,10 @@ January 1, 2023
 - Use [rescript-webapi](https://www.npmjs.com/package/rescript-webapi) instead
   of our Native.res ([#4630](https://github.com/darklang/dark/pull/4630))
 
-- Update settingsView to use TailwindCSS
+- Use Tailwind in the Settings view
   ([#4623](https://github.com/darklang/dark/pull/4623))
 
-- Rename Match Pattern cases from "PBlank"-style to "MPBlank" style in
-  preparation for Let Patterns
+- Rename Match Pattern cases in preparation for Let Patterns
   ([#4622](https://github.com/darklang/dark/pull/4622),
   ([#4629](https://github.com/darklang/dark/pull/4629)))
 
