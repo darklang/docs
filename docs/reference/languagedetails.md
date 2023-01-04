@@ -357,8 +357,10 @@ below the `if` expression.
 Dark supports if/else statement. The argument to an `if` is a boolean. We
 currently support `truthy` types but intend to remove that ability.
 
-We support `&&` and `||` - they do not currently short-circuit but we intend
-them to in the future.
+We support `&&` and `||`, which short-circuit (only evaluate the second
+expression if needed). However, we used to support versions of `&&` and `||`
+that did not short-circuit; those are deprecated and existing usages outline a
+path towards using the new versions.
 
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
