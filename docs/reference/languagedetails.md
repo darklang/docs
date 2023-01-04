@@ -78,7 +78,15 @@ future.
 
 ### Characters
 
-In the future, Dark will support individual characters.
+Characters in Dark are single display characters. Technically, they are Extended
+Grapheme Clusters, and support `'a'`, `'1'`, `'Ż'`, `'🇵🇷'`, `'👩‍👩‍👧‍👦'`, etc. See
+[Strings](###Strings) above for additional context.
+
+While the Dark language has sufficient support for Characters, the Editor
+experience with Characters is quite limited. For example, attempting to
+`let charExample = 'a'` will fail, as it does not support defining a character
+with a `'` single-quote. Until proper support exists, you can define a Char in
+Dark rather indirectly: `let charExample = "👩‍👩‍👧‍👦" |> String::toList |> List.head`.
 
 ### Lists/Arrays
 
