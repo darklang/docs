@@ -4,8 +4,7 @@ January 1, 2023
 
 ## Language and Standard Library
 
-- Support short-circuiting `||` and `&&` expressions (initially behind a flag -
-  go to Settings to enable)
+- Support short-circuiting `||` and `&&` expressions
   ([#4640](https://github.com/darklang/dark/pull/4640))
 
 - Add `List::partition_v0` function to split a list into 2 lists
@@ -30,8 +29,8 @@ January 1, 2023
 - Update the styling of settings invite
   ([#4643](https://github.com/darklang/dark/pull/4643))
 
-- Switch some settings pages to a regular font (we previously used monospace
-  fonts everywhere) ([#4640](https://github.com/darklang/dark/pull/4640),
+- Start using a nice non-monospace font in the editor, starting with the
+  settings pages ([#4640](https://github.com/darklang/dark/pull/4640),
   [#4656](https://github.com/darklang/dark/pull/4656))
 
 ## Contributor Experience
@@ -41,7 +40,7 @@ January 1, 2023
 
 ## Internal improvements
 
-- Allow traces to be stored in Cloud Storage instead of the DB
+- Experimentally start storing some traces in Cloud Storage instead of the DB
   ([#4652](https://github.com/darklang/dark/pull/4652))
 
 - Add internal function that returns the git hash of the server's current/latest
@@ -53,7 +52,7 @@ January 1, 2023
 - Include Dark client version in ApiServer rollbars
   ([#4645](https://github.com/darklang/dark/pull/4645))
 
-- Merge F# backend code (in `fsharp-backend`) into `backend` dir
+- Merge F# backend code (in `fsharp-backend`) into `backend` directory
   ([#4639](https://github.com/darklang/dark/pull/4639))
 
 - Use [rescript-webapi](https://www.npmjs.com/package/rescript-webapi) instead
@@ -69,9 +68,8 @@ January 1, 2023
 - Rename "Analysis" F# project to "Wasm"
   ([#4671](https://github.com/darklang/dark/pull/4671))
 
-- Add assertion that all standard library functions that take lambdas have
-  default names provided for the lambda arguments
-  ([#4626](https://github.com/darklang/dark/pull/4626))
+- Standard library functions that take lambdas have default names provided for
+  the lambda arguments ([#4626](https://github.com/darklang/dark/pull/4626))
 
 - Remove old POST APIs that have already been replaced by GET APIs
   ([#4620](https://github.com/darklang/dark/pull/4620))
