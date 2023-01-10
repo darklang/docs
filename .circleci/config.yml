@@ -21,7 +21,11 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             # repo-specific deploy key
-            - "6f:c2:ae:f9:8e:45:e9:17:82:ea:d0:8b:66:93:11:88"
+            # generate via `ssh-keygen -t ed25519 -C "ops@darklang.com"`
+            # Public key goes here: https://github.com/darklang/docs/settings/keys
+            # Private key goes here: https://app.circleci.com/settings/project/github/darklang/docs/ssh
+            # Fingerprint from CircleCI goes below
+            - "91:e9:87:60:10:f7:ad:a1:af:42:62:09:78:e7:b3:f0"
       - checkout
       - run:
           name: Deploying to GitHub Pages
