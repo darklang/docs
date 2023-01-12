@@ -78,7 +78,21 @@ future.
 
 ### Characters
 
-In the future, Dark will support individual characters.
+A character in Dark represents a character that you see on your screen, such as
+`'a'`, `'1'`, `'Ż'`, `'🇵🇷'`, `'👩‍👩‍👧‍👦'`. This is in contrast to most languages,
+where a character represents one byte, or perhaps a Unicode codepoint. We chose
+this
+
+The technical name for a Dark character is an _Extended Grapheme Cluster_, and
+can best be thought of as supporting the entire character you see in front of
+you - in the case of emoji, this includes such things as combining characters
+and skin tones. See [Strings](### Strings) above for additional context.
+
+While the Dark language has support for Characters, the Editor experience with
+Characters is quite limited. For example, we do not yet support Character
+literals using single quotes, such as `'a'`. Until proper support exists, you
+can define a Char in Dark rather indirectly:
+`let charExample = "👩‍👩‍👧‍👦" |> String::toList |> List.head`.
 
 ### Lists/Arrays
 
@@ -349,8 +363,10 @@ below the `if` expression.
 Dark supports if/else statement. The argument to an `if` is a boolean. We
 currently support `truthy` types but intend to remove that ability.
 
-We support `&&` and `||` - they do not currently short-circuit but we intend
-them to in the future.
+We support `&&` and `||`, which short-circuit (only evaluate the second
+expression if needed). However, we used to support versions of `&&` and `||`
+that did not short-circuit; those are deprecated (the editor will show
+documentation about how to move to the new versions).
 
 An `if` is not currently allowed without a corresponding `else` - we will relax
 this after we introduce statements.
