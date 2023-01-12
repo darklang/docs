@@ -16,29 +16,41 @@ January 1, 2023
 - Fix lambda argument names for `List::all_v0`
   ([#4626](https://github.com/darklang/dark/pull/4626))
 
-- Add functions that operate on characters: `Char::isUppercase_v0`,
-  `Char::isLowercase_v0`, `Char::toUppercase_v1`, `Char::toLowercase_v1`,
-  `Char::isDigit_v0`, `Char::isASCII_v0`, and `Char::isASCIILetter_v0`
-  ([#4628](https://github.com/darklang/dark/pull/4628))
+- Add functions that operate on characters
+  ([#4628](https://github.com/darklang/dark/pull/4628)):
 
-## Editor Improvements
+  - `Char::isUppercase_v0`
+  - `Char::isLowercase_v0`
+  - `Char::toUppercase_v1`
+  - `Char::toLowercase_v1`
+  - `Char::isDigit_v0`
+  - `Char::isASCII_v0`
+  - `Char::isASCIILetter_v0`
 
 - Allow using `Char` as a function parameter type and return type
   ([#4628](https://github.com/darklang/dark/pull/4628))
 
-- Update the styling of settings invite
+- Standard library functions that take lambdas have default names provided for
+  the lambda arguments ([#4626](https://github.com/darklang/dark/pull/4626))
+
+## Editor Improvements
+
+- Update the styling of the **Settings/Invite** page
   ([#4643](https://github.com/darklang/dark/pull/4643))
 
-- Start using a nice non-monospace font in the editor, starting with the
-  settings pages ([#4640](https://github.com/darklang/dark/pull/4640),
+- Start using a nice non-monospace font in the editor, starting with
+  **Settings** pages ([#4640](https://github.com/darklang/dark/pull/4640),
   [#4656](https://github.com/darklang/dark/pull/4656))
 
 ## Contributor Experience
 
-- Add more client debugging functions
+- Add more debugging functions in the client codebase
   ([#4640](https://github.com/darklang/dark/pull/4640))
 
 ## Internal improvements
+
+- Merge F# backend code (in `fsharp-backend`) into `backend` directory
+  ([#4639](https://github.com/darklang/dark/pull/4639))
 
 - Experimentally start storing some traces in Cloud Storage instead of the DB
   ([#4652](https://github.com/darklang/dark/pull/4652))
@@ -49,11 +61,8 @@ January 1, 2023
 - Check for serialization errors before starting up servers
   ([#4650](https://github.com/darklang/dark/pull/4650))
 
-- Include Dark client version in ApiServer rollbars
+- Include Dark client version in ApiServer exception tracking
   ([#4645](https://github.com/darklang/dark/pull/4645))
-
-- Merge F# backend code (in `fsharp-backend`) into `backend` directory
-  ([#4639](https://github.com/darklang/dark/pull/4639))
 
 - Use [rescript-webapi](https://www.npmjs.com/package/rescript-webapi) instead
   of our Native.res ([#4630](https://github.com/darklang/dark/pull/4630))
@@ -68,10 +77,7 @@ January 1, 2023
 - Rename "Analysis" F# project to "Wasm"
   ([#4671](https://github.com/darklang/dark/pull/4671))
 
-- Standard library functions that take lambdas have default names provided for
-  the lambda arguments ([#4626](https://github.com/darklang/dark/pull/4626))
-
-- Remove old POST APIs that have already been replaced by GET APIs
+- Remove old ApiServer POST endpoints that are no longer used
   ([#4620](https://github.com/darklang/dark/pull/4620))
 
 - Remove unused config variables
