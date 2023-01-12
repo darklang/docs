@@ -86,7 +86,7 @@ this
 The technical name for a Dark character is an _Extended Grapheme Cluster_, and
 can best be thought of as supporting the entire character you see in front of
 you - in the case of emoji, this includes such things as combining characters
-and skin tones. See [Strings](###Strings) above for additional context.
+and skin tones. See [Strings](### Strings) above for additional context.
 
 While the Dark language has support for Characters, the Editor experience with
 Characters is quite limited. For example, we do not yet support Character
