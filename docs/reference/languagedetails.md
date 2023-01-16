@@ -467,15 +467,6 @@ execute.
 
 ## Planned language features
 
-### Tuples
-
-Dark intends to support tuples: lists of defined length supporting heterogeneous
-types.
-
-```elm
-x = (1, "string", { name: "Sam" })
-```
-
 ### Sets
 
 We intend for Dark to support Sets: unordered collections of a single type.
