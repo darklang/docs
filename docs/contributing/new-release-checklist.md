@@ -6,10 +6,7 @@ done more formally on at least a monthly basis.
 
 Every month, we aim to:
 
-- outline technical changes in the Changelog
-
-  see https://docs.darklang.com/changelog
-
+- outline technical changes in [the Changelog](https://docs.darklang.com/changelog)
 - publish a blog post reflecting on those changes
 - update our users, via email and social media, of these changes
 - reflect on the progress made within the past month, and discuss upcoming work
@@ -25,7 +22,7 @@ steps:
 
 - [ ] create and fill in a new set of release notes
   - [ ] create a new `release-n.md` page in `docs/changelog`
-  - [ ] use https://darklang.com/a/dark-changelog to fill in a draft of the
+  - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog) to fill in a draft of the
         changelog this gather PRs merged throughout the month
   - [ ] add reference to new page in sidebar
   - [ ] create headers; move bullets to appropriate headers
@@ -69,7 +66,7 @@ which start off with:
 
 > Changelog:
 >
-> ```
+> ```markdown
 > Area of change
 > - details
 > ```
