@@ -79,7 +79,7 @@ which start off with:
 > No changelog
 
 If you believe the PR has changes worth reporting on within the release notes,
-remove the "Alternatively: no changelog" part at the end. Then, update the (`)
+remove the "Alternatively: no changelog" part at the end. Then, update the (\`)
 backtick-surrounded section with notes on what has changed, grouped into areas
 of change (e.g. "Editor," "Language and Standard Library," and "Internal.")
 
