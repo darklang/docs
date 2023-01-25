@@ -23,6 +23,7 @@ title: "Darklang Release X"
         much, just edit it in the main PR; otherwise updating docs in separate
         PRs might make sense)
   - [ ] merge changelog and docs updates
+  - [ ] [tag repo](https://github.com/darklang/dark/tags)
 - [ ] Video/audio of release discussion
   - [ ] schedule twitch conversation
     - [ ] announce schedule
