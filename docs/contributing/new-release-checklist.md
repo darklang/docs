@@ -13,7 +13,7 @@ Every month, we aim to:
 - reflect on the progress made within the past month, and discuss upcoming work
 
 The easiest way to step through this is to create an issue using the
-[release issue template](/.github/ISSUE_TEMPLATE/release.md)
+[release issue template](https://github.com/darklang/docs/tree/main/.github/issue_template.md)
 
 ## Writing your PRs so the `dark-changelog` canvas will be able to parse the changelog
 
