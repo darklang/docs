@@ -4,7 +4,7 @@ about: Template for a Darklang release
 title: "Darklang Release X"
 ---
 
-- [ ] create and fill in a new set of release notes
+- [ ] create changelog entry/docs update
   - [ ] create a new `release-n.md` page in `docs/changelog`
   - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog)
         to fill in a draft of the changelog this gather PRs merged throughout
@@ -19,13 +19,18 @@ title: "Darklang Release X"
         month? are they worth documenting within the changelog or during our
         normal release cycle? Check `#status` and `#operations` in Discord, for
         reference.
-- [ ] update docs with anything we've done in the past month (if there's not
-      much, just edit it in the main PR; otherwise updating docs in separate PRs
-      might make sense)
-- [ ] merge changelog and docs updates
-- [ ] record (video/audio) a release review, and thoughts for the upcoming
-      month(s)
-  - [ ] publish to youtube (after minor editing?)
+  - [ ] update docs with anything we've done in the past month (if there's not
+        much, just edit it in the main PR; otherwise updating docs in separate
+        PRs might make sense)
+  - [ ] merge changelog and docs updates
+- [ ] Video/audio of release discussion
+  - [ ] schedule twitch conversation
+    - [ ] announce schedule
+  - [ ] record for youtube
+  - [ ] upload to YT (unlisted)
+  - [ ] edit YT video
+  - [ ] publish to youtube
+  - [ ] add link to changelog
 - [ ] prepare drafts
   - [ ] draft blog post
     - [ ] review each changelog item to see if it should be highlighted
@@ -66,4 +71,7 @@ title: "Darklang Release X"
   - [ ] HN
   - [ ] Lobstrs
   - [ ] discord
+- [ ] backlink to blog
+  - [ ] changelog
+  - [ ] youtube
 - [ ] send mailchimp campaign email
