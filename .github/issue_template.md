@@ -1,0 +1,65 @@
+## Darklang Release X
+
+- [ ] create and fill in a new set of release notes
+  - [ ] create a new `release-n.md` page in `docs/changelog`
+  - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog)
+        to fill in a draft of the changelog this gather PRs merged throughout
+        the month
+  - [ ] add reference to new page in sidebar
+  - [ ] create headers; move bullets to appropriate headers
+  - [ ] merge similar bullets where relevant
+  - [ ] revise wording
+  - [ ] review each item and fill in changelog with images, diagrams, screen
+        recordings, etc.
+  - [ ] were there any emergencies (i.e. service interruptions) throughout the
+        month? are they worth documenting within the changelog or during our
+        normal release cycle? Check `#status` and `#operations` in Discord, for
+        reference.
+- [ ] update docs with anything we've done in the past month (if there's not
+      much, just edit it in the main PR; otherwise updating docs in separate PRs
+      might make sense)
+- [ ] merge changelog and docs updates
+- [ ] record (video/audio) a release review, and thoughts for the upcoming
+      month(s)
+  - [ ] publish to youtube (after minor editing?)
+- [ ] prepare drafts
+  - [ ] draft blog post
+    - [ ] review each changelog item to see if it should be highlighted
+    - [ ] consider
+      - [ ] what were the major themes of the month?
+      - [ ] what's immediately useful to our users?
+      - [ ] what interesting technical challenges did we face?
+    - [ ] can we link to any new docs/features?
+    - [ ] can we include any images or gifs?
+    - [ ] what header image should we use? with link
+    - [ ] include commented out links to Lobstrs, HN, Twitter, Mastodon, reddit,
+          youtube, twitch, discord
+  - [ ] draft email
+    - [ ] create mailchimp campaign
+    - [ ] write draft
+  - [ ] draft
+        [tweet](https://twitter.com/darklang)/[toot](https://devtools.social/@darklang)
+  - [ ] draft [HN](https://news.ycombinator.com/submit)
+  - [ ] draft [r/darklang](https://reddit.com/r/darklang)
+  - [ ] draft [Lobstrs](https://lobste.rs/stories/new)
+  - [ ] draft
+        [discord #announcements](https://discord.com/channels/1015413734153388094/1015432022489043025)
+  - [ ] draft
+        [Slack #announcements](https://darkcommunity.slack.com/archives/CP22G0GSJ)
+- [ ] publish blog post
+- [ ] post to socials
+  - [ ] send tweet
+  - [ ] send toot
+  - [ ] post HN
+  - [ ] post r/darklang
+  - [ ] post Lobstrs
+  - [ ] post discord
+  - [ ] post slack \#announcements
+- [ ] update blog post with links
+  - [ ] twitter
+  - [ ] mastodon
+  - [ ] reddit
+  - [ ] HN
+  - [ ] Lobstrs
+  - [ ] discord
+- [ ] send mailchimp campaign email
