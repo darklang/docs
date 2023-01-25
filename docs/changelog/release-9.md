@@ -7,7 +7,8 @@ January 1, 2023
 - Support short-circuiting `||` and `&&` expressions
   ([#4640](https://github.com/darklang/dark/pull/4640),
   [#4644](https://github.com/darklang/dark/pull/4644),
-  [#4646](https://github.com/darklang/dark/pull/4646))
+  [#4674](https://github.com/darklang/dark/pull/4674),
+  [#4676](https://github.com/darklang/dark/pull/4676))
 
 - Add `List::partition_v0` function to split a list into 2 lists
   ([#4618](https://github.com/darklang/dark/pull/4618))
