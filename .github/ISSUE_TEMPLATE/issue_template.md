@@ -1,4 +1,8 @@
-## Darklang Release X
+---
+name: Darklang Release
+about: Template for a Darklang release
+title: "Darklang Release X"
+---
 
 - [ ] create and fill in a new set of release notes
   - [ ] create a new `release-n.md` page in `docs/changelog`
