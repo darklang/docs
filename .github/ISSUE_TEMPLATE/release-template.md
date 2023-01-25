@@ -6,22 +6,15 @@ title: "Darklang Release X"
 
 - [ ] create changelog entry/docs update
   - [ ] create a new `release-n.md` page in `docs/changelog`
-  - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog)
-        to fill in a draft of the changelog this gather PRs merged throughout
-        the month
+  - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog) to fill in a draft of the changelog this gather PRs merged throughout the month
   - [ ] add reference to new page in sidebar
   - [ ] create headers; move bullets to appropriate headers
   - [ ] merge similar bullets where relevant
   - [ ] revise wording
-  - [ ] review each item and fill in changelog with images, diagrams, screen
-        recordings, etc.
-  - [ ] were there any emergencies (i.e. service interruptions) throughout the
-        month? are they worth documenting within the changelog or during our
-        normal release cycle? Check `#status` and `#operations` in Discord, for
-        reference.
-  - [ ] update docs with anything we've done in the past month (if there's not
-        much, just edit it in the main PR; otherwise updating docs in separate
-        PRs might make sense)
+  - [ ] find images (esp gifs) to show behavior
+  - [ ] review each item and fill in changelog with images, diagrams, screen recordings, etc.
+  - [ ] were there any emergencies (i.e. service interruptions) throughout the month? are they worth documenting within the changelog or during our normal release cycle? Check `#status` and `#operations` in Discord, for reference.
+  - [ ] update docs with anything we've done in the past month (if there's not much, just edit it in the main PR; otherwise updating docs in separate PRs might make sense)
   - [ ] merge changelog and docs updates
   - [ ] [tag repo](https://github.com/darklang/dark/tags)
 - [ ] Video/audio of release discussion
@@ -42,8 +35,7 @@ title: "Darklang Release X"
     - [ ] can we link to any new docs/features?
     - [ ] can we include any images or gifs?
     - [ ] what header image should we use? with link
-    - [ ] include commented out links to Lobstrs, HN, Twitter, Mastodon, reddit,
-          youtube, twitch, discord
+    - [ ] include commented out links to Lobstrs, HN, Twitter, Mastodon, reddit, youtube, twitch, discord
   - [ ] draft email
     - [ ] create mailchimp campaign
     - [ ] write draft
@@ -52,10 +44,8 @@ title: "Darklang Release X"
   - [ ] draft [HN](https://news.ycombinator.com/submit)
   - [ ] draft [r/darklang](https://reddit.com/r/darklang)
   - [ ] draft [Lobstrs](https://lobste.rs/stories/new)
-  - [ ] draft
-        [discord #announcements](https://discord.com/channels/1015413734153388094/1015432022489043025)
-  - [ ] draft
-        [Slack #announcements](https://darkcommunity.slack.com/archives/CP22G0GSJ)
+  - [ ] draft [discord #announcements](https://discord.com/channels/1015413734153388094/1015432022489043025)
+  - [ ] draft [Slack #announcements](https://darkcommunity.slack.com/archives/CP22G0GSJ)
 - [ ] publish blog post
 - [ ] post to socials
   - [ ] send tweet
