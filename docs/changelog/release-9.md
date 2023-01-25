@@ -2,6 +2,8 @@
 
 January 1, 2023
 
+*See the [blog post](https://blog.darklang.com/darklang-release-9/) for further discussion.*
+
 ## Language and Standard Library
 
 - Support short-circuiting `||` and `&&` expressions
@@ -9,6 +11,13 @@ January 1, 2023
   [#4644](https://github.com/darklang/dark/pull/4644),
   [#4674](https://github.com/darklang/dark/pull/4674),
   [#4676](https://github.com/darklang/dark/pull/4676))
+  
+  ![image](https://user-images.githubusercontent.com/181762/214688947-998202e3-75e1-4fcc-8119-ee2a47b5acbc.png)
+  
+  - deprecate old `||` and `&&` functions
+  ![image](https://user-images.githubusercontent.com/181762/214688887-51441a25-f379-4815-aaca-546045370b8a.png)
+  
+  - add `convert-to-short-circuiting` command for migrating  
 
 - Add `List::partition_v0` function to split a list into 2 lists
   ([#4618](https://github.com/darklang/dark/pull/4618))
@@ -40,10 +49,15 @@ January 1, 2023
 
 - Update the styling of the **Settings/Invite** page
   ([#4643](https://github.com/darklang/dark/pull/4643))
+  
+  ![image](https://user-images.githubusercontent.com/181762/214689433-93b25695-7977-4c86-89e5-c1fd26fd13a1.png)
 
-- Start using a nice non-monospace font in the editor, starting with
+
+- Start using a nice non-monospace font (Source Sans Pro) in the editor, starting with
   **Settings** pages ([#4640](https://github.com/darklang/dark/pull/4640),
   [#4656](https://github.com/darklang/dark/pull/4656))
+  ![Source Sans Pro paragraph](https://user-images.githubusercontent.com/181762/214718134-945ba919-a5d7-4d8a-9601-9e735fe1893b.png)
+
 
 ## Contributor Experience
 
