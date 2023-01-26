@@ -57,6 +57,7 @@ discussion._
   starting with **Settings** pages
   ([#4640](https://github.com/darklang/dark/pull/4640),
   [#4656](https://github.com/darklang/dark/pull/4656))
+
   ![Source Sans Pro paragraph](/img/changelog/release9/source-sans-pro.png)
 
 ## Contributor Experience
@@ -77,6 +78,10 @@ discussion._
 
 - Check for serialization errors before starting up servers
   ([#4650](https://github.com/darklang/dark/pull/4650))
+- Moved darksa.com and darkstaticassets.com certificates to Google Certificate
+  Manager.
+- Remove unused cloud infrastructure including IP addresses, disks, backups, and
+  IAM roles.
 
 - Include Dark client version in ApiServer exception tracking
   ([#4645](https://github.com/darklang/dark/pull/4645))

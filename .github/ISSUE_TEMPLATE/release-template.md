@@ -5,18 +5,20 @@ title: "Darklang Release X"
 ---
 
 - [ ] create changelog entry/docs update
-  - [ ] create a new `release-n.md` page in `docs/changelog`
-  - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog) to fill in a draft of the changelog this gather PRs merged throughout the month
+  - [ ] add changelog page
+    - [ ] create a new `release-n.md` page in [/docs/changelog](/docs/changelog)
+    - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog) to fill in a draft of the changelog this gather PRs merged throughout the month
+    - [ ] create headers; move bullets to appropriate headers
+    - [ ] merge similar bullets where relevant
+    - [ ] revise wording
+    - [ ] find images (esp gifs) to show behavior
+    - [ ] review each item and fill in changelog with images, diagrams, screen recordings, etc.
+    - [ ] were there any emergencies (i.e. service interruptions) throughout the month? are they worth documenting within the changelog or during our normal release cycle? Check `#status` and `#operations` in Discord, for reference.
+    - [ ] update docs with anything we've done in the past month (if there's not much, just edit it in the main PR; otherwise updating docs in separate PRs might make sense)
   - [ ] add reference to new page in sidebar
-  - [ ] create headers; move bullets to appropriate headers
-  - [ ] merge similar bullets where relevant
-  - [ ] revise wording
-  - [ ] find images (esp gifs) to show behavior
-  - [ ] review each item and fill in changelog with images, diagrams, screen recordings, etc.
-  - [ ] were there any emergencies (i.e. service interruptions) throughout the month? are they worth documenting within the changelog or during our normal release cycle? Check `#status` and `#operations` in Discord, for reference.
-  - [ ] update docs with anything we've done in the past month (if there's not much, just edit it in the main PR; otherwise updating docs in separate PRs might make sense)
-  - [ ] merge changelog and docs updates
+  - [ ] add link to new page from [/docs/changelog.md](/docs/changelog.md)
   - [ ] [tag repo](https://github.com/darklang/dark/tags)
+  - [ ] merge changelog and docs updates
 - [ ] Video/audio of release discussion
   - [ ] schedule twitch conversation
     - [ ] announce schedule
