@@ -5,8 +5,8 @@ sidebar_label: Changelog
 ---
 
 While we continuously deliver features as they're written, we like to
-[package up the work](https://blog.darklang.com/darklang-release-schedule/)
-into monthly changelogs, which we call "Releases".
+[package up the work](https://blog.darklang.com/darklang-release-schedule/) into
+monthly changelogs, which we call "Releases".
 
 - [Release 9](changelog/release-8.md) - December, 2022
 - [Release 8](changelog/release-8.md) - November, 2022
