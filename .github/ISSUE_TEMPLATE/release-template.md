@@ -6,7 +6,7 @@ title: "Darklang Release X"
 
 - [ ] create changelog entry/docs update
   - [ ] add changelog page
-    - [ ] create a new `release-n.md` page in [/docs/changelog/]
+    - [ ] create a new `release-n.md` page in [/docs/changelog](/docs/changelog)
     - [ ] use [the `dark-changelog` canvas](https://darklang.com/a/dark-changelog) to fill in a draft of the changelog this gather PRs merged throughout the month
     - [ ] create headers; move bullets to appropriate headers
     - [ ] merge similar bullets where relevant
@@ -16,7 +16,7 @@ title: "Darklang Release X"
     - [ ] were there any emergencies (i.e. service interruptions) throughout the month? are they worth documenting within the changelog or during our normal release cycle? Check `#status` and `#operations` in Discord, for reference.
     - [ ] update docs with anything we've done in the past month (if there's not much, just edit it in the main PR; otherwise updating docs in separate PRs might make sense)
   - [ ] add reference to new page in sidebar
-  - [ ] add link to new page from [/docs/changelog]
+  - [ ] add link to new page from [/docs/changelog.md](/docs/changelog.md)
   - [ ] [tag repo](https://github.com/darklang/dark/tags)
   - [ ] merge changelog and docs updates
 - [ ] Video/audio of release discussion
