@@ -30,6 +30,8 @@ discussion._
   [#4706](https://github.com/darklang/dark/pull/4706),
   [#4713](https://github.com/darklang/dark/pull/4713))
 
+  ![improved documentation box](/img/changelog/release10/improved-documentation-box.png)
+
 - Reduce the amount of space within the autocomplete dropdown box.
   ([#4709](https://github.com/darklang/dark/pull/4709))
 
@@ -58,7 +60,7 @@ discussion._
 - Add more infrastructure config to Terraform
   ([#4697](https://github.com/darklang/dark/pull/4697))
 
-- React to
+- React to a
   [CircleCI incident](https://circleci.com/blog/jan-4-2023-incident-report)
   ([#313](https://github.com/darklang/docs/pull/313),
   [#4704](https://github.com/darklang/dark/pull/4704),
@@ -68,13 +70,16 @@ discussion._
 
   - rotate our CircleCI keys
   - make it easier to rotate DB credentials
+  - see our Release 10
+    [blog post](https://blog.darklang.com/darklang-release-10) for more
+    information
 
 - Use Tailwind for the account actions menu, documentation box, and tutorial
   tooltips ([#4689](https://github.com/darklang/dark/pull/4689),
   [#4664](https://github.com/darklang/dark/pull/4664),
   [#4700](https://github.com/darklang/dark/pull/4700))
 
-- Mark more functions as Not Queryable instead of Unknown
+- Mark more standard library functions as Not Queryable instead of Unknown
   ([#4729](https://github.com/darklang/dark/pull/4729))
 
 - Move deployment lock to a darklang canvas
