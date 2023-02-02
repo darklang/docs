@@ -5,6 +5,9 @@ September 1, 2022
 Darklang Release 5 includes support for Tuples, a revamped settings panel with
 new settings for contributors, and significant internal reworks.
 
+_See the [blog post](https://blog.darklang.com/darklang-release-5/) for further
+discussion._
+
 ## Major feature: experimental Tuple support
 
 Dark now has work-in-progress support for tuples

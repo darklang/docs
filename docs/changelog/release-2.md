@@ -2,6 +2,9 @@
 
 June 6th, 2022
 
+_See the [blog post](https://blog.darklang.com/darklang-release-3/) for further
+discussion._
+
 Darklang Release 2 is the culmination of 20 months work of rewriting the backend
 from OCaml to F#. This was done to give us more productivity by allowing us use
 more 3rd party SDKs, to solve operational issues, and to make it easier to

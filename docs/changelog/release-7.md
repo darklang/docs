@@ -2,6 +2,9 @@
 
 November 1, 2022
 
+_See the [blog post](https://blog.darklang.com/darklang-releases-7-and-8/) for
+further discussion._
+
 ## Editor improvements
 
 - Remove expandable sidebar, make collapsed sidebar more reliable
