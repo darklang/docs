@@ -2,6 +2,9 @@
 
 December 1, 2022
 
+_See the [blog post](https://blog.darklang.com/darklang-releases-7-and-8/) for
+further discussion._
+
 ## Editor
 
 - Speed up editor load by preloading first API requests

@@ -6,6 +6,9 @@ Darklang Release 3 is focused primarily on taking advantage of the recent
 changes, including new StdLib functions, small languages changes, and sunsetting
 old features.
 
+_See the [blog post](https://blog.darklang.com/darklang-release-3/) for further
+discussion._
+
 ## Language improvements
 
 - When a function is called with a runtime error as an argument, return the

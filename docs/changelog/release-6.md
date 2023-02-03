@@ -2,6 +2,9 @@
 
 October 1, 2022
 
+_See the [blog post](https://blog.darklang.com/darklang-release-6/) for further
+discussion._
+
 ## Major features
 
 ### Support for negative ints and floats

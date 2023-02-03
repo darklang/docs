@@ -2,6 +2,9 @@
 
 August 1, 2022
 
+_See the [blog post](https://blog.darklang.com/darklang-release-4/) for further
+discussion._
+
 ## Standard library improvements
 
 - Many standard library functions now have better descriptions, including much
