@@ -2,9 +2,6 @@
 
 Febuary 1, 2023
 
-_See the [blog post](https://blog.darklang.com/darklang-release-10/) for further
-discussion._
-
 ## Editor Improvements
 
 - Reduce the amount of space within the autocomplete dropdown box
