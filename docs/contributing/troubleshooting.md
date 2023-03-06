@@ -16,7 +16,7 @@ Common fixes:
   package managers we use (NPM, NuGet) develop problems. They can be fixed by
   clearing the build directories (which are in Docker volumes) by running the
   related scripts:
-  - for dotnet errors, use `./scripts/build/clear-dotnet-build` (run in the 
+  - for dotnet errors, use `./scripts/build/clear-dotnet-build` (run in the
     container when it is running)
   - to clear the database, use `./scripts/build/clear-all-local-dbs` (run from
     the host when the container is stopped)
@@ -24,7 +24,7 @@ Common fixes:
     host when the container is stopped)
 - If you're having issues with building the dockerfile (or opening the remote
   dockerfile in VSCode):
-    - Update FORCE_BUILD in the Dockerfile to the next highest number, which will
-      force a fresh build
-    - Ensure you are not running as root (including calling `script/builder` using
-      `sudo`)
+  - Update FORCE_BUILD in the Dockerfile to the next highest number, which will
+    force a fresh build
+  - Ensure you are not running as root (including calling `script/builder` using
+    `sudo`)
