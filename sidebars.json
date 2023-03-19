@@ -187,7 +187,6 @@
     "Working in the Dark repo": [
       "contributing/rescript-and-fsharp-for-dark-developers",
       "contributing/general-concepts",
-      "contributing/tour-of-editor",
       "contributing/tour-of-backend",
       "contributing/repo-layout",
       "contributing/glossary",
