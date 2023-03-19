@@ -291,9 +291,9 @@ frameworks for:
 
 - [Testing HTTP clients](https://github.com/darklang/dark/tree/main/backend/testfiles/httpclient)
 
-- [Fuzz testing](https://github.com/darklang/dark/tree/main/backend/tests/FuzzTests)
+- [Fuzz testing](https://github.com/darklang/stable-dark/tree/main/backend/tests/FuzzTests)
 
-- [Integration tests](https://github.com/darklang/dark/tree/main/integration-tests)
+- [Integration tests](https://github.com/darklang/stable-dark/tree/main/integration-tests)
   were ported to [Playwright](https://playwright.dev/), from TestCafe. They now
   run much faster and are somewhat easier to write.
 
