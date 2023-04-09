@@ -13,7 +13,7 @@ If you're having problems contributing, we want to help:
 Common fixes:
 
 - Sometimes there are compilation problems where the build caches from various
-  package managers we use (NPM, NuGet) develop problems. They can be fixed by
+  package managers we use (NuGet) develop problems. They can be fixed by
   clearing the build directories (which are in Docker volumes) by running the
   related scripts:
   - for dotnet errors, use `./scripts/build/clear-dotnet-build` (run in the
