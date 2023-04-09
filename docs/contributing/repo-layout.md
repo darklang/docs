@@ -12,7 +12,6 @@ here's how the various directories intersect, and what language they use:
 - `.circleci` - CI config file
 - `.ionide` - config for F# VSCode plugin
 - `.vscode` - VSCode config
-- `auth0-branding` - has some assets for our login provider
 - `config` - a set of env vars for each environment. You'll be interested in the
   `dev` environment
 - `docs` - sporadic documentation
@@ -25,17 +24,15 @@ here's how the various directories intersect, and what language they use:
   - `paket-files` - Used by the Paket/NuGet package manager
   - `src/BackendOnlyStdLib` - implementation of functions which need to be run
     on the backend, due to their connection to the DB, queues, etc.
-  - `src/Benchmark` - a benchmark executable to measure the performance of Dark
-    code
   - `src/BwdServer` - webserver that is grand-user facing (at builtwithdark.com)
   - `src/ClientTypes` - type definitions of types that are used in client-server
     communication
   - `src/ClientTypes2BackendTypes` and `src/ClientTypes2ExecutionTypes` -
     mappings between 'internal' types and our client-facing types
   - `src/CronChecker` - trigger events for scheduled work
+  - `src/ExecHost` - allow executing admin tasks (such as migrations) in production
   - `src/HttpMiddleware` - where we define our middlewares used in Dark HTTP
     handlers
-  - `src/LibAnalysis` -
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
@@ -45,11 +42,13 @@ here's how the various directories intersect, and what language they use:
     course the execution engine
   - `src/LibExecutionStdLib` - most of the standard library functions (anything
     that doesn't _need_ to be run on the backend)
+  - `src/LibRealExecution` - Small wrapper around LibExecution for running in
+    production
   - `src/LibService` - library with some common functionality for F# services
     (currently just the backend, soon queues and cron)
   - `src/Prelude` - utilities, libraries, common types; used everywhere
+  - `src/Parser` - parser for Darklang language
   - `src/QueueWorker` - pulls user events from the queue and runs them
-  - `src/Wasm` - "main" module for client-side analysis/execution-engine
   - `tests/TestUtils` - utilities used in Tests and FuzzTests
   - `tests/Tests` - mostly unit tests for backend and libexecution functionality
   - `testfiles/data` - text and binary files used during various backend tests
@@ -58,7 +57,6 @@ here's how the various directories intersect, and what language they use:
   - `testfiles/httphandler` - tests for the Dark HTTP server and middleware
   - `testfiles/httpclient` - tests for the HTTP Library functions
 - `rundir` - anything that runs and stores something stores it here
-  - `integration_test_logs`
   - `logs` - logs from running services, especially `bwdserver.log` (backend)
 - `scripts` - bash scripts to do common (and sometimes uncommon and therefore
   forgettable) actions on the repo. Using scripts is very very common. Anytime
