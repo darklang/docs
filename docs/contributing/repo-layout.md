@@ -2,10 +2,7 @@
 title: Repository directory structure
 ---
 
-The Dark repo contains multiple services and compilation targets. For OCaml,
-here's how the various directories intersect, and what language they use:
-
-![Compilation targets and their respective directories](/img/contributing/compilation-targets.png)
+The Dark repo contains multiple services and compilation targets
 
 ## Directory listing
 
