@@ -341,11 +341,11 @@ Both languages have pipes which are the same as in Dark. In Dark, the passed
 argument goes into the first position. That is not true
 F#, where it goes into the last position. As a result, we tend to put the
 "subject" of the function in the pipeable position (first in Dark,
-last in F#). 
+last in F#).
 
 ### Dictionaries
 
-Dictionaries (hash-maps, etc) are  called `Map` in F#. 
+Dictionaries (hash-maps, etc) are called `Map` in F#.
 
 ### Unit
 
