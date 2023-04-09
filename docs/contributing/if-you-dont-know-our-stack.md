@@ -1,9 +1,9 @@
 ---
-title: If you don't know our stack (F# and ReScript)
+title: If you don't know our stack (F#)
 ---
 
-F# and ReScript can be a little bit daunting, but even if you don't know them,
-there are a bunch of ways to get involved.
+F# can be a little bit daunting, but even if you don't know them, there are a
+bunch of ways to get involved.
 
 ## Other languages
 
@@ -62,9 +62,9 @@ problem for users learning the language the first time. Documenting a bad error
 message, especially with a suggested better version, is a really useful
 contribution.
 
-## Learning F\# or ReScript
+## Learning F\#
 
-Dark is almost everybody's first ReScript or F# project. So if you don't know
+Dark is almost everybody's first F# project. So if you don't know
 these two similar languages, join the club - we all learned as we contributed to
 Dark. Fortunately, they are very similar to Dark.
 
@@ -72,10 +72,10 @@ There are a number of resources to help as well:
 
 - [A guided walkthrough of making your first PR](adding-your-first-test.md)
 - [good first bugs](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-bug)
-  assume you don't know anything about F# or ReScript
+  assume you don't know anything about F#
 
 Also, some bugs, especially our
 [initiatives](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Ainitiative),
-require almost no F# or ReScript knowledge, despite the fact that they are in
+require almost no F# knowledge, despite the fact that they are in
 those parts of the codebase. People with no prior exposure to them should be
 able to make a useful change to one of these in very little time.

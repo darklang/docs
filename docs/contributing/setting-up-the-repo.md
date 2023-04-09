@@ -4,9 +4,8 @@ title: Setting up the Dark repo
 
 You can access the Dark repo at
 [https://github.com/darklang/dark](https://github.com/darklang/dark). This is a
-monorepo containing the main F# backend, the editor (client in ReScript), as
-well as some auxiliary services (Rust mostly) used to run the Dark
-infrastructure.
+monorepo containing the main F# backend, as well as some auxiliary services used
+to run the Dark infrastructure.
 
 - Run through the installation instructions in the
   [README](https://github.com/darklang/dark/blob/main/README.md)

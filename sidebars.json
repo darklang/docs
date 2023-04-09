@@ -185,7 +185,7 @@
       "contributing/adding-a-refactoring"
     ],
     "Working in the Dark repo": [
-      "contributing/rescript-and-fsharp-for-dark-developers",
+      "contributing/fsharp-for-dark-developers",
       "contributing/general-concepts",
       "contributing/tour-of-backend",
       "contributing/repo-layout",

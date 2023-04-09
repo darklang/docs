@@ -10,8 +10,8 @@ something (a little bit) bigger.
 
 Below you'll find resources to help you figure out what to work on. After that,
 head over to
-[Working in the Dark repo](rescript-and-fsharp-for-dark-developers.md) to learn
-how to contribute bigger things, like the basics of F#/ReScript, the layout of
+[Working in the Dark repo](fsharp-for-dark-developers.md) to learn
+how to contribute bigger things, like the basics of F#, the layout of
 the repo, technical guides to different parts of the codebase and product, and
 product and vision docs about where Dark is going.
 

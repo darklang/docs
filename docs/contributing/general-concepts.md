@@ -138,11 +138,11 @@ type matchPattern =
   | MPTuple of id * id * matchPattern * matchPattern * matchPattern list
 ```
 
-These definitions are in ReScript (we have a
-[guide to ReScript for Dark developers](rescript-and-fsharp-for-dark-developers)).
-Briefly, this means that an `expr` is an integer (which is made up of an id and
-a string) or a bool (made up of an id and a string), or a `match` (which is an
-id, an expression to match on, and a list of patterns and expressions), etc
+These definitions are in F# (we have a [guide to F# for Dark
+developers](fsharp-for-dark-developers)).  Briefly, this means that an `expr` is
+an integer (which is made up of an id and a string) or a bool (made up of an id
+and a string), or a `match` (which is an id, an expression to match on, and a
+list of patterns and expressions), etc
 
 This definition is slightly simplified, but it's close. There's definitions for
 literals like ints and strings, for definitions like `let`s, for function calls

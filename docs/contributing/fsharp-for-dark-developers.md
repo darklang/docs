@@ -1,15 +1,13 @@
 ---
-title: ReScript and F# for Dark developers
+title: F# for Dark developers
 ---
 
-This guide aims to introduce you to enough F#/ReScript to contribute to Dark,
-assuming you already know Dark. F# and ReScript are very similar languages, both
-derived from OCaml. We currently use ReScript for the client. We use F# for the
-backend, which is very similar to Dark as well.
+This guide aims to introduce you to enough F# contribute to Dark, assuming you
+already know Dark.
 
-## Some simple F\#/ReScript code
+## Some simple F\# code
 
-Dark and F# and ReScript are very similar. Here's an example function in F#:
+Dark and F# are very similar. Here's an example function in F#:
 
 ```fsharp
 let someFunction (intArgument : int) : string =
