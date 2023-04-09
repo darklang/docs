@@ -44,14 +44,13 @@ language features.
 
 ### Types
 
-F# is a strongly typed-languages. Dark aspires to be, but it doesn't
-have a type-checker yet. This shows the biggest difference in between working in
-these languages, that the compiler will refuse to compile if the types are
-wrong.
+F# is a strongly typed-languages. Dark aspires to be, but it doesn't have a
+type-checker yet. This shows the biggest difference in between working in these
+languages, that the compiler will refuse to compile if the types are wrong.
 
 F# has type-inference, which means that the compiler will try and figure out
-what the types are. Usually type errors actually contain useful information,
-but they need to be read very carefully to find it.
+what the types are. Usually type errors actually contain useful information, but
+they need to be read very carefully to find it.
 
 We've found the best way to debug incorrect types is to add type annotations to
 everything. We add them to all functions (we didn't always do this, but we do
@@ -68,15 +67,14 @@ x + 5
 ```
 
 `x` here, despite being a normal variable definition, has a type signature. F#
-allows this in many places, and it's useful for tracking down these
-errors.
+allows this in many places, and it's useful for tracking down these errors.
 
 We'll discuss declaring types below.
 
 ### Functions
 
-Functions in F# are defined in the outer scope. Type signatures are
-optional but we always use them:
+Functions in F# are defined in the outer scope. Type signatures are optional but
+we always use them:
 
 ```fsharp
 let myFunction (arg1 : int) (arg2 : string) : string =
@@ -95,7 +93,8 @@ returns the result of that expression.
 
 ### Standard library
 
-Most of the code in Dark uses [Tablecloth](https://github.com/darklang/tablecloth).
+Most of the code in Dark uses
+[Tablecloth](https://github.com/darklang/tablecloth).
 
 Note: for implementing the standard libraries, we do not use Tablecloth as it is
 still pretty new and may be in flux. Instead, we try to make sure that we use
@@ -113,8 +112,8 @@ x + 6
 
 ### Float
 
-A `float` is the same in Darklang and F#, both of them are 64-bit
-floating point numbers.
+A `float` is the same in Darklang and F#, both of them are 64-bit floating point
+numbers.
 
 To convert from floats to ints use `Float.toInt`, or `Float.round`.
 
@@ -179,8 +178,8 @@ use indentation instead of separators:
 Note that F# uses `=` to connect a field and a value, and `;` as row separator.
 The types of the fields do not have to be declared.
 
-Records are immutable, like almost everything in F#, and are updated
-using an unusual syntax:
+Records are immutable, like almost everything in F#, and are updated using an
+unusual syntax:
 
 ```fsharp
 let x = { field1 = 56; field2 = true }
@@ -190,8 +189,7 @@ doSomethingWith updatedX
 
 Note that records in Dark are really dictionaries, which is why you update them
 with `Dict::set`. We're trying to figure out how to split records and
-dictionaries apart better in Dark, after which they will be more like
-F#.
+dictionaries apart better in Dark, after which they will be more like F#.
 
 Type definitions for records look like this in F#:
 
@@ -212,13 +210,13 @@ let x = 45
 x + 23
 ```
 
-`let` also allow destructing in F#, although we don't currently use
-that very often.
+`let` also allow destructing in F#, although we don't currently use that very
+often.
 
 ### If
 
-`if` statements in F# are extremely similar to Dark, including that they
-only allow `bool`s as the condition, and in their syntax.
+`if` statements in F# are extremely similar to Dark, including that they only
+allow `bool`s as the condition, and in their syntax.
 
 In F#:
 
@@ -232,8 +230,8 @@ else "Access denied"
 
 F# has some unusual operators. Most importantly, the equality operator is `=`
 (that's just one equals sign), whereas in most languages it's `==` (including
-Dark). `=` is very strict equality, equivalent to `===` in
-languages that have that, such as JS.
+Dark). `=` is very strict equality, equivalent to `===` in languages that have
+that, such as JS.
 
 F# also has a `==` operator, but you should never use it.
 
@@ -241,8 +239,8 @@ F# use `<>` for inequality (`!=` in Dark).
 
 ### Match
 
-Dark has a `match` statement that is very similar to F#, with slightly
-different syntax. In Dark you write:
+Dark has a `match` statement that is very similar to F#, with slightly different
+syntax. In Dark you write:
 
 ```fsharp
 match myValue
@@ -260,8 +258,8 @@ match myValue with
 
 Notice the `with` keyword, and starting the patterns with `|`.
 
-F# also support more powerful `match`es, for example multiple patterns
-can match a single branch:
+F# also support more powerful `match`es, for example multiple patterns can match
+a single branch:
 
 ```fsharp
 match myValue with
@@ -279,13 +277,13 @@ match myValue with
 
 ### Variants
 
-Darklang has a handful of enums for `Option` and `Result` types: `Just`, `Nothing`,
-`Ok` and `Error`. In the future we will expand this to allow user-defined types
-as well.
+Darklang has a handful of enums for `Option` and `Result` types: `Just`,
+`Nothing`, `Ok` and `Error`. In the future we will expand this to allow
+user-defined types as well.
 
-F# supports the `Option` and `Result` types and we use them a lot.
-However, the constructors for Option are named differently; both languages use:
-`Some` and `None` instead of `Just` and `Nothing`.
+F# supports the `Option` and `Result` types and we use them a lot. However, the
+constructors for Option are named differently; both languages use: `Some` and
+`None` instead of `Just` and `Nothing`.
 
 These enums are typically called "variants". We use them frequently, especially
 to represent expressions. For example in `FluidExpression.fs`:
@@ -327,8 +325,8 @@ match expr with
 
 ### Lambdas
 
-F# supports lambdas and we use them frequently. They have a
-different syntax to Dark, F# uses:
+F# supports lambdas and we use them frequently. They have a different syntax to
+Dark, F# uses:
 
 ```fsharp
 list
@@ -338,10 +336,9 @@ list
 ### Pipes
 
 Both languages have pipes which are the same as in Dark. In Dark, the passed
-argument goes into the first position. That is not true
-F#, where it goes into the last position. As a result, we tend to put the
-"subject" of the function in the pipeable position (first in Dark,
-last in F#).
+argument goes into the first position. That is not true F#, where it goes into
+the last position. As a result, we tend to put the "subject" of the function in
+the pipeable position (first in Dark, last in F#).
 
 ### Dictionaries
 
@@ -400,8 +397,8 @@ print(myString)
 
 For functions that perform IO, you'll need to use the `uply` or `task`
 "computation expression". A "computation expression" is a special F# language
-feature for writing abstractions with a nice syntax. The `uply` CE allows using a
-specialized asynchronous structure called Ply (which is extremely similar to a
+feature for writing abstractions with a nice syntax. The `uply` CE allows using
+a specialized asynchronous structure called Ply (which is extremely similar to a
 .Net Task) easily, and can best be illustrated with an example:
 
 ```fsharp

@@ -27,7 +27,8 @@ The Dark repo contains multiple services and compilation targets
   - `src/ClientTypes2BackendTypes` and `src/ClientTypes2ExecutionTypes` -
     mappings between 'internal' types and our client-facing types
   - `src/CronChecker` - trigger events for scheduled work
-  - `src/ExecHost` - allow executing admin tasks (such as migrations) in production
+  - `src/ExecHost` - allow executing admin tasks (such as migrations) in
+    production
   - `src/HttpMiddleware` - where we define our middlewares used in Dark HTTP
     handlers
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,

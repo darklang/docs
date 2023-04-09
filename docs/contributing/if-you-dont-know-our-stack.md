@@ -64,9 +64,9 @@ contribution.
 
 ## Learning F\#
 
-Dark is almost everybody's first F# project. So if you don't know
-these two similar languages, join the club - we all learned as we contributed to
-Dark. Fortunately, they are very similar to Dark.
+Dark is almost everybody's first F# project. So if you don't know these two
+similar languages, join the club - we all learned as we contributed to Dark.
+Fortunately, they are very similar to Dark.
 
 There are a number of resources to help as well:
 
@@ -76,6 +76,6 @@ There are a number of resources to help as well:
 
 Also, some bugs, especially our
 [initiatives](https://github.com/darklang/dark/issues?q=is%3Aopen+is%3Aissue+label%3Ainitiative),
-require almost no F# knowledge, despite the fact that they are in
-those parts of the codebase. People with no prior exposure to them should be
-able to make a useful change to one of these in very little time.
+require almost no F# knowledge, despite the fact that they are in those parts of
+the codebase. People with no prior exposure to them should be able to make a
+useful change to one of these in very little time.
