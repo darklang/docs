@@ -27,13 +27,7 @@ Here's the journey it takes:
   function arguments and return values are saved in Postgres tables
   `stored_events_v2`, `function_arguments` and `function_results_v2`
 - A trace is pushed to [Pusher](https://pusher.com), which forwards it to the
-  editor, where it appears as a dot on the canvas.
-- When a user clicks on the trace, the trace is loaded from the server. A web
-  worker named
-  [`Fetcher`](https://github.com/darklang/dark/blob/main/client/workers/Fetcher.res)
-  fetches the trace in the background, decodes it, and sends the value to the
-  editor. On the server-side, it is fetched from the
-  [ApiServer](https://github.com/darklang/dark/blob/main/backend/src/ApiServer/Api/APITraces.fs).
+  editor.
 
 ## Traces
 

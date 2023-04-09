@@ -60,8 +60,6 @@ here's how the various directories intersect, and what language they use:
 - `rundir` - anything that runs and stores something stores it here
   - `integration_test_logs`
   - `logs` - logs from running services, especially `bwdserver.log` (backend)
-  - `screenshots` - for integration tests
-  - `videos` - for integration tests
 - `scripts` - bash scripts to do common (and sometimes uncommon and therefore
   forgettable) actions on the repo. Using scripts is very very common. Anytime
   there's something interesting, we add a script to do it. Scripts are

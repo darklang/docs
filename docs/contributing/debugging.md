@@ -7,16 +7,6 @@ title: Debugging
 Both the frontend and backend have simple log statements used during local
 development, which return `()`.
 
-### Client
-
-In the `client`, you may log with either of:
-
-- `Js.log2("my message", anyValue)`
-- `Debug.loG("my message", anyValue)`
-
-Both of these print in the browser console, with `Debug.loG` being more
-flexible.
-
 ### Backend
 
 In the `backend` you may log with `print` or `printMetadata`. `print` takes a
@@ -24,13 +14,13 @@ single `string` argument while `printMetadata` allows you to pass in an
 additional `List<string * obj>` of metadata.
 
 ```fsharp
-print "Starting ApiServer"
-printMetadata "Starting ApiServer" [("timestamp", DateTimeOffset.Now)]
+print "Starting BwdServer"
+printMetadata "Starting BwdServer" [("timestamp", DateTimeOffset.Now)]
 ```
 
 The logs may be found in `rundir/logs`, in a file corresponding to the
-executable that is logging. For example, ApiServer will log to
-`rundir/logs/apiserver.log`
+executable that is logging. For example, BwdServer will log to
+`rundir/logs/bwdserver.log`
 
 ## Fuzzer
 
