@@ -2,7 +2,7 @@
 
 ## Code of conduct / Terms of service
 
-Dark does not yet have defined terms of service. As such, **we make no promises
+Darklang does not yet have defined terms of service. As such, **we make no promises
 at all** about any aspect of our service, including keeping the service or your
 programs running.
 
@@ -17,19 +17,19 @@ not, and we choose not to do this for any reason.
 ## Service Level
 
 We make a best-effort attempt to keep the service up and running at all times.
-We recommend Dark not be used for essential services needing 99% or more uptime,
+We recommend Darklang not be used for essential services needing 99% or more uptime,
 though we typically achieve that. We make no promises at all regarding uptime,
 and have no obligations to any customer or user in this regard.
 
 We recommend that an individual canvas makes no more than 10 requests per
 second.
 
-We may disable part or all of a Dark canvas which is causing issues for us (e.g.
+We may disable part or all of a Darklang canvas which is causing issues for us (e.g.
 operational, legal, etc).
 
 <!-- markdownlint-disable MD018 -->
 
-Dark has short downtime approximately four times a year when our hosted DB
+Darklang has short downtime approximately four times a year when our hosted DB
 provider (Google Cloud SQL) performs maintenance. This is scheduled for Tuesdays
 around 8am PST, and often lasts as little as 30 seconds. We usually notify the
 #status channel in our Discord in advance, and as it happens.

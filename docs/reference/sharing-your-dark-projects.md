@@ -1,7 +1,7 @@
 ---
 id: sharing-dark
-title: Sharing Dark
-sidebar_label: Sharing Dark
+title: Sharing Darklang
+sidebar_label: Sharing Darklang
 ---
 
 Thanks for being part of our beta! We'd love for you to share your Darklang
@@ -9,10 +9,10 @@ experience. Below you'll find some resources that you might be useful.
 
 ## Naming
 
-Darklang is called "darklang", short for "Dark" "language". It's pronounced
+Darklang is called "darklang", short for "Darklang" "language". It's pronounced
 "dark-lang". The `"D"` may be capitalized as Darklang is a proper noun, but feel
 free to leave it lowercase (as we do in our logo). The "`l`" is never
-capitalized, and Darklang is one word, not two (so no spaces between "Dark" and
+capitalized, and Darklang is one word, not two (so no spaces between "Darklang" and
 "lang").
 
 ## Positioning / market
@@ -25,7 +25,7 @@ bucket, and "deployless" is another word we use for it.
 ## Slide template
 
 [Slide template](https://darklang.com/slide-template) for giving talks about
-Dark at meetups and at work.
+Darklang at meetups and at work.
 
 ## Logos
 

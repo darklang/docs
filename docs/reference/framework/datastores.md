@@ -2,7 +2,7 @@
 
 ## Overview
 
-Datastores in Dark are key-value based (persistent hash-maps). When you create a
+Datastores in Darklang are key-value based (persistent hash-maps). When you create a
 new datastore, you specify the schema for the record.
 
 ![Empty Datastore](/img/datastores/empty.png)
@@ -141,7 +141,7 @@ This allows you to write a function that can be evaluated for the datastore.
 
 DB::query allows taking a datastore and a block filter. Note that this does not
 check every value in the table but rather is optimized to find data with
-indexes. Errors at compile-time if Dark's compiler does not yet support the code
+indexes. Errors at compile-time if Darklang's compiler does not yet support the code
 in question (please let us know when you hit this, and which function you wanted
 to use!)
 
@@ -152,7 +152,7 @@ one response, with the key and record.
 ### Creating References Between DBs
 
 This canvas shows the way to create a reference between two datastores: in this
-case between Dark employees and their pets:
+case between Darklang employees and their pets:
 [https://darklang.com/a/sample-datastore](https://darklang.com/a/sample-database)
 
 Users have a pets field, which is a list of strings. The keys for the pets are
@@ -168,7 +168,7 @@ If you are still in development and don’t need the data, creating a REPL and
 deleting all data in a DB will unlock it (`DB::deleteAll`).
 
 To change your schema without deleting the data, you can use a live migration
-process. In the future, this will be built into Dark, but for now you can follow
+process. In the future, this will be built into Darklang, but for now you can follow
 [Paul Shen's excellent guide](https://www.notion.so/paulshen/Datastore-migration-in-Dark-e8d50f81366b48fc92c980372f68d316)
 to the process.
 

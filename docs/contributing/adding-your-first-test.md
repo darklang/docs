@@ -4,7 +4,7 @@ title: Adding your first test
 
 Let's talk you through the first contribution. You'll write a small unit test
 for a built-in function. This will get you through the process of contributing
-and get you familiar with how to get code into Dark.
+and get you familiar with how to get code into Darklang.
 
 _We're assuming you've got the repo is set up and the `builder` script is
 running (or if you're running the devcontainer in VSCode, that the devcontainer
@@ -18,7 +18,7 @@ your favorite.
 
 As an example, let's add one for `Float::add_v0`.
 
-Unit tests for Dark functions are in `backend/testfiles/execution/*.tests"`,
+Unit tests for Darklang functions are in `backend/testfiles/execution/*.tests"`,
 typically named after the module we're in (e.g., in this case, we want
 `float.tests`). See
 [testfiles/README.md](https://github.com/darklang/dark/tree/main/backend/testfiles/README.md)

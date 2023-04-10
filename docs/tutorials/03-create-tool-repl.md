@@ -4,7 +4,7 @@ sidebar_label: Create a tool in a REPL
 id: create-tool-repl
 ---
 
-REPLs in Dark are general-purpose coding blocks. They're typically to create
+REPLs in Darklang are general-purpose coding blocks. They're typically to create
 reusable tools, experiments, one-off commands, or admin dashboards, in a similar
 way that you might use scripts or REPLs in other languages.
 
@@ -20,7 +20,7 @@ library to make API calls.
 This will show you all the standard library functions for `HttpClient`, their
 signatures, and their docstrings.
 
-3. Continue typing, until you have "httpclientpost". Dark autocompletes on
+3. Continue typing, until you have "httpclientpost". Darklang autocompletes on
    substrings so getting the exact text isn't important:
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.21.21_AM.png)
@@ -29,7 +29,7 @@ signatures, and their docstrings.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Dark automatically creates spaces for the four arguments that `HttpClient::post`
+Darklang automatically creates spaces for the four arguments that `HttpClient::post`
 requires. We display a gray play button beside the function &ndash; it will turn
 green when all the arguments are complete, allowing you to run the function from
 within the editor.
@@ -65,10 +65,10 @@ within the editor.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.43.39_AM.png)
 
-9. 404s in Dark appear in the 404 section of the sidebar. We'll discuss that
+9. 404s in Darklang appear in the 404 section of the sidebar. We'll discuss that
    more later.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
-Congratulations! You've built a Dark REPL and which calls the Dark HTTP Client
+Congratulations! You've built a Darklang REPL and which calls the Darklang HTTP Client
 function.

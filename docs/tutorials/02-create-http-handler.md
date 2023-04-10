@@ -28,7 +28,7 @@ browser HTTP request.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
 
-5. Go back to Dark to edit your code. Add `+ 5` to the end of the code and leave
+5. Go back to Darklang to edit your code. Add `+ 5` to the end of the code and leave
    your cursor in line.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
@@ -43,6 +43,6 @@ browser HTTP request.
 
 6. Hover your mouse over the white dots on the left. Each dot is a "trace",
    representing a single request to your handler. Traces are fundamental to
-   coding in Dark, and we'll come back to them later.
+   coding in Darklang, and we'll come back to them later.
 
-Congratulations! You've now created (and deployed) a HTTP endpoint on Dark.
+Congratulations! You've now created (and deployed) a HTTP endpoint on Darklang.

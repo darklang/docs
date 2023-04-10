@@ -15,15 +15,15 @@ information in Airtable. An Airtable sample canvas is available
 - Access to the [Airtable API documentation](https://airtable.com/api).
 - Access to your [Airtable API key](https://airtable.com/account).
 
-## Sending Information From Airtable to Dark
+## Sending Information From Airtable to Darklang
 
 - Create a background worker to send data to Airtable.
 - Add your API key, the Airtable API, and the Airtable table you’re going to
   use. An Airtable table looks something like this:
   "appYPi96qgCwabzfE/Airtable%20Sample"
-- We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls
+- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP calls
   using `HttpClient::get`.
-  - Headers in Dark are passed in a dict, but we have convenience functions for
+  - Headers in Darklang are passed in a dict, but we have convenience functions for
     them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`. You
     can inspect the headers by clicking on `header` to see it’s live value.
   - To test out the API call, press the Play button.
@@ -34,9 +34,9 @@ information in Airtable. An Airtable sample canvas is available
 
 ![airtable/image5.png](/img/tutorials/airtable/image5.png)
 
-## Putting Information From Airtable into a Dark Datastore
+## Putting Information From Airtable into a Darklang Datastore
 
-1. Create a Dark datastore and populate it with the fields you need.
+1. Create a Darklang datastore and populate it with the fields you need.
 
 ![airtable/image1.png](/img/tutorials/airtable/image1.png)
 
@@ -49,15 +49,15 @@ information in Airtable. An Airtable sample canvas is available
 
 ![airtable/image2.png](/img/tutorials/airtable/image2.png)
 
-## Sending Information From Dark to Airtable
+## Sending Information From Darklang to Airtable
 
 - Create a background worker to send data to Airtable.
 - Add your API key, the Airtable API, and the Airtable table you’re going to
   use. An Airtable table looks something like this:
   appYPi96qgCwabzfE/Airtable%20Sample
-- We’ll access the data over Airtable’s JSON API. In Dark, we make HTTP calls
+- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP calls
   using `HttpClient::get`.
-  - Headers in Dark are passed in a dict, but we have convenience functions for
+  - Headers in Darklang are passed in a dict, but we have convenience functions for
     them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`. You
     can inspect the headers by clicking on ‘header’ to see it’s live value.
   - To test out the API call, press the Play button.

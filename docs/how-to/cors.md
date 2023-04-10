@@ -1,6 +1,6 @@
 ---
 id: cors
-title: How to work with CORS in Dark
+title: How to work with CORS in Darklang
 sidebar_label: How to work with CORS
 ---
 
@@ -18,7 +18,7 @@ CORS is available in
 the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 This document addresses the common needs developers run into with respect to
-CORS when writing an application in Dark. The three primary pieces of CORS this
+CORS when writing an application in Darklang. The three primary pieces of CORS this
 document addresses are:
 
 - `Access-Control-Allow-Origin` — what domains requests are coming from.
@@ -27,12 +27,12 @@ document addresses are:
 - `Access-Control-Allow-Headers` & `Access-Control-Allow-Methods` — specific
   methods & headers used within the application.
 
-## Out of the Box CORS Settings in Dark
+## Out of the Box CORS Settings in Darklang
 
-Dark automatically uses permissive canvas-wide CORS settings with localhost to
-make it easy to get started when developing your backend with Dark.
+Darklang automatically uses permissive canvas-wide CORS settings with localhost to
+make it easy to get started when developing your backend with Darklang.
 
-- Today, Dark sets accepts requests from localhost:3000, localhost:5000, and
+- Today, Darklang sets accepts requests from localhost:3000, localhost:5000, and
   localhost:8000, as long as you do **not** have special headers or
   authentication. More on the default supported headers is in
   [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
@@ -109,7 +109,7 @@ header to your response.
 
 ## Application Wide CORS
 
-Dark does not yet have middleware, and preflighting must be added per endpoint.
+Darklang does not yet have middleware, and preflighting must be added per endpoint.
 We recommend creating a function of the logic and then calling it from each
 `OPTIONS` handler.
 

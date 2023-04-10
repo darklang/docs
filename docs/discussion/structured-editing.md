@@ -3,15 +3,15 @@ id: structured-editing
 title: Structured Editing
 ---
 
-_Note: for now, Dark is only supported for Chrome with browser extensions
+_Note: for now, Darklang is only supported for Chrome with browser extensions
 disabled._
 
-At heart, Dark is an expression-oriented programming language. This aspect of
-Dark enables powerful features like live values and trace-driven development.
-This section introduces a simple way to think about the structure of Dark
+At heart, Darklang is an expression-oriented programming language. This aspect of
+Darklang enables powerful features like live values and trace-driven development.
+This section introduces a simple way to think about the structure of Darklang
 programs within the editor.
 
-When writing code in Dark, you are building up expressions, relying heavily on
+When writing code in Darklang, you are building up expressions, relying heavily on
 autocomplete.
 
 ## Blanks
@@ -55,7 +55,7 @@ used in the editor are below.
 
 ## Nesting Expressions
 
-Expressions in Dark are nested. For example, a multiplication expression is a
+Expressions in Darklang are nested. For example, a multiplication expression is a
 compound expression with two sub-expressions as operands:
 
 ![Multiplication Diagram](/img/structuredediting/mul_diagram.png)
@@ -83,14 +83,14 @@ operands: `1` and `2 * 3`.
 ### Let Expressions
 
 This nesting of expressions applies to all parts of the language, not just to
-mathematical expressions. When defining a variable in Dark, you use a let
+mathematical expressions. When defining a variable in Darklang, you use a let
 expression, which has 3 parts: a variable name, a value (an expression!) bound
 to that variable, and a body (another expression!) within which you can use the
 name as an expression to stand in for the value:
 
 ![Let Diagram](/img/structuredediting/let_diagram.png)
 
-Here's a let with 3 blanks in Dark:
+Here's a let with 3 blanks in Darklang:
 
 ![Blanks in Let](/img/structuredediting/blanks_in_let_example.png)
 
@@ -103,7 +103,7 @@ branch becomes the value of the if expression as a whole.
 
 ![If Diagram](/img/structuredediting/if_diagram.png)
 
-Here's a conditional in Dark:
+Here's a conditional in Darklang:
 ![If Example](/img/structuredediting/if_example.png)
 
 ### Match Expressions
@@ -119,7 +119,7 @@ of the match as a whole.
 
 ### Pipelines
 
-Pipelines are a key part of the Dark language. They allow you to create a chain
+Pipelines are a key part of the Darklang language. They allow you to create a chain
 of expressions, where each chain is an input to the next expression in the
 sequence.
 
@@ -146,7 +146,7 @@ there before. Note that partials evaluate to whatever was there before:
 
 ## Comments
 
-To add comments to your Dark code, start a line with `let _ =` and add a string
+To add comments to your Darklang code, start a line with `let _ =` and add a string
 containing the comment you'd like to include.
 
 ![Option Example](/img/language/comment.png)
@@ -155,16 +155,16 @@ containing the comment you'd like to include.
 
 ### Undo/redo
 
-Dark supports unlimited undo/redo in a single element. Undo with
+Darklang supports unlimited undo/redo in a single element. Undo with
 `Ctrl-Z`/`Cmd-Z` and redo with `Ctrl-Shift-Z`/`Cmd-Shift-Z`.
 
 ### Copy/paste
 
 You can copy/paste selections, which is often used for refactoring.
 
-It may be helpful to note that copy/paste only works in Dark between handlers at
+It may be helpful to note that copy/paste only works in Darklang between handlers at
 this time. Copying JSON from an external source will paste into your handlers in
-Dark, but if you write code in the Dark language in your text editor of choice,
+Darklang, but if you write code in the Darklang language in your text editor of choice,
 that code will not paste. We hope to improve this experience in the future.
 
 ### Command Palette

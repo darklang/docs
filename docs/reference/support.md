@@ -7,7 +7,7 @@ sidebar_label: Support & Feedback
 ### Support
 
 We provide support via the
-[Dark Community Discord](https://darklang.com/discord-invite). Dark engineers
+[Darklang Community Discord](https://darklang.com/discord-invite). Darklang engineers
 answer questions, often within minutes. Lots of experienced community members
 are also around to offer helpful suggestions.
 

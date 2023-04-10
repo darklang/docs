@@ -4,7 +4,7 @@ title: Unique Aspects
 sidebar_label: Unique Aspects
 ---
 
-Dark being connected to the editor and infrastructure allows for unique language
+Darklang being connected to the editor and infrastructure allows for unique language
 functionality.
 
 ## Play & Replay Buttons

@@ -8,13 +8,13 @@ Watch a demo video of this project:
 
 #### Getting started
 
-Dark allows you to build backends (API endpoints, workers, cron, and data
+Darklang allows you to build backends (API endpoints, workers, cron, and data
 storage) by writing only your business logic, using production traces.
 
 You can access you canvas at darklang.com/a/USERNAME-CANVASNAME (we recommend
 USERNAME-signin for this project).
 
-First, on that canvas build a hello world API endpoint to get a feel for Dark:
+First, on that canvas build a hello world API endpoint to get a feel for Darklang:
 
 ![reactspa/image15.gif](/img/tutorials/reactspa/image15.gif)
 
@@ -42,9 +42,9 @@ We’ll need some setup on your machine to upload the react app. Run these
 commands on OSX to install. To read a longer version explaining what each of
 these commands do, go here:
 
-[Hosting Static Assets in Dark](/how-to/static-assets.md)
+[Hosting Static Assets in Darklang](/how-to/static-assets.md)
 
-Note, replace anywhere that says USERNAME and PASSWORD with your Dark username
+Note, replace anywhere that says USERNAME and PASSWORD with your Darklang username
 and password.
 
 ```shell
@@ -61,7 +61,7 @@ If you get “Not found” on the last step, you’ll need to visit
 
 #### Serving Hosted Assets
 
-When you go back to Dark, your assets will be available (in this case, our
+When you go back to Darklang, your assets will be available (in this case, our
 compiled Javascript application).
 
 ![reactspa/image24.png](/img/tutorials/reactspa/image24.png)
@@ -100,7 +100,7 @@ requirements:
 
 #### Setting Up the /hosts Endpoint (API, Datastore, REPL)
 
-From Dark, we can see the failed request.
+From Darklang, we can see the failed request.
 
 ![reactspa/image3.png](/img/tutorials/reactspa/image3.png)
 
@@ -124,7 +124,7 @@ Create a datastore which lists all hosts. We can create it from the omnibox or
 the left side bar, and rename it. We can also choose other parameters. In this
 case, I’ve chosen phone numbers and Slack IDs to send texts and DMs.
 
-Datastores in Dark are key-value based, not relational. This tutorial will
+Datastores in Darklang are key-value based, not relational. This tutorial will
 include step by step instructions, but more information on datastores is
 available [here](/discussion/dark-backend-components.md#persistent-datastores).
 
@@ -174,7 +174,7 @@ then took the name for each host.
 To see how this works, click first on `DB::getAll` to see the list of objects,
 then click on `\val` to see an example object, and then `val.name` will show you
 the `name` field.
-[Functional aspects of Dark](/discussion/functional-aspects.md) has more
+[Functional aspects of Darklang](/discussion/functional-aspects.md) has more
 information on pipelines and maps, but for the tutorial copying this code will
 work.
 
@@ -251,7 +251,7 @@ you’ll get two tokens back, one of which is the format "xoxb-\*".
 Back in our post visits handler, hit enter at the end of the line to write more
 code (This converts our `DB::set` action into a statement. Not necessary reading
 now, but more on implicit returns is in the
-[functional aspects of Dark](/discussion/functional-aspects.md)).
+[functional aspects of Darklang](/discussion/functional-aspects.md)).
 
 To send information to be used asynchronously (like for API calls) we can use
 the keyword emit to emit to an async background worker with a queue.

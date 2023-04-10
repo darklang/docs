@@ -1,13 +1,13 @@
 ---
-title: F# for Dark developers
+title: F# for Darklang developers
 ---
 
-This guide aims to introduce you to enough F# contribute to Dark, assuming you
-already know Dark.
+This guide aims to introduce you to enough F# contribute to Darklang, assuming you
+already know Darklang.
 
 ## Some simple F\# code
 
-Dark and F# are very similar. Here's an example function in F#:
+Darklang and F# are very similar. Here's an example function in F#:
 
 ```fsharp
 let someFunction (intArgument : int) : string =
@@ -22,7 +22,7 @@ called `intArgument`, and returns a `string`. Three variables are defined in the
 body, first a string, then an int, then a float, and finally we call the
 `anotherFunction` function with all three parameters as arguments.
 
-In Dark this would be written:
+In Darklang this would be written:
 
 ```fsharp
 someFunction
@@ -35,16 +35,16 @@ let aFloat = 6.72
 anotherFunction aString anInt aFloat
 ```
 
-## Dark vs F\#
+## Darklang vs F\#
 
 Darklang and F# are all influenced by OCaml. Though Darklang is currently a
-subset of these languages, Dark will continue to grow some more of their
+subset of these languages, Darklang will continue to grow some more of their
 features. We'll discuss the similarities and differences as we go through
 language features.
 
 ### Types
 
-F# is a strongly typed-languages. Dark aspires to be, but it doesn't have a
+F# is a strongly typed-languages. Darklang aspires to be, but it doesn't have a
 type-checker yet. This shows the biggest difference in between working in these
 languages, that the compiler will refuse to compile if the types are wrong.
 
@@ -86,14 +86,14 @@ let myFunction (arg1 : int) (arg2 : string) : string =
 Here, `myFunction` has two arguments, `arg1` and `arg2`, which are an `int` and
 `string` respectively. It returns a `string`.
 
-Like in Dark, the body of a function is just an expression, and it automatically
+Like in Darklang, the body of a function is just an expression, and it automatically
 returns the result of that expression.
 
 (see [below](#advanced-functions) for more details on functions in F#)
 
 ### Standard library
 
-Most of the code in Dark uses
+Most of the code in Darklang uses
 [Tablecloth](https://github.com/darklang/tablecloth).
 
 Note: for implementing the standard libraries, we do not use Tablecloth as it is
@@ -102,8 +102,8 @@ libraries from `.NET`, FSharp.Core, or if necessary, the FSharpPlus library.
 
 ### Int
 
-An `int` is the same in Dark and F#, same syntax, same meaning. Note that ints
-are 32-bit in F#, and 64-bit in Dark.
+An `int` is the same in Darklang and F#, same syntax, same meaning. Note that ints
+are 32-bit in F#, and 64-bit in Darklang.
 
 ```fsharp
 let x = 5
@@ -119,13 +119,13 @@ To convert from floats to ints use `Float.toInt`, or `Float.round`.
 
 ### Bool
 
-Like in Dark, `bool`s in F# are either `true` or `false`.
+Like in Darklang, `bool`s in F# are either `true` or `false`.
 
 ### String
 
 Strings are Unicode in Darklang and F#. While you're unlikely to hit differences
 in practice, they do actually use a different in-memory representation, with
-Dark using UTF-8, and F# using .NET's UTF-16.
+Darklang using UTF-8, and F# using .NET's UTF-16.
 
 ```fsharp
 let myString = "some string, escaping is allowed\nwhich dark doesn't support yet" in
@@ -154,14 +154,14 @@ separators, like so:
 (However, F# allows separators to be omitted which the list elements are lined
 up vertically, as it uses indentation as the separator).
 
-While Dark technically allows you to create lists that have different types in
+While Darklang technically allows you to create lists that have different types in
 them (which you should not do), F# emphatically does not.
 
 To type check a list in F#, you use `List<int>`.
 
 ### Records
 
-Records are mostly used as objects are in most languages. Like Dark, they only
+Records are mostly used as objects are in most languages. Like Darklang, they only
 have fields, not methods, and you use functions to manipulate them.
 
 F# uses a familiar syntax, but with `=` instead of `:`. It also allows you tes
@@ -187,9 +187,9 @@ let updatedX = { x with field1 = 57 }
 doSomethingWith updatedX
 ```
 
-Note that records in Dark are really dictionaries, which is why you update them
+Note that records in Darklang are really dictionaries, which is why you update them
 with `Dict::set`. We're trying to figure out how to split records and
-dictionaries apart better in Dark, after which they will be more like F#.
+dictionaries apart better in Darklang, after which they will be more like F#.
 
 Type definitions for records look like this in F#:
 
@@ -203,7 +203,7 @@ type Person =
 
 ### Let
 
-`let`s in F# are the same as in Dark:
+`let`s in F# are the same as in Darklang:
 
 ```fsharp
 let x = 45
@@ -215,7 +215,7 @@ often.
 
 ### If
 
-`if` statements in F# are extremely similar to Dark, including that they only
+`if` statements in F# are extremely similar to Darklang, including that they only
 allow `bool`s as the condition, and in their syntax.
 
 In F#:
@@ -230,17 +230,17 @@ else "Access denied"
 
 F# has some unusual operators. Most importantly, the equality operator is `=`
 (that's just one equals sign), whereas in most languages it's `==` (including
-Dark). `=` is very strict equality, equivalent to `===` in languages that have
+Darklang). `=` is very strict equality, equivalent to `===` in languages that have
 that, such as JS.
 
 F# also has a `==` operator, but you should never use it.
 
-F# use `<>` for inequality (`!=` in Dark).
+F# use `<>` for inequality (`!=` in Darklang).
 
 ### Match
 
-Dark has a `match` statement that is very similar to F#, with slightly different
-syntax. In Dark you write:
+Darklang has a `match` statement that is very similar to F#, with slightly different
+syntax. In Darklang you write:
 
 ```fsharp
 match myValue
@@ -326,7 +326,7 @@ match expr with
 ### Lambdas
 
 F# supports lambdas and we use them frequently. They have a different syntax to
-Dark, F# uses:
+Darklang, F# uses:
 
 ```fsharp
 list
@@ -335,10 +335,10 @@ list
 
 ### Pipes
 
-Both languages have pipes which are the same as in Dark. In Dark, the passed
+Both languages have pipes which are the same as in Darklang. In Darklang, the passed
 argument goes into the first position. That is not true F#, where it goes into
 the last position. As a result, we tend to put the "subject" of the function in
-the pipeable position (first in Dark, last in F#).
+the pipeable position (first in Darklang, last in F#).
 
 ### Dictionaries
 
@@ -382,7 +382,7 @@ Unfortunately, it's hard to tell when an exception could be thrown.
 
 ### Imperative programming
 
-F# supports imperative programming which Dark does not support yet.
+F# supports imperative programming which Darklang does not support yet.
 
 F# has mutable values that it prefers to refs (it has refs, but they're
 deprecated). Mutable values are used like so:
@@ -464,11 +464,11 @@ let myOtherFunction (param : string) =
   myFunction 6 param
 ```
 
-## Dark's codebase history
+## Darklang's codebase history
 
-Dark's backend was originally written in OCaml, and then ported to F# in
+Darklang's backend was originally written in OCaml, and then ported to F# in
 2021/2022. A lot of code is written the way it is because that made sense in
 OCaml, especially code with the comment `// CLEANUP` in it.
 
-Dark's frontend was originally written in Elm, before being ported to ReScript.
+Darklang's frontend was originally written in Elm, before being ported to ReScript.
 It was removed in 2023.

@@ -19,7 +19,7 @@ sidebar_label: Keyboard Mapping
 | Ctrl-F, PgDn      | Scroll page down one page  |
 | Left-click        | Open Omnibox / Search      |
 
-## Code editing (Dark specific)
+## Code editing (Darklang specific)
 
 | Key                            | Context                            | Command                                               |
 | ------------------------------ | ---------------------------------- | ----------------------------------------------------- |

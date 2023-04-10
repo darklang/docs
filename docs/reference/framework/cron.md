@@ -1,6 +1,6 @@
 # Cron
 
-Dark supports scheduled jobs via a Cron component. Use a Cron when you want to
+Darklang supports scheduled jobs via a Cron component. Use a Cron when you want to
 schedule something to occur on a timed interval.
 
 ![Cron Intervals](/img/cron/intervals.png)
@@ -10,7 +10,7 @@ schedule something to occur on a timed interval.
 ## Cron Basics
 
 - Crons run automatically once per interval. (Note: due to the distributed
-  nature of the Dark platform, it's possible that a Cron may erroneously run
+  nature of the Darklang platform, it's possible that a Cron may erroneously run
   more than once per interval.)
 - There is currently no guarantee when within an interval that the Cron will
   run. Eg, A Cron created at `09:15` and marked as `Every 1 hour` will run

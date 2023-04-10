@@ -4,7 +4,7 @@ title: Making a Pull Request
 
 ## Code Checklist
 
-- Never change an existing Dark standard library function. Make a new one (with
+- Never change an existing Darklang standard library function. Make a new one (with
   a new version) and deprecate the old one. It is however safe to fix the type
   signature on an existing function, or to change its docstring.
 - Don't change existing serialized types, as that breaks the serializer.

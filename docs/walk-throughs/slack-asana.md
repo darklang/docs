@@ -12,7 +12,7 @@ Slack.
 ## Asana Configuration
 
 For this tutorial, you'll want to grab a couple different things from Asana and
-store each of them as separate functions in Dark:
+store each of them as separate functions in Darklang:
 
 - Your [personal access token](https://app.asana.com/0/developer-console)
 - The id of one of your workspaces. The easiest way to access this is via the
@@ -26,7 +26,7 @@ store each of them as separate functions in Dark:
    something like
    `https://yourusername-yourcanvasname.builtwithdark.com/new-project`. This is
    the URL that Slack will call when you use your slash command - don't add
-   anything to your Dark canvas just yet.
+   anything to your Darklang canvas just yet.
 
 ![slack-apps/tutorials/asana-tutorial/slashcommand.png](/img/slack-apps/tutorials/asana-tutorial/slashcommand.png)
 
@@ -41,10 +41,10 @@ store each of them as separate functions in Dark:
    we would if we wanted to distribute this more publicly.
 
 5. Copy your bot user access token, which will now be available under **Settings
-   -> Install** app and save it as a function in your Dark canvas. Use this
+   -> Install** app and save it as a function in your Darklang canvas. Use this
    function wherever you see `slackToken` in the code examples.
 
-## Building In Dark
+## Building In Darklang
 
 First, we're going to learn how to create new Asana projects using slash
 commands.
@@ -54,7 +54,7 @@ commands.
 
 ![slack-apps/tutorials/asana-tutorial/newprojecterror.png](/img/slack-apps/tutorials/asana-tutorial/newprojecterror.png)
 
-2. Navigate to your Dark canvas and check the 404s section in the sidebar - you
+2. Navigate to your Darklang canvas and check the 404s section in the sidebar - you
    should see an HTTP POST created called `/new-project` (or whatever you used
    when setting up your slash command). Click the plus sign to add it to your
    canvas.
@@ -88,7 +88,7 @@ commands.
    Slack and use your slash command again, but this time, write a project name,
    `\` sign and a description and send it over (something like
    `\asana-new-project Another New Project/Notes on the project`). Return to
-   Dark and check the traces - you should see a text field formatted like this:
+   Darklang and check the traces - you should see a text field formatted like this:
 
 ![slack-apps/tutorials/asana-tutorial/textexample.png](/img/slack-apps/tutorials/asana-tutorial/textexample.png)
 
@@ -102,7 +102,7 @@ commands.
 ### Looking Up Project & Workspace IDs
 
 You're not always going to want to pre-define your workspace or projects via
-Dark functions. This section will show you how to take a project name as a
+Darklang functions. This section will show you how to take a project name as a
 `String` and get the corresponding id. We'll be using projects for this example,
 but it works the same way for workspaces.
 

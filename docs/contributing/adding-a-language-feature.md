@@ -4,9 +4,9 @@ title: Adding a language feature
 
 There are a number of
 [language features that we'd like to add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature)
-to Dark. While there a quite a few steps involved in adding a language feature,
+to Darklang. While there a quite a few steps involved in adding a language feature,
 they're typically relatively straightforward to add once you've figured out the
-Dark codebase.
+Darklang codebase.
 
 It's important to note that the most important part of a language feature is
 getting agreement on what it does. We typically write specs for features, and
@@ -16,14 +16,14 @@ interested in creating a language feature, you should engage with Paul Biggar
 early and often.
 
 _See also:
-[a pairing session where we added Tuples to the Dark client and backend](https://www.youtube.com/watch?v=HZk4yCF8DWQL)_
+[a pairing session where we added Tuples to the Darklang client and backend](https://www.youtube.com/watch?v=HZk4yCF8DWQL)_
 
 ### Overview
 
 Most language features will need to be added to our language definition. The
 language definition is
 [`Expr`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/ProgramTypes.fs),
-which represent a Dark expression (which in turn contains other Dark
+which represent a Darklang expression (which in turn contains other Darklang
 expressions). This is commonly known as an "Abstract Syntax Tree" (or AST).
 
 At time of writing, the definition of `Expr` was
@@ -73,14 +73,14 @@ does, including refactorings, renamings, etc. It will also need support in the
 
 The execution of the language is defined in
 [`backend/src/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/Interpreter.fs).
-`eval` does the work of converting an expressions into a `dval` -- a Dark value.
+`eval` does the work of converting an expressions into a `dval` -- a Darklang value.
 
 For example, `DInt` is the run-time value of an integer, while `EInteger` is the
 expression that represents an integer. `eval` converts from an `EInteger` that
 the programmer added to their program, into a `DInt` that can be operated on
 (added, subtracted, etc).
 
-As another example, an `ELet` is a `let` statement in Dark. When you see
+As another example, an `ELet` is a `let` statement in Darklang. When you see
 
 ```fsharp
 let x = 6
@@ -99,14 +99,14 @@ and expressions are defined in
 
 ### Serialization
 
-The other main purpose of the backend is to save programs. Dark uses a fast
+The other main purpose of the backend is to save programs. Darklang uses a fast
 binary serialization format, derived directly from expressions. This means you
 do not have to do anything special to allow users to save your new expression.
 
 #### Expressions are add-only
 
 The automatic serialization has a caveat: the serializer has some rules to
-maintain compatibility with existing Dark programs. You can add new expression
+maintain compatibility with existing Darklang programs. You can add new expression
 types to it, but you can't change existing ones. This means that if you want to
 change a language feature to make it more powerful, you need to instead add a
 new version of it, rather than editing the current version.
@@ -120,7 +120,7 @@ both `expr`s and `tipe`s.
 
 ## Editor support
 
-The editor is where the developer (a Dark user) actually creates code.
+The editor is where the developer (a Darklang user) actually creates code.
 
 ### Fluid Editor
 

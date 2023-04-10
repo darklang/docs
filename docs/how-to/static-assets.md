@@ -1,14 +1,14 @@
 ---
 id: static-assets
-title: How to host Static Assets on Dark
+title: How to host Static Assets on Darklang
 sidebar_label: How to host Static Assets
 ---
 
-Dark supports hosting your static assets.
+Darklang supports hosting your static assets.
 
 Our static assets service is designed to be simple, easy to understand, as well
 as composable and configurable. As such, a static assets deploy uploads your
-assets to our cloud CDN, and we provide powerful tools in Dark to serve and
+assets to our cloud CDN, and we provide powerful tools in Darklang to serve and
 configure them.
 
 A
@@ -22,7 +22,7 @@ _Note: You can see the finished product at
 [https://darklang.com/a/sample-static-assets](https://darklang.com/a/sample-static-assets)_
 
 We have a single page app, written in react. It talks to our API, written in
-Dark. Now we’d like to deploy that app so that customers can use it too. This
+Darklang. Now we’d like to deploy that app so that customers can use it too. This
 also works in a similar way for Vue applications, with a few caveats called out
 in line.
 
@@ -104,7 +104,7 @@ generated files. For example, if your CSS file links an image at
 instead, in this case `./myimage.png`.
 
 Your `index.html` likely loads other assets, such as `app.css` or `app.js`. For
-speed, you will load these directly from the Dark CDN, not via your Dark
+speed, you will load these directly from the Darklang CDN, not via your Darklang
 handler. As such, we’ll need to make some edits to your assets to ensure they’re
 always pointing at the CDN for other assets.
 
@@ -112,7 +112,7 @@ During the deployment of the assets, our backend replaces the string
 `DARK_STATIC_ASSETS_BASE_URL` in all of your assets with the actual URL of this
 deployment.
 
-When not using a framework, prefix asset paths with Dark's magic string, for
+When not using a framework, prefix asset paths with Darklang's magic string, for
 example:
 
 ```html
@@ -170,7 +170,7 @@ table in your canvas:
 ## Set up your App to Load your Assets
 
 If your SPA framework generates an `index.html`, or you write one yourself, you
-can load that for the `/` route in Dark.
+can load that for the `/` route in Darklang.
 
 - Add a handler for `/` to load your `index.html` page using
   `StaticAssets::serveLatest "index.html"`.
@@ -193,7 +193,7 @@ If you’re looking to serve a fallback asset, you can use a match statement:
 We’ve shown you how to deploy new assets that appear immediately. However, you
 often want to control the rollout of those assets, perhaps seeing them yourself,
 or only showing them to users who have opted into beta features. As a result, it
-is easy to use Dark Static Assets with feature flags.
+is easy to use Darklang Static Assets with feature flags.
 
 Instead of calling `HttpClient::serveLatest`, you can call `HttpClient::serve`,
 and use the deploy hash from your command line.

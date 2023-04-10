@@ -12,7 +12,7 @@ Below you'll find resources to help you figure out what to work on. After that,
 head over to [Working in the Dark repo](fsharp-for-dark-developers.md) to learn
 how to contribute bigger things, like the basics of F#, the layout of the repo,
 technical guides to different parts of the codebase and product, and product and
-vision docs about where Dark is going.
+vision docs about where Darklang is going.
 
 ## Issues
 
@@ -51,9 +51,9 @@ highly prioritize solving things you need solved.
 
 ## Larger Projects
 
-Dark is a project with a vision for where it is going. Unfortunately, that
+Darklang is a project with a vision for where it is going. Unfortunately, that
 vision is not as documented as it could be. We're working on that over at the
-[Dark Roadmap](https://roadmap.darklang.com)!
+[Darklang Roadmap](https://roadmap.darklang.com)!
 
 In the meantime, the best thing to align well with that vision is to be very
 communicative. While many projects will take drive-by contributions, we are only
@@ -63,12 +63,12 @@ Often, those directions are quite subtle, so start by talking to us in
 thinking.
 
 The best thing to work on is something that is personally (or professionally!)
-blocking you. Our main goal with opening Dark is to enable users to unblock
+blocking you. Our main goal with opening Darklang is to enable users to unblock
 themselves or to improve their experience. Many users have shown us long laundry
 lists of things that bother them - you might have one too. Or bring us the list,
 and we'll talk about where to start.
 
-The important thing is to start small. Dark is nearly 100,000 LOC. And we have
+The important thing is to start small. Darklang is nearly 100,000 LOC. And we have
 the constraints of supporting users' production apps in a continuous delivery
 manner. You should aim for your first few contributions to be small and
 non-controversial, before trying to design a big feature or product change.

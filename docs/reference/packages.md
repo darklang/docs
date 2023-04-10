@@ -2,8 +2,8 @@
 
 ## Overview
 
-Dark's alpha package manager allows re-using Dark functions from other users or
-canvases. Today, only Dark employees can add functions to the package manager.
+Darklang's alpha package manager allows re-using Darklang functions from other users or
+canvases. Today, only Darklang employees can add functions to the package manager.
 Packages are named by the creator, package, function, and version and are
 accessible via autocomplete. The package manager today is intended for
 connections to third party services and APIs.
