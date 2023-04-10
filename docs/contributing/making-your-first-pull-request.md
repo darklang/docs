@@ -13,9 +13,9 @@ PRs. To format, call `scripts/formatting/format format`. There is also a
 
 ## Set up your fork
 
-Dark uses a fork model for contributions, like many GitHub projects. Go to the
-[Dark repo](https://darklang.com/darklang/dark) in your browser and click `fork`
-to add a fork.
+Darklang uses a fork model for contributions, like many GitHub projects. Go to
+the [Dark repo](https://darklang.com/darklang/dark) in your browser and click
+`fork` to add a fork.
 
 Then change your local repo to use the fork:
 

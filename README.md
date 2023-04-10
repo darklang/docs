@@ -1,16 +1,16 @@
-# Dark Documentation
+# Darklang Documentation
 
-Welcome to the source for the [Dark](https://darklang.com) documentation.
+Welcome to the source for the [Darklang](https://darklang.com) documentation.
 Contribute your improvements as a pull request, or report problems in an issue.
 
 View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 
-The Dark docs are built using [Docusaurus](https://docusaurus.io/). If you're
+The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, check out their docs.
 
 ## What's In This Document
 
-- [Dark Documentation](#dark-documentation)
+- [Darklang Documentation](#dark-documentation)
   - [What's In This Document](#whats-in-this-document)
   - [Get Started in 5 Minutes](#get-started-in-5-minutes)
   - [Documentation structure](#documentation-structure)
@@ -41,7 +41,7 @@ npm run-script start
 
 ## Documentation structure
 
-Dark's documentation is organized into four categories:
+Darklang's documentation is organized into four categories:
 
 - tutorials
 - how-to guides
@@ -71,7 +71,7 @@ features, and interactive tutorials and how-to guides built-in.
 ### How-to guides
 
 - "recipes"
-- should have very specific names such as "how to add a custom domain to Dark"
+- should have very specific names such as "how to add a custom domain to Darklang"
 
 ### Explanations
 

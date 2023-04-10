@@ -1,6 +1,6 @@
 # Workers
 
-Dark supports doing work asynchronously outside the context of an HTTP handler
+Darklang supports doing work asynchronously outside the context of an HTTP handler
 using a **Worker**. Each worker has a queue of messages, which are processed
 loosely in-order, executing the code within the Worker once for each message.
 Messages are created by calling `emit` from any other code, and can contain
@@ -64,7 +64,7 @@ worker may be processed in parallel.
 
 ### Can I control the concurrency of my worker?
 
-No. If multiple messages are enqueued for a worker, the Dark platform may
+No. If multiple messages are enqueued for a worker, the Darklang platform may
 execute them concurrently. We intend to eventually add controls for managing
 concurrency.
 
@@ -122,7 +122,7 @@ dead-letter-queues.
 
 ### How long will it take my worker to execute?
 
-Your Worker executes code the same as any other Dark component. For example,
+Your Worker executes code the same as any other Darklang component. For example,
 making external HTTP calls will cause execution to take longer.
 
 ## Future Improvements

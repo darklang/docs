@@ -4,7 +4,7 @@ title: Components
 sidebar_label: Components
 ---
 
-When building in Dark, you are able to create five major backend components,
+When building in Darklang, you are able to create five major backend components,
 called handlers:
 
 - API Endpoints (REST)
@@ -18,11 +18,12 @@ hitting `Cmd/Ctrl-k` to bring up the omnibox.
 
 ![assests/backend/image2.png](/img/backend/image2.png)
 
-Dark code is meant to be written in these handlers. We always recommend writing
-code within these components, and then extracting that code into a function,
-using `Cmd/Ctrl-\`, as needed. Code written in Dark is expression based, and as
-you add an expression it will automatically create blanks for the parameters it
-takes. If you delete an expression, the parameters will also be removed.
+Darklang code is meant to be written in these handlers. We always recommend
+writing code within these components, and then extracting that code into a
+function, using `Cmd/Ctrl-\`, as needed. Code written in Darklang is expression
+based, and as you add an expression it will automatically create blanks for the
+parameters it takes. If you delete an expression, the parameters will also be
+removed.
 
 These components **do not** require you to set up any additional infrastructure
 or deployment processes. As soon as you create them, they’re available and
@@ -30,12 +31,12 @@ update as you write code (deployless). Each handler is of one of these types,
 and has a name as well as additional information. You can see examples of each
 component [here](https://darklang.com/a/sample-helloworld).
 
-All of these components support core Dark functionality:
+All of these components support core Darklang functionality:
 
 - Trace data & live values (see:
   [Trace Driven Development](trace-driven-development.md)).
 - Implicit returns & pipelines (see:
-  [Functional Aspects of Dark](functional-aspects.md)).
+  [Functional Aspects of Darklang](functional-aspects.md)).
 - Autocomplete (i.e. typing **DB::**) will return all the datastore functions.
   This also works by type.
 
@@ -47,8 +48,8 @@ are creating an endpoint.
 
 ## Canvas
 
-In Dark, your backend components appear in the browser, on a canvas. These are
-at: [https://darklang.com/a/username] or
+In Darklang, your backend components appear in the browser, on a canvas. These
+are at: [https://darklang.com/a/username] or
 [https://darklang.com/a/username-canvasname]. We intend for you to only have one
 canvas per company or entirely separate project. You can create any canvas by
 navigating to it.
@@ -73,7 +74,7 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox
 - Accept URL parameters (ex: /profile/:username) and appear as variables within
   the handler.
 - Have implicit returns (see:
-  [Functional Aspects of Dark](functional-aspects.md)), and return JSON by
+  [Functional Aspects of Darklang](functional-aspects.md)), and return JSON by
   default.
 - All traces are available as dots on the left hand side. If you do not have a
   trace selected, you will see a spinner for all live values.
@@ -96,9 +97,9 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox
 
 ## Persistent Datastores
 
-In Dark, all datastores are a key-value store - a persistent hash-map/dictionary
-(not a relational database). When looking at a Datastore you’ll see all handlers
-that call the datastore.
+In Darklang, all datastores are a key-value store - a persistent
+hash-map/dictionary (not a relational database). When looking at a Datastore
+you’ll see all handlers that call the datastore.
 
 ![backend/image3.png](/img/backend/image3.png)
 

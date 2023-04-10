@@ -19,8 +19,8 @@ Create a new Slack App from [https://api.slack.com/](https://api.slack.com/)
 In order to install the app to your workspace, you’ll need to have the proper
 permissions. If you can’t, you can
 [set up your own workspace](https://slack.com/create) for testing instead.
-Please don’t use the Dark community Slack, as it’s a free community and we can’t
-support them all.
+Please don’t use the Darklang community Slack, as it’s a free community and we
+can’t support them all.
 
 In order to install your app to your workspace, or distribute it elsewhere, your
 app will need to support at least one feature or functionality.
@@ -53,7 +53,7 @@ Manage Distribution** and copy the Shareable URL to your browser’s address bar
 
 **_Before continuing, please visit the Shareable URL to install the
 application._** By visiting this URL, you’re making sure you have a real trace
-to work from in Dark. If you’re new to Dark,
+to work from in Darklang. If you’re new to Darklang,
 [Trace driven development](/discussion/trace-driven-development.md) is a good
 overview of why.
 
@@ -62,10 +62,10 @@ overview of why.
 Once you click on **Allow**, and then you’ll see a 404 error, since we haven’t
 written the backend logic.
 
-Go back to your Dark canvas; we’ll use this 404 to start building.
+Go back to your Darklang canvas; we’ll use this 404 to start building.
 
-In Dark, you work with production traces to build your backend. **Click on the
-“+”** next to your 404 to create an HTTP handler that will respond to OAuth
+In Darklang, you work with production traces to build your backend. **Click on
+the “+”** next to your 404 to create an HTTP handler that will respond to OAuth
 requests.
 
 ![ck/image19.png](/img/slack/image19.png)
@@ -73,19 +73,19 @@ requests.
 ![ck/image10.png](/img/slack/image10.png)
 
 After creating the route, you’ll see the trace showing the full request that
-Slack made to your Dark app. This includes the code you’ll need to send back to
-Slack.
+Slack made to your Darklang app. This includes the code you’ll need to send back
+to Slack.
 
 Before we send it, you’ll need your `client_id` and `client_secret`, which you
 can get from Slack’s **Basic Information** page.
 
 ![ck/image18.png](/img/slack/image18.png)
 
-Type the code below into your handler in Dark. As you enter it, you’ll see that
-the trace is used to show you the results of your code, as well as helping the
-autocomplete. When copy/pasting your `client_id` and `secret_id`, you’ll need to
-open the string literal first (`"`) and then paste (otherwise it looks like a
-float and is truncated).
+Type the code below into your handler in Darklang. As you enter it, you’ll see
+that the trace is used to show you the results of your code, as well as helping
+the autocomplete. When copy/pasting your `client_id` and `secret_id`, you’ll
+need to open the string literal first (`"`) and then paste (otherwise it looks
+like a float and is truncated).
 
 This is the end result, but you’ll see your `client_id` and `client_secret`
 instead of placeholders:
@@ -141,8 +141,8 @@ give you an overview.
 
 Slack’s **Basic Information** page lets you create slash commands, event
 subscriptions, and interactive components. All three of these options require a
-Request URL, which is just a URL pointing to your Dark app, in the same format
-as before:
+Request URL, which is just a URL pointing to your Darklang app, in the same
+format as before:
 
 [https://USERNAME-CANVASNAME.builtwithdark.com/ROUTE]
 
@@ -150,7 +150,8 @@ Trigger one of these routes, and then use the 404 and trace to build out the
 functionality, in the same way you did with OAuth.
 
 For instance, if you used the sample slash command, /test, you’d get this result
-after triggering it in Slack (and it would appear in your 404 section in Dark).
+after triggering it in Slack (and it would appear in your 404 section in
+Darklang).
 
 ![ck/image13.png](/img/slack/image13.png)
 

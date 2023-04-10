@@ -29,8 +29,8 @@ Driven Development**.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
-4. Let's put this in a datastore. Type "DB" to bring up a list of Dark datastore
-   functions.
+4. Let's put this in a datastore. Type "DB" to bring up a list of Darklang
+   datastore functions.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png)
 
@@ -75,4 +75,4 @@ In this case, we want `DB::set`, which takes three arguments.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_11.01.32_AM.png)
 
-Congratulations! You've created a Dark Datastore and stored data inside it.
+Congratulations! You've created a Darklang Datastore and stored data inside it.

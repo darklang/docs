@@ -4,22 +4,23 @@ title: Trace Driven Development
 sidebar_label: Trace Driven Development
 ---
 
-Dark flows from end user experience through to the backend components. If you
-would like to see any of the code from this document, the sample canvas that
+Darklang flows from end user experience through to the backend components. If
+you would like to see any of the code from this document, the sample canvas that
 goes along with it is:
 [https://darklang.com/a/sample-introtodark](https://darklang.com/a/sample-introtodark#handler=1175293748)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LcQyAfKLLT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Sending Requests to Dark
+## Sending Requests to Darklang
 
-Send requests to Dark _before writing code_. There are several ways to do this:
+Send requests to Darklang _before writing code_. There are several ways to do
+this:
 
-1. Build your frontend or mobile app first and point your API endpoints at Dark
-   (you can host your frontend on Dark by
+1. Build your frontend or mobile app first and point your API endpoints at
+   Darklang (you can host your frontend on Darklang by
    [uploading your static assets](/how-to/static-assets.md) via CLI).
 2. Use another platform that makes requests via REST (Slack, Twilio, Shopify)
-   and use Dark with existing webhooks or calls.
+   and use Darklang with existing webhooks or calls.
 3. **Use postman, curl, or another tool of your choice to send test data in the
    correct shape to your API endpoints.** This is the easiest way to get
    started, and you can try it out by following the rest of this doc.
@@ -31,7 +32,7 @@ Send requests to Dark _before writing code_. There are several ways to do this:
 - Open your canvas (darklang.com/a/USERNAME-CANVASNAME).
 - In another tab, visit username-canvasname.builtwithdark.com/test (ex:
   [https://sample-introtodark.builtwithdark.com/test](https://sample-introtodark.builtwithdark.com/test)).
-- Go back to Dark and check in the 404 section.
+- Go back to Darklang and check in the 404 section.
 
 ![trace/image9.png](/img/trace/image9.png)
 
@@ -126,7 +127,7 @@ the hamburger menu in the upper right of the handler.
 ## Return Values
 
 When on a handler, you’ll also see a live value at the bottom that corresponds
-to the value a handler returns. Dark has implicit returns (more on this in
-[Functional Aspects of Dark](functional-aspects)).
+to the value a handler returns. Darklang has implicit returns (more on this in
+[Functional Aspects of Darklang](functional-aspects)).
 
 ![trace/image5.png](/img/trace/image5.png)

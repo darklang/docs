@@ -4,7 +4,7 @@ sidebar_label: "Call an external API"
 id: call-external-api
 ---
 
-Dark has built-in standard libraries for working with external HTTP Calls
+Darklang has built-in standard libraries for working with external HTTP Calls
 (`HTTP` and `HttpClient`). This allows you to work with any external REST APIs.
 
 In this Tutorial, we'll send the Daily Report we created to Airtable, so other
@@ -21,7 +21,7 @@ skipped, and you can continue to the [final step](./complete-first-application).
   [here](https://airtable.com/invite/l?inviteId=invOadxgcpBKaCQiv&inviteToken=e7492a049bf7e4cd1c475b43efac35d296578f66198bff549ca99af6ee5821b4).
   ![gettingstarted/newworker.png](/img/gettingstarted/airtable_base.png)
 - Generate an API key on the [Account page](https://airtable.com/account). Put
-  the API key in a function in your Dark canvas.
+  the API key in a function in your Darklang canvas.
   ![gettingstarted/newworker.png](/img/gettingstarted/airtable_key.png)
 - Airtable's full API documentation for your base will be available on the
   [API page](https://airtable.com/api). Within this page, go to Create Records

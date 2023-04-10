@@ -4,8 +4,9 @@ sidebar_label: "Slack: check for new channels"
 ---
 
 It can be hard to keep up with all of the changes in your Slack workspace! This
-tutorial will walk you through how to build a simple tool in Dark that posts all
-new, public Slack channels created in your Slack workspace in the past 24 hours.
+tutorial will walk you through how to build a simple tool in Darklang that posts
+all new, public Slack channels created in your Slack workspace in the past 24
+hours.
 
 A full sample canvas for this tutorial is available
 [here](https://darklang.com/a/sample-slackchannelcheck).
@@ -26,23 +27,23 @@ A full sample canvas for this tutorial is available
    for your workspace specifically, we will not need to set up full OAuth, like
    we would if we wanted to distribute this more publicly.
 4. Copy your bot user access token, which will now be available under **Settings
-   -> Install** app and save it as a function in your Dark canvas. Use this
+   -> Install** app and save it as a function in your Darklang canvas. Use this
    function wherever you see `token` in the code examples.
 5. If no new channels have been created in your Slack recently, create a new
    public channel so we have some data to work with.
 6. You will need to choose a Slack channel to post your messages to. You can
    find your Slack channel's id by navigating to the channel and looking for the
    11 character string that begins with a capital C - it will look something
-   like `C1234567891`. Add that to its own Dark function as well, and use it
+   like `C1234567891`. Add that to its own Darklang function as well, and use it
    wherever you see `channel` in the code examples.
 
-## Building in Dark
+## Building in Darklang
 
 1. Create a new daily Cron named `checkForNewChannels` by clicking the + in the
    sidebar next to Cron, and call the
    [`getNewConversations` Slack function](/reference/packages#getnewconversations)
    (it's a little confusing, but channels are referred to as conversations in
-   the Slack API). The `getNewConversations` function is built into Dark's
+   the Slack API). The `getNewConversations` function is built into Darklang's
    [package manager](/reference/packages), and it takes your token as well as an
    amount of time to check in Epoch seconds. Here, we're asking it to check in
    the past 24 hours, which is equivalent to 86400 seconds.

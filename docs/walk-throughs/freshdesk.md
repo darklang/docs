@@ -4,7 +4,7 @@ sidebar_label: "Freshdesk: Fetch and update tickets"
 ---
 
 This guide will walk you through how you can use Freshdesk’s API to access
-ticket information in Dark. You can find a sample canvas
+ticket information in Darklang. You can find a sample canvas
 [here](https://darklang.com/a/sample-freshdesk).
 
 ## What You Need
@@ -39,10 +39,10 @@ Freshdesk also makes it pretty easy to get a filtered list of your tickets -
 for the query options. In this example, we are returning a list of all tickets
 with a status of 3, which means Pending.
 
-## Adding Ticket Information to a Datastore in Dark
+## Adding Ticket Information to a Datastore in Darklang
 
 In the following example, we are going to add a set of information from all of
-our tickets into a Dark datastore.
+our tickets into a Darklang datastore.
 
 ![freshdesk/image3.png](/img/tutorials/freshdesk/image3.png)
 
@@ -79,11 +79,12 @@ the `addTicketstoDB` function to populate your datastore.
 
 Once your run your worker, your datastore will be updated!
 
-## Updating Ticket Information With Dark
+## Updating Ticket Information With Darklang
 
 ![freshdesk/image10.png](/img/tutorials/freshdesk/image10.png)
 
-Updating ticket information using Dark can be fairly straightforward - the above
-example shows us updating the priority of the ticket with id 1 to 4, which means
-Urgent Priority. For a full list of what can and can’t be updated, refer to the
+Updating ticket information using Darklang can be fairly straightforward - the
+above example shows us updating the priority of the ticket with id 1 to 4, which
+means Urgent Priority. For a full list of what can and can’t be updated, refer
+to the
 [Freshdesk API Documentation](https://developers.freshdesk.com/api/#update_ticket).

@@ -4,7 +4,7 @@ title: How to use Feature Flags
 sidebar_label: How to use Feature Flags
 ---
 
-In Dark, all changes are made in production, on your real infrastructure. If
+In Darklang, all changes are made in production, on your real infrastructure. If
 you'd like to develop for testing, without things immediately going to users,
 make the changes within a feature flag.
 

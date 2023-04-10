@@ -2,7 +2,7 @@
 
 ## Overview
 
-Dark is designed for interacting with 3rd party APIs over HTTP. The
+Darklang is designed for interacting with 3rd party APIs over HTTP. The
 `HttpClient::` module has a set of functions for calling out to other HTTP
 services and APIs.
 

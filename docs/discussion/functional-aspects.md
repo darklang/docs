@@ -10,14 +10,14 @@ Most languages, especially Javascript, are imperative: you tell it to do one
 thing, then do another thing. So whenever you have code, you can add more code
 below it to do more stuff.
 
-Dark uses "implicit returns" (somewhat similar to Ruby, CoffeeScript, Haskell
-and Rust). The value of an expression is that last value in that expression. So
-in the "hello world" example, you don't write `return "hello world"`, just
-`"hello world"` is enough.
+Darklang uses "implicit returns" (somewhat similar to Ruby, CoffeeScript,
+Haskell and Rust). The value of an expression is that last value in that
+expression. So in the "hello world" example, you don't write
+`return "hello world"`, just `"hello world"` is enough.
 
 A handler or function will return the result of the last expression within it.
 The return value of an expression is shown below the handler. If the last
-expression is blank, Dark will return a 500 error.
+expression is blank, Darklang will return a 500 error.
 
 You can see some examples are shown here:
 [https://darklang.com/a/sample-returns](https://darklang.com/a/sample-returns)
@@ -29,7 +29,7 @@ Other computation (side effects) can be done using a statement.
 If you wish to use a function for side-effect (like `DB::set` or `emit`) then
 you can put it on the right hand side of a `let`.
 
-Dark does not yet support statements without the extra `let`. When you hit
+Darklang does not yet support statements without the extra `let`. When you hit
 “enter” at the end of a line that has a return value, we assume you want to make
 a new expression. Since that would be the last expression (and returned), we
 will automatically add the `let _ =` to the expression for you.
@@ -38,7 +38,7 @@ will automatically add the `let _ =` to the expression for you.
 
 ### Overview
 
-In Dark, pipelines make code more readable. Pipelines are similar to method
+In Darklang, pipelines make code more readable. Pipelines are similar to method
 chaining in OO languages, and pipes in Bash. Rather than calling functions with
 their parameters, you pass the previous value into the **first** parameter of an
 expression:
@@ -87,7 +87,7 @@ the expression bound to the variable s:
 
 ## List::Map
 
-Dark does not have a for-loop, it has `List::map.` This allows you to do
+Darklang does not have a for-loop, it has `List::map.` This allows you to do
 something to a collection of objects in a list.
 
 `List::map` takes two parameters. In this case we are passing in a list of

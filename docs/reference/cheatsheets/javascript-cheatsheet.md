@@ -1,6 +1,6 @@
 # Javascript cheat sheet
 
-This guide will help you learn Dark if you're familiar with Javascript.
+This guide will help you learn Darklang if you're familiar with Javascript.
 
 Have a tip to add to the guide?
 [Submit a PR](https://github.com/darklang/docs/pulls)!
@@ -18,7 +18,7 @@ also a
 comment */
 ```
 
-In Dark, you use a `let _ =` to start a comment, and you write the comment as a
+In Darklang, you use a `let _ =` to start a comment, and you write the comment as a
 String:
 
 ![from-python/comment.png](/img/from-python/comment.png)
@@ -32,7 +32,7 @@ In Javascript, you can write a String in multiple ways:
 'This is also a string'
 ```
 
-In Dark, you always use double quotes:
+In Darklang, you always use double quotes:
 ![from-python/string.png](/img/from-python/string.png)
 
 ## Functions
@@ -51,7 +51,7 @@ and you call a function with the function name, followed by parentheses:
 helloWorld();
 ```
 
-In Dark, you create a function from the sidebar:
+In Darklang, you create a function from the sidebar:
 
 ![from-python/functionside.png](/img/from-python/functionside.png)
 
@@ -69,7 +69,7 @@ Javascript defines a set of built in functions that are called like this:
 Math.pow(2,2)
 ```
 
-Dark has a set of built in functions as well, which can be accessed via the
+Darklang has a set of built in functions as well, which can be accessed via the
 autocomplete:
 
 ![from-python/power.gif](/img/from-python/power.gif)
@@ -92,7 +92,7 @@ else
     return "a is greater than b";
 ```
 
-In Dark, the same statement would look this this:
+In Darklang, the same statement would look this this:
 
 ![from-python/ifs.png](/img/from-python/ifs.png)
 

@@ -4,12 +4,13 @@ title: Sample Canvases
 sidebar_label: Sample Canvases
 ---
 
-We've created a set of sample canvases as examples of how build things in Dark.
+We've created a set of sample canvases as examples of how build things in
+Darklang.
 
 ## Common Functionality
 
 [conditionals](https://darklang.com/a/sample-conditionals) - if statements in
-Dark
+Darklang
 
 [cron](https://darklang.com/a/sample-cron) - a CRON set to run every 1 minute
 
@@ -20,9 +21,9 @@ a CRON set to run at a specific time
 migrating from an old datastore to a new datastore
 
 [formathtml](https://darklang.com/a/sample-formathtml) - examples of HTML
-formatting within Dark
+formatting within Darklang
 
-[match](https://darklang.com/a/sample-match) - match statements in Dark
+[match](https://darklang.com/a/sample-match) - match statements in Darklang
 
 [pipeline](https://darklang.com/a/sample-pipeline) - example of a pipeline
 
@@ -101,12 +102,13 @@ Twitter's OAuth 1.0 flow
 [emojimood](https://darklang.com/a/sample-emojimood) - use emojis to express
 your mood!
 
-[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving FizzBuzz in Dark
+[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving FizzBuzz in
+Darklang
 
 [login](https://darklang.com/a/sample-login) - a full login flow
 
 [onboarding](https://darklang.com/a/sample-onboarding) - example of an easy to
-build project for learning Dark
+build project for learning Darklang
 
 ---
 

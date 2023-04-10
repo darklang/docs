@@ -4,16 +4,16 @@ title: General concepts
 
 ## Editor vs Production (how code runs)
 
-Code runs in two places in Dark: in the Editor, and in Production. In
+Code runs in two places in Darklang: in the Editor, and in Production. In
 production, we have a Kubernetes cluster of interpreters with HTTP servers which
 are connected to a database, connected to the internet via Google Cloud
-infrastructure, that run Dark programs.
+infrastructure, that run Darklang programs.
 
 When requests are made in production we save their inputs and intermediate
 values (combined, these form a "trace", discussed below). Those are sent to the
 client.
 
-The Dark interpreter is also compiled to WebAssembly and is available in the
+The Darklang interpreter is also compiled to WebAssembly and is available in the
 browser in the client. The traces are sent to the WASM-compiled interpreter,
 which uses their results to fill in for functions which can't be run on the
 client (such as DB functions).
@@ -27,8 +27,9 @@ the editor and users can choose between them.
 
 ## Toplevels
 
-"Toplevel" is the generic name for a part of a Dark program, either a handler
-(whether a HTTP handler, a Cron or a worker), a function, a type, or a database.
+"Toplevel" is the generic name for a part of a Darklang program, either a
+handler (whether a HTTP handler, a Cron or a worker), a function, a type, or a
+database.
 
 Structural toplevels are toplevels which are part of the structure of your
 program: handlers and DBs. These live on the canvas.
@@ -91,7 +92,7 @@ of "classes" and "objects" representing programs. (Abstract syntax tree means
 the programs representation (the "syntax tree") without the annoying syntactic
 details like commas and semi-colons (hence "abstract")).
 
-In Dark, it's defined in `FluidExpression.res`, and at time of writing looks
+In Darklang, it's defined in `FluidExpression.res`, and at time of writing looks
 like this:
 
 ```fsharp
@@ -139,9 +140,9 @@ type matchPattern =
 ```
 
 These definitions are in F# (we have a
-[guide to F# for Dark developers](fsharp-for-dark-developers)). Briefly, this
-means that an `expr` is an integer (which is made up of an id and a string) or a
-bool (made up of an id and a string), or a `match` (which is an id, an
+[guide to F# for Darklang developers](fsharp-for-dark-developers)). Briefly,
+this means that an `expr` is an integer (which is made up of an id and a string)
+or a bool (made up of an id and a string), or a `match` (which is an id, an
 expression to match on, and a list of patterns and expressions), etc
 
 This definition is slightly simplified, but it's close. There's definitions for

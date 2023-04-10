@@ -34,11 +34,11 @@ tutorial, we will be using [restdb.io](https://restdb.io).
 ![external-db/fields.png](/img/tutorials/external-db/fields.png)
 
 5. Grab your API Key by clicking on API Docs and finding the value labeled
-   `x-apikey:`. Save it as a function in your Dark canvas.
+   `x-apikey:`. Save it as a function in your Darklang canvas.
 
 6. Optionally, also grab the URL at the top of your page (in my case, its
    `https://mydatastore-e7f9.restdb.io/rest/mydata`) and save it as another
-   function in your Dark canvas.
+   function in your Darklang canvas.
 
 ## POST a New Record
 

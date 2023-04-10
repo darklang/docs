@@ -4,15 +4,15 @@ title: Error Handling
 sidebar_label: Error Handling
 ---
 
-The Dark code you write in your handlers is available as soon as you type
+The Darklang code you write in your handlers is available as soon as you type
 (deployless). We have a number of built-in features to support this style of
 writing, as well as dealing with errors.
 
 ## Incomplete Code
 
-Dark executes code as you write it, and sometimes the code you execute won't be
-fully written yet. We call code like this "incomplete". Anytime incomplete code
-is executed, it results in a value of `<Incomplete>`.
+Darklang executes code as you write it, and sometimes the code you execute won't
+be fully written yet. We call code like this "incomplete". Anytime incomplete
+code is executed, it results in a value of `<Incomplete>`.
 
 **Example:** Here, the block has not been completed because the final expression
 is not filled in. Therefore the handler returns `<Incomplete>`.
@@ -75,13 +75,13 @@ To resolve this problem, we can use a string instead. `"123"` or
 
 ## Error Rail
 
-The error rail is a unique feature of Dark. It's purpose is to allow you easily
-prototype code without having to deal with every error.
+The error rail is a unique feature of Darklang. It's purpose is to allow you
+easily prototype code without having to deal with every error.
 
 ### Background: Result and Option types
 
-Dark has two types that model errors. The `Option` type allows you to model a
-value or the lack of a value. For example, when fetching a value from a
+Darklang has two types that model errors. The `Option` type allows you to model
+a value or the lack of a value. For example, when fetching a value from a
 dictionary or Datastore, if the value doesn't exist, the function will return
 `Nothing`. If it does exist, the function will return the value wrapped in a
 `Just`.

@@ -1,10 +1,10 @@
 ---
 id: write-tests
-title: How to Write Tests in Dark
+title: How to Write Tests in Darklang
 sidebar_label: How to write tests
 ---
 
-At the moment, Dark does not provide an out of the box testing framework.
+At the moment, Darklang does not provide an out of the box testing framework.
 However, it's fairly straightforward to write tests using REPLs and Crons.
 
 Let's take a simple example: a character creation process where the creator

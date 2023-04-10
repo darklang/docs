@@ -2,7 +2,7 @@
 title: Repository directory structure
 ---
 
-The Dark repo contains multiple services and compilation targets
+The Darklang repo contains multiple services and compilation targets
 
 ## Directory listing
 
@@ -12,7 +12,7 @@ The Dark repo contains multiple services and compilation targets
 - `config` - a set of env vars for each environment. You'll be interested in the
   `dev` environment
 - `docs` - sporadic documentation
-- `docs/production` - documentation about how we run the Dark service
+- `docs/production` - documentation about how we run the Darklang service
 - `backend` - The backend written in F# and .NET. including the language
   definition and execution engine, the "framework" (HTTP, DB, queues, etc), the
   editor's HTTP API, and the execution engine which runs in the client.
@@ -29,15 +29,15 @@ The Dark repo contains multiple services and compilation targets
   - `src/CronChecker` - trigger events for scheduled work
   - `src/ExecHost` - allow executing admin tasks (such as migrations) in
     production
-  - `src/HttpMiddleware` - where we define our middlewares used in Dark HTTP
+  - `src/HttpMiddleware` - where we define our middlewares used in Darklang HTTP
     handlers
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
-  - `src/LibBinarySerialization` - types that we use to store Dark programs to
-    our Postgres database
-  - `src/LibExecution` - the Dark language, including types, the runtime, and of
-    course the execution engine
+  - `src/LibBinarySerialization` - types that we use to store Darklang programs
+    to our Postgres database
+  - `src/LibExecution` - the Darklang language, including types, the runtime,
+    and of course the execution engine
   - `src/LibExecutionStdLib` - most of the standard library functions (anything
     that doesn't _need_ to be run on the backend)
   - `src/LibRealExecution` - Small wrapper around LibExecution for running in
@@ -52,7 +52,7 @@ The Dark repo contains multiple services and compilation targets
   - `testfiles/data` - text and binary files used during various backend tests
   - `testfiles/execution` - unit test definitions for language and standard
     library
-  - `testfiles/httphandler` - tests for the Dark HTTP server and middleware
+  - `testfiles/httphandler` - tests for the Darklang HTTP server and middleware
   - `testfiles/httpclient` - tests for the HTTP Library functions
 - `rundir` - anything that runs and stores something stores it here
   - `logs` - logs from running services, especially `bwdserver.log` (backend)

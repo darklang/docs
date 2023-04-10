@@ -3,13 +3,13 @@ title: "Walk-through: Send and receive texts via Twilio"
 sidebar_label: "Twilio: send and receive texts"
 ---
 
-Dark allows you to build backends (API endpoints, workers, cron, and data
+Darklang allows you to build backends (API endpoints, workers, cron, and data
 storage) by writing only your business logic, using production traces.
 
 You can access you canvas at darklang.com/a/USERNAME (or USERNAME-CANVASNAME).
 For this project we recommend darklang.com/a/USERNAME-twilioreminder.
 
-We recommend building a hello world API endpoint to get a feel for Dark, as
+We recommend building a hello world API endpoint to get a feel for Darklang, as
 follows:
 
 ![twilio/image2.gif](/img/tutorials/twilio/image2.gif)
@@ -46,8 +46,8 @@ Once you’ve added a phone number, you can configure a webhook:
 
 ### Sending a Message
 
-Dark has a built in `Twilio::sendText` function. We can call it in a REPL with
-our own number to verify our webhook.
+Darklang has a built in `Twilio::sendText` function. We can call it in a REPL
+with our own number to verify our webhook.
 
 ![twilio/mage4.png](/img/tutorials/twilio/image4.png)
 
@@ -68,7 +68,7 @@ Once the handler is created, we’re able to see the full incoming trace.
 
 ### Processing & Storing Responses
 
-In Dark, you can work directly with incoming traces. More on this in
+In Darklang, you can work directly with incoming traces. More on this in
 [Trace Driven Development](/discussion/trace-driven-development.md). For this
 handler, we can parse out the things we care about: a user deciding to
 start/stop using our service, or telling us if they drank enough water or not.

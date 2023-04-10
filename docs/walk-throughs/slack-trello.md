@@ -12,7 +12,7 @@ Slack.
 ## Trello Configuration
 
 For this tutorial, you're going to need to grab a few different things from
-Trello and store each of them as separate functions in Dark:
+Trello and store each of them as separate functions in Darklang:
 
 - Your Trello API Key and Token,
   [available on this page after logging in](https://trello.com/app-key/)
@@ -33,8 +33,8 @@ Trello and store each of them as separate functions in Dark:
    something like
    `https://yourusername-yourcanvasname.builtwithdark.com/new-trello-card`. This
    is the URL that Slack will call when you use your slash command - don't add
-   anything to your Dark canvas just yet. Also note our usage hint - a card name
-   and card description, separated by a `|` symbol.
+   anything to your Darklang canvas just yet. Also note our usage hint - a card
+   name and card description, separated by a `|` symbol.
 
 ![slack-apps/tutorials/new-trello-card/slashcommand.png](/img/slack-apps/tutorials/new-trello-card/slashcommand.png)
 
@@ -49,10 +49,10 @@ Trello and store each of them as separate functions in Dark:
    we would if we wanted to distribute this more publicly.
 
 4. Copy your bot user access token, which will now be available under **Settings
-   -> Install** app and save it as a function in your Dark canvas. Use this
+   -> Install** app and save it as a function in your Darklang canvas. Use this
    function wherever you see `slackToken` in the code examples.
 
-## Building in Dark
+## Building in Darklang
 
 1. Attempt to use your slash command. Make sure to include some text after your
    slash command, separated by a | symbol.
@@ -61,10 +61,10 @@ Trello and store each of them as separate functions in Dark:
 
 ![slack-apps/tutorials/new-trello-card/httperror.png](/img/slack-apps/tutorials/new-trello-card/httperror.png)
 
-2. Navigate to your Dark canvas and check the 404s section in the sidebar - you
-   should see an HTTP POST created called `/new-trello-card` (or whatever you
-   used when setting up your slash command). Click the plus sign to add it to
-   your canvas.
+2. Navigate to your Darklang canvas and check the 404s section in the sidebar -
+   you should see an HTTP POST created called `/new-trello-card` (or whatever
+   you used when setting up your slash command). Click the plus sign to add it
+   to your canvas.
 
 ![slack-apps/tutorials/new-trello-card/404.png](/img/slack-apps/tutorials/new-trello-card/404.png)
 
@@ -85,7 +85,7 @@ Trello and store each of them as separate functions in Dark:
 
 ![slack-apps/tutorials/new-trello-card/listgetat.png](/img/slack-apps/tutorials/new-trello-card/listgetat.png)
 
-6. Once we have all of the information we need, we can use the Dark package
+6. Once we have all of the information we need, we can use the Darklang package
    manager
    [`Trello::createNewCard` function](/reference/packages.md#createNewCard) to
    create the new card. For simplicity's sake, we're going to use the
@@ -108,8 +108,8 @@ list names and ids.
 
 ![slack-apps/tutorials/new-trello-card/listdb.png](/img/slack-apps/tutorials/new-trello-card/listdb.png)
 
-2. Now, we can use built in Dark package manager functions to get a list of all
-   of our Trello lists and add them to our DB. Create a REPL called
+2. Now, we can use built in Darklang package manager functions to get a list of
+   all of our Trello lists and add them to our DB. Create a REPL called
    `addListsToDB`, add the following lines of code, and run it:
 
 ![slack-apps/tutorials/new-trello-card/addliststodb.png](/img/slack-apps/tutorials/new-trello-card/addliststodb.png)
