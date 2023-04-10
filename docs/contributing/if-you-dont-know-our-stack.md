@@ -34,8 +34,8 @@ that you can write as a non-expert.
 
 There are a bunch of [tutorials](https://docs.darklang.com/category/tutorial)
 for different technologies, frameworks and libraries; writing one for another
-would be extremely useful. It would also allow you to write up how Darklang could be
-improved to support that technology. You can even make
+would be extremely useful. It would also allow you to write up how Darklang
+could be improved to support that technology. You can even make
 [video tutorials](https://www.youtube.com/c/Darklang/videos)!
 
 Similarly, we have some guides for people learning Darklang who know other
@@ -44,9 +44,9 @@ languages. Adding another language would be wonderful. See for example the
 
 ## Reporting bugs
 
-Darklang has many bugs and problems: documenting them for other contributors to fix
-would be very useful. Small, compact descriptions with instructions to reproduce
-the bugs are very welcome. You can add them to the
+Darklang has many bugs and problems: documenting them for other contributors to
+fix would be very useful. Small, compact descriptions with instructions to
+reproduce the bugs are very welcome. You can add them to the
 [issue tracker](https://github.com/darklang/dark/issues).
 
 ### Fluid editor

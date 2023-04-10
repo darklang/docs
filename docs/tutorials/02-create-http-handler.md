@@ -28,8 +28,8 @@ browser HTTP request.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.12.43_AM.png)
 
-5. Go back to Darklang to edit your code. Add `+ 5` to the end of the code and leave
-   your cursor in line.
+5. Go back to Darklang to edit your code. Add `+ 5` to the end of the code and
+   leave your cursor in line.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.14.25_AM.png)
 

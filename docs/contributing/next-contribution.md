@@ -68,7 +68,7 @@ themselves or to improve their experience. Many users have shown us long laundry
 lists of things that bother them - you might have one too. Or bring us the list,
 and we'll talk about where to start.
 
-The important thing is to start small. Darklang is nearly 100,000 LOC. And we have
-the constraints of supporting users' production apps in a continuous delivery
-manner. You should aim for your first few contributions to be small and
+The important thing is to start small. Darklang is nearly 100,000 LOC. And we
+have the constraints of supporting users' production apps in a continuous
+delivery manner. You should aim for your first few contributions to be small and
 non-controversial, before trying to design a big feature or product change.

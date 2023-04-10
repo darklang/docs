@@ -4,8 +4,9 @@ sidebar_label: "Slack: check for new channels"
 ---
 
 It can be hard to keep up with all of the changes in your Slack workspace! This
-tutorial will walk you through how to build a simple tool in Darklang that posts all
-new, public Slack channels created in your Slack workspace in the past 24 hours.
+tutorial will walk you through how to build a simple tool in Darklang that posts
+all new, public Slack channels created in your Slack workspace in the past 24
+hours.
 
 A full sample canvas for this tutorial is available
 [here](https://darklang.com/a/sample-slackchannelcheck).

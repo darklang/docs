@@ -34,10 +34,10 @@ The Darklang repo contains multiple services and compilation targets
   - `src/LibBackend` - the framework functionality (HTTP, DB, queues, traces,
     secrets, serialization), including standard library functions which only run
     on the backend (and not in the client)
-  - `src/LibBinarySerialization` - types that we use to store Darklang programs to
-    our Postgres database
-  - `src/LibExecution` - the Darklang language, including types, the runtime, and of
-    course the execution engine
+  - `src/LibBinarySerialization` - types that we use to store Darklang programs
+    to our Postgres database
+  - `src/LibExecution` - the Darklang language, including types, the runtime,
+    and of course the execution engine
   - `src/LibExecutionStdLib` - most of the standard library functions (anything
     that doesn't _need_ to be run on the backend)
   - `src/LibRealExecution` - Small wrapper around LibExecution for running in

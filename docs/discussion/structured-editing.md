@@ -6,13 +6,13 @@ title: Structured Editing
 _Note: for now, Darklang is only supported for Chrome with browser extensions
 disabled._
 
-At heart, Darklang is an expression-oriented programming language. This aspect of
-Darklang enables powerful features like live values and trace-driven development.
-This section introduces a simple way to think about the structure of Darklang
-programs within the editor.
+At heart, Darklang is an expression-oriented programming language. This aspect
+of Darklang enables powerful features like live values and trace-driven
+development. This section introduces a simple way to think about the structure
+of Darklang programs within the editor.
 
-When writing code in Darklang, you are building up expressions, relying heavily on
-autocomplete.
+When writing code in Darklang, you are building up expressions, relying heavily
+on autocomplete.
 
 ## Blanks
 
@@ -55,8 +55,8 @@ used in the editor are below.
 
 ## Nesting Expressions
 
-Expressions in Darklang are nested. For example, a multiplication expression is a
-compound expression with two sub-expressions as operands:
+Expressions in Darklang are nested. For example, a multiplication expression is
+a compound expression with two sub-expressions as operands:
 
 ![Multiplication Diagram](/img/structuredediting/mul_diagram.png)
 
@@ -119,8 +119,8 @@ of the match as a whole.
 
 ### Pipelines
 
-Pipelines are a key part of the Darklang language. They allow you to create a chain
-of expressions, where each chain is an input to the next expression in the
+Pipelines are a key part of the Darklang language. They allow you to create a
+chain of expressions, where each chain is an input to the next expression in the
 sequence.
 
 To start one, select the code that has the result that you want to pipe, and hit
@@ -146,8 +146,8 @@ there before. Note that partials evaluate to whatever was there before:
 
 ## Comments
 
-To add comments to your Darklang code, start a line with `let _ =` and add a string
-containing the comment you'd like to include.
+To add comments to your Darklang code, start a line with `let _ =` and add a
+string containing the comment you'd like to include.
 
 ![Option Example](/img/language/comment.png)
 
@@ -162,10 +162,11 @@ Darklang supports unlimited undo/redo in a single element. Undo with
 
 You can copy/paste selections, which is often used for refactoring.
 
-It may be helpful to note that copy/paste only works in Darklang between handlers at
-this time. Copying JSON from an external source will paste into your handlers in
-Darklang, but if you write code in the Darklang language in your text editor of choice,
-that code will not paste. We hope to improve this experience in the future.
+It may be helpful to note that copy/paste only works in Darklang between
+handlers at this time. Copying JSON from an external source will paste into your
+handlers in Darklang, but if you write code in the Darklang language in your
+text editor of choice, that code will not paste. We hope to improve this
+experience in the future.
 
 ### Command Palette
 

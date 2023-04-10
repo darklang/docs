@@ -54,10 +54,10 @@ commands.
 
 ![slack-apps/tutorials/asana-tutorial/newprojecterror.png](/img/slack-apps/tutorials/asana-tutorial/newprojecterror.png)
 
-2. Navigate to your Darklang canvas and check the 404s section in the sidebar - you
-   should see an HTTP POST created called `/new-project` (or whatever you used
-   when setting up your slash command). Click the plus sign to add it to your
-   canvas.
+2. Navigate to your Darklang canvas and check the 404s section in the sidebar -
+   you should see an HTTP POST created called `/new-project` (or whatever you
+   used when setting up your slash command). Click the plus sign to add it to
+   your canvas.
 
 ![slack-apps/tutorials/asana-tutorial/newproject404.png](/img/slack-apps/tutorials/asana-tutorial/newproject404.png)
 
@@ -88,7 +88,8 @@ commands.
    Slack and use your slash command again, but this time, write a project name,
    `\` sign and a description and send it over (something like
    `\asana-new-project Another New Project/Notes on the project`). Return to
-   Darklang and check the traces - you should see a text field formatted like this:
+   Darklang and check the traces - you should see a text field formatted like
+   this:
 
 ![slack-apps/tutorials/asana-tutorial/textexample.png](/img/slack-apps/tutorials/asana-tutorial/textexample.png)
 

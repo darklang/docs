@@ -3,7 +3,8 @@ title: Next steps
 id: next-steps
 ---
 
-Now that you've completed the first application, you should be able to use Darklang.
+Now that you've completed the first application, you should be able to use
+Darklang.
 
 We have more material to help you on your journey:
 

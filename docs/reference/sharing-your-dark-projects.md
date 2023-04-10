@@ -12,8 +12,8 @@ experience. Below you'll find some resources that you might be useful.
 Darklang is called "darklang", short for "Darklang" "language". It's pronounced
 "dark-lang". The `"D"` may be capitalized as Darklang is a proper noun, but feel
 free to leave it lowercase (as we do in our logo). The "`l`" is never
-capitalized, and Darklang is one word, not two (so no spaces between "Darklang" and
-"lang").
+capitalized, and Darklang is one word, not two (so no spaces between "Darklang"
+and "lang").
 
 ## Positioning / market
 

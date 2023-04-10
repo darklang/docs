@@ -21,11 +21,11 @@ information in Airtable. An Airtable sample canvas is available
 - Add your API key, the Airtable API, and the Airtable table you’re going to
   use. An Airtable table looks something like this:
   "appYPi96qgCwabzfE/Airtable%20Sample"
-- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP calls
-  using `HttpClient::get`.
-  - Headers in Darklang are passed in a dict, but we have convenience functions for
-    them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`. You
-    can inspect the headers by clicking on `header` to see it’s live value.
+- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP
+  calls using `HttpClient::get`.
+  - Headers in Darklang are passed in a dict, but we have convenience functions
+    for them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`.
+    You can inspect the headers by clicking on `header` to see it’s live value.
   - To test out the API call, press the Play button.
 - If you only want one field, like the Name field, you will want to add “Record
   Type” to your table. To get the exact string for this, reference the Retrieve
@@ -55,11 +55,11 @@ information in Airtable. An Airtable sample canvas is available
 - Add your API key, the Airtable API, and the Airtable table you’re going to
   use. An Airtable table looks something like this:
   appYPi96qgCwabzfE/Airtable%20Sample
-- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP calls
-  using `HttpClient::get`.
-  - Headers in Darklang are passed in a dict, but we have convenience functions for
-    them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`. You
-    can inspect the headers by clicking on ‘header’ to see it’s live value.
+- We’ll access the data over Airtable’s JSON API. In Darklang, we make HTTP
+  calls using `HttpClient::get`.
+  - Headers in Darklang are passed in a dict, but we have convenience functions
+    for them, like `HttpClient::bearerToken` and `HttpClient::jsonContentType`.
+    You can inspect the headers by clicking on ‘header’ to see it’s live value.
   - To test out the API call, press the Play button.
 - Create your `HttpClient::post` call. Note that to add a new entry, you will
   need to format your data using `records` and `fields`. You can click the Play

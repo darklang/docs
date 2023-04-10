@@ -24,8 +24,8 @@ later.
 Any user who has access to an organization can request another user be added.
 
 To add a user to your organization, send a DM to Paul Biggar in
-[the Darklang Discord](https://darklang.com/discord-invite). Include your username,
-and their username.
+[the Darklang Discord](https://darklang.com/discord-invite). Include your
+username, and their username.
 
 ## Give a user access to your canvases
 
@@ -34,5 +34,5 @@ broad permission, they gain access to every one of your canvases, not just one.
 In most cases, creating a new organization is more appropriate.
 
 To add a user to your canvases, send a DM to Paul Biggar in
-[the Darklang Discord](https://darklang.com/discord-invite). Include your username,
-and their username.
+[the Darklang Discord](https://darklang.com/discord-invite). Include your
+username, and their username.

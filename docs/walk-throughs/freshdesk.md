@@ -83,7 +83,8 @@ Once your run your worker, your datastore will be updated!
 
 ![freshdesk/image10.png](/img/tutorials/freshdesk/image10.png)
 
-Updating ticket information using Darklang can be fairly straightforward - the above
-example shows us updating the priority of the ticket with id 1 to 4, which means
-Urgent Priority. For a full list of what can and can’t be updated, refer to the
+Updating ticket information using Darklang can be fairly straightforward - the
+above example shows us updating the priority of the ticket with id 1 to 4, which
+means Urgent Priority. For a full list of what can and can’t be updated, refer
+to the
 [Freshdesk API Documentation](https://developers.freshdesk.com/api/#update_ticket).

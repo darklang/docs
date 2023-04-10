@@ -18,11 +18,12 @@ hitting `Cmd/Ctrl-k` to bring up the omnibox.
 
 ![assests/backend/image2.png](/img/backend/image2.png)
 
-Darklang code is meant to be written in these handlers. We always recommend writing
-code within these components, and then extracting that code into a function,
-using `Cmd/Ctrl-\`, as needed. Code written in Darklang is expression based, and as
-you add an expression it will automatically create blanks for the parameters it
-takes. If you delete an expression, the parameters will also be removed.
+Darklang code is meant to be written in these handlers. We always recommend
+writing code within these components, and then extracting that code into a
+function, using `Cmd/Ctrl-\`, as needed. Code written in Darklang is expression
+based, and as you add an expression it will automatically create blanks for the
+parameters it takes. If you delete an expression, the parameters will also be
+removed.
 
 These components **do not** require you to set up any additional infrastructure
 or deployment processes. As soon as you create them, they’re available and
@@ -47,8 +48,8 @@ are creating an endpoint.
 
 ## Canvas
 
-In Darklang, your backend components appear in the browser, on a canvas. These are
-at: [https://darklang.com/a/username] or
+In Darklang, your backend components appear in the browser, on a canvas. These
+are at: [https://darklang.com/a/username] or
 [https://darklang.com/a/username-canvasname]. We intend for you to only have one
 canvas per company or entirely separate project. You can create any canvas by
 navigating to it.
@@ -96,9 +97,9 @@ You can navigate the canvas via the left-hand sidebar, or via the omnibox
 
 ## Persistent Datastores
 
-In Darklang, all datastores are a key-value store - a persistent hash-map/dictionary
-(not a relational database). When looking at a Datastore you’ll see all handlers
-that call the datastore.
+In Darklang, all datastores are a key-value store - a persistent
+hash-map/dictionary (not a relational database). When looking at a Datastore
+you’ll see all handlers that call the datastore.
 
 ![backend/image3.png](/img/backend/image3.png)
 

@@ -4,8 +4,8 @@ title: Trace Driven Development
 sidebar_label: Trace Driven Development
 ---
 
-Darklang flows from end user experience through to the backend components. If you
-would like to see any of the code from this document, the sample canvas that
+Darklang flows from end user experience through to the backend components. If
+you would like to see any of the code from this document, the sample canvas that
 goes along with it is:
 [https://darklang.com/a/sample-introtodark](https://darklang.com/a/sample-introtodark#handler=1175293748)
 
@@ -13,10 +13,11 @@ goes along with it is:
 
 ## Sending Requests to Darklang
 
-Send requests to Darklang _before writing code_. There are several ways to do this:
+Send requests to Darklang _before writing code_. There are several ways to do
+this:
 
-1. Build your frontend or mobile app first and point your API endpoints at Darklang
-   (you can host your frontend on Darklang by
+1. Build your frontend or mobile app first and point your API endpoints at
+   Darklang (you can host your frontend on Darklang by
    [uploading your static assets](/how-to/static-assets.md) via CLI).
 2. Use another platform that makes requests via REST (Slack, Twilio, Shopify)
    and use Darklang with existing webhooks or calls.

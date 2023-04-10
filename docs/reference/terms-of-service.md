@@ -2,9 +2,9 @@
 
 ## Code of conduct / Terms of service
 
-Darklang does not yet have defined terms of service. As such, **we make no promises
-at all** about any aspect of our service, including keeping the service or your
-programs running.
+Darklang does not yet have defined terms of service. As such, **we make no
+promises at all** about any aspect of our service, including keeping the service
+or your programs running.
 
 We may disable your account **at any time** with no notice **for any reason**.
 If we disable your account, we _may_ give you access to migrate off, or to
@@ -17,15 +17,15 @@ not, and we choose not to do this for any reason.
 ## Service Level
 
 We make a best-effort attempt to keep the service up and running at all times.
-We recommend Darklang not be used for essential services needing 99% or more uptime,
-though we typically achieve that. We make no promises at all regarding uptime,
-and have no obligations to any customer or user in this regard.
+We recommend Darklang not be used for essential services needing 99% or more
+uptime, though we typically achieve that. We make no promises at all regarding
+uptime, and have no obligations to any customer or user in this regard.
 
 We recommend that an individual canvas makes no more than 10 requests per
 second.
 
-We may disable part or all of a Darklang canvas which is causing issues for us (e.g.
-operational, legal, etc).
+We may disable part or all of a Darklang canvas which is causing issues for us
+(e.g. operational, legal, etc).
 
 <!-- markdownlint-disable MD018 -->
 

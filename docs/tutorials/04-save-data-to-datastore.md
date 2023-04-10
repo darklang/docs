@@ -29,8 +29,8 @@ Driven Development**.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.47.10_AM.png)
 
-4. Let's put this in a datastore. Type "DB" to bring up a list of Darklang datastore
-   functions.
+4. Let's put this in a datastore. Type "DB" to bring up a list of Darklang
+   datastore functions.
 
 ![img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.48.24_AM.png)
 

@@ -4,9 +4,9 @@ title: Adding a language feature
 
 There are a number of
 [language features that we'd like to add](https://github.com/darklang/dark/issues?q=is%3Aissue+is%3Aopen+label%3Alanguage-feature)
-to Darklang. While there a quite a few steps involved in adding a language feature,
-they're typically relatively straightforward to add once you've figured out the
-Darklang codebase.
+to Darklang. While there a quite a few steps involved in adding a language
+feature, they're typically relatively straightforward to add once you've figured
+out the Darklang codebase.
 
 It's important to note that the most important part of a language feature is
 getting agreement on what it does. We typically write specs for features, and
@@ -73,7 +73,8 @@ does, including refactorings, renamings, etc. It will also need support in the
 
 The execution of the language is defined in
 [`backend/src/LibExecution/Interpreter.fs:eval`](https://github.com/darklang/dark/blob/main/backend/src/LibExecution/Interpreter.fs).
-`eval` does the work of converting an expressions into a `dval` -- a Darklang value.
+`eval` does the work of converting an expressions into a `dval` -- a Darklang
+value.
 
 For example, `DInt` is the run-time value of an integer, while `EInteger` is the
 expression that represents an integer. `eval` converts from an `EInteger` that
@@ -106,10 +107,10 @@ do not have to do anything special to allow users to save your new expression.
 #### Expressions are add-only
 
 The automatic serialization has a caveat: the serializer has some rules to
-maintain compatibility with existing Darklang programs. You can add new expression
-types to it, but you can't change existing ones. This means that if you want to
-change a language feature to make it more powerful, you need to instead add a
-new version of it, rather than editing the current version.
+maintain compatibility with existing Darklang programs. You can add new
+expression types to it, but you can't change existing ones. This means that if
+you want to change a language feature to make it more powerful, you need to
+instead add a new version of it, rather than editing the current version.
 
 We do have the ability to remove old formats, but it is a little challenging to
 coordinate. Whenever we do this, it is always after the new replacement feature

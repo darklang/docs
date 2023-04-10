@@ -27,8 +27,9 @@ the editor and users can choose between them.
 
 ## Toplevels
 
-"Toplevel" is the generic name for a part of a Darklang program, either a handler
-(whether a HTTP handler, a Cron or a worker), a function, a type, or a database.
+"Toplevel" is the generic name for a part of a Darklang program, either a
+handler (whether a HTTP handler, a Cron or a worker), a function, a type, or a
+database.
 
 Structural toplevels are toplevels which are part of the structure of your
 program: handlers and DBs. These live on the canvas.
@@ -139,9 +140,9 @@ type matchPattern =
 ```
 
 These definitions are in F# (we have a
-[guide to F# for Darklang developers](fsharp-for-dark-developers)). Briefly, this
-means that an `expr` is an integer (which is made up of an id and a string) or a
-bool (made up of an id and a string), or a `match` (which is an id, an
+[guide to F# for Darklang developers](fsharp-for-dark-developers)). Briefly,
+this means that an `expr` is an integer (which is made up of an id and a string)
+or a bool (made up of an id and a string), or a `match` (which is an id, an
 expression to match on, and a list of patterns and expressions), etc
 
 This definition is slightly simplified, but it's close. There's definitions for

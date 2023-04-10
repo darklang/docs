@@ -46,8 +46,8 @@ Once you’ve added a phone number, you can configure a webhook:
 
 ### Sending a Message
 
-Darklang has a built in `Twilio::sendText` function. We can call it in a REPL with
-our own number to verify our webhook.
+Darklang has a built in `Twilio::sendText` function. We can call it in a REPL
+with our own number to verify our webhook.
 
 ![twilio/mage4.png](/img/tutorials/twilio/image4.png)
 

@@ -10,10 +10,10 @@ Most languages, especially Javascript, are imperative: you tell it to do one
 thing, then do another thing. So whenever you have code, you can add more code
 below it to do more stuff.
 
-Darklang uses "implicit returns" (somewhat similar to Ruby, CoffeeScript, Haskell
-and Rust). The value of an expression is that last value in that expression. So
-in the "hello world" example, you don't write `return "hello world"`, just
-`"hello world"` is enough.
+Darklang uses "implicit returns" (somewhat similar to Ruby, CoffeeScript,
+Haskell and Rust). The value of an expression is that last value in that
+expression. So in the "hello world" example, you don't write
+`return "hello world"`, just `"hello world"` is enough.
 
 A handler or function will return the result of the last expression within it.
 The return value of an expression is shown below the handler. If the last

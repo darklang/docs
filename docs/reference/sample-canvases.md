@@ -4,7 +4,8 @@ title: Sample Canvases
 sidebar_label: Sample Canvases
 ---
 
-We've created a set of sample canvases as examples of how build things in Darklang.
+We've created a set of sample canvases as examples of how build things in
+Darklang.
 
 ## Common Functionality
 
@@ -101,7 +102,8 @@ Twitter's OAuth 1.0 flow
 [emojimood](https://darklang.com/a/sample-emojimood) - use emojis to express
 your mood!
 
-[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving FizzBuzz in Darklang
+[fizzbuzz](https://darklang.com/a/sample-fizzbuzz) - solving FizzBuzz in
+Darklang
 
 [login](https://darklang.com/a/sample-login) - a full login flow
 

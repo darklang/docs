@@ -31,9 +31,9 @@ Here's the journey it takes:
 
 ## Traces
 
-A trace is a combination of an event (referred to in Darklang as an "input value"
-and in the code as `StoredEvent`), and the arguments and results of functions
-called during the trace:
+A trace is a combination of an event (referred to in Darklang as an "input
+value" and in the code as `StoredEvent`), and the arguments and results of
+functions called during the trace:
 
 - event refers to the HTTP request, worker event, or in the case of Crons, an
   empty value, that is used to trigger the event handler
@@ -61,8 +61,8 @@ detail.
 ## `LibExecution` and the editor
 
 [`LibExecution`](https://github.com/darklang/dark/tree/main/backend/src/LibExecution)
-is the "execution engine" of Darklang. The same code is compiled to native code to
-respond to HTTP handlers, and is also compiled to WASM to run in the editor.
+is the "execution engine" of Darklang. The same code is compiled to native code
+to respond to HTTP handlers, and is also compiled to WASM to run in the editor.
 
 The play button on functions and on handlers executes the code on the server,
 returning updates to the trace of those functions. In all other cases, the

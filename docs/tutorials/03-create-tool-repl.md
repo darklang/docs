@@ -29,10 +29,10 @@ signatures, and their docstrings.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_9.22.01_AM.png)
 
-Darklang automatically creates spaces for the four arguments that `HttpClient::post`
-requires. We display a gray play button beside the function &ndash; it will turn
-green when all the arguments are complete, allowing you to run the function from
-within the editor.
+Darklang automatically creates spaces for the four arguments that
+`HttpClient::post` requires. We display a gray play button beside the function
+&ndash; it will turn green when all the arguments are complete, allowing you to
+run the function from within the editor.
 
 5. Let's call a new `/test` endpoint for the application we're developing. As we
    saw from the GET, our endpoints live at
@@ -70,5 +70,5 @@ within the editor.
 
 ![gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png](/img/gettingstarted/Screen_Shot_2020-02-11_at_10.44.10_AM.png)
 
-Congratulations! You've built a Darklang REPL and which calls the Darklang HTTP Client
-function.
+Congratulations! You've built a Darklang REPL and which calls the Darklang HTTP
+Client function.

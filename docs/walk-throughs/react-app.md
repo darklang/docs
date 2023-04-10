@@ -14,7 +14,8 @@ storage) by writing only your business logic, using production traces.
 You can access you canvas at darklang.com/a/USERNAME-CANVASNAME (we recommend
 USERNAME-signin for this project).
 
-First, on that canvas build a hello world API endpoint to get a feel for Darklang:
+First, on that canvas build a hello world API endpoint to get a feel for
+Darklang:
 
 ![reactspa/image15.gif](/img/tutorials/reactspa/image15.gif)
 
@@ -44,8 +45,8 @@ these commands do, go here:
 
 [Hosting Static Assets in Darklang](/how-to/static-assets.md)
 
-Note, replace anywhere that says USERNAME and PASSWORD with your Darklang username
-and password.
+Note, replace anywhere that says USERNAME and PASSWORD with your Darklang
+username and password.
 
 ```shell
 git clone https://github.com/darklang/dark-signin.git

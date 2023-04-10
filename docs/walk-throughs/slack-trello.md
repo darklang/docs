@@ -33,8 +33,8 @@ Trello and store each of them as separate functions in Darklang:
    something like
    `https://yourusername-yourcanvasname.builtwithdark.com/new-trello-card`. This
    is the URL that Slack will call when you use your slash command - don't add
-   anything to your Darklang canvas just yet. Also note our usage hint - a card name
-   and card description, separated by a `|` symbol.
+   anything to your Darklang canvas just yet. Also note our usage hint - a card
+   name and card description, separated by a `|` symbol.
 
 ![slack-apps/tutorials/new-trello-card/slashcommand.png](/img/slack-apps/tutorials/new-trello-card/slashcommand.png)
 
@@ -61,10 +61,10 @@ Trello and store each of them as separate functions in Darklang:
 
 ![slack-apps/tutorials/new-trello-card/httperror.png](/img/slack-apps/tutorials/new-trello-card/httperror.png)
 
-2. Navigate to your Darklang canvas and check the 404s section in the sidebar - you
-   should see an HTTP POST created called `/new-trello-card` (or whatever you
-   used when setting up your slash command). Click the plus sign to add it to
-   your canvas.
+2. Navigate to your Darklang canvas and check the 404s section in the sidebar -
+   you should see an HTTP POST created called `/new-trello-card` (or whatever
+   you used when setting up your slash command). Click the plus sign to add it
+   to your canvas.
 
 ![slack-apps/tutorials/new-trello-card/404.png](/img/slack-apps/tutorials/new-trello-card/404.png)
 
@@ -108,8 +108,8 @@ list names and ids.
 
 ![slack-apps/tutorials/new-trello-card/listdb.png](/img/slack-apps/tutorials/new-trello-card/listdb.png)
 
-2. Now, we can use built in Darklang package manager functions to get a list of all
-   of our Trello lists and add them to our DB. Create a REPL called
+2. Now, we can use built in Darklang package manager functions to get a list of
+   all of our Trello lists and add them to our DB. Create a REPL called
    `addListsToDB`, add the following lines of code, and run it:
 
 ![slack-apps/tutorials/new-trello-card/addliststodb.png](/img/slack-apps/tutorials/new-trello-card/addliststodb.png)

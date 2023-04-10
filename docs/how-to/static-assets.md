@@ -22,9 +22,9 @@ _Note: You can see the finished product at
 [https://darklang.com/a/sample-static-assets](https://darklang.com/a/sample-static-assets)_
 
 We have a single page app, written in react. It talks to our API, written in
-Darklang. Now we’d like to deploy that app so that customers can use it too. This
-also works in a similar way for Vue applications, with a few caveats called out
-in line.
+Darklang. Now we’d like to deploy that app so that customers can use it too.
+This also works in a similar way for Vue applications, with a few caveats called
+out in line.
 
 Here’s how we want our app to work:
 
