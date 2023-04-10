@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: Non-documentation issues
-    url: https://github.com/darklang/dark/issues/new
-    about: Report Darklang (non-documentation) issues
+    url: https://github.com/darklang/dark/issues/new/choose
+    about: Bugs in Darklang itself should be reported in the darklang/dark repo
   - name: Ask in Discord
     url: https://darklang.com/discord-invite
     about: If you're not sure or have a question, feel free to ask in chat. But issues are fine too.
