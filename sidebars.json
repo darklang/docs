@@ -8,7 +8,7 @@
         "type": "generated-index"
       },
       "items": [
-
+        "tutorials/first-dark-application"
       ]
     },
     {
@@ -18,7 +18,7 @@
         "type": "generated-index"
       },
       "items": [
-
+        "walk-throughs/base"
       ]
     },
     {
@@ -29,7 +29,7 @@
         "slug": "/category/how-to"
       },
       "items": [
-
+        "how-to/base"
       ]
     },
     {
@@ -39,7 +39,7 @@
         "type": "generated-index"
       },
       "items": [
-
+        "discussion/base"
       ]
     },
     {
@@ -60,7 +60,7 @@
         "type": "generated-index"
       },
       "items": [
-
+        "reference/base"
       ]
     }
   ]
