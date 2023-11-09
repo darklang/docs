@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Overview
+title: Overview of Darklang Classic
 ---
 
 Darklang is an integrated language, framework, and editor for building web
@@ -23,12 +23,12 @@ endpoint is immediately
 
 The documentation is split into:
 
-- [tutorials](/next/category/tutorial)
-- [walk-throughs](/next/category/walk-throughs) of creating application in Darklang
-- [how-to guides](/next/category/how-to) for using Darklang features
-- [background, discussions and explanations](/next/category/discussion)
-- [reference materials](/next/category/reference)
+- [tutorials](/category/tutorial)
+- [walk-throughs](/category/walk-throughs) of creating application in Darklang
+- [how-to guides](/category/how-to) for using Darklang features
+- [background, discussions and explanations](/category/discussion)
+- [reference materials](/category/reference)
 
 New folks should start at the
-[Your first Darklang application](/next/tutorials/first-dark-application) tutorial to
+[Your first Darklang application](/tutorials/first-dark-application) tutorial to
 get started.

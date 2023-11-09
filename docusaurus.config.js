@@ -30,13 +30,13 @@ module.exports = {
       items: [
         {
           to: "/introduction",
-          activeBasePath: "docs",
-          label: "Documentation",
+          label: "Classic",
           position: "right",
         },
         {
-          to: "tutorials/first-dark-application",
-          label: "Tutorial",
+          to: "/next/introduction",
+          activeBasePath: "docs",
+          label: "Next",
           position: "right",
         },
         {
@@ -163,8 +163,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          path: "docs",
-          sidebarPath: require.resolve("./sidebars.json"),
+          path: "docs-classic",
+          sidebarPath: require.resolve("./sidebars-docs-classic.json"),
           routeBasePath: "/",
           editUrl: "https://github.com/darklang/docs/edit/main/",
           // showLastUpdateAuthor: true,
@@ -176,6 +176,18 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-next',
+        path: 'docs',
+        routeBasePath: '/next',
+        sidebarPath: require.resolve("./sidebars.json")
+        // ... other options
       },
     ],
   ],
