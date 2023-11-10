@@ -125,7 +125,7 @@ Tuple support is currently a
 available in the editor after opting in via the Settings dialog. Feedback is
 welcome!
 
-See Release 5 in the [changelog](https://docs.darklang.com/reference/changelog)
+See Release 5 in the [changelog](https://docs.darklang.com/changelog)
 for a demo of opting in.
 
 ```fsharp

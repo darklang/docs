@@ -61,7 +61,7 @@ sidebar_label: Keyboard Mapping
 | Alt+Double-click               |                                    | Select entire expression                              |
 
 Note: tuple support currently requires you to opt in - see Release 5 in the
-[changelog](https://docs.darklang.com/reference/changelog) for details.
+[changelog](https://docs.darklang.com/changelog) for details.
 
 ## Code editing (similar to other editors)
 

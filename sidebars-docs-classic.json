@@ -1,0 +1,199 @@
+{
+  "docs": [
+    "introduction",
+    {
+      "type": "category",
+      "label": "Tutorial",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "tutorials/first-dark-application",
+        "tutorials/create-http-handler",
+        "tutorials/create-tool-repl",
+        "tutorials/save-data-to-datastore",
+        "tutorials/create-daily-job-cron-handler",
+        "tutorials/process-background-jobs-worker",
+        "tutorials/extract-function",
+        "tutorials/call-external-api",
+        "tutorials/complete-first-application",
+        "tutorials/handle-error-errorrail",
+        "tutorials/next-steps"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Walk-throughs",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "walk-throughs/react-app",
+        "walk-throughs/slack-app",
+        "walk-throughs/external-db",
+        "walk-throughs/slack-channel-check",
+        "walk-throughs/slack-asana",
+        "walk-throughs/slack-trello",
+        "walk-throughs/twilio-app",
+        "walk-throughs/ifttt-events",
+        "walk-throughs/airtable",
+        "walk-throughs/freshdesk"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "How-to Guides",
+      "link": {
+        "type": "generated-index",
+        "slug": "/category/how-to"
+      },
+      "items": [
+        "how-to/static-assets",
+        "how-to/custom-domains",
+        "how-to/cors",
+        "how-to/collaborate",
+        "how-to/feature-flags",
+        "how-to/write-tests"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Discussion",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "discussion/languageoverview",
+        "discussion/unique-aspects",
+        "discussion/functional-aspects",
+        "discussion/when-dark",
+        "discussion/queues",
+        "discussion/dark-backend-components",
+        "discussion/trace-driven-development",
+        "discussion/structured-editing",
+        "discussion/error-handling"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Changelog",
+      "link": {
+        "type": "doc",
+        "id": "changelog"
+      },
+      "items": [
+        {
+          "type": "doc",
+          "id": "changelog/release-10",
+          "label": "Release 10 - Jan, 2023"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-9",
+          "label": "Release 9 - Dec, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-8",
+          "label": "Release 8 - Nov, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-7",
+          "label": "Release 7 - Oct, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-6",
+          "label": "Release 6 - Sept, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-5",
+          "label": "Release 5 - Aug, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-4",
+          "label": "Release 4 - July, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-3",
+          "label": "Release 3 - June, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-2",
+          "label": "Release 2 - June 6, 2022"
+        },
+        {
+          "type": "doc",
+          "id": "changelog/release-1",
+          "label": "Release 1"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Reference",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        {
+          "Cheat Sheets": [
+            "reference/cheatsheets/python-cheatsheet",
+            "reference/cheatsheets/javascript-cheatsheet"
+          ],
+          "Function & Package reference": [
+            "reference/function-reference",
+            "reference/packages",
+            "reference/httpclient"
+          ],
+          "Framework components": [
+            "reference/framework/http-framework",
+            "reference/framework/datastores",
+            "reference/framework/workers",
+            "reference/framework/cron"
+          ]
+        },
+        "reference/sample-canvases",
+        "reference/languagedetails",
+        "reference/keyboard-mapping",
+        "reference/support",
+        "reference/sharing-dark",
+        "reference/faqs",
+        "reference/terms-of-service",
+        "reference/backward-compatibility",
+        "reference/desktop-client"
+      ]
+    }
+  ],
+  "Contributing": {
+    "Your First Contribution": [
+      "contributing/getting-started",
+      "contributing/setting-up-the-repo",
+      "contributing/adding-your-first-test",
+      "contributing/making-your-first-pull-request"
+    ],
+    "Your Next Contributions": [
+      "contributing/next-contribution",
+      "contributing/if-you-dont-know-our-stack",
+      "contributing/adding-a-function",
+      "contributing/adding-a-language-feature",
+      "contributing/adding-a-refactoring"
+    ],
+    "Working in the Dark repo": [
+      "contributing/fsharp-for-dark-developers",
+      "contributing/general-concepts",
+      "contributing/tour-of-backend",
+      "contributing/repo-layout",
+      "contributing/glossary",
+      "contributing/debugging",
+      "contributing/troubleshooting",
+      "contributing/making-a-pull-request",
+      "contributing/new-release-checklist"
+    ]
+  }
+}
