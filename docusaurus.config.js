@@ -31,7 +31,6 @@ module.exports = {
         },
         {
           to: "/next/introduction",
-          activeBasePath: "docs",
           label: "Next",
           position: "right",
         },

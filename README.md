@@ -174,7 +174,7 @@ title: This Doc Needs To Be Edited
 My new content here..
 ```
 
-2. Refer to that doc's ID in an existing sidebar in `sidebar.json`:
+2. Refer to that doc's ID in an existing sidebar in `sidebars.json`:
 
 ```javascript
 // Add newly-created-doc to the Getting Started category of docs
@@ -191,56 +191,46 @@ My new content here..
 ```
 
 For more information about adding new docs, click
-[here](https://docusaurus.io/docs/en/navigation)
+[here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
 
 ### Adding items to your site's top navigation bar
 
-1. Add links to docs, custom pages or external links by editing the headerLinks
-   field of `siteConfig.js`:
+1. Add links to docs, custom pages or external links by editing the navbar items in the themeConfig
+   section of `docusaurus.config.js`:
 
-`siteConfig.js`
+`docusaurus.config.js`
 
 ```javascript
 {
-  headerLinks: [
-    ...
-    /* you can add docs */
-    { doc: 'my-examples', label: 'Examples' },
-    /* you can add custom pages */
-    { page: 'help', label: 'Help' },
-    /* you can add external links */
-    { href: 'https://github.com/facebook/docusaurus', label: 'GitHub' },
-    ...
-  ],
+  themeConfig: {
+    navBar: {
+      items: [
+        {
+          to: "/introduction", // url path to the landing page, 
+          label: "Classic",
+          position: "right",
+        },
+        {
+          to: "/next/introduction",
+          activeBasePath: "docs",
+          label: "Next",
+          position: "right",
+        },  
+        {
+          href: 'https://github.com/darklang/docs',
+          label: 'GitHub',
+          position: 'right',
+        },
+        ...
+      ]
+    }
+  }
   ...
 }
 ```
 
 For more information about the navigation bar, click
-[here](https://docusaurus.io/docs/en/navigation)
-
-### Adding custom pages
-
-1. Docusaurus uses React components to build pages. The components are saved as
-   .js files in `pages/en`:
-2. If you want your page to show up in your navigation header, you will need to
-   update `siteConfig.js` to add to the `headerLinks` element:
-
-`siteConfig.js`
-
-```javascript
-{
-  headerLinks: [
-    ...
-    { page: 'my-new-custom-page', label: 'My New Custom Page' },
-    ...
-  ],
-  ...
-}
-```
-
-For more information about custom pages, click
-[here](https://docusaurus.io/docs/en/custom-pages).
+[here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
 
 #### Checking formatting
 
