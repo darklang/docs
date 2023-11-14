@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 While we continuously deliver features as they're written, we like to
 [package up the work](https://blog.darklang.com/darklang-release-schedule/) into
-monthly changelogs, which we call "Releases".
+monthly change logs, which we call "Releases".
 
 - [Release 10](changelog/release-10.md) - January, 2023
 - [Release 9](changelog/release-9.md) - December, 2022
