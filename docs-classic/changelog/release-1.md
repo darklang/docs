@@ -707,7 +707,7 @@ We added a bunch of improved documentation, including:
 - You can now use `Date::<` and `Date::>` and `Float::lessThanOrEqualTo` in
   `DB::query` (and also in `DB::queryOne`, `DB::queryWithKey`, etc)
 
-![DB::query call using Date::<](/img/changelog/Mar6/dbquery.png)
+![DB::query call using Date::\<](/img/changelog/Mar6/dbquery.png)
 
 - We now give better error messages when you try to use `Int` functions (like
   `+` and `-`) on `Floats` or `Strings`

@@ -73,7 +73,8 @@ posted to with your own username and canvas.
    you will need to replace the URLs in `script.js` with your username and
    canvas name.
 
-<details><summary>queue.html</summary>
+<details>
+<summary>queue.html</summary>
 
 ```html
 <html lang="en">
@@ -99,7 +100,8 @@ posted to with your own username and canvas.
 
 </details>
 
-<details><summary>script.js</summary>
+<details>
+<summary>script.js</summary>
 
 ```javascript
 const app = document.getElementById("root");
@@ -211,7 +213,8 @@ request.send();
 
 </details>
 
-<details><summary>style.css</summary>
+<details>
+<summary>style.css</summary>
 
 ```css
 #root {
@@ -278,7 +281,8 @@ request.send();
 17. Let's make one more page, to take a look at our approvals. Once you've
     created it, visit it to get a 404.
 
-<details><summary>approved.html</summary>
+<details>
+<summary>approved.html</summary>
 
 ```html
 <html lang="en">
@@ -304,7 +308,8 @@ request.send();
 
 </details>
 
-<details><summary>approvedscripts.js</summary>
+<details>
+<summary>approvedscripts.js</summary>
 
 ```js
 const app = document.getElementById("root");
