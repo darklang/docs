@@ -30,7 +30,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "/next/introduction",
+          to: "/next/overview",
           label: "Next",
           position: "right",
         },
@@ -187,7 +187,7 @@ module.exports = {
         id: 'docs-next',
         path: 'docs',
         routeBasePath: '/next',
-        sidebarPath: require.resolve("./sidebars.json")
+        sidebarPath: './sidebars.js'
         // ... other options
       },
     ],

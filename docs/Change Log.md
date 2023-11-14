@@ -1,7 +1,7 @@
 ---
 id: changelog
-title: Changelog
-sidebar_label: Changelog
+title: Change Log
+sidebar_label: Change Log
 ---
 
 While we continuously deliver features as they're written, we like to
