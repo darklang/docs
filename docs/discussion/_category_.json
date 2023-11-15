@@ -1,4 +1,8 @@
 {
     "position": 4,
-    "label": "Discussion"
+    "label": "Discussion",
+    "link": {
+        "type": "generated-index",
+        "title": "Discussions"
+    }
 }

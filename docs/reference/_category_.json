@@ -1,4 +1,8 @@
 {
     "position": 3,
-    "label": "Reference"
+    "label": "Reference",
+    "link": {
+        "type": "generated-index",
+        "title": "Reference"
+    }
 }

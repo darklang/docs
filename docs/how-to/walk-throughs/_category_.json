@@ -1,4 +1,8 @@
 {
     "position": 1,
-    "label": "Step-by-Step Guides"
+    "label": "Step-by-Step Guides",
+    "link": {
+        "type": "generated-index",
+        "title": "Step-by-Step Guides"
+    }
 }
