@@ -1,5 +1,6 @@
 ---
 id: introduction
+sidebar_label: Overview
 title: Overview
 ---
 
@@ -23,12 +24,12 @@ endpoint is immediately
 
 The documentation is split into:
 
-- [tutorials](/next/category/tutorial)
-- [walk-throughs](/next/category/walk-throughs) of creating application in
-  Darklang
-- [how-to guides](/next/category/how-to) for using Darklang features
+- [tutorials](/next/category/tutorials)
+- [how-to guides](/next/category/how-to-guides) for using Darklang features
+- [step-by-step guides](/next/category/step-by-step-guides) for creating
+  applications in Darklang
+- [language and platform reference](./category/reference)
 - [background, discussions and explanations](/next/category/discussion)
-- [reference materials](/next/category/reference)
 
 New folks should start at the
 [Your first Darklang application](/next/tutorials/first-dark-application)
