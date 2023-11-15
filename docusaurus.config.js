@@ -30,7 +30,7 @@ module.exports = {
           position: "right",
         },
         {
-          to: "/next/overview",
+          to: "/next/introduction",
           label: "Next",
           position: "right",
         },

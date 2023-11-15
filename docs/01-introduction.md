@@ -1,5 +1,6 @@
 ---
-id: overview
+id: introduction
+sidebar_label: Overview
 title: Overview
 ---
 
