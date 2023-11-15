@@ -28,7 +28,7 @@ The documentation is split into:
 - [how-to guides](/next/category/how-to-guides) for using Darklang features
 - [step-by-step guides](/next/category/step-by-step-guides) for creating
   applications in Darklang
-- [language and platform reference](./category/reference)
+- [language and platform reference](/next/category/reference)
 - [background, discussions and explanations](/next/category/discussion)
 
 New folks should start at the
