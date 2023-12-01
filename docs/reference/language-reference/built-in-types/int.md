@@ -4,6 +4,10 @@ sidebar_label: "Int"
 sidebar_position: 2
 keywords:
   - types
+  - integer
+  - unsigned
+  - number
+  - long
 draft: false
 ---
 
@@ -28,3 +32,44 @@ specific integer size, append the size suffix to the value.
 | uint64        | unsigned 64 bit number         | uL     | `let buzz = 42uL` |
 | int128        | signed 128 bit number          | Q      | `let fizz = 42Q`  |
 | uint128       | unsigned 128 bit number        | Z      | `let buzz = 42Z`  |
+
+## Methods
+
+### Absolute Value
+
+The mathmatical absolute value of the integer.
+
+#### Definition
+
+Int::absoluteValue(Int: a) -> Int
+
+#### Example
+
+```darklang
+let x = -1
+let y = 1
+let X = Int::absoluteValue x
+let Y = Int::absoluteValue y
+[X,Y]
+```
+
+This trace returns: [1,1]
+
+### Add
+
+The sum of two integers.
+
+#### Definition
+
+Int::add(Int: a, Int: b) -> Int
+
+#### Example
+
+```darklang
+let x = -1
+let y = 1
+let z = Int::add x y
+z
+```
+
+This trace returns: 0

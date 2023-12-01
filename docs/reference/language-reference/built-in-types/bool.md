@@ -3,7 +3,8 @@ title: "Bool"
 sidebar_label: "Bool"
 sidebar_position: 1
 keywords:
-  - types
+  - boolean
+  - logic
 draft: false
 ---
 
@@ -30,3 +31,5 @@ let x = true
 let y = false
 Bool::and x y
 ```
+
+This trace returns: false
