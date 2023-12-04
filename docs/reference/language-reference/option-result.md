@@ -1,6 +1,6 @@
 ---
-title: "Nulls"
-sidebar_label: "Nulls"
+title: "Option & Result"
+sidebar_label: "Option & Result"
 sidebar_position: 3
 keywords:
   - types

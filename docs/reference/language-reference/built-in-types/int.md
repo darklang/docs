@@ -11,7 +11,7 @@ keywords:
 draft: false
 ---
 
-Integers are, by default, 64 bit signed integers.
+Integers default to 64 bit signed numbers.
 
 ```darklang
 let x = 42
@@ -28,12 +28,12 @@ specific integer size, append the size suffix to the value.
 | uint16        | unsigned 16 bit number         | us     | `let buzz = 42us` |
 | int32         | signed 32 bit number           | l      | `let fizz = 42l`  |
 | uint32        | unsigned 32 bit number         | ul     | `let buzz = 42ul` |
-| int64         | signed 64 bit number (default) | L      | `let fizz = 42`   |
+| int64         | signed 64 bit number (default) | L      | `let fizz = 42` (no suffix)   |
 | uint64        | unsigned 64 bit number         | uL     | `let buzz = 42uL` |
 | int128        | signed 128 bit number          | Q      | `let fizz = 42Q`  |
 | uint128       | unsigned 128 bit number        | Z      | `let buzz = 42Z`  |
 
-## Methods
+## Functions
 
 ### Absolute Value
 
