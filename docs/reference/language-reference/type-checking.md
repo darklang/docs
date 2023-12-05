@@ -1,7 +1,7 @@
 ---
 title: "Type Checking"
 sidebar_label: "Type Checking"
-sidebar_position: 1
+sidebar_position: 4
 keywords:
   - types
 draft: false
