@@ -41,15 +41,15 @@ The mathmatical absolute value of the integer.
 
 #### Definition
 
-Int::absoluteValue(Int: a) -> Int
+Int.absoluteValue(Int: a) -> Int
 
 #### Example
 
 ```darklang
 let x = -1
 let y = 1
-let X = Int::absoluteValue x
-let Y = Int::absoluteValue y
+let X = Int.absoluteValue x
+let Y = Int.absoluteValue y
 [X,Y]
 ```
 
@@ -61,14 +61,14 @@ The sum of two integers.
 
 #### Definition
 
-Int::add(Int: a, Int: b) -> Int
+Int.add(Int: a, Int: b) -> Int
 
 #### Example
 
 ```darklang
 let x = -1
 let y = 1
-let z = Int::add x y
+let z = Int.add x y
 z
 ```
 
