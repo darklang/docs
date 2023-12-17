@@ -199,3 +199,26 @@ This trace returns:
 ]
 
 ----
+
+### ToString
+
+Returns the value of the variable as a string.
+
+#### Definition
+
+Bool.toString(Bool) -> String
+
+#### Examples
+
+```darklang
+let x = true
+Bool.toString x
+```
+
+This trace returns: "true"
+
+```darklang
+Bool.toString false
+```
+
+This trace returns: "false"
