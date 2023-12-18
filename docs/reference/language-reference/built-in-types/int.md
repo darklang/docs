@@ -55,6 +55,8 @@ let Y = Int.absoluteValue y
 
 This trace returns: [1,1]
 
+---
+
 ### Add
 
 The sum of two integers.
@@ -73,3 +75,39 @@ z
 ```
 
 This trace returns: 0
+
+---
+
+### Clamp
+
+Constrains a value to a range. If the value is within the range defined by the parameters the input value is returned. If the value is outside the range, the range boundary closest to the input value is returned.
+
+#### Definition
+
+Int.clamp(Int: value, Int: limitA, Int: limitB) -> Int
+
+|Parameter|Definition|
+|---|---|
+|_value_| The input value to check against the range bounds. |
+|_limitA_| One end of the range. |
+|_limitB_| The other end of the range. |
+
+#### Examples
+
+```darklang
+let value = 5
+let lowerBound = 1
+let upperBound = 9
+Int.clamp value lowerBound upperBound
+```
+
+This trace returns: 5
+
+```darklang
+let value = 10
+let lowerBound = 1
+let upperBound = 9
+Int.clamp value upperBound lowerBound
+```
+
+This trace returns: 9
