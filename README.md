@@ -3,6 +3,8 @@
 Welcome to the source for the [Darklang](https://darklang.com) documentation.
 Contribute your improvements as a pull request, or report problems in an issue.
 
+[![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
+
 View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 
 The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
