@@ -42,7 +42,7 @@ title: "Darklang Release X"
     - [ ] create mailchimp campaign
     - [ ] write draft
   - [ ] draft
-        [tweet](https://twitter.com/darklang)/[toot](https://devtools.social/@darklang)
+        [tweet](https://twitter.com/darklang)/[toot](https://mas.to/@darklang)
   - [ ] draft [HN](https://news.ycombinator.com/submit)
   - [ ] draft [r/darklang](https://reddit.com/r/darklang)
   - [ ] draft [Lobstrs](https://lobste.rs/stories/new)
