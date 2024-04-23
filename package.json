@@ -30,7 +30,7 @@
     "@docusaurus/preset-classic": "^3.2.1",
     "@mdx-js/react": "^3.0.1",
     "@svgr/webpack": "^8.1.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "file-loader": "^6.2.0",
     "mermaid": "10.9.0",
     "npm": "^10.5.2",
