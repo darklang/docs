@@ -12,16 +12,16 @@ trying to do something beyond the scope of this README, check out their docs.
 
 ## What's In This Document
 
-- [Darklang Documentation](#dark-documentation)
+- [Darklang Documentation](#darklang-documentation)
   - [What's In This Document](#whats-in-this-document)
   - [Get Started in 5 Minutes](#get-started-in-5-minutes)
   - [Documentation structure](#documentation-structure)
     - [Tutorials](#tutorials)
-    - [How-to guides](#how-to)
+    - [How-to guides](#how-to-guides)
     - [Explanations](#explanations)
     - [Reference material](#reference-material)
   - [Project Structure](#project-structure)
-      - [Directory Structure](#directory-structure)
+    - [Directory Structure](#directory-structure)
   - [Editing Content](#editing-content)
     - [Editing an existing docs page](#editing-an-existing-docs-page)
   - [Adding Content](#adding-content)
