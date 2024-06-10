@@ -10,7 +10,7 @@ View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, check out their docs.
 
-## What's In This Document
+## What's in this document
 
 - [Darklang Documentation](#darklang-documentation)
   - [What's In This Document](#whats-in-this-document)
@@ -32,7 +32,7 @@ trying to do something beyond the scope of this README, check out their docs.
   - [How CI Auto-deploys](#how-ci-auto-deploys)
   - [Publishing Changes Manually](#publishing-changes-manually)
 
-## Get Started in 5 Minutes
+## Get started in 5 minutes
 
 To change these docs and test the results locally:
 
@@ -85,7 +85,7 @@ features, and interactive tutorials and how-to guides built-in.
 - just descriptions
 - follows the structure of the project/language (e.g. each type is represented)
 
-## Project Structure
+## Project structure
 
 There are two important branches:
 
@@ -100,7 +100,7 @@ When the pull request is merged, CircleCI will automatically deploy the changes
 from `main` to the website (it runs a script against the source files on `main`
 and deploys the generated website to `gh-pages`).
 
-#### Directory Structure
+#### Directory structure
 
 The project file structure in `main` is
 
@@ -140,7 +140,7 @@ docs/
   node_modules/
 ```
 
-## Editing Content
+## Editing content
 
 ### Editing an existing docs page
 
@@ -160,7 +160,7 @@ Edit me...
 For more information about docs, click
 [here](https://docusaurus.io/docs/en/navigation)
 
-## Adding Content
+## Adding content
 
 ### Adding a new docs page to an existing sidebar
 
@@ -242,13 +242,13 @@ common errors. If you run `npm run format` you should pass the linter.
 `markdownlint` is run automatically in CI - you can run it locally as
 `npm run lint`.
 
-## How CI Auto-deploys
+## How CI auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration. It watches
 for commits/merges into the `main` branch, runs a script to generate the
 contents of `gh-pages`, and pushes `gh-pages` to GitHub.
 
-## Publishing Changes Manually
+## Publishing changes manually
 
 **NOTE: You shouldn't need to do this because CircleCI runs this
 automatically.**
