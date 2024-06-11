@@ -8,7 +8,7 @@ Contribute your improvements as a pull request, or report problems in an [issue]
 
 View the live docs on our documentation website: [https://darklang.com/docs](https://darklang.com/docs)
 
-> **ℹ**: The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
+> **ℹ** The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, please check out their docs.
 
 ## 📃 What's in this document
