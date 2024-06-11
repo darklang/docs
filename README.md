@@ -2,10 +2,11 @@
 
 [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
 
-Welcome to the source for the [Darklang](https://darklang.com) documentation.<br>
+Welcome to the source for the [Darklang](https://darklang.com) documentation.
+
 Contribute your improvements as a pull request, or report problems in an issue.
 
-🌐 View the live docs on our documentation website: [https://darklang.com/docs](https://darklang.com/docs)
+View the live docs on our documentation website: [https://darklang.com/docs](https://darklang.com/docs)
 
 > Note:
 >
