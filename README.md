@@ -1,4 +1,4 @@
-# Darklang Documentation
+# ✍ Darklang Documentation
 
 Welcome to the source for the [Darklang](https://darklang.com) documentation.
 Contribute your improvements as a pull request, or report problems in an issue.
@@ -10,7 +10,7 @@ View the live docs here: [https://darklang.com/docs](https://darklang.com/docs)
 The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, check out their docs.
 
-## What's in this document
+## 📃 What's in this document
 
 - [Darklang Documentation](#darklang-documentation)
   - [What's in this document](#whats-in-this-document)
@@ -32,7 +32,7 @@ trying to do something beyond the scope of this README, check out their docs.
   - [How CI auto-deploys](#how-ci-auto-deploys)
   - [Publishing changes manually](#publishing-changes-manually)
 
-## Get started in 5 minutes
+## ▶ Get started in 5 minutes
 
 To change these docs and test the results locally:
 
@@ -41,7 +41,7 @@ npm install
 npm run-script start
 ```
 
-## Documentation structure
+## 📚 Documentation structure
 
 Darklang's documentation is organized into four categories:
 
@@ -60,7 +60,7 @@ In the future, we intend to provide access to all this material in the app, with
 context-sensitive reference materials available for all product and language
 features, and interactive tutorials and how-to guides built-in.
 
-### Tutorials
+### 🔵 Tutorials
 
 - "teaching a child how to cook"
 - tells them what to do
@@ -70,22 +70,22 @@ features, and interactive tutorials and how-to guides built-in.
 - do not include choices
 - should be bulletproof
 
-### How-to guides
+### 🔵 How-to guides
 
 - "recipes"
 - should have very specific names such as "how to add a custom domain to Darklang"
 
-### Explanations
+### 🔵 Explanations
 
 - background material to understand further
 - provides context
 
-### Reference material
+### 🔵 Reference material
 
 - just descriptions
 - follows the structure of the project/language (e.g. each type is represented)
 
-## Project structure
+## 🗃 Project structure
 
 There are two important branches:
 
@@ -100,7 +100,7 @@ When the pull request is merged, CircleCI will automatically deploy the changes
 from `main` to the website (it runs a script against the source files on `main`
 and deploys the generated website to `gh-pages`).
 
-#### Directory structure
+### 🔵 Directory structure
 
 The project file structure in `main` is
 
@@ -140,9 +140,9 @@ docs/
   node_modules/
 ```
 
-## Editing content
+## 📝 Editing content
 
-### Editing an existing docs page
+### 🔵 Editing an existing docs page
 
 Edit docs by navigating to `docs/` and editing the corresponding document:
 
@@ -160,9 +160,9 @@ Edit me...
 For more information about docs, click
 [here](https://docusaurus.io/docs/en/navigation)
 
-## Adding content
+## 📝 Adding content
 
-### Adding a new docs page to an existing sidebar
+### 🔵 Adding a new docs page to an existing sidebar
 
 1. Create the doc as a new markdown file in `/docs`, example
    `docs/newly-created-doc.md`:
@@ -195,7 +195,7 @@ My new content here..
 For more information about adding new docs, click
 [here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
 
-### Adding items to your site's top navigation bar
+### 🔵 Adding items to your site's top navigation bar
 
 1. Add links to docs, custom pages or external links by editing the navbar items in the themeConfig
    section of `docusaurus.config.js`:
@@ -234,7 +234,7 @@ For more information about adding new docs, click
 For more information about the navigation bar, click
 [here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
 
-#### Checking formatting
+### 🔵 Checking formatting
 
 We run some tools to ensure that the docs are consistently formatted and to find
 common errors. If you run `npm run format` you should pass the linter.
@@ -242,13 +242,13 @@ common errors. If you run `npm run format` you should pass the linter.
 `markdownlint` is run automatically in CI - you can run it locally as
 `npm run lint`.
 
-## How CI auto-deploys
+## 🚀 How CI auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration. It watches
 for commits/merges into the `main` branch, runs a script to generate the
 contents of `gh-pages`, and pushes `gh-pages` to GitHub.
 
-## Publishing changes manually
+## 🔧 Publishing changes manually
 
 **NOTE: You shouldn't need to do this because CircleCI runs this
 automatically.**
