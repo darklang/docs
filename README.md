@@ -12,25 +12,23 @@ trying to do something beyond the scope of this README, check out their docs.
 
 ## 📃 What's in this document
 
-- [Darklang Documentation](#-darklang-documentation)
-  - [What's in this document](#-whats-in-this-document)
-  - [Get started in 5 Minutes](#-get-started-in-5-minutes)
-  - [Documentation structure](#-documentation-structure)
-    - [Tutorials](#-tutorials)
-    - [How-to guides](#-how-to-guides)
-    - [Explanations](#-explanations)
-    - [Reference material](#-reference-material)
-  - [Project structure](#-project-structure)
-    - [Directory structure](#-directory-structure)
-  - [Editing content](#-editing-content)
-    - [Editing an existing docs page](#-editing-an-existing-docs-page)
-  - [Adding content](#-adding-content)
-    - [Adding a new docs page to an existing sidebar](#-adding-a-new-docs-page-to-an-existing-sidebar)
-    - [Adding items to your site's top navigation bar](#-adding-items-to-your-sites-top-navigation-bar)
-    - [Adding custom pages](#-adding-custom-pages)
-      - [Checking formatting](#-checking-formatting)
-  - [How CI auto-deploys](#-how-ci-auto-deploys)
-  - [Publishing changes manually](#-publishing-changes-manually)
+- [What's in this document](#-whats-in-this-document)
+- [Get started in 5 Minutes](#-get-started-in-5-minutes)
+- [Documentation structure](#-documentation-structure)
+  - [Tutorials](#-tutorials)
+  - [How-to guides](#-how-to-guides)
+  - [Explanations](#-explanations)
+  - [Reference material](#-reference-material)
+- [Project structure](#-project-structure)
+  - [Directory structure](#-directory-structure)
+- [Editing content](#-editing-content)
+  - [Editing an existing docs page](#-editing-an-existing-docs-page)
+- [Adding content](#-adding-content)
+  - [Adding a new docs page to an existing sidebar](#-adding-a-new-docs-page-to-an-existing-sidebar)
+  - [Adding items to your site's top navigation bar](#-adding-items-to-your-sites-top-navigation-bar)
+  - [Checking formatting](#-checking-formatting)
+- [How CI auto-deploys](#-how-ci-auto-deploys)
+- [Publishing changes manually](#-publishing-changes-manually)
 
 ## ▶ Get started in 5 minutes
 
@@ -234,7 +232,7 @@ For more information about adding new docs, click
 For more information about the navigation bar, click
 [here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
 
-### 🔵 Checking formatting
+## 🔵 Checking formatting
 
 We run some tools to ensure that the docs are consistently formatted and to find
 common errors. If you run `npm run format` you should pass the linter.
