@@ -4,11 +4,11 @@
 
 Welcome to the source for the [Darklang](https://darklang.com) documentation.
 
-Contribute your improvements as a pull request, or report problems in an issue.
+Contribute your improvements as a pull request, or report problems in an [issue](https://github.com/darklang/docs/issues/new/choose).
 
 View the live docs on our documentation website: [https://darklang.com/docs](https://darklang.com/docs)
 
-> Note:
+> **Note**
 >
 > The Darklang docs are built using [Docusaurus](https://docusaurus.io/). If you're
 trying to do something beyond the scope of this README, check out their docs.
