@@ -31,7 +31,7 @@ trying to do something beyond the scope of this README, please check out their d
 - [How CI auto-deploys](#-how-ci-auto-deploys)
 - [Publishing changes manually](#-publishing-changes-manually)
 
-## ▶ Get started in 5 minutes
+## 🚀 Get started in 5 minutes
 
 To change these docs and test the results locally:
 
@@ -156,8 +156,7 @@ title: This Doc Needs to Be Edited
 Edit me...
 ```
 
-For more information about docs, read to the  
-[Docusaurus docs](https://docusaurus.io/docs/en/navigation).
+For more information about docs, read the [Docusaurus docs](https://docusaurus.io/docs/en/navigation).
 
 ## 📝 Adding content
 
@@ -239,7 +238,7 @@ common errors. If you run `npm run format` you should pass the linter.
 `markdownlint` is run automatically in CI - you can run it locally as
 `npm run lint`.
 
-## 🚀 How CI auto-deploys
+## ⚙️ How CI auto-deploys
 
 The `.circleci/config.yml` file describes the CircleCI configuration. It watches
 for commits/merges into the `main` branch, runs a script to generate the
