@@ -13,7 +13,6 @@ trying to do something beyond the scope of this README, please check out their d
 
 ## 📃 What's in this document
 
-- [What's in this document](#-whats-in-this-document)
 - [Get started in 5 minutes](#-get-started-in-5-minutes)
 - [Documentation structure](#-documentation-structure)
   - [Tutorials](#-tutorials)
@@ -28,7 +27,7 @@ trying to do something beyond the scope of this README, please check out their d
   - [Adding a new docs page to an existing sidebar](#-adding-a-new-docs-page-to-an-existing-sidebar)
   - [Adding items to your site's top navigation bar](#-adding-items-to-your-sites-top-navigation-bar)
   - [Checking formatting](#-checking-formatting)
-- [How CI auto-deploys](#-how-ci-auto-deploys)
+- [How CI auto-deploys](#%EF%B8%8F-how-ci-auto-deploys)
 - [Publishing changes manually](#-publishing-changes-manually)
 
 ## 🚀 Get started in 5 minutes
@@ -101,7 +100,7 @@ and deploys the generated website to `gh-pages`).
 
 ### 🔵 Directory structure
 
-The project file structure in `main` is
+The project file structure in `main` is:
 
 ```text
 docs/
@@ -141,6 +140,9 @@ docs/
 
 ## 📝 Editing content
 
+Editing content in Docusaurus is straightforward. Whether you want to make small tweaks or
+significant changes, the following section will guide you through the process.
+
 ### 🔵 Editing an existing docs page
 
 Edit docs by navigating to `docs/` and editing the corresponding document:
@@ -160,10 +162,12 @@ For more information about docs, read the [Docusaurus docs](https://docusaurus.i
 
 ## 📝 Adding content
 
+The following section will walk you through the process of adding a new document
+and integrating it into an existing sidebar.
+
 ### 🔵 Adding a new docs page to an existing sidebar
 
-1. Create the doc as a new markdown file in `/docs`. For example,
-   `docs/newly-created-doc.md`:
+1. Create the doc as a new markdown file in `/docs`. For example, `docs/newly-created-doc.md`:
 
 ```md
 ---
@@ -190,8 +194,8 @@ My new content here...
 }
 ```
 
-For more information about adding new docs, click
-[here](https://docusaurus.io/docs/2.x/api/themes/configuration#navbar-link)
+For more information about adding new docs, get familiar with
+[adding items to the sidebar](https://docusaurus.io/docs/sidebar/items).
 
 ### 🔵 Adding items to your site's top navigation bar
 
