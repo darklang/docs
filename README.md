@@ -43,10 +43,10 @@ npm run-script start
 
 Darklang's documentation is organized into four categories:
 
-- tutorials
-- how-to guides
-- background information and discussion
-- reference material
+- Tutorials
+- How-to guides
+- Background information and discussion
+- Reference material
 
 This follows the [Divio Documentation System](https://documentation.divio.com/).
 Using this system, documentation in each category should not do the work of any
@@ -60,28 +60,28 @@ features, and interactive tutorials and how-to guides built-in.
 
 ### 🔵 Tutorials
 
-- "teaching a child how to cook"
-- tells them what to do
-- does not explain why they are doing it
-- include specifics and let them learn the generalities over time
-- assume that "obvious" things are not known
-- do not include choices
-- should be bulletproof
+- "Teaching a child how to cook"
+- Tells them what to do
+- Does not explain why they are doing it
+- Include specifics and let them learn the generalities over time
+- Assume that "obvious" things are not known
+- Do not include choices
+- Should be bulletproof
 
 ### 🔵 How-to guides
 
-- "recipes"
-- should have very specific names such as "how to add a custom domain to Darklang"
+- "Recipes"
+- Should have very specific names such as "how to add a custom domain to Darklang"
 
 ### 🔵 Explanations
 
-- background material to understand further
-- provides context
+- Background material to understand further
+- Provides context
 
 ### 🔵 Reference material
 
-- just descriptions
-- follows the structure of the project/language (e.g., each type is represented)
+- Just descriptions
+- Follows the structure of the project/language (e.g., each type is represented)
 
 ## 🗃 Project structure
 
