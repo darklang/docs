@@ -119,16 +119,16 @@ docs/
 
   src/
     css/
-    plugins/ - docusaurus plugins
+    plugins/ (docusaurus plugins)
 
-  package.json - helper scripts
+  package.json (helper scripts)
 
-  docusaurus.config.js - core site configuration
+  docusaurus.config.js (core site configuration)
 
-  sidebars.json - sidebar sections and pages
+  sidebars.json (sidebar sections and pages)
 
   static/
-    img/ - static images, for posts, and also favicon.ico
+    img/ (static images, posts, and also favicon.ico)
     slack-apps/
     tutorials/
     index.html
