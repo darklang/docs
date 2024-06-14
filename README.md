@@ -52,7 +52,7 @@ This follows the [Divio Documentation System](https://documentation.divio.com/).
 Using this system, documentation in each category should not do the work of any
 other category. For example, a tutorial should just step the user through doing
 the work, and should not provide background explanations or other reference
-material or discussion.
+material, or discussion.
 
 In the future, we intend to provide access to all this material in the app, with
 context-sensitive reference materials available for all product and language
@@ -90,9 +90,9 @@ There are two important branches:
 - `main`
 - `gh-pages`
 
-The website is hosted from `gh-pages`, but everything there is auto-generated
-from `main`. When we want to make changes, we create a new branch of `main`
-with the format `username/my-change` and make as many commits as we need to.
+The website is hosted on `gh-pages`, but everything there is auto-generated
+from `main`. When we want to make changes, we create a new branch from `main`
+in the format `username/my-change` and make as many commits as we need to.
 Then, we create a new pull request from that branch with `main` as the base.
 When the pull request is merged, CircleCI will automatically deploy the changes
 from `main` to the website (it runs a script against the source files on `main`
@@ -158,7 +158,7 @@ title: This Doc Needs to Be Edited
 Edit me...
 ```
 
-For more information about docs, read the [Docusaurus docs](https://docusaurus.io/docs/en/navigation).
+For more information about working with docs, read the [Docusaurus docs](https://docusaurus.io/docs/en/navigation).
 
 ## 📝 Adding content
 
@@ -194,7 +194,7 @@ My new content here...
 }
 ```
 
-For more information about adding new docs, get familiar with
+For more information about adding new docs, see the guide on
 [adding items to the sidebar](https://docusaurus.io/docs/sidebar/items).
 
 ### 🔵 Adding items to your site's top navigation bar
@@ -237,16 +237,16 @@ For more information about the navigation bar, see the corresponding
 ## 🔵 Checking formatting
 
 We run some tools to ensure that the docs are consistently formatted and to find
-common errors. If you run `npm run format` you should pass the linter.
+common errors. If you run `npm run format`, you should pass the linter.
 
-`markdownlint` is run automatically in CI - you can run it locally as
+CI automatically runs `markdownlint`. You can run it locally as
 `npm run lint`.
 
 ## ⚙️ How CI auto-deploys
 
-The `.circleci/config.yml` file describes the CircleCI configuration. It watches
-for commits/merges into the `main` branch, runs a script to generate the
-contents of `gh-pages`, and pushes `gh-pages` to GitHub.
+The `.circleci/config.yml` file describes the CircleCI configuration. It monitors commits
+and merges into the `main` branch, runs a script to generate the contents of `gh-pages`,
+and pushes `gh-pages` to GitHub.
 
 ## 🔧 Publishing changes manually
 
