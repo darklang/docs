@@ -56,7 +56,7 @@ material or discussion.
 
 In the future, we intend to provide access to all this material in the app, with
 context-sensitive reference materials available for all product and language
-features, and interactive tutorials and how-to guides built-in.
+features, as well as interactive tutorials and how-to guides built-in.
 
 ### 🔵 Tutorials
 
@@ -172,7 +172,7 @@ and integrating it into an existing sidebar.
 ```md
 ---
 id: newly-created-doc
-title: This Doc Needs To Be Edited
+title: This Doc Needs to Be Created
 ---
 
 My new content here...
