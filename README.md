@@ -60,28 +60,28 @@ features, and interactive tutorials and how-to guides built-in.
 
 ### 🔵 Tutorials
 
-- "Teaching a child how to cook"
-- Tells them what to do
-- Does not explain why they are doing it
-- Include specifics and let them learn the generalities over time
-- Assume that "obvious" things are not known
-- Do not include choices
-- Should be bulletproof
+- "Teaching a child how to cook."
+- Tells them what to do.
+- Does not explain why they are doing it.
+- Include specifics and let them learn the generalities over time.
+- Assume that "obvious" things are not known.
+- Do not include choices.
+- Should be bulletproof.
 
 ### 🔵 How-to guides
 
-- "Recipes"
-- Should have very specific names such as "how to add a custom domain to Darklang"
+- "Recipes" showing how to do something.
+- Should have very specific names, such as "How to add a custom domain to Darklang."
 
 ### 🔵 Explanations
 
-- Background material to understand further
-- Provides context
+- Background material to understand further.
+- Provides context.
 
 ### 🔵 Reference material
 
-- Just descriptions
-- Follows the structure of the project/language (e.g., each type is represented)
+- Just descriptions.
+- Follows the structure of the project/language (e.g., each type is represented).
 
 ## 🗃 Project structure
 
