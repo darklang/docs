@@ -60,12 +60,12 @@ features, as well as interactive tutorials and how-to guides built-in.
 
 ### 🔵 Tutorials
 
-- "Teaching a child how to cook."
+- A tutorial "teaches a child how to cook."
 - Tells them what to do.
 - Does not explain why they are doing it.
-- Include specifics and let them learn the generalities over time.
-- Assume that "obvious" things are not known.
-- Do not include choices.
+- Includes specifics and lets them learn the generalities over time.
+- Assumes that "obvious" things are not known.
+- Does not include choices.
 - Should be bulletproof.
 
 ### 🔵 How-to guides
