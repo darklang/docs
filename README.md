@@ -60,7 +60,8 @@ features, as well as interactive tutorials and how-to guides built-in.
 
 ### 🔵 Tutorials
 
-- A tutorial "teaches a child how to cook."
+A tutorial that teaches a child how to cook:
+
 - Tells them what to do.
 - Does not explain why they are doing it.
 - Includes specifics and lets them learn the generalities over time.
