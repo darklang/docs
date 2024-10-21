@@ -28,7 +28,7 @@
     "@docusaurus/plugin-client-redirects": "^3.5.2",
     "@docusaurus/plugin-sitemap": "^3.5.2",
     "@docusaurus/preset-classic": "^3.5.2",
-    "@mdx-js/react": "^3.0.1",
+    "@mdx-js/react": "^3.1.0",
     "@svgr/webpack": "^8.1.0",
     "clsx": "^2.1.1",
     "file-loader": "^6.2.0",
