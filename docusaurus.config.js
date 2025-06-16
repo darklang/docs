@@ -133,7 +133,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Dark Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Darklang Inc. Built with Docusaurus.`,
     },
     // "v2" heapanalytics.com account
     heapio: {
