@@ -33,23 +33,21 @@ usage, similar to other infrastructure. Darklang will be free to start, and will
 gradually scale up with usage. We expect that our free tier will fully cover
 small projects.
 
-## Will I be able to run Darklang myself?
+## I'm worried about vendor lock-in
 
-One of the ways that we remove accidental complexity is that we run Darklang for
+Darklang is [open source](https://blog.darklang.com/darklang-goes-open-source/).
+While we've started [winding down] Darklang-Classic,
+there is an open [github issue](https://github.com/darklang/classic-dark/issues/52)
+discussing ways to self-host and export code+data.
+
+### Will I be able to run Darklang myself?
+
+With some work, yes -- Darklang was originally designed to only be run on our servers, One of the ways that we remove accidental complexity is that we run Darklang for
 you. We run the infrastructure, maintain, monitor and optimize it, and we carry
 the pager for it. We have not designed Darklang to be run by others, and so you
 will not be able to run it yourself.
 
-## I'm worried about vendor lock-in - what happens if Darklang goes out of business?
-
-We're in this for the long haul, but if the worst should happen, we will
-open-source Darklang, and will keep it running as long as possible so you can
-move off Darklang.
-
-We're committed to codifying the specifics in a legal framework so that you can
-confidently use Darklang, regardless of what the future holds.
-
-## I'm worried about vendor lock-in - what happens if Darklang stays in business but I still need to move off?
+### What happens if Darklang stays in business but I still need to move off?
 
 We know that developers and companies will need to move off Darklang for various
 reasons, and plan to support this. We have a couple of strategies planned, based
