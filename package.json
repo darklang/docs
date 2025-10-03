@@ -24,7 +24,7 @@
     "prettier": "3.6.2"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.8.0",
+    "@docusaurus/core": "^3.9.1",
     "@docusaurus/plugin-client-redirects": "^3.9.1",
     "@docusaurus/plugin-sitemap": "^3.9.1",
     "@docusaurus/preset-classic": "^3.8.1",
