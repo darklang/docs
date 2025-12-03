@@ -32,7 +32,7 @@
     "@svgr/webpack": "^8.1.0",
     "clsx": "^2.1.1",
     "file-loader": "^6.2.0",
-    "mermaid": "^11.12.1",
+    "mermaid": "^11.12.2",
     "npm": "^11.6.4",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.2.0",
